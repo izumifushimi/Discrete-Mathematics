@@ -1,0 +1,143 @@
+<div class="note"><b>笔记边注</b> 页首章标题“第7章 欧拉图与哈密顿图”，日期 2025年8月31日；小节标题“7.1 欧拉图”。右上角边注：“简单：无重复边”。</div>
+
+<h3>① 欧拉通路、欧拉回路与欧拉图 <span class="pg">p.120</span></h3>
+<div class="def"><b>定义</b>
+<ul>
+<li><b>欧拉通路</b>：经过图中所有边的简单通路。</li>
+<li><b>半欧拉图</b>：有欧拉通路的图。</li>
+<li><b>欧拉回路</b>：经过图中所有边的简单回路。</li>
+<li><b>欧拉图</b>：有欧拉回路的图。</li>
+</ul></div>
+<div class="note"><b>笔记边注</b> 原页在“欧拉通路”定义中“所有边”下标①、“简单”下标②，强调两个要点：①每条边都要经过；②是简单通路，即边不重复（右上角注“简单：无重复边”），顶点可以重复。</div>
+
+<h3>② 无向欧拉图的充分必要条件 <span class="pg">p.120</span></h3>
+<div class="note"><b>笔记边注</b> 标题“无向欧拉图”中“无向”下标①、“欧拉图”下标②。</div>
+<div class="thm"><b>定理 1</b> 设 \(G\) 是无向连通图，则
+\[
+\begin{aligned}
+&G \text{ 是欧拉图}\\
+\Leftrightarrow\ &G \text{ 中所有顶点都是偶数度}\\
+\Leftrightarrow\ &G \text{ 是若干个边不交的圈的并}
+\end{aligned}
+\]</div>
+
+<h3>③ 无向半欧拉图的充分必要条件 <span class="pg">p.120</span></h3>
+<div class="thm"><b>定理 2</b> 设 \(G\) 是无向连通图，则
+\[ G \text{ 是半欧拉图} \Leftrightarrow G \text{ 中恰有 2 个奇度顶点}. \]</div>
+<div class="note"><b>笔记边注（右侧红圈图示）</b> 一条 5 个顶点的路径，顶点上方依次标度数 \(1,\ 2,\ 2,\ 2,\ 1\)，整体被红圈圈住；下方写 \(n\)，分出两个箭头：左边“2 奇”，右边“\(n-2\) 偶”，即 \(n\) 个顶点中恰有 2 个奇度顶点（两端），其余 \(n-2\) 个为偶度顶点。“2 奇”与“\(n-2\) 偶”之间有红色小字（像“1 0 / 2 0”）并有红色小箭头指向下图度数为 3 的顶点。</div>
+<div class="unclear"><b>待核对（p.120，位置：右侧“2 奇”与“n−2 偶”之间的红色小字）</b> 可辨认部分：两个红色小记号，形似“1”“2”上下各带一个小圈，下有红色小箭头指向下方图中标 3 的顶点；无法辨认：这两个红色小字的确切含义。</div>
+<figure class="fig"><svg viewBox="0 0 460 300" role="img" aria-label="恰有两个奇度顶点的半欧拉图示例">
+<g stroke="currentColor" fill="none" stroke-width="2">
+<line x1="60" y1="60" x2="160" y2="60"/><line x1="160" y1="60" x2="260" y2="60"/>
+<line x1="60" y1="160" x2="160" y2="160"/><line x1="160" y1="160" x2="260" y2="160"/>
+<line x1="60" y1="60" x2="60" y2="160"/><line x1="160" y1="60" x2="160" y2="160"/><line x1="260" y1="60" x2="260" y2="160"/>
+<line x1="160" y1="260" x2="260" y2="260"/><line x1="160" y1="160" x2="160" y2="260"/><line x1="260" y1="160" x2="260" y2="260"/>
+<circle cx="60" cy="60" r="5"/><circle cx="160" cy="60" r="5"/><circle cx="260" cy="60" r="5"/>
+<circle cx="60" cy="160" r="5"/><circle cx="160" cy="160" r="5"/><circle cx="260" cy="160" r="5"/>
+<circle cx="160" cy="260" r="5"/><circle cx="260" cy="260" r="5"/>
+<circle cx="160" cy="60" r="14"/><circle cx="260" cy="160" r="14"/>
+</g>
+<g fill="currentColor" font-size="14">
+<text x="40" y="50">2</text><text x="155" y="40">3</text><text x="270" y="50">2</text>
+<text x="38" y="180">2</text><text x="145" y="180">4</text><text x="280" y="165">3</text>
+<text x="140" y="285">2</text><text x="265" y="285">2</text>
+<text x="300" y="80">奇度顶点（度 3）各画圈</text>
+<text x="300" y="100">→ 欧拉通路从一个</text>
+<text x="300" y="120">奇度点出发，到另一个</text>
+<text x="300" y="140">奇度点结束</text>
+</g></svg>
+<figcaption>图（p.120 右侧）：三个单位方格组成的图。顶点按坐标记为 上排 \(a(左),b(中),c(右)\)，中排 \(d(左),e(中),f(右)\)，下排 \(h(中),i(右)\)。边：\(ab, bc, ad, be, cf, de, ef, eh, fi, hi\)。原页标度数：\(a{:}2, b{:}3, c{:}2, d{:}2, e{:}4, f{:}3, h{:}2, i{:}2\)。\(b, f\) 两个度为 3 的顶点被圈出；原页用红笔从 \(b\) 出发描出一条欧拉通路，并有红箭头从 \(b\) 向左引出表示起点。</figcaption></figure>
+
+<h3>④ 有向欧拉图的充分必要条件 <span class="pg">p.120–121</span></h3>
+<div class="thm"><b>定理</b> 设 \(G\) 是有向连通图，则
+\[
+\begin{aligned}
+&G \text{ 是欧拉图}\\
+\Leftrightarrow\ &\forall v\in V(G),\ d^{+}(v)=d^{-}(v)\\
+\Leftrightarrow\ &G \text{ 是若干个边不交的有向圈的并}
+\end{aligned}
+\]</div>
+<div class="note"><b>笔记边注</b> \(d^{+}(v)=d^{-}(v)\) 下有红色下划线；最后一条“\(\Leftrightarrow G\) 是若干个边不交有向圈的并”从 p.120 末行写到 p.121 首行。</div>
+
+<h3>⑤ 有向半欧拉图的充分必要条件 <span class="pg">p.121</span></h3>
+<div class="thm"><b>定理</b> 设 \(G\) 是有向连通图，则 \(G\) 是半欧拉图
+\(\Leftrightarrow\) \(G\) 中恰有 2 个奇度顶点，其中 1 个的入度比出度大 1：
+\[ d^{-}(v)=d^{+}(v)+1, \]
+其中 1 个的出度比入度大 1：
+\[ d^{+}(v)=d^{-}(v)+1, \]
+其余顶点 \(d^{+}(v)=d^{-}(v)\)。</div>
+<div class="example"><b>例</b> 判断下面的有向图 \(G\) 是否为半欧拉图，并找出起点和终点。
+<figure class="fig"><svg viewBox="0 0 420 200" role="img" aria-label="有向半欧拉图示例">
+<defs><marker id="ar71a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+<g stroke="currentColor" fill="none" stroke-width="2">
+<line x1="45" y1="50" x2="175" y2="50" marker-end="url(#ar71a)"/>
+<line x1="185" y1="50" x2="300" y2="60" marker-end="url(#ar71a)"/>
+<line x1="180" y1="55" x2="180" y2="150" marker-end="url(#ar71a)"/>
+<line x1="175" y1="160" x2="50" y2="160" marker-end="url(#ar71a)"/>
+<line x1="40" y1="155" x2="40" y2="58" marker-end="url(#ar71a)"/>
+<circle cx="40" cy="50" r="5"/><circle cx="180" cy="50" r="5"/><circle cx="305" cy="60" r="5"/><circle cx="40" cy="160" r="5"/><circle cx="180" cy="160" r="5"/>
+<circle cx="40" cy="50" r="12"/><circle cx="40" cy="160" r="12"/><circle cx="180" cy="160" r="12"/>
+</g>
+<g fill="currentColor" font-size="14"><text x="170" y="35">起</text><text x="300" y="45">终</text><text x="20" y="195">（画圈三点：入度=出度）</text></g>
+</svg><figcaption>图（p.121）：有向图 \(G\)，5 个顶点：左上 \(v_1\)、上中“起” \(v_2\)、右“终” \(v_3\)、右下 \(v_4\)、左下 \(v_5\)。有向边：\(\langle v_1,v_2\rangle,\langle v_2,v_3\rangle,\langle v_2,v_4\rangle,\langle v_4,v_5\rangle,\langle v_5,v_1\rangle\)。\(v_1,v_4,v_5\) 用红圈圈出（入度=出度=1）。</figcaption></figure>
+<b>解</b> 原页在旁边列出两点的入/出度（上方各写红色“1”，表示差为 1）：
+<div class="tbl"><table><thead><tr><th>顶点</th><th>入度</th><th>出度</th></tr></thead><tbody>
+<tr><td>起</td><td>1</td><td>2</td></tr>
+<tr><td>终</td><td>1</td><td>0</td></tr>
+</tbody></table></div>
+“起”的出度比入度大 1，“终”的入度比出度大 1，其余三点（红圈）入度 = 出度 = 1。
+<b>结论</b> \(G\) 是半欧拉图，欧拉通路从“起”出发、到“终”结束，例如 \(v_2\to v_4\to v_5\to v_1\to v_2\to v_3\)。</div>
+
+<h3>⑥ Fleury 算法（避桥法）求欧拉回路 <span class="pg">p.121–122</span></h3>
+<div class="def"><b>Fleury 算法（避桥法）</b>（求欧拉回路）
+<ol>
+<li>从任意一点开始，沿着没有走过的边向前走；</li>
+<li>对于每一个顶点，优先选择剩下的非桥边，除非只剩一条边（☆）；</li>
+<li>直到得到欧拉回路或失败。</li>
+</ol></div>
+<div class="note"><b>笔记边注</b> “避桥法”下标 △；“从任意一点开始”有红色下划线，“沿着没有走过的边向前走”有黑色下划线；步骤 2) 的序号用红圈圈出，“非桥边”下标 ☆。</div>
+<figure class="fig"><svg viewBox="0 0 260 230" role="img" aria-label="Fleury算法示例图G">
+<g stroke="currentColor" fill="none" stroke-width="2">
+<line x1="40" y1="30" x2="130" y2="30"/><line x1="130" y1="30" x2="220" y2="30"/>
+<line x1="130" y1="30" x2="40" y2="110"/><line x1="130" y1="30" x2="220" y2="110"/>
+<line x1="40" y1="30" x2="40" y2="110" stroke-width="4"/><line x1="220" y1="30" x2="220" y2="110"/>
+<line x1="40" y1="110" x2="220" y2="110"/>
+<line x1="40" y1="110" x2="40" y2="190"/><line x1="220" y1="110" x2="220" y2="190"/><line x1="40" y1="190" x2="220" y2="190"/>
+<circle cx="40" cy="30" r="5"/><circle cx="130" cy="30" r="5"/><circle cx="220" cy="30" r="5"/>
+<circle cx="40" cy="110" r="5"/><circle cx="220" cy="110" r="5"/><circle cx="40" cy="190" r="5"/><circle cx="220" cy="190" r="5"/>
+</g>
+<g fill="currentColor" font-size="14"><text x="20" y="22">A</text><text x="125" y="20">B</text><text x="228" y="22">C</text><text x="15" y="115">D</text><text x="228" y="115">E</text><text x="15" y="205">F</text><text x="228" y="205">H</text></g>
+</svg><figcaption>图（p.121）：无向图 \(G\)（原页无顶点名，此处补记 A–H 便于叙述）。顶点 \(A,B,C\)（上排）、\(D,E\)（中排）、\(F,H\)（下排）。边：\(AB, BC, BD, BE, AD, CE, DE, DF, EH, FH\)，共 10 条；度数 \(A{:}2,B{:}4,C{:}2,D{:}4,E{:}4,F{:}2,H{:}2\)，全为偶数，是欧拉图（形似“房子”：上为三角屋顶，下为两个矩形）。加粗边 \(AD\) 为原页第一步所走的红色边。</figcaption></figure>
+<div class="example"><b>例</b> 用 Fleury 算法在上图 \(G\) 中求欧拉回路（原页以连续 5 幅小图演示，已走过的边删去，当前所在顶点画 ×）。
+<b>解</b>（按原页图示顺序）
+<ol>
+<li>第 1 幅：在 \(A\)（左上角）画 ×，表示从 \(A\) 出发；红笔描出左边 \(A\!-\!D\)，表示第一步走 \(AD\)。</li>
+<li>第 2 幅（红框圈住，下标红色“G”）：边 \(AD\) 已删去，× 画在 \(D\)（左中），表示当前位于 \(D\)。</li>
+<li>第 3 幅：图中剩下上排一条横线（左端为一个顶点、中间 × 处、右端 \(C\)），× 画在上排中间的 \(B\)；红笔描出从 \(B\) 到右中 \(E\) 的斜边，并在该边上画了红色“|”“×”记号；下面是 \(D,E,H,F\) 组成的矩形。</li>
+<li>第 4 幅：上排剩一条 3 个顶点的路径；下方矩形的上边（\(D\!-\!E\)）用红笔描出，× 画在右中 \(E\)。</li>
+<li>第 5 幅（标“G”）：剩下一个大回路（上边经过中间顶点，右边经过中间顶点，下边经过中间顶点），用红笔描出上边、右边和下边，× 画在左边，表示沿剩余回路走回起点完成欧拉回路。</li>
+</ol>
+旁边红框内画一个“三角形 + 矩形”的房子形轮廓，即原图 \(G\) 的整体形状（p.121 末）；p.122 顶部是第 5 幅图下半部分的延续（下边、左边和右边的红色描线）。
+<b>结论</b> 按“优先走非桥边，只有一条可走时才走桥”的规则，可以得到一条经过全部 10 条边的欧拉回路。</div>
+<div class="unclear"><b>待核对（p.121，位置：下部第 3–5 幅小图）</b> 可辨认部分：每幅图的 × 位置、红色描线如上所述；无法辨认：第 3 幅中斜边上红色“|”“×”记号的确切含义，以及第 3–5 幅之间每一步具体走的是哪条边（原页未写出完整的边序列）。</div>
+<div class="supp"><b>补充讲解</b> 一条完整的 Fleury 结果（顶点名同上图）：\(A\to D\to B\to E\to D\to F\to H\to E\to C\to B\to A\)。检验：依次用了 \(AD,DB,BE,ED,DF,FH,HE,EC,CB,BA\)，10 条边各一次，回到 \(A\)。关键在于：在 \(E\) 处若还有非桥边可走，不先走那条唯一连接剩余部分的边。</div>
+
+<h3>⑦ 逐步插入回路算法 <span class="pg">p.122</span></h3>
+<div class="def"><b>逐步插入回路算法</b>
+<ol>
+<li>每次求出一个简单回路；</li>
+<li>把新求出的回路插入原回路，合并成一个更大的回路；</li>
+<li>直到得到欧拉回路或失败。</li>
+</ol></div>
+<div class="example"><b>例</b> 仍用上面的图 \(G\)（顶点名同 Fleury 例）演示逐步插入回路。
+<b>解</b>
+<ol>
+<li>原页第 1 幅：在图 \(G\) 上用红笔描出上部两个三角形 \(A\!-\!B\!-\!D\!-\!A\) 与 \(B\!-\!C\!-\!E\!-\!B\)，× 画在 \(D\)（左中）。</li>
+<li>第 2 幅：先求出红色回路 1（三角形，三个顶点分别标 ×、√、√，内写“1”），即 \(A\!-\!B\!-\!D\!-\!A\)；向上的箭头表示它来自下方黑色的“主”回路（三角形内写“主”）。</li>
+<li>“\(\Rightarrow\)”第 3 幅（上方红色“2”）：再求出回路 2（\(B\!-\!C\!-\!E\!-\!B\)），在公共顶点处插入，红色图中 \(D, E\) 处标 √；下方黑图把两个三角形在 \(B\) 处合并成一个“主”回路（形如两个三角在顶点 \(B\) 相接）。</li>
+<li>第 4 幅：上部（红）为已合并的回路，下部（黑）为矩形回路 \(D\!-\!E\!-\!H\!-\!F\!-\!D\)；再将矩形插入，得到最下方完整的黑色图 \(G\)，即整个欧拉回路。</li>
+</ol>
+<b>结论</b> 三个边不交的简单回路（两个三角形与一个矩形）逐步插入合并，得到 \(G\) 的欧拉回路，这也印证了定理 1 中“欧拉图是若干边不交圈的并”。</div>
+<div class="supp"><b>补充讲解</b> 合并示例：主回路 \(A\to B\to D\to A\)，在 \(B\) 处插入 \(B\to C\to E\to B\)，得 \(A\to B\to C\to E\to B\to D\to A\)；再在 \(D\) 处插入 \(D\to E\to H\to F\to D\)，得 \(A\to B\to C\to E\to B\to D\to E\to H\to F\to D\to A\)，共 10 条边。</div>
+
+<div class="warn"><b>易错提醒</b> 欧拉图判定的前提是“连通”（忽略孤立点）；无向图看奇度顶点个数（0 个→欧拉图，恰 2 个→半欧拉图），有向图看每点入度与出度之差，不能只数“奇度点”。欧拉通路要求边不重复，顶点可以重复。</div>

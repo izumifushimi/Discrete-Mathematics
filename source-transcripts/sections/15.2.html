@@ -1,0 +1,73 @@
+<h3>例题：证明 \(\mathbb{Z}_p\) 为域 <span class="pg">p.236–238</span></h3>
+
+<div class="example"><b>例</b> 设 \(p\) 为素数，证明 \(\mathbb{Z}_p\) 为域（\(\mathbb{Z}_p=\{0,1,\dots,p-1\}\)）。
+
+<p><b>证明思路</b>：按"域 = 至少两个元素的整环，且非零元都有乘法逆元"分三步验证。</p>
+
+<p><b>(1)</b> \(p\) 为素数，\(p\ge 2\)，所以 \(|\mathbb{Z}_p|\ge 2\)。</p>
+
+<p><b>(2)</b> 考虑 \(\langle \mathbb{Z}_p,\oplus_p,\otimes_p\rangle\)，其中</p>
+\[
+\oplus_p:\ a\oplus_p b=(a+b)\bmod p \ \longrightarrow\ \text{单位元 }0,\qquad
+\otimes_p:\ a\otimes_p b=(a\times b)\bmod p \ \longrightarrow\ \text{单位元 }1 .
+\]
+<p>依次验证（三条用大括号括在一起，合起来说明是整环）：</p>
+<ul>
+<li>(i) \(\otimes_p\) 满足交换律 ✓ → <b>交换环</b>；</li>
+<li>(ii) \(\otimes_p\) 存在单位元 \(1\) ✓，即 \(a\otimes_p 1=a\) → <b>含幺环</b>；</li>
+<li>(iii) \(\forall a,b\in R,\ ab=0\Rightarrow a=0\) 或 \(b=0\) → <b>无零因子环</b>。</li>
+</ul>
+<p>在 \(\mathbb{Z}_p\) 中，(iii) 要证的是：</p>
+\[\forall i,j\in\mathbb{Z}_p,\quad i\otimes_p j=0\ \Rightarrow\ i=0\ \text{或}\ j=0 .\]
+<p>等价地（红圈改写）：\(\forall i,j\in\mathbb{Z}_p\)，若 \(i\otimes_p j=0\) 且 \(i\neq 0\)，则 \(j=0\)。</p>
+\[
+i\otimes_p j=0\ \Rightarrow\ p\mid ij\ \Rightarrow\ p\mid i\ \text{或}\ p\mid j .
+\]
+<p>其中 \(i\otimes_p j=0\) 的含义：\(ij\) 除以 \(p\) 余 \(0\)，即 \(ij\) 为 \(p\) 的倍数，\(p\) 为 \(ij\) 的因子。</p>
+\[
+\xrightarrow[\ i\lt p\ ]{\ i\neq 0\ }\ p\nmid i,\ \text{故 } p\mid j\ \xrightarrow{\ j\lt p\ }\ j=0 .
+\]
+<p>所以 \(\langle \mathbb{Z}_p,\oplus_p,\otimes_p\rangle\) 为<b>整环</b>。</p>
+
+<p><b>(3)</b> \(\mathbb{Z}_p\) 关于 \(\otimes_p\)：\(\langle\mathbb{Z}_p,\otimes_p\rangle\) 是有限半群。由于是整环，\(\otimes_p\) 满足消去律：</p>
+\[a,b,c\in\mathbb{Z}_p,\quad a\otimes_p b=a\otimes_p c\ \text{且}\ a\neq 0\ \Rightarrow\ b=c .\]
+<p>任取 \(i\in\mathbb{Z}_p,\ i\neq 0\)，定义</p>
+\[i\otimes_p\mathbb{Z}_p=\{\,i\otimes_p j\mid j\in\mathbb{Z}_p\,\}.\]
+<p>比较 \(i\otimes_p\mathbb{Z}_p\) 和 \(\mathbb{Z}_p\)：显然 \(i\otimes_p\mathbb{Z}_p\subseteq\mathbb{Z}_p\)；再用反证法比较元素个数：若有 \(j\neq k\) 使 \(i\otimes_p j=i\otimes_p k\)，由消去律得 \(j=k\)，矛盾。所以 \(i\otimes_p\mathbb{Z}_p\) 中有 \(p\) 个互不相同的元素，于是</p>
+\[\boxed{\,i\otimes_p\mathbb{Z}_p=\mathbb{Z}_p\,}\ \bigstar\]
+<p>又 \(|\mathbb{Z}_p|\ge 2\)，\(\mathbb{Z}_p=\{0,1,\dots\}\)，故 \(1\in\mathbb{Z}_p=i\otimes_p\mathbb{Z}_p\)。因此对于任意 \(i\ (i\neq 0),\ i\in\mathbb{Z}_p\)，存在元素 "?" 使</p>
+\[i\otimes_p\ ?\ =1,\qquad ?=i^{-1}.\]
+<p><b>结论</b>：所以 \(\mathbb{Z}_p\) 为域。（p.237 页底写出"∴ \(\mathbb{Z}_p\) 为域"，p.238 页首重写了这一句，p.238 其余空白。）</p>
+</div>
+
+<figure class="fig"><svg viewBox="0 0 360 200" role="img" aria-label="i 乘以 Zp 中每个元素的映射示意">
+<defs><marker id="a152" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="currentColor"/></marker></defs>
+<text x="175" y="18" font-size="14">i</text>
+<text x="110" y="40" font-size="14">⊗p</text>
+<rect x="40" y="55" width="300" height="100" rx="14" fill="none" stroke="currentColor"/>
+<text x="8" y="80" font-size="14">Zp</text>
+<g fill="currentColor">
+<circle cx="70" cy="75" r="3"/><circle cx="110" cy="75" r="3"/><circle cx="150" cy="75" r="3"/><circle cx="190" cy="75" r="3"/><circle cx="230" cy="75" r="3"/><circle cx="300" cy="75" r="3"/>
+<circle cx="70" cy="140" r="3"/><circle cx="110" cy="140" r="3"/><circle cx="150" cy="140" r="3"/><circle cx="190" cy="140" r="3"/><circle cx="230" cy="140" r="3"/><circle cx="300" cy="140" r="3"/>
+</g>
+<text x="104" y="68" font-size="14">j</text><text x="144" y="68" font-size="14">k</text>
+<g stroke="currentColor" marker-end="url(#a152)">
+<line x1="70" y1="80" x2="70" y2="130"/><line x1="110" y1="80" x2="110" y2="130"/><line x1="150" y1="80" x2="150" y2="130"/><line x1="190" y1="80" x2="190" y2="130"/><line x1="300" y1="80" x2="300" y2="130"/>
+</g>
+<text x="250" y="110" font-size="14">…</text>
+<text x="40" y="180" font-size="14">若 i⊗p j = i⊗p k (j≠k) ⇒(消去律) j=k，矛盾 ✗</text>
+</svg>
+<figcaption>图（p.237 右侧两幅示意图合并）：固定 \(i\neq0\)，用 \(i\otimes_p\) 把上一排 \(\mathbb{Z}_p\) 的每个元素映到下一排 \(\mathbb{Z}_p\)。上图：若两个不同的 \(j,k\) 映到同一元素，由消去律推出 \(j=k\)，红叉表示矛盾，所以映射是一一的、像集就是整个 \(\mathbb{Z}_p\)。下图：下排 \(\mathbb{Z}_p\) 中红圈标出元素 \(1\)，它一定有一个原像（红圈中的"?"），这个原像就是 \(i^{-1}\)。</figcaption></figure>
+
+<div class="note"><b>笔记边注</b>
+<ul>
+<li>p.236 右侧：\(p\nmid i,\ p\nmid j\ \Rightarrow\ p\nmid ij\)（素数性质，就是 (iii) 的逆否形式）。</li>
+<li>p.236 第 (iii) 条旁的圈注："交换环""含幺环""无零因子环"，右侧大括号把三条合在一起。</li>
+<li>p.237 星号处画红色箭头指向"\(\{0,1,\dots\}\)，\(|\mathbb{Z}_p|\ge2,\ 1\in\mathbb{Z}_p\)"，再用黑色箭头指回 \(i\otimes_p\mathbb{Z}_p=\mathbb{Z}_p\)，说明 \(1\) 一定在像集中。</li>
+</ul></div>
+
+<div class="unclear"><b>待核对（p.236，位置：右侧中部，"∀i,j∈Zp, i⊗pj=0" 一行的右上方）</b> 可辨认部分：数字"3"、指向"8"的弯箭头和一个画圈的"7≠8"（似为"7≠8"或"7×8"）；无法辨认：这组小注的具体含义及与正文的对应关系。</div>
+
+<div class="supp"><b>补充讲解</b> 第 (3) 步的关键是"有限 + 消去律 ⇒ 每个非零元可逆"。若集合无限，这一推理不成立（例如整环 \(\mathbb{Z}\) 满足消去律，但 \(2\) 在 \(\mathbb{Z}\) 中没有乘法逆元）。另外，\(p\) 为合数时 \(\mathbb{Z}_p\) 有零因子（如 \(\mathbb{Z}_6\) 中 \(2\otimes_6 3=0\)），连整环都不是。</div>
+
+<div class="warn"><b>易错提醒</b> 证明 \(i\otimes_p\mathbb{Z}_p=\mathbb{Z}_p\) 时只证 \(\subseteq\) 不够，必须用消去律说明 \(p\) 个乘积两两不同，元素个数相同才能得到相等。消去律要求 \(a\neq0\)。</div>

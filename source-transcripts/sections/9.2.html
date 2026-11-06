@@ -1,0 +1,112 @@
+<div class="note"><b>笔记边注</b> 页首小节标题手写为“9.2 邻接矩阵和相邻矩阵”（有向图称邻接矩阵，无向图称相邻矩阵），日期 2025年9月13日。本节同时讲可达矩阵与连通矩阵。</div>
+
+<h3>① 有向图的邻接矩阵 <span class="pg">p.142</span></h3>
+<div class="def"><b>定义</b> 设 \(D=\langle V,E\rangle\) 是有向图，\(V=\{v_1,v_2,\dots,v_n\}\)。<br>
+邻接矩阵（adjacent matrix）：\(A(D)=[a_{ij}]_{n\times n}\)，
+\[a_{ij}=\text{从 } v_i \text{ 到 } v_j \text{ 的边数}\]</div>
+
+<div class="example"><b>例 1</b> 求下图有向图 \(D\) 的邻接矩阵。
+<figure class="fig"><svg viewBox="0 0 300 220" role="img" aria-label="4顶点有向图D，含平行边与环">
+<defs><marker id="ar92a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+<g stroke="currentColor" fill="none" stroke-width="2">
+<path d="M45,48 Q20,110 45,172" marker-end="url(#ar92a)"/><path d="M55,48 Q80,110 55,172" marker-end="url(#ar92a)"/>
+<line x1="55" y1="45" x2="243" y2="173" marker-end="url(#ar92a)"/>
+<line x1="55" y1="180" x2="240" y2="180" marker-end="url(#ar92a)"/>
+<path d="M245,175 Q220,110 245,52" marker-end="url(#ar92a)"/><path d="M255,48 Q280,110 255,172" marker-end="url(#ar92a)"/>
+<path d="M245,36 C225,5 275,5 255,36" marker-end="url(#ar92a)"/>
+<circle cx="50" cy="40" r="4"/><circle cx="50" cy="180" r="4"/><circle cx="250" cy="180" r="4"/><circle cx="250" cy="40" r="4"/>
+</g>
+<g fill="currentColor"><text x="20" y="30" font-size="14">v1</text><text x="40" y="205" font-size="14">v2</text><text x="240" y="205" font-size="14">v3</text><text x="270" y="40" font-size="14">v4</text></g>
+</svg><figcaption>图 D：顶点 \(v_1\)（左上）、\(v_2\)（左下）、\(v_3\)（右下）、\(v_4\)（右上）。有向边：\(v_1\to v_2\) 两条（平行边），\(v_1\to v_3\)，\(v_2\to v_3\)，\(v_3\to v_4\)，\(v_4\to v_3\)，\(v_4\) 上有一个环。</figcaption></figure>
+<b>解</b>
+\[A(D)=\begin{array}{c} \\ v_1\\ v_2\\ v_3\\ v_4\end{array}\!\!\begin{array}{c}\begin{matrix}v_1&v_2&v_3&v_4\end{matrix}\\ \begin{bmatrix}0&2&1&0\\ 0&0&1&0\\ 0&0&0&1\\ 0&0&1&1\end{bmatrix}\end{array}\]
+原页 \(a_{12}=2\) 下画红线（平行边计 2），\(v_4\) 的环使 \(a_{44}=1\)。</div>
+
+<h3>② \(A(D)\) 的性质 <span class="pg">p.142</span></h3>
+<div class="thm"><b>性质</b><br>
+1）（☆）行和为出度：\(\sum_{j=1}^{n} a_{ij}=d^+(v_i)\)。<br>
+2）（☆）列和为入度：\(\sum_{i=1}^{n} a_{ij}=d^-(v_j)\)。<br>
+3）握手定理：\(\sum_{i=1}^{n}\sum_{j=1}^{n} a_{ij}=\sum_{i=1}^{n} d^-(v_i)=\sum_{i=1}^{n} d^+(v_i)\)（入度和 = 出度和）。<br>
+4）环的个数：\(\sum_{i=1}^{n} a_{ii}\)（主对角线之和）。</div>
+
+<h3>③ 邻接矩阵与通路数 <span class="pg">p.142–144</span></h3>
+<div class="def"><b>定义</b> 设 \(A(D)=A=[a_{ij}]_{n\times n}\)，矩阵的幂 \(A^r=A^{r-1}\cdot A\ (r\ge 2)\)。<br>
+1）（★）\(A^r=[a_{ij}^{(r)}]_{n\times n}\)；<br>
+2）（★）\(B_r=A+A^2+A^3+\cdots+A^r=[b_{ij}^{(r)}]_{n\times n}\)。</div>
+<div class="thm"><b>定理</b> \(a_{ij}^{(r)}\) = 从 \(v_i\) 到 \(v_j\) 长度为 \(r\) 的通路总数。<br>
+（tip）\(\sum_{i=1}^{n} a_{ii}^{(r)}\) = 长度为 \(r\) 的回路总数。</div>
+<div class="thm"><b>推论</b> \(b_{ij}^{(r)}\) = 从 \(v_i\) 到 \(v_j\) 长度 \(\le r\) 的通路总数。<br>
+（tip）\(\sum_{i=1}^{n}\sum_{j=1}^{n} b_{ij}^{(r)}\) 为长度 \(\le r\) 的通路总数；\(\sum_{i=1}^{n} b_{ii}^{(r)}\) 为长度 \(\le r\) 的回路总数。</div>
+
+<div class="example"><b>例 2</b> 对例 1 的 \(D\)（原页浅色重抄 \(A(D)=A\) 与图 \(D\)，红字标“\(v_3\to v_4\)，\(l=3\)”），求 \(A^2,A^3,A^4\) 及 \(B_2,B_3,B_4\)，并求 \(v_3\) 到 \(v_4\) 长度为 3 的通路数。<br>
+<b>解</b>
+\[A^2=\begin{bmatrix}0&0&2&1\\ 0&0&0&1\\ 0&0&1&1\\ 0&0&1&2\end{bmatrix},\quad
+A^3=\begin{bmatrix}0&0&1&3\\ 0&0&1&1\\ 0&0&1&2\\ 0&0&2&3\end{bmatrix},\quad
+A^4=\begin{bmatrix}0&0&3&4\\ 0&0&1&2\\ 0&0&2&3\\ 0&0&3&5\end{bmatrix}\]
+\[B_2=\begin{bmatrix}0&2&3&1\\ 0&0&1&1\\ 0&0&1&2\\ 0&0&2&3\end{bmatrix},\quad
+B_3=\begin{bmatrix}0&2&4&4\\ 0&0&2&2\\ 0&0&2&4\\ 0&0&4&6\end{bmatrix},\quad
+B_4=\begin{bmatrix}0&2&7&8\\ 0&0&3&4\\ 0&0&4&7\\ 0&0&7&11\end{bmatrix}\]
+原页在每个矩阵左下角用红线框出全零区域（\(v_2,v_3,v_4\) 行的前列：无边进入 \(v_1\)，从 \(v_3,v_4\) 无法到 \(v_2\)）。\(A^3\) 中第 3 行第 4 列的 2 被红圈圈出（行标 \(v_3\)、列标 \(v_4\)），\(B_3\) 中对应位置的 4 也被圈出。<br>
+<b>结论</b> \(v_3\) 到 \(v_4\) 长度为 3 的通路数：\(a_{34}^{(3)}=2\)（\(v_3v_4v_4v_4\)、\(v_3v_4v_3v_4\)）；长度 \(\le3\) 的通路数 \(b_{34}^{(3)}=4\)。</div>
+
+<h3>④ 可达矩阵 <span class="pg">p.144</span></h3>
+<div class="def"><b>定义</b> 设 \(D=\langle V,E\rangle\) 是有向图，\(V=\{v_1,v_2,\dots,v_n\}\)。可达矩阵：\(P(D)=[p_{ij}]_{n\times n}\)，
+\[p_{ij}=\begin{cases}1, & \text{从 } v_i \text{ 到 } v_j \text{ 可达}\\ 0, & \text{从 } v_i \text{ 到 } v_j \text{ 不可达}\end{cases}\]</div>
+<div class="example"><b>例 3</b> 对例 1 的 \(D\)（原页浅色重抄图）：
+\[P(D)=\begin{array}{c} \\ v_1\\ v_2\\ v_3\\ v_4\end{array}\!\!\begin{array}{c}\begin{matrix}v_1&v_2&v_3&v_4\end{matrix}\\ \begin{bmatrix}1&1&1&1\\ 0&1&1&1\\ 0&0&1&1\\ 0&0&1&1\end{bmatrix}\end{array}\]
+原页红框框出左下角的零块。</div>
+<div class="thm"><b>性质</b><br>
+1）\(p_{ii}\) 为 1（自己可达自己）。<br>
+2）强连通图：所有元素为 1。<br>
+3）\(P(D)=\begin{bmatrix}P(D_1)&&&\\ &P(D_2)&&\\ &&P(D_3)&\\ &&&\ddots\\ &&&&P(D_k)\end{bmatrix}\)（分块对角阵）。</div>
+<div class="supp"><b>补充讲解</b> 性质 3 中的 \(D_1,\dots,D_k\) 应理解为 \(D\) 的弱连通分支（基图的连通分支）：不同分支之间互不可达，所以非对角块为 0。同一分支内部仍可能有 0（如本例 \(p_{21}=0\)）。可由 \(B_{n-1}\) 计算：\(i\ne j\) 时 \(p_{ij}=1 \Leftrightarrow b_{ij}^{(n-1)}\gt 0\)，对角元规定为 1。</div>
+
+<h3>⑤ 无向图的相邻矩阵 <span class="pg">p.145</span></h3>
+<div class="def"><b>定义</b> 设 \(G=\langle V,E\rangle\) 是无向简单图（原页“简单图”红线并打红星），\(V=\{v_1,v_2,\dots,v_n\}\)。相邻矩阵：\(A(G)=[a_{ij}]_{n\times n}\)，
+\[a_{ij}=\begin{cases}1, & v_i \text{ 与 } v_j \text{ 相邻}\ (i\ne j)\\ 0, & v_i \text{ 与 } v_j \text{ 不相邻}\end{cases}\qquad (a_{ii}=0)^{*}\]</div>
+<div class="example"><b>例 4</b> 求下图 \(G\) 的相邻矩阵。
+<figure class="fig"><svg viewBox="0 0 280 180" role="img" aria-label="4顶点4条边的无向简单图G">
+<g stroke="currentColor" fill="none" stroke-width="2">
+<line x1="40" y1="30" x2="230" y2="30"/><line x1="40" y1="30" x2="40" y2="140"/><line x1="40" y1="140" x2="230" y2="30"/><line x1="40" y1="140" x2="230" y2="140"/>
+<circle cx="40" cy="30" r="4"/><circle cx="230" cy="30" r="4"/><circle cx="40" cy="140" r="4"/><circle cx="230" cy="140" r="4"/>
+</g>
+<g fill="currentColor"><text x="20" y="20" font-size="14">v1</text><text x="225" y="20" font-size="14">v4</text><text x="15" y="165" font-size="14">v2</text><text x="225" y="165" font-size="14">v3</text></g>
+</svg><figcaption>图 G：顶点 \(v_1,v_2,v_3,v_4\)；边 \((v_1,v_4)\)、\((v_1,v_2)\)、\((v_2,v_4)\)、\((v_2,v_3)\)。</figcaption></figure>
+<b>解</b>
+\[A(G)=\begin{array}{c} \\ v_1\\ v_2\\ v_3\\ v_4\end{array}\!\!\begin{array}{c}\begin{matrix}v_1&v_2&v_3&v_4\end{matrix}\\ \begin{bmatrix}0&1&0&1\\ 1&0&1&1\\ 0&1&0&0\\ 1&1&0&0\end{bmatrix}\end{array}\]</div>
+<div class="thm"><b>性质</b><br>
+1）\(A(G)\) 对称：\(a_{ij}=a_{ji}\)。<br>
+2）行（列）和为顶点度：\(\sum_{i=1}^{n} a_{ij}=d(v_j)\)。<br>
+3）\(\sum_{i=1}^{n}\sum_{j=1}^{n} a_{ij}=\sum_{i=1}^{n} d(v_i)=2m\)（\(m\) 为边数）。</div>
+
+<h3>⑥ 相邻矩阵的幂与通路数 <span class="pg">p.145–146</span></h3>
+<div class="def"><b>定义</b> 设 \(A^r=A^{r-1}\cdot A\ (r\ge2)\)，\(A^r=[a_{ij}^{(r)}]_{n\times n}\)，\(B_r=A+A^2+\cdots+A^r=[b_{ij}^{(r)}]_{n\times n}\)。</div>
+<div class="thm"><b>定理</b> \(a_{ij}^{(r)}\) = 从 \(v_i\) 到 \(v_j\) 长度为 \(r\) 的通路总数。<br>
+（tip）\(\sum_{i=1}^{n} a_{ii}^{(r)}\) = 长度为 \(r\) 的回路总数。</div>
+<div class="thm"><b>结论</b>（原页红框、红星）<br>
+① \(A^2\)：\(a_{ii}^{(2)}=d(v_i)\)。<br>
+② \(G\) 连通 \(\Rightarrow\) 距离 \(d(v_i,v_j)=\min\{r \mid a_{ij}^{(r)}\ne 0\}\)（\(i\ne j\)）。</div>
+
+<div class="example"><b>例 5</b> 对例 4 的 \(G\)（原页用红笔描出边 \(v_1v_2\)、\(v_2v_3\)，并在 \(A(G)\) 的 \(a_{13}=0\) 处画红圈打叉），求 \(A^2,A^3,A^4\)。<br>
+<b>解</b>（\(A^3\) 按原页抄录）
+\[A^2=\begin{bmatrix}2&1&1&1\\ 1&3&0&1\\ 1&0&1&1\\ 1&1&1&2\end{bmatrix},\quad
+A^3=\begin{bmatrix}2&4&1&3\\ 4&2&3&4\\ 1&3&0&1\\ 2&4&1&2\end{bmatrix},\quad
+A^4=\begin{bmatrix}7&6&4&6\\ 6&11&2&6\\ 4&2&3&4\\ 6&6&4&7\end{bmatrix}\]
+原页把三个矩阵第 1 行第 3 列（1、1、4）红圈圈出：\(a_{13}^{(1)}=0\)，\(a_{13}^{(2)}=1\ne0\)，故 \(d(v_1,v_3)=2\)。\(A^3\) 中 \(a_{23}^{(3)}=3\) 下有红色短线，\(a_{34}^{(3)}=1\) 下有下划线；\(A^4\) 中 \(a_{33}^{(4)}=3\) 上有红色短线。<br>
+<b>结论</b> \(v_3\) 到 \(v_4\) 长度为 3 的通路数：1（\(a_{34}^{(3)}=1\)，即 \(v_3v_2v_1v_4\)）。<br>
+红笔批注：\(v_1\) 到 \(v_1\) 长度为 2：2（\(a_{11}^{(2)}=2=d(v_1)\)）。旁边红色草图画出从 \(v_1\) 出发再回到 \(v_1\) 的两条长 2 回路 \(v_1v_2v_1\)、\(v_1v_4v_1\)。</div>
+<div class="fix"><b>校订说明（p.146）</b> 原式：\(A^3\) 第 4 行为 \(2\ 4\ 1\ 2\)；正确式：\(3\ 4\ 1\ 2\)；原因：\(a_{41}^{(3)}=\sum_k a_{4k}^{(2)}a_{k1}=a_{42}^{(2)}+a_{44}^{(2)}=1+2=3\)，且 \(A^3\) 应对称（\(a_{14}^{(3)}=3\)）。原页 \(A^4\) 的数值与正确的 \(A^3\) 一致，不受影响。</div>
+
+<h3>⑦ 连通矩阵 <span class="pg">p.146–147</span></h3>
+<div class="def"><b>定义</b> 设 \(G=\langle V,E\rangle\) 是无向简单图（原页浅色重抄，红星），\(V=\{v_1,v_2,\dots,v_n\}\)。连通矩阵：\(P(G)=[p_{ij}]_{n\times n}\)，
+\[p_{ij}=\begin{cases}0, & v_i \text{ 与 } v_j \text{ 不连通}\\ 1, & v_i \text{ 与 } v_j \text{ 连通}\end{cases}\]</div>
+<div class="thm"><b>性质</b><br>
+1）\(p_{ii}=1\)（自己与自己连通）。<br>
+2）连通图：所有元素都是 1。<br>
+3）伪对角阵：\(P(G)=\begin{bmatrix}P(G_1)&&&\\ &P(G_2)&&\\ &&\ddots&\\ &&&P(G_k)\end{bmatrix}\)（原页圈出各块 \(P(G_1)\)、\(P(G_2)\)、\(P(G_k)\)）。</div>
+<div class="supp"><b>补充讲解</b> 无向图中每个连通分支对应的 \(P(G_i)\) 是全 1 方阵，所以连通矩阵（按分支排列顶点后）就是若干全 1 块组成的分块对角阵。</div>
+
+<div class="summary"><b>总结</b>（p.147 红框）<br>
+关联矩阵：\(M(D)\)；\(M(G)\longrightarrow M_f(G)\) 基本关联矩阵。<br>
+邻接 \(A(D)\) —— 可达 \(P(D)\)；<br>
+相邻 \(A(G)\longrightarrow\) 连通 \(P(G)\)。</div>

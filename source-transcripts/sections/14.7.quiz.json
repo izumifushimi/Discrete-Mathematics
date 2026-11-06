@@ -1,0 +1,82 @@
+[
+ {
+  "type": "fill",
+  "q": "12 阶循环群的生成元个数为 \\(\\varphi(12)=\\)____",
+  "answer": [
+   "4",
+   "四"
+  ],
+  "why": "1、5、7、11 与 12 互素。"
+ },
+ {
+  "type": "fill",
+  "q": "在 \\(\\langle\\mathbb{Z}_8,\\oplus_8\\rangle\\) 中，生成元一共有 ____ 个",
+  "answer": [
+   "4",
+   "四"
+  ],
+  "why": "1、3、5、7。"
+ },
+ {
+  "type": "fill",
+  "q": "\\(G=\\langle a\\rangle\\) 是 12 阶循环群，它唯一的 4 阶子群是 \\(\\langle\\)____\\(\\rangle\\)",
+  "answer": [
+   "a^3",
+   "a3"
+  ],
+  "why": "\\(d=4\\)，\\(\\langle a^{12/4}\\rangle=\\langle a^3\\rangle=\\{e,a^3,a^6,a^9\\}\\)。"
+ },
+ {
+  "type": "choice",
+  "q": "下列哪个不是 \\(\\langle\\mathbb{Z},+\\rangle\\) 的子群？",
+  "options": [
+   "\\(\\{0\\}\\)",
+   "\\(5\\mathbb{Z}\\)",
+   "\\(\\mathbb{N}\\)",
+   "\\(\\mathbb{Z}\\)"
+  ],
+  "answer": 2,
+  "why": "\\(\\mathbb{Z}\\) 的子群只有 \\(\\{0\\}\\) 和 \\(n\\mathbb{Z}\\ (n\\ge1)\\)；\\(\\mathbb{N}\\) 不对逆元封闭。"
+ },
+ {
+  "type": "choice",
+  "q": "无限循环群 \\(G=\\langle a\\rangle\\) 的生成元",
+  "options": [
+   "只有 \\(a\\)",
+   "恰为 \\(a\\) 和 \\(a^{-1}\\)",
+   "有无穷多个",
+   "有 \\(\\varphi(n)\\) 个"
+  ],
+  "answer": 1,
+  "why": "定理(1)。"
+ },
+ {
+  "type": "fill",
+  "q": "6 阶循环群 \\(\\langle a\\rangle\\) 中，\\(|\\langle a^4\\rangle|=\\)____",
+  "answer": [
+   "3"
+  ],
+  "why": "\\(\\langle a^4\\rangle=\\{e,a^4,a^2\\}\\)，因为 \\(a^8=a^2,\\ a^{12}=e\\)。"
+ },
+ {
+  "type": "fill",
+  "q": "12 阶循环群的子群一共有 ____ 个",
+  "answer": [
+   "6",
+   "六"
+  ],
+  "why": "12 的正因子 1、2、3、4、6、12 各对应唯一一个子群。"
+ },
+ {
+  "type": "choice",
+  "q": "在 \\(\\langle\\mathbb{Z}_6,\\oplus_6\\rangle\\) 中，下列哪个元素是生成元？",
+  "options": [
+   "2",
+   "3",
+   "4",
+   "5"
+  ],
+  "answer": 3,
+  "why": "\\(\\gcd(5,6)=1\\)；2、3、4 与 6 不互素。"
+ }
+]

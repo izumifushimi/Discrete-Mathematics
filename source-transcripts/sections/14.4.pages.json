@@ -1,0 +1,17 @@
+[
+ {
+  "page": 209,
+  "status": "transcribed",
+  "note": "定理1–5：方程有唯一解、半群成为群的条件、消去律、有限半群加消去律、aG=Ga=G；Z3 例开头"
+ },
+ {
+  "page": 210,
+  "status": "partial",
+  "note": "Z3 运算表与 1⊕3Z3 例（原写 Z2，已用 fix 标出）、定理6 元素的阶及性质；底部最后一行被裁切，用 unclear 标出"
+ },
+ {
+  "page": 211,
+  "status": "partial",
+  "note": "证明 |a|=|a^{-1}|（互相整除得 t=r）；顶部第一行残字，用 unclear 标出"
+ }
+]

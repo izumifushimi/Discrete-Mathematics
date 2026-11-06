@@ -1,0 +1,67 @@
+<h3>分配格的定义 <span class="pg">p.250</span></h3>
+<div class="def"><b>定义 1（①）</b> 设 \(\langle L,\land,\lor\rangle\) 为格，若 \(\forall a,b,c\in L\) 有
+\[\begin{aligned}a\land(b\lor c)&=(a\land b)\lor(a\land c)\\ a\lor(b\land c)&=(a\lor b)\land(a\lor c)\end{aligned}\]
+成立，则称 \(L\) 为分配格。</div>
+
+<h3>例：判断四个格是否为分配格 <span class="pg">p.250</span></h3>
+<div class="example"><b>例 1</b> 判断下列格 \(L_1,L_2,L_3,L_4\) 是否为分配格。
+<figure class="fig"><svg viewBox="0 0 640 230" role="img" aria-label="四个哈斯图 L1 到 L4">
+<g stroke="currentColor" fill="none" stroke-width="1.5">
+<line x1="60" y1="40" x2="60" y2="110"/><line x1="60" y1="110" x2="60" y2="180"/>
+<line x1="200" y1="40" x2="150" y2="110"/><line x1="200" y1="40" x2="250" y2="110"/><line x1="150" y1="110" x2="200" y2="180"/><line x1="250" y1="110" x2="200" y2="180"/>
+<line x1="380" y1="40" x2="320" y2="110"/><line x1="380" y1="40" x2="380" y2="110"/><line x1="380" y1="40" x2="440" y2="110"/><line x1="320" y1="110" x2="380" y2="180"/><line x1="380" y1="110" x2="380" y2="180"/><line x1="440" y1="110" x2="380" y2="180"/>
+<line x1="560" y1="30" x2="500" y2="110"/><line x1="560" y1="30" x2="610" y2="80"/><line x1="610" y1="80" x2="610" y2="140"/><line x1="500" y1="110" x2="560" y2="190"/><line x1="610" y1="140" x2="560" y2="190"/>
+</g>
+<g fill="currentColor">
+<circle cx="60" cy="40" r="4"/><circle cx="60" cy="110" r="4"/><circle cx="60" cy="180" r="4"/>
+<circle cx="200" cy="40" r="4"/><circle cx="150" cy="110" r="4"/><circle cx="250" cy="110" r="4"/><circle cx="200" cy="180" r="4"/>
+<circle cx="380" cy="40" r="4"/><circle cx="320" cy="110" r="4"/><circle cx="380" cy="110" r="4"/><circle cx="440" cy="110" r="4"/><circle cx="380" cy="180" r="4"/>
+<circle cx="560" cy="30" r="4"/><circle cx="500" cy="110" r="4"/><circle cx="610" cy="80" r="4"/><circle cx="610" cy="140" r="4"/><circle cx="560" cy="190" r="4"/>
+<text font-size="14" x="70" y="45">c</text><text font-size="14" x="70" y="115">b</text><text font-size="14" x="70" y="185">a</text>
+<text font-size="14" x="196" y="30">d</text><text font-size="14" x="132" y="114">b</text><text font-size="14" x="258" y="114">c</text><text font-size="14" x="196" y="200">a</text>
+<text font-size="14" x="390" y="40">e</text><text font-size="14" x="302" y="114">b</text><text font-size="14" x="388" y="105">c</text><text font-size="14" x="448" y="114">d</text><text font-size="14" x="388" y="198">a</text>
+<text font-size="14" x="570" y="30">e</text><text font-size="14" x="484" y="114">b</text><text font-size="14" x="618" y="84">d</text><text font-size="14" x="618" y="144">c</text><text font-size="14" x="556" y="210">a</text>
+<text font-size="14" x="50" y="225">L1 ✓</text><text font-size="14" x="190" y="225">L2 ✓</text><text font-size="14" x="345" y="225">L3 ✗ 钻石格</text><text font-size="14" x="530" y="225">L4 ✗ 五角格</text>
+</g></svg>
+<figcaption>图：\(L_1\) 为链 \(a\prec b\prec c\)；\(L_2\) 为菱形格，\(a\) 最小、\(d\) 最大，\(b,c\) 不可比；\(L_3\) 为钻石格 \(M_5\)，\(a\) 最小、\(e\) 最大，\(b,c,d\) 两两不可比；\(L_4\) 为五角格 \(N_5\)，\(a\) 最小、\(e\) 最大，\(a\prec c\prec d\prec e\)，\(a\prec b\prec e\)，\(b\) 与 \(c,d\) 不可比。原图中 \(L_1\) 的 \(a,b,c\)、\(L_4\) 的 \(b,c,d\) 被红圈圈出。</figcaption></figure>
+<b>解</b>
+<p>\(L_1,L_2\)：是分配格（✓）。</p>
+<p>\(L_3\)（钻石格）：
+\[b\land(c\lor d)=b\land e=b,\qquad (b\land c)\lor(b\land d)=a\lor a=a\]
+两者不相等（原页在结果 \(b\)、\(a\) 上打红叉），所以 \(L_3\) 不是分配格（✗）。</p>
+<p>\(L_4\)（五角格）：
+\[c\lor(b\land d)=c\lor a=e,\qquad (c\lor b)\land(c\lor d)=e\land d=d\]
+两者不相等，所以 \(L_4\) 不是分配格（✗）。</p>
+<b>结论</b> \(L_1,L_2\) 是分配格；\(L_3,L_4\) 不是分配格。</div>
+<div class="fix"><b>校订说明（p.250）</b> 原式：\(c\lor(b\land d)=c\lor a=e\)；正确式：\(c\lor(b\land d)=c\lor a=c\)；原因：\(a\) 是 \(L_4\) 的最小元，\(a\prec c\)，故 \(c\lor a=c\)。改正后 \(c\ne d=(c\lor b)\land(c\lor d)\)，结论"\(L_4\) 不是分配格"不变。</div>
+<div class="note"><b>笔记边注</b> 原页 \(L_3\) 图中部画有一条波浪线横穿 \(b,c,d\)；\(L_3\) 旁注"钻石格"，\(L_4\) 旁注"五角格"；两组计算分别用箭头指向 \(L_3\)、\(L_4\)。</div>
+
+<h3>分配格的判别定理 <span class="pg">p.250–251</span></h3>
+<div class="thm"><b>定理 1</b> 设 \(L\) 是格，则 \(L\) 是分配格 \(\iff\) \(L\) 中不含有与钻石格或五角格同构的子格。</div>
+<div class="thm"><b>推论</b> \(\Downarrow\)
+<ol><li>小于 5 元的格都是分配格；</li><li>任何一条链都是分配格。</li></ol></div>
+
+<div class="example"><b>例 2</b> 判断下列三个格是否为分配格（p.251）。
+<figure class="fig"><svg viewBox="0 0 560 230" role="img" aria-label="三个非分配格的哈斯图">
+<g stroke="currentColor" fill="none" stroke-width="1.5">
+<line x1="90" y1="20" x2="90" y2="60"/><line x1="90" y1="60" x2="40" y2="130"/><line x1="90" y1="60" x2="90" y2="130"/><line x1="90" y1="60" x2="140" y2="130"/><line x1="40" y1="130" x2="90" y2="200"/><line x1="90" y1="130" x2="90" y2="200"/><line x1="140" y1="130" x2="90" y2="200"/>
+<line x1="280" y1="30" x2="230" y2="70"/><line x1="230" y1="70" x2="230" y2="140"/><line x1="230" y1="140" x2="280" y2="200"/><line x1="280" y1="30" x2="330" y2="80"/><line x1="330" y1="80" x2="330" y2="150"/><line x1="330" y1="150" x2="280" y2="200"/>
+<line x1="470" y1="20" x2="410" y2="110"/><line x1="470" y1="20" x2="470" y2="80"/><line x1="470" y1="20" x2="530" y2="110"/><line x1="470" y1="80" x2="470" y2="140"/><line x1="470" y1="140" x2="470" y2="200"/><line x1="410" y1="110" x2="470" y2="200"/><line x1="530" y1="110" x2="470" y2="200"/>
+</g>
+<g fill="currentColor">
+<circle cx="90" cy="20" r="4"/><circle cx="90" cy="60" r="4"/><circle cx="40" cy="130" r="4"/><circle cx="90" cy="130" r="4"/><circle cx="140" cy="130" r="4"/><circle cx="90" cy="200" r="4"/>
+<circle cx="280" cy="30" r="4"/><circle cx="230" cy="70" r="4"/><circle cx="230" cy="140" r="4"/><circle cx="280" cy="200" r="4"/><circle cx="330" cy="80" r="4"/><circle cx="330" cy="150" r="4"/>
+<circle cx="470" cy="20" r="4"/><circle cx="410" cy="110" r="4"/><circle cx="470" cy="80" r="4"/><circle cx="470" cy="140" r="4"/><circle cx="530" cy="110" r="4"/><circle cx="470" cy="200" r="4"/>
+<text font-size="14" x="80" y="225">✗</text><text font-size="14" x="272" y="225">✗</text><text font-size="14" x="462" y="225">✗</text>
+</g></svg>
+<figcaption>图（原图各元素未标字母）：左图 6 元，最大元下方接一个钻石格（下面 5 个元素构成 \(M_5\)，被红圈圈出）；中图 6 元"六边形"格，最小元与最大元之间左右各一条两元链（原页红圈圈出其中五个元素构成的五角格，左上元素处另画小红圈）；右图 6 元，最大元与最小元之间左、右各一个元素，中间一条两元链（原页红圈和上下红箭头标出中间两个元素，并用红箭头指向右上角重画的钻石格小图；旁边另画一个五角格小图）。三个格均打 ✗。</figcaption></figure>
+<b>解</b> 左图含与钻石格同构的子格；中图含与五角格同构的子格（如去掉一个侧边元素后余下的 5 个元素）；右图取最小元、左、中间上方元素、右、最大元，构成与钻石格同构的子格。
+<b>结论</b> 三个格都不是分配格。</div>
+<div class="supp"><b>补充讲解</b> 右图中间两元链记为 \(m_1\prec m_2\)，左右元素记为 \(l,r\)。则 \(l,m_2,r\) 两两的交都是最小元、并都是最大元，所以 \(\{0,l,m_2,r,1\}\) 对原运算封闭且同构于 \(M_5\)。</div>
+
+<h3>全下界、全上界与有界格 <span class="pg">p.251–252</span></h3>
+<div class="def"><b>定义 2（②）</b> 设 \(L\) 是格，若存在 \(a\in L\) 使得 \(\forall x\in L\) 有 \(a\preccurlyeq x\)，则 \(a\) 为 \(L\) 的全下界，记 \(0\)；若存在 \(a\in L\) 使得 \(\forall x\in L\) 有 \(x\preccurlyeq a\)，则 \(a\) 为 \(L\) 的全上界，记 \(1\)。</div>
+<div class="note"><b>笔记边注</b> 全下界 / 全上界不一定存在（有限 / 无限）；若存在则唯一。</div>
+<div class="supp"><b>补充讲解</b> 有限格一定有全下界和全上界（所有元素的交、并）；无限格可能没有，例如 \(\langle\mathbb{Z},\le\rangle\)。</div>
+<div class="def"><b>定义 3（③）</b> 设 \(L\) 是格，若存在全下界和全上界，则称 \(L\) 为有界格，\(L\) 记为 \(\langle L,\land,\lor,0,1\rangle\)。</div>
+<div class="summary"><b>总结（p.252）</b> 格 \(\to\) 有界；格 \(\to\) 分配；二者合起来 \(\to\) 有界分配格。</div>

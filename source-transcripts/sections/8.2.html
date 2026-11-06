@@ -1,0 +1,164 @@
+<div class="note"><b>笔记边注</b> 页首小节标题“8.2 生成树”，日期 2025年9月10日 17:01。</div>
+
+<h3>① 生成树及相关概念 <span class="pg">p.131</span></h3>
+<p>思路：由原图 \(G\) 得到生成树 \(T\)（原图 \(G\longrightarrow\) 生成树 \(T\)）。</p>
+<div class="def"><b>定义 1）生成树</b> \(T\subseteq G\ \land\ V(T)=V(G)\ \land\ T\) 是树。</div>
+<div class="note"><b>笔记边注</b> \(T\subseteq G\) 下方注“边变少”。右侧大括号注：“删边，不删点”（\(G\) 不一定是树）。</div>
+<div class="def"><b>定义 2）树枝</b> \(e\in E(T)\)（生成树 \(T\) 的边）。</div>
+<div class="def"><b>定义 3）弦</b> \(e\in E(G)-E(T)\)（被去掉的边）。</div>
+<div class="def"><b>定义 4）余树</b> \(\overline{T}=G[E(G)-E(T)]\)（原页写作 \(G(E(G)-E(T))\)，即由弦集导出的子图）。</div>
+
+<figure class="fig"><svg viewBox="0 0 600 200" role="img" aria-label="原图G、生成树T与余树">
+<g stroke="currentColor" fill="none" stroke-width="2">
+<line x1="30" y1="30" x2="80" y2="30"/><line x1="80" y1="30" x2="130" y2="30"/><line x1="30" y1="30" x2="30" y2="80"/><line x1="30" y1="80" x2="30" y2="130"/>
+<line x1="80" y1="30" x2="80" y2="80" stroke-dasharray="5 3"/><line x1="30" y1="80" x2="80" y2="80"/><line x1="80" y1="80" x2="130" y2="80"/><line x1="80" y1="80" x2="80" y2="130"/>
+<line x1="130" y1="80" x2="130" y2="130" stroke-dasharray="5 3"/><line x1="80" y1="130" x2="130" y2="130"/>
+<line x1="230" y1="30" x2="280" y2="30"/><line x1="280" y1="30" x2="330" y2="30"/><line x1="230" y1="30" x2="230" y2="80"/><line x1="230" y1="80" x2="230" y2="130"/>
+<line x1="230" y1="80" x2="280" y2="80"/><line x1="280" y1="80" x2="330" y2="80"/><line x1="280" y1="80" x2="280" y2="130"/><line x1="280" y1="130" x2="330" y2="130"/>
+<line x1="450" y1="30" x2="450" y2="80"/><line x1="500" y1="80" x2="500" y2="130"/>
+<circle cx="30" cy="30" r="4"/><circle cx="80" cy="30" r="4"/><circle cx="130" cy="30" r="4"/><circle cx="30" cy="80" r="4"/><circle cx="80" cy="80" r="4"/><circle cx="130" cy="80" r="4"/><circle cx="30" cy="130" r="4"/><circle cx="80" cy="130" r="4"/><circle cx="130" cy="130" r="4"/>
+<circle cx="230" cy="30" r="4"/><circle cx="280" cy="30" r="4"/><circle cx="330" cy="30" r="4"/><circle cx="230" cy="80" r="4"/><circle cx="280" cy="80" r="4"/><circle cx="330" cy="80" r="4"/><circle cx="230" cy="130" r="4"/><circle cx="280" cy="130" r="4"/><circle cx="330" cy="130" r="4"/>
+<circle cx="450" cy="30" r="4"/><circle cx="450" cy="80" r="4"/><circle cx="500" cy="80" r="4"/><circle cx="500" cy="130" r="4"/>
+</g>
+<g fill="currentColor"><text x="40" y="170" font-size="14">G（m 边）</text><text x="235" y="170" font-size="14">T（n−1 边）</text><text x="420" y="170" font-size="14">余树 T̄（m−n+1 边）</text></g>
+</svg><figcaption>图：原图 \(G\) 为 3×3 共 9 个顶点的格状图（左上格、右下格两个方格原页用红框标出），共 10 条边；虚线为被删去的两条竖边（原页分别用黄色、红色标记），即弦。删去后得到梳状生成树 \(T\)（8 条边 \(=n-1\)）；余树 \(\overline{T}\) 只含这两条竖边（原页用红圈圈出），边数 \(10-9+1=2\)。</figcaption></figure>
+
+<p>无向图 \(G\) 连通 \(\Leftrightarrow\) \(G\) 有生成树。</p>
+<div class="note"><b>笔记边注</b> 右侧：\(G:\ m\ge n-1\)；\(T:\ m=n-1\)。</div>
+
+<h3>② 生成树的定理 <span class="pg">p.131–132</span></h3>
+<div class="thm"><b>定理 1</b> \(G\) 是 \(n\) 阶 \(m\) 边无向连通图 \(\Rightarrow m\ge n-1\)。（下方框出 \(m=n-1\)：等号对应树的情形。）</div>
+<div class="thm"><b>定理 2</b> \(T\) 是 \(n\) 阶 \(m\) 边无向连通图 \(G\) 的生成树 \(\Rightarrow |E(\overline{T})|=m-n+1\)。</div>
+<div class="thm"><b>定理 3</b> \(T\) 是无向连通图 \(G\) 的生成树，\(C\) 是 \(G\) 中的圈 \(\Rightarrow E(\overline{T})\cap E(C)\ne\emptyset\)。<br>即：圈 \(C\) 与余树 \(\overline{T}\) 必有重合边。</div>
+<div class="thm"><b>定理 4</b> 设 \(T\) 是连通图 \(G\) 的生成树，\(S\) 是 \(G\) 中的割集，则 \(E(T)\cap S\ne\emptyset\)。<br>即：生成树 \(T\) 与割集 \(S\) 有重合边。</div>
+<div class="thm"><b>定理 5</b> 设 \(G\) 是连通图，\(T\) 是 \(G\) 的生成树，\(e\) 是 \(T\) 的弦，则 \(T\cup e\) 中存在由弦 \(e\) 和其他树枝组成的圈，并且不同的弦对应不同的圈。</div>
+
+<h3>③ 基本回路 <span class="pg">p.132–133</span></h3>
+<div class="def"><b>定义（基本回路）</b> 设 \(G\) 是 \(n\) 阶 \(m\) 边无向连通图，\(T\) 是 \(G\) 的生成树，\(\overline{T}\) 为余树，\(E(\overline{T})=\{e_1',e_2',\dots,e_{m-n+1}'\}\)。<br>
+基本回路：\(T\cup e_r'\) 中的唯一回路 \(C_r\)。<br>
+基本回路系统：\(\{C_1,C_2,\dots,C_{m-n+1}\}\)。<br>
+圈秩：\(\xi(G)=m-n+1\)。</div>
+
+<figure class="fig"><svg viewBox="0 0 560 170" role="img" aria-label="矩形加对角线的图G、生成树T与余树">
+<g stroke="currentColor" fill="none" stroke-width="2">
+<line x1="30" y1="30" x2="130" y2="30"/><line x1="30" y1="30" x2="30" y2="110"/><line x1="130" y1="30" x2="130" y2="110"/><line x1="30" y1="110" x2="130" y2="110"/><line x1="30" y1="110" x2="130" y2="30"/>
+<line x1="230" y1="30" x2="330" y2="30"/><line x1="330" y1="30" x2="330" y2="110"/><line x1="230" y1="110" x2="330" y2="30"/>
+<line x1="430" y1="30" x2="430" y2="110"/><line x1="430" y1="110" x2="530" y2="110"/>
+<circle cx="30" cy="30" r="4"/><circle cx="130" cy="30" r="4"/><circle cx="30" cy="110" r="4"/><circle cx="130" cy="110" r="4"/>
+<circle cx="230" cy="30" r="4"/><circle cx="330" cy="30" r="4"/><circle cx="230" cy="110" r="4"/><circle cx="330" cy="110" r="4"/>
+<circle cx="430" cy="30" r="4"/><circle cx="430" cy="110" r="4"/><circle cx="530" cy="110" r="4"/>
+</g>
+<g fill="currentColor" font-size="14"><text x="8" y="75" font-size="14">e1′</text><text x="70" y="128" font-size="14">e2′</text>
+<text x="270" y="24" font-size="14">e1</text><text x="262" y="80" font-size="14">e2</text><text x="338" y="75" font-size="14">e3</text>
+<text x="408" y="75" font-size="14">e1′</text><text x="470" y="128" font-size="14">e2′</text>
+<text x="72" y="155" font-size="14">G</text><text x="275" y="155" font-size="14">T</text><text x="465" y="155" font-size="14">T̄</text></g>
+</svg><figcaption>图：\(G\) 为 4 个顶点的矩形加一条对角线（左下—右上），共 5 条边。生成树 \(T\) 由上边 \(e_1\)、对角线 \(e_2\)、右边 \(e_3\) 组成（树枝标号见 p.133）；左边 \(e_1'\) 与下边 \(e_2'\) 是弦（p.132 中在 \(G\) 上用红色短划标出），组成余树 \(\overline{T}\)。</figcaption></figure>
+
+<div class="example"><b>例 1</b> 求上图 \(G\) 关于 \(T\) 的基本回路与圈秩。<br>
+<b>解</b><br>
+\(C_1\leftrightarrow e_1'\)：\(T\cup e_1'\) 中的唯一回路为左上三角形（左边 \(e_1'\)、上边 \(e_1\)、对角线 \(e_2\)），记为 \(C_1\)。<br>
+\(C_2\leftrightarrow e_2'\)：\(T\cup e_2'\) 中的唯一回路为右下三角形（对角线 \(e_2\)、下边 \(e_2'\)、右边 \(e_3\)），记为 \(C_2\)。<br>
+（原页每行前打“√”，并画出 \(T\cup e_r'\) 的图，用红色圆弧标出圈，再用箭头指向抽出的三角形 \(C_1\)、\(C_2\)。）<br>
+<b>结论</b> 圈秩 \(\xi(G)=5-4+1=2\)。</div>
+<div class="note"><b>笔记边注</b> 第一行“\(C_1\leftrightarrow e_1'\)”中的 \(C_1\) 手写形似“G”，按下一行“\(C_2\leftrightarrow e_2'\)”及右侧图下标 \(C_1\) 读作 \(C_1\)。</div>
+
+<h3>④ 定理 a（树枝与割集） <span class="pg">p.133</span></h3>
+<div class="thm"><b>定理 a</b> 设 \(G\) 为连通图，\(T\) 是 \(G\) 的生成树，\(e\) 是 \(T\) 的树枝，则 \(G\) 中存在由树枝 \(e\) 和其他弦组成的割集，并且不同的树枝对应不同的割集。</div>
+<div class="example"><b>例 2</b> 仍用上图 \(G\)（树枝 \(e_1,e_2,e_3\)；弦 \(e_1',e_2'\)），对每条树枝找割集。<br>
+<b>解</b>（原页在 \(G\) 上用红线切割，被切边用“‖”标记，红圈圈出被分出的顶点）<br>
+① 树枝 \(e_1\)（上边）：切线穿过 \(e_1\) 与 \(e_1'\)，分出左上顶点，割集 \(\{e_1,e_1'\}\)。<br>
+② 树枝 \(e_2\)（对角线）：切线穿过 \(e_1'\)、\(e_2\)、\(e_2'\)，分出左下顶点，割集 \(\{e_2,e_1',e_2'\}\)。<br>
+③ 树枝 \(e_3\)（右边）：切线穿过 \(e_3\) 与 \(e_2'\)，分出右下顶点，割集 \(\{e_3,e_2'\}\)。<br>
+<b>结论</b> 每个割集恰含一条树枝，其余都是弦；三条树枝对应三个不同割集。</div>
+<figure class="fig"><svg viewBox="0 0 520 150" role="img" aria-label="三条树枝各自对应的割集切线">
+<g stroke="currentColor" fill="none" stroke-width="2">
+<g id="g82r"><line x1="30" y1="30" x2="130" y2="30"/><line x1="30" y1="30" x2="30" y2="110"/><line x1="130" y1="30" x2="130" y2="110"/><line x1="30" y1="110" x2="130" y2="110"/><line x1="30" y1="110" x2="130" y2="30"/>
+<circle cx="30" cy="30" r="4"/><circle cx="130" cy="30" r="4"/><circle cx="30" cy="110" r="4"/><circle cx="130" cy="110" r="4"/></g>
+<line x1="5" y1="80" x2="80" y2="5" stroke-dasharray="6 4"/><circle cx="30" cy="30" r="9"/>
+<g transform="translate(180,0)"><line x1="30" y1="30" x2="130" y2="30"/><line x1="30" y1="30" x2="30" y2="110"/><line x1="130" y1="30" x2="130" y2="110"/><line x1="30" y1="110" x2="130" y2="110"/><line x1="30" y1="110" x2="130" y2="30"/>
+<circle cx="30" cy="30" r="4"/><circle cx="130" cy="30" r="4"/><circle cx="30" cy="110" r="4"/><circle cx="130" cy="110" r="4"/>
+<line x1="5" y1="60" x2="90" y2="140" stroke-dasharray="6 4"/><circle cx="30" cy="110" r="9"/></g>
+<g transform="translate(360,0)"><line x1="30" y1="30" x2="130" y2="30"/><line x1="30" y1="30" x2="30" y2="110"/><line x1="130" y1="30" x2="130" y2="110"/><line x1="30" y1="110" x2="130" y2="110"/><line x1="30" y1="110" x2="130" y2="30"/>
+<circle cx="30" cy="30" r="4"/><circle cx="130" cy="30" r="4"/><circle cx="30" cy="110" r="4"/><circle cx="130" cy="110" r="4"/>
+<line x1="90" y1="140" x2="155" y2="70" stroke-dasharray="6 4"/><circle cx="130" cy="110" r="9"/></g>
+</g>
+<g fill="currentColor"><text x="60" y="145" font-size="14">① e1</text><text x="240" y="20" font-size="14">② e2</text><text x="420" y="20" font-size="14">③ e3</text></g>
+</svg><figcaption>图：虚线为切线。① 分出左上顶点，切 \(e_1,e_1'\)；② 分出左下顶点，切 \(e_1',e_2,e_2'\)；③ 分出右下顶点，切 \(e_3,e_2'\)。</figcaption></figure>
+
+<h3>⑤ 基本割集 <span class="pg">p.133–134</span></h3>
+<div class="def"><b>定义（基本割集）</b> 设 \(G\) 是 \(n\) 阶 \(m\) 边无向连通图，\(T\) 是 \(G\) 的生成树，\(E(T)=\{e_1,e_2,\dots,e_{n-1}\}\)。<br>
+基本割集：树枝 \(e_r\) 对应的唯一割集 \(S_r\)。<br>
+基本割集系统：\(\{S_1,S_2,\dots,S_{n-1}\}\)。<br>
+割集秩：\(\eta(G)=n-1\)。</div>
+
+<div class="example"><b>例 3</b> 求下图 \(G\) 关于生成树 \(T\) 的基本回路系统、基本割集系统。
+<figure class="fig"><svg viewBox="0 0 640 200" role="img" aria-label="6顶点9边的图G及其生成树T">
+<g stroke="currentColor" fill="none" stroke-width="2">
+<line x1="30" y1="90" x2="90" y2="40"/><line x1="90" y1="40" x2="250" y2="40"/><line x1="30" y1="90" x2="320" y2="90"/><line x1="250" y1="40" x2="320" y2="90"/>
+<line x1="90" y1="40" x2="90" y2="140"/><line x1="250" y1="40" x2="250" y2="140"/><line x1="30" y1="90" x2="90" y2="140"/><line x1="90" y1="140" x2="250" y2="140"/><line x1="250" y1="140" x2="320" y2="90"/>
+<circle cx="30" cy="90" r="4"/><circle cx="90" cy="40" r="4"/><circle cx="250" cy="40" r="4"/><circle cx="320" cy="90" r="4"/><circle cx="90" cy="140" r="4"/><circle cx="250" cy="140" r="4"/>
+<g transform="translate(330,0)"><line x1="30" y1="90" x2="90" y2="40"/><line x1="90" y1="40" x2="250" y2="40"/><line x1="30" y1="90" x2="250" y2="90"/><line x1="30" y1="90" x2="90" y2="140"/><line x1="250" y1="90" x2="250" y2="140"/>
+<circle cx="30" cy="90" r="4"/><circle cx="90" cy="40" r="4"/><circle cx="250" cy="40" r="4"/><circle cx="250" cy="90" r="4"/><circle cx="90" cy="140" r="4"/><circle cx="250" cy="140" r="4"/></g>
+</g>
+<g fill="currentColor" font-size="14"><text x="45" y="58" font-size="14">b</text><text x="165" y="33" font-size="14">e</text><text x="165" y="84" font-size="14">a</text><text x="290" y="58" font-size="14">h</text>
+<text x="96" y="118" font-size="14">d</text><text x="236" y="118" font-size="14">g</text><text x="45" y="128" font-size="14">c</text><text x="165" y="158" font-size="14">f</text><text x="292" y="128" font-size="14">i</text>
+<text x="165" y="190" font-size="14">G</text>
+<text x="375" y="58" font-size="14">b</text><text x="495" y="33" font-size="14">e</text><text x="495" y="84" font-size="14">a</text><text x="375" y="128" font-size="14">c</text><text x="586" y="120" font-size="14">i</text><text x="495" y="190" font-size="14">T</text></g>
+</svg><figcaption>图：\(G\) 有 6 个顶点：左 L、左上 A、右上 B、右 R、左下 C、右下 D。边：\(b=LA\)，\(e=AB\)，\(a=LR\)，\(h=BR\)，\(d=AC\)，\(g=BD\)，\(c=LC\)，\(f=CD\)，\(i=DR\)，共 9 条。原页中 \(d,f,g,h\) 用红色标出，左下 \(c\) 用红圈圈出。生成树 \(T\) 由 \(b,e,a,c,i\) 组成（右图中 \(T\) 的 R 画在 \(a\) 右端，\(i\) 从 R 向下连 D）。</figcaption></figure>
+<b>解</b> 树枝 \(=\{a,b,c,e,i\}\)，弦 \(=\{d,f,g,h\}\)。<br>
+基本回路：\(C_d=dcb\)，\(C_f=fcai\)，\(C_g=gebai\)，\(C_h=heba\)。<br>
+基本回路系统 \(\{C_d,C_f,C_g,C_h\}\)，\(\xi(G)=4\)。<br>
+基本割集：\(S_a=\{a,h,g,f\}\)，\(S_b=\{b,d,g,h\}\)，\(S_c=\{c,d,f\}\)，\(S_e=\{e,g,f\}\)（见下方校订），\(S_i=\{i,g,f\}\)。<br>
+基本割集系统 \(=\{S_a,S_b,S_c,S_e,S_i\}\)，\(\eta(G)=5\)。</div>
+<div class="fix"><b>校订说明（p.134）</b> 原式：\(S_e=\{e,g,f\}\)（末一字母形似 f）；正确式：\(S_e=\{e,g,h\}\)；原因：从 \(T\) 删去树枝 \(e\) 后，右上顶点 B 单独成为一个分支，连接 B 与其余顶点的边是 \(e,g,h\)；\(f=CD\) 两端都在另一分支中，不跨越割。</div>
+<div class="supp"><b>补充讲解</b> 验证：\(m=9,\ n=6\)，\(\xi(G)=9-6+1=4\) 与 4 条弦一致；\(\eta(G)=6-1=5\) 与 5 条树枝一致。每个基本回路恰含一条弦，每个基本割集恰含一条树枝。</div>
+
+<h3>⑥ 生成树的计数 \(\tau(G)\) <span class="pg">p.134–136</span></h3>
+<div class="def"><b>定义</b> \(\tau(G)\)：图 \(G\) 的生成树的个数。</div>
+<div class="unclear"><b>待核对（p.134，位置：⑥“生成树的计数 τ(G)”右侧括号内）</b> 可辨认部分：左括号与末尾星号“*”，首字疑为“树”；无法辨认：括号内其余二字。</div>
+<div class="example"><b>例 4</b> \(G\) 为 4 圈：\(v_1v_2\)（上）、\(v_1v_3\)（左）、\(v_3v_4\)（下）、\(v_2v_4\)（右），求 \(\tau(G)\)。
+<figure class="fig"><svg viewBox="0 0 620 130" role="img" aria-label="4圈G及其4棵生成树">
+<g stroke="currentColor" fill="none" stroke-width="2">
+<line x1="30" y1="25" x2="90" y2="25"/><line x1="30" y1="25" x2="30" y2="85"/><line x1="30" y1="85" x2="90" y2="85"/><line x1="90" y1="25" x2="90" y2="85"/>
+<g transform="translate(130,0)"><line x1="30" y1="25" x2="90" y2="25"/><line x1="30" y1="25" x2="30" y2="85"/><line x1="30" y1="85" x2="90" y2="85"/></g>
+<g transform="translate(250,0)"><line x1="30" y1="25" x2="90" y2="25"/><line x1="30" y1="25" x2="30" y2="85"/><line x1="90" y1="25" x2="90" y2="85"/></g>
+<g transform="translate(370,0)"><line x1="30" y1="25" x2="90" y2="25"/><line x1="30" y1="85" x2="90" y2="85"/><line x1="90" y1="25" x2="90" y2="85"/></g>
+<g transform="translate(490,0)"><line x1="30" y1="25" x2="30" y2="85"/><line x1="30" y1="85" x2="90" y2="85"/><line x1="90" y1="25" x2="90" y2="85"/></g>
+</g>
+<g fill="currentColor" font-size="14"><text x="18" y="18" font-size="14">v1</text><text x="88" y="18" font-size="14">v2</text><text x="8" y="100" font-size="14">v3</text><text x="88" y="100" font-size="14">v4</text>
+<text x="55" y="120" font-size="14">G</text><text x="185" y="120" font-size="14">T1</text><text x="305" y="120" font-size="14">T2</text><text x="425" y="120" font-size="14">T3</text><text x="545" y="120" font-size="14">T4</text></g>
+</svg><figcaption>图：\(G\) 为 4 圈 \(v_1v_2v_4v_3v_1\)。\(T_1\)：上、左、下（缺右边）；\(T_2\)：左、上、右（缺下边）；\(T_3\)：上、右、下（缺左边）；\(T_4\)：左、下、右（缺上边）。</figcaption></figure>
+<b>结论</b> \(\tau(G)=4\)。</div>
+
+<div class="thm"><b>定理 b</b> 对 \(\forall e\) 非环，
+\[\tau(G)=\tau(G-e)+\tau(G\backslash e)\]
+其中 \(G-e\) 为删除 \(e\)，\(G\backslash e\) 为收缩 \(e\)（原页公式上方分别注“删除”“收缩”）。</div>
+
+<div class="example"><b>例 5</b> \(G\) 为 4 圈再用一条边 \(e\) 挂一个悬挂顶点（原页画成菱形下方连出一条边），用定理 b 计算 \(\tau(G)\)。<br>
+<b>解</b>（原页每一步画出小图，红线标出当前要删除/收缩的边，波浪线标出可直接计数的图）
+\[\begin{aligned}
+\tau[G]&=\tau[G-e]+\tau[G\backslash e]\quad(G-e\text{ 含孤立点，不连通；}G\backslash e\text{ 为 4 圈})\\
+&=0+\tau[\text{4 圈}]\quad(\text{在 4 圈的一条边上打红}\times)\\
+&=\tau[\text{4 圈删一边 = 路}]+\tau[\text{4 圈收缩一边 = 三角形}]\\
+&=1+\tau[\text{三角形删一边 = 路}]+\tau[\text{三角形收缩一边 = 两顶点间两条平行边}]\\
+&=2+\tau[\text{两条平行边}]\quad(\text{在其中一条上打红标记})\\
+&=2+\tau[K_2]+\tau[\text{单点（另一平行边收缩后成环）}]\\
+&=2+1+1=4
+\end{aligned}\]
+<b>结论</b> \(\tau(G)=4\)。</div>
+<div class="note"><b>笔记边注</b> 原页倒数第二行最后一项写作“\(\tau\circ]\)”，左方括号漏写，含义为单个顶点的 \(\tau=1\)。</div>
+
+<div class="example"><b>例 6</b> \(G\) 为矩形加对角线（左下—右上），即 \(K_4\) 去掉一条边，求 \(\tau(G)\)。<br>
+<b>解</b> 取左边 \(e\)（原页在左边打红标记）：
+\[\begin{aligned}
+\tau[G]&=\tau[G-e]+\tau[G\backslash e]\\
+&=\tau[\text{三角形}]+\tau[\text{三角形}]+\tau[\text{两条平行边}]\\
+&=3+3+2=8
+\end{aligned}\]
+过程说明（按原页小图）：\(G-e\) 中左上顶点只剩上边与图相连（原页在上边打“‖”），该边收缩后得三角形（左下、右上、右下），\(\tau=3\)；\(G\backslash e\) 把左上、左下两点并为一点，上边与对角线成为一对平行边（原页在这一对边上打标记），对其中一条用定理 b：删除得三角形（\(\tau=3\)），收缩得两顶点间两条平行边（\(\tau=2\)，原页用波浪线标出）。<br>
+<b>结论</b> \(\tau(G)=8\)。</div>
+
+<div class="thm"><b>定理 c（Cayley 公式）</b> \(n\ge 2\Rightarrow \tau(K_n)=n^{\,n-2}\)。</div>
+<div class="note"><b>笔记边注</b> p.135 页底“定理 c：”后的一行被截断，可见“\(n\ge2\Rightarrow\tau(k_n)=n^{n-2}\)”的下半部分；p.136 页首重写为“Cayley 公式：\(n\ge2\Rightarrow\tau(K_n)=n^{\cdot}\)”，指数只写成一个小点，按 p.135 读作 \(n-2\)，下方画两道横线强调。p.136 其余部分空白。</div>
+
+<div class="warn"><b>易错提醒</b> 定理 b 只对非环边使用；收缩一条平行边后，与它平行的边会变成环，环不影响生成树个数。删除边后若图不连通，该项 \(\tau=0\)。</div>

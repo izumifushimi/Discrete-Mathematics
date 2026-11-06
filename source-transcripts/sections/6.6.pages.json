@@ -1,0 +1,17 @@
+[
+ {
+  "page": 106,
+  "status": "transcribed",
+  "note": "点/边连通度思想、点割集定义、路径例、图G点割集例"
+ },
+ {
+  "page": 107,
+  "status": "transcribed",
+  "note": "图G、{v}割集⇔割点及有/无割点图、边割集定义与例 E1、割边"
+ },
+ {
+  "page": 108,
+  "status": "transcribed",
+  "note": "割边定义、定理1 p(G-E')=p(G)+1、扇形割集、I_G(v)判断例"
+ }
+]

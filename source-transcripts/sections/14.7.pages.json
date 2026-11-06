@@ -1,0 +1,22 @@
+[
+ {
+  "page": 219,
+  "status": "transcribed",
+  "note": "循环群定义、n 阶/无限循环群、Z3 与 Z 的生成元例、生成元定理(1)；底部(2)被裁切，下一页重写"
+ },
+ {
+  "page": 220,
+  "status": "transcribed",
+  "note": "生成元定理(2)、欧拉函数、φ(6)=2 及 <a^2>、<a^5> 的展开；顶部残留重复行用 dup 说明"
+ },
+ {
+  "page": 221,
+  "status": "partial",
+  "note": "循环群的子群三条定理、12 阶例、d=3 子群、Z 的生成元；顶部第一行被裁切，用 unclear 标出"
+ },
+ {
+  "page": 222,
+  "status": "transcribed",
+  "note": "Z 中元素写成 1 的幂、Z 的子群为 {0} 与 nZ"
+ }
+]

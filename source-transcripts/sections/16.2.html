@@ -1,0 +1,31 @@
+<h3>格的运算律 <span class="pg">p.248</span></h3>
+<div class="thm"><b>定理 1（①）</b> 设 \(\langle L,\preccurlyeq\rangle\) 为格，则运算 \(\lor\) 和 \(\land\) 满足交换律、结合律、幂等律、吸收律：
+<ol>
+<li>交换律：\(\forall a,b\in L\) 有 \(a\lor b=b\lor a,\quad a\land b=b\land a\)；</li>
+<li>结合律：\(\forall a,b,c\in L\) 有 \((a\lor b)\lor c=a\lor(b\lor c),\quad (a\land b)\land c=a\land(b\land c)\)；</li>
+<li>幂等律：\(\forall a\in L\) 有 \(a\lor a=a,\quad a\land a=a\)；</li>
+<li>吸收律：\(\forall a,b\in L\) 有 \(a\lor(a\land b)=a,\quad a\land(a\lor b)=a\)。</li>
+</ol></div>
+<div class="note"><b>笔记边注</b> 原页用红线标出"运算 \(\lor\) 和 \(\land\)"及右侧的四条运算律（交换律、结合律、幂等律、吸收律）。</div>
+
+<h3>由代数系统得到格 <span class="pg">p.248–249</span></h3>
+<div class="thm"><b>定理 2（②）</b> 设 \(\langle S,*,\circ\rangle\) 是具有两个二元运算的代数系统，且对 \(*\) 和 \(\circ\) 运算满足（交换律、结合律、吸收律），
+<br>\(\Rightarrow\) 则可以适当定义 \(S\) 中的偏序 \(\preccurlyeq\)，使 \(\langle S,\preccurlyeq\rangle\) 为格；
+<br>\(\Rightarrow\) 且 \(\forall a,b\in S\)，有 \(a\land b=a*b,\quad a\lor b=a\circ b\)。</div>
+<div class="note"><b>笔记边注</b> 原页在 \(*\) 与 \(\circ\) 下方各画一个小三角标记；"（交换律，结合律，吸收律）"用红线标出；"格"字下画红线；在 \(a\land b=a*b\) 处用红色小圈和箭头标出 \(\land\) 对应 \(*\)。</div>
+
+<div class="def"><b>定义 1（格的代数定义，③）</b> 设 \(\langle S,*,\circ\rangle\) 为代数系统，\(*,\circ\) 为二元运算，如果 \(*,\circ\) 满足交换律、结合律、吸收律（\(\Downarrow\) 可推出幂等律），则 \(\langle S,*,\circ\rangle\) 为格。</div>
+<div class="note"><b>笔记边注</b> 第 248 页末写"③ 定义 |"，定义正文写在第 249 页开头。"交换律，结合律，吸收律"下画线，下方箭头注"（推出幂等律）"；"\(\langle S,*,\circ\rangle\)"下画红线。旁边圈出"L（格）"，表示此后以 \(L\) 记格。</div>
+<div class="supp"><b>补充讲解</b> 幂等律可由吸收律推出：\(a\lor a=a\lor\bigl(a\land(a\lor a)\bigr)=a\)（先用第二条吸收律把内层的 \(a\) 写成 \(a\land(a\lor a)\)，再用第一条吸收律）；同理 \(a\land a=a\)。所以代数定义中不必单列幂等律。</div>
+
+<h3>偏序与运算的关系 <span class="pg">p.249</span></h3>
+<div class="thm"><b>定理 3（④）</b> 设 \(L\) 为格，则 \(\forall a,b\in L\) 有
+\[a\preccurlyeq b\iff a\land b=a\iff a\lor b=b\]</div>
+
+<div class="thm"><b>定理 4（⑤，保序性）</b> 设 \(L\) 为格，则 \(\forall a,b,c,d\in L\)，若 \(a\preccurlyeq b\) 且 \(c\preccurlyeq d\)，则
+\[a\land c\preccurlyeq b\land d,\qquad a\lor c\preccurlyeq b\lor d\]</div>
+
+<h3>子格 <span class="pg">p.249</span></h3>
+<div class="def"><b>定义 2（⑥）</b> 设 \(\langle L,\land,\lor\rangle\) 是格，\(S\) 是 \(L\) 的非空子集，若 \(S\) 关于 \(L\) 中的运算 \(\land\) 和 \(\lor\) 仍构成格，则 \(S\) 为 \(L\) 的子格。</div>
+<div class="supp"><b>补充讲解</b> 这里"仍构成格"是指 \(S\) 对 \(L\) 中原来的 \(\land,\lor\) 封闭：\(\forall a,b\in S\)，\(a\land b\in S\) 且 \(a\lor b\in S\)。仅仅 \(S\) 在 \(\preccurlyeq\) 的限制下自成一个格还不够，它的上、下确界必须与 \(L\) 中计算的一致。</div>
+<div class="warn"><b>易错提醒</b> 例如 \(L=\{0,a,b,1\}\)（菱形格）中，\(S=\{a,b,1\}\) 在 \(L\) 中 \(a\land b=0\notin S\)，所以 \(S\) 不是子格。</div>

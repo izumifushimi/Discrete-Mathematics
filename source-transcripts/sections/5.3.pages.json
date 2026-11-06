@@ -1,0 +1,8 @@
+[
+  {"page":69,"status":"transcribed","note":"基数定义1)-5)、ℵ0/ℵ、K_κ（类）、例(1)开头；两处 fix（card R=ℵ1、card P(A)=ℵ_{i+1}）"},
+  {"page":70,"status":"transcribed","note":"例(1)-(3)结论；优势/劣势、绝对优势/劣势定义与单射示意图（fix：优劣写反）；⑤1)2)"},
+  {"page":71,"status":"transcribed","note":"≼· 的性质2)-5)；⑥基数的比较；⑦(1) card A<card P(A)"},
+  {"page":72,"status":"transcribed","note":"⑦(2)-(5)含 Schröder-Bernstein 定理、R≈2^N；⑧可数集；⑨基数加法定义"},
+  {"page":73,"status":"transcribed","note":"⑨乘法与幂定义；⑩2^{card A}=card P(A)、κ<2^κ、推论 R≈P(N)；⑪运算律；⑫单调性(1)(2)"},
+  {"page":74,"status":"partial","note":"⑫(3)(4)；⑬无穷基数运算；红框基数排列图中“U_n”含义待核对（中部红框第一行中间）"}
+]

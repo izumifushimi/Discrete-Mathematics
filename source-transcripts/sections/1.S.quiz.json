@@ -1,0 +1,49 @@
+[
+ {
+  "type": "choice",
+  "q": "在命题与集合的对应中，集合的交 ∩ 对应的联结词是",
+  "options": [
+   "¬",
+   "∧",
+   "∨",
+   "→"
+  ],
+  "answer": 1,
+  "why": "\\(x\\in A\\cap B\\Leftrightarrow x\\in A\\land x\\in B\\)。"
+ },
+ {
+  "type": "choice",
+  "q": "集族的广义并 \\(\\bigcup\\mathscr{A}\\) 的成员条件中使用的量词是",
+  "options": [
+   "∀",
+   "∃",
+   "∃!",
+   "不使用量词"
+  ],
+  "answer": 1,
+  "why": "\\(x\\in\\bigcup\\mathscr{A}\\Leftrightarrow\\exists A(A\\in\\mathscr{A}\\land x\\in A)\\)；广义交对应 ∀。"
+ },
+ {
+  "type": "fill",
+  "q": "集合恒等式中的空集 \\(\\emptyset\\) 在“集合⇒命题”翻译时对应真值 ____",
+  "answer": [
+   "0",
+   "假",
+   "F",
+   "永假"
+  ],
+  "why": "\\(x\\in\\emptyset\\) 恒假。"
+ },
+ {
+  "type": "choice",
+  "q": "命题德摩根律 \\(\\neg(p\\lor q)\\Leftrightarrow\\neg p\\land\\neg q\\) 对应的集合恒等式是",
+  "options": [
+   "\\(\\sim(A\\cup B)=\\sim A\\cap\\sim B\\)",
+   "\\(\\sim(A\\cup B)=\\sim A\\cup\\sim B\\)",
+   "\\(\\sim(A\\cap B)=\\sim A\\cap\\sim B\\)",
+   "\\(A\\cup B=\\sim A\\cap\\sim B\\)"
+  ],
+  "answer": 0,
+  "why": "∨↔∪，∧↔∩，¬↔∼，逐一替换即得。"
+ }
+]

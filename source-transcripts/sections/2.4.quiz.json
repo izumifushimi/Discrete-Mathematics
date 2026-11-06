@@ -1,0 +1,85 @@
+[
+ {
+  "type": "choice",
+  "q": "\\(A=\\{a,b,c\\}\\)，\\(R=\\{\\langle a,b\\rangle,\\langle b,a\\rangle,\\langle a,c\\rangle\\}\\)，则 \\(R^2=\\) ？",
+  "options": [
+   "\\(\\{\\langle a,a\\rangle,\\langle b,b\\rangle,\\langle b,c\\rangle\\}\\)",
+   "\\(\\{\\langle a,a\\rangle,\\langle b,b\\rangle\\}\\)",
+   "\\(\\{\\langle a,b\\rangle,\\langle a,c\\rangle,\\langle b,a\\rangle\\}\\)",
+   "\\(I_A\\)"
+  ],
+  "answer": 0,
+  "why": "a→b→a 得 ⟨a,a⟩，b→a→b 得 ⟨b,b⟩，b→a→c 得 ⟨b,c⟩；从 c 出发无边。"
+ },
+ {
+  "type": "fill",
+  "q": "同上题，\\(R^3\\) 等于 R 的几次幂？\\(R^3=R^{\\,____}\\)",
+  "answer": [
+   "1"
+  ],
+  "why": "笔记 p.31：\\(R^3=R^2\\circ R=\\{\\langle a,b\\rangle,\\langle a,c\\rangle,\\langle b,a\\rangle\\}=R^1\\)。"
+ },
+ {
+  "type": "choice",
+  "q": "同上题，\\(R^{100}=\\) ？",
+  "options": [
+   "\\(R\\)",
+   "\\(R^2\\)",
+   "\\(I_A\\)",
+   "\\(\\emptyset\\)"
+  ],
+  "answer": 1,
+  "why": "\\(R^{2k}=R^2\\)，\\(R^{2k-1}=R\\)，100 为偶数。"
+ },
+ {
+  "type": "choice",
+  "q": "\\(R^0\\) 定义为",
+  "options": [
+   "\\(\\emptyset\\)",
+   "\\(R\\)",
+   "\\(I_A\\)",
+   "\\(A\\times A\\)"
+  ],
+  "answer": 2,
+  "why": "\\(R^0=I_A\\)，\\(R^{n+1}=R^n\\circ R\\)。"
+ },
+ {
+  "type": "choice",
+  "q": "关于闭包与并运算，下列哪一式一般只有 \\(\\supseteq\\)，不一定相等？",
+  "options": [
+   "\\(r(R_1\\cup R_2)\\) 与 \\(r(R_1)\\cup r(R_2)\\)",
+   "\\(s(R_1\\cup R_2)\\) 与 \\(s(R_1)\\cup s(R_2)\\)",
+   "\\(t(R_1\\cup R_2)\\) 与 \\(t(R_1)\\cup t(R_2)\\)",
+   "三者都相等"
+  ],
+  "answer": 2,
+  "why": "例：\\(R_1=\\{\\langle1,2\\rangle\\},R_2=\\{\\langle2,3\\rangle\\}\\)，\\(t(R_1\\cup R_2)\\) 含 ⟨1,3⟩，而 \\(t(R_1)\\cup t(R_2)\\) 不含。"
+ },
+ {
+  "type": "fill",
+  "q": "\\(A=\\{1,2,3\\}\\)，\\(R=\\{\\langle1,2\\rangle,\\langle2,3\\rangle\\}\\)，则 \\(|t(R)|=\\) ____",
+  "answer": [
+   "3",
+   "三"
+  ],
+  "why": "\\(t(R)=R\\cup R^2\\cup\\cdots=\\{\\langle1,2\\rangle,\\langle2,3\\rangle,\\langle1,3\\rangle\\}\\)。"
+ },
+ {
+  "type": "fill",
+  "q": "同上题，\\(|r(R)|=\\) ____",
+  "answer": [
+   "5",
+   "五"
+  ],
+  "why": "\\(r(R)=R\\cup I_A\\)，2+3=5。"
+ },
+ {
+  "type": "fill",
+  "q": "同上题，\\(|s(R)|=\\) ____",
+  "answer": [
+   "4",
+   "四"
+  ],
+  "why": "\\(s(R)=R\\cup R^{-1}\\)，再加 ⟨2,1⟩,⟨3,2⟩。"
+ }
+]

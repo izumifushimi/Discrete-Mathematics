@@ -1,0 +1,93 @@
+[
+ {
+  "type": "choice",
+  "q": "个体域 \\(D=\\{a_1,a_2,a_3\\}\\) 时，\\(\\exists x\\,A(x)\\) 等值于哪一式？",
+  "options": [
+   "\\(A(a_1)\\land A(a_2)\\land A(a_3)\\)",
+   "\\(A(a_1)\\lor A(a_2)\\lor A(a_3)\\)",
+   "\\(A(a_1)\\to A(a_2)\\to A(a_3)\\)",
+   "\\(\\neg A(a_1)\\lor\\neg A(a_2)\\lor\\neg A(a_3)\\)"
+  ],
+  "answer": 1,
+  "why": "有限个体域上存在量词展开为析取，全称量词展开为合取（p.5）。"
+ },
+ {
+  "type": "choice",
+  "q": "\\(\\neg\\forall x\\,A(x)\\) 等值于：",
+  "options": [
+   "\\(\\forall x\\,\\neg A(x)\\)",
+   "\\(\\exists x\\,A(x)\\)",
+   "\\(\\exists x\\,\\neg A(x)\\)",
+   "\\(\\neg\\exists x\\,\\neg A(x)\\)"
+  ],
+  "answer": 2,
+  "why": "量词否定等值式：否定穿过量词时量词互换，内部取否定。"
+ },
+ {
+  "type": "choice",
+  "q": "设 x 不在 B 中出现。\\(\\forall x(A(x)\\to B)\\) 等值于：",
+  "options": [
+   "\\(\\forall x\\,A(x)\\to B\\)",
+   "\\(\\exists x\\,A(x)\\to B\\)",
+   "\\(B\\to\\forall x\\,A(x)\\)",
+   "\\(\\exists x\\,(B\\to A(x))\\)"
+  ],
+  "answer": 1,
+  "why": "量词在蕴含前件时外提/收缩要互换：\\(\\forall x(A(x)\\to B)\\Leftrightarrow\\exists x\\,A(x)\\to B\\)（p.6 证明）。"
+ },
+ {
+  "type": "choice",
+  "q": "设 x 不在 B 中出现。\\(\\exists x(B\\to A(x))\\) 等值于：",
+  "options": [
+   "\\(B\\to\\exists x\\,A(x)\\)",
+   "\\(B\\to\\forall x\\,A(x)\\)",
+   "\\(\\forall x\\,B\\to A(x)\\)",
+   "\\(\\exists x\\,B\\land A(x)\\)"
+  ],
+  "answer": 0,
+  "why": "量词在后件中时不变：\\(\\forall/\\exists x(B\\to A(x))\\Leftrightarrow B\\to\\forall/\\exists x\\,A(x)\\)。"
+ },
+ {
+  "type": "choice",
+  "q": "下列哪个等值式一般不成立？",
+  "options": [
+   "\\(\\forall x(A(x)\\land B(x))\\Leftrightarrow\\forall x A(x)\\land\\forall x B(x)\\)",
+   "\\(\\exists x(A(x)\\lor B(x))\\Leftrightarrow\\exists x A(x)\\lor\\exists x B(x)\\)",
+   "\\(\\forall x(A(x)\\lor B(x))\\Leftrightarrow\\forall x A(x)\\lor\\forall x B(x)\\)",
+   "\\(\\neg\\exists x A(x)\\Leftrightarrow\\forall x\\neg A(x)\\)"
+  ],
+  "answer": 2,
+  "why": "∀ 只对 ∧ 可分配，∃ 只对 ∨ 可分配。反例：整数域上 A(x)=x为偶数，B(x)=x为奇数，左真右假。"
+ },
+ {
+  "type": "fill",
+  "q": "把 \\(\\forall x F(x)\\lor\\neg\\exists x G(x,y)\\) 化成前束范式时，第二部分先化为 \\(\\forall x\\neg G(x,y)\\)，再把约束变元 x 换名为 z，最终得 \\(\\forall x\\forall z(\\)____\\()\\)（用 \\lor 形式填写母式）。",
+  "answer": [
+   "F(x)∨¬G(z,y)",
+   "F(x)\\lor\\neg G(z,y)",
+   "¬G(z,y)∨F(x)",
+   "G(z,y)→F(x)"
+  ],
+  "why": "p.7 例：\\(\\Leftrightarrow\\forall x\\forall z(F(x)\\lor\\neg G(z,y))\\Leftrightarrow\\forall x\\forall z(G(z,y)\\to F(x))\\)。"
+ },
+ {
+  "type": "fill",
+  "q": "公式 \\(\\forall x\\forall z(G(z,y)\\to F(x))\\) 中的自由变元是 ____。",
+  "answer": [
+   "y"
+  ],
+  "why": "x、z 都被量词约束，只有 y 自由出现。"
+ },
+ {
+  "type": "choice",
+  "q": "命题“所有 F 都是 G”的符号化是：",
+  "options": [
+   "\\(\\forall x(F(x)\\land G(x))\\)",
+   "\\(\\forall x(F(x)\\to G(x))\\)",
+   "\\(\\exists x(F(x)\\to G(x))\\)",
+   "\\(\\exists x(F(x)\\land G(x))\\)"
+  ],
+  "answer": 1,
+  "why": "全称量词配蕴含（p.5：对全部 x，F(x)→G(x)）；存在量词通常配合取。"
+ }
+]

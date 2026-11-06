@@ -1,0 +1,155 @@
+<div class="note"><b>笔记边注</b> 小节标题“4.3 自然数的性质”，日期“2025年6月29日 16:34”。</div>
+
+<h3>① 传递集 <span class="pg">p.56</span></h3>
+<div class="def"><b>定义（传递集）</b> \(A\) 为传递集 \(\Leftrightarrow\) \(A\) 的元素的元素，还为 \(A\) 的元素
+\[\Leftrightarrow\ \forall x\forall y\,(x\in y\land y\in A\to x\in A)\]</div>
+<div class="note"><b>笔记边注</b> “\(A\) 为传递集”下画红线；式中两个 \(x\) 与最后的 \(A\) 下画短线。</div>
+
+<div class="example"><b>例</b> 判断下列集合是否为传递集：
+\[\begin{aligned}
+A&=\{\emptyset,\{\emptyset\},\{\{\emptyset\}\}\} &&✓\\
+B&=\{0,1,2\} &&✓\\
+C&=\{\{a\}\} &&✗\\
+D&=\langle 0,1\rangle=\{\{0\},\{0,1\}\} &&✗
+\end{aligned}\]</div>
+<div class="supp"><b>补充讲解</b> \(A\)：\(\{\{\emptyset\}\}\) 的元素 \(\{\emptyset\}\in A\)，\(\{\emptyset\}\) 的元素 \(\emptyset\in A\)，成立。\(B\)：自然数 \(2\) 的元素 \(0,1\) 都在 \(B\) 中。\(C\)：\(a\in\{a\}\in C\)，但 \(a\notin C\)。\(D\)：\(0\in\{0\}\in D\)，但 \(0\notin D\)。</div>
+
+<div class="thm"><b>定理</b> \(A\) 为传递集 \(\Rightarrow \bigcup(A^{+})=A\)
+\[\begin{aligned}
+A\text{ 为传递集}&\Leftrightarrow \bigcup A\subseteq A\\
+&\Leftrightarrow \forall x\,(x\in A\to x\subseteq A)\\
+&\Leftrightarrow A\subseteq P(A)\\
+&\Leftrightarrow P(A)\text{ 为传递集}
+\end{aligned}\]</div>
+<div class="note"><b>笔记边注</b> \(\bigcup(A^{+})=A\) 后画圈星并下画红线；\(\bigcup A\subseteq A\) 下画红线并画圈星；\(\forall x(x\in A\to x\subseteq A)\) 下画红线；\(A\subseteq P(A)\)、\(P(A)\) 下画横线。</div>
+<div class="supp"><b>补充讲解</b> \(\bigcup(A^{+})=\bigcup(A\cup\{A\})=\bigcup A\cup A\)，所以当 \(\bigcup A\subseteq A\) 时它等于 \(A\)。</div>
+
+<h3>② 自然数与自然数集都是传递集 <span class="pg">p.56–57</span></h3>
+<div class="thm"><b>定理</b>
+<br>1) 每个自然数都为传递集；
+<br>2) 自然数集 \(\mathbb{N}\) 为传递集。</div>
+<div class="proof"><b>证明 1)</b> 令 \(S=\{n\mid n\in\mathbb{N}\land n\text{ 为传递集}\}\)。
+<p>(1) \(0\in S\)。</p>
+<p>(2) \(\forall n\in\mathbb{N}\)，\(n\in S\Rightarrow n^{+}\in S\)：
+\[\begin{aligned}
+&n\in S\\
+\Rightarrow\ &n\text{ 为传递集}\\
+\Rightarrow\ &\bigcup(n^{+})=n\subseteq n^{+}\\
+\Rightarrow\ &\bigcup(n^{+})\subseteq n^{+}\\
+\Rightarrow\ &n^{+}\text{ 为传递集}\\
+\Rightarrow\ &n^{+}\in S
+\end{aligned}\]
+\(\therefore S=\mathbb{N}\)。</p></div>
+<div class="proof"><b>略证 2)</b> 令 \(S=\{n\mid n\in\mathbb{N}\land n\subseteq\mathbb{N}\}\)。
+<p>(1) \(0\in S\)；</p>
+<p>(2) \(\forall n\in\mathbb{N}\)，\(n\in S\Rightarrow n^{+}\in S\) ……（原笔记到此以省略号结束）</p></div>
+<div class="note"><b>笔记边注</b> 1)、2) 用大括号并列，2) 下画红线；1) 中“\(n\) 为传递集”下画红线；\(\bigcup(n^{+})\subseteq n^{+}\) 中两处 \(n^{+}\) 下标红三角；略证中 \(n\in\mathbb{N}\)、\(n\subseteq\mathbb{N}\) 下画红线。</div>
+<div class="supp"><b>补充讲解</b> 略证(2)可补完：若 \(n\subseteq\mathbb{N}\)，又 \(n\in\mathbb{N}\)，则 \(n^{+}=n\cup\{n\}\subseteq\mathbb{N}\)。于是每个 \(n\in\mathbb{N}\) 都有 \(n\subseteq\mathbb{N}\)，这就是 \(\mathbb{N}\) 为传递集。1) 中 \(0\in S\) 是因为 \(\emptyset\) 没有元素，传递条件空真。</div>
+
+<h3>③ 自然数集上的二元运算 <span class="pg">p.57</span></h3>
+\[\begin{cases}+:\mathbb{N}\times\mathbb{N}\to\mathbb{N}\\ +(\langle 2,3\rangle)=5,\quad 2+3=5\end{cases}\qquad
+\begin{cases}\cdot:\mathbb{N}\times\mathbb{N}\to\mathbb{N}\\ \cdot(\langle 2,3\rangle)=6,\quad 2\cdot 3=6\end{cases}\]
+
+<h3>④ \(\mathbb{N}\) 上的递归定理 <span class="pg">p.57–58</span></h3>
+<div class="thm"><b>定理（递归定理）</b> 设 \(A\) 为集合，\(a\in A\)，\(F:A\to A\)，则存在唯一函数 \(h:\mathbb{N}\to A\)，使得 \(h(0)=a\)，且 \(\forall n\in\mathbb{N}\)，\(h(n^{+})=F(h(n))\)。</div>
+<div class="note"><b>笔记边注</b> “\(F:A\to A\)”被圈出并打 ✓；\(h\) 下画双线；\(h(0)=a\) 下画波浪线；\(h(n^{+})=F(h(n))\) 下画红线并标红三角。</div>
+<figure class="fig"><svg viewBox="0 0 300 230" role="img" aria-label="递归定理示意：h把0,1,2,3映到a,F(a),F²(a),F³(a)">
+<defs><marker id="ar43a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="currentColor"/></marker></defs>
+<g fill="currentColor" font-size="14">
+<text x="60" y="20">N</text><text x="160" y="20">A</text>
+<text x="20" y="55">0</text><text x="20" y="105">1</text><text x="20" y="155">2</text><text x="20" y="205">3</text>
+<text x="180" y="55">a</text><text x="180" y="105">F(a)</text><text x="180" y="155">F²(a)</text><text x="180" y="205">F³(a)</text>
+<text x="105" y="43">h</text><text x="105" y="93">h</text><text x="105" y="143">h</text><text x="105" y="193">h</text>
+<text x="172" y="82">F</text><text x="172" y="132">F</text><text x="172" y="182">F</text>
+</g>
+<g stroke="currentColor" fill="none" stroke-width="2">
+<circle cx="65" cy="50" r="4"/><circle cx="65" cy="100" r="4"/><circle cx="65" cy="150" r="4"/><circle cx="65" cy="200" r="4"/>
+<circle cx="165" cy="50" r="4"/><circle cx="165" cy="100" r="4"/><circle cx="165" cy="150" r="4"/><circle cx="165" cy="200" r="4"/>
+<line x1="70" y1="50" x2="158" y2="50" marker-end="url(#ar43a)"/><line x1="70" y1="100" x2="158" y2="100" marker-end="url(#ar43a)"/>
+<line x1="70" y1="150" x2="158" y2="150" marker-end="url(#ar43a)"/><line x1="70" y1="200" x2="158" y2="200" marker-end="url(#ar43a)"/>
+<line x1="165" y1="55" x2="165" y2="93" marker-end="url(#ar43a)"/><line x1="165" y1="105" x2="165" y2="143" marker-end="url(#ar43a)"/><line x1="165" y1="155" x2="165" y2="193" marker-end="url(#ar43a)"/>
+</g></svg>
+<figcaption>图（p.57–58）：左列 \(\mathbb{N}\) 的元素 \(0,1,2,3,\cdots\)，右列 \(A\) 的元素 \(a,F(a),F^2(a),F^3(a),\cdots\)（\(\mathbb{N}\)、\(A\) 红圈标出）；横向箭头标 \(h\)，右列竖向红色箭头标 \(F\)。原图右列只在前两点写了 \(a\)、\(F(a)\)，\(F^2(a)\)、\(F^3(a)\) 标签取自右侧算式。</figcaption></figure>
+\[\begin{aligned}
+&h(0)=a\\
+&F(a)=F(h(0))=h(1)=h(0^{+})=F(h(0))\\
+&F^2(a)=F(F(a))=h(2)=h(1^{+})=F(h(1))\\
+&F^3(a)=F(F^2(a))=h(3)=h(2^{+})=F(h(2))\\
+&\qquad\vdots
+\end{aligned}\]
+<div class="note"><b>笔记边注</b> 各式中 \(F(a)\)、\(h(0)\)、\(h(1)\) 下画波浪线或小三角；每行末尾的 \(h(k^{+})=F(h(k))\) 下画红线。p.58 顶部重复了 p.57 底部“1 行”的图和算式。</div>
+
+<div class="def"><b>递归定义</b>（\(h:\mathbb{N}\to A\) 存在唯一）\(a\in A\)，\(F:A\to A\)，
+\[\begin{cases}h(0)=a\\ h(n+1)=F(h(n)),\quad\forall n\in\mathbb{N}\end{cases}\]</div>
+<div class="note"><b>笔记边注</b> \(F:A\to A\) 下画大括号；\(h(0)=a\) 下画红线；\(h(n+1)\) 下画红线。此处 \(n+1\) 即 \(n^{+}\)。</div>
+
+<h3>⑤ 一元函数“加 \(m\)” <span class="pg">p.58</span></h3>
+<div class="def"><b>定义</b> \(m\) 固定，\(A_m:\mathbb{N}\to\mathbb{N}\)，
+\[\begin{cases}A_m(0)=m\\ A_m(n^{+})=(A_m(n))^{+}\end{cases}\]</div>
+<div class="supp"><b>补充讲解</b> 这是递归定理取 \(A=\mathbb{N}\)、\(a=m\)、\(F=\sigma\) 的情形。</div>
+<div class="example"><b>例</b> 计算 \(A_2(3)\)。<b>解</b>
+\[\begin{aligned}
+A_2(3)&=A_2(2^{+})=[A_2(2)]^{+}=[A_2(1^{+})]^{+}=[A_2(1)]^{++}\\
+&=[A_2(0^{+})]^{++}=[A_2(0)]^{+++}=2^{+++}\\
+&=3^{++}=4^{+}=5
+\end{aligned}\]
+<b>结论</b> \(A_2(3)=5\)。</div>
+<p>\(A_m(n)=m+n\)：</p>
+\[\begin{cases}A_m(0)=m\\ A_m(n^{+})=A_m(n)^{+}=(m+n)^{+}=(m+n)+1=m+(n+1)=m+n^{+}\end{cases}\]
+<div class="note"><b>笔记边注</b> \(A_m(n^{+})\) 下画线并标三角，最后的 \(n^{+}\) 下方画小圈。</div>
+
+<h3>⑥ 加法 <span class="pg">p.58–59</span></h3>
+<div class="def"><b>定义（加法）</b> \(+:\mathbb{N}\times\mathbb{N}\to\mathbb{N}\)，\(m+n=A_m(n)\)。</div>
+<div class="example"><b>例</b> \(3+2=A_3(2)=5\)。</div>
+<div class="thm"><b>定理</b> \(\forall m,n\in\mathbb{N}\)，
+\[\begin{cases}m+0=m\\ m+n^{+}=(m+n)^{+}\end{cases}\]
+\(\Updownarrow\)
+\[(n+m)^{+}=n^{+}+m\]</div>
+<p>右侧验证：\(m+0=A_m(0)=m\) ✓；\(m+n^{+}=A_m(n^{+})=[A_m(n)]^{+}=(m+n)^{+}\)。</p>
+<div class="note"><b>笔记边注</b> \(m+n=A_m(n)\) 下画红线并标三角；\((n+m)^{+}=n^{+}+m\) 黄色高亮并用红圈圈出，右侧红色小字标注。</div>
+<div class="unclear"><b>待核对（p.59，位置：上部右侧红圈公式 \((n+m)^{+}=n^{+}+m\) 右上方红色小字）</b> 可辨认部分：两个红色小字，形似“引理”或“定理”；无法辨认：具体是哪两个字。</div>
+<div class="fix"><b>校订说明（p.59）</b> 原式：上面的定理与 \((n+m)^{+}=n^{+}+m\) 之间画的是双向箭头 \(\Updownarrow\)；正确式：应为由前者（配合归纳法）推出后者，即单向 \(\Downarrow\)；原因：\((n+m)^{+}=n^{+}+m\) 需要对 \(m\) 归纳证明（\(m=0\)：\((n+0)^{+}=n^{+}=n^{+}+0\)；若成立于 \(m\)，则 \((n+m^{+})^{+}=((n+m)^{+})^{+}=(n^{+}+m)^{+}=n^{+}+m^{+}\)），两式并不等价，它是用来证交换律的引理。</div>
+
+<h3>⑦ 加法的性质 <span class="pg">p.59</span></h3>
+<div class="thm"><b>性质</b>
+\[\begin{cases}0+n=n+0=n\\ n+m=m+n\ \ ☆\\ (m+n)+k=m+(n+k)\\ (m+k)=n+k\Rightarrow m+n\end{cases}\]</div>
+<div class="fix"><b>校订说明（p.59）</b> 原式：\((m+k)=n+k\Rightarrow m+n\)；正确式：\(m+k=n+k\Rightarrow m=n\)；原因：这是加法消去律，结论应为等式 \(m=n\)，“\(m+n\)”是笔误（参照 p.60 乘法消去律写作 \(m\cdot k=n\cdot k\Rightarrow m=n\)）。</div>
+
+<div class="thm"><b>交换律</b> \(\forall m,n\in\mathbb{N}\)，\(n+m=m+n\)。</div>
+<div class="proof"><b>证明</b> \(\forall m\in\mathbb{N}\)，令 \(S=\{n\mid n\in\mathbb{N}\land m+n=n+m\}\)。
+<p>(1) \(0\in S\)：\(m+0=m=0+m\)。</p>
+<p>(2) \(n\in S\Rightarrow n^{+}\in S\)（即证 \(m+n^{+}=n^{+}+m\)；已知 \(m+n=n+m\)）：
+\[\begin{aligned}
+m+n^{+}&=A_m(n^{+})=[A_m(n)]^{+}=(m+n)^{+}\\
+&=(n+m)^{+}=n^{+}+m
+\end{aligned}\]
+\(\therefore S=\mathbb{N}\)。</p></div>
+<div class="note"><b>笔记边注</b> 交换律在性质列表中标 ☆，并用黑色长箭头引到下方证明。(1) 中 \(m=0+m\) 下画红线；(2) 中 \(n\in S\)、\(n^{+}\in S\) 下标三角；右侧写“\(m+n^{+}=n^{+}+m\) ✓”（圈出，下画红线）和“\(m+n=n+m\) 已知 ✓”；推导中 \(m+n^{+}\) 与 \(n^{+}+m\) 红圈，\((m+n)\) 下画线。</div>
+<div class="unclear"><b>待核对（p.59，位置：证明首行开头 与 右侧“\(m+n=n+m\)”后小字）</b> 可辨认部分：首行开头两字形似“记”/“证”，右侧小字形似“已知”/“已证”；无法辨认：确切字形。</div>
+<div class="supp"><b>补充讲解</b> (1) 用到 \(0+m=m\)，这需要另外对 \(m\) 归纳证明（性质第一条）；(2) 中 \((n+m)^{+}=n^{+}+m\) 用的就是 ⑥ 中圈出的那个公式。</div>
+
+<h3>⑧ 乘法 <span class="pg">p.60</span></h3>
+<div class="def"><b>定义（“乘 \(m\)”）</b> \(m\) 固定，\(M_m:\mathbb{N}\to\mathbb{N}\)，
+\[\begin{cases}M_m(0)=0\\ M_m(n^{+})=M_m(n)+m\end{cases}\]
+\(\cdot:\mathbb{N}\times\mathbb{N}\to\mathbb{N}\)，\(m\cdot n=M_m(n)\)。</div>
+<div class="example"><b>例</b> 计算 \(M_2(3)\)。<b>解</b>
+\[\begin{aligned}
+M_2(3)&=M_2(2^{+})=M_2(2)+2=M_2(1^{+})+2\\
+&=M_2(1)+2+2=M_2(0)+2+2+2=0+2+2+2=6
+\end{aligned}\]
+<b>结论</b> \(M_2(3)=6\)。</div>
+<div class="note"><b>笔记边注</b> 例题整体框起；\(M_2(0)\) 下画线并标三角。</div>
+<div class="thm"><b>性质</b>
+\[\begin{cases}1\cdot n=n\cdot 1=n\\ n\cdot m=m\cdot n\\ (m\cdot n)\cdot k=m\cdot(n\cdot k)\\ m\cdot k=n\cdot k\Rightarrow m=n\ (k\ne 0)\\ m\cdot(n+k)=(m\cdot n)+(m\cdot k)\end{cases}\]</div>
+<div class="warn"><b>易错提醒</b> 乘法消去律必须加条件 \(k\ne 0\)：\(2\cdot 0=3\cdot 0\) 但 \(2\ne 3\)。</div>
+
+<h3>⑨ 自然数的序 <span class="pg">p.60</span></h3>
+<p>（用集合定义）</p>
+\[\begin{aligned}
+m\lt n&\Leftrightarrow m\in n\\
+m\gt n&\Leftrightarrow n\in m\\
+m\le n&\Leftrightarrow m\,\underline{\in}\,n\\
+m\ge n&\Leftrightarrow n\,\underline{\in}\,m
+\end{aligned}\]
+<p>其中记号 \(m\,\underline{\in}\,n\Leftrightarrow m\in n\lor m=n\)。</p>
+<div class="supp"><b>补充讲解</b> 对自然数而言，\(m\,\underline{\in}\,n\) 也等价于 \(m\subseteq n\)。例如 \(2\le 3\)：\(2\in 3\)，同时 \(2=\{0,1\}\subseteq\{0,1,2\}=3\)。</div>

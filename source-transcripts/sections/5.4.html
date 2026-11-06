@@ -1,0 +1,99 @@
+<h3>定理内容 <span class="pg">p.75</span></h3>
+<div class="thm"><b>定理（Schröder–Bernstein）</b> \[ A\preccurlyeq\cdot B\ \land\ B\preccurlyeq\cdot A\ \Rightarrow\ A\approx B \]
+（原笔记在结论 \(A\approx B\) 下画红线强调。）</div>
+
+<h3>证明：两种情况 <span class="pg">p.75</span></h3>
+<div class="proof"><b>证明</b>
+\[ A\preccurlyeq\cdot B\land B\preccurlyeq\cdot A \Rightarrow \exists f:A\to B\ \text{单射},\ \exists g:B\to A\ \text{单射} \]
+<p>1）第一种情况：\(\left\{\begin{aligned}&\operatorname{ran}f=B\\&\operatorname{ran}g=A\end{aligned}\right.\ \Rightarrow A\approx B\)。（原笔记在 \(\operatorname{ran}g=A\) 下画红色双线，并画一个箭头从 \(\operatorname{ran}g=A\) 指向第二种情况的条件①。）</p>
+<p>2）第二种情况：\(\left\{\begin{aligned}&A-\operatorname{ran}g\neq\emptyset\quad ①\\&B-\operatorname{ran}f\neq\emptyset\end{aligned}\right.\)</p>
+</div>
+<div class="supp"><b>补充讲解</b> 第一种情况里两条只需成立一条：\(\operatorname{ran}f=B\) 时 \(f\) 是双射，\(\operatorname{ran}g=A\) 时 \(g\) 是双射，都得 \(A\approx B\)。原笔记的箭头表示：若 \(\operatorname{ran}g=A\) 不成立，就得到条件①。下面的构造只用到条件① \(A-\operatorname{ran}g\neq\emptyset\)。</div>
+
+<figure class="fig"><svg viewBox="0 0 300 120" role="img" aria-label="f 把 A 单射映入 B 的示意">
+<text x="10" y="30" font-size="14" fill="currentColor">A</text><line x1="30" y1="25" x2="280" y2="25" stroke="currentColor"/>
+<text x="10" y="100" font-size="14" fill="currentColor">B</text><line x1="30" y1="95" x2="280" y2="95" stroke="currentColor"/>
+<g stroke="currentColor"><line x1="60" y1="27" x2="70" y2="92"/><line x1="120" y1="27" x2="125" y2="92"/><line x1="180" y1="27" x2="185" y2="92"/><line x1="260" y1="27" x2="265" y2="92"/></g>
+<text x="215" y="65" font-size="14" fill="currentColor">……</text></svg>
+<figcaption>图（p.75 右上）：第一种情况示意，A 中每点都有箭头指向 B，箭头铺满 B。</figcaption></figure>
+
+<figure class="fig"><svg viewBox="0 0 620 170" role="img" aria-label="f:A→B 与 g:B→A 示意">
+<text x="10" y="40" font-size="14" fill="currentColor">A</text><line x1="30" y1="35" x2="280" y2="35" stroke="currentColor"/>
+<text x="35" y="22" font-size="14" fill="currentColor">C₀</text>
+<text x="10" y="120" font-size="14" fill="currentColor">B</text><line x1="30" y1="115" x2="280" y2="115" stroke="currentColor"/>
+<text x="140" y="80" font-size="14" fill="currentColor">f</text>
+<g stroke="currentColor"><line x1="40" y1="37" x2="90" y2="112"/><line x1="110" y1="37" x2="130" y2="112"/><line x1="180" y1="37" x2="190" y2="112"/><line x1="260" y1="37" x2="270" y2="112"/></g>
+<text x="30" y="145" font-size="14" fill="currentColor">B−ran f</text><text x="160" y="145" font-size="14" fill="currentColor">ran f</text>
+<text x="330" y="40" font-size="14" fill="currentColor">A</text><line x1="350" y1="35" x2="600" y2="35" stroke="currentColor"/>
+<text x="355" y="22" font-size="14" fill="currentColor">C₀</text><text x="480" y="22" font-size="14" fill="currentColor">ran g</text>
+<text x="330" y="120" font-size="14" fill="currentColor">B</text><line x1="350" y1="115" x2="600" y2="115" stroke="currentColor"/>
+<text x="335" y="80" font-size="14" fill="currentColor">g</text>
+<g stroke="currentColor"><line x1="360" y1="113" x2="430" y2="37"/><line x1="430" y1="113" x2="480" y2="37"/><line x1="500" y1="113" x2="530" y2="37"/><line x1="590" y1="113" x2="595" y2="37"/></g>
+</svg>
+<figcaption>图（p.75 中部）：左图 f:A→B，A 左端一段标 C₀（红），B 左端未被覆盖的一段标 B−ran f，其余为 ran f。右图（红框）g:B→A，箭头从 B 指向 A，A 左端 C₀ 不在像中，其余标 ran g。</figcaption></figure>
+
+<h3>构造 C、D、E、F <span class="pg">p.75–76</span></h3>
+<div class="proof"><b>证明（续）</b>
+<p>令 \(C_0=A-\operatorname{ran}g\neq\emptyset\)，
+\[ \left\{\begin{aligned}&D_n=f(C_n)\\&C_{n+1}=g(D_n)\end{aligned}\right.,\quad n\in\mathbb{N} \]</p>
+<p>\[ \begin{aligned}
+C&=\bigcup\{C_n\mid n\in\mathbb{N}\}\neq\emptyset\quad(C_0\neq\emptyset)\\
+D&=\bigcup\{D_n\mid n\in\mathbb{N}\}=f(C)=g^{-1}(C-C_0)
+\end{aligned} \]
+（\(g^{-1}(C-C_0)\) 原笔记用黄色高亮，p.76 页首重复抄写了 \(f(C)=g^{-1}(C-C_0)\)。）</p>
+<p>\[ \begin{aligned}
+E=A-C&=(C_0\cup\operatorname{ran}g)-(C_0\cup(C-C_0))\\
+&=\operatorname{ran}g-(C-C_0)\neq\emptyset
+\end{aligned} \]</p>
+<p>\[ \begin{aligned}
+F=B-D&=g^{-1}(g(B))-g^{-1}(C-C_0)\\
+&=g^{-1}\big(g(B)-(C-C_0)\big)\\
+&=g^{-1}\big(\operatorname{ran}g-(C-C_0)\big)=g^{-1}(E)
+\end{aligned} \]
+（原笔记把 \(F\) 和 \(g^{-1}(E)\) 用红圈圈出。）</p>
+</div>
+<div class="fix"><b>校订说明（p.76）</b> 原式：\(E=\operatorname{ran}g-(C-C_0)\neq\emptyset\)；正确式：\(E=\operatorname{ran}g-(C-C_0)\)（\(E\) 可以为空）；原因：例如 \(A=\mathbb{N}\)，\(B=\mathbb{N}-\{0\}\)，\(f(n)=n+1\)，\(g\) 为包含映射，则 \(C_0=\{0\}\)，\(C=\mathbb{N}\)，\(E=\emptyset\)。原笔记右侧边注正是讨论 \(\operatorname{ran}g=C-C_0\)、\(B=D\) 这一 \(E=\emptyset\) 的情形，此时 \(h=f\) 本身是双射，证明照样成立。</div>
+<div class="supp"><b>补充讲解</b> 几个等式的理由：\(A=C_0\cup\operatorname{ran}g\)（\(C_0\) 定义），\(C=C_0\cup(C-C_0)\)；\(C-C_0=\bigcup_{n\ge1}C_n=g(D)\)，又 \(g\) 单射，所以 \(D=g^{-1}(C-C_0)\)；\(B=g^{-1}(g(B))\) 和 \(g^{-1}\) 对差集的分配也都依赖 \(g\) 单射。\(E\subseteq\operatorname{ran}g\)，所以 \(g^{-1}\) 在 \(E\) 上有定义。</div>
+
+<figure class="fig"><svg viewBox="0 0 480 140" role="img" aria-label="C0、E、C1 与 F、D0、D1 示意">
+<text x="10" y="40" font-size="14" fill="currentColor">A</text><line x1="30" y1="35" x2="460" y2="35" stroke="currentColor"/>
+<text x="35" y="25" font-size="14" fill="currentColor">C₀</text><text x="95" y="25" font-size="14" fill="currentColor">E</text><text x="150" y="25" font-size="14" fill="currentColor">C₁</text>
+<text x="10" y="115" font-size="14" fill="currentColor">B</text><line x1="30" y1="110" x2="460" y2="110" stroke="currentColor"/>
+<text x="40" y="130" font-size="14" fill="currentColor">F</text><text x="90" y="130" font-size="14" fill="currentColor">D₀</text><text x="200" y="130" font-size="14" fill="currentColor">D₁</text>
+<g stroke="currentColor"><line x1="45" y1="38" x2="95" y2="107"/><line x1="55" y1="107" x2="100" y2="38"/><line x1="110" y1="107" x2="155" y2="38"/><line x1="170" y1="38" x2="205" y2="107"/></g>
+<text x="60" y="75" font-size="14" fill="currentColor">f</text><text x="80" y="70" font-size="14" fill="currentColor">g</text><text x="135" y="70" font-size="14" fill="currentColor">g</text><text x="250" y="75" font-size="14" fill="currentColor">……</text>
+</svg>
+<figcaption>图（p.76 左上）：A 上依次为 C₀、E（红色斜线）、C₁……；B 上依次为 F（红色斜线）、D₀、D₁……。f 把 C₀ 映到 D₀，g 把 F 映到 E（红），g 把 D₀ 映到 C₁，后面交替进行；E 下方红字标 ran g。</figcaption></figure>
+
+<div class="note"><b>笔记边注（p.76 右侧）</b>
+<p>在 \(\operatorname{ran}g\) 上方写 A，记为 \(C_0\cup\operatorname{ran}g=A\)（“A”写在“C”之上作改写）；框出 \(\operatorname{ran}g=C-C_0\)。</p>
+<p>示意图：A 上 \(C_0,C_1,C_2\) 之后全部为红色斜线（全被 C 覆盖），f、g 交替向下、向上；B 上 \(D_0,D_1,\dots\) 整条红线，红字 \(B=D\)。</p>
+<p>\(C_0\neq\emptyset\)；\(f: \underline{A}\to\underline{B}\) 单射；\(g^{-1}: \underline{A-C_0}\to\underline{B}\) 单射；\(A=A-C_0\)，\(\underline{C=\emptyset}\)，\(\underline{C_0\neq\emptyset}\)。</p>
+</div>
+<div class="unclear"><b>待核对（p.76，位置：右侧边注最后两行）</b> 可辨认部分：“\(A=A-C_0\)　\(C=\emptyset\)”下一行“\(C_0\neq\emptyset\)”，两处加下划线；无法辨认：这几行之间的推理关系（是否表示“若 \(C=\emptyset\) 则 \(A=A-C_0\)，与 \(C_0\neq\emptyset\) 矛盾”）原页没有写出。</div>
+
+<h3>构造双射 h <span class="pg">p.76–77</span></h3>
+<div class="proof"><b>证明（续）</b>
+<p>取 \(h=f\restriction C\ \cup\ g^{-1}\restriction E\)（\(\restriction\) 后为定义域），
+\[ h(x)=\left\{\begin{aligned}&f(x),&&x\in C_n\\&g^{-1}(x),&&\text{else}\end{aligned}\right. \]</p>
+<p>边注示意：A 分成 C 与 E 两段（\(C\subset A\)），\(h\) 从 A 向下映到 B。</p>
+<p>(1) 单射：\(f\)、\(g\) 单射 \(\Rightarrow\) \(f\restriction C\)、\(g^{-1}\restriction E\) 单射。
+\[ \begin{aligned}
+&\operatorname{ran}(f\restriction C)\cap\operatorname{ran}(g^{-1}\restriction E)\\
+=\ &f(C)\cap g^{-1}(E)\\
+=\ &g^{-1}(C-C_0)\cap g^{-1}(E)\subseteq g^{-1}(C)\cap g^{-1}(E)\\
+=\ &g^{-1}(C\cap E)=\emptyset\qquad(C\cap E=\emptyset)
+\end{aligned} \]
+\(\therefore\ f\restriction C\cup g^{-1}\restriction E\) 为单射。</p>
+<p>(2) 满射：
+\[ \begin{aligned}
+B&=D\cup F\\
+&=f(C)\cup g^{-1}(E)\\
+&=\operatorname{ran}(f\restriction C)\cup\operatorname{ran}(g^{-1}\restriction E)\\
+&=\operatorname{ran}h
+\end{aligned} \]
+\(\therefore\ h\) 为双射，\(A\approx B\)。</p>
+</div>
+<div class="fix"><b>校订说明（p.76）</b> 原式：\(h(x)=f(x),\ x\in C_n\)；正确式：\(h(x)=f(x),\ x\in C\)（即 \(x\in C_n\) 对某个 \(n\in\mathbb{N}\)），否则 \(h(x)=g^{-1}(x)\)（\(x\in E\)）；原因：\(h=f\restriction C\cup g^{-1}\restriction E\)，分段条件应是 \(x\in C=\bigcup C_n\)，单写 \(C_n\) 未指明 \(n\)。</div>
+<div class="supp"><b>补充讲解</b> \(C\) 与 \(E=A-C\) 不交且并为 \(A\)，所以 \(h\) 是 A 上的函数；两段各自单射、值域不交，合起来仍单射；\(D\cup F=B\)，所以满射。</div>
+<div class="summary"><b>总结</b> 从 \(A\) 中不在 \(\operatorname{ran}g\) 的部分 \(C_0\) 出发，用 \(f,g\) 来回映射得到链 \(C_0\to D_0\to C_1\to D_1\to\cdots\)；在链上 \(C\) 用 \(f\)，链外 \(E\) 用 \(g^{-1}\)，拼成双射。</div>

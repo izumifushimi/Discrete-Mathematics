@@ -1,0 +1,110 @@
+<h3>① 格的定义 <span class="pg">p.245</span></h3>
+<div class="def"><b>定义（格）</b> 设 \(\langle S,\preccurlyeq\rangle\) 为偏序集，如果 \(\forall x,y\in S\) 都有<b>最小上界</b>和<b>最大下界</b>，则称 \(S\) 关于偏序 \(\preccurlyeq\) 作成一个<b>格</b>。</div>
+<p>格中两个元素的最小上界、最大下界都是唯一的，于是记</p>
+\[
+\begin{cases}
+x\lor y \;\to\; \text{最小上界（唯一）}\\
+x\land y \;\to\; \text{最大下界（唯一）}
+\end{cases}
+\]
+<div class="note"><b>笔记边注</b> 原页把上面这两行用红框框起，并用上下箭头分别指回定义中的"最小上界""最大下界"，表示 \(\lor\)、\(\land\) 就是这两个概念的记号；\(x\lor y\)、\(x\land y\) 下各有波浪线和小三角标记。</div>
+
+<figure class="fig"><svg viewBox="0 0 240 260" role="img" aria-label="六元格的哈斯图">
+<g stroke="currentColor" stroke-width="2" fill="none">
+<line x1="120" y1="25" x2="60" y2="80"/>
+<line x1="120" y1="25" x2="180" y2="85"/>
+<line x1="60" y1="80" x2="60" y2="150"/>
+<line x1="60" y1="150" x2="180" y2="85"/>
+<line x1="180" y1="85" x2="180" y2="170"/>
+<line x1="60" y1="150" x2="120" y2="230"/>
+<line x1="180" y1="170" x2="120" y2="230"/>
+</g>
+<g fill="currentColor">
+<circle cx="120" cy="25" r="5"/><circle cx="60" cy="80" r="5"/><circle cx="180" cy="85" r="5"/>
+<circle cx="60" cy="150" r="5"/><circle cx="180" cy="170" r="5"/><circle cx="120" cy="230" r="5"/>
+</g>
+<g font-size="14" fill="currentColor">
+<text x="128" y="20">1</text><text x="38" y="80">a</text><text x="190" y="85">b</text>
+<text x="38" y="155">c</text><text x="190" y="175">d</text><text x="128" y="250">0</text>
+</g>
+</svg>
+<figcaption>图（p.245 左侧哈斯图，原图顶点未标名，字母为转写时所加）：顶点 \(0,c,d,a,b,1\)；覆盖边 \(0\!-\!c\)、\(0\!-\!d\)、\(c\!-\!a\)、\(c\!-\!b\)、\(d\!-\!b\)、\(a\!-\!1\)、\(b\!-\!1\)。原页用红圈标出顶点 \(1\)、\(a\)、\(d\)，底部 \(0\) 画红色星号，示意 \(a\lor d=1\)、\(a\land d=0\)。</figcaption></figure>
+<div class="supp"><b>补充讲解</b> 这个图里任意两点都有最小上界和最大下界，例如 \(a\land b=c\)，\(c\lor d=b\)，\(a\lor d=1\)，\(a\land d=0\)，所以它是格。</div>
+
+<h3>例：正因子格 \(\langle S_n,D\rangle\) <span class="pg">p.245</span></h3>
+<div class="example"><b>例</b> 设 \(n\) 为正整数，\(S_n\) 为 \(n\) 的正因子集合。取 \(n=24\)，
+\[S_{24}=\{1,2,3,4,6,8,12,24\}.\]
+\(D\) 为整除关系，则偏序集 \(\langle S_n,D\rangle\) 为格。
+<b>解</b> \(\forall x,y\in S_n\)，
+\[
+\begin{cases}
+x\lor y \;\to\; \operatorname{lcm}(x,y)\quad\text{最小公倍数}\\
+x\land y \;\to\; \gcd(x,y)\quad\text{最大公因数}
+\end{cases}
+\]
+两个因子的最小公倍数、最大公因数仍是 \(n\) 的因子，所以都在 \(S_n\) 中，\(\langle S_n,D\rangle\) 为格。</div>
+
+<figure class="fig"><svg viewBox="0 0 220 300" role="img" aria-label="24的正因子在整除关系下的哈斯图">
+<g stroke="currentColor" stroke-width="2" fill="none">
+<line x1="110" y1="25" x2="55" y2="80"/>
+<line x1="110" y1="25" x2="165" y2="90"/>
+<line x1="55" y1="80" x2="55" y2="140"/>
+<line x1="55" y1="140" x2="165" y2="90"/>
+<line x1="165" y1="90" x2="165" y2="155"/>
+<line x1="55" y1="140" x2="55" y2="200"/>
+<line x1="55" y1="200" x2="165" y2="155"/>
+<line x1="165" y1="155" x2="165" y2="210"/>
+<line x1="55" y1="200" x2="110" y2="265"/>
+<line x1="165" y1="210" x2="110" y2="265"/>
+</g>
+<g fill="currentColor">
+<circle cx="110" cy="25" r="5"/><circle cx="55" cy="80" r="5"/><circle cx="165" cy="90" r="5"/>
+<circle cx="55" cy="140" r="5"/><circle cx="165" cy="155" r="5"/><circle cx="55" cy="200" r="5"/>
+<circle cx="165" cy="210" r="5"/><circle cx="110" cy="265" r="5"/>
+</g>
+<g font-size="14" fill="currentColor">
+<text x="118" y="20">24</text><text x="35" y="80">8</text><text x="175" y="90">12</text>
+<text x="35" y="145">4</text><text x="175" y="160">6</text><text x="35" y="205">2</text>
+<text x="175" y="215">3</text><text x="118" y="288">1</text>
+</g>
+</svg>
+<figcaption>图（p.245 右下）：\(\langle S_{24},D\rangle\) 的哈斯图。顶点 \(1,2,3,4,6,8,12,24\)；覆盖边 \(1\!-\!2\)、\(1\!-\!3\)、\(2\!-\!4\)、\(2\!-\!6\)、\(3\!-\!6\)、\(4\!-\!8\)、\(4\!-\!12\)、\(6\!-\!12\)、\(8\!-\!24\)、\(12\!-\!24\)。原页圈出 \(4\)（紫）、\(3\)（蓝紫）、\(12\)（红）、\(1\)（红），并用红线描出 \(4\to12\)、\(3\to6\to12\) 与 \(4\to2\to1\)、\(3\to1\) 的路径，示意 \(4\lor3=\operatorname{lcm}(4,3)=12\)，\(4\land3=\gcd(4,3)=1\)。</figcaption></figure>
+
+<h3>② 子群格 <span class="pg">p.245–246</span></h3>
+<div class="def"><b>定义（子群格）</b> 设 \(G\) 为群，\(L(G)\) 为 \(G\) 的所有子群的集合，即
+\[L(G)=\{H\mid H\le G\}.\]
+对任意的 \(H_1,H_2\in L(G)\)，在 \(L(G)\) 上定义关系 \(\subseteq\)（子集）。<br>
+\(\therefore\ \langle L(G),\subseteq\rangle\) 为<b>子群格</b>，其中
+\[
+\begin{cases}
+H_1\land H_2 \;\to\; H_1\cap H_2\\
+H_1\lor H_2 \;\to\; \langle H_1\cup H_2\rangle
+\end{cases}
+\]</div>
+<div class="note"><b>笔记边注</b> "\(\subseteq\)（子集）"一项被框起，框上方注"关系"；\(L(G)\) 与 \(\subseteq\) 下有小三角标记；\(\langle H_1\cup H_2\rangle\) 下有箭头强调。p.246 页首重复了 p.245 末行"即 \(L(G)=\{H\mid H\le G\}\)"。</div>
+<div class="warn"><b>易错提醒</b> 子群格的并不是 \(H_1\cup H_2\)（两个子群的并集一般不是子群），而是由 \(H_1\cup H_2\) 生成的子群 \(\langle H_1\cup H_2\rangle\)；交 \(H_1\cap H_2\) 本身就是子群。</div>
+
+<h3>③ 对偶命题 <span class="pg">p.246</span></h3>
+<div class="def"><b>定义（对偶命题）</b> 设 \(f\) 为（含有格中元素以及符号 \(=,\preccurlyeq,\succcurlyeq,\lor,\land\)）的命题，则 \(f^*\) 为把 \(f\) 中的符号作如下替换所得的命题：
+\[
+\begin{cases}
+\preccurlyeq\;\to\;\succcurlyeq\\
+\succcurlyeq\;\to\;\preccurlyeq\\
+=\;\to\;=\\
+\lor\;\to\;\land\\
+\land\;\to\;\lor
+\end{cases}
+\]
+\(f^*\) 为 \(f\) 的<b>对偶命题</b>。</div>
+<div class="example"><b>例</b>
+\[f:\ (a\lor b)\land c\preccurlyeq c\quad\Longrightarrow\quad f^*:\ (a\land b)\lor c\succcurlyeq c\]
+\(\Downarrow\)（放到子群格 \(\langle L(G),\subseteq\rangle\) 中）
+\[f:\ \langle H_1\cup H_2\rangle\cap H_3\subseteq H_3\quad\Longrightarrow\quad f^*:\ \langle (H_1\cap H_2)\cup H_3\rangle\supseteq H_3\]</div>
+<div class="supp"><b>补充讲解</b> 在子群格中 \(\lor\) 对应 \(\langle\,\cdot\cup\cdot\,\rangle\)，\(\land\) 对应 \(\cap\)，\(\preccurlyeq\) 对应 \(\subseteq\)。所以 \((a\lor b)\land c\) 译为 \(\langle H_1\cup H_2\rangle\cap H_3\)，\((a\land b)\lor c\) 译为 \(\langle(H_1\cap H_2)\cup H_3\rangle\)。</div>
+
+<h3>④ 对偶原理 <span class="pg">p.247</span></h3>
+<div class="thm"><b>定理（对偶原理）</b> 设 \(f\) 为（含格中元素及符号 \(=,\preccurlyeq,\succcurlyeq,\lor,\land\) ……）的命题。若 \(f\) 对一切格为真，则 \(f^*\) 对一切格也为真。</div>
+<div class="example"><b>例</b> 对一切格 \(L\)：
+\[f:\ \forall a,b\in L,\ a\land b\preccurlyeq a\quad\Longleftrightarrow\quad f^*:\ \forall a,b\in L,\ a\lor b\succcurlyeq a\]</div>
+<div class="supp"><b>补充讲解</b> \(a\land b\) 是 \(a,b\) 的下界，故 \(a\land b\preccurlyeq a\)；对偶地 \(a\lor b\) 是上界，故 \(a\lor b\succcurlyeq a\)。笔记中的 \(\Longleftrightarrow\) 表示两者互为对偶、在一切格上同真；对偶原理只对"一切格都成立"的命题适用，在某个具体格中成立的命题，其对偶在该格中不一定成立。</div>
+<div class="summary"><b>总结</b> 格 = 任意两元都有最小上界 \(\lor\) 与最大下界 \(\land\) 的偏序集；典型例子：正因子格（\(\operatorname{lcm}/\gcd\)）、子群格（\(\langle\cup\rangle/\cap\)）；对偶命题互换 \(\preccurlyeq/\succcurlyeq\)、\(\lor/\land\)，\(=\) 不变；对一切格为真的命题，其对偶也对一切格为真。</div>

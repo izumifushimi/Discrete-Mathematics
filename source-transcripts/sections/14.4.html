@@ -1,0 +1,68 @@
+<h3>方程的解与群的判定 <span class="pg">p.209</span></h3>
+<div class="thm"><b>定理 1（①）</b> 在群 \(G\) 中，方程 \(ax=b\)、\(ya=b\) 有解，且有唯一解。</div>
+<div class="note"><b>笔记边注</b> 原页"定理1"三字小字写在 ① 上方；"有解"下画线，"唯一解"下画波浪线。</div>
+
+<div class="thm"><b>定理 2（②）</b> 设 \(G\) 为半群，如果对任意 \(a,b\in G\)，方程 \(ax=b\) 和 \(ya=b\) 在 \(G\) 中有解 \(\Longrightarrow\) \(G\) 为群。</div>
+
+<div class="thm"><b>定理 3（③，消去律）</b> \(G\) 为群，\(a,b,c\in G\)，则
+\[\begin{cases} ab=ac\ \Rightarrow\ b=c\\ ba=ca\ \Rightarrow\ b=c\end{cases}\]</div>
+<div class="note"><b>笔记边注</b> 定理 3 整体用方框框出，两行式子左侧用大括号连起、下方画波浪线。</div>
+<div class="example"><b>例</b> 加群 \(\langle\mathbb{Z},+\rangle\)：\(a+b=a+c\ \Downarrow\ b=c\)。</div>
+
+<div class="thm"><b>定理 4（④）</b> 设 \(G\) 为<u>有限</u>半群，且不含零元，若 \(G\) 中成立消去律 \(\Longrightarrow\) \(G\) 为群。</div>
+<div class="supp"><b>补充讲解</b> "有限"是必要条件：例如 \(\langle\mathbb{Z}^+,+\rangle\) 是满足消去律的无限半群，但不是群。"不含零元"的说法是因为零元 \(\theta\) 满足 \(\theta a=\theta b\)，会使消去律失败（只有一个元素时除外）。</div>
+
+<div class="thm"><b>定理 5（⑤）</b> 设 \(G\) 为群，则
+\[aG=G\ (a\in G),\qquad Ga=G\ (a\in G).\]</div>
+<div class="note"><b>笔记边注</b> 两个等式用红色方框框出并打红勾，左侧有红色箭头指向"设 \(G\) 为群"。页右侧写"反？"，下方画一个叉，并加问号，意思是在问：反过来是否成立（答案是否定的）。</div>
+<div class="proof"><b>说明（有限情形）</b> 设 \(G=\{a_1,a_2,\dots,a_n\}\)，取其中的 \(a_i\)（原页圈出 \(a_i\) 并用箭头指回 \(G\)）：
+\[\begin{aligned}a_iG&=\{a_ia_j\mid j=1,2,\dots,n\}\\&=\{a_ia_1,a_ia_2,\dots,a_ia_n\}=G\end{aligned}\]
+原页用一条弧形箭头从 \(a_iG\) 指向第二行的展开式。</div>
+<div class="supp"><b>补充讲解</b> 由消去律，\(a_ia_j\)（\(j=1,\dots,n\)）两两不同，共 \(n\) 个，都在 \(G\) 中，所以恰好是 \(G\) 的全部元素。这表明群的运算表每一行（每一列）都是全体元素的一个排列。</div>
+
+<h3>例：模 3 加法群 <span class="pg">p.209–210</span></h3>
+<div class="example"><b>例</b> 群 \(\langle \mathbb{Z}_2,\oplus_3\rangle\)，\(e=0\)；\(\mathbb{Z}_2=\{0,1,2\}\)。取 \(1=a\in\mathbb{Z}_2\)。
+<div class="tbl"><table><thead><tr><th>\(\oplus_3\)</th><th>0</th><th>1</th><th>2</th></tr></thead><tbody>
+<tr><th>0</th><td>0</td><td>1</td><td>2</td></tr>
+<tr><th>1</th><td>1</td><td>2</td><td>0</td></tr>
+<tr><th>2</th><td>2</td><td>0</td><td>1</td></tr></tbody></table></div>
+<b>解</b>
+\[\begin{aligned}1\cdot\mathbb{Z}_2&=\{1\oplus_3 0,\ 1\oplus_3 1,\ 1\oplus_3 2\}\\&=\{1,2,0\}=\mathbb{Z}_2\ \checkmark\end{aligned}\]
+原页用红圈圈出 0、1、2，并用红色箭头把它们连到结果 \(1,2,0\)。
+<p>原页随后把"\(a\cdot\mathbb{Z}_2\)"（红圈）作为一步变换（双箭头 \(\Downarrow\)），得到第二张表（行列标号仍为 0、1、2，表内用方框框出）：</p>
+<div class="tbl"><table><thead><tr><th></th><th>0</th><th>1</th><th>2</th></tr></thead><tbody>
+<tr><th>0</th><td>1</td><td>2</td><td>0</td></tr>
+<tr><th>1</th><td>2</td><td>0</td><td>1</td></tr>
+<tr><th>2</th><td>0</td><td>1</td><td>2</td></tr></tbody></table></div>
+<b>结论</b> 第一张表旁红圈写"群"、"\(e=0\)"；第二张表旁红圈写"群？"并被划掉，旁边写 \(e\) 也被划掉，下方有一个大问号，并有红色箭头在两张表的"群"标记之间往返。</div>
+<div class="fix"><b>校订说明（p.209–210）</b> 原式：\(\langle\mathbb{Z}_2,\oplus_3\rangle\)、\(\mathbb{Z}_2=\{0,1,2\}\)、\(1=a\in\mathbb{Z}_2\)、\(1\cdot\mathbb{Z}_2=\dots=\mathbb{Z}_2\)、\(a\cdot\mathbb{Z}_2\)；正确式：均应为 \(\mathbb{Z}_3\)；原因：集合有 0、1、2 三个元素，运算为模 3 加法。</div>
+<div class="supp"><b>补充讲解</b> 第二张表的每一项是 \(x\oplus_3 y\oplus_3 1\)，它只是第一张表的每一行左移一格。这张表在 \(\{0,1,2\}\) 上定义的运算 \(x*y=x+y+1\pmod 3\) 其实也构成群，但单位元是 2（\(2*y=y\)），不再是 0，\(0\) 和 \(1\) 互为逆元。所以划掉的"\(e\)"指的是 0 不再是单位元，并不说明它不是群。另外，"每行每列都是排列"本身并不能推出群，还必须验证结合律，这也是 ⑤ 旁"反？✗"的含义。</div>
+
+<h3>定理 6：元素的阶 <span class="pg">p.210</span></h3>
+<div class="thm"><b>定理 6（⑥）</b> 设 \(G\) 为群，\(a\in G\)，且 \(|a|=r\)（原页红圈圈出"且 \(|a|=r\)"，下方画红线）。</div>
+<div class="note"><b>笔记边注</b> 右侧写：\(|G|=r\)，即 \(G\) 中元素的个数；\(|a|=r\)？（问这两者的区别）。</div>
+<div class="def"><b>定义</b> \(|G|=n\) 为 \(G\) 的阶；<br>\(|a|=r\) 为 \(a\) 的阶（使 \(a^r=e\) 成立的最小正整数为 \(r\)），\(a\) 为 \(r\) 阶元；若不存在 \(r\)，则 \(a\) 为无限阶元。</div>
+<div class="example"><b>求阶的过程</b> 依次检验：
+\[\begin{aligned}&1:\ a=e\,?\\&2:\ aa=a^2=e\,?\\&3:\ aaa=a^3=e\,?\\&\quad\vdots\\&r\ \checkmark\end{aligned}\]
+第一次成立时的指数即为 \(|a|\)。</div>
+<div class="thm"><b>性质（\(|a|=r\)）</b>
+<ol>
+<li>\(a^k=e\ \Leftrightarrow\ r\mid k\)（\(r\) 整除 \(k\)）✓</li>
+<li>\(|a|=|a^{-1}|\)</li>
+<li>若 \(|G|=n\)，则 \(r\le n\) ✓</li>
+</ol></div>
+<div class="unclear"><b>待核对（p.210，位置：底部最后一行，被页面裁切；p.211 顶部第一行）</b> 可辨认部分：p.210 底部有一行被下画线和右括号 ")" 包住的文字，左侧弧形箭头从性质处引向下一页；p.211 顶部只剩一行带下画线、末尾有勾的残字；无法辨认：这一行的具体文字（仅剩笔画顶端/底端）。</div>
+
+<h3>证明 \(|a|=|a^{-1}|\) <span class="pg">p.211</span></h3>
+<div class="proof"><b>证明</b>（原页弧形箭头 \(\to\)"证明 \(|a|=|a^{-1}|\) ✓"）
+<p>已知 \(|a|=r\ \Rightarrow\ a^r=e\)（旁注"最小"，箭头指向 \(r\)）。</p>
+\[(a^{-1})^r=(a^r)^{-1}=e^{-1}=e\ \Longrightarrow\ (a^{-1})^r=e\]
+（原页把 \((a^{-1})^r=e\) 圈出，旁注"任意"，并在指数 \(r\) 处标"最小？"——即这里的 \(r\) 只是使 \((a^{-1})^r=e\) 的某个正整数，不一定是最小的。）
+<p>设 \(|a^{-1}|=t\)（最小，方框框出），则 \(t\mid r\)（由圈出的 \((a^{-1})^r=e\) 引箭头得到，用性质 1）。</p>
+<p>即 \(a^{-1}\) 的阶 \(t\) 为 \(a\) 的阶 \(r\) 的因子（\(t\mid r\)）。</p>
+<p>同理（把 \(a^{-1}\) 换成 \(a\)，\(a\) 换成 \(a^{-1}\)，原页用两条向下箭头分别标出 \(a^{-1}\to a\)，\(a\to a^{-1}\)；左边先写的 \((a^{-1})^{-1}\) 被划去改为 \(a\)）得 \(r\mid t\)（圈出）。</p>
+\[r\mid t\ \text{和}\ t\mid r\ \Longrightarrow\ t=r\]
+</div>
+<div class="note"><b>笔记边注</b> 第二行的 \((a^{-1})^r\) 中 \(-1\) 与 \(r\) 用红色波浪线标出，\(a^r\) 下画波浪线，强调两者的幂次可以交换。</div>
+<div class="supp"><b>补充讲解</b> \((a^{-1})^r=(a^r)^{-1}\) 成立是因为 \(a^r\cdot(a^{-1})^r=e\)。最后一步用到 \(r,t\) 都是正整数，正整数互相整除时必相等。</div>
+<div class="warn"><b>易错提醒</b> 群的阶 \(|G|\) 是元素个数，元素的阶 \(|a|\) 是使 \(a^r=e\) 的最小正整数，两者不要混淆。只能从 \(a^k=e\) 推出 \(|a|\mid k\)，不能推出 \(|a|=k\)。</div>

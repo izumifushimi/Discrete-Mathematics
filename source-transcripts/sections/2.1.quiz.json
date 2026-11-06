@@ -1,0 +1,78 @@
+[
+ {
+  "type": "fill",
+  "q": "按定义，\\(\\langle 1,2\\rangle\\) 写成集合是 ____",
+  "answer": [
+   "{{1},{1,2}}",
+   "{{1},{2,1}}",
+   "{{1,2},{1}}"
+  ],
+  "why": "\\(\\langle a,b\\rangle=\\{\\{a\\},\\{a,b\\}\\}\\)。"
+ },
+ {
+  "type": "fill",
+  "q": "若 \\(|A|=3,|B|=4\\)，则 \\(|A\\times B|=\\) ____",
+  "answer": [
+   "12"
+  ],
+  "why": "m·n = 3×4 = 12。"
+ },
+ {
+  "type": "choice",
+  "q": "\\(A\\times B=\\emptyset\\) 的充要条件是",
+  "options": [
+   "\\(A=\\emptyset\\) 且 \\(B=\\emptyset\\)",
+   "\\(A=\\emptyset\\) 或 \\(B=\\emptyset\\)",
+   "\\(A=B\\)",
+   "\\(A\\cap B=\\emptyset\\)"
+  ],
+  "answer": 1,
+  "why": "只要一个因子为空，就找不到有序对。笔记原写“A=∅, B=∅”需理解为“或”。"
+ },
+ {
+  "type": "choice",
+  "q": "下列等式恒成立的是",
+  "options": [
+   "\\(A\\times B=B\\times A\\)",
+   "\\((A\\times B)\\times C=A\\times(B\\times C)\\)",
+   "\\(A\\times(B\\cup C)=(A\\times B)\\cup(A\\times C)\\)",
+   "\\(A\\times(B\\cup C)=(A\\times B)\\cap(A\\times C)\\)"
+  ],
+  "answer": 2,
+  "why": "卡氏积对并满足分配律，但不满足交换律、结合律。"
+ },
+ {
+  "type": "choice",
+  "q": "命题“\\(A\\times B\\subseteq A\\times C\\Rightarrow B\\subseteq C\\)”成立需要的条件是",
+  "options": [
+   "\\(A\\ne\\emptyset\\)",
+   "\\(B\\ne\\emptyset\\)",
+   "\\(A\\subseteq C\\)",
+   "无需任何条件"
+  ],
+  "answer": 0,
+  "why": "反例：\\(A=\\emptyset,B=\\{1\\},C=\\emptyset\\) 时左边两侧都为 ∅，但 \\(B\\not\\subseteq C\\)。"
+ },
+ {
+  "type": "choice",
+  "q": "设 \\(A=\\{1\\},B=\\{2\\},C=\\{3\\}\\)，则 \\((A\\times B)\\times C\\) 的唯一元素是",
+  "options": [
+   "\\(\\langle 1,\\langle 2,3\\rangle\\rangle\\)",
+   "\\(\\langle\\langle 1,2\\rangle,3\\rangle\\)",
+   "\\(\\{1,2,3\\}\\)",
+   "\\(\\langle 3,\\langle1,2\\rangle\\rangle\\)"
+  ],
+  "answer": 1,
+  "why": "先算 \\(A\\times B=\\{\\langle1,2\\rangle\\}\\)，再与 C 作积。A 选项是 \\(A\\times(B\\times C)\\) 的元素，二者不同，所以不满足结合律。"
+ },
+ {
+  "type": "fill",
+  "q": "\\(A=\\{a,b\\},B=\\{1,2\\}\\)，则 \\(A\\times B\\) 中第一分量为 \\(b\\) 的有序对有 ____ 个",
+  "answer": [
+   "2",
+   "两",
+   "二"
+  ],
+  "why": "\\(\\langle b,1\\rangle,\\langle b,2\\rangle\\)。"
+ }
+]

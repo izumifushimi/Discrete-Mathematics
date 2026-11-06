@@ -1,0 +1,79 @@
+<h3>① n 元置换 <span class="pg">p.223</span></h3>
+<div class="example"><b>例（引例）</b> 左列 1,2,3,4,5 分别用箭头映到右列 2,1,4,3,5，称为一个 5 元置换。
+<figure class="fig"><svg viewBox="0 0 260 200" role="img" aria-label="1到5映射到2,1,4,3,5的箭头图">
+<defs><marker id="a148" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+<rect x="20" y="10" width="40" height="180" fill="none" stroke="currentColor"/>
+<rect x="180" y="10" width="40" height="180" fill="none" stroke="currentColor"/>
+<g font-size="14" fill="currentColor">
+<text x="35" y="40">1</text><text x="35" y="75">2</text><text x="35" y="110">3</text><text x="35" y="145">4</text><text x="35" y="180">5</text>
+<text x="195" y="40">2</text><text x="195" y="75">1</text><text x="195" y="110">4</text><text x="195" y="145">3</text><text x="195" y="180">5</text></g>
+<g stroke="currentColor" marker-end="url(#a148)">
+<line x1="65" y1="35" x2="175" y2="35"/><line x1="65" y1="70" x2="175" y2="70"/><line x1="65" y1="105" x2="175" y2="105"/><line x1="65" y1="140" x2="175" y2="140"/><line x1="65" y1="175" x2="175" y2="175"/></g>
+</svg><figcaption>图：1→2，2→1，3→4，4→3，5→5，旁注"5元置换"。</figcaption></figure></div>
+<div class="def"><b>定义（n 元置换）</b> 设 \(S=\{1,2,\cdots,n\}\)，\(S\) 上的任何双射函数 \(\sigma:S\to S\) 称为 \(S\) 上的 \(n\) 元置换，记为
+\[\sigma=\begin{pmatrix}1&2&\cdots&n\\ \sigma(1)&\sigma(2)&\cdots&\sigma(n)\end{pmatrix}\]</div>
+<div class="note"><b>笔记边注</b> "的置换"下方补写"n元"，即"S 上的 n 元置换"。</div>
+<div class="example"><b>例</b> 上面的 5 元置换记为 \[\sigma=\begin{pmatrix}1&2&3&4&5\\2&1&4&3&5\end{pmatrix}\]（原页此式下画波浪线强调。）</div>
+
+<h3>② 置换的复合 <span class="pg">p.223–224</span></h3>
+<div class="def"><b>定义（置换的乘积）</b> 设 \(\sigma,\tau\) 为 \(n\) 元置换，则 \(\sigma\circ\tau\) 为 \(n\) 元置换（乘积），记为 \(\sigma\tau\)。</div>
+<div class="example"><b>例</b> \[\sigma=\begin{pmatrix}1&2&3&4&5\\2&3&4&1&5\end{pmatrix},\qquad \tau=\begin{pmatrix}1&2&3&4&5\\3&2&1&4&5\end{pmatrix}\]求 \(\sigma\tau\)。
+<b>解</b> 先作用 \(\sigma\)，再作用 \(\tau\)（原页标注 \(\sigma\tau\)：\(\xrightarrow{\sigma}\) 再 \(\xrightarrow{\tau}\)）：
+<div class="tbl"><table><thead><tr><th>\(x\)</th><th>\(\sigma(x)\)</th><th>再经 \(\tau\)</th></tr></thead><tbody>
+<tr><td>1</td><td>2</td><td>2</td></tr><tr><td>2</td><td>3</td><td>1</td></tr><tr><td>3</td><td>4</td><td>4</td></tr><tr><td>4</td><td>1</td><td>3</td></tr><tr><td>5</td><td>5</td><td>5</td></tr></tbody></table></div>
+<b>结论</b> \[\sigma\tau=\begin{pmatrix}1&2&3&4&5\\2&1&4&3&5\end{pmatrix}\]（p.223 底部开始写，p.224 顶部写完整并画线。）</div>
+<div class="supp"><b>补充讲解</b> 本笔记的乘积 \(\sigma\tau\) 约定为"从左到右"：先做 \(\sigma\) 后做 \(\tau\)，即 \((\sigma\tau)(x)=\tau(\sigma(x))\)。后面对换分解、\(S_3\) 运算表都按这一约定计算。</div>
+
+<h3>③ k 阶轮换 <span class="pg">p.224</span></h3>
+<div class="def"><b>定义（k 阶轮换）</b> 设 \(\sigma\) 是 \(S=\{1,2,\cdots,n\}\) 上的 \(n\) 元置换，若（对其中某一部分元素）
+\[\sigma(i_1)=i_2,\ \sigma(i_2)=i_3,\ \cdots,\ \sigma(i_{k-1})=i_k,\ \sigma(i_k)=i_1\]
+（原页对 \(\sigma(i_k)=i_1\) 画红线强调），且其余元素保持不变，则称 \(\sigma\) 为 \(k\) 阶轮换，记为 \(\sigma=(i_1\,i_2\,\cdots\,i_k)\)。2 阶轮换称为对换。</div>
+<div class="example"><b>例</b> \[\sigma=\begin{pmatrix}1&2&3&4&5\\1&3&4&2&5\end{pmatrix}\]
+<b>解</b> \(\sigma(1)=1\)，\(\sigma(5)=5\)：1 阶轮换；
+\(\sigma(2)=3,\ \sigma(3)=4,\ \sigma(4)=2\)：3 阶轮换（原页用弧形箭头 2→3→4→回到 2 表示）。
+<b>结论</b> \(\sigma_1=(1)\)，\(\sigma_2=(5)\)，\(\sigma_3=(2\,3\,4)\)。原页框出第 1 列与第 5 列，并用红色箭头把 \((2\,3\,4)\) 指向记号 \((i_1 i_2\cdots i_k)\)；记号 \(\sigma\) 下方列出 \(\sigma_1,\sigma_2,\sigma_3\)。</div>
+
+<h3>④ 任一置换可分解为轮换之积 <span class="pg">p.224–225</span></h3>
+<div class="thm"><b>定理</b> 设 \(S=\{1,2,\cdots,n\}\)，对于任何 \(S\) 上的 \(n\) 元置换 \(\sigma\)，一定存在轮换（使 \(\sigma\) 写成若干个轮换之积）：\[\sigma=\sigma_1\sigma_2\cdots\sigma_t\quad(t\text{ 个轮换})\]</div>
+<div class="proof"><b>证明（原页思路）</b> 设这个轮换为 \(\sigma(i_1)=i_2,\ \sigma(i_2)=i_3,\ \cdots,\ \sigma(i_k)=i_1\)。令 \(\sigma_1=(i_1\,i_2\,i_3\cdots i_k)\)，则 \(\sigma=\sigma_1\cdot\sigma'\)，对剩下部分 \(\sigma'\) 再取出一个轮换得 \(\sigma_2\)（原页把 \(\sigma'\) 框出、箭头指向 \(\sigma_2\)），如此继续（向下箭头），最终 \(\sigma=\sigma_1\sigma_2\cdots\sigma_t\)。</div>
+<div class="supp"><b>补充讲解</b> 每次取出的轮换作用在互不相交的元素上，因此这些轮换互相可交换；元素有限，过程一定终止。</div>
+<div class="example"><b>例</b> \(S=\{1,2,\cdots,8\}\)，\[\sigma=\begin{pmatrix}1&2&3&4&5&6&7&8\\5&3&6&4&2&1&8&7\end{pmatrix}\]
+<b>解</b> 原页用红框分出三部分：\(\{1,2,3,5,6\}\)（5 阶）、\(\{4\}\)（1 阶）、\(\{7,8\}\)（2 阶）。
+\[\sigma_1=(1\,5\,2\,3\,6):\ \sigma_1(1)=5,\ \sigma_1(5)=2,\ \sigma_1(2)=3,\ \sigma_1(3)=6,\ \sigma_1(6)=1\]
+\[\sigma_2=(4):\ \sigma_2(4)=4\qquad \sigma_3=(7\,8):\ \sigma_3(7)=8,\ \sigma_3(8)=7\]
+<b>结论</b> \(\sigma=\sigma_1\sigma_2\sigma_3=(1\,5\,2\,3\,6)(4)(7\,8)\)（原页 (4) 下画红线，整式圈出并画波浪线）。</div>
+<figure class="fig"><svg viewBox="0 0 420 90" role="img" aria-label="置换到轮换到对换的转化关系">
+<defs><marker id="b148" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+<g font-size="14" fill="currentColor"><text x="10" y="35">置换</text><text x="170" y="35">轮换</text><text x="320" y="35">对换</text><text x="300" y="55">(2阶轮换)</text></g>
+<g stroke="currentColor" fill="none" marker-end="url(#b148)"><line x1="50" y1="30" x2="160" y2="30"/><line x1="210" y1="30" x2="310" y2="30"/>
+<path d="M180,45 Q110,85 40,45"/><path d="M330,62 Q270,90 200,45"/></g></svg>
+<figcaption>图：置换 → 轮换 → 对换（2 阶轮换），并有反向箭头 对换 → 轮换 → 置换，表示置换可分解为轮换之积，轮换又可分解为对换之积。</figcaption></figure>
+<div class="unclear"><b>待核对（p.225，位置：右侧中部"σ="右边）</b> 可辨认部分："σ="（下有双横线）及其右侧一个大空心圆；无法辨认：该圆的含义（未写任何文字）。</div>
+
+<h3>⑤ 轮换分解为对换之积 <span class="pg">p.225–226</span></h3>
+<div class="thm"><b>定理</b> 设 \(\sigma\) 为 \(S\) 上的 \(k\) 阶轮换，则
+\[(i_1\,i_2\,\cdots\,i_k)=(i_1\,i_2)(i_1\,i_3)\cdots(i_1\,i_k)\]
+即 1 个 \(k\) 阶轮换 \(=\) \((k-1)\) 个对换之积。</div>
+<figure class="fig"><svg viewBox="0 0 300 130" role="img" aria-label="一排圆圈中标红元素依次与下一个交换">
+<defs><marker id="c148" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+<g fill="none" stroke="currentColor">
+<circle cx="30" cy="20" r="10" stroke-width="3"/><circle cx="80" cy="20" r="10"/><circle cx="130" cy="20" r="10"/><circle cx="180" cy="20" r="10"/><circle cx="230" cy="20" r="10"/>
+<circle cx="30" cy="60" r="10"/><circle cx="80" cy="60" r="10" stroke-width="3"/><circle cx="130" cy="60" r="10"/><circle cx="180" cy="60" r="10"/><circle cx="230" cy="60" r="10"/>
+<circle cx="30" cy="100" r="10"/><circle cx="80" cy="100" r="10"/><circle cx="130" cy="100" r="10" stroke-width="3"/><circle cx="180" cy="100" r="10"/><circle cx="230" cy="100" r="10"/>
+<path d="M32,34 Q55,45 78,34" marker-end="url(#c148)"/><path d="M82,74 Q105,85 128,74" marker-end="url(#c148)"/><path d="M132,114 Q155,125 178,114" marker-end="url(#c148)"/></g></svg>
+<figcaption>图：三行各 5 个圆圈，第 1、2、3 行分别把第 1、2、3 个圆标红（图中粗线），并用弧形箭头指向下一个圆，示意 \(i_1\) 依次与 \(i_2,i_3,\cdots\) 对换、逐步移位（p.225 右下与 p.226 右上都画了此图，p.225 另画 \(i_1\) 绕一圈的示意）。</figcaption></figure>
+<div class="example"><b>例</b> \(\sigma=(1\,5\,2\,3\,6)=(1\,5)(1\,2)(1\,3)(1\,6)\)（原页用弧线把 1 分别与 5、2、3、6 相连）。
+<b>解</b> 对应两行记号（只看 1,2,3,5,6；4 和 7、8 两列在原页被打叉划去）：
+\[\begin{pmatrix}1&2&3&5&6\\5&3&6&2&1\end{pmatrix}=(1\,5\,2\,3\,6)\]
+逐个作用对换，跟踪排列 \(1\ 2\ 3\ 5\ 6\)：
+\[\begin{aligned}
+&\text{初始} &&1\quad 2\quad 3\quad 5\quad 6\\
+&(1\,5) &&5\quad 2\quad 3\quad 1\quad 6\\
+&(1\,2) &&5\quad 1\quad 3\quad 2\quad 6\\
+&(1\,3) &&5\quad 3\quad 1\quad 2\quad 6\\
+&(1\,6) &&5\quad 3\quad 6\quad 2\quad 1
+\end{aligned}\]
+<b>结论</b> 最后一行 \(5\ 3\ 6\ 2\ 1\) 与左边两行记号的下行 \(5\ 3\ 6\ 2\ 1\) 相同（两处都用红圈圈出），故分解正确。</div>
+<div class="fix"><b>校订说明（p.226）</b> 原式：左侧两行记号中 7、8 两列下行写作"7 8"（已打叉划去）；正确式：按 p.225 的 \(\sigma\)，应为 \(7\mapsto 8,\ 8\mapsto 7\)，下行为"8 7"；原因：该列已划去不影响本例，但与 p.225 原置换不一致。</div>
+<div class="example"><b>例</b> \[\sigma=(1\,5\,2\,3\,6)(4)(7\,8)=(1\,5)(1\,2)(1\,3)(1\,6)(7\,8)\]（原页把 (4) 打叉：1 阶轮换是恒等，不必写入对换分解。）</div>
+<div class="warn"><b>易错提醒</b> 分解式 \((i_1 i_2)(i_1 i_3)\cdots(i_1 i_k)\) 依赖"先左后右"的乘法约定；若按"先右后左"，顺序要反过来写成 \((i_1 i_k)\cdots(i_1 i_3)(i_1 i_2)\)。</div>

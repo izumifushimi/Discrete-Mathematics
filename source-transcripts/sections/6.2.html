@@ -1,0 +1,145 @@
+<p>原笔记标题“6.2 图的基本定理”，记录时间 2025年8月10日 9:22。</p>
+
+<h3>① 图论基本定理（握手定理） <span class="pg">p.87</span></h3>
+<div class="thm"><b>定理（无向图）</b> 设 \(G=\langle V,E\rangle\) 为无向图，\(V=\{v_1,v_2,\dots,v_n\}\)，\(|E|=m\)，则
+\[ \sum_{i=1}^{n} d(v_i)=2m \]
+（原笔记在 \(m\) 下划线，在 \(\sum_{i=1}^n d(v_i)\) 下画波浪线并加三角记号，在 \(2m\) 下划线。）</div>
+<div class="thm"><b>定理（有向图）</b> 设 \(D=\langle V,E\rangle\) 为有向图，\(V=\{v_1,v_2,\dots,v_n\}\)，\(|E|=m\)，则
+\[ \sum_{i=1}^{n} \cdots \]
+（原笔记在 \(V\) 下画双线。）</div>
+<div class="note"><b>笔记边注</b> 原页有向图一行只写了求和号 \(\sum_{i=1}^{n}\)，后面没有写完，下面空了一段。</div>
+<div class="supp"><b>补充讲解</b> 有向图握手定理的通行写法：\(\sum_{i=1}^n d(v_i)=2m\)，且 \(\sum_{i=1}^n d^+(v_i)=\sum_{i=1}^n d^-(v_i)=m\)。每条弧给起点贡献 1 个出度、给终点贡献 1 个入度。推论：任何图中奇度顶点个数为偶数。</div>
+
+<h3>② 简单图与 k-正则图 <span class="pg">p.87</span></h3>
+<div class="def"><b>定义（简单图）</b> 既无环，也无平行边的图称为简单图。
+\[ \Rightarrow\quad 0\le \Delta(G)\le n-1 \]
+（原笔记用红框圈出 \(0\le\Delta(G)\le n-1\)，并在 \(n\) 下加三角记号。）</div>
+<figure class="fig"><svg viewBox="0 0 260 80" role="img" aria-label="环与平行边示意">
+<circle cx="50" cy="60" r="4" fill="none" stroke="currentColor"/>
+<ellipse cx="50" cy="38" rx="11" ry="18" fill="none" stroke="currentColor"/>
+<circle cx="140" cy="45" r="4" fill="none" stroke="currentColor"/>
+<circle cx="230" cy="45" r="4" fill="none" stroke="currentColor"/>
+<path d="M144 45 Q185 22 226 45" fill="none" stroke="currentColor"/>
+<path d="M144 45 Q185 68 226 45" fill="none" stroke="currentColor"/>
+</svg><figcaption>图：左为环（一个顶点上的自环），右为两顶点间的一对平行边。简单图中二者都不允许。</figcaption></figure>
+<div class="def"><b>定义（k-正则图）</b> 所有顶点的度都是 \(k\) 的图称为 \(k\)-正则图。</div>
+<figure class="fig"><svg viewBox="0 0 120 120" role="img" aria-label="K4 为 3-正则图">
+<g stroke="currentColor" fill="none">
+<line x1="20" y1="20" x2="100" y2="20"/><line x1="20" y1="100" x2="100" y2="100"/>
+<line x1="20" y1="20" x2="20" y2="100"/><line x1="100" y1="20" x2="100" y2="100"/>
+<line x1="20" y1="20" x2="100" y2="100"/><line x1="100" y1="20" x2="20" y2="100"/>
+<circle cx="20" cy="20" r="4"/><circle cx="100" cy="20" r="4"/><circle cx="20" cy="100" r="4"/><circle cx="100" cy="100" r="4"/>
+</g></svg><figcaption>图：3-正则图（即 \(K_4\)）：4 个顶点，任意两点之间都有边，共 6 条边，每点度数为 3。</figcaption></figure>
+
+<h3>③ 度数列 <span class="pg">p.87–88</span></h3>
+<div class="def"><b>定义（度数列）</b> 设 \(G=\langle V,E\rangle\)，\(V=\{v_1,v_2,\dots,v_n\}\)，\(G\) 的度数列为
+\[ d=(d(v_1),d(v_2),\dots,d(v_n)) \]</div>
+<div class="example"><b>例</b> 求下图的度数列。
+<figure class="fig"><svg viewBox="0 0 220 170" role="img" aria-label="5 顶点图，含环和平行边">
+<g stroke="currentColor" fill="none">
+<circle cx="100" cy="40" r="4"/><circle cx="35" cy="75" r="4"/><circle cx="150" cy="80" r="4"/><circle cx="150" cy="140" r="4"/><circle cx="60" cy="140" r="4"/>
+<ellipse cx="96" cy="22" rx="10" ry="14"/>
+<line x1="96" y1="42" x2="39" y2="73"/>
+<path d="M103 43 Q130 55 147 77"/><path d="M103 43 Q118 70 147 80"/>
+<line x1="150" y1="84" x2="150" y2="136"/>
+<path d="M64 140 Q105 125 146 140"/><path d="M64 140 Q105 155 146 140"/>
+</g>
+<g font-size="14" fill="currentColor"><text x="110" y="30">v1</text><text x="8" y="72">v2</text><text x="160" y="85">v5</text><text x="160" y="145">v4</text><text x="30" y="160">v3</text></g>
+</svg><figcaption>图：顶点 \(v_1,\dots,v_5\)。边：\(v_1\) 上一个环；\((v_1,v_2)\)；\(v_1\) 与 \(v_5\) 之间两条平行边；\((v_5,v_4)\)；\(v_4\) 与 \(v_3\) 之间两条平行边。共 7 条边。（原笔记用黑圈圈出 \(v_2\)，红圈圈出 \(v_3\)。）</figcaption></figure>
+<b>解</b>
+\[ \begin{aligned} d&=(d_1,d_2,d_3,d_4,d_5)\\ &=(5,1,2,3,3) \end{aligned} \]
+</div>
+<div class="supp"><b>补充讲解</b> 核对：\(d(v_1)=2(\text{环})+1+2=5\)，\(d(v_2)=1\)，\(d(v_3)=2\)，\(d(v_4)=1+2=3\)，\(d(v_5)=2+1=3\)。度数和 \(14=2\times 7\)，符合握手定理。</div>
+
+<h3>④ 可图化 <span class="pg">p.88</span></h3>
+<div class="def"><b>定义（可图化）</b> 设非负整数列 \(d=(d_1,d_2,\dots,d_n)\)，若存在图 \(G\)，使 \(G\) 的度数列是 \(d\)，则称 \(d\) 为可图化的。
+\[ \text{度数列}\longrightarrow\text{图 }G \]</div>
+<div class="thm"><b>定理</b>
+\[ d\ \text{可图化}\iff \sum_{i=1}^n d_i=d_1+d_2+\cdots+d_n\equiv 0\pmod 2 \]
+（原笔记在 \(\pmod 2\) 下划线。）</div>
+<div class="supp"><b>补充讲解</b> 这里的“图”允许环和平行边。必要性由握手定理得到；充分性：把奇数项两两配对连边，剩下的度数用环补足即可。</div>
+
+<h3>⑤ 可简单图化与 Havel 定理 <span class="pg">p.88–89</span></h3>
+<div class="def"><b>定义（可简单图化）</b> 1）设非负整数列 \(d=(d_1,d_2,\dots,d_n)\)，若存在<u>简单图</u> \(G\) 以 \(d\) 为度数列，则称 \(d\) 可简单图化。
+\[ \text{度数列}\Rightarrow\text{简单图 }G \]
+（原笔记在“简单图”下画波浪线。）</div>
+<div class="thm"><b>定理 1（Havel 定理）</b> 2）设非负整数列 \(d=(d_1,d_2,\dots,d_n)\)，\(d_1+d_2+\cdots+d_n\equiv 0\pmod 2\)，排列为
+\[ n-1\ge d_1\ge d_2\ge\cdots\ge d_n\ge 0 \]
+（原笔记此行下画红线。）则
+\[ d\ \text{可简单图化}\iff d'=(d_2-1,\ d_3-1,\ \dots,\ d_{d_1+1}-1,\ d_{d_1+2},\ \dots,\ d_n)\ \text{可简单图化} \]
+（原笔记用红色大椭圆圈出 \(d'\) 一侧，并在右上角画红色星号；\(d\) 下画波浪线加三角记号，下标 \(d_1+1\) 处有红色三角记号。）</div>
+<div class="supp"><b>补充讲解</b> 该定理通行名称为 Havel–Hakimi 定理。用法：每轮去掉最大项 \(d_1\)，把其后 \(d_1\) 项各减 1，得到的新序列重新降序排列后继续。出现负数则不可简单图化；最后全为 0 则可简单图化。</div>
+<div class="note"><b>笔记边注</b> 第88页最底部被分页截断的一行，与第89页顶部“eg(1) d=(4,4,3,3,2,2) 可简单图化?”为同一行（第88页只露出上半部分，可见红圈笔画与“可简单图化”字样上沿），内容按第89页转写。</div>
+
+<div class="example"><b>例 (1)</b> \(d=(4,4,3,3,2,2)\) 可简单图化？ <span class="pg">p.89</span><br>
+<b>解</b> 原笔记圈出首项 4 并划掉（下式用下划线表示该项），在其后 4 项下加红三角：
+\[ \begin{aligned}
+d&=(\underline{4},4,3,3,2,2)\quad(\text{首项 4 被划去})\\
+d'&=(3,2,2,1,2)\to d'=(3,2,2,2,1)\\
+d''&=(1,1,1,1)\\
+d'''&=(0,1,1)=(1,1,0)\\
+d''''&=(0,0)
+\end{aligned} \]
+每一步圈出当前首项（3、1、1），并在要减 1 的项下加三角记号。原笔记从 \(d''=(1,1,1,1)\) 引一条红色箭头，指向一个由两条互不相交的边组成的图（4 个顶点、2 条边，每点度数 1），表示 \((1,1,1,1)\) 可由该简单图实现。
+<figure class="fig"><svg viewBox="0 0 120 80" role="img" aria-label="两条不相交的边">
+<g stroke="currentColor" fill="none"><circle cx="40" cy="15" r="4"/><circle cx="40" cy="65" r="4"/><line x1="40" y1="19" x2="40" y2="61"/>
+<circle cx="80" cy="15" r="4"/><circle cx="80" cy="65" r="4"/><line x1="80" y1="19" x2="80" y2="61"/></g>
+</svg><figcaption>图：4 个顶点，2 条不相交的边，度数列 \((1,1,1,1)\)。</figcaption></figure>
+<b>结论</b> 最后得到 \((0,0)\)，故 \(d=(4,4,3,3,2,2)\) 可简单图化。</div>
+
+<div class="example"><b>例 (2)</b> \(d=(5,5,4,4,2,2)\) 可简单图化？ <span class="pg">p.89</span><br>
+<b>解</b>
+\[ \begin{aligned}
+d&=(\underline{5},5,4,4,2,2)\quad(\text{首项 5 被划去})\\
+d'&=(4,3,3,1,1)\\
+d''&=(2,2,0,0)\\
+d'''&=(1,-1,0)
+\end{aligned} \]
+原笔记依次圈出首项 5、4、2，并在其后要减 1 的项下加红三角；最后一行 \(d'''=(1,-1,0)\) 用红圈圈出。
+<b>结论</b> 出现负数 \(-1\)，故 \(d=(5,5,4,4,2,2)\) 不可简单图化。（原笔记未单独写结论句，红圈即表示失败。）</div>
+
+<h3>⑥ 可简单图化充要条件（Erdős–Gallai） <span class="pg">p.89</span></h3>
+<div class="thm"><b>定理 2（P. Erdős，T. Gallai）</b> 设非负整数列 \(d=(d_1,d_2,\dots,d_n)\) 满足
+\[ n-1\ge d_1\ge d_2\ge\cdots\ge d_n\ge 0 \]
+则
+\[ d\ \text{可简单图化}\iff\begin{cases} d_1+d_2+\cdots+d_n\equiv 0\pmod 2\\[2pt] \text{并且对 } r=1,2,\dots,n \text{ 有}\\[2pt] d_1+d_2+\cdots+d_r\le r(r-1)+\min\{r,d_{r+1}\}+\min\{r,d_{r+2}\}+\cdots+\min\{r,d_n\} \end{cases} \]
+（原笔记用红圈圈出左边 \(d_1+\cdots+d_r\) 和 \(\le\)，在 \(r(r-1)\) 下划红线，在 \(\min\{r,d_{r+1}\}\) 下画波浪线。）</div>
+<div class="fix"><b>校订说明（p.89）</b> 原式：人名字迹写作近似“T. Gullai”；正确式：T. Gallai；原因：该定理为 Erdős–Gallai 定理，人名拼写应为 Gallai。（Erdős 原笔记写作“Erdös”，属常见替代写法，不改。）</div>
+<div class="supp"><b>补充讲解</b> 不等式的含义：前 \(r\) 个顶点之间最多 \(r(r-1)/2\) 条边，贡献度数至多 \(r(r-1)\)；其余每个顶点 \(v_k\) 最多与前 \(r\) 个顶点连 \(\min\{r,d_k\}\) 条边。</div>
+
+<div class="example"><b>例 (1)</b> \(d=(5,5,3,3,2,2,2)\)（原笔记红圈圈出后三项 2,2,2） <span class="pg">p.90</span><br>
+<b>解</b> \(n=7\)，逐个 \(r\) 检验：
+<div class="tbl"><table><thead><tr><th>\(r\)</th><th>左边 \(d_1+\cdots+d_r\)</th><th></th><th>右边</th></tr></thead><tbody>
+<tr><td>1</td><td>\(d_1=5\)</td><td>\(\le\)</td><td>\(1\times 0+1+1+1+1+1+1=6\)</td></tr>
+<tr><td>2</td><td>\(d_1+d_2=5+5=10\)</td><td>\(\le\)</td><td>\(2\times 1+2+2+2+2+2=12\)</td></tr>
+<tr><td>3</td><td>\(d_1+\cdots+d_3=13\)</td><td>\(\le\)</td><td>\(3\times 2+3+2+2+2=15\)</td></tr>
+<tr><td>4</td><td>\(d_1+\cdots+d_4=16\)</td><td>\(\le\)</td><td>\(4\times 3+2+2+2=18\)</td></tr>
+<tr><td>5</td><td>\(d_1+\cdots+d_5=18\)</td><td>\(\le\)</td><td>\(5\times 4+\cdots=24\)</td></tr>
+<tr><td>6</td><td>\(d_1+\cdots+d_6=20\)</td><td>\(\le\)</td><td>\(6\times 5+\cdots=32\)</td></tr>
+<tr><td>7</td><td>\(d_1+\cdots+d_7=22\)</td><td>\(\le\)</td><td>\(7\times 6+0=42\)</td></tr>
+</tbody></table></div>
+（原笔记圈出 \(r=1,3,4\) 的数字，\(r=5,6,7\) 三行右侧用红色大括号括起，\(5\times4\)、\(6\times5\)、\(7\times6\) 下有划线。）
+<b>结论</b> 度数和 \(22\) 为偶数，且 \(r=1,\dots,7\) 全部满足不等式，故 \(d\) 可简单图化。</div>
+<div class="supp"><b>补充讲解</b> 省略号部分：\(r=5\) 时 \(20+\min\{5,2\}+\min\{5,2\}=24\)；\(r=6\) 时 \(30+\min\{6,2\}=32\)；\(r=7\) 时后面没有项，为 \(42+0\)。</div>
+
+<div class="example"><b>例 (2)</b> \(d=(6,6,5,4,3,3,1)\)（原笔记红圈圈出 5,4,3,3,1） <span class="pg">p.90</span><br>
+<b>解</b>
+\[ r=2:\quad d_1+d_2=12\ \gt\ 2\times 1+2+2+2+2+1=11 \]
+（原笔记把右边用红框框出，并在右侧画大红叉。）
+<b>结论</b> \(r=2\) 时不等式不成立，故 \(d\) 不可简单图化。</div>
+<div class="supp"><b>补充讲解</b> 右边各项为 \(\min\{2,5\},\min\{2,4\},\min\{2,3\},\min\{2,3\},\min\{2,1\}=2,2,2,2,1\)，合计 \(2+9=11\)，原笔记计算正确。直观上：两个度为 6 的顶点在 7 阶简单图中都与其余所有点相邻，于是每个点度数至少为 2，与 \(d_7=1\) 矛盾。</div>
+
+<h3>判定流程 <span class="pg">p.90</span></h3>
+<div class="summary"><b>总结</b> 原笔记流程图：
+\[ \begin{aligned}
+&G\\
+&\Downarrow\\
+&\text{是否可图化}\ \Big(\textstyle\sum d_i\equiv 0\pmod 2\Big)\\
+&\Downarrow\\
+&\text{条件 1}\ (n-1\ge d_i)\\
+&\swarrow\qquad\searrow\\
+&\text{定理 1}\qquad\text{定理 2}\\
+&\searrow\qquad\swarrow\\
+&\text{是否可简单图化}
+\end{aligned} \]
+即：先判断度数和是否为偶数（可图化）；再检查每个 \(d_i\le n-1\)；然后用定理 1（Havel 定理）或定理 2（Erdős–Gallai 条件）任选其一，判断是否可简单图化。</div>

@@ -1,0 +1,6 @@
+[
+  {"page":262,"status":"transcribed","note":"公因子与gcd、公倍数与lcm定义；gcd(18,24)=6、lcm(18,24)=72；gcd(0,a)=a等；定理1对偶命题；求gcd(168,300)与lcm(168,300)题目"},
+  {"page":263,"status":"transcribed","note":"素因子分解得gcd=12、lcm=4200；定理2辗转相除法；gcd(168,300)前两步（余数下界笔误见fix）"},
+  {"page":264,"status":"transcribed","note":"辗转相除法后续各步至gcd(12,0)=12；回代表示12=168x+300y的前几步"},
+  {"page":265,"status":"transcribed","note":"回代结果12=9×168+(-5)×300；互素与两两互素定义及例(4,9,11,35)；互素⇔存在xa+yb=1"}
+]

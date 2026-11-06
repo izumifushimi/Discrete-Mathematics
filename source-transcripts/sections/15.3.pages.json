@@ -1,0 +1,32 @@
+[
+ {
+  "page": 239,
+  "status": "partial",
+  "note": "引入（合数分解与密码）；①费马小定理及 p=5 例；项链着色证明开头。待核对：左中部空椭圆旁'?0位'"
+ },
+ {
+  "page": 240,
+  "status": "transcribed",
+  "note": "旋转群、Burnside 计数 M=(1/p)Σn^{c(σk)}，p=5 例图与轮换（fix：θ 的轮换）"
+ },
+ {
+  "page": 241,
+  "status": "transcribed",
+  "note": "推出 p|n^p−n，得费马小定理（fix：正整数→非负整数）；②x²≡1(mod n) 只有两根"
+ },
+ {
+  "page": 242,
+  "status": "transcribed",
+  "note": "n=12/n=11 例，②的证明；③定理3 n−1=2^q·m（fix：q>1→q≥1）；④构造序列"
+ },
+ {
+  "page": 243,
+  "status": "transcribed",
+  "note": "序列末项为 1、倒数第二项为 1 或 n−1；⑤Miller–Rabin，561=3×11×17，a=7，q=4,m=35"
+ },
+ {
+  "page": 244,
+  "status": "transcribed",
+  "note": "7^35..7^560 mod 561 = 241,298,166,67,1，判合；四种序列形态判定表"
+ }
+]

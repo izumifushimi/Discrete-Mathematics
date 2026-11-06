@@ -1,0 +1,27 @@
+[
+ {
+  "page": 137,
+  "status": "transcribed",
+  "note": "有向图关联矩阵定义、例题矩阵、性质1)–4)"
+ },
+ {
+  "page": 138,
+  "status": "transcribed",
+  "note": "无向图关联矩阵定义与例题（v2行e6元素笔误fix）、性质1)–5)、秩定理1"
+ },
+ {
+  "page": 139,
+  "status": "partial",
+  "note": "定理1例、基本关联矩阵与定理2–4、M_f与生成树定理；例题矩阵上方红圈内字迹不可辨"
+ },
+ {
+  "page": 140,
+  "status": "transcribed",
+  "note": "T为生成树⇔|M_f'|≠0；例题步骤1)–3)及3列组合表前半"
+ },
+ {
+  "page": 141,
+  "status": "transcribed",
+  "note": "组合表后半（划去行列式为0者），递推验证 τ=13"
+ }
+]

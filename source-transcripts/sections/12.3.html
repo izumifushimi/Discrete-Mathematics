@@ -1,0 +1,46 @@
+<h3>例题：求全体极小支配集、极小点覆盖、极大独立集 <span class="pg">p.175</span></h3>
+<div class="example"><b>例</b> 如图，求全体极小支配集、极小点覆盖、极大独立集。
+<figure class="fig"><svg viewBox="0 0 200 150" role="img" aria-label="图：c-d、c-b、d-b、a-b四条边">
+<g stroke="currentColor" fill="none" stroke-width="2">
+<line x1="100" y1="25" x2="30" y2="70"/><line x1="100" y1="25" x2="150" y2="70"/><line x1="30" y1="70" x2="150" y2="70"/><line x1="150" y1="70" x2="90" y2="125"/></g>
+<circle cx="150" cy="70" r="11" fill="none" stroke="#d33" stroke-width="2"/>
+<g fill="currentColor"><circle cx="100" cy="25" r="3"/><circle cx="30" cy="70" r="3"/><circle cx="150" cy="70" r="3"/><circle cx="90" cy="125" r="3"/>
+<text x="95" y="15" font-size="14">c</text><text x="12" y="75" font-size="14">d</text><text x="168" y="75" font-size="14">b</text><text x="85" y="145" font-size="14">a</text></g></svg>
+<figcaption>图（p.175，p.176 重画）：\(V=\{a,b,c,d\}\)，\(E=\{(a,b),(b,c),(b,d),(c,d)\}\)，\(b\) 用红圈圈出。</figcaption></figure>
+<p><b>解</b> \(V=\{a,b,c,d\}\)。用布尔变量：\(v=1\) 为在（\(v\) 在所取集合中），\(v=0\) 为不在。</p>
+<p><b>(1) 极小支配集</b>。每个点 \(v\) 必须被支配：要么 \(v\) 自己在集合中，要么 \(v\) 的某个邻点 \(u\in\Gamma(v)\) 在集合中。所以令（原页红框，"真""\(=1\)"）</p>
+\[\prod_{v\in V}\Big(v+\sum_{u\in\Gamma(v)}u\Big)=1,\qquad v=a,b,c,d.\]
+\[=(a+b)\cdot(b+a+c+d)\cdot(c+b+d)\cdot(d+b+c)\]
+<p>四个因子依次表示：\(a\) 一定被支配、\(b\) 一定被支配、\(c\) 一定被支配、\(d\) 一定被支配（原页每个都打 ✓）。</p>
+<p>化简用到的规则（原页右侧红框）：\(a+a=a\)，\(a\cdot a=a\)，\(a+ab=a\)（因 \(a(1+b)=a\cdot1=a\)）。</p>
+\[\begin{aligned}
+&amp;=(ab+aa+ac+ad+bb+ba+bc+bd)\,(c+b+d)(d+b+c)\\
+&amp;=(ab+a+ac+ad+b+ba+bc+bd)\,(b+c+d)\\
+&amp;=\big[a(b+1+c+d)+b(1+a+c+d)\big](b+c+d)\\
+&amp;=(a+b)(b+c+d)\\
+&amp;=ab+b+ac+bc+ad+bd\\
+&amp;=b(1+a+c+d)+ac+ad\\
+&amp;=b+ac+ad\ \overset{\text{令}}{=}\ 1
+\end{aligned}\]
+<p>（第三行两处括号 \(b+1+c+d\)、\(1+a+c+d\) 下标"1"，表示含 1 的和为 1；第二行 \(c+b+d\) 与 \(d+b+c\) 相同，合并为一个。）</p>
+\[\begin{cases}b=1\\ ac=1\\ ad=1\end{cases}\ \Rightarrow\ \begin{cases}b=1\\ a=1,\ c=1\\ a=1,\ d=1\end{cases}\]
+<p><b>结论</b> 全体极小支配集为 \(\{a,c\},\{a,d\},\{b\}\ \Rightarrow\ \gamma_0=1\)。</p>
+
+<p><b>(2) 全体极小点覆盖</b>（p.176）。每条边 \((u,v)\) 至少有一个端点在集合中（边注：一条边两端打星，打 ✓），令</p>
+\[\prod_{(u,v)\in E}(u+v)=1.\]
+\[\begin{aligned}
+&amp;=(a+b)(b+c)(b+d)(c+d)\\
+&amp;=(ab+b+ac+bc)(bc+dc+bd+d)\\
+&amp;=(b+ac)(bc+d)\\
+&amp;=bc+abc+bd+acd\\
+&amp;=bc+bd+acd\ =1
+\end{aligned}\]
+<p>（第二行原页把 \(ab\)、\(bc\) 划去并入 \(b\)，把 \(dc\)、\(bd\) 划去并入 \(d\)；第四行 \(abc\) 被 \(bc\) 吸收划去。）</p>
+<p><b>结论</b> 全体极小点覆盖为 \(\{b,c\},\{b,d\},\{a,c,d\}\ \Rightarrow\ \alpha_0=2\)。</p>
+
+<p><b>(3) 全体极大独立集</b>（p.176–177）。利用 \(V^*\) 为极小点覆盖 \(\Leftrightarrow\) \(V-V^*\) 是极大独立集：</p>
+\[\{b,c\}\xrightarrow{V-V^*}\{a,d\},\qquad \{b,d\}\xrightarrow{V-V^*}\{a,c\},\qquad \{a,c,d\}\xrightarrow{V-V^*}\{b\}.\]
+<p><b>结论</b> 全体极大独立集为 \(\{a,d\},\{a,c\},\{b\}\ \Rightarrow\ \beta_0=2\)。</p>
+</div>
+<div class="note"><b>笔记边注（p.175）</b> 题目下方写"\(V-V^*\)"，提示第 (3) 问用补集求极大独立集。p.176 右侧重画了该图，并在四条边上画红色短线表示被覆盖。</div>
+<div class="supp"><b>补充讲解</b> 本例极小支配集与极大独立集恰好相同（\(\{b\},\{a,c\},\{a,d\}\)），符合 12.1 定理 2（极大独立集都是极小支配集）。验证 \(\alpha_0+\beta_0=2+2=4=n\)。因子展开后，每个"最简"乘积项（不被其他项吸收）对应一个极小集合。</div>

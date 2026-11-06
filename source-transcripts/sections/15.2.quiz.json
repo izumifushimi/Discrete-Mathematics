@@ -1,0 +1,66 @@
+[
+ {
+  "type": "choice",
+  "q": "证明 \\(\\langle\\mathbb{Z}_p,\\oplus_p,\\otimes_p\\rangle\\) 为域时，笔记中证明“无零因子”的关键一步是：",
+  "options": [
+   "\\(i\\otimes_p j=0\\Rightarrow p\\mid ij\\Rightarrow p\\mid i\\) 或 \\(p\\mid j\\)",
+   "\\(\\mathbb{Z}_p\\) 有单位元 1",
+   "\\(\\otimes_p\\) 满足交换律",
+   "\\(|\\mathbb{Z}_p|\\ge2\\)"
+  ],
+  "answer": 0,
+  "why": "p 为素数，p 整除乘积则必整除其中一个因子；又 0≤i,j<p，故 i=0 或 j=0。"
+ },
+ {
+  "type": "fill",
+  "q": "在域 \\(\\mathbb{Z}_7\\) 中，3 的乘法逆元是 ____",
+  "answer": [
+   "5"
+  ],
+  "why": "3×5=15≡1 (mod 7)。"
+ },
+ {
+  "type": "fill",
+  "q": "在域 \\(\\mathbb{Z}_{11}\\) 中，4 的乘法逆元是 ____",
+  "answer": [
+   "3"
+  ],
+  "why": "4×3=12≡1 (mod 11)。"
+ },
+ {
+  "type": "choice",
+  "q": "\\(\\langle\\mathbb{Z}_6,\\oplus_6,\\otimes_6\\rangle\\) 不是域，原因是：",
+  "options": [
+   "有零因子，如 \\(2\\otimes_6 3=0\\)",
+   "没有单位元",
+   "乘法不交换",
+   "加法不构成群"
+  ],
+  "answer": 0,
+  "why": "6 不是素数，2·3=6≡0，存在零因子，不是整环，更不是域。"
+ },
+ {
+  "type": "choice",
+  "q": "笔记证明 \\(\\mathbb{Z}_p\\) 中非零元 i 有逆元时，先说明 \\(i\\otimes_p\\mathbb{Z}_p=\\mathbb{Z}_p\\)，依据是：",
+  "options": [
+   "消去律保证 \\(j\\ne k\\Rightarrow i\\otimes_p j\\ne i\\otimes_p k\\)，且 \\(i\\otimes_p\\mathbb{Z}_p\\subseteq\\mathbb{Z}_p\\)、元素个数相同",
+   "费马小定理",
+   "拉格朗日定理",
+   "\\(\\mathbb{Z}_p\\) 是无限集"
+  ],
+  "answer": 0,
+  "why": "映射 j↦i⊗_p j 是单射，有限集上单射即满射，于是 1 被取到，存在 j 使 i⊗_p j=1。"
+ },
+ {
+  "type": "choice",
+  "q": "整环的定义是：",
+  "options": [
+   "交换、含幺、无零因子的环",
+   "交换且含幺的环",
+   "每个非零元都有逆元的环",
+   "有限的环"
+  ],
+  "answer": 0,
+  "why": "笔记（i）交换环（ii）含幺环（iii）无零因子环三条合起来即整环；有限整环即为域。"
+ }
+]

@@ -1,0 +1,93 @@
+<h3>团 <span class="pg">p.172</span></h3>
+<div class="def"><b>定义（团）</b> 无向图 \(G=\langle V,E\rangle\)。团：\(V^*\subseteq V\)，且导出子图 \(G[V^*]\) 是完全子图（既是完全图，又是子图）。</div>
+<figure class="fig"><svg viewBox="0 0 260 170" role="img" aria-label="图G：v1,v2,v3,v4构成K4，v2,v4,v5构成三角形">
+<g stroke="currentColor" fill="none" stroke-width="2">
+<line x1="40" y1="30" x2="130" y2="30"/><line x1="40" y1="30" x2="40" y2="130"/><line x1="40" y1="30" x2="130" y2="130"/>
+<line x1="130" y1="30" x2="40" y2="130"/><line x1="130" y1="30" x2="130" y2="130"/><line x1="40" y1="130" x2="130" y2="130"/>
+<line x1="130" y1="30" x2="210" y2="130"/><line x1="130" y1="130" x2="210" y2="130"/></g>
+<g fill="currentColor"><circle cx="40" cy="30" r="3"/><circle cx="130" cy="30" r="3"/><circle cx="40" cy="130" r="3"/><circle cx="130" cy="130" r="3"/><circle cx="210" cy="130" r="3"/>
+<text x="25" y="20" font-size="14">v1</text><text x="125" y="20" font-size="14">v2</text><text x="15" y="150" font-size="14">v3</text><text x="125" y="155" font-size="14">v4</text><text x="210" y="155" font-size="14">v5</text></g></svg>
+<figcaption>图 G（p.172 eg）：\(E=\{v_1v_2,v_1v_3,v_1v_4,v_2v_3,v_2v_4,v_3v_4,v_2v_5,v_4v_5\}\)。原页 \(v_1,v_2,v_4\) 画圈，\(v_5\) 下红线。</figcaption></figure>
+<div class="example"><b>例</b> 图 G 中：\(\{v_1,v_2,v_3,v_4\}\) 是最大团（原页"是"字划去，红波浪线）；\(\{v_2,v_4,v_5\}\) 是极大团（红字"极大团"，红波浪线）。</div>
+<div class="def"><b>定义</b>
+<ul>
+<li><b>极大团</b>：真母集都不是团的团。</li>
+<li><b>最大团</b>：顶点数最多的团。</li>
+<li><b>团数</b>：\(\nu_0(G)=\) 最大团的顶点数。</li>
+</ul></div>
+<div class="supp"><b>补充讲解</b> 极大团、最大团两条原页只写了名称，释义按前一节"极大/最大"的同样用法补出。图 G 中 \(\nu_0(G)=4\)。</div>
+
+<h3>定理 1（团与补图独立集） <span class="pg">p.172–173</span></h3>
+<div class="thm"><b>定理 1</b> 无向图 \(G\)：\(V^*\) 是 \(G\) 的团 \(\Leftrightarrow\) \(V^*\) 是 \(\overline{G}\)（补图，原页红框）的独立集。</div>
+<figure class="fig"><svg viewBox="0 0 400 140" role="img" aria-label="K4，路径G，以及G的补图">
+<g stroke="currentColor" fill="none" stroke-width="2">
+<rect x="20" y="20" width="80" height="80"/><line x1="20" y1="20" x2="100" y2="100"/><line x1="100" y1="20" x2="20" y2="100"/>
+<polyline points="160,100 160,20 240,20 240,100"/>
+<line x1="300" y1="20" x2="380" y2="100"/><line x1="380" y1="20" x2="300" y2="100"/><line x1="300" y1="100" x2="380" y2="100"/></g>
+<g fill="currentColor">
+<circle cx="20" cy="20" r="3"/><circle cx="100" cy="20" r="3"/><circle cx="20" cy="100" r="3"/><circle cx="100" cy="100" r="3"/>
+<circle cx="160" cy="20" r="3"/><circle cx="240" cy="20" r="3"/><circle cx="160" cy="100" r="3"/><circle cx="240" cy="100" r="3"/>
+<circle cx="300" cy="20" r="3"/><circle cx="380" cy="20" r="3"/><circle cx="300" cy="100" r="3"/><circle cx="380" cy="100" r="3"/>
+<text x="50" y="128" font-size="14">K4</text><text x="195" y="128" font-size="14">G</text><text x="335" y="128" font-size="14">G̅</text></g></svg>
+<figcaption>图（p.172）：\(K_4\)；\(G\)：四点左上、右上、左下、右下，边为 左下–左上、左上–右上、右上–右下（路 \(P_4\)）；\(\overline G\)：其余三条边 左上–右下、右上–左下、左下–右下。\(G\cup\overline G=K_4\)。</figcaption></figure>
+<div class="note"><b>笔记边注（p.172 右侧）</b> 一个含 \(K_4\) 的图 \(G\) → 其补图 \(\overline G\) 为 4 个孤立点：\(G\) 中的团在 \(\overline G\) 中变成独立集。</div>
+<div class="thm"><b>推论</b> 无向图 \(G\)：
+<ol>
+<li>\(\nu_0(G)=\beta_0(\overline G)\)；</li>
+<li>\(V^*\) 是 \(G\) 的极（最）大团 \(\Leftrightarrow\) \(V^*\) 是 \(\overline G\) 的极（最）大独立集。</li>
+</ol></div>
+<div class="fix"><b>校订说明（p.173）</b> 原式：p.173 顶部重抄第 (1) 条为"\(\nu_0(G)=\beta_0(G)\)"；正确式：\(\nu_0(G)=\beta_0(\overline G)\)；原因：p.172 已写为 \(\beta_0(\overline G)\)，团数等于补图的独立数，转页重抄时漏了补图横线。</div>
+
+<h3>点覆盖（集） <span class="pg">p.173</span></h3>
+<div class="def"><b>定义（点覆盖）</b> 在无向图 \(G=\langle V,E\rangle\) 中，\(V^*\subseteq V\)，若 \(\forall e\in E\)，\(\exists v\in V^*\)，\(v\) 关联 \(e\)，则称 \(V^*\) 为点覆盖（集）。</div>
+<div class="fix"><b>校订说明（p.173）</b> 原式：\(V^*\le V\)；正确式：\(V^*\subseteq V\)；原因：集合包含关系，书写简化。</div>
+<figure class="fig"><svg viewBox="0 0 240 190" role="img" aria-label="轮图，v1,v2,v3,v4红圈">
+<g stroke="currentColor" fill="none" stroke-width="2">
+<polygon points="70,25 150,25 190,95 150,165 70,165 30,95"/>
+<line x1="110" y1="95" x2="70" y2="25"/><line x1="110" y1="95" x2="150" y2="25"/><line x1="110" y1="95" x2="190" y2="95"/><line x1="110" y1="95" x2="150" y2="165"/><line x1="110" y1="95" x2="70" y2="165"/><line x1="110" y1="95" x2="30" y2="95"/></g>
+<g fill="currentColor"><circle cx="70" cy="25" r="3"/><circle cx="150" cy="25" r="3"/><circle cx="190" cy="95" r="3"/><circle cx="150" cy="165" r="3"/><circle cx="70" cy="165" r="3"/><circle cx="30" cy="95" r="3"/><circle cx="110" cy="95" r="3"/>
+<text x="55" y="15" font-size="14">v1</text><text x="198" y="100" font-size="14">v4</text><text x="115" y="85" font-size="14">v3</text><text x="45" y="185" font-size="14">v2</text><text x="200" y="180" font-size="14">G</text></g>
+<g fill="none" stroke="#d33" stroke-width="2"><circle cx="70" cy="25" r="9"/><circle cx="190" cy="95" r="9"/><circle cx="110" cy="95" r="9"/><circle cx="70" cy="165" r="9"/></g></svg>
+<figcaption>图 G（p.173 eg）：同 p.171 的轮图（中心 + 六边形）。\(v_1\) 左上、\(v_2\) 左下、\(v_4\) 右、\(v_3\) 为中心，四点红圈；原页每条边上画红色双短线表示已被覆盖。</figcaption></figure>
+<div class="example"><b>例</b> \(\{v_1,v_2,v_3,v_4\}\) 为点覆盖，\(\alpha_0(G)=4\)。</div>
+<div class="def"><b>定义</b>
+<ul>
+<li><b>极小点覆盖</b>：真子集都不是点覆盖的点覆盖。</li>
+<li><b>最小点覆盖</b>：顶点数最少的点覆盖。</li>
+<li><b>点覆盖数</b>：\(\alpha_0(G)=\) 最小点覆盖的顶点数。</li>
+</ul></div>
+<div class="supp"><b>补充讲解</b> 原页三条只写了名称，释义为补出。\(\alpha_0=4\) 的理由：外圈 6-圈至少要 3 个点覆盖；若不取中心，6 条辐条要求 6 个外点全取；取中心再加 3 个间隔外点，最少 4 个。</div>
+
+<h3>定理 2：\(\gamma_0\le\alpha_0\) <span class="pg">p.173–174</span></h3>
+<div class="thm"><b>定理 2</b> 1) 无孤立点图中，点覆盖为支配集，故
+\[\gamma_0\le\alpha_0\quad(\text{支配数}\le\text{点覆盖数}).\]</div>
+<figure class="fig"><svg viewBox="0 0 480 200" role="img" aria-label="两个轮图：左图红圈三点，右图红圈四点黄标三点">
+<g stroke="currentColor" fill="none" stroke-width="2">
+<polygon points="60,25 140,25 180,95 140,165 60,165 20,95"/>
+<line x1="100" y1="95" x2="60" y2="25"/><line x1="100" y1="95" x2="140" y2="25"/><line x1="100" y1="95" x2="180" y2="95"/><line x1="100" y1="95" x2="140" y2="165"/><line x1="100" y1="95" x2="60" y2="165"/><line x1="100" y1="95" x2="20" y2="95"/>
+<polygon points="320,25 400,25 440,95 400,165 320,165 280,95"/>
+<line x1="360" y1="95" x2="320" y2="25"/><line x1="360" y1="95" x2="400" y2="25"/><line x1="360" y1="95" x2="440" y2="95"/><line x1="360" y1="95" x2="400" y2="165"/><line x1="360" y1="95" x2="320" y2="165"/><line x1="360" y1="95" x2="280" y2="95"/></g>
+<g fill="none" stroke="#d33" stroke-width="2"><circle cx="60" cy="25" r="9"/><circle cx="180" cy="95" r="9"/><circle cx="60" cy="165" r="9"/>
+<circle cx="320" cy="25" r="9"/><circle cx="360" cy="95" r="9"/><circle cx="440" cy="95" r="9"/><circle cx="320" cy="165" r="9"/><rect x="255" y="5" width="210" height="175"/></g>
+<g fill="#e6c800"><circle cx="400" cy="25" r="7"/><circle cx="280" cy="95" r="7"/><circle cx="400" cy="165" r="7"/></g>
+<g fill="currentColor"><text x="70" y="195" font-size="14">γ0=3</text><text x="210" y="195" font-size="14">≤</text><text x="330" y="195" font-size="14">α0=4</text></g></svg>
+<figcaption>图（p.174 eg）：两个与 p.173 相同的轮图。左图红圈左上、右、左下三个外顶点，下写 \(\gamma_0=3\)；右图（红框）红圈左上、中心、右、左下四点（点覆盖），黄色标出右上、左、右下三点（即补集，独立集），下写 \(\alpha_0=4\)；两者之间写"\(\le\)"。</figcaption></figure>
+<div class="fix"><b>校订说明（p.174）</b> 原式：\(\gamma_0=3\)；正确式：该轮图 \(\gamma_0=1\)（中心点与其余 6 点都相邻，单独构成支配集）；原因：左图红圈的三个间隔外顶点确实是支配集（也是 p.171 的最大独立集，\(\beta_0=3\)），但不是最小支配集。\(\gamma_0\le\alpha_0\) 的结论不受影响（\(1\le4\)）。</div>
+
+<h3>定理 3：点覆盖与独立集互补 <span class="pg">p.174</span></h3>
+<div class="thm"><b>定理 3</b>（原页红框）无向图 \(G\) 无孤立点，\(V^*\subset V\)：
+\[V^*\ \text{是点覆盖}\ \Leftrightarrow\ V-V^*\ \text{是独立集}.\]</div>
+<div class="thm"><b>推论</b> 无向图 \(G\) 无孤立点：\(V^*\) 是极（最）小点覆盖 \(\Leftrightarrow\) \(V-V^*\) 是极（最）大独立集。从而
+\[\alpha_0+\beta_0=n.\]</div>
+<div class="supp"><b>补充讲解</b> 证明思路：\(V-V^*\) 中两点若相邻，这条边两端都不在 \(V^*\) 中，未被覆盖；反之亦然。p.174 右图验证：\(\alpha_0+\beta_0=4+3=7=n\)。</div>
+
+<h3>四个参数小结 \(\alpha_0,\beta_0,\gamma_0,\nu_0\) <span class="pg">p.174</span></h3>
+<div class="tbl"><table><thead><tr><th>集合</th><th>参数</th></tr></thead><tbody>
+<tr><td>支配集</td><td>支配数 \(\gamma_0\)</td></tr>
+<tr><td>独立集</td><td>点独立数 \(\beta_0\)</td></tr>
+<tr><td>团</td><td>团数 \(\nu_0\)</td></tr>
+<tr><td>点覆盖</td><td>点覆盖数 \(\alpha_0\)</td></tr>
+</tbody></table></div>
+<div class="note"><b>笔记边注</b> 独立集、团、点覆盖三行用括号括起，旁注"难解"（求这些参数没有已知的高效算法）。</div>
+<div class="summary"><b>总结</b> 无孤立点的无向图 \(G\)：
+\[\begin{aligned}&amp;\gamma_0\le\beta_0,\\ &amp;\gamma_0\le\alpha_0,\\ &amp;\alpha_0+\beta_0=n,\\ &amp;\nu_0(G)=\beta_0(\overline G).\end{aligned}\]</div>

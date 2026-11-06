@@ -1,0 +1,32 @@
+[
+ {
+  "page": 131,
+  "status": "transcribed",
+  "note": "生成树、树枝、弦、余树定义及示例图；定理1、定理2、定理3开头"
+ },
+ {
+  "page": 132,
+  "status": "transcribed",
+  "note": "定理3、定理4、定理5；基本回路、基本回路系统、圈秩及示例"
+ },
+ {
+  "page": 133,
+  "status": "transcribed",
+  "note": "基本回路例续、圈秩=2；定理a及三个割集图示；基本割集开头"
+ },
+ {
+  "page": 134,
+  "status": "partial",
+  "note": "基本割集系统、割集秩、大例题（含S_e笔误fix）；生成树计数开头；⑥标题右侧括号内二字不可辨"
+ },
+ {
+  "page": 135,
+  "status": "transcribed",
+  "note": "定理b删除-收缩公式，两道递推例题（4与8）；定理c开头"
+ },
+ {
+  "page": 136,
+  "status": "transcribed",
+  "note": "Cayley公式 τ(K_n)=n^{n-2}，其余空白"
+ }
+]

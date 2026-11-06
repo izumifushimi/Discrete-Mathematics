@@ -1,0 +1,93 @@
+[
+ {
+  "type": "fill",
+  "q": "\\(A=\\{1,2,3\\}\\)，\\(R=\\{\\langle1,2\\rangle,\\langle2,1\\rangle,\\langle1,3\\rangle\\}\\)，\\(M(R)\\) 中 1 的个数为 ____",
+  "answer": [
+   "3",
+   "三"
+  ],
+  "why": "每个有序对对应矩阵中一个 1。"
+ },
+ {
+  "type": "choice",
+  "q": "\\(M(R^{-1})\\) 与 \\(M(R)\\) 的关系是",
+  "options": [
+   "相等",
+   "互为转置",
+   "互为逆矩阵",
+   "各元素取反"
+  ],
+  "answer": 1,
+  "why": "交换有序对两分量相当于交换行列下标。"
+ },
+ {
+  "type": "fill",
+  "q": "布尔乘积 \\(\\begin{bmatrix}1&0\\\\1&1\\end{bmatrix}\\cdot\\begin{bmatrix}0&1\\\\1&0\\end{bmatrix}\\) 的第 2 行为 ____（两个数字连写）",
+  "answer": [
+   "11",
+   "1 1",
+   "1,1"
+  ],
+  "why": "第 2 行 (1,1)：\\((1\\land0)\\lor(1\\land1)=1\\)，\\((1\\land1)\\lor(1\\land0)=1\\)。"
+ },
+ {
+  "type": "choice",
+  "q": "\\(A=\\{1,2,3\\}\\) 上的 \\(R=\\{\\langle1,1\\rangle,\\langle1,2\\rangle\\}\\) 是",
+  "options": [
+   "自反",
+   "反自反",
+   "既非自反也非反自反",
+   "既自反又反自反"
+  ],
+  "answer": 2,
+  "why": "有 1 的环，不是反自反；缺 2、3 的环，不是自反。"
+ },
+ {
+  "type": "choice",
+  "q": "空关系 \\(\\emptyset\\)（\\(A\\ne\\emptyset\\)）具有的性质是",
+  "options": [
+   "自反、对称",
+   "反自反、对称、反对称、传递",
+   "只有传递",
+   "自反、反对称"
+  ],
+  "answer": 1,
+  "why": "没有环所以反自反；条件中前件恒假，所以对称、反对称、传递都成立。"
+ },
+ {
+  "type": "choice",
+  "q": "\\(R=\\{\\langle1,2\\rangle,\\langle2,1\\rangle\\}\\)（\\(A=\\{1,2\\}\\)）是否传递？",
+  "options": [
+   "传递",
+   "不传递，因为缺 \\(\\langle1,1\rangle\\) 与 \\(\\langle2,2\rangle\\)",
+   "不传递，因为缺 \\(\\langle1,3\rangle\\)",
+   "无法判断"
+  ],
+  "answer": 1,
+  "why": "\\(1R2\\land2R1\\) 要求 \\(1R1\\)，但 \\(\\langle1,1\\rangle\\notin R\\)。对应笔记 p.30 右侧“非传递”图。"
+ },
+ {
+  "type": "choice",
+  "q": "\\(\\mathbb{N}\\) 上的 \\(\\lt\\) 不具有的性质是",
+  "options": [
+   "反自反",
+   "反对称",
+   "传递",
+   "对称"
+  ],
+  "answer": 3,
+  "why": "3<4 但 4<3 不成立。"
+ },
+ {
+  "type": "choice",
+  "q": "\\(R_1=\\{\\langle a,a\\rangle,\\langle a,b\\rangle,\\langle b,c\\rangle,\\langle a,c\\rangle\\}\\) 在 \\(\\{a,b,c\\}\\) 上的性质为",
+  "options": [
+   "自反、反对称、传递",
+   "非自反、反对称、传递",
+   "反自反、对称、传递",
+   "非自反、对称、不传递"
+  ],
+  "answer": 1,
+  "why": "b、c 无环；无双向边；a→b→c 有 a→c。"
+ }
+]

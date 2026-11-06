@@ -1,0 +1,35 @@
+<h3>半群、独异点、群 <span class="pg">p.207</span></h3>
+<div class="def"><b>定义 ①</b>（\(\circ\) 为二元运算）
+<br>\(V=\langle S,\circ\rangle\)：\(\circ\) 可结合 \(\to\) <b>半群</b>；
+<br>\(\Downarrow\)
+<br>\(V=\langle S,\circ,e\rangle\)：\(\circ\) 可结合，存在单位元 \(e\) \(\to\) <b>独异点</b>；
+<br>\(\Downarrow\)
+<br>\(V=\langle S,\circ,{}^{-1},e\rangle\)：\(\circ\) 可结合，存在单位元 \(e\)，\(\forall a\in S\)，\(a^{-1}\in S\)（一定存在逆元）\(\to\) <b>群</b>（打星号）。</div>
+<div class="note"><b>笔记边注</b> 对 \(+\)：\(e=0\)，\(0+x=x\)。</div>
+
+<div class="example"><b>例</b> \(\langle\mathbb{N}^+,+\rangle,\ \langle\mathbb{N},+\rangle,\ \langle\mathbb{Z},+\rangle,\ \langle\mathbb{Q},+\rangle,\ \langle\mathbb{R},+\rangle,\ \langle\mathbb{C},+\rangle\) 都是半群。
+<br>其中 \(\langle\mathbb{N}^+,+\rangle\) 打 ×（不是独异点）；\(\langle\mathbb{N},+\rangle,\ \langle\mathbb{Z},+\rangle,\ \langle\mathbb{Q},+\rangle,\ \langle\mathbb{R},+\rangle,\ \langle\mathbb{C},+\rangle\) 是独异点；
+<br>\(\langle\mathbb{Z},+\rangle,\ \langle\mathbb{Q},+\rangle,\ \langle\mathbb{R},+\rangle,\ \langle\mathbb{C},+\rangle\)（红框）是群：整数加群 —— 后三个名称留空线未写。</div>
+<div class="supp"><b>补充讲解</b> \(\mathbb{N}^+\) 中无 0，没有加法单位元；\(\mathbb{N}\) 有 0，但除 0 外无相反数，故不是群。留空的三个依次为有理数加群、实数加群、复数加群。</div>
+
+<h3>定理1 <span class="pg">p.207</span></h3>
+<div class="thm"><b>定理 ②（定理1）</b> \(\langle G,\circ\rangle\)，\(\circ\) 可结合，若存在右单位元 \(e\)（\(a\circ e=a\)），且每个元素 \(a\) 相对于 \(e\) 存在右逆元（\(a\circ a^{-1}=e\)），则 \(G\) 为群。</div>
+
+<h3>群的阶与分类 <span class="pg">p.207–208</span></h3>
+<div class="def"><b>定义 ③</b>
+<br>（1）有限群／无限群 —— \(G\) 的基数为群 \(G\) 的阶。有限群 \(G\)，\(|G|=r\)。
+<br>（2）只含单位元的群：平凡群。
+<br>（3）若群 \(\langle G,\circ\rangle\) 中 \(\circ\) 二元运算可交换 \(a\circ b=b\circ a\)，则群 \(G\) 为交换群（阿贝尔群）。
+<br>（4）设 \(G\) 是群，\(a\in G\)，\(n\in\mathbb{Z}\)，\(a\) 的 \(n\) 次幂：
+\[a^n=\begin{cases}e, & n=0\\ a^{n-1}a, & n\gt 0\\ (a^{-1})^{-n}, & n\lt 0\end{cases}\]
+三行各打红勾。</div>
+<div class="note"><b>笔记边注</b> \(n\lt 0\) 时：\(a^n=a^{-1\cdot(-n)}=(a^{-1})^{-n}\)。</div>
+
+<h3>幂运算 <span class="pg">p.208</span></h3>
+<div class="thm"><b>性质</b>
+<br>（1）\(\forall a\in G\)，\((a^{-1})^{-1}=a\)；
+<br>（2）\(\forall a,b\in G\)，\((ab)^{-1}=b^{-1}a^{-1}\)；
+<br>（3）\(\forall a\in G\)，\(a^na^m=a^{n+m}\)，\(n,m\in\mathbb{Z}\)；
+<br>（4）\(\forall a\in G\)，\((a^n)^m=a^{nm}\)，\(n,m\in\mathbb{Z}\)（红线）；
+<br>（5）若 \(G\) 为阿贝尔群，则 \((ab)^n=a^nb^n\)。</div>
+<div class="warn"><b>易错提醒</b> \((ab)^{-1}=b^{-1}a^{-1}\)，次序要反过来；\((ab)^n=a^nb^n\) 只在交换群中一般成立。</div>

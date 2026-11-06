@@ -1,0 +1,9 @@
+[
+  {"type":"choice","q":"格 \\(\\langle L,\\preccurlyeq\\rangle\\) 中运算 \\(\\lor,\\land\\) 不一定满足下列哪条运算律？","options":["交换律","吸收律","分配律","幂等律"],"answer":2,"why":"定理 1 只保证交换、结合、幂等、吸收四条运算律；分配律只在分配格中成立。"},
+  {"type":"choice","q":"用代数系统 \\(\\langle S,*,\\circ\\rangle\\) 定义格时，笔记要求两个运算满足哪几条运算律？","options":["交换律、结合律、幂等律","交换律、结合律、吸收律","结合律、分配律、吸收律","交换律、分配律、同一律"],"answer":1,"why":"代数定义只要求交换律、结合律、吸收律，幂等律可由吸收律推出。"},
+  {"type":"fill","q":"在格 \\(L\\) 中，\\(a\\preccurlyeq b\\iff a\\land b=\\) ____。","answer":["a"],"why":"定理 3：\\(a\\preccurlyeq b\\iff a\\land b=a\\iff a\\lor b=b\\)。"},
+  {"type":"fill","q":"在格 \\(L\\) 中，\\(a\\preccurlyeq b\\iff a\\lor b=\\) ____。","answer":["b"],"why":"定理 3。"},
+  {"type":"choice","q":"格 \\(L\\) 中 \\(a\\preccurlyeq b,\\ c\\preccurlyeq d\\)，下列一定成立的是","options":["\\(a\\land d\\preccurlyeq b\\land c\\)","\\(a\\lor c\\preccurlyeq b\\lor d\\)","\\(a\\lor c=b\\lor d\\)","\\(b\\land d\\preccurlyeq a\\land c\\)"],"answer":1,"why":"定理 4（保序性）：\\(a\\land c\\preccurlyeq b\\land d\\)，\\(a\\lor c\\preccurlyeq b\\lor d\\)；一般不取等号。"},
+  {"type":"choice","q":"菱形格 \\(L=\\{0,a,b,1\\}\\)（\\(a,b\\) 不可比）中，下列哪个子集是子格？","options":["\\(\\{a,b\\}\\)","\\(\\{a,b,1\\}\\)","\\(\\{0,a,b\\}\\)","\\(\\{0,a,1\\}\\)"],"answer":3,"why":"\\(\\{0,a,1\\}\\) 是链，对 \\(\\land,\\lor\\) 封闭；其余集合都含 \\(a,b\\)，而 \\(a\\land b=0\\)、\\(a\\lor b=1\\) 至少有一个不在集合中。"},
+  {"type":"fill","q":"格中由吸收律推出幂等律：\\(a\\lor a=a\\lor(a\\land(a\\lor ____))=a\\)。空处填一个元素。","answer":["a"],"why":"由吸收律 \\(a\\land(a\\lor a)=a\\)，代入后再用 \\(a\\lor(a\\land x)=a\\)。"}
+]

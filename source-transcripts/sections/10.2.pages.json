@@ -1,0 +1,6 @@
+[
+ {"page":151,"status":"transcribed","note":"欧拉公式及例（n=7,m=11,r=6）、推广式 n-m+r=1+p、定理1 m≤(n-2)l/(l-2) 及证明、引理1 开头"},
+ {"page":152,"status":"transcribed","note":"引理1（漏写除号，fix）、K5 与 K3,3 非平面判定例、Jordan 定理及示意图、定理3 开头"},
+ {"page":153,"status":"partial","note":"定理3 m≤3n-6、推论、定理4 δ(G)≤5、同胚（英文拼写 fix）；中下部同胚示例第3、4图边集与下方红色符号待核对"},
+ {"page":154,"status":"transcribed","note":"Kuratowski 定理两种表述、彼得森图经子图/同胚得 K3,3、收缩得 K5"}
+]

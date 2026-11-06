@@ -1,0 +1,83 @@
+<p>笔记日期：2025年6月13日 12:06。</p>
+<h3>n 元关系 <span class="pg">p.24</span></h3>
+<div class="def"><b>① n 元关系</b> 元素全是 \(n\) 元组的集合称为 \(n\) 元关系。
+\[F_1=\{\langle a,b,c,d\rangle,\langle 1,2,3,4\rangle\}\quad\text{4 元关系（元素为 4 元组）}\]
+\[F_2=\{\langle a,b,c\rangle,\langle 1,2,3\rangle\}\quad\text{3 元关系（元素为 3 元组）}\]</div>
+<div class="note"><b>笔记边注</b> \(F_1\) 的元素 \(\langle a,b,c,d\rangle\) 下画波浪线；右侧写“4元关系 / 4元组”“3元关系 / 3元组”，并在“4元关系”“3元关系”下画线。</div>
+
+<h3>二元关系及其记法 <span class="pg">p.24</span></h3>
+<div class="def"><b>② 2 元关系</b> 例如 \(F=\{\langle1,2\rangle,\langle a,b\rangle,\langle\alpha,\beta\rangle\}\) 是 2 元关系。若 \(\langle x,y\rangle\in F\)，有三种记法：
+<div class="tbl"><table><thead><tr><th>记法</th><th>位置</th><th>以“\(\lt\)”为例</th></tr></thead><tbody>
+<tr><td>\(xFy\)</td><td>中（中缀）</td><td>\(1\lt 2\)</td></tr>
+<tr><td>\(F(x,y)\)，\(Fxy\)</td><td>前（前缀）</td><td>\(\lt(1,2)\)</td></tr>
+<tr><td>\(\langle x,y\rangle\in F\)，\(xyF\)</td><td>后（后缀）</td><td>\(\langle 1,2\rangle\in\ \lt\)</td></tr>
+</tbody></table></div></div>
+<div class="note"><b>笔记边注</b> \(\langle x,y\rangle\in F\) 下画波浪线；\(xFy\) 中 \(F\) 下标 △；\(F(x,y)\)、\(Fxy\) 下画线；三种记法用大括号括起。</div>
+
+<h3>从 A 到 B 的二元关系 <span class="pg">p.24–25</span></h3>
+<div class="def"><b>③</b> 若 \(\langle x,y\rangle\in R\)，\(x\in A\)，\(y\in B\)，则称 \(R\) 为 <b>A 到 B 的二元关系</b>。此时 \(\langle x,y\rangle\in(A\times B)\)，即
+\[R\subseteq A\times B\]</div>
+<div class="note"><b>笔记边注</b> “A到B的二元关系为R”整句下画线，A、B 下各标 △；\(\langle x,y\rangle\) 下画波浪线，\((A\times B)\) 被圈出并画双横线。</div>
+<figure class="fig"><svg viewBox="0 0 260 150" role="img" aria-label="大椭圆A×B内含小椭圆R"><ellipse cx="130" cy="75" rx="120" ry="65" stroke="currentColor" fill="none" stroke-width="1.5"/><ellipse cx="150" cy="85" rx="55" ry="40" stroke="currentColor" fill="none" stroke-width="1.5"/><text x="70" y="35" font-size="14" fill="currentColor">A×B</text><text x="143" y="90" font-size="14" fill="currentColor">R</text></svg><figcaption>图：p.24 右下的包含示意图，大椭圆标 \(A\times B\)，其内部的小椭圆标 \(R\)，表示 \(R\subseteq A\times B\)。</figcaption></figure>
+<div class="example"><b>例</b> \(A=\{a_1,a_2\}\)，\(B=\{b\}\)，写出从 \(A\) 到 \(B\) 的所有二元关系。
+<b>解</b> \(A\times B=\{\langle a_1,b\rangle,\langle a_2,b\rangle\}\)，它的子集共 \(2^2=4\) 个：
+\[R_1=\emptyset,\quad R_2=\{\langle a_1,b\rangle\},\quad R_3=\{\langle a_2,b\rangle\},\quad R_4=\{\langle a_1,b\rangle,\langle a_2,b\rangle\}\]
+<b>结论</b> 共 4 个二元关系。（\(a_1\)、\(b\) 下标 △。）</div>
+<div class="note"><b>页面说明</b> p.24 页底有一行被页面边界截断的笔画（仅见几个点和右括号），其内容在 p.25 顶部重写为本例题目，未丢失信息。</div>
+
+<h3>特殊关系 <span class="pg">p.25</span></h3>
+<div class="def"><b>④ 特殊关系</b>（\(x\in A\)，从 \(A\) 到 \(A\)，即 \(A\) 上的关系）
+<br>空关系：\(\emptyset\)
+<br>恒等关系：\(I_A=\{\langle x,x\rangle\mid x\in A\}\)
+<br>全域关系：\(E_A=A\times A=\{\langle x,y\rangle\mid x\in A\land y\in A\}\)</div>
+<div class="supp"><b>补充讲解</b> 若 \(|A|=n\)，则 \(A\times A\) 有 \(n^2\) 个元素，\(A\) 上的二元关系共有 \(2^{n^2}\) 个；\(A\) 到 \(B\)（\(|B|=m\)）的关系共有 \(2^{nm}\) 个，上例即 \(2^{2\cdot1}=4\)。</div>
+
+<h3>定义域、值域、域 <span class="pg">p.25</span></h3>
+<div class="def"><b>⑤</b> 对任意集合（二元关系）\(R\)：
+<br>定义域（domain）：\(\mathrm{dom}\,R=\{x\mid\exists y\,(xRy)\}\)
+<br>值域（range）：\(\mathrm{ran}\,R=\{y\mid\exists x\,(xRy)\}\)
+<br>域（field）：\(\mathrm{fld}\,R=\mathrm{dom}\,R\cup\mathrm{ran}\,R\)</div>
+<div class="example"><b>例</b> \(R_1=\{\langle1,2\rangle,\langle3,4\rangle\}\)。
+<b>解</b> 第一分量 1、3（下标 △），第二分量 2、4（下标 δ 形记号）：
+\[\mathrm{dom}\,R_1=\{1,3\},\quad \mathrm{ran}\,R_1=\{2,4\},\quad \mathrm{fld}\,R_1=\{1,2,3,4\}\]</div>
+<div class="note"><b>笔记边注</b> 原页值域写作“ran R”，漏写下标 1，指的就是 \(R_1\)。</div>
+
+<h3>逆关系 <span class="pg">p.25–26</span></h3>
+<div class="def"><b>⑥ 逆（inverse）</b> \(F\) 为二元关系，
+\[F^{-1}=\{\langle x,y\rangle\mid yFx\}\]（\(yFx\) 下画线）</div>
+<div class="example"><b>例</b> \(R_1=\{\langle1,2\rangle,\langle3,4\rangle\}\)，求 \(R_1^{-1}\)。
+<b>解</b> 每个有序对交换两分量：\(R_1^{-1}=\{\langle2,1\rangle,\langle4,3\rangle\}\)。</div>
+
+<h3>复合（合成） <span class="pg">p.26</span></h3>
+<div class="def"><b>⑦ 复合（composite）</b> \(F,G\) 为二元关系，
+\[F\circ G=\{\langle x,y\rangle\mid\exists z\,(xGz\land zFy)\}\quad\text{逆序合成}\]
+（\(G\) 下标 △：先走 \(G\)，再走 \(F\)。）</div>
+<div class="example"><b>例</b>（方框内，标五角星，右侧注“顺序合成”）\(R_1=\{\langle1,2\rangle,\langle3,4\rangle\}\)，\(R_2=\{\langle2,5\rangle,\langle7,8\rangle\}\)，求 \(R_1\circ R_2\)、\(R_2\circ R_1\)。
+<b>解</b> 按顺序合成 \(x R_1 z\land z R_2 y\)：\(\langle1,2\rangle\in R_1\)、\(\langle2,5\rangle\in R_2\)，得 \(\langle1,5\rangle\)；\(\langle3,4\rangle\) 找不到以 4 开头的 \(R_2\) 元素。
+\[R_1\circ R_2=\{\langle1,5\rangle\}\]
+\(R_2\circ R_1\)：需 \(xR_2z\land zR_1y\)，\(R_2\) 的第二分量 5、8 都不是 \(R_1\) 的第一分量，
+\[R_2\circ R_1=\emptyset\]
+<b>结论</b> 一般 \(R_1\circ R_2\ne R_2\circ R_1\)。（原笔记在 1、2、3 下有小标记。）</div>
+<div class="thm"><b>两种约定</b>（大括号）
+\[F\circ G=\{\langle x,y\rangle\mid\exists z\,(xFz\land zGy)\}\quad\text{顺序合成 ☆}\]
+\[F\circ G=\{\langle x,y\rangle\mid\exists z\,(xGz\land zFy)\}\quad\text{逆序合成}\]</div>
+<div class="warn"><b>易错提醒</b> 定义⑦写的是逆序合成，而例题按顺序合成计算（方框旁已注明）。按逆序约定，同一题会得到 \(R_1\circ R_2=\emptyset\)，\(R_2\circ R_1=\{\langle1,5\rangle\}\)。做题前先看清用的是哪种约定，“顺序合成”旁标了五角星。</div>
+
+<h3>限制与象 <span class="pg">p.26</span></h3>
+<div class="def"><b>⑧ 限制、象</b>
+<br>限制（restriction）：\(F\) 为二元关系，\(A\) 为集合，
+\[F\restriction A=\{\langle x,y\rangle\mid xFy\land x\in A\}\]
+象（image）：
+\[F[A]=\mathrm{ran}\,(F\restriction A)\]</div>
+<div class="note"><b>笔记边注</b> “\(F\) 二元关系”下画波浪线，上方小字写“\(B\to C\)”，表示 \(F\) 是从 \(B\) 到 \(C\) 的关系；\(x\in A\) 下画波浪线，强调只限制第一分量。</div>
+<div class="supp"><b>补充讲解</b> 例：\(F=\{\langle1,2\rangle,\langle2,3\rangle,\langle3,4\rangle\}\)，\(A=\{1,2\}\)，则 \(F\restriction A=\{\langle1,2\rangle,\langle2,3\rangle\}\)，\(F[A]=\{2,3\}\)。</div>
+
+<h3>单根与单值 <span class="pg">p.26–27</span></h3>
+<div class="def"><b>⑨ 单根 / 单值</b>
+\[F\text{ 为单根}\Leftrightarrow(\forall y\in\mathrm{ran}\,F)(\exists!\,x\in\mathrm{dom}\,F)(xFy)\]
+（p.27 顶部重抄此式。）</div>
+<div class="tbl"><table><thead><tr><th></th><th>1 对多</th><th>多对 1</th></tr></thead><tbody>
+<tr><td>单根</td><td>允许（圈出），例 \(\langle1,2\rangle,\langle1,3\rangle\)</td><td>不允许（打叉）</td></tr>
+<tr><td>单值</td><td>不允许（打叉）</td><td>允许（圈出），例 \(\langle2,1\rangle,\langle3,1\rangle\)</td></tr>
+</tbody></table></div>
+<div class="supp"><b>补充讲解</b> 原页未写单值的公式，对应写法为 \(F\text{ 为单值}\Leftrightarrow(\forall x\in\mathrm{dom}\,F)(\exists!\,y\in\mathrm{ran}\,F)(xFy)\)。单值关系就是函数；\(F\) 单根当且仅当 \(F^{-1}\) 单值。</div>

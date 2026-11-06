@@ -1,0 +1,142 @@
+<div class="note"><b>笔记边注</b> 小节标题“5.3 基数和基数的比较与运算”，日期 2025年7月22日 5:27。</div>
+
+<h3>① 基数的定义 <span class="pg">p.69</span></h3>
+<div class="def"><b>定义（基数）</b>
+<p>1) \(A\approx B\Leftrightarrow \operatorname{card}A=\operatorname{card}B\)；</p>
+<p>2) \(A\approx n\)（有穷集 \(A\)）\(\Leftrightarrow \operatorname{card}A=n\)；</p>
+<p>3) \(\operatorname{card}\mathbb{N}=\aleph_0\)；</p>
+<p>4) \(\operatorname{card}\mathbb{R}=\aleph_1=\aleph\)；</p>
+<p>5) \(\underbrace{0,1,2,\cdots}_{\text{有穷基数}}\ \underbrace{\aleph_0,\aleph}_{\text{无穷基数}}\) 为基数。</p>
+<p>若 \(\operatorname{card}A=\aleph_i\)，则 \(\operatorname{card}P(A)=\aleph_{i+1}\)。</p>
+<p>用 \(\kappa,\lambda,\mu\) 表示基数（任意）。</p></div>
+<div class="fix"><b>校订说明（p.69）</b> 原式：\(\operatorname{card}\mathbb{R}=\aleph_1=\aleph\)；正确式：\(\operatorname{card}\mathbb{R}=\aleph=2^{\aleph_0}\)；原因：\(\aleph_1\) 定义为紧接 \(\aleph_0\) 之后的基数，\(\aleph=\aleph_1\) 正是连续统假设（在常用公理系统中既不能证明也不能否定），不能当作定理。本节后文 p.73 推论也写的是 \(\aleph=2^{\aleph_0}\)。</div>
+<div class="fix"><b>校订说明（p.69）</b> 原式：若 \(\operatorname{card}A=\aleph_i\)，则 \(\operatorname{card}P(A)=\aleph_{i+1}\)；正确式：\(\operatorname{card}P(A)=2^{\aleph_i}\gt\aleph_i\)；原因：\(2^{\aleph_i}=\aleph_{i+1}\) 是广义连续统假设，不是可证的结论。可证的只有 \(\operatorname{card}A\lt\operatorname{card}P(A)\)（康托定理）。</div>
+
+<h3>② \(K_\kappa\) <span class="pg">p.69</span></h3>
+<div class="def"><b>定义</b> 设 \(\kappa\) 为任意基数，令
+\[K_\kappa=\{X\mid X\text{ 为集合且 }\operatorname{card}X=\kappa\}.\]
+当 \(\kappa=0\)，\(K_0=\{\emptyset\}\)，为集合；<br>
+当 \(\kappa\ne 0\)，\(K_\kappa\) 不是集合，是类。</div>
+<div class="note"><b>笔记边注</b> “\(K_\kappa\) 不是集合，是类”下画了双波浪线；\(K_\kappa\) 定义式下画横线。</div>
+<div class="supp"><b>补充讲解</b> \(\kappa\ne0\) 时，任取一个基数为 \(\kappa\) 的集合 \(X\)，把其中一个元素换成任意对象 \(y\) 都还得到 \(K_\kappa\) 的成员，这样的集合“多到”不能构成集合（否则其并集包含一切集合，引出悖论），所以只能称为类。</div>
+
+<h3>③ 例题 <span class="pg">p.69–70</span></h3>
+<div class="example"><b>例 (1)</b> \(A=\{a,b,c\}\)，\(B=\{\{a\},\{b\},\{c\}\}\)。
+<b>结论</b> \(\operatorname{card}A=\operatorname{card}B=3\)。</div>
+<div class="example"><b>例 (2)</b> \(\mathbb{N}_{偶}\)，\(\mathbb{N}_{奇}\)。
+<b>结论</b> \(\operatorname{card}\mathbb{N}_{偶}=\operatorname{card}\mathbb{N}_{奇}=\aleph_0\)。</div>
+<div class="example"><b>例 (3)</b> \([0,1]\)，\((0,1)\)。
+<b>解</b> \([0,1]\approx(0,1)\approx\mathbb{R}\)。
+<b>结论</b> \(\operatorname{card}[0,1]=\operatorname{card}(0,1)=\aleph\)。</div>
+
+<h3>④ 优势与劣势 <span class="pg">p.70</span></h3>
+<div class="def"><b>定义（优势/劣势）</b>
+\[\begin{aligned}&B\text{ 比 }A\text{ 优势}\\ \Leftrightarrow\ &A\text{ 比 }B\text{ 劣势}\\ \Leftrightarrow\ &A\preccurlyeq\!\cdot\, B\\ \Leftrightarrow\ &\exists f:A\to B\text{ 单射}\end{aligned}\]</div>
+<figure class="fig"><svg viewBox="0 0 260 180" role="img" aria-label="A到B的单射示意">
+<defs><marker id="a53" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0L10,5L0,10z" fill="currentColor"/></marker></defs>
+<g stroke="currentColor" fill="none" stroke-width="2">
+<ellipse cx="50" cy="65" rx="35" ry="50"/>
+<path d="M150 20 Q205 10 205 60 Q205 160 175 170 Q145 160 145 60 Q145 20 150 20z"/>
+<line x1="60" y1="30" x2="170" y2="30" marker-end="url(#a53)"/>
+<line x1="60" y1="55" x2="170" y2="55" marker-end="url(#a53)"/>
+<line x1="60" y1="80" x2="170" y2="80" marker-end="url(#a53)"/>
+<line x1="60" y1="100" x2="170" y2="100" marker-end="url(#a53)"/>
+<line x1="150" y1="115" x2="200" y2="115"/>
+<g stroke-width="1"><line x1="155" y1="140" x2="175" y2="120"/><line x1="160" y1="155" x2="190" y2="125"/><line x1="170" y1="162" x2="198" y2="135"/></g>
+</g>
+<g fill="currentColor" font-size="14"><text x="40" y="20">A</text><text x="185" y="35">B</text></g>
+</svg><figcaption>图（p.70 右侧）：\(A\) 的元素用箭头一一映入 \(B\)（单射），\(B\) 下部有一块（原图红色阴影、涂黑的点）没有被映到，表示 \(B\) 中可能有多出来的元素。</figcaption></figure>
+
+<div class="def"><b>定义（绝对优势/绝对劣势，原笔记写法）</b>
+\[\begin{aligned}&B\text{ 比 }A\text{ 绝对劣势}\\ \Leftrightarrow\ &A\text{ 比 }B\text{ 绝对优势}\\ \Leftrightarrow\ &A\prec\!\cdot\, B\\ \Leftrightarrow\ &A\preccurlyeq\!\cdot\, B\land A\not\approx B\end{aligned}\]</div>
+<div class="fix"><b>校订说明（p.70）</b> 原式：“\(B\) 比 \(A\) 绝对劣势 \(\Leftrightarrow\) \(A\) 比 \(B\) 绝对优势 \(\Leftrightarrow A\prec\!\cdot\,B\)”；正确式：“\(B\) 比 \(A\) 绝对优势 \(\Leftrightarrow\) \(A\) 比 \(B\) 绝对劣势 \(\Leftrightarrow A\prec\!\cdot\,B\)”；原因：\(A\prec\!\cdot\,B\) 表示 \(A\) 严格“小于” \(B\)，应与上面“\(B\) 比 \(A\) 优势 \(\Leftrightarrow A\preccurlyeq\!\cdot\,B\)”方向一致，原笔记把优势、劣势写反了。</div>
+
+<h3>⑤ 优势关系的性质 <span class="pg">p.70–71</span></h3>
+<div class="thm"><b>性质</b>
+<p>1) \(A\preccurlyeq\!\cdot\,B\Leftrightarrow\exists C\subseteq B\)，使得 \(A\approx C\)。</p>
+<p>2) 推论：\(A\subseteq B\Rightarrow A\preccurlyeq\!\cdot\,B\)；\(A\approx B\Rightarrow A\preccurlyeq\!\cdot\,B\land B\preccurlyeq\!\cdot\,A\)。</p>
+<p>3) \(A\preccurlyeq\!\cdot\,A\)（下画红线）；\(A\preccurlyeq\!\cdot\,B\land B\preccurlyeq\!\cdot\,C\Rightarrow A\preccurlyeq\!\cdot\,C\)。</p>
+<p>4) \(A\preccurlyeq\!\cdot\,B\land C\preccurlyeq\!\cdot\,D\Rightarrow\)<br>
+　(1) \(A\cup C\preccurlyeq\!\cdot\,B\cup D\)（\(B\cap D=\emptyset\)）；<br>
+　(2) \(A\times C\preccurlyeq\!\cdot\,B\times D\)。</p>
+<p>5) \(\operatorname{card}A=\operatorname{card}B=\kappa\land\operatorname{card}C=\operatorname{card}D=\lambda\Rightarrow\big(A\preccurlyeq\!\cdot\,C\longleftrightarrow B\preccurlyeq\!\cdot\,D\big)\)。</p></div>
+<div class="note"><b>笔记边注</b> 4)(1) 中 \(A,C,B,D\) 下各画小波浪线；5) 中两个条件下画波浪线，\(=\kappa\)、\(=\lambda\) 下画红线。</div>
+<div class="supp"><b>补充讲解</b> 5) 说明“\(\preccurlyeq\!\cdot\)”只与基数有关，与选哪个代表集合无关，所以才能用它来定义基数的大小（⑥）。4)(1) 中要求 \(B\cap D=\emptyset\)，是为了把单射 \(f:A\to B\)、\(g:C\to D\) 拼起来时像不会撞在一起。</div>
+
+<h3>⑥ 基数的比较 <span class="pg">p.71</span></h3>
+<div class="def"><b>定义</b> 设 \(\operatorname{card}A=\kappa\)，\(\operatorname{card}B=\lambda\)：
+\[\kappa\le\lambda\Leftrightarrow A\preccurlyeq\!\cdot\,B,\qquad \kappa\lt\lambda\Leftrightarrow A\prec\!\cdot\,B.\]
+\(\kappa\le\lambda\Rightarrow\exists A\subseteq B\)，\(\operatorname{card}A=\kappa\land\operatorname{card}B=\lambda\)。</div>
+\[\begin{cases}0\le\kappa\ (\kappa\text{ 任意})\\ n\lt\aleph_0\lt\aleph_1\ \cdots\end{cases}\qquad 0\lt1\lt2\lt3\ \cdots\]
+
+<h3>⑦ 基数比较的性质 <span class="pg">p.71–72</span></h3>
+<div class="thm"><b>性质</b>
+<p>(1) \(\operatorname{card}A\lt\operatorname{card}P(A)\)；</p>
+<p>(2) \(\kappa\le\kappa\)；\(\kappa\le\lambda\land\lambda\le\mu\Rightarrow\kappa\le\mu\)；</p>
+<p>(3) \(\begin{cases}\kappa\le\lambda\land\lambda\le\kappa\Rightarrow\kappa=\lambda\\ A\preccurlyeq\!\cdot\,B\land B\preccurlyeq\!\cdot\,A\Rightarrow A\approx B\ \text{☆}\end{cases}\)　Schröder–Bernstein 定理；</p>
+<p>(4) \(A\subseteq B\subseteq C\land A\approx C\Rightarrow A\approx B\approx C\)；</p>
+<p>(5) \(\mathbb{R}\approx(\mathbb{N}\to 2)=2^{\mathbb{N}}=\mathbb{N}\xrightarrow{f}\{0,1\}\)，即全体 \(f\) 函数的集合。</p></div>
+<div class="note"><b>笔记边注</b> (3) 第二行下画横线并标小星号，下面写“Schröder-Bernstein 定理”（原笔记写作 Schroder）。(5) 中 \((\mathbb{N}\to2)\) 下画波浪线。</div>
+<div class="supp"><b>补充讲解</b> (4) 可由 Schröder–Bernstein 定理得到：\(A\subseteq B\) 给出 \(A\preccurlyeq\!\cdot\,B\)；\(B\subseteq C\approx A\) 给出 \(B\preccurlyeq\!\cdot\,A\)，所以 \(A\approx B\)。例如 \((0,1)\subseteq[0,1]\subseteq\mathbb{R}\) 且 \((0,1)\approx\mathbb{R}\)，立即得 \([0,1]\approx\mathbb{R}\)。</div>
+
+<h3>⑧ 可数集 <span class="pg">p.72</span></h3>
+<div class="def"><b>定义</b>
+<p>可数集（可列集）：\(\operatorname{card}A\le\aleph_0\)；</p>
+<p>有穷可数集：\(n\)（\(\forall n\in\mathbb{N}\)）；</p>
+<p>无穷可数集：\(\mathbb{N},\mathbb{Q},\mathbb{Z},\cdots\)（\(\operatorname{card}A=\aleph_0\)）。</p></div>
+<div class="thm"><b>定理</b> \(A\) 为无穷集 \(\Rightarrow P(A)\) 不是可数集。</div>
+<div class="supp"><b>补充讲解</b> \(A\) 无穷时 \(\aleph_0\le\operatorname{card}A\lt\operatorname{card}P(A)\)，所以 \(\operatorname{card}P(A)\gt\aleph_0\)。</div>
+
+<h3>⑨ 基数运算的定义 <span class="pg">p.72–73</span></h3>
+<div class="def"><b>定义</b> 设 \(\kappa,\lambda\) 为基数，\(K,L\) 为集合，\(\operatorname{card}K=\kappa\)，\(\operatorname{card}L=\lambda\)。
+<p>(1) \(\kappa+\lambda=\operatorname{card}(K\cup L)\)，其中 \(K\cap L=\emptyset\)；</p>
+<p>(2) \(\kappa\times\lambda=\operatorname{card}(K\times L)=\kappa\lambda=\kappa\cdot\lambda\)；</p>
+<p>(3) \(\kappa^{\lambda}=\operatorname{card}(L\to K)\)。</p></div>
+<div class="warn"><b>易错提醒</b> 幂 \(\kappa^\lambda\) 是“从 \(L\) 到 \(K\)”的函数个数，指数对应定义域：\(\kappa^\lambda=\operatorname{card}(L\to K)\)，不要写成 \(K\to L\)。有穷时可验算：\(|L\to K|=|K|^{|L|}\)。</div>
+
+<h3>⑩ 幂集的基数 <span class="pg">p.73</span></h3>
+<div class="thm"><b>定理</b> (1) \(2^{\operatorname{card}A}=\operatorname{card}P(A)\)；(2) \(\kappa\lt2^{\kappa}\)。</div>
+<div class="thm"><b>推论</b> (1) \(\operatorname{card}P(\mathbb{N})=2^{\aleph_0}\)；(2) \(\operatorname{card}P(\mathbb{R})=2^{\aleph}\)；(3) \(\aleph=2^{\aleph_0}\)。
+\[\Downarrow\]
+\[\boxed{\mathbb{R}\approx P(\mathbb{N})}\ \text{☆}\]</div>
+<div class="note"><b>笔记边注</b> \(\mathbb{R}\approx P(\mathbb{N})\) 用红框框出，后标五角星，下方画两道红线。</div>
+
+<h3>⑪ 基数运算律 <span class="pg">p.73</span></h3>
+<div class="thm"><b>性质</b> 设 \(\kappa,\lambda,\mu\) 为基数：
+<p>(1) \(\kappa+\lambda=\lambda+\kappa\)；</p>
+<p>(2) \((\kappa+\lambda)+\mu=\kappa+(\lambda+\mu)\)；</p>
+<p>(3) \(\kappa\cdot(\lambda+\mu)=\kappa\cdot\lambda+\kappa\cdot\mu\)；</p>
+<p>(4) \(\kappa^{\lambda+\mu}=\kappa^{\lambda}\cdot\kappa^{\mu}\)；</p>
+<p>(5) \((\kappa\cdot\lambda)^{\mu}=\kappa^{\mu}\cdot\lambda^{\mu}\)；</p>
+<p>(6) \((\kappa^{\lambda})^{\mu}=\kappa^{\lambda\cdot\mu}\)。</p></div>
+<div class="note"><b>笔记边注</b> (4)(5)(6) 三条右侧用一个大括号括在一起（幂运算律）。</div>
+
+<h3>⑫ 基数运算的单调性 <span class="pg">p.73–74</span></h3>
+<div class="thm"><b>性质</b> 设 \(\kappa\le\lambda\)，\(\mu\) 为基数：
+<p>(1) \(\kappa+\mu\le\lambda+\mu\)；</p>
+<p>(2) \(\kappa\cdot\mu\le\lambda\cdot\mu\)；</p>
+<p>(3) \(\kappa^{\mu}\le\lambda^{\mu}\)；</p>
+<p>(4) \(\mu^{\kappa}\le\mu^{\lambda}\)（\(\kappa,\mu\) 不同时为 0）。</p></div>
+<div class="supp"><b>补充讲解</b> (4) 的条件用于排除 \(\kappa=\mu=0\)：此时 \(0^0=1\)，而若 \(\lambda\gt0\) 则 \(0^\lambda=0\)，不等式 \(1\le0\) 不成立。</div>
+
+<h3>⑬ 无穷基数运算性质 <span class="pg">p.74</span></h3>
+<div class="thm"><b>性质</b> 设 \(\kappa\) 为无穷基数，则 \(\kappa\cdot\kappa=\kappa\)；\(\lambda\) 为基数，则
+\[\kappa+\lambda=\kappa\cdot\lambda=\max\{\kappa,\lambda\}\quad(\lambda\ne0);\]
+\[\kappa^{\kappa}=2^{\kappa}.\]</div>
+<div class="supp"><b>补充讲解</b> 条件 \(\lambda\ne0\) 是针对乘法的（\(\kappa\cdot0=0\)）；加法 \(\kappa+0=\kappa=\max\{\kappa,0\}\) 本身也成立。例：\(\aleph_0+\aleph_0=\aleph_0\cdot\aleph_0=\aleph_0\)，\(\aleph_0\cdot\aleph=\aleph\)，\(\aleph_0^{\aleph_0}=2^{\aleph_0}=\aleph\)。</div>
+
+<figure class="fig"><svg viewBox="0 0 460 210" role="img" aria-label="集合与基数的大小排列">
+<g stroke="currentColor" fill="none" stroke-width="1.5">
+<rect x="10" y="30" width="440" height="170" rx="14" stroke-dasharray="6 3"/>
+<rect x="190" y="40" width="250" height="110" rx="14"/>
+</g>
+<g fill="currentColor" font-size="14">
+<text x="110" y="22">P(N)</text>
+<text x="30" y="75">N</text><text x="80" y="75">Uₙ</text><text x="140" y="75">R</text>
+<text x="30" y="125">ℵ₀</text><text x="85" y="125">κ</text><text x="140" y="125">ℵ₁</text>
+<text x="210" y="75">P(R)　— — — —</text>
+<text x="210" y="125">ℵ₂　ℵ₃　· — — —</text>
+<text x="120" y="180">ℵ₀ &lt; κ &lt; ℵ₁</text></g>
+</svg><figcaption>图（p.74）：上排集合 \(\mathbb{N}\)，\(U_n\)（红），\(\mathbb{R}\)，下排对应基数 \(\aleph_0\)，\(\kappa\)（红），\(\aleph_1\)；黑框内为 \(P(\mathbb{R})\) ——，对应 \(\aleph_2,\aleph_3,\cdots\)。外层红框上方标 \(P(\mathbb{N})\)，框底红字 \(\aleph_0\lt\kappa\lt\aleph_1\)。（图中外层红框改用虚线绘制。）</figcaption></figure>
+<div class="unclear"><b>待核对（p.74，位置：中部红框图第一行中间红字）</b> 可辨认部分：红字形如“\(U_n\)”，下画双红线，其下对应红色 \(\kappa\)，框底写 \(\aleph_0\lt\kappa\lt\aleph_1\)；无法辨认：\(U_n\) 具体指哪个集合，笔记未给定义。</div>
+<div class="supp"><b>补充讲解</b> 这张图是在问：是否存在集合（图中的 \(U_n\)）其基数 \(\kappa\) 满足 \(\aleph_0\lt\kappa\lt\operatorname{card}\mathbb{R}\)？断言不存在就是连续统假设，它与常用公理系统独立。图中把 \(\mathbb{R}\)、\(P(\mathbb{N})\) 对应 \(\aleph_1\)，\(P(\mathbb{R})\) 对应 \(\aleph_2\)，都是在承认（广义）连续统假设的前提下的写法，见 p.69 校订说明。</div>

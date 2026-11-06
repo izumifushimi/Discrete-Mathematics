@@ -1,0 +1,126 @@
+<div class="note"><b>笔记边注</b> 小节标题“2.7 序关系的性质”，日期 2025年6月18日 23:09。</div>
+
+<h3>① 三歧性（拟序关系） <span class="pg">p.37</span></h3>
+<div class="def"><b>定义（三歧性）</b> 设 \(A\ne\emptyset\)，\(\prec\) 为 \(A\) 的拟序关系，\(x,y\in A\)。若
+\[x\prec y,\qquad y\prec x,\qquad x=y\]
+有且仅有一式成立，则称拟序关系 \(\prec\) 有三歧性，此时 \(\prec\) 为拟线序关系。</div>
+<div class="note"><b>笔记边注</b> “有且仅有一式成立”下画线；“拟线序关系”下画波浪线。</div>
+
+<h3>② 最大元、最小元 <span class="pg">p.37</span></h3>
+<div class="def"><b>定义</b> 设 \(\langle A,\preccurlyeq\rangle\) 为偏序集，\(B\subseteq A\)，\(y\in B\)。
+\[\begin{aligned} y\ \text{为}\ B\ \text{中最大元} &:\ \forall x\,(x\in B\to x\preccurlyeq y)\\ y\ \text{为}\ B\ \text{中最小元} &:\ \forall x\,(x\in B\to y\preccurlyeq x)\end{aligned}\]</div>
+<div class="example"><b>例</b> \(A=\{1,2,3,5,\dots\}\)，偏序为整除，取四个子集 \(B\)（第一个标为 \(B_1\)），分别求最大元、最小元。
+<figure class="fig"><svg viewBox="0 0 560 170" role="img" aria-label="四个子集的哈斯图">
+<g stroke="currentColor" fill="none" stroke-width="1.6">
+<line x1="60" y1="130" x2="30" y2="80"/><line x1="60" y1="130" x2="90" y2="80"/>
+<line x1="170" y1="40" x2="140" y2="90"/><line x1="170" y1="40" x2="200" y2="90"/>
+<line x1="310" y1="30" x2="280" y2="80"/><line x1="310" y1="30" x2="340" y2="80"/><line x1="280" y1="80" x2="310" y2="130"/><line x1="340" y1="80" x2="310" y2="130"/>
+<line x1="440" y1="40" x2="440" y2="110"/><line x1="440" y1="40" x2="510" y2="110"/><line x1="510" y1="40" x2="510" y2="110"/>
+<circle cx="60" cy="130" r="4"/><circle cx="30" cy="80" r="4"/><circle cx="90" cy="80" r="4"/>
+<circle cx="170" cy="40" r="4"/><circle cx="140" cy="90" r="4"/><circle cx="200" cy="90" r="4"/>
+<circle cx="310" cy="30" r="4"/><circle cx="280" cy="80" r="4"/><circle cx="340" cy="80" r="4"/><circle cx="310" cy="130" r="4"/>
+<circle cx="440" cy="40" r="4"/><circle cx="510" cy="40" r="4"/><circle cx="440" cy="110" r="4"/><circle cx="510" cy="110" r="4"/>
+</g>
+<g fill="currentColor" font-size="14">
+<text x="68" y="145">1</text><text x="12" y="78">2</text><text x="98" y="78">3</text><text x="10" y="20">B₁</text>
+<text x="162" y="28">15</text><text x="122" y="95">3</text><text x="208" y="95">5</text>
+<text x="302" y="18">15</text><text x="262" y="85">3</text><text x="348" y="85">5</text><text x="318" y="145">1</text>
+<text x="428" y="28">15</text><text x="502" y="28">25</text><text x="424" y="125">3</text><text x="516" y="125">5</text>
+</g></svg><figcaption>图：从左到右四个子集。(a) \(B_1=\{1,2,3\}\)：1 在下，2、3 在上，边 1–2、1–3；(b) \(\{3,5,15\}\)：边 3–15、5–15；(c) \(\{1,3,5,15\}\)：菱形，边 1–3、1–5、3–15、5–15；(d) \(\{3,5,15,25\}\)：边 3–15、5–15、5–25。</figcaption></figure>
+<div class="tbl"><table><thead><tr><th></th><th>(a) \(\{1,2,3\}\)</th><th>(b) \(\{3,5,15\}\)</th><th>(c) \(\{1,3,5,15\}\)</th><th>(d) \(\{3,5,15,25\}\)</th></tr></thead><tbody>
+<tr><td>最大元</td><td>无</td><td>15</td><td>15</td><td>无</td></tr>
+<tr><td>最小元</td><td>1</td><td>无</td><td>1</td><td>无</td></tr>
+</tbody></table></div>
+<div class="note"><b>笔记边注</b> 表中“无”在原页上用一道斜杠“\”表示。(a) 中 2 被圈出；(c) 中 15 被圈出，图下另写“15”“1”；(d) 中顶层 15、25 与底层 3、5 各有一条横线划过，表示两层都没有唯一的最大、最小元素。A 由箭头指向 \(B_1\)。</div>
+</div>
+
+<h3>③ 上界、下界 <span class="pg">p.37–38</span></h3>
+<div class="def"><b>定义</b> 设 \(B\subseteq A\)，\(y\in A\)。
+\[\begin{aligned} y\ \text{为}\ B\ \text{的上界} &:\ \forall x\,(x\in B\to x\preccurlyeq y)\\ y\ \text{为}\ B\ \text{的下界} &:\ \forall x\,(x\in B\to y\preccurlyeq x)\end{aligned}\]</div>
+<div class="note"><b>笔记边注</b> 条件“\(y\in A\)”用红笔圈出，其下原先写的字被涂掉重写，强调上下界只要求 \(y\in A\)（不必属于 \(B\)），这与最大元、最小元要求 \(y\in B\) 不同。p.38 页首再次抄写“\(y\) 为 \(B\) 的下界：\(\forall x(x\in B\to y\preccurlyeq x)\)”。</div>
+<div class="example"><b>例</b> \(A=\{1,2,3,4,5,6,9,10,15,12\}\)（右下角另补写 24），偏序为整除。
+<figure class="fig"><svg viewBox="0 0 560 190" role="img" aria-label="上下界示例哈斯图">
+<g stroke="currentColor" fill="none" stroke-width="1.6">
+<line x1="70" y1="150" x2="40" y2="100"/><line x1="70" y1="150" x2="100" y2="100"/>
+<line x1="40" y1="100" x2="70" y2="50" stroke-dasharray="4 3"/><line x1="100" y1="100" x2="70" y2="50" stroke-dasharray="4 3"/>
+<line x1="230" y1="150" x2="200" y2="100" stroke-dasharray="4 3"/><line x1="230" y1="150" x2="260" y2="100" stroke-dasharray="4 3"/>
+<line x1="200" y1="100" x2="230" y2="50"/><line x1="260" y1="100" x2="230" y2="50"/>
+<line x1="440" y1="150" x2="410" y2="100"/><line x1="440" y1="150" x2="470" y2="100"/>
+<g stroke-dasharray="4 3"><line x1="410" y1="100" x2="400" y2="40"/><line x1="410" y1="100" x2="450" y2="40"/><line x1="410" y1="100" x2="500" y2="40"/><line x1="470" y1="100" x2="400" y2="40"/><line x1="470" y1="100" x2="450" y2="40"/><line x1="470" y1="100" x2="500" y2="40"/></g>
+<circle cx="70" cy="150" r="4"/><circle cx="40" cy="100" r="4"/><circle cx="100" cy="100" r="4"/><circle cx="70" cy="50" r="4"/>
+<circle cx="230" cy="150" r="4"/><circle cx="200" cy="100" r="4"/><circle cx="260" cy="100" r="4"/><circle cx="230" cy="50" r="4"/>
+<circle cx="440" cy="150" r="4"/><circle cx="410" cy="100" r="4"/><circle cx="470" cy="100" r="4"/><circle cx="400" cy="40" r="4"/><circle cx="450" cy="40" r="4"/><circle cx="500" cy="40" r="4"/>
+</g>
+<g fill="currentColor" font-size="14">
+<text x="76" y="168">1</text><text x="22" y="105">2</text><text x="108" y="105">3</text><text x="78" y="45">6</text><text x="10" y="20">B₁={1,2,3}</text>
+<text x="236" y="168">1</text><text x="182" y="105">3</text><text x="268" y="105">5</text><text x="222" y="38">15</text>
+<text x="446" y="168">1</text><text x="392" y="105">2</text><text x="478" y="105">3</text><text x="394" y="28">6</text><text x="440" y="28">12</text><text x="494" y="28">24</text>
+</g></svg><figcaption>图：左 \(B_1=\{1,2,3\}\)，实线 1–2、1–3，虚线 2–6、3–6；中 \(B=\{1,3,5\}\)，实线 3–15、5–15，虚线 1–3、1–5（笔记中虚线连到 15 和 1）；右 1–2、1–3 实线，2、3 分别用虚线连到 6、12、24。</figcaption></figure>
+<div class="tbl"><table><thead><tr><th></th><th>\(B_1=\{1,2,3\}\)</th><th>第二个子集（3、5）</th></tr></thead><tbody>
+<tr><td>上界</td><td>6</td><td>15</td></tr>
+<tr><td>下界</td><td>1</td><td>1</td></tr>
+</tbody></table></div>
+<p>右图：\(B=\{1,2,3\}\) 的上界集合为 \(\{6,12,24\}\)（圈出），其中最小的上界称为最小上界，即上确界；对应地，最大下界称为下确界。</p>
+<div class="note"><b>笔记边注</b> 右图旁写“最小上界 / 上确界”，用双向箭头连到“最大下界 / 下确界”；圈出的 \(\{6,12,24\}\) 下方画一个类似“\(\perp\)”的符号。中图只画了 3、5、15、1 四个点，笔记没有单独写出该子集，按图读作 \(\{3,5\}\)（或 \(\{1,3,5,15\}\)），上界 15、下界 1 两种读法都成立。</div>
+<div class="fix"><b>校订说明（p.38）</b> 原式：\(B_1=\{1,2,3\}\) 的上界写为 6；正确式：在给定的 \(A\) 中，\(B_1\) 的上界为 \(\{6,12\}\)（补写 24 后为 \(\{6,12,24\}\)），其中 6 是上确界；原因：12（以及 24）也能被 1、2、3 整除，笔记右图已经补出这一点，左图的“6”应理解为上确界。</div>
+</div>
+
+<h3>④ 极小元、极大元 <span class="pg">p.38</span></h3>
+<div class="def"><b>定义</b> 设 \(B\subseteq A\)，\(y\in B\)。
+\[\begin{aligned} y\ \text{为}\ B\ \text{的极大元} &:\ \forall x\,(x\in B\land y\preccurlyeq x\to x=y)\\ y\ \text{为}\ B\ \text{的极小元} &:\ \forall x\,(x\in B\land x\preccurlyeq y\to x=y)\end{aligned}\]</div>
+<div class="example"><b>例</b> 沿用 2.6 的偏序集 \(\langle\{1,2,3,4,5,6,9,10,15\},\mid\rangle\)。
+<figure class="fig"><svg viewBox="0 0 360 200" role="img" aria-label="整除关系哈斯图（极大元）">
+<g stroke="currentColor" fill="none" stroke-width="1.6">
+<line x1="180" y1="170" x2="90" y2="110"/><line x1="180" y1="170" x2="180" y2="110"/><line x1="180" y1="170" x2="270" y2="110"/>
+<line x1="90" y1="110" x2="40" y2="40"/><line x1="90" y1="110" x2="110" y2="40"/><line x1="90" y1="110" x2="320" y2="40"/>
+<line x1="180" y1="110" x2="110" y2="40"/><line x1="180" y1="110" x2="180" y2="40"/><line x1="180" y1="110" x2="250" y2="40"/>
+<line x1="270" y1="110" x2="250" y2="40"/><line x1="270" y1="110" x2="320" y2="40"/>
+<circle cx="180" cy="170" r="4"/><circle cx="90" cy="110" r="4"/><circle cx="180" cy="110" r="4"/><circle cx="270" cy="110" r="4"/>
+<circle cx="40" cy="40" r="4"/><circle cx="110" cy="40" r="4"/><circle cx="180" cy="40" r="4"/><circle cx="250" cy="40" r="4"/><circle cx="320" cy="40" r="4"/>
+</g>
+<g fill="currentColor" font-size="14"><text x="176" y="192">1</text><text x="70" y="115">2</text><text x="190" y="115">3</text><text x="280" y="115">5</text><text x="34" y="28">4</text><text x="104" y="28">6</text><text x="175" y="28">9</text><text x="240" y="28">15</text><text x="312" y="28">10</text></g>
+</svg><figcaption>图：边 1–2、1–3、1–5、2–4、2–6、2–10、3–6、3–9、3–15、5–15、5–10。</figcaption></figure>
+<b>解</b> 极大元：4，6，9，15，10。以 \(y=4\) 为例：在定义式 \(\forall x(x\in B\land y\preccurlyeq x\to x=y)\) 中，满足 \(4\preccurlyeq x\) 的只有 \(x=4\)，所以 \(x=y\) 为真，蕴含式为真，4 是极大元。</div>
+<div class="note"><b>笔记边注</b> 右侧圈出“\(y=4\)”和“\(y\preccurlyeq x\)”，箭头指向“\(x=y\)”，两处下方各写“真”；再下方写“\(y\gt x\)”，意思是其余元素都在 4 的下方，不会出现 \(4\preccurlyeq x\) 而 \(x\ne4\)。原页把极大元中的 15 写作“15”、“10”写在最后，与图一致。</div>
+<div class="supp"><b>补充讲解</b> 同一个图里，极小元只有 1（它也是最小元）；极大元有 5 个，因此没有最大元。最大元一定是极大元，反过来不一定。</div>
+
+<h3>⑤ 链、反链 <span class="pg">p.38–39</span></h3>
+<div class="def"><b>定义</b> 设 \(\langle A,\preccurlyeq\rangle\) 为偏序集，\(B\subseteq A\)。
+\[\begin{aligned} B\ \text{为}\ A\ \text{中链} &:\ \forall x\forall y\,(x\in B\land y\in B\to x\ \text{与}\ y\ \text{可比})\\ B\ \text{为}\ A\ \text{中反链} &:\ \forall x\forall y\,(x\in B\land y\in B\land x\ne y\to x\ \text{与}\ y\ \text{不可比})\end{aligned}\]
+\(|B|\) 为链（反链）的长度。</div>
+<div class="note"><b>笔记边注</b> 反链定义中的“\(x\ne y\)”用红笔双下画线并加三角标记，提醒反链条件必须排除 \(x=y\)（任一元素都与自身可比）。</div>
+<div class="example"><b>例</b> 偏序集 \(A=\{a,b,c,d,e,f,g,h,i,j,k\}\)，哈斯图如下。
+<figure class="fig"><svg viewBox="0 0 300 260" role="img" aria-label="链与反链示例哈斯图">
+<g stroke="currentColor" fill="none" stroke-width="1.6">
+<line x1="50" y1="230" x2="100" y2="190"/><line x1="150" y1="230" x2="100" y2="190"/>
+<line x1="100" y1="190" x2="100" y2="150"/><line x1="100" y1="150" x2="100" y2="110"/><line x1="100" y1="110" x2="100" y2="70"/>
+<line x1="100" y1="70" x2="50" y2="30"/><line x1="100" y1="70" x2="150" y2="30"/>
+<line x1="230" y1="150" x2="230" y2="110"/><line x1="230" y1="110" x2="230" y2="70"/>
+<circle cx="50" cy="230" r="4"/><circle cx="150" cy="230" r="4"/><circle cx="100" cy="190" r="4"/><circle cx="100" cy="150" r="4"/><circle cx="100" cy="110" r="4"/><circle cx="100" cy="70" r="4"/><circle cx="50" cy="30" r="4"/><circle cx="150" cy="30" r="4"/>
+<circle cx="230" cy="150" r="4"/><circle cx="230" cy="110" r="4"/><circle cx="230" cy="70" r="4"/>
+</g>
+<g fill="currentColor" font-size="14"><text x="34" y="250">a</text><text x="156" y="250">b</text><text x="110" y="195">c</text><text x="110" y="155">d</text><text x="110" y="115">e</text><text x="110" y="75">f</text><text x="34" y="25">g</text><text x="156" y="25">h</text><text x="240" y="155">i</text><text x="240" y="115">j</text><text x="240" y="75">k</text></g>
+</svg><figcaption>图：边 a–c、b–c、c–d、d–e、e–f、f–g、f–h；另一分支 i–j–k。笔记用红线描出最长链 a–c–d–e–f–g，旁注红色“6”。</figcaption></figure>
+<ul>
+<li>链：\(\{a,c\}\)，\(\{a,c,d\}\)，\(\{a,c,d,e,f,g\}\)（红笔书写）；</li>
+<li>反链：\(\{g,k\}\)，\(\{g,h,k\}\)；</li>
+<li>\(\{a\}\) 既是链也是反链（打 √，红笔下画线）。</li>
+</ul>
+<b>结论</b> 最长链 \(\{a,c,d,e,f,g\}\) 的长度为 6。</div>
+
+<h3>定理与推论（链长度与反链划分） <span class="pg">p.39–40</span></h3>
+<div class="thm"><b>定理</b> 设 \(\langle A,\preccurlyeq\rangle\) 为偏序集，\(A\) 的最长链长度为 \(n\)，则
+<ol><li>\(A\) 中存在极大元；</li><li>\(A\) 存在 \(n\) 个划分块的划分，使每个划分块都为反链。</li></ol></div>
+<div class="note"><b>笔记边注</b> 定理末尾画星号“☆”。</div>
+<div class="example"><b>例</b> 对上例的 \(A\)（框内重画同一哈斯图，红线横穿 g、h、k 一层，并描出最长链），最长链长度 \(n=6\)，可划分为 6 个反链：
+\[\{g,h,k\},\ \{f,j\},\ \{e,i\},\ \{d\},\ \{c\},\ \{a,b\}\]
+每块旁画对勾，旁边的“6”用箭头指向这 6 块。</div>
+<div class="thm"><b>推论</b> 若 \(|A|=m\times n+1\)，则 \(A\) 存在 \(m+1\) 反链（长度），或存在 \(n+1\) 链（长度）。</div>
+<div class="example"><b>例</b>（红笔）\(|A|=11=10+1=2\times5+1=1\times10+1\)。
+<div class="tbl"><table><thead><tr><th>分解</th><th>反链长度 \(m+1\)</th><th>链长度 \(n+1\)</th></tr></thead><tbody>
+<tr><td>\(2\times5+1\)</td><td>3 √</td><td>6 √</td></tr>
+<tr><td>\(1\times10+1\)</td><td>2 √</td><td>11 ×</td></tr>
+</tbody></table></div>
+<b>结论</b> 两种分解下推论都成立：第一种两者都存在（\(\{g,h,k\}\) 与最长链），第二种存在长度 2 的反链，长度 11 的链不存在，但“或”只需一边成立。</div>
+<div class="unclear"><b>待核对（p.40，位置：右上角红笔表格右侧）</b> 可辨认部分：表格右边有红笔写的“×”“3”“2”和若干对勾，其中一处数字被涂掉；无法辨认：这几处红笔的确切含义与被涂掉的数字。</div>
+<div class="supp"><b>补充讲解</b> 推论里 \(m,n\) 地位对称，常见写法是“存在长度 \(m+1\) 的链或长度 \(n+1\) 的反链”，与笔记的写法只是交换了 \(m,n\)，内容等价。</div>

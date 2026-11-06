@@ -1,0 +1,44 @@
+<div class="note"><b>笔记边注</b> p.233 顶部为"第15章 环与域"章标题，随后为本节"15.1 环与域"。</div>
+<h3>① 环的定义 <span class="pg">p.233</span></h3>
+<div class="def"><b>定义（环）</b> 设 \(\langle R,+,\cdot\rangle\) 是代数系统，\(+\) 与 \(\cdot\) 为二元运算。若满足
+<ul><li>\(\langle R,+\rangle\) 为交换群（阿贝尔群）；</li><li>\(\langle R,\cdot\rangle\) 为半群；</li><li>\(\cdot\) 对 \(+\) 有分配律（原页圈出）；</li></ul>
+则 \(\langle R,+,\cdot\rangle\) 为环。</div>
+<div class="example"><b>例</b> \(\langle\mathbb{Z},+,\times\rangle\)，\(\langle\mathbb{Q},+,\times\rangle\)，\(\langle\mathbb{R},+,\times\rangle\)（圈出），\(\langle\mathbb{C},+,\times\rangle\) 都是环。</div>
+
+<h3>② 环中的记号 <span class="pg">p.233</span></h3>
+<div class="def"><b>约定</b> 设 \(\langle R,+,\cdot\rangle\) 为环：
+<ul><li>\(\langle R,+\rangle\) 的单位元记为 \(0\)；\(\langle R,\cdot\rangle\) 的单位元记为 \(1\)（可能不存在）；</li>
+<li>\(\langle R,+\rangle\) 中 \(x\) 的逆元记为 \(-x\)（负元）；\(\langle R,\cdot\rangle\) 中 \(x\) 的逆元记为 \(x^{-1}\)（逆元）；</li>
+<li>对 \(+\)：\(x+(-y)\Leftrightarrow x-y\)；\(nx\Leftrightarrow \underbrace{x+x+\cdots+x}_{n\text{个}x}\)；</li>
+<li>对 \(\cdot\)：\(x^n\Leftrightarrow\underbrace{x\cdot x\cdots x\cdot x}_{n\text{个}x}\)；\(xy\Leftrightarrow x\cdot y\)。</li></ul></div>
+
+<h3>③ 环的性质 <span class="pg">p.233–234</span></h3>
+<div class="thm"><b>性质</b> 设 \(R\) 为环：
+<ol><li>\(\forall a\in R\)，\(a0=0a=0\)；</li>
+<li>\(\forall a,b\in R\)，\((-a)b=a(-b)=-(ab)\)；</li>
+<li>\(\forall a,b,c\in R\)，\(a(b-c)=ab-ac\)，\((b-c)a=ba-ca\)；</li>
+<li>\(\forall a_1,a_2,\cdots,a_n,b_1,b_2,\cdots,b_m\in R\ (n,m\ge2)\)，
+\[\Big(\sum_{i=1}^n a_i\Big)\Big(\sum_{j=1}^m b_j\Big)=\sum_{i=1}^n\sum_{j=1}^m a_ib_j\]
+即 \((a_1+a_2+\cdots+a_n)(b_1+b_2+\cdots+b_m)=\sum_{i=1}^n\sum_{j=1}^m a_ib_j\)。</li></ol></div>
+<div class="proof"><b>证明</b>
+① \(\forall a\in R\)，\(a0=a(0+0)=a0+a0\)，在 \(\langle R,+\rangle\) 中消去一个 \(a0\)，得 \(0=a0\)。所以 \(a0=0=0a\)。（边注：\(+\leftrightarrow 0\)，即 0 是加法单位元。）<br>
+② \(\forall a,b\in R\)，证 \((-a)b=a(-b)=-(ab)\)：
+\[(-a)b+ab=(-a+a)b=0\cdot b=0\ \Rightarrow\ (-a)b+ab=0\]
+红笔边注：\(ab+?=0\)，"?" 即 \(ab\) 的（加法）逆元，所以 \(-(ab)=(-a)b\)。</div>
+<div class="supp"><b>补充讲解</b> 原页只写了 \(0a\) 与 \((-a)b\) 的情形结论；另一半同理：\(0a=(0+0)a=0a+0a\Rightarrow0a=0\)；\(a(-b)+ab=a(-b+b)=a0=0\Rightarrow a(-b)=-(ab)\)。性质 ③ 由分配律和 ② 得到：\(a(b-c)=a(b+(-c))=ab+a(-c)=ab-ac\)。</div>
+<div class="example"><b>例</b> 展开 \((a-b)^2\)。
+<b>解</b> \[\begin{aligned}(a-b)^2&=(a-b)(a-b)=\big(a+(-b)\big)\big(a+(-b)\big)\\&=a\cdot a+a(-b)+(-b)a+(-b)(-b)\\&=a^2-ab-ba+b^2\end{aligned}\]</div>
+<div class="warn"><b>易错提醒</b> 环的乘法不一定可交换，所以 \((a-b)^2\) 不能合并成 \(a^2-2ab+b^2\)；\(-ab-ba\) 要分开写。</div>
+
+<h3>④ 特殊的环：交换环、含幺环、无零因子环、整环、域 <span class="pg">p.234–235</span></h3>
+<div class="def"><b>定义</b> 设 \(\langle R,+,\cdot\rangle\) 是环：
+<ol><li>若环中 \(\cdot\) 适合交换律，\(R\) 为交换环；</li>
+<li>若环中 \(\cdot\) 存在单位元（1），\(R\) 为含幺环；</li>
+<li>若 \(\forall a,b\in R\)，\(ab=0\Rightarrow a=0\lor b=0\)，\(R\) 为无零因子环；</li></ol>
+三者同时满足 \(\Rightarrow\) 整环。</div>
+<div class="def"><b>定义（域）</b> 设 \(\langle R,+,\cdot\rangle\) 为整环，若
+<ol><li>\(R\) 中至少含有 2 个元素；</li><li>\(\forall a\in R-\{0\}\)，都有 \(a^{-1}\in R\)（原页此行画红线）；</li></ol>
+则 \(R\) 为域。</div>
+<div class="note"><b>笔记边注（p.235）</b> 在域定义旁圈注 \(a^{-1}\)、"1"、\(R\)、\(a\ne0\)：强调每个非零元都要有乘法逆元（在 \(R\) 中），且需存在单位元 1。</div>
+<div class="example"><b>例</b> \(\langle\mathbb{Z},+,\times\rangle\) 是整环（原页"整数环"字样被划去改记）；\(\mathbb{Q},\mathbb{R},\mathbb{C}\)（括号括起）是域。原页右侧另写"整环"。</div>
+<div class="supp"><b>补充讲解</b> \(\mathbb{Z}\) 不是域：例如 \(2\) 在 \(\mathbb{Z}\) 中没有乘法逆元。域一定是整环；\(\mathbb{Q},\mathbb{R},\mathbb{C}\) 同时也是整环。</div>

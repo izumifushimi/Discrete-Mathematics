@@ -1,0 +1,9 @@
+[
+  {"page":91,"status":"transcribed","note":"无向图、有向图同构定义（有向图右侧括号笔误，fix），G1 与 G2 经三棱柱同构示意图"},
+  {"page":92,"status":"partial","note":"三棱柱图下半；完全图 K1–K5、完全有向图、竞赛图、r 部图定义与 3 部图；待核对：竞赛图第4个图两条对角线方向、3 部图交叉边端点"},
+  {"page":93,"status":"partial","note":"2 部图、完全 r 部图 K2,2/K2,3/K1,1,2、子图、真子图、生成子图、导出子图开头；待核对：2 部图部分斜线端点"},
+  {"page":94,"status":"transcribed","note":"点导出子图与边导出子图定义及例图，补图定义及 K4/G/补图例"},
+  {"page":95,"status":"transcribed","note":"自补图例（Z 形与 N 形），删边、删边集、删点、删点集及删点示意图，收缩示意图"},
+  {"page":96,"status":"transcribed","note":"加新边 G+(u,v)，不交与边不交，并、交、差、环和定义，A⊕B 维恩图"},
+  {"page":97,"status":"transcribed","note":"联图定义与 G1、G2、G1+G2 例图；积图只有标题，原页其余空白"}
+]

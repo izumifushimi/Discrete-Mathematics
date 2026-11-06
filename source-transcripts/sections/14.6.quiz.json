@@ -1,0 +1,79 @@
+[
+ {
+  "type": "choice",
+  "q": "在 Klein 四元群中，\\(\\{e,a\\}\\cup\\{e,b\\}\\)",
+  "options": [
+   "是子群",
+   "不是子群，因为 \\(ab=c\\notin\\{e,a,b\\}\\)",
+   "等于 \\(G\\)",
+   "是平凡子群"
+  ],
+  "answer": 1,
+  "why": "\\(H\\cup K\\le G\\Leftrightarrow H\\subseteq K\\lor K\\subseteq H\\)，这里两个都不成立。"
+ },
+ {
+  "type": "fill",
+  "q": "在 Klein 四元群 \\(\\{e,a,b,c\\}\\) 中，\\(bc=\\)____",
+  "answer": [
+   "a"
+  ],
+  "why": "运算表中 \\(b\\) 行 \\(c\\) 列是 \\(a\\)。"
+ },
+ {
+  "type": "fill",
+  "q": "Klein 四元群一共有 ____ 个子群",
+  "answer": [
+   "5",
+   "五"
+  ],
+  "why": "\\(\\{e\\},\\{e,a\\},\\{e,b\\},\\{e,c\\},G\\)。"
+ },
+ {
+  "type": "choice",
+  "q": "设 \\(A,B\\le G\\)，\\(AB\\le G\\) 的充要条件是",
+  "options": [
+   "\\(A\\subseteq B\\)",
+   "\\(AB=BA\\)",
+   "\\(A\\cap B=\\{e\\}\\)",
+   "\\(G\\) 是阿贝尔群"
+  ],
+  "answer": 1,
+  "why": "定理：\\(AB\\le G\\Leftrightarrow AB=BA\\)。"
+ },
+ {
+  "type": "choice",
+  "q": "若 \\(G\\) 是阿贝尔群，\\(a\\in G\\)，则 \\(N(a)=\\{x\\in G\\mid xa=ax\\}\\) 为",
+  "options": [
+   "\\(\\{e\\}\\)",
+   "\\(\\{e,a\\}\\)",
+   "\\(G\\)",
+   "\\(\\langle a\\rangle\\)"
+  ],
+  "answer": 2,
+  "why": "阿贝尔群中每个 \\(x\\) 都满足 \\(xa=ax\\)。"
+ },
+ {
+  "type": "choice",
+  "q": "关于 Klein 四元群，下列说法正确的是",
+  "options": [
+   "它是循环群",
+   "每个非单位元的阶都是 2",
+   "它有 3 阶元素",
+   "\\(ab\\ne ba\\)"
+  ],
+  "answer": 1,
+  "why": "\\(a^2=b^2=c^2=e\\)，没有 4 阶元，所以不是循环群；而且它是交换群。"
+ },
+ {
+  "type": "choice",
+  "q": "子群格中的关系 \\(ARB\\Leftrightarrow A\\le B\\) 不满足下列哪条性质？",
+  "options": [
+   "自反性",
+   "反对称性",
+   "传递性",
+   "对称性"
+  ],
+  "answer": 3,
+  "why": "它是偏序关系，满足自反、反对称、传递，一般不对称。"
+ }
+]

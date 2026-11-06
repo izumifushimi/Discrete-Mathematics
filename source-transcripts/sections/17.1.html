@@ -1,0 +1,141 @@
+<div class="note"><b>笔记边注</b> 页首标题“第17章 初等数论”，日期 2025年12月21日；小节标题“17.1 素数”。</div>
+
+<h3>整除与因子 <span class="pg">p.256</span></h3>
+<div class="def"><b>定义 1（整除）</b> ① 设 \(a, b\) 为两个整数，若存在整数 \(c\)，使 \(a = bc\)，则记 \(b\mid a\)，读作：
+<ul>
+<li>\(a\) 被 \(b\) 整除（原页此行被划掉）；</li>
+<li>\(b\) 整除 \(a\)；</li>
+<li>\(b\) 是 \(a\) 的因子（此行加框强调）。</li>
+</ul>
+否则记 \(b\nmid a\)：\(b\) 不是 \(a\) 的因子。</div>
+<div class="note"><b>笔记边注</b> “整数”二字下划线强调；\(a=bc\) 中的 \(c\) 用红线标出，表示 \(c\) 也必须是整数。</div>
+
+<div class="example"><b>例 1</b> ② \(10\) 的因子。
+<b>解</b> \(10\) 的因子为 \(\pm1, \pm2, \pm5, \pm10\)。只考虑正因子：\(1, 2, 5, 10\)，其中
+<ul>
+<li>\(1\) 与自身为<b>平凡因子</b>：\(1, 10\)；</li>
+<li>其余为<b>真因子</b>：\(2, 5\)。</li>
+</ul></div>
+
+<h3>带余除法 <span class="pg">p.256</span></h3>
+<div class="thm"><b>定理（带余除法）</b> ③ 设 \(a, b\in\mathbb{Z}\)，且 \(b\neq 0\)，则存在唯一的整数 \(q\) 和 \(r\)，使
+\[ a = q\cdot b + r,\qquad 0\le r \lt |b| . \]
+也写作 \(a\div b = q\cdots r\)。余数记为 \(r = a \bmod b\)（原页用箭头从 \(r\) 指向 \(a \bmod b\)）。</div>
+<div class="example"><b>例 2</b> 求 \(23\div 4\) 与 \(-10\div 3\)（后者标 ☆）。
+<b>解</b>
+\[ 23 = 5\times4 + 3,\qquad 23 \bmod 4 = 3; \]
+\[ -10 = (-4)\times 3 + 2,\qquad (-10)\bmod 3 = 2 . \]
+<b>结论</b> 负数取余时余数仍需满足 \(0\le r\lt|b|\)，所以 \(-10\) 的商是 \(-4\) 而不是 \(-3\)。</div>
+<div class="thm"><b>显然</b> \(b\mid a \iff a \bmod b = 0\)。</div>
+<div class="warn"><b>易错提醒</b> \(-10 = (-3)\times3 + (-1)\) 中余数 \(-1\lt 0\)，不满足带余除法要求，故 \((-10)\bmod 3\neq -1\)。</div>
+
+<h3>整除的性质 <span class="pg">p.257</span></h3>
+<div class="thm"><b>性质</b> ④
+<ol>
+<li>若 \(a\mid b\) 且 \(a\mid c\)，则对任意的整数 \(x, y\)，有 \(a\mid xb+yc\)。</li>
+<li>\(a\mid b\) 且 \(b\mid c \Rightarrow a\mid c\)。</li>
+<li>设 \(m\neq 0\)，则 \(a\mid b\) 当且仅当 \(ma\mid mb\)。</li>
+<li>\(a\mid b\) 且 \(b\mid a \Rightarrow a=\pm b\)。</li>
+<li>\(a\mid b\) 且 \(b\neq 0 \Rightarrow |a|\le|b|\)。</li>
+</ol></div>
+<div class="note"><b>笔记边注</b> (3) 中“设 \(m\neq0\)”加波浪线；(5) 中 \(a\)、\(b\) 被圈出，条件 \(b\neq0\) 和结论 \(|a|\le|b|\) 加下划线。</div>
+
+<h3>素数与合数 <span class="pg">p.257</span></h3>
+<div class="def"><b>定义 2（素数/质数）</b> ⑤ 若正整数 \(a\gt 1\)，且只能被 \(1\) 和自己整除，则 \(a\) 为素数（质数）。大于 \(1\) 的非素数称为合数（原页旁注“素数/合数”）。</div>
+<div class="example"><b>例 3</b> \(11\to 1, 11\)，只有平凡因子，\(11\) 是素数；\(12\to 1, (2, 3, 4, 6), 12\)，有真因子 \(2,3,4,6\)（圈出），\(12\) 是合数。</div>
+<div class="thm"><b>性质</b>
+<ol>
+<li>若 \(d\gt 1\)，\(p\) 为素数，且 \(d\mid p\)，则 \(d=p\)。</li>
+<li>☆ 若 \(p\) 为素数且 \(p\mid ab \Rightarrow p\mid a\) 或 \(p\mid b\)。<br>
+推广：若 \(p\) 为素数且 \(p\mid a_1a_2\cdots a_k \Rightarrow p\mid a_1\) 或 \(p\mid a_2\) 或 \(\cdots\) 或 \(p\mid a_k\)。</li>
+<li>\(a\gt 1\) 为合数 \(\iff a=bc\)，其中 \(1\lt b\lt a\)，\(1\lt c\lt a\)。</li>
+<li>合数必有素数因子［即设 \(a\) 为一合数，则存在素数 \(p\)，使 \(p\mid a\)］。</li>
+</ol></div>
+<div class="example"><b>例 4（反例）</b> 性质 (2) 中“\(p\) 为素数”不能去掉：\(6\mid 4\times 9 = 36\)，但 \(6\nmid 4\) 且 \(6\nmid 9\)。原页标注“反例”。</div>
+<div class="note"><b>笔记边注</b> 性质 (2) 的结论“\(p\mid a\) 或 \(p\mid b\)”用红色波浪线标出；第257页底部被截断的文字“［即设a为一合数”在第258页顶部完整出现，即性质 (4)；第258页顶部残留的“\(\lt a\)”是第257页性质 (3) 末行的延续。</div>
+
+<h3>算术基本定理 <span class="pg">p.258</span></h3>
+<p>由性质 (4)“合数必有素数因子”（原页用 ⇓ 引出）得到：</p>
+<div class="thm"><b>定理（算术基本定理）</b> 设 \(a\gt 1\)，\(a\) 为整数，则
+\[ a = p_1^{r_1}\, p_2^{r_2}\cdots p_k^{r_k}, \]
+其中 \(p_i\) 为不相同的素数，\(r_i\) 为正整数，且这种表示是唯一的（旁注“唯一”）。</div>
+<div class="note"><b>笔记边注</b> 例：\(12 = 2^2\times 3\)（\(12\) 与 \(2^2\) 各画圈，箭头相连）。</div>
+<div class="thm"><b>推论</b> 设 \(a = p_1^{r_1}p_2^{r_2}\cdots p_k^{r_k}\)，则正整数 \(d\) 为 \(a\) 的因子（\(d\mid a\)）
+\[ \iff d = p_1^{s_1}p_2^{s_2}\cdots p_k^{s_k},\qquad 0\le s_i\le r_i,\ i=1,\dots,k . \]
+因此 \(a\) 的正因子个数为 \((r_1+1)(r_2+1)\cdots(r_k+1)\)。</div>
+<div class="example"><b>例 5</b> (1) \(99099\) 有多少个正因子？
+<b>解</b> \(99099 = 3^2\times 7\times 11^2\times 13\)（验算：\(9\times7=63\)，\(63\times121=7623\)，\(7623\times13=99099\)）。各素因子可取的幂：
+<ul>
+<li>\(3\)：\(3^0, 3^1, 3^2\)，共 3 种；</li>
+<li>\(7\)：\(7^0, 7^1\)，共 2 种；</li>
+<li>\(11\)：\(11^0, 11^1, 11^2\)，共 3 种；</li>
+<li>\(13\)：\(13^0, 13^1\)，共 2 种。</li>
+</ul>
+\[ 3\times2\times3\times2 = 36 . \]
+<b>结论</b> \(99099\) 有 \(36\) 个正因子。</div>
+
+<h3>素数的个数与分布 <span class="pg">p.259</span></h3>
+<div class="thm"><b>定理 1</b> ⑥ 有无穷多个素数。</div>
+<div class="proof"><b>证明</b>（原页草图）假设素数只有有穷个：\(p_1, p_2, \dots, p_n\)（上方标 \(2, 3, \dots\)）。构造
+\[ p_1 p_2\cdots p_n + 1 , \]
+旁注“素数”；左侧依次写 \(p_1\ ✗,\ p_2\ ✗,\ \dots\)，表示 \(p_1, p_2, \dots\) 都不能整除它。</div>
+<div class="supp"><b>补充讲解</b> 完整论证：令 \(N=p_1p_2\cdots p_n+1\gt1\)。用任一 \(p_i\) 除 \(N\) 余数都是 \(1\)，所以 \(p_i\nmid N\)。若 \(N\) 是素数，它不在列表中；若 \(N\) 是合数，由“合数必有素数因子”，它有素因子 \(p\)，而 \(p\) 不是任何 \(p_i\)。两种情况都与“素数只有 \(p_1,\dots,p_n\)”矛盾。注意 \(N\) 本身不一定是素数，例如 \(2\cdot3\cdot5\cdot7\cdot11\cdot13+1=30031=59\times509\)。</div>
+
+<div class="thm"><b>定理 2（素数定理）</b> 记 \(\pi(n)\) 为小于等于 \(n\) 的素数个数，则
+\[ \lim_{n\to\infty}\frac{\pi(n)}{n/\ln n} = 1 . \]</div>
+<div class="example"><b>例 6</b> \(\pi(0)=\pi(1)=0\)，\(\pi(2)=1\)，\(\pi(3)=2\)，\(\pi(4)=2\)，\(\dots\)（原页在各数上方列出 \(0,1,\dots,n\) 并圈出其中的素数 \(2, 3\)）。</div>
+
+<div class="thm"><b>定理 3</b> 若 \(a\) 为合数，则 \(a\) 必有一个小于等于 \(\sqrt a\) 的真因子，即存在因子 \(d\) 满足 \(1\lt d\le\sqrt a\)。</div>
+<figure class="fig"><svg viewBox="0 0 460 110" role="img" aria-label="数轴：从1到根号a的区间高亮">
+<g stroke="currentColor" fill="none" stroke-width="2">
+<line x1="40" y1="60" x2="430" y2="60"/><polyline points="420,54 430,60 420,66"/>
+<line x1="60" y1="52" x2="60" y2="68"/><line x1="200" y1="52" x2="200" y2="68"/><line x1="360" y1="52" x2="360" y2="68"/>
+<line x1="60" y1="60" x2="200" y2="60" stroke-width="7" opacity="0.4"/>
+<path d="M60 48 Q130 20 200 48"/>
+</g>
+<g fill="currentColor" font-size="14">
+<text x="55" y="88">1</text><text x="190" y="88">√a</text><text x="355" y="88">a</text>
+<text x="95" y="22">真因子落在这里</text>
+</g></svg>
+<figcaption>图：数轴上标出 1、\(\sqrt a\)、\(a\)，区间 \((1, \sqrt a]\) 高亮并用红色括号标出，表示合数 \(a\) 必有真因子落在此区间。红笔另画小数轴并在 \(\sqrt a\) 端点处画实心点，箭头注明 \(25 = 5\times5\)，说明因子可以恰好等于 \(\sqrt a\)，所以是“\(\le\)”。</figcaption></figure>
+
+<div class="example"><b>例 7</b> \(127\)、\(133\) 是否为素数？ <span class="pg">p.259–260</span>
+<b>解</b>
+\[ \sqrt{127}\approx 11.27\lt 13,\qquad \sqrt{133}\approx 11.53\lt 13 , \]
+只需试除不超过 \(\sqrt a\) 的素数 \(2, 3, 5, 7, 11\)（红线标出）。
+<ul>
+<li>\(2\nmid127,\ 3\nmid127,\ 5\nmid127,\ 7\nmid127,\ 11\nmid127 \Rightarrow 127\) 为素数。（验算：\(127=63\times2+1=42\times3+1=25\times5+2=18\times7+1=11\times11+6\)。）</li>
+<li>\(7\mid133\)，\(133=7\times19\)，\(133\) 为合数。</li>
+</ul>
+<b>结论</b> \(127\) 是素数，\(133\) 是合数。</div>
+
+<h3>埃拉托斯特尼筛法 <span class="pg">p.260</span></h3>
+<p>求 \(2\sim100\) 内的素数：\(\sqrt{100}=10\)，所以只需用 \(\le 10\) 的素数 \(2, 3, 5, 7\) 去筛。依次划去 \(2,3,5,7\) 的倍数（它们本身保留），\(1\) 不是素数也划去，剩下的就是 \(11\sim100\) 中的素数。</p>
+<div class="tbl"><table><thead><tr><th>范围</th><th>筛后剩下的素数</th></tr></thead><tbody>
+<tr><td>1–10</td><td>2, 3, 5, 7</td></tr>
+<tr><td>11–20</td><td>11, 13, 17, 19</td></tr>
+<tr><td>21–30</td><td>23, 29</td></tr>
+<tr><td>31–40</td><td>31, 37</td></tr>
+<tr><td>41–50</td><td>41, 43, 47</td></tr>
+<tr><td>51–60</td><td>53, 59</td></tr>
+<tr><td>61–70</td><td>61, 67</td></tr>
+<tr><td>71–80</td><td>71, 73, 79</td></tr>
+<tr><td>81–90</td><td>83, 89</td></tr>
+<tr><td>91–100</td><td>97</td></tr>
+</tbody></table></div>
+<p>共 25 个素数。</p>
+<div class="note"><b>笔记边注</b> 原页贴有 1~100 的数表：第一行 ①、④、⑥、⑧、⑨、⑩ 带圈（被筛去），红色竖线划掉 2、4、5、6、8、10 列中除 2、5 以外的数，其余各列中 3 与 7 的倍数（如 21、27、33、39、49、51、57、63、69、77、81、87、91、93、99）逐个划掉；红笔额外圈出 13、43、61（原页未说明圈的用意）。右侧箭头：\(\sqrt{100}=10\to 2,3,5,7\)，再由 \(11\sim100\) 圈出；红笔写“\(1\sim100 \to 1\sim10000 \to\)”，表示范围扩大时同样只需用不超过平方根的素数筛选（\(1\sim10000\) 用 \(\le100\) 的素数）。</div>
+
+<h3>形如 \(2^n-1\) 的数 <span class="pg">p.260–261</span></h3>
+<div class="thm"><b>结论</b> ⑦
+<ul>
+<li>\(n\) 为合数 \(\to 2^n-1\) 为合数；</li>
+<li>\(n\) 为素数 \(\to 2^n-1\) 可能是合数，也可能是素数（梅森素数）。</li>
+</ul></div>
+<div class="example"><b>例 8</b>
+\[ 2^2-1=3,\quad 2^3-1=7,\quad 2^5-1=31,\quad 2^7-1=127 \]
+均为素数（梅森素数）；而
+\[ 2^{11}-1 = 2047 = 23\times 89 \]
+是合数（验算：\(23\times89=2047\)）。所以 \(n\) 为素数不能保证 \(2^n-1\) 为素数。</div>
+<div class="supp"><b>补充讲解</b> \(n\) 为合数时的理由：设 \(n=st\)，\(1\lt s\lt n\)，则 \(2^n-1=(2^s)^t-1=(2^s-1)\big((2^s)^{t-1}+\cdots+2^s+1\big)\)，而 \(1\lt 2^s-1\lt 2^n-1\)，故 \(2^n-1\) 是合数。</div>
+<div class="note"><b>笔记边注</b> 第261页只有顶部右侧一小段，是第260页右下角花括号内容的延续（\(2^7-1=127\)，\(2^{11}-1=2047=23\times89\)），其余为空白。</div>

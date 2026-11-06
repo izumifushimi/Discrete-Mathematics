@@ -1,0 +1,32 @@
+[
+ {
+  "page": 142,
+  "status": "transcribed",
+  "note": "有向图邻接矩阵定义与例题、A(D)性质1)–4)"
+ },
+ {
+  "page": 143,
+  "status": "transcribed",
+  "note": "A^r、B_r 定义，通路数定理与推论，例题 A^2–A^4"
+ },
+ {
+  "page": 144,
+  "status": "transcribed",
+  "note": "B_2–B_4，v3到v4长度3通路数=2；可达矩阵定义、例题与性质"
+ },
+ {
+  "page": 145,
+  "status": "transcribed",
+  "note": "无向图相邻矩阵定义、例题、性质；幂与通路数定理"
+ },
+ {
+  "page": 146,
+  "status": "transcribed",
+  "note": "a_ii^(2)=d(v_i)、距离公式；例题 A^2–A^4（A^3 笔误fix）；连通矩阵定义"
+ },
+ {
+  "page": 147,
+  "status": "transcribed",
+  "note": "连通矩阵性质、四类矩阵总结框"
+ }
+]

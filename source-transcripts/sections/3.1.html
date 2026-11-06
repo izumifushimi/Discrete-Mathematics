@@ -1,0 +1,82 @@
+<div class="note"><b>笔记边注</b> 页首章标题“第三章 函数”，日期 2025年6月19日 20:28；小节标题“3.1 函数（上）”。</div>
+
+<h3>函数的定义 <span class="pg">p.42</span></h3>
+<div class="def"><b>定义</b> 函数 / 映射：单值的二元关系。☆</div>
+<div class="def"><b>① 单值</b> \(\forall x\in \mathrm{dom}F,\ \forall y,z\in \mathrm{ran}F\)，
+\[(xFy)\land(xFz)\to y=z\]</div>
+<div class="note"><b>笔记边注</b> 右侧写“多对（一）\(\Leftrightarrow\) 单值”：允许多个 \(x\) 对应同一个 \(y\)，但一个 \(x\) 只能对应一个 \(y\)。</div>
+<p>② \(y=F(x)\) 为函数（“\(y=F(x)\)”下画波浪线）；\(\emptyset\) 也是函数，称为空函数。</p>
+
+<h3>③ 偏函数 <span class="pg">p.42–43</span></h3>
+<div class="def"><b>定义</b> 设 \(y=F(x)\)，若 \(\mathrm{dom}F\subseteq A\land \mathrm{ran}F\subseteq B\)，则 \(F\) 为 \(A\) 到 \(B\) 的偏函数，记为 \(F:A\nrightarrow B\)，\(A\) 为 \(F\) 的前域。
+<br>\(A\) 到 \(B\) 的全体偏函数：
+\[A\nrightarrow B=\{F\mid F:A\nrightarrow B\}\]</div>
+<div class="note"><b>笔记边注</b> 原页偏函数记号是在箭头杆上画一道短竖线（“\(\mapsto\)”样式的带竖杠箭头），这里用 \(\nrightarrow\) 表示。</div>
+<div class="example"><b>例</b> \(A=\{a,b\}\)，\(B=\{1,2\}\)，列出 \(A\) 到 \(B\) 的全体偏函数。
+<b>解</b>
+\[\begin{aligned}
+&f_0=\emptyset,\quad f_1=\{\langle a,1\rangle\},\quad f_2=\{\langle a,2\rangle\},\quad f_3=\{\langle b,1\rangle\},\quad f_4=\{\langle b,2\rangle\}\\
+&f_5=\{\langle a,1\rangle,\langle b,1\rangle\}\\
+&f_6=\{\langle a,1\rangle,\langle b,2\rangle\}\\
+&f_7=\{\langle a,2\rangle,\langle b,1\rangle\}\\
+&f_8=\{\langle a,2\rangle,\langle b,2\rangle\}
+\end{aligned}\]
+<b>结论</b> \(A\nrightarrow B=\{f_0,f_1,\dots,f_8\}\)，共 9 个。</div>
+<div class="note"><b>笔记边注</b> \(A=\{a,b\}\) 下红笔画线；\(f_5\sim f_8\) 各自用红线标出，它们定义域等于 \(A\)，正是下面的全函数。</div>
+<div class="supp"><b>补充讲解</b> 每个 \(x\in A\) 可以不取值或取 \(|B|\) 个值之一，所以偏函数个数为 \((|B|+1)^{|A|}=3^2=9\)；全函数个数为 \(|B|^{|A|}=2^2=4\)。</div>
+
+<h3>④ 全函数 <span class="pg">p.43</span></h3>
+<div class="def"><b>定义</b> 全函数 \(A\to B\)：★ \(\mathrm{dom}F=A\)（圈出），记 \(F:A\to B\)。
+<br>全体全函数：
+\[B^A=A\to B=\{F\mid F:A\to B\}\]</div>
+<p>上例中 \(A\to B=\{f_5,f_6,f_7,f_8\}\)。</p>
+
+<h3>⑤ 真偏函数 <span class="pg">p.43</span></h3>
+<div class="def"><b>定义</b> \(\mathrm{dom}F\subset A\)（真包含），记为 \(A\nRightarrow B\)（原页为杆上画两道竖线的箭头）：
+\[A\nRightarrow B=\{F\mid F:A\nRightarrow B\}\]</div>
+<p>上例中 \(A\nRightarrow B=\{f_0,f_1,f_2,f_3,f_4\}\)。</p>
+
+<h3>⑥ 单射、满射、双射 <span class="pg">p.43</span></h3>
+<div class="def"><b>定义</b>
+<ul>
+<li>单射：\(F\) 为单根（1 对 1）；</li>
+<li>满射：\(\mathrm{ran}F=B\)；</li>
+<li>双射：\(F\) 为单射和满射。</li>
+</ul></div>
+<div class="example"><b>例</b> \(f:A\times B\to A\)，\(\forall\langle a,b\rangle\in A\times B\)，\(f(\langle a,b\rangle)=a\)。
+<b>解</b> 每个 \(a\in A\) 都能取到，所以 \(f\) 是满射（圈出“满射”）。
+<ul>
+<li>\(|B|\gt1\)：非单射，满射但非双射；</li>
+<li>\(|B|=1\)：单射，双射。</li>
+</ul>
+右侧举例：\(A=\{a\}\)，\(B=\{b,b'\}\) 时 \(\langle a,b\rangle\) 与 \(\langle a,b'\rangle\) 都映到 \(a\)，不是单射。</div>
+<div class="note"><b>笔记边注</b> \(A\times B\) 下写“有序对集合”，定义域 \(A\times B\) 中的 \(A\) 与值域 \(A\) 都圈出，提示这是投影到第一个分量。</div>
+<div class="supp"><b>补充讲解</b> “满射”要求 \(B\ne\emptyset\)；若 \(B=\emptyset\)，\(A\times B=\emptyset\)，\(f\) 为空函数，只有 \(A=\emptyset\) 时才满。</div>
+
+<h3>⑦ 象、原象 <span class="pg">p.44</span></h3>
+<div class="def"><b>定义</b> \(f:A\to B\)，\(A'\subseteq A\)，\(B'\subseteq B\)。
+<ol>
+<li>\(A'\) 的象：\(f(A')=\{y\mid \exists x(x\in A'\land f(x)=y)\}\subseteq B\)；</li>
+<li>\(B'\) 的原象：\(f^{-1}(B')=\{x\mid \exists y(y\in B'\land f(x)=y)\}\subseteq A\)。</li>
+</ol></div>
+<div class="example"><b>例</b> \(f:\mathbb{R}\to\mathbb{R}\)，\(f(x)=x^2\)。
+<ul>
+<li>象：\(A_1=[1,3]\subseteq\mathbb{R}\)，\(A_1\) 的象为 \([1,9]\)；</li>
+<li>原象：\(B_1=[0,1]\subseteq\mathbb{R}\)，\(B_1\) 的原象为 \([-1,1]\)。</li>
+</ul>
+<figure class="fig"><svg viewBox="0 0 420 180" role="img" aria-label="y=x²的象与原象示意">
+<g stroke="currentColor" fill="none" stroke-width="1.5">
+<line x1="10" y1="150" x2="190" y2="150"/><line x1="100" y1="170" x2="100" y2="10"/>
+<path d="M40 20 Q100 260 160 20"/>
+<line x1="125" y1="150" x2="125" y2="115" stroke-dasharray="4 3"/><line x1="160" y1="150" x2="160" y2="20" stroke-dasharray="4 3"/>
+<line x1="100" y1="115" x2="125" y2="115" stroke-dasharray="4 3"/><line x1="100" y1="20" x2="160" y2="20" stroke-dasharray="4 3"/>
+<line x1="125" y1="150" x2="160" y2="150" stroke-width="4"/><line x1="100" y1="115" x2="100" y2="20" stroke-width="4"/>
+<line x1="230" y1="150" x2="410" y2="150"/><line x1="320" y1="170" x2="320" y2="10"/>
+<path d="M260 20 Q320 260 380 20"/>
+<line x1="290" y1="150" x2="290" y2="110" stroke-dasharray="4 3"/><line x1="350" y1="150" x2="350" y2="110" stroke-dasharray="4 3"/><line x1="290" y1="110" x2="350" y2="110" stroke-dasharray="4 3"/>
+<line x1="290" y1="150" x2="350" y2="150" stroke-width="4"/><line x1="320" y1="150" x2="320" y2="110" stroke-width="4"/>
+</g>
+<g fill="currentColor" font-size="14"><text x="120" y="168">1</text><text x="156" y="168">3</text><text x="86" y="120">1</text><text x="86" y="25">9</text><text x="280" y="168">−1</text><text x="346" y="168">1</text><text x="306" y="106">1</text><text x="180" y="145">x</text><text x="400" y="145">x</text></g>
+</svg><figcaption>图：两幅 \(y=x^2\) 草图（原页用红色加粗标出区间）。左图 \(x\in[1,3]\) 对应 \(y\in[1,9]\)；右图 \(y\in[0,1]\) 对应 \(x\in[-1,1]\)。</figcaption></figure></div>
+<div class="note"><b>笔记边注</b> “象”“原象”两字各自圈出；\([1,3]\) 下画波浪线；两处 \(\subseteq\mathbb{R}\) 的 \(\mathbb{R}\) 下画三角标记。</div>
+<div class="warn"><b>易错提醒</b> \(f^{-1}(B')\) 是原象集合，任何函数都有；它不表示 \(f\) 存在反函数。</div>

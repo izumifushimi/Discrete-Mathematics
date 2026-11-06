@@ -1,0 +1,85 @@
+[
+ {
+  "type": "fill",
+  "q": "\\(A=\\{a_1,a_2\\}\\)，\\(B=\\{b\\}\\)，从 \\(A\\) 到 \\(B\\) 的二元关系共有 ____ 个",
+  "answer": [
+   "4",
+   "四"
+  ],
+  "why": "\\(|A\\times B|=2\\)，子集数 \\(2^2=4\\)。"
+ },
+ {
+  "type": "fill",
+  "q": "\\(|A|=3\\)，则 \\(A\\) 上的二元关系共有 ____ 个",
+  "answer": [
+   "512",
+   "2^9"
+  ],
+  "why": "\\(|A\\times A|=9\\)，子集数 \\(2^9=512\\)。"
+ },
+ {
+  "type": "fill",
+  "q": "\\(R=\\{\\langle1,2\\rangle,\\langle3,4\\rangle,\\langle2,2\\rangle\\}\\)，则 \\(\\mathrm{fld}\\,R=\\) ____",
+  "answer": [
+   "{1,2,3,4}"
+  ],
+  "why": "dom={1,2,3}，ran={2,4}，并集 {1,2,3,4}。"
+ },
+ {
+  "type": "choice",
+  "q": "按顺序合成 \\(F\\circ G=\\{\\langle x,y\\rangle\\mid\\exists z(xFz\\land zGy)\\}\\)，\\(R_1=\\{\\langle1,2\\rangle,\\langle3,4\\rangle\\}\\)，\\(R_2=\\{\\langle2,5\\rangle,\\langle4,1\\rangle\\}\\)，则 \\(R_2\\circ R_1=\\)",
+  "options": [
+   "\\(\\{\\langle1,5\\rangle,\\langle3,1\\rangle\\}\\)",
+   "\\(\\{\\langle4,2\\rangle\\}\\)",
+   "\\(\\emptyset\\)",
+   "\\(\\{\\langle2,1\\rangle\\}\\)"
+  ],
+  "answer": 1,
+  "why": "需 \\(xR_2z\\land zR_1y\\)：\\(\\langle4,1\\rangle\\in R_2,\\langle1,2\\rangle\\in R_1\\) 得 \\(\\langle4,2\\rangle\\)；\\(\\langle2,5\\rangle\\) 无法接续。A 是 \\(R_1\\circ R_2\\)。"
+ },
+ {
+  "type": "choice",
+  "q": "同上两个关系，若改用逆序合成 \\(F\\circ G=\\{\\langle x,y\\rangle\\mid\\exists z(xGz\\land zFy)\\}\\)，则 \\(R_1\\circ R_2=\\)",
+  "options": [
+   "\\(\\{\\langle1,5\\rangle,\\langle3,1\\rangle\\}\\)",
+   "\\(\\{\\langle4,2\\rangle\\}\\)",
+   "\\(\\emptyset\\)",
+   "\\(\\{\\langle5,1\\rangle\\}\\)"
+  ],
+  "answer": 1,
+  "why": "逆序下 \\(R_1\\circ R_2\\) 先走 \\(R_2\\) 再走 \\(R_1\\)，与顺序下的 \\(R_2\\circ R_1\\) 相同。"
+ },
+ {
+  "type": "fill",
+  "q": "\\(F=\\{\\langle1,2\\rangle,\\langle2,3\\rangle,\\langle3,4\\rangle\\}\\)，\\(A=\\{2,3\\}\\)，则象 \\(F[A]=\\) ____",
+  "answer": [
+   "{3,4}",
+   "{4,3}"
+  ],
+  "why": "\\(F\\restriction A=\\{\\langle2,3\\rangle,\\langle3,4\\rangle\\}\\)，取值域 {3,4}。"
+ },
+ {
+  "type": "choice",
+  "q": "关系 \\(\\{\\langle2,1\\rangle,\\langle3,1\\rangle\\}\\) 是",
+  "options": [
+   "单根但不单值",
+   "单值但不单根",
+   "既单根又单值",
+   "既不单根也不单值"
+  ],
+  "answer": 1,
+  "why": "每个 x 只对应一个 y（单值）；y=1 对应两个 x（多对1），不单根。"
+ },
+ {
+  "type": "choice",
+  "q": "\\(R_1=\\{\\langle1,2\\rangle,\\langle3,4\\rangle\\}\\)，则 \\(R_1^{-1}\\) 为",
+  "options": [
+   "\\(\\{\\langle2,1\\rangle,\\langle4,3\\rangle\\}\\)",
+   "\\(\\{\\langle1,2\\rangle,\\langle3,4\\rangle\\}\\)",
+   "\\(\\{\\langle3,4\\rangle,\\langle1,2\\rangle\\}^{-1}\\)",
+   "\\(\\{\\langle4,3\\rangle\\}\\)"
+  ],
+  "answer": 0,
+  "why": "逆关系把每个有序对的两个分量交换。"
+ }
+]

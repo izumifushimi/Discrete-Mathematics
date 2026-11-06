@@ -1,0 +1,77 @@
+离散数学笔记转写统一规范（所有章节必须遵守）
+===================================================
+
+依据
+- 正文以用户手写笔记（dist/pages/NNN.jpg，共272页，NNN为三位页码）为唯一主要依据。
+- 指定教材：耿素云、屈婉玲等编著《离散数学》第七版。本项目无法访问该版教材全文，
+  因此不得写教材页码、教材章号、"教材第x页"之类信息；术语用国内通行写法即可。
+- source-transcripts/*.json 中已有的草稿只能作为参考，必须逐页对照原图核对，不可照抄。
+
+工作方法
+- 用 Read 工具逐页查看图片。字迹小或模糊时，用 sips 裁剪放大后再看，例如：
+    sips -c 600 1191 --cropOffset 500 0 dist/pages/045.jpg --out /tmp/<你的批次>_045a.jpg
+  （-c 高 宽，--cropOffset y x）。用完删除 /tmp 下自己的临时文件。
+- 每页底部有"分区 X.Y 的第 N 页"标签，可用于核对页码分区。
+- 不得用概述代替转写。原页上所有可辨认的定义、定理、性质、推论、条件、证明步骤、
+  例题题目/过程/结论、表格、矩阵、图、边注、箭头注释、总结都要进入正文。
+- 先完整保留原笔记内容，再做教学性整理（可调整顺序为 定义→讲解→例题→证明→易错点，
+  但不得删减内容）。
+
+输出文件（每个小节三个文件，放在 source-transcripts/sections/ 下，key 如 1.1、14.10、1.S）
+1) <key>.html   —— 小节正文 HTML 片段（不含 <html>/<body>），UTF-8。
+2) <key>.quiz.json —— 练习题数组。
+3) <key>.pages.json —— 页码处理记录数组。
+
+<key>.html 写法
+- 不要写 <h1>/<h2> 小节大标题（网站会自动显示）。知识点用 <h3>，子点用 <h4>。
+  每个 <h3> 末尾可标注页码：<h3>等值演算 <span class="pg">p.3</span></h3>
+- 数学公式一律用 MathJax TeX：行内 \( ... \)，独立公式 \[ ... \]。
+  不要用 $...$。矩阵用 \begin{pmatrix}...\end{pmatrix} 或 bmatrix，
+  推导多行用 \begin{aligned} ... \end{aligned}。量词 \forall \exists，
+  集合 \{ \}，\emptyset，\mathbb{Z} 等。HTML 中 < > & 在 TeX 里写作 \lt \gt \&。
+- 统一符号：否定 \neg，合取 \land，析取 \lor，蕴含 \to，等价 \leftrightarrow，
+  等值 \Leftrightarrow，空集 \emptyset，幂集 P(A)，关系合成 R\circ S，
+  逆关系 R^{-1}，模 n 同余 a\equiv b\pmod n。
+- 语义块（div class）：
+    <div class="def"><b>定义 x</b> ...</div>          定义
+    <div class="thm"><b>定理 / 性质 / 推论 / 引理</b> ...</div>
+    <div class="proof"><b>证明</b> ...</div>            完整证明，保留每一步
+    <div class="example"><b>例 n</b> 题目 ... <b>解</b> 过程 ... <b>结论</b> ...</div>
+    <div class="note"><b>笔记边注</b> ...</div>          原页上的批注/箭头注释
+    <div class="warn"><b>易错提醒</b> ...</div>
+    <div class="summary"><b>总结</b> ...</div>
+    <div class="supp"><b>补充讲解</b> ...</div>          你自己加的讲解，必须用此块，与原笔记区分
+    <div class="fix"><b>校订说明（p.N）</b> 原式：...；正确式：...；原因：...</div>
+    <div class="unclear"><b>待核对（p.N，位置：如"右上角第2行"）</b> 可辨认部分：...；无法辨认：...</div>
+    <div class="dup"><b>重复页说明</b> ...</div>
+- 发现笔误：保留原式信息，用 fix 块写出原式、正确式与原因，绝不悄悄改。
+- 无法辨认：用 unclear 块标出具体页码与位置；不得猜测编造，也不得整段略过。
+- 表格用 <table><thead>..</thead><tbody>..</tbody></table>，外层包 <div class="tbl">。
+- 图（关系图、哈斯图、图论图、Venn图、树等）尽量用内联 SVG 重绘：
+    <figure class="fig"><svg viewBox="0 0 W H" role="img" aria-label="简述">...</svg>
+    <figcaption>图：完整文字描述（顶点集、边集/有向边、权值、标注）</figcaption></figure>
+  保留顶点名、边、方向（用 marker 箭头）、权值、标注。SVG 使用 stroke="currentColor"、
+  fill="none"/"currentColor" 以适配主题；文字用 <text font-size="14">。不要用外部图片。
+  过于复杂的图至少给出完整等价文字描述（顶点、边列表）。
+- 不要写"本节文字正在校订""待补充"等占位语。
+
+<key>.quiz.json 格式（只允许选择题和填空题）
+[
+  {"type":"choice","q":"题干（可含 \\( TeX \\)）","options":["A项","B项","C项","D项"],
+   "answer":0,"why":"解析"},
+  {"type":"fill","q":"题干，空处写 ____","answer":["8","八"],"why":"解析"}
+]
+- answer：choice 为正确选项下标（从0开始）；fill 为可接受答案字符串数组
+  （判题时会去空格、统一全角半角、忽略大小写，请列出常见等价写法）。
+- 注意 JSON 中反斜杠要写成 \\ 。写完用 python3 -c "import json;json.load(open('...'))" 校验。
+- 每节 5–10 题（总结类小节至少 4 题），覆盖本节主要定义、定理、计算与易错点，
+  要有一定难度（计算、判断条件、反例），不能全是送分题。答案必须自己验算正确。
+
+<key>.pages.json 格式
+[
+  {"page":1,"status":"transcribed","note":"命题逻辑：联结词、真值表、公式类型、等值式"},
+  {"page":8,"status":"duplicate","note":"与第1页内容完全相同（重复页），分区标签为1.2"}
+]
+- status 取值：transcribed（已全文转写）、duplicate（重复页，note 写明与哪页重复）、
+  blank（空白页）、partial（有待核对项，note 写明位置）。
+- 本小节页码范围内每一页都必须有一条记录。

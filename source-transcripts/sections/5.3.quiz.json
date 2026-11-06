@@ -1,0 +1,11 @@
+[
+  {"type":"fill","q":"按定义 \\(\\kappa^{\\lambda}=\\operatorname{card}(L\\to K)\\)。若 \\(\\operatorname{card}K=3,\\ \\operatorname{card}L=2\\)，则 \\(\\kappa^{\\lambda}=\\) ____","answer":["9","九"],"why":"L→K 的函数个数为 |K|^{|L|}=3²=9。"},
+  {"type":"choice","q":"\\(A\\preccurlyeq\\!\\cdot\\,B\\) 的含义是：","options":["存在 A 到 B 的满射","存在 A 到 B 的单射","A⊆B","存在 B 到 A 的单射"],"answer":1,"why":"A≼·B ⟺ ∃f:A→B 单射 ⟺ A 与 B 的某个子集等势。"},
+  {"type":"choice","q":"\\(A\\preccurlyeq\\!\\cdot\\,B\\land B\\preccurlyeq\\!\\cdot\\,A\\Rightarrow A\\approx B\\) 称为：","options":["康托定理","Schröder–Bernstein 定理","连续统假设","鸽巢原理"],"answer":1,"why":"这是 Schröder–Bernstein 定理。"},
+  {"type":"choice","q":"下列哪个集合不是可数集？","options":["\\(\\mathbb{Q}\\)","\\(\\mathbb{N}\\times\\mathbb{N}\\)","\\(P(\\mathbb{N})\\)","\\(\\{0,1,2\\}\\)"],"answer":2,"why":"card P(N)=2^{ℵ0}=ℵ>ℵ0；A 为无穷集则 P(A) 不可数。"},
+  {"type":"fill","q":"\\(\\aleph_0\\cdot\\aleph+\\aleph_0=\\) ____（用 ℵ 或 ℵ0 表示）","answer":["ℵ","\\aleph","2^ℵ0","2^{ℵ0}","2^{\\aleph_0}"],"why":"无穷基数 κ·λ=κ+λ=max{κ,λ}，ℵ0·ℵ=ℵ，ℵ+ℵ0=ℵ。"},
+  {"type":"fill","q":"\\(\\aleph_0^{\\aleph_0}=2^{?}\\)，? 处填 ____","answer":["ℵ0","ℵ₀","\\aleph_0","aleph0"],"why":"κ^κ=2^κ（κ 无穷），故 ℵ0^{ℵ0}=2^{ℵ0}=ℵ。"},
+  {"type":"choice","q":"关于 \\(\\operatorname{card}\\mathbb{R}\\) 与 \\(\\aleph_1\\)，正确的是：","options":["可以证明 \\(\\operatorname{card}\\mathbb{R}=\\aleph_1\\)","可以证明 \\(\\operatorname{card}\\mathbb{R}\\gt\\aleph_1\\)","\\(\\operatorname{card}\\mathbb{R}=2^{\\aleph_0}\\) 可证，而它是否等于 \\(\\aleph_1\\) 是连续统假设，在常用公理下不可判定","\\(\\operatorname{card}\\mathbb{R}=\\aleph_0\\)"],"answer":2,"why":"ℵ=2^{ℵ0} 可证；ℵ=ℵ1 即连续统假设，与 ZFC 独立。"},
+  {"type":"choice","q":"设 \\(\\kappa\\le\\lambda\\)。下列哪个不等式需要附加条件“\\(\\kappa,\\mu\\) 不同时为 0”？","options":["\\(\\kappa+\\mu\\le\\lambda+\\mu\\)","\\(\\kappa\\cdot\\mu\\le\\lambda\\cdot\\mu\\)","\\(\\kappa^{\\mu}\\le\\lambda^{\\mu}\\)","\\(\\mu^{\\kappa}\\le\\mu^{\\lambda}\\)"],"answer":3,"why":"κ=μ=0, λ=1 时 μ^κ=0^0=1 > 0=0^1=μ^λ。"},
+  {"type":"fill","q":"\\(K_\\kappa=\\{X\\mid \\operatorname{card}X=\\kappa\\}\\)，当 \\(\\kappa=0\\) 时 \\(K_0=\\) ____","answer":["{∅}","\\{\\emptyset\\}","{空集}"],"why":"基数为 0 的集合只有空集，K0={∅}；κ≠0 时 K_κ 不是集合而是类。"}
+]

@@ -1,0 +1,64 @@
+<p>子群为群的子代数。</p>
+
+<h3>子群的定义 <span class="pg">p.212</span></h3>
+<div class="def"><b>定义（①）</b> 设 \(G\) 为群，\(H\subseteq G\)（\(H\) 为 \(G\) 的非空子集），\(H\) 关于 \(G\) 中的运算构成群，则称 \(H\) 为 \(G\) 的子群，记为 \(H\le G\)。
+\[\begin{cases}H\subset G\ (H\lt G) & \text{真子群}\\ H:\ G,\ \{e\} & \text{平凡子群}\end{cases}\]</div>
+<div class="example"><b>例</b> \(\langle\mathbb{Z},+\rangle\)，\(e=0\)：
+\[\begin{aligned}\mathbb{Z}&=\{\dots,-2,-1,0,-1,2,\dots\}\\ 2\mathbb{Z}&=\{\dots,-4,-2,0,2,4,\dots\}\end{aligned}\]
+\(\langle 2\mathbb{Z},+\rangle\)（箭头指回 \(\langle\mathbb{Z},+\rangle\)）：\(e=0\ \checkmark\)，\(\square^{-1}\ \checkmark\)（含单位元，每个元素有逆元）。</div>
+<div class="fix"><b>校订说明（p.212）</b> 原式：\(\mathbb{Z}=\{\dots,-2,-1,0,-1,2,\dots\}\)；正确式：\(\{\dots,-2,-1,0,1,2,\dots\}\)；原因：0 之后应为 1，第二个"\(-1\)"是笔误。</div>
+
+<h3>子群的判定定理 <span class="pg">p.212</span></h3>
+<div class="thm"><b>判定定理一（1）</b> 设 \(G\) 为群，\(H\) 为 \(G\) 的非空子集，则
+\[H\le G\ \Leftrightarrow\ \forall a,b\in H,\ ab\in H\ \text{且}\ a^{-1}\in H\]
+（\(H\le G\) 即 \(H\) 为 \(G\) 的子群）。</div>
+<div class="thm"><b>判定定理二（2）</b> \(H\le G\ \Leftrightarrow\ \forall a,b\in H,\ ab^{-1}\in H\)。</div>
+<div class="thm"><b>判定定理三（3）</b> 设 \(G\) 为群，\(H\) 为 \(G\) 的<u>有限</u>非空子集，则
+\[H\le G\ \Leftrightarrow\ \forall a,b\in H,\ ab\in H.\]</div>
+<div class="supp"><b>补充讲解</b> 定理三只适用于有限子集：在 \(\langle\mathbb{Z},+\rangle\) 中，\(\mathbb{N}\) 对加法封闭但不是子群（没有负数作逆元）。</div>
+
+<h3>生成子群 <span class="pg">p.213</span></h3>
+<div class="def"><b>（③-1）由 \(a\) 生成的子群</b> \(G\) 为群，\(a\in G\)：
+\[\langle a\rangle=\{a^k\mid k\in\mathbb{Z}\}\]
+（\(k\in\mathbb{Z}\) 下画波浪线）。
+\[\cdots\ a^{-3}\ a^{-2}\ a^{-1}\ a^0\ a^1\ a^2\ a^3\ \cdots\ \Longrightarrow\ \langle a\rangle\le G\]
+原页在 \(a^0\) 上方写 \(a\in G\) 并画向下箭头。</div>
+<div class="example"><b>例</b> 整数加群 \(\langle\mathbb{Z},+\rangle\)：
+\[\langle 2\rangle=\{2k\mid k\in\mathbb{Z}\}=2\mathbb{Z}=\{\dots,-4,-2,0,2,4,\dots\}\]
+\(2\in\mathbb{Z}\)，各次"幂"依次为
+\[\begin{array}{ccccccc}\cdots 2^{-2}&2^{-1}&2^{0}&2^{1}&2^{2}&2^{3}\cdots\\ &&e&&&\\ \cdots -6\ \ -4&-2&0&2&4&6\cdots\end{array}\]
+（"幂"一行用椭圆圈出，\(2^0\) 下注 \(e\)。）</div>
+<div class="warn"><b>易错提醒</b> 在加群中 \(2^k\) 表示 \(k\) 个 2 相加，即 \(2k\)，不是普通乘方；\(2^0=e=0\)，\(2^{-1}=-2\)。（原页数值行的对齐与幂一行并非逐项对应，按 \(2^k=2k\) 理解。）</div>
+
+<div class="def"><b>（③-2）由 \(B\) 生成的子群</b> \(B\subseteq G\)：
+\[\langle B\rangle=\bigcap\{H\mid H\le G,\ B\subseteq H\}\]
+即所有包含 \(B\) 的子群 \(H_1,H_2,H_3,\dots\) 的交（\(\bigcap H_1,H_2,H_3\cdots\)）。
+\[\langle B\rangle=\{b_1^{e_1}b_2^{e_2}\cdots b_n^{e_n}\mid b_i\in B,\ e_i=\pm1,\ i=1,2,\dots,n,\ n\in\mathbb{Z}^+\}\]
+（第二式用大方框框出，左侧画 \(\otimes\) 记号表示重点。）</div>
+<figure class="fig"><svg viewBox="0 0 260 200" role="img" aria-label="多个含B的子群相交示意图">
+<ellipse cx="110" cy="80" rx="80" ry="55" stroke="currentColor" fill="none"/>
+<ellipse cx="140" cy="95" rx="85" ry="60" stroke="currentColor" fill="none"/>
+<ellipse cx="115" cy="120" rx="70" ry="65" stroke="currentColor" fill="none"/>
+<ellipse cx="125" cy="98" rx="18" ry="13" stroke="currentColor" fill="none"/>
+<text x="119" y="103" font-size="14" fill="currentColor">B</text>
+<text x="95" y="38" font-size="14" fill="currentColor">H1</text>
+<text x="210" y="70" font-size="14" fill="currentColor">H2</text>
+<text x="75" y="170" font-size="14" fill="currentColor">H3</text>
+</svg><figcaption>图：三个相互交叠的子群 \(H_1,H_2,H_3\) 都包含小圈 \(B\)；它们（以及所有包含 \(B\) 的子群）的公共部分就是 \(\langle B\rangle\)。</figcaption></figure>
+<div class="supp"><b>补充讲解</b> 交集是包含 \(B\) 的最小子群；第二种写法用有限乘积具体描述了这个最小子群。\(B=\{a\}\) 时就退化为 \(\langle a\rangle\)。</div>
+
+<h3>群的中心 <span class="pg">p.214</span></h3>
+<div class="def"><b>（3）中心</b> 设 \(G\) 为群，\(C\) 集合为 \(G\) 中所有<u>可交换</u>的元素的集合：
+\[C=\{a\mid a\in G\land\forall x\in G\,(ax=xa)\}\]
+\(\therefore\ C\) 为 \(G\) 的中心（也为子群）。</div>
+<div class="note"><b>笔记边注</b> 红色：\(\forall x\in G(ax=xa)\) 下画红波浪线，箭头标 \(e\)：\(\forall x\in G\,(ex=xe)\ \checkmark\)，即单位元一定在中心里。</div>
+<div class="example"><b>例</b> 若 \(G\) 为阿贝尔群，则 \(G\) 为 \(G\) 的中心；对某些非交换群 \(G\)，中心为 \(\{e\}\)。</div>
+<div class="proof"><b>证明（中心是子群）</b> 设群 \(G\)，中心为 \(C\)。
+<p>由于 \(e\in C\)，\(C\) 非空。</p>
+<p>任取 \(a,b\in C\)，要证明 \(ab^{-1}\in C\)，即 \(ab^{-1}\) 可交换（红圈），也就是证明：
+\[\forall x\in G,\quad (ab^{-1})x=x(ab^{-1}).\]</p>
+<p>则 \(\forall x\in G\)：
+\[\begin{aligned}(ab^{-1})x&=ab^{-1}(x^{-1})^{-1}\\&\overset{(ab)^{-1}=b^{-1}a^{-1}}{=\!=}a(x^{-1}b)^{-1}\\&\overset{b\in C,\ x^{-1}b=bx^{-1}}{=\!=}a(bx^{-1})^{-1}\\&=axb^{-1}\\&\overset{a\in C}{=\!=}(xa)b^{-1}=x(ab^{-1})\end{aligned}\]
+红色箭头把最后结果指回待证式。由判定定理二，\(C\le G\)。</p></div>
+<div class="note"><b>笔记边注</b> 第二个等号下方小字原写作"\(bx,xb=bx\)"，意为 \(b\) 与任意元素（此处为 \(x^{-1}\)）可交换。</div>
+<div class="supp"><b>补充讲解</b> \((bx^{-1})^{-1}=(x^{-1})^{-1}b^{-1}=xb^{-1}\)，所以第四行为 \(axb^{-1}\)。非交换群中心为 \(\{e\}\) 的例子：三次对称群 \(S_3\)。</div>

@@ -1,0 +1,33 @@
+<h3>同态（映射） <span class="pg">p.199</span></h3>
+<div class="def"><b>定义 ① 同态</b> 设 \(V_1=\langle A,\circ\rangle\)，\(V_2=\langle B,*\rangle\) 是同类型的代数系统。若 \(f:A\to B\)，且 \(\forall x,y\in A\)，都有
+\[f(x\circ y)=f(x)*f(y)\]
+则称 \(f\) 为 \(V_1\) 到 \(V_2\) 的<b>同态</b>。</div>
+<div class="note"><b>笔记边注</b> 等式 \(f(x\circ y)=f(x)*f(y)\) 下画红色波浪线并打问号“？”；右侧又用红笔重写一遍并在 \(*\) 下标 △，提示注意两边用的是不同系统的运算。</div>
+<div class="supp"><b>补充讲解</b> 左边先在 \(V_1\) 中用 \(\circ\) 运算再映射；右边先映射再在 \(V_2\) 中用 \(*\) 运算。“先算后映”等于“先映后算”。</div>
+
+<div class="example"><b>例</b> \(V_1=\langle\mathbb{Z}_3,\oplus_3\rangle\)，\(\mathbb{Z}_3=\{0,1,2\}\)；\(V_2=\langle A,\oplus_6\rangle\)，\(A=\{0,2,4\}\)。
+<div class="tbl"><table><thead><tr><th>\(\oplus_3\)</th><th>0</th><th>1</th><th>2</th></tr></thead>
+<tbody><tr><th>0</th><td>0</td><td>1</td><td>2</td></tr>
+<tr><th>1</th><td>1</td><td>2</td><td>0</td></tr>
+<tr><th>2</th><td>2</td><td>0</td><td>1</td></tr></tbody></table></div>
+<div class="tbl"><table><thead><tr><th>\(\oplus_6\)</th><th>0</th><th>2</th><th>4</th></tr></thead>
+<tbody><tr><th>0</th><td>0</td><td>2</td><td>4</td></tr>
+<tr><th>2</th><td>2</td><td>4</td><td>0</td></tr>
+<tr><th>4</th><td>4</td><td>0</td><td>2</td></tr></tbody></table></div>
+<b>结论</b> 两表结构一致，故 \(f=\{\langle 0,0\rangle,\langle 1,2\rangle,\langle 2,4\rangle\}\)（打星号）是 \(V_1\) 到 \(V_2\) 的同态。</div>
+<div class="supp"><b>补充讲解</b> 验证一例：\(f(1\oplus_3 2)=f(0)=0\)，\(f(1)\oplus_6 f(2)=2\oplus_6 4=0\)。即 \(f(x)=2x\)，且 \(f\) 是双射，因此实际上是同构。</div>
+
+<h3>同态的分类 <span class="pg">p.199–200</span></h3>
+<div class="def"><b>定义 ②</b> \(f\)（\(V_1\) 到 \(V_2\) 的同态映射）：
+<br>单射 —— 单同态；
+<br>满射 —— 满同态 \(\Rightarrow\)（\(V_2\) 为 \(V_1\) 的<b>同态像</b>，打星号），记 \(V_2=f(V_1)\)（圈出并打星号）；
+<br>双射 —— 同构，记 \(V_1\cong V_2\)。</div>
+<div class="def"><b>定义（方框）</b> \(f:V\to V\)，称为<b>自同态</b>，分为：单自同态、满自同态、自同构。</div>
+
+<h3>同态的性质 <span class="pg">p.200</span></h3>
+<div class="thm"><b>性质 ③</b>
+<br>1）同态的合成为同态：
+\[f:V_1\to V_2,\ g:V_2\to V_3\ \Rightarrow\ g\circ f:V_1\to V_3\]
+2）\(f:V_1\to V_2\)（\(V_2\) 红框，红注“同态像”），同态像保留：交换、结合、幂等、分配、吸收；单位元、零元、逆元。
+<br>右侧红笔划去“消去”：消去律不一定保留。</div>
+<div class="supp"><b>补充讲解</b> 性质2）中“\(V_2\)”指同态像 \(f(V_1)\)；若 \(f\) 不是满射，相应性质只在像 \(f(V_1)\) 上成立，不能推广到整个 \(B\)。单位元 \(e\) 映为 \(f(e)\) 是像中的单位元，零元、逆元同理（\(f(x^{-1})=f(x)^{-1}\)）。</div>

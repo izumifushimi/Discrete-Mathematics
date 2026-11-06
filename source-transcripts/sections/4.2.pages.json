@@ -1,0 +1,7 @@
+[
+ {"page":51,"status":"transcribed","note":"4.2：自然数的集合运算（交、并、差、广义并交、∈与⊆链）、自然数集N=∩D、后继函数开头"},
+ {"page":52,"status":"partial","note":"后继函数σ取值、<N,σ,0>为Peano系统五条、数学归纳法步骤。待核对：“目标”行右侧括号中两三个字"},
+ {"page":53,"status":"transcribed","note":"定理1（自然数的元素都是它的子集）及归纳证明 i)、ii) 全部步骤"},
+ {"page":54,"status":"transcribed","note":"定理1证明结尾、σ为单射的证明、m+∈n+⇔m∈n、n∉n、∅属于非0自然数、三歧性（前半）"},
+ {"page":55,"status":"transcribed","note":"仅顶部右侧“恰有一式成立”（三歧性定理结尾），其余空白"}
+]

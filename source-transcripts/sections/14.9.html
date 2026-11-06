@@ -1,0 +1,48 @@
+<h3>① 奇置换 / 偶置换 <span class="pg">p.227</span></h3>
+<div class="def"><b>定义</b> 把 \(n\) 元置换分解为对换之积：
+<ul><li>若为奇数个对换之积，称为奇置换；</li><li>若为偶数个对换之积，称为偶置换。</li></ul></div>
+<div class="supp"><b>补充讲解</b> 同一个置换的对换分解不唯一，但所含对换个数的奇偶性不变，所以奇/偶置换的定义是确定的。由 14.8，\(k\) 阶轮换是 \(k-1\) 个对换之积，因此 \(k\) 为奇数的轮换是偶置换。</div>
+
+<h3>② n 元对称群、n 元交错群 <span class="pg">p.227–229</span></h3>
+<div class="def"><b>定义（n 元对称群）</b> 设有 \(n\) 元置换，所有 \(n\) 元置换构成集合 \(S_n\)。且 \(n\) 元置换与 \(n\) 元置换的（复合）积 \(\sigma_1\circ\sigma_2\) 仍为 \(n\) 元置换。由此构造一个群 \(\langle S_n,\circ\rangle\)：\(S_n\) 为全部 \(n\) 元置换，\(\circ\) 为复合。</div>
+<div class="example"><b>例</b> 3 元置换，设 \(S=\{1,2,3\}\)，全部 3 元置换为：
+\[\begin{aligned}
+&(1)\ \sigma_1=\begin{pmatrix}1&2&3\\1&2&3\end{pmatrix}=(1) &\qquad &(2)\ \sigma_2=\begin{pmatrix}1&2&3\\2&1&3\end{pmatrix}=(1\,2)\\
+&(3)\ \sigma_3=\begin{pmatrix}1&2&3\\3&2&1\end{pmatrix}=(1\,3) & &(4)\ \sigma_4=\begin{pmatrix}1&2&3\\1&3&2\end{pmatrix}=(2\,3)\\
+&(5)\ \sigma_5=\begin{pmatrix}1&2&3\\2&3&1\end{pmatrix}=(1\,2\,3) & &(6)\ \sigma_6=\begin{pmatrix}1&2&3\\3&2&1\end{pmatrix}=(1\,3\,2)
+\end{aligned}\]
+原页把右侧轮换记号一列用红线框起，红色箭头指向圈出的 \(S_n\)，并红笔注"6×6"（即运算表为 6×6）。</div>
+<div class="fix"><b>校订说明（p.228 顶部）</b> 原式：\(\sigma_6=\begin{pmatrix}1&2&3\\3&2&1\end{pmatrix}=(1\,3\,2)\)；正确式：\(\sigma_6=\begin{pmatrix}1&2&3\\3&1&2\end{pmatrix}=(1\,3\,2)\)；原因：\((1\,3\,2)\) 表示 \(1\mapsto3,\ 3\mapsto2,\ 2\mapsto1\)，下行应为 3 1 2；原写的下行 3 2 1 与 \(\sigma_3=(1\,3)\) 相同。</div>
+
+<h4>\(S_3\) 的运算表 <span class="pg">p.228</span></h4>
+<div class="note"><b>笔记边注</b> 此处原页贴有一张印刷的 \(S_3\) 运算表。红笔框出行/列中的 (1)、(123)、(132)，并用红线划掉 (12)、(13)、(23) 所在的行与列，留下的部分即后面 \(A_3\) 的运算表。下表为按本笔记"先左后右"约定逐项验算后的结果（行元素在左）。</div>
+<div class="tbl"><table><thead><tr><th>\(\circ\)</th><th>(1)</th><th>(12)</th><th>(13)</th><th>(23)</th><th>(123)</th><th>(132)</th></tr></thead><tbody>
+<tr><th>(1)</th><td>(1)</td><td>(12)</td><td>(13)</td><td>(23)</td><td>(123)</td><td>(132)</td></tr>
+<tr><th>(12)</th><td>(12)</td><td>(1)</td><td>(123)</td><td>(132)</td><td>(13)</td><td>(23)</td></tr>
+<tr><th>(13)</th><td>(13)</td><td>(132)</td><td>(1)</td><td>(123)</td><td>(23)</td><td>(12)</td></tr>
+<tr><th>(23)</th><td>(23)</td><td>(123)</td><td>(132)</td><td>(1)</td><td>(12)</td><td>(13)</td></tr>
+<tr><th>(123)</th><td>(123)</td><td>(23)</td><td>(12)</td><td>(13)</td><td>(132)</td><td>(1)</td></tr>
+<tr><th>(132)</th><td>(132)</td><td>(13)</td><td>(23)</td><td>(12)</td><td>(1)</td><td>(123)</td></tr></tbody></table></div>
+
+<div class="proof"><b>证明（\(\langle S_n,\circ\rangle\) 是群，原页圈"群"字后列出）</b>
+<ul><li>封闭：\(\forall\sigma_1,\sigma_2\in S_n\)，\(\sigma_1\circ\sigma_2\in S_n\)；</li>
+<li>结合律：\((\sigma_1\circ\sigma_2)\circ\sigma_3=\sigma_1\circ(\sigma_2\circ\sigma_3)\)；</li>
+<li>\((1)\) 为单位元，\(e=(1)\)；</li>
+<li>任元素存在逆元 \(\sigma^{-1}\)，\(\sigma\sigma^{-1}=e\)。</li></ul>
+∴ 为 \(n\) 元对称群。</div>
+<div class="note"><b>笔记边注（p.228 右侧，红笔）</b> \(S_3\) 中元素与逆元的对应：\((1)\text{—}(1)\)，\((12)\text{—}(12)\)，\((13)\text{—}(13)\)，\((23)\text{—}(23)\)，\((123)\text{—}(132)\)。</div>
+<figure class="fig"><svg viewBox="0 0 440 150" role="img" aria-label="n元对称群的子群称为n元置换群，An是其中之一">
+<defs><marker id="a149" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+<g font-size="14" fill="currentColor"><text x="10" y="25">n元对称群</text><text x="120" y="70">子群</text><text x="190" y="115">n元置换群</text><text x="330" y="70">An（n元交错群）</text></g>
+<g fill="none" stroke="currentColor"><ellipse cx="225" cy="110" rx="60" ry="30"/>
+<path d="M60,35 Q90,80 180,100" marker-end="url(#a149)"/><path d="M280,95 Q300,75 325,68" marker-end="url(#a149)"/></g></svg>
+<figcaption>图：\(n\) 元对称群的子群称为 \(n\) 元置换群；红色箭头由"n元置换群"指向"\(A_n\)（n元交错群）"。</figcaption></figure>
+<div class="example"><b>例</b> \(S_3=\{(1),(12),(13),(23),(123),(132)\}\)，6 个置换：
+<ul><li>\((1),(123),(132)\)：偶置换（原页打 √）；</li><li>\((12),(13),(23)\)：奇置换（原页打 ×，上方注"奇"）。</li></ul></div>
+<div class="def"><b>定义（n 元交错群）</b> \(A_n\) 为 \(S_n\) 的子群，为所有 \(n\) 元偶置换的集合。</div>
+<div class="example"><b>例</b> \(A_3=\{(1),(123),(132)\}\)，运算表：
+<div class="tbl"><table><thead><tr><th>\(\circ\)</th><th>(1)</th><th>(123)</th><th>(132)</th></tr></thead><tbody>
+<tr><th>(1)</th><td>(1)</td><td>(123)</td><td>(132)</td></tr>
+<tr><th>(123)</th><td>(123)</td><td>(132)</td><td>(1)</td></tr>
+<tr><th>(132)</th><td>(132)</td><td>(1)</td><td>(123)</td></tr></tbody></table></div></div>
+<div class="supp"><b>补充讲解</b> 奇置换全体不构成子群：不含单位元 (1)，且两个奇置换之积是偶置换，例如 \((12)(13)=(123)\)。一般地 \(|S_n|=n!\)，\(|A_n|=n!/2\)（\(n\ge2\)）。</div>

@@ -1,0 +1,40 @@
+<h3>半群到变换半群的同态 <span class="pg">p.204–205</span></h3>
+<div class="thm"><b>定理 ①</b> 设 \(V=\langle S,*\rangle\) 为半群，\(V'=\langle S^S,\circ\rangle\)，\(\circ\) 为合成，则 \(V'\) 也是半群，且存在 \(V\) 到 \(V'\) 的同态。
+<br>附：\(S^S=\{f\mid f:S\to S\}\)，即 \(S\to S\) 上全体映射构成的集合；\(V'\) 中的二元运算为合成 \((g\circ f)\)。</div>
+<div class="proof"><b>证明</b> \(V=\langle S,*\rangle\)，\(a\in S\)；\(V'=\langle S^S,\circ\rangle\)，\(f_a\in S^S\)，其中
+\[f_a:S\to S,\quad f_a(x)=a*x\]
+构造同态：\(\varphi:S\to S^S\)，\(\varphi(a)=f_a\)。
+<br>要证明 \(\varphi\) 为同态：\(a,b\in S\)，\(\varphi(a*b)=\varphi(a)\circ\varphi(b)\)，即
+\[f_{a*b}=f_a\circ f_b\]
+左边 \(=f_{a*b}(x)=a*b*x\)；
+<br>右边 \(=(f_a\circ f_b)(x)=f_a(f_b(x))=f_a(b*x)=a*(b*x)=a*b*x\)。
+<br>\(\therefore\ f_{a*b}=f_a\circ f_b\)，\(\therefore\ \varphi\) 是同态。</div>
+<div class="supp"><b>补充讲解</b> 这里 \(f_a\circ f_b\) 表示先作用 \(f_b\) 再作用 \(f_a\)。“\(a*b*x\)”省略括号是因为 \(*\) 可结合。\(V'\) 是半群，因为映射合成满足结合律且封闭。</div>
+
+<h3>独异点的表示定理 <span class="pg">p.205</span></h3>
+<div class="thm"><b>定理 ②</b> 设 \(V=\langle S,*,e\rangle\) 为独异点，则存在 \(T\subseteq S^S\)，使得 \(\langle S,*,e\rangle\) 同构于 \(\langle T,\circ,I_S\rangle\)。</div>
+<div class="note"><b>笔记边注</b> \(e\) 下红△标“0”（例中单位元为0）；\(I_S\) 红圈，下注“\(I_S\)”“\(f_0\)”，即单位元对应恒等映射 \(f_0\)。</div>
+<div class="supp"><b>补充讲解</b> 取 \(T=\{f_a\mid a\in S\}\)，\(\varphi(a)=f_a\)。由定理①为同态；\(f_a(e)=a\)，所以 \(a\ne b\) 时 \(f_a\ne f_b\)，\(\varphi\) 单射；到 \(T\) 为满射；\(\varphi(e)=f_e=I_S\)。</div>
+
+<h3>例：模3加法独异点 <span class="pg">p.205–206</span></h3>
+<div class="example"><b>例</b> \(S=\mathbb{Z}_3=\{0,1,2\}\)，独异点 \(V=\langle S,\oplus_3,0\rangle\)，\(x\oplus_3 y=(x+y)\bmod 3\)。\(0\oplus_3 x=x\)（箭头示意交换后亦成立）。
+<div class="tbl"><table><thead><tr><th>\(\oplus_3\)</th><th>0</th><th>1</th><th>2</th></tr></thead>
+<tbody><tr><th>0</th><td>0</td><td>1</td><td>2</td></tr>
+<tr><th>1</th><td>1</td><td>2</td><td>0</td></tr>
+<tr><th>2</th><td>2</td><td>0</td><td>1</td></tr></tbody></table></div>
+<b>解</b> \(S^S=\{f_0,f_1,\dots,f_{26}\}\)。（边注 \(S\to S\)：每个元素 0、1、2 各有 3 种像，\(3\times3\times3=27\) 种。）
+\[\begin{aligned}
+f_0&=\{\langle 0,0\rangle,\langle 1,1\rangle,\langle 2,2\rangle\}\\
+f_1&=\{\langle 0,1\rangle,\langle 1,2\rangle,\langle 2,0\rangle\}\\
+f_2&=\{\langle 0,2\rangle,\langle 1,0\rangle,\langle 2,1\rangle\}
+\end{aligned}\]
+\(T=\{f_0,f_1,f_2\}\subseteq S^S\)。
+<br>\(\varphi:S\to T\)，\(\varphi(0)=f_0\)，\(\varphi(1)=f_1\)，\(\varphi(2)=f_2\)；\(S=\{0,1,2\}\)，\(T=\{f_0,f_1,f_2\}\)。
+<div class="tbl"><table><thead><tr><th>\(\circ\)</th><th>\(f_0\)</th><th>\(f_1\)</th><th>\(f_2\)</th></tr></thead>
+<tbody><tr><th>\(f_0\)</th><td>\(f_0\)</td><td>\(f_1\)</td><td>\(f_2\)</td></tr>
+<tr><th>\(f_1\)</th><td>\(f_1\)</td><td>\(f_2\)</td><td>\(f_0\)</td></tr>
+<tr><th>\(f_2\)</th><td>\(f_2\)</td><td>\(f_0\)</td><td>\(f_1\)</td></tr></tbody></table></div>
+<b>结论</b> \(\oplus_3\) 运算表 \(\Leftrightarrow\) \(\circ\) 运算表，二者在 \(\varphi\) 下逐项对应，\(\langle S,\oplus_3,0\rangle\cong\langle T,\circ,f_0\rangle\)。</div>
+<div class="note"><b>笔记边注（p.205 右侧）</b> 在 \(T=\{f_0,f_1,f_2\}\subseteq S^S\) 上方写有“\(T=S^S\)”（带下划线）；下方画两个圆分别标 \(S\)、\(T\)，表示两集合一一对应。</div>
+<div class="supp"><b>补充讲解</b> 上方“\(T=S^S\)”应理解为 \(T\) 取自 \(S^S\)（\(T\subseteq S^S\)），\(T\) 只有3个元素，不等于全部27个映射。</div>
+<div class="fix"><b>校订说明（p.205）</b> 原式：\(S=\mathbb{Z}_2=\{0,1,2\}\)；正确式：\(S=\mathbb{Z}_3=\{0,1,2\}\)；原因：\(\mathbb{Z}_2=\{0,1\}\)，且本例运算是 \(\oplus_3\)。</div>

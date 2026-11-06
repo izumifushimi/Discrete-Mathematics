@@ -1,0 +1,7 @@
+[
+ {"page":82,"status":"transcribed","note":"无序积、无向图与有向图定义及两个例图"},
+ {"page":83,"status":"partial","note":"n阶图、有限图、零图、平凡图、空图、标定/非标定图、底图、相邻；右上角“6阶”小图结构待核对"},
+ {"page":84,"status":"transcribed","note":"邻接、关联（环关联2次）、环、孤立点、平行边判断、邻域与闭邻域例（闭邻域记号 fix）"},
+ {"page":85,"status":"transcribed","note":"关联集、后继/前驱、有向邻域例、度的定义与例"},
+ {"page":86,"status":"transcribed","note":"出度、入度、最小度、最大度及有向图四种"}
+]

@@ -1,0 +1,128 @@
+<p>原笔记标题“6.4 通路与回路”，记录时间 2025年8月19日 0:20。</p>
+
+<h3>① 通路 <span class="pg">p.98</span></h3>
+<figure class="fig"><svg viewBox="0 0 460 90" role="img" aria-label="通路示意：顶点与边交替">
+<g stroke="currentColor" fill="none">
+<circle cx="30" cy="45" r="4"/><circle cx="110" cy="45" r="4"/><circle cx="190" cy="45" r="4"/><circle cx="330" cy="45" r="4"/><circle cx="420" cy="45" r="4"/>
+<line x1="34" y1="45" x2="106" y2="45"/><line x1="114" y1="45" x2="186" y2="45"/><line x1="194" y1="45" x2="230" y2="45"/>
+<line x1="235" y1="45" x2="285" y2="45" stroke-dasharray="4 6"/><line x1="290" y1="45" x2="326" y2="45"/><line x1="334" y1="45" x2="416" y2="45"/>
+</g>
+<g font-size="14" fill="currentColor">
+<text x="18" y="25">v_{i0}</text><text x="98" y="25">v_{i1}</text><text x="178" y="25">v_{i2}</text><text x="305" y="25">v_{i(l-1)}</text><text x="408" y="25">v_{il}</text>
+<text x="58" y="72">e_{j1}</text><text x="138" y="72">e_{j2}</text><text x="362" y="72">e_{jl}</text>
+</g></svg><figcaption>图：顶点 \(v_{i_0},v_{i_1},v_{i_2},\dots,v_{i_{l-1}},v_{i_l}\) 依次排成一行，相邻两点之间的边依次为 \(e_{j_1},e_{j_2},\dots,e_{j_l}\)（原笔记在 \(e_{j_1},e_{j_2},e_{j_l}\) 下各加三角记号）。</figcaption></figure>
+<div class="def"><b>定义（通路）</b> 设
+\[ e_{j_r}=(v_{i_{r-1}},v_{i_r}),\quad r=1,2,\dots,l \]
+则顶点与边的交替序列
+\[ \Gamma=v_{i_0}e_{j_1}v_{i_1}e_{j_2}v_{i_2}\cdots e_{j_l}v_{i_l} \]
+称为通路（原笔记在 \(\Gamma\) 下画波浪线）。
+\[ |\Gamma|=l\ (\text{通路长度}),\quad v_{i_0}\ \text{为起点},\quad v_{i_l}\ \text{为终点} \]</div>
+<div class="supp"><b>补充讲解</b> 有向图中要求 \(e_{j_r}=\langle v_{i_{r-1}},v_{i_r}\rangle\)，即沿弧的方向走。长度 \(l\) 是边的条数（重复经过的边重复计数），不是顶点个数。</div>
+
+<h3>② 回路 <span class="pg">p.98</span></h3>
+<div class="def"><b>定义（回路，closed walk）</b> 若通路满足 \(v_{i_0}=v_{i_l}\)（原笔记在此式下画波浪线），即起点与终点相同，则称为回路。</div>
+<figure class="fig"><svg viewBox="0 0 360 170" role="img" aria-label="回路示意：首尾通过 e_jl 相连">
+<g stroke="currentColor" fill="none">
+<circle cx="30" cy="40" r="4"/><circle cx="110" cy="40" r="4"/><circle cx="190" cy="40" r="4"/><circle cx="310" cy="40" r="4"/>
+<line x1="34" y1="40" x2="106" y2="40"/><line x1="114" y1="40" x2="186" y2="40"/>
+<line x1="210" y1="40" x2="270" y2="40" stroke-dasharray="4 6"/>
+<path d="M30 44 C30 170 310 170 310 44"/>
+</g>
+<g font-size="14" fill="currentColor">
+<text x="18" y="22">v_{i0}</text><text x="98" y="22">v_{i1}</text><text x="178" y="22">v_{i2}</text><text x="285" y="22">v_{i(l-1)}</text>
+<text x="55" y="62">e_{j1}</text><text x="135" y="62">e_{j2}</text><text x="155" y="160">e_{jl}</text>
+</g></svg><figcaption>图：顶点 \(v_{i_0},v_{i_1},v_{i_2},\dots,v_{i_{l-1}}\) 排成一行，边 \(e_{j_1},e_{j_2},\dots\) 依次相连，最后一条边 \(e_{j_l}\) 画成下方大弧，从 \(v_{i_{l-1}}\) 回到 \(v_{i_0}\)。</figcaption></figure>
+<div class="note"><b>笔记边注</b> 本页右侧（“回路”一行右方）有两个孤立的笔画，形似字母“l”，上下各一个，与正文无连线，未见其他含义。</div>
+
+<h3>③ 简单、复杂、初级通路/回路 <span class="pg">p.98</span></h3>
+<div class="def"><b>定义</b> 原笔记用大括号并列：
+<div class="tbl"><table><thead><tr><th>名称</th><th>条件</th></tr></thead><tbody>
+<tr><td>简单 通路/回路</td><td>没有重复边</td></tr>
+<tr><td>复杂 通路/回路</td><td>有重复边</td></tr>
+<tr><td>初级 通路/回路</td><td>没有重复顶点</td></tr>
+</tbody></table></div></div>
+<div class="supp"><b>补充讲解</b> 初级通路又称路径；初级回路（除起点与终点重合外无重复顶点）又称圈。初级一定是简单的（没有重复顶点就不会有重复边），反之不成立：例如“8”字形回路无重复边，但中间顶点经过两次，是简单回路而不是初级回路。</div>
+
+<h3>④ 通路/回路的表示 <span class="pg">p.99</span></h3>
+<div class="def"><b>表示法</b>
+\[ e_{j_1}e_{j_2}\cdots e_{j_l}\quad(\text{只用边}) \]
+\[ (\text{简单图})\quad v_{i_0}v_{i_1}\cdots v_{i_{l-1}}v_{i_l} \]</div>
+<div class="supp"><b>补充讲解</b> 只写顶点序列要求是简单图：没有平行边时，相邻两点确定唯一的边。有平行边的图不能只写顶点。</div>
+
+<h3>⑤ 圈、周长与围长 <span class="pg">p.99–100</span></h3>
+<div class="def"><b>定义（圈）</b> 长度为 \(l\) 的圈：长度即边数量（原笔记“圈”字下划线，“边数量”下划线）。</div>
+<figure class="fig"><svg viewBox="0 0 160 140" role="img" aria-label="一个圈">
+<g stroke="currentColor" fill="none">
+<polygon points="80,15 125,35 135,85 105,120 55,120 25,85 35,35"/>
+<circle cx="80" cy="15" r="4"/><circle cx="125" cy="35" r="4"/><circle cx="135" cy="85" r="4"/><circle cx="105" cy="120" r="4"/><circle cx="55" cy="120" r="4"/><circle cx="25" cy="85" r="4"/><circle cx="35" cy="35" r="4"/>
+</g></svg><figcaption>图：若干顶点首尾相接围成一个环形，示意一个圈（原笔记下方一段用省略点表示顶点个数任意）。</figcaption></figure>
+<div class="note"><b>笔记边注</b> 原笔记从“圈”引一条大括号状的弧线指向下面的 1）周长，表示周长、围长都是基于圈的概念。</div>
+
+<h4>1）周长 <span class="pg">p.99</span></h4>
+<div class="def"><b>定义（周长）</b> \(G\) 是含圈的无向简单图，
+\[ c(G)=\text{最长圈长度} \]
+（原笔记在 \(G\) 下划线。）</div>
+<div class="thm"><b>结论</b>
+\[ c(K_n)=n\ (n\ge 3),\qquad c(K_{n,n})=2n \]
+\[ K_{3,3}:\ c=6 \]
+（原笔记在 \(c(K_n)=n\) 一行下划线，\(6\) 下画红线。）</div>
+<figure class="fig"><svg viewBox="0 0 400 150" role="img" aria-label="K4 中的最长圈与 K3,3">
+<g stroke="currentColor" fill="none">
+<line x1="30" y1="30" x2="110" y2="110"/><line x1="110" y1="30" x2="30" y2="110"/>
+<rect x="30" y="30" width="80" height="80" stroke-width="2.5" stroke-dasharray="none"/>
+<circle cx="30" cy="30" r="4"/><circle cx="110" cy="30" r="4"/><circle cx="30" cy="110" r="4"/><circle cx="110" cy="110" r="4"/>
+<line x1="200" y1="30" x2="260" y2="120"/><line x1="200" y1="30" x2="320" y2="120"/><line x1="200" y1="30" x2="200" y2="120"/>
+<line x1="260" y1="30" x2="200" y2="120"/><line x1="260" y1="30" x2="260" y2="120"/><line x1="260" y1="30" x2="320" y2="120"/>
+<line x1="320" y1="30" x2="200" y2="120"/><line x1="320" y1="30" x2="260" y2="120"/><line x1="320" y1="30" x2="320" y2="120"/>
+<circle cx="200" cy="30" r="4"/><circle cx="260" cy="30" r="4"/><circle cx="320" cy="30" r="4"/><circle cx="200" cy="120" r="4"/><circle cx="260" cy="120" r="4"/><circle cx="320" cy="120" r="4"/>
+</g>
+<g font-size="14" fill="currentColor"><text x="60" y="20">K4</text><text x="2" y="22">起/终</text><text x="245" y="145">K3,3</text></g>
+</svg><figcaption>图：左为 \(K_4\)，原笔记用红线描出外围四边形 \(v_1v_2v_3v_4v_1\)（图中加粗），左上角顶点用红字标“起/终”并有红箭头指向它，表示从该点出发绕外圈回到该点，长度 4 \(=n\)。右为 \(K_{3,3}\)：上排 3 点、下排 3 点，上下任意两点相连，共 9 条边，最长圈经过全部 6 个顶点，长度 6。</figcaption></figure>
+
+<h4>2）围长 <span class="pg">p.99–100</span></h4>
+<div class="def"><b>定义（围长）</b> \(G\) 是含圈的无向简单图（原笔记圈出“简单图”），
+\[ g(G)=\text{最短圈的长度} \]
+（原笔记在“最短圈”下划线。）</div>
+<div class="note"><b>笔记边注</b> 第99页左下角有一个红色弧形箭头，第100页左上角接着画一个红色圆圈，两者合起来表示“圈”的示意（跨页画出）。第100页顶部“g(G)=最短圈的长度”为第99页最后一行的重复露出部分。</div>
+<div class="thm"><b>结论</b>
+\[ g(K_n)=3\ (n\ge 3),\qquad g(K_{n,n})=4\ (n\ge 2) \]
+\[ K_{3,3}:\ g=4 \]</div>
+<figure class="fig"><svg viewBox="0 0 400 150" role="img" aria-label="K4 中的最短圈与 K3,3 中的最短圈">
+<g stroke="currentColor" fill="none">
+<line x1="30" y1="30" x2="110" y2="30"/><line x1="110" y1="30" x2="110" y2="110"/><line x1="30" y1="110" x2="110" y2="110"/><line x1="30" y1="30" x2="110" y2="110"/>
+<line x1="30" y1="30" x2="30" y2="110" stroke-width="3"/><line x1="110" y1="30" x2="30" y2="110" stroke-width="3"/><line x1="30" y1="30" x2="110" y2="30" stroke-width="3"/>
+<circle cx="30" cy="30" r="4"/><circle cx="110" cy="30" r="4"/><circle cx="30" cy="110" r="4"/><circle cx="110" cy="110" r="4"/>
+<line x1="260" y1="30" x2="320" y2="120"/><line x1="320" y1="30" x2="200" y2="120"/><line x1="320" y1="30" x2="260" y2="120"/><line x1="320" y1="30" x2="320" y2="120"/><line x1="200" y1="30" x2="320" y2="120"/><line x1="260" y1="30" x2="320" y2="120"/>
+<line x1="200" y1="30" x2="200" y2="120" stroke-width="3"/><line x1="200" y1="30" x2="260" y2="120" stroke-width="3"/><line x1="260" y1="30" x2="260" y2="120" stroke-width="3"/><line x1="260" y1="30" x2="200" y2="120" stroke-width="3"/>
+<circle cx="200" cy="30" r="5" fill="currentColor"/><circle cx="260" cy="30" r="4"/><circle cx="320" cy="30" r="4"/><circle cx="200" cy="120" r="4"/><circle cx="260" cy="120" r="4"/><circle cx="320" cy="120" r="4"/>
+</g>
+<g font-size="14" fill="currentColor"><text x="60" y="20">K4</text><text x="240" y="145">K3,3 = 4</text></g>
+</svg><figcaption>图：左为 \(K_4\)，原笔记用红线描出一个三角形（左边、上边与一条对角线，图中加粗），长度 3。右为 \(K_{3,3}\)，上排左点涂红作起点，红线描出 4-圈：上左—下左—上中—下中—上左（图中加粗），长度 4。</figcaption></figure>
+<div class="supp"><b>补充讲解</b> \(K_{n,n}\) 是二部图，没有奇圈，所以没有三角形，最短圈至少为 4；\(n\ge2\) 时取两上两下即得 4-圈。\(K_{1,1}\) 无圈，所以要求 \(n\ge 2\)。最长圈：二部图中圈交替经过两部，故长度 \(\le 2n\)，而 \(K_{n,n}\) 中能交替走遍全部 \(2n\) 个点。</div>
+
+<h3>⑥ 定理 1 <span class="pg">p.100</span></h3>
+<div class="thm"><b>定理 1</b> 在 \(n\) 阶（有向/无向）图 \(G\) 中，若从不同顶点 \(v_i\) 到 \(v_j\) 有通路（原笔记圈出“通路”），则从 \(v_i\) 到 \(v_j\) 有长度小于等于 \(n-1\) 的通路（原笔记在 \(n-1\) 下划线）。</div>
+<div class="supp"><b>补充讲解（证明思路，笔记未写证明）</b> 取 \(v_i\) 到 \(v_j\) 的一条最短通路 \(\Gamma=v_{i_0}e_{j_1}\cdots e_{j_l}v_{i_l}\)。若其中有重复顶点 \(v_{i_s}=v_{i_t}\ (s\lt t)\)，删去 \(v_{i_s}\) 与 \(v_{i_t}\) 之间那一段，得到更短的通路，矛盾。所以最短通路无重复顶点，它最多有 \(n\) 个顶点，长度 \(l\le n-1\)。由此还可知：存在长度 \(\le n-1\) 的初级通路（路径）。</div>
+
+<h3>⑦ 定理 2 <span class="pg">p.100</span></h3>
+<div class="thm"><b>定理 2</b> 在 \(n\) 阶图 \(G\) 中，若有从顶点 \(v_i\) 到自身的回路（原笔记在 \(v_i\) 下加三角记号，“自身”下划线，“回路”后有两个三角记号），
+\[ \text{回路长度}\le n \]
+（原笔记在 \(n\) 下划线。）</div>
+<div class="fix"><b>校订说明（p.100）</b> 原式：若有从 \(v_i\) 到自身的回路，则“回路长度 \(\le n\)”；正确式：若有从 \(v_i\) 到自身的回路，则一定存在从 \(v_i\) 到自身长度 \(\le n\) 的回路（可取为初级回路，即圈）；原因：原写法像是说任意回路长度都 \(\le n\)，这不成立，例如沿同一个三角形绕两圈得到长度 6 的回路，而图只有 3 个顶点。结论应为“存在”一条短回路。</div>
+<div class="supp"><b>补充讲解（证明思路，笔记未写证明）</b> 取经过 \(v_i\) 的最短回路，若中间有重复顶点，就截去重复顶点之间的闭合段得到更短的回路；最终得到除首尾外无重复顶点的回路，最多经过 \(n\) 个不同顶点，长度 \(\le n\)。（无向图中需注意截短时不能只剩“沿同一条边走过去再走回来”的情形，用简单回路讨论即可。）</div>
+
+<h3>⑧ 极大路径 <span class="pg">p.100</span></h3>
+<div class="def"><b>定义（极大路径）</b> 在无向简单图中（原笔记在“简单图”下画红线）：路径两端点不与路径本身以外的点相邻。</div>
+<figure class="fig"><svg viewBox="0 0 420 140" role="img" aria-label="极大路径：两端点只与路径上的点相邻">
+<g stroke="currentColor" fill="none">
+<line x1="30" y1="50" x2="380" y2="50"/>
+<circle cx="30" cy="50" r="7"/><circle cx="30" cy="50" r="4"/><circle cx="130" cy="50" r="4"/><circle cx="210" cy="50" r="4"/><circle cx="300" cy="50" r="4"/><circle cx="380" cy="50" r="4"/>
+<path d="M30 46 Q120 -20 210 46" stroke-dasharray="6 3"/>
+<path d="M130 54 Q150 120 300 54" stroke-dasharray="6 3"/>
+<path d="M130 54 Q160 150 380 54" stroke-dasharray="6 3"/>
+</g>
+<g font-size="14" fill="currentColor"><text x="22" y="80">v1</text><text x="122" y="80">v2</text><text x="202" y="35">v3</text><text x="292" y="35">v4</text><text x="372" y="35">v5</text></g>
+</svg><figcaption>图：一条路径 \(v_1v_2v_3v_4v_5\)（原笔记顶点未标名，此处为说明加标号；左端点 \(v_1\) 用红圈圈出，路径各边用红线描过）。红色曲线（图中虚线）为路径以外另加的边：\(v_1\) 上方连向 \(v_3\)；\(v_2\) 下方分别连向 \(v_4\) 和 \(v_5\)。两端点 \(v_1,v_5\) 的邻点都在路径上，所以这条路径无法再向两端延长，是极大路径。</figcaption></figure>
+<div class="supp"><b>补充讲解</b> 极大路径不一定是图中最长的路径，只是不能再从两端延长。构造方法（扩大路径法）：从任意一条路径出发，只要某端点还有不在路径上的邻点，就把它接上，有限步后得到极大路径。常用于证明：若 \(\delta(G)\ge k\ge2\)，则 \(G\) 中有长度 \(\ge k+1\) 的圈（极大路径的端点 \(v_1\) 至少有 \(k\) 个邻点都在路径上，取最远的邻点与 \(v_1\) 连成圈）。</div>
+
+<div class="summary"><b>总结</b> 通路是顶点与边的交替序列，长度为边数；起终点相同为回路。无重复边为简单，有重复边为复杂，无重复顶点为初级（路径/圈）。周长是最长圈长度，围长是最短圈长度：\(c(K_n)=n\)，\(c(K_{n,n})=2n\)，\(g(K_n)=3\)，\(g(K_{n,n})=4\)。\(n\) 阶图中两点可达则有长度 \(\le n-1\) 的通路；经过某点有回路则有长度 \(\le n\) 的回路。极大路径的两端点不与路径外的点相邻。</div>

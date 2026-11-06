@@ -1,0 +1,143 @@
+<h3>集合与元素的记号、集合的表示 <span class="pg">p.12</span></h3>
+<p>原笔记约定：\(A, B, C\) 表示集合；\(a, b, c\) 表示元素。</p>
+<div class="def"><b>集合表示</b>
+<ol>
+<li>列举法：\(A=\{1,2,3\}\)。</li>
+<li>描述法：\(A=\{x\mid P(x)\}\)，其中 \(P(x)\) 为关于 \(x\) 的性质（谓词）。</li>
+<li>规定（常用数集）：\(\mathbb{N}, \mathbb{Z}, \mathbb{Q}, \mathbb{R}, \mathbb{C}\)（原页在 \(\mathbb{R}\)、\(\mathbb{C}\) 下画波浪线）。</li>
+</ol></div>
+<div class="unclear"><b>待核对（p.12，位置：描述法 \(A=\{x\mid P(x)\}\) 右侧小字，下有双划线）</b> 可辨认部分：“\(P(x)\) 为 \(x\)”；无法辨认：后面三字（形近“的奇数”或“的特性”）。</div>
+
+<h3>集合关系 <span class="pg">p.12</span></h3>
+<div class="def"><b>① 子集</b>
+\[B\subseteq A\Leftrightarrow\forall x(x\in B\to x\in A)\quad\text{（B 是 A 的子集）}\]
+\[B\not\subseteq A\Leftrightarrow\exists x(x\in B\land x\notin A)\quad\text{（B 不是 A 的子集）}\]</div>
+<figure class="fig"><svg viewBox="0 0 340 130" role="img" aria-label="左图圆A内含圆B，右图圆A与圆B相交">
+<circle cx="70" cy="65" r="55" stroke="currentColor" fill="none" stroke-width="2"/>
+<circle cx="85" cy="75" r="22" stroke="currentColor" fill="none" stroke-width="2"/>
+<text x="30" y="45" font-size="14" fill="currentColor">A</text><text x="80" y="80" font-size="14" fill="currentColor">B</text>
+<circle cx="220" cy="65" r="45" stroke="currentColor" fill="none" stroke-width="2"/>
+<circle cx="275" cy="65" r="40" stroke="currentColor" fill="none" stroke-width="2"/>
+<text x="200" y="50" font-size="14" fill="currentColor">A</text><text x="285" y="55" font-size="14" fill="currentColor">B</text>
+</svg><figcaption>图：左为 \(B\subseteq A\)（圆 B 整体在圆 A 内）；右为 A 与 B 部分重叠，此时 \(B\not\subseteq A\)。原页右侧另写符号“\(\subseteq\)　\(\subset\)”作对照。</figcaption></figure>
+<div class="def"><b>② 相等</b> \(A=B\Leftrightarrow\forall x(x\in B\leftrightarrow x\in A)\)（原页在右端下画波浪线）。</div>
+<div class="def"><b>③ 真子集</b> \(A\subset B\Leftrightarrow A\subseteq B\land A\neq B\)。原页右侧配图：大圆标 A，内含小圆标 B。</div>
+<div class="fix"><b>校订说明（p.12）</b> 原式：真子集 \(A\subset B\) 的配图中外圆标 A、内圆标 B；正确式：表示 \(A\subset B\) 时应外圆为 B、内圆为 A（或把定义写成 \(B\subset A\)）；原因：真子集的元素都在大集合中，内含的圆才是子集。</div>
+<div class="def"><b>④ 空集</b> \(\emptyset\)，且对任意集合 A，\(\emptyset\subseteq A\)。</div>
+<div class="def"><b>⑤ 全集</b> 记作 \(E\)，不唯一（随讨论范围而定）。</div>
+<figure class="fig"><svg viewBox="0 0 300 160" role="img" aria-label="三层嵌套的全集范围">
+<ellipse cx="130" cy="85" rx="120" ry="70" stroke="currentColor" fill="none" stroke-width="2"/>
+<ellipse cx="125" cy="88" rx="100" ry="55" stroke="currentColor" fill="none" stroke-width="2"/>
+<ellipse cx="120" cy="90" rx="80" ry="42" stroke="currentColor" fill="none" stroke-width="2"/>
+<text x="85" y="85" font-size="14" fill="currentColor">1</text><text x="140" y="85" font-size="14" fill="currentColor">2</text><text x="112" y="112" font-size="14" fill="currentColor">3</text>
+<text x="200" y="65" font-size="14" fill="currentColor">E₁</text><text x="235" y="40" font-size="14" fill="currentColor">E₂</text><text x="270" y="25" font-size="14" fill="currentColor">E₃</text>
+</svg><figcaption>图：元素 1、2、3 位于最内层 \(E_1\) 中，外面依次套 \(E_2\)、\(E_3\)；原页用箭头 \(E_3\to E_2\to E_1\) 指向，说明同一组对象可选取不同的全集。</figcaption></figure>
+
+<h3>幂集 <span class="pg">p.12–p.13</span></h3>
+<div class="def"><b>⑥ 幂集</b> \(P(A)=\{x\mid x\subseteq A\}\)。</div>
+<div class="example"><b>例</b> \(A=\{1,2,3\}\)，求 \(P(A)\)。
+<b>解</b> \(P(A)=\{\emptyset,\{1\},\{2\},\{3\},\{1,2\},\{1,3\},\{2,3\},\{1,2,3\}\}\)。按子集大小计数：\(1+3+3+1=8\)，也等于 \(2^3=8\)（原页右侧写“8”）。</div>
+<div class="thm"><b>性质（n 元集）</b> \(|A|=n\)（A 有 n 个元素），则 \(|P(A)|=2^n\)。</div>
+
+<h3>集族与指标集 <span class="pg">p.13</span></h3>
+<div class="def"><b>⑦ 集族</b> 以集合为元素的集合，记作 \(\mathcal{A}\)，形如 \(\mathcal{A}=\{\{\ \},\{\ \},\{\ \},\{\ \}\}\)；用来编号各成员的集合称为指标集，指标集 \(=\{\ \}\)。</div>
+<div class="note"><b>笔记边注</b> \(\mathcal{A}\to\) 年级（高一）\(\{\{\ \},\{\ \},\{\ \}\}\)，每个内层 { } 是一个班；下方“指标集 \(\{\)一班, 二班, 三班\(\}\) 集合”，三条箭头分别指向年级集族中的三个成员。即集族中的每个成员（班级）本身是集合，指标集给每个成员一个名字。</div>
+<div class="unclear"><b>待核对（p.13，位置：“年级（高一）”后集族第一个成员，被圈出）</b> 可辨认部分：花括号及一个数字，形近“{1}”；无法辨认：是否写有“班”字。</div>
+<div class="example"><b>例</b> \(\mathcal{A}=\{A_1,A_2,A_3,A_4\}\)，原页写 \(A_1=\{0\},\ A_2=\{1\},\ A_2=\{2\},\ A_3=\{3\}\)；指标集 \(A=\{1,2,3,4\}\)。
+<b>结论</b> \(\mathcal{A}=\{A_k\}_{k\in\{1,2,3,4\}}\)，\(\mathcal{A}\) 是以 A 为指标集的集族。</div>
+<div class="fix"><b>校订说明（p.13）</b> 原式：\(A_1=\{0\},A_2=\{1\},A_2=\{2\},A_3=\{3\}\)；正确式：\(A_1=\{0\},A_2=\{1\},A_3=\{2\},A_4=\{3\}\)；原因：集族有 \(A_1\)–\(A_4\) 四个成员，下标应连续编号，原页第三、四个下标各少写 1。</div>
+
+<h3>多重集 <span class="pg">p.13</span></h3>
+<div class="def"><b>多重集</b> 允许元素重复出现的“集合”，元素出现次数称为重数。原页画大圈“多重集”内含小圈“集合”：普通集合是每个元素重数为 1 的特殊多重集。</div>
+<div class="example"><b>例</b> \(A=\{a,a,b,b,c\}\)：a 的重数 2，b 的重数 2，c 的重数 1。</div>
+
+<h3>集合运算 <span class="pg">p.13–p.14</span></h3>
+<div class="def"><b>① 并集</b> \(A\cup B=\{x\mid x\in A\lor x\in B\}\)。<br><b>② 交集</b> \(A\cap B=\{x\mid x\in A\land x\in B\}\)。</div>
+<figure class="fig"><svg viewBox="0 0 340 120" role="img" aria-label="并集与交集的韦恩图">
+<circle cx="60" cy="60" r="40" stroke="currentColor" fill="currentColor" fill-opacity="0.25" stroke-width="2"/>
+<circle cx="110" cy="60" r="40" stroke="currentColor" fill="currentColor" fill-opacity="0.25" stroke-width="2"/>
+<text x="35" y="45" font-size="14" fill="currentColor">A</text><text x="125" y="45" font-size="14" fill="currentColor">B</text>
+<defs><clipPath id="c13a"><circle cx="230" cy="60" r="40"/></clipPath></defs>
+<circle cx="280" cy="60" r="40" fill="currentColor" fill-opacity="0.35" clip-path="url(#c13a)"/>
+<circle cx="230" cy="60" r="40" stroke="currentColor" fill="none" stroke-width="2"/>
+<circle cx="280" cy="60" r="40" stroke="currentColor" fill="none" stroke-width="2"/>
+<text x="205" y="45" font-size="14" fill="currentColor">A</text><text x="295" y="45" font-size="14" fill="currentColor">B</text>
+</svg><figcaption>图：左，A 与 B 两圆全部加阴影表示 \(A\cup B\)；右，仅两圆重叠部分加阴影表示 \(A\cap B\)。</figcaption></figure>
+<div class="def"><b>有限个与无限个的并、交</b>
+<p>有限个：\(A_1\cup A_2\cup\cdots\cup A_n=\bigcup_{i=1}^{n}A_i\)，\(\bigcap_{i=1}^{n}A_i\)。</p>
+<p>无限个：\(A_1\cup A_2\cup\cdots=\bigcup_{i=1}^{\infty}A_i\)，\(\bigcap_{i=1}^{\infty}A_i\)。</p></div>
+<div class="def"><b>③ 不相交 / 互不相交</b> \(A\cap B=\emptyset\) 称 A、B 不相交；一组集合中任意两个都不相交称互不相交。原页配图：A、B、C、D 四个彼此分离的圆。</div>
+<div class="def"><b>④ 相对补集</b> \(A-B=\{x\mid x\in A\land x\notin B\}\)（配图：两圆相交，只有 A 中不属于 B 的部分加阴影）。<br>
+<b>绝对补集</b>（E 为全集）：\(E-A=\sim A=\{x\mid x\notin A\}\)（配图：矩形 E 内画圆 A，A 外、E 内的部分加阴影）。</div>
+<div class="def"><b>⑤ 对称差</b> \(A\oplus B=\{x\mid(x\in A\land x\notin B)\lor(x\notin A\land x\in B)\}=(A\cup B)-(A\cap B)\)。</div>
+<figure class="fig"><svg viewBox="0 0 360 130" role="img" aria-label="相对补集、绝对补集、对称差的韦恩图">
+<defs><clipPath id="c13b"><circle cx="85" cy="60" r="35"/></clipPath><clipPath id="c13c"><circle cx="290" cy="60" r="35"/></clipPath><clipPath id="c13d"><circle cx="250" cy="60" r="35"/></clipPath></defs>
+<circle cx="45" cy="60" r="35" fill="currentColor" fill-opacity="0.3"/>
+<circle cx="85" cy="60" r="35" fill="var(--bg, white)" clip-path="url(#c13b)"/>
+<circle cx="45" cy="60" r="35" stroke="currentColor" fill="none" stroke-width="2"/>
+<circle cx="85" cy="60" r="35" stroke="currentColor" fill="none" stroke-width="2"/>
+<text x="25" y="45" font-size="14" fill="currentColor">A</text><text x="95" y="45" font-size="14" fill="currentColor">B</text>
+<text x="45" y="120" font-size="14" fill="currentColor">A−B</text>
+<rect x="130" y="20" width="80" height="80" stroke="currentColor" fill="currentColor" fill-opacity="0.3" stroke-width="2"/>
+<circle cx="175" cy="65" r="22" stroke="currentColor" fill="var(--bg, white)" stroke-width="2"/>
+<text x="135" y="38" font-size="14" fill="currentColor">E</text><text x="170" y="70" font-size="14" fill="currentColor">A</text>
+<text x="150" y="120" font-size="14" fill="currentColor">∼A</text>
+<circle cx="250" cy="60" r="35" fill="currentColor" fill-opacity="0.3"/>
+<circle cx="290" cy="60" r="35" fill="currentColor" fill-opacity="0.3"/>
+<circle cx="290" cy="60" r="35" fill="var(--bg, white)" clip-path="url(#c13d)"/>
+<circle cx="250" cy="60" r="35" stroke="currentColor" fill="none" stroke-width="2"/>
+<circle cx="290" cy="60" r="35" stroke="currentColor" fill="none" stroke-width="2"/>
+<text x="230" y="45" font-size="14" fill="currentColor">A</text><text x="300" y="45" font-size="14" fill="currentColor">B</text>
+<text x="255" y="120" font-size="14" fill="currentColor">A⊕B</text>
+</svg><figcaption>图：左，A−B（A 中去掉与 B 重叠部分后加阴影）；中，矩形为全集 E，圆 A 外部加阴影即 \(\sim A\)；右，A⊕B（两圆各自不重叠的部分加阴影，重叠部分空白）。</figcaption></figure>
+
+<h3>广义并集与广义交集 <span class="pg">p.14–p.16</span></h3>
+<div class="note"><b>笔记边注</b> 原页此处编号为⑦（运算编号从⑤直接到⑦，没有⑥）。</div>
+<div class="def"><b>广义并</b> \(\bigcup\mathcal{A}=\{x\mid\exists z(x\in z\land z\in\mathcal{A})\}\)。</div>
+<div class="example"><b>例</b> \(\mathcal{A}=\{\{1,2\},\{2,3\},\{4,5,6\}\}\)，三个成员分别标 \(A_1, A_2, A_3\)。
+<b>解</b> \(\bigcup\mathcal{A}=A_1\cup A_2\cup A_3\)，右侧列出元素 1, 2, 3, 4, 5, 6。
+<b>结论</b> \(\bigcup\mathcal{A}=\{1,2,3,4,5,6\}\)。</div>
+<div class="def"><b>广义交</b> \(\bigcap\mathcal{A}=\{x\mid\forall z(z\in\mathcal{A}\to x\in z)\}\)。</div>
+<div class="example"><b>例</b> \(\mathcal{A}=\{\{1,2,3\},\{2,3,4\},\{2,3,5\}\}\)（标 \(A_1,A_2,A_3\)，每个成员中的 2、3 被圈出）。
+<b>解</b> \(\bigcap\mathcal{A}=A_1\cap A_2\cap A_3\)。
+<b>结论</b> \(\bigcap\mathcal{A}=\{2,3\}\)。</div>
+<div class="note"><b>笔记边注</b> 右侧写 \(\{\)集1, 集2, 集3\(\}\)，三条箭头汇到下方一个花括号 \(\{\ \}\)，示意广义交是把集族中各成员集合一起取交。</div>
+<div class="unclear"><b>待核对（p.15，位置：右上“{集1,集2,集3}”箭头汇聚处）</b> 可辨认部分：花括号 { }；无法辨认：花括号内的符号（形近“∅”或“0”加竖线）。</div>
+
+<h4>空集族的情形 <span class="pg">p.15–p.16</span></h4>
+<p>原页：\(\mathcal{A}=\emptyset\) 时，\(\bigcup\mathcal{A}=\emptyset\)，\(\bigcap\mathcal{A}\) 无意义。</p>
+<div class="proof"><b>说明（广义并）</b>
+\(\bigcup\mathcal{A}=\{x\mid\exists z(x\in z\land z\in\mathcal{A})\}\)（标注“存在”）。\(\mathcal{A}=\emptyset\) 时，方框中的 \(z\in\mathcal{A}\) 恒为 0（假），于是合取式恒假，没有 x 满足，\(\bigcup\mathcal{A}=\emptyset\)。
+右侧边注：\(x\in z\in\mathcal{A}\)（x 属于 z，z 属于 𝒜）。</div>
+<div class="proof"><b>说明（广义交）</b>
+\(\bigcap\mathcal{A}=\{x\mid\forall z(z\in\mathcal{A}\to x\in z)\}\)，\(\mathcal{A}=\emptyset\)。前件 \(z\in\mathcal{A}\) 恒为 0，右侧方框 \(0\to\cdots\) 值为 1，即蕴含式恒真；圈注“\(x\in z\) / \(x\notin z\)”：无论 \(x\in z\) 还是 \(x\notin z\) 都成立。横线上写“\(x\in z\) 或 \(x\notin z\)”，横线下写“\(x\in E\)”，右侧写 E：所有 x 都满足条件，结果是全体 \(x\in E\)。
+展开理解：设 \(\mathcal{A}=\{z_1,z_2\}\)，则 \(\bigcap\mathcal{A}=\{x\mid(z_1\in\mathcal{A}\to x\in z_1)\land(z_2\in\mathcal{A}\to x\in z_2)\}\)；当集族空时条件部分为空（原页写 \(\bigcap\mathcal{A}=\{x\mid\ \square\ \}\)，方框为空），箭头指向“\(x\in E\)”。</div>
+<div class="example"><b>对比 \(\mathcal{A}=\{\emptyset\}\)</b> 原页另写 \(\mathcal{A}=\{\emptyset\}\)；p.16 续写：\(\mathcal{A}_1=\{z_1\}\)，\(z_1\) 取 □（空集），\(=\emptyset\)；\(\bigcap\mathcal{A}=z_1\)，箭头注“□ \(=E\)”，旁有向上箭头。
+<b>结论</b> 只含空集的集族 \(\{\emptyset\}\) 的广义交为 \(z_1=\emptyset\)；而空集族在固定全集 E 时按上面推导为 E，否则无意义。</div>
+<div class="unclear"><b>待核对（p.15 底部 / p.16 顶部，位置：页面交界被截断处）</b> 可辨认部分：“\(\mathcal{A}=\{\emptyset\}\)”及一个“\(\{\)”；无法辨认：p.15 最底行被裁切的其余内容，以及 p.16 第二行“\(\square=E\)”与上一行“\(=\emptyset\)”之间向上箭头的确切指向。</div>
+<div class="supp"><b>补充讲解</b> 空集族 \(\emptyset\) 与集族 \(\{\emptyset\}\) 不同：\(\bigcup\{\emptyset\}=\emptyset\)，\(\bigcap\{\emptyset\}=\emptyset\)；\(\bigcup\emptyset=\emptyset\)，\(\bigcap\emptyset\) 在未限定全集时无意义，在全集 E 内取交时为 E（空真）。</div>
+
+<h3>运算优先级 <span class="pg">p.16</span></h3>
+<div class="def"><b>运算的优先级</b>
+<ul>
+<li>一元运算最高：\(\sim\)、\(P(A)\)、\(\bigcup_{i=1}^{n}A_i\)、\(\bigcap_{i=1}^{n}A_i\)（右侧箭头向左 ←，从右向左结合）。</li>
+<li>二元运算：\(A\cup B\)、\(A\cap B\)、\(A\oplus B\)、\(A-B\)（右侧箭头向右 →，从左向右依次计算）。</li>
+</ul></div>
+
+<h3>容斥定理 <span class="pg">p.16–p.17</span></h3>
+<div class="thm"><b>容斥定理</b>
+\[\Bigl|\bigcup_{i=1}^{n}A_i\Bigr|=\sum_{i=1}^{n}|A_i|-\sum_{i\lt j}|A_i\cap A_j|+\sum_{i\lt j\lt k}|A_i\cap A_j\cap A_k|-\cdots+(-1)^{n-1}|A_1\cap A_2\cap\cdots\cap A_n|\]
+原页在最后一项 \(|A_1\cap A_2\cap\cdots\cap A_n|\) 下方注 \(\bigl|\bigcap_{i=1}^{n}A_i\bigr|\)。</div>
+<div class="example"><b>例</b> E 为全集，A、B、C（即 \(A_1,A_2,A_3\)）为有限集。
+<b>解</b>
+\[\begin{aligned}\Bigl|\bigcup_{i=1}^{n}A_i\Bigr|&=\Bigl|\bigcup_{i=1}^{3}A_i\Bigr|=|A\cup B\cup C|\\&=|A|+|B|+|C|-\bigl[|A\cap B|+|B\cap C|+|A\cap C|\bigr]+|A\cap B\cap C|\end{aligned}\]
+<figure class="fig"><svg viewBox="0 0 260 170" role="img" aria-label="全集E内三个两两相交的集合A、B、C">
+<rect x="5" y="5" width="250" height="160" stroke="currentColor" fill="none" stroke-width="2"/>
+<circle cx="130" cy="65" r="42" stroke="currentColor" fill="none" stroke-width="2"/>
+<circle cx="100" cy="105" r="42" stroke="currentColor" fill="none" stroke-width="2"/>
+<circle cx="160" cy="105" r="42" stroke="currentColor" fill="none" stroke-width="2"/>
+<text x="12" y="24" font-size="14" fill="currentColor">E</text><text x="125" y="40" font-size="14" fill="currentColor">A</text>
+<text x="68" y="125" font-size="14" fill="currentColor">B</text><text x="180" y="125" font-size="14" fill="currentColor">C</text>
+</svg><figcaption>图：矩形为全集 E，内有三个两两相交的圆 A、B、C，三者有公共部分。</figcaption></figure>
+原页下方又写 \(\bigl|\bigcup_{i=1}^{n}A_i\bigr|\) 与 “E, A, B”，引出两个集合的情形（p.17）：
+\[|A\cup B|=|A|+|B|-|A\cap B|\]</div>

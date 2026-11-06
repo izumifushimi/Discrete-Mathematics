@@ -1,0 +1,79 @@
+<div class="note"><b>笔记边注</b> 本节为“第14章 群”的第一节。</div>
+
+<h3>广群、半群、独异点 <span class="pg">p.201</span></h3>
+<div class="def"><b>定义 ①</b>
+<br>1）\(V=\langle S,\circ\rangle\)，\(\circ\) 满足封闭性 —— <b>广群</b>；
+<br>\(\Downarrow\)
+<br>2）\(V=\langle S,\circ\rangle\)，\(\circ\) 满足封闭性、可结合 \((x\circ y)\circ z=x\circ(y\circ z)\) —— <b>半群</b>；
+<br>\(\Downarrow\)
+<br>3）\(V=\langle S,\circ,e\rangle\)，\(\circ\) 满足封闭性、可结合，且含单位元 \(e\) —— <b>独异点</b>。</div>
+
+<h3>幂的定义 <span class="pg">p.201</span></h3>
+<div class="def"><b>定义 ② 幂</b>
+<div class="tbl"><table><thead><tr><th>半群</th><th>独异点</th></tr></thead>
+<tbody>
+<tr><td>—</td><td>\(a^0=e\)</td></tr>
+<tr><td>\(a^1=a\)</td><td>\(a^1=a\)</td></tr>
+<tr><td>\(a^2=a\circ a\)</td><td>\(a^2=a\circ a\)</td></tr>
+<tr><td>\(\vdots\)</td><td>\(\vdots\)</td></tr>
+<tr><td>\(a^{n+1}=a^n\circ a,\ n\in\mathbb{Z}^+\)</td><td>\(a^{n+1}=a^n\circ a,\ n\in\mathbb{N}\)</td></tr>
+</tbody></table></div></div>
+<div class="thm"><b>性质</b> \[a^n\circ a^m=a^{n+m},\qquad (a^n)^m=a^{nm}\]</div>
+<div class="supp"><b>补充讲解</b> 半群中 \(n,m\in\mathbb{Z}^+\)；独异点中 \(n,m\in\mathbb{N}\)。半群里没有单位元，所以没有 \(a^0\)，也没有负整数次幂。</div>
+
+<h3>例题 <span class="pg">p.201–202</span></h3>
+<div class="example"><b>例 ③</b> \(V=\langle S,\circ\rangle\) 为半群，任取 \(a,b\in S\)，（条件）如果 \(a\ne b\)，则 \(ab\ne ba\)。证明：
+<br>（1）\(V\) 中成立幂等律；
+<br>（2）\(\forall a,b\in V\)，\(aba=a\)；
+<br>（3）\(\forall a,b,c\in V\)，\(abc=ac\)。
+<br><b>解</b>（1）假设 \(a\circ a\ne a\)（红圈），则由条件
+\[(a\circ a)\circ a\ne a\circ(a\circ a)\ \Rightarrow\ a\circ a\circ a\ne a\circ a\circ a\]
+与结合律矛盾。
+<br><b>结论</b>（红笔）\(\therefore\ a\circ a=a\)。
+<br>（2）（3）原页只列出题目，未写证明。</div>
+<div class="unclear"><b>待核对（p.202，位置：第(1)问推导行末尾）</b> 可辨认部分：推导式 \(a\circ a\circ a\ne a\circ a\circ a\) 后接一个汉字；无法辨认：该字形似“框”，按语义应为“矛盾”，未能确认。</div>
+<div class="fix"><b>校订说明（p.202）</b> 原式：“\(\forall a,b\in V\)”“\(\forall a,b,c\in V\)”；正确式：\(\forall a,b\in S\)、\(\forall a,b,c\in S\)；原因：\(V\) 是代数系统，元素属于载体 \(S\)。</div>
+<div class="supp"><b>补充讲解</b>（自补，非原笔记）（2）由结合律，\(a(aba)=a^2ba=aba\)，\((aba)a=ab a^2=aba\)，即 \(a\) 与 \(aba\) 可交换，由条件必有 \(aba=a\)。（3）\((abc)(ac)=ab(ca c)=abc\)（用(2) \(cac=c\)），\((ac)(abc)=(aca)bc=abc\)（用(2) \(aca=a\)），故 \(abc\) 与 \(ac\) 可交换，从而 \(abc=ac\)。</div>
+
+<h3>子半群与子独异点 <span class="pg">p.202</span></h3>
+<div class="def"><b>定义 ④</b> 对非空子集 \(B\)（\(B\subseteq S\)），\(B\) 对于 \(V\) 中的运算（含0元运算）封闭：
+<br>半群（圈出）：\(V=\langle S,\circ\rangle\)，\(B\subseteq S\ \Rightarrow\ V_1=\langle B,\circ\rangle\) 为子半群；
+<br>独异点：\(V=\langle S,\circ,e\rangle\)，\(B\subseteq S\ \Rightarrow\ V_2=\langle B,\circ,e\rangle\) 为子独异点。</div>
+<div class="supp"><b>补充讲解</b> “含0元运算封闭”指代数常数（单位元 \(e\)）也要在 \(B\) 中，所以子独异点必须含原来的 \(e\)。</div>
+<div class="thm"><b>定理 1</b> 若干子半群／子独异点的非空交集／交集，仍为子半群／子独异点。</div>
+<div class="supp"><b>补充讲解</b> 子半群的交可能为空，所以要求“非空交集”；子独异点都含 \(e\)，交集必非空。</div>
+
+<h3>由子集 B 生成的子半群 <span class="pg">p.202–203</span></h3>
+<div class="def"><b>定义 ⑤</b> 半群 \(V=\langle S,*\rangle\)，\(B\subseteq S\)（取一个 \(S\) 的子集 \(B\)），由 \(B\) 构造子半群 \(\langle B\rangle\)。</div>
+<p>构造 \(\langle B\rangle\) 有两种方法（原页为分叉图，左支标“定义”）：</p>
+<div class="def"><b>左支（定义）</b> 找到所有的集合 \(A\)，满足：\(A\) 为 \(S\) 的子半群，且 \(B\subseteq A\)。这样的集合 \(A_1,A_2,\dots,A_n,\dots\)，则
+\[\langle B\rangle=\bigcap A_i\]
+（红△）。</div>
+<figure class="fig"><svg viewBox="0 0 260 170" role="img" aria-label="集合B被A1、A2、An包含的示意图">
+<ellipse cx="110" cy="85" rx="70" ry="45" fill="none" stroke="currentColor"/>
+<ellipse cx="130" cy="95" rx="75" ry="60" fill="none" stroke="currentColor"/>
+<ellipse cx="140" cy="80" rx="100" ry="70" fill="none" stroke="currentColor"/>
+<circle cx="120" cy="88" r="18" fill="none" stroke="currentColor"/>
+<text x="113" y="93" font-size="14" fill="currentColor">B</text>
+<text x="55" y="70" font-size="14" fill="currentColor">A1</text>
+<text x="150" y="150" font-size="14" fill="currentColor">A2</text>
+<text x="210" y="40" font-size="14" fill="currentColor">An</text>
+</svg><figcaption>图：集合 \(B\) 同时被子半群 \(A_1,A_2,\dots,A_n\) 包含，\(\langle B\rangle\) 是这些 \(A_i\) 的交。左右两种构造之间用红色双向箭头相连，表示结果相同。</figcaption></figure>
+<div class="def"><b>右支（构造）</b>
+\[\langle B\rangle=\bigcup_{n\in\mathbb{Z}^+}B^n,\qquad B^n=\{b_1b_2\cdots b_n\mid b_i\in B,\ i=1,2,\dots,n\}\]
+\[\langle B\rangle=B^1\cup B^2\cup B^3\cup\cdots\cup B^n\cup\cdots\]
+\(B=B^1\) 为 \(B\) 中本身元素；
+<br>\(B^2\) 为 \(B\) 中任意2个元素作运算 \(\Rightarrow\) 全体元素 \(\Rightarrow B^2\)；
+<br>\(B^3\) 为 \(B\) 中任意3个元素 …… \(\Rightarrow B^3\)；
+<br>\(\vdots\)</div>
+
+<div class="example"><b>例</b> \(V=\langle\mathbb{Z},+\rangle\)（半群），\(\mathbb{Z}=\{\dots,-2,-1,0,1,2,\dots\}\)，\(B=\{4,6\}\)，求 \(\langle B\rangle\)。
+<br><b>解</b>
+<br>\(B^1\)：4，6；
+<br>\(B^2\)：8，10，12（来自 \(4+4\)、\(4+6\)、\(6+4\)、\(6+6\)，其中 \(4+6\) 与 \(6+4\) 框在一起，同为10）；
+<br>\(B^3\)：12，14，16，18（来自 \(4+4+4,\ \dots,\ 6+6+6\)）；
+<br>\(\vdots\)
+<br><b>结论</b> \(\langle B\rangle=\{4,6,8,10,\dots\}\)，即
+\[\langle B\rangle=\{4i+6j\mid i,j\in\mathbb{N},\ i\text{ 和 }j\text{ 不同为 }0\}\]</div>
+<div class="fix"><b>校订说明（p.203）</b> 原式：从 \(\langle B\rangle\) 引出的箭头依次标 \(B^1,B^2,B^3,B^5\)；正确式：第四个应为 \(B^4\)（或表示省略）；原因：按 \(B^n\) 的序列，\(B^3\) 之后是 \(B^4\)。</div>
+<div class="supp"><b>补充讲解</b> \(\langle B\rangle\) 是所有 \(\ge 4\) 的偶数：4、6 已有，8 及以后的偶数都可写成 \(4i+6j\)。2 不在其中。</div>

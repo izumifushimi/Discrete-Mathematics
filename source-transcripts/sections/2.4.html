@@ -1,0 +1,63 @@
+<div class="note"><b>笔记边注</b> 小节标题“2.4 关系的幂运算和闭包”，日期 2025年6月15日 19:46。</div>
+
+<h3>① 关系的 n 次幂 <span class="pg">p.31</span></h3>
+<div class="def"><b>定义（关系的幂）</b> 设 \(R\subseteq A\times A\)，\(n\in\mathbb{N}\)，规定
+\[\begin{cases} R^0 = I_A\\ R^{n+1}=R^n\circ R\end{cases}\]
+即 \(R^n=\underbrace{R\circ R\circ\cdots\circ R}_{n\text{ 个 }R}\)。</div>
+<div class="thm"><b>性质（幂运算律）</b>
+\[\begin{cases} R^m\circ R^n = R^{m+n}\\ (R^m)^n = R^{mn}\end{cases}\]</div>
+<div class="note"><b>笔记边注</b> “\(R\subseteq A\times A\)”下画线强调；\(R^n\) 的展开式下用大括号标注“n 个 R”。</div>
+
+<div class="example"><b>例 1</b> \(A=\{a,b,c\}\)，\(R\subseteq A\times A\)，\(R=\{\langle a,b\rangle,\langle b,a\rangle,\langle a,c\rangle\}\)。求 \(R\) 的各次幂 \(R^n\)。
+<p><b>解</b></p>
+<p>(1) \(R^0=I_A=\{\langle a,a\rangle,\langle b,b\rangle,\langle c,c\rangle\}\)</p>
+<p>(2) \(R^1=R=\{\langle a,b\rangle,\langle b,a\rangle,\langle a,c\rangle\}\)</p>
+<p>(3) \(R^2=R\circ R=\{\langle a,a\rangle,\langle b,b\rangle,\langle b,c\rangle\}\)（笔记在三个元素下各画小三角标记）</p>
+<p>(4) \(R^3=R^2\circ R=\{\langle a,b\rangle,\langle a,c\rangle,\langle b,a\rangle\}=R^1\)（结果下画波浪线）</p>
+<div class="note"><b>笔记边注</b> 左侧画一条弧形箭头从 (4) 指回 (2)，表示 \(R^3\) 回到 \(R^1\)，此后循环。</div>
+<p><b>结论</b>
+\[\begin{cases} R^0=I_A\\ R^{2k}=R^2\\ R^{2k-1}=R\end{cases}\qquad k\text{ 为 }1\sim n\]</p>
+</div>
+<div class="supp"><b>补充讲解</b> 逐对验证 \(R^2\)：\(a\to b\to a\) 得 \(\langle a,a\rangle\)；\(b\to a\to b\) 得 \(\langle b,b\rangle\)；\(b\to a\to c\) 得 \(\langle b,c\rangle\)；\(a\to c\) 之后 \(c\) 无出边。再算 \(R^3=R^2\circ R\)：\(a\to a\to b\)、\(a\to a\to c\)、\(b\to b\to a\) 得 \(\{\langle a,b\rangle,\langle a,c\rangle,\langle b,a\rangle\}=R\)。笔记中“k 为 1~n”的意思是 \(k\) 取任意正整数 \(1,2,3,\dots\)。有限集上关系的幂序列最终一定会出现循环，这里周期为 2。</div>
+
+<h3>② 关系的闭包 <span class="pg">p.31–32</span></h3>
+<div class="def"><b>定义（三种闭包）</b>
+\[\begin{cases} r(R) & \text{自反闭包}\\ s(R) & \text{对称闭包}\\ t(R) & \text{传递闭包}\end{cases}\]</div>
+<div class="supp"><b>补充讲解</b> \(R\) 的自反（对称、传递）闭包是包含 \(R\) 的最小的自反（对称、传递）关系。</div>
+
+<h4>(1) 闭包的关系图 <span class="pg">p.32</span></h4>
+<figure class="fig"><svg viewBox="0 0 520 340" role="img" aria-label="G(R)、G(r(R))、G(s(R))、G(t(R)) 四个关系图">
+<defs><marker id="ar24" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+<g stroke="currentColor" fill="none" stroke-width="1.6">
+<!-- G(R) -->
+<circle cx="50" cy="40" r="4"/><circle cx="150" cy="40" r="4"/><circle cx="50" cy="120" r="4"/><circle cx="150" cy="120" r="4"/>
+<line x1="56" y1="40" x2="143" y2="40" marker-end="url(#ar24)"/><line x1="50" y1="46" x2="50" y2="113" marker-end="url(#ar24)"/><line x1="150" y1="46" x2="150" y2="113" marker-end="url(#ar24)"/>
+<!-- G(r(R)) -->
+<circle cx="310" cy="40" r="4"/><circle cx="410" cy="40" r="4"/><circle cx="310" cy="120" r="4"/><circle cx="410" cy="120" r="4"/>
+<line x1="316" y1="40" x2="403" y2="40" marker-end="url(#ar24)"/><line x1="310" y1="46" x2="310" y2="113" marker-end="url(#ar24)"/><line x1="410" y1="46" x2="410" y2="113" marker-end="url(#ar24)"/>
+<circle cx="298" cy="30" r="9"/><circle cx="422" cy="30" r="9"/><circle cx="298" cy="130" r="9"/><circle cx="422" cy="130" r="9"/>
+<!-- G(s(R)) -->
+<circle cx="50" cy="210" r="4"/><circle cx="150" cy="210" r="4"/><circle cx="50" cy="290" r="4"/><circle cx="150" cy="290" r="4"/>
+<line x1="56" y1="206" x2="143" y2="206" marker-end="url(#ar24)"/><line x1="144" y1="214" x2="57" y2="214" marker-end="url(#ar24)"/>
+<line x1="46" y1="216" x2="46" y2="283" marker-end="url(#ar24)"/><line x1="54" y1="284" x2="54" y2="217" marker-end="url(#ar24)"/>
+<line x1="146" y1="216" x2="146" y2="283" marker-end="url(#ar24)"/><line x1="154" y1="284" x2="154" y2="217" marker-end="url(#ar24)"/>
+<!-- G(t(R)) -->
+<circle cx="310" cy="210" r="4"/><circle cx="410" cy="210" r="4"/><circle cx="310" cy="290" r="4"/><circle cx="410" cy="290" r="4"/>
+<line x1="316" y1="210" x2="403" y2="210" marker-end="url(#ar24)"/><line x1="310" y1="216" x2="310" y2="283" marker-end="url(#ar24)"/><line x1="410" y1="216" x2="410" y2="283" marker-end="url(#ar24)"/>
+<line x1="315" y1="215" x2="404" y2="285" marker-end="url(#ar24)"/>
+</g>
+<g fill="currentColor" font-size="14"><text x="80" y="160">G(R)</text><text x="330" y="160">G(r(R))</text><text x="75" y="330">G(s(R))</text><text x="330" y="330">G(t(R))</text></g>
+</svg><figcaption>图：四个顶点（笔记未标名，记为左上、右上、左下、右下）。G(R)：有向边 左上→右上、左上→左下、右上→右下。G(r(R))：在 G(R) 基础上四个顶点各加一个环。G(s(R))：三条边都改为双向（每条边加一条反向边）。G(t(R))：在 G(R) 基础上加有向边 左上→右下（由 左上→右上→右下 传递得到）。</figcaption></figure>
+
+<h4>闭包的性质 <span class="pg">p.32</span></h4>
+<div class="thm"><b>性质 ①（单调性）</b> 若 \(R_1\subseteq R_2\)，则
+\[\begin{cases} r(R_1)\subseteq r(R_2)\\ s(R_1)\subseteq s(R_2)\\ t(R_1)\subseteq t(R_2)\end{cases}\]</div>
+<div class="thm"><b>性质 ②（并的闭包）</b> 设 \(R_1,R_2\) 为关系，则
+\[\begin{aligned} r(R_1\cup R_2)&=r(R_1)\cup r(R_2)\\ s(R_1\cup R_2)&=s(R_1)\cup s(R_2)\\ t(R_1\cup R_2)&\supseteq t(R_1)\cup t(R_2)\end{aligned}\]</div>
+<div class="note"><b>笔记边注</b> 第三式左端下圈注“大”，右端 \(t(R_1)\cup t(R_2)\) 下圈注“小”，提示传递闭包只有包含关系；右侧另有一个单独的“R”字样。</div>
+<div class="warn"><b>易错提醒</b> 传递闭包对并运算不能写等号。反例：\(R_1=\{\langle 1,2\rangle\}\)，\(R_2=\{\langle 2,3\rangle\}\)，则 \(t(R_1)\cup t(R_2)=\{\langle1,2\rangle,\langle2,3\rangle\}\)，而 \(t(R_1\cup R_2)\) 还含 \(\langle 1,3\rangle\)。（补充反例，非原笔记内容）</div>
+
+<h4>闭包的计算公式 <span class="pg">p.32</span></h4>
+<div class="thm"><b>定理 ③</b> 设 \(R\subseteq A\times A\)，\(A\ne\emptyset\)，则
+\[\begin{aligned} r(R)&=R\cup I_A\\ s(R)&=R\cup R^{-1}\\ t(R)&=R\cup R^2\cup R^3\cup\cdots\end{aligned}\]</div>
+<div class="supp"><b>补充讲解</b> 若 \(|A|=n\)，传递闭包的并只需取到 \(R^n\)：\(t(R)=R\cup R^2\cup\cdots\cup R^n\)。以例 1 的 \(R\) 为例：\(t(R)=R\cup R^2=\{\langle a,a\rangle,\langle a,b\rangle,\langle a,c\rangle,\langle b,a\rangle,\langle b,b\rangle,\langle b,c\rangle\}\)。</div>

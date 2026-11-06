@@ -1,0 +1,94 @@
+<div class="note"><b>笔记边注</b> 页首标题“第4章 自然数”；小节标题“4.1 自然数的定义”；标题旁有日期小字“2025年6月21日”。</div>
+<div class="unclear"><b>待核对（p.48，位置：小节标题上方日期右侧小字）</b> 可辨认部分：日期“2025年6月21日”，时间前两位“20:4”；无法辨认：时间末位数字。</div>
+
+<h3>① 封闭 <span class="pg">p.48</span></h3>
+<p>设 \(F\) 为函数，\(A\subseteq \mathrm{dom}F\)。</p>
+<div class="def"><b>定义（封闭）</b> \(A\) 在函数 \(F\) 下封闭 \(\Leftrightarrow\) \(F(A)\subseteq A\)，<br>
+或写成 \(F:A\to A\)，<br>
+即 \(F\) 为 \(A\) 上的一元运算。</div>
+<div class="note"><b>笔记边注</b> “\(F(A)\)”下方画波浪线，“\(F:A\to A\)”“\(F\) 为 \(A\) 上一元运算”两行下画横线强调。</div>
+
+<div class="example"><b>例 1</b> \(f:\mathbb{R}\to\mathbb{R}\)，\(f(x)=x^2\)。
+<br>\(A=[0,1]\subseteq\mathbb{R}\)，\(A\) 在 \(f\) 下封闭；
+<br>\(A=[0,2]\subseteq\mathbb{R}\)，\(A\) 在 \(f\) 下不封闭。</div>
+<div class="supp"><b>补充讲解</b> 对 \(x\in[0,1]\) 有 \(0\le x^2\le x\le 1\)，故 \(f([0,1])=[0,1]\subseteq[0,1]\)；而 \(2\in[0,2]\)，\(f(2)=4\notin[0,2]\)，所以 \([0,2]\) 不封闭。</div>
+
+<h3>② Peano 系统 <span class="pg">p.48–49</span></h3>
+<div class="def"><b>定义（Peano 系统）</b> 对于三元组 \(\langle M,F,e\rangle\)，其中 \(M\) 是集合，\(F\) 是函数，\(e\) 是集合 \(M\) 中的一个（特定）元素，\(F:M\to M\)，满足：
+<ol>
+<li>\(e\in M\)；</li>
+<li>\(M\) 在 \(F\) 下封闭（\(F:M\to M\)）；</li>
+<li>\(e\notin\mathrm{ran}F\)；</li>
+<li>\(F\) 为单射（1 对 1）；</li>
+<li>\((A\subseteq M)\land(e\in A)\land(A\text{ 在 }F\text{ 下封闭})\Rightarrow A=M\)（极小性公理）。</li>
+</ol></div>
+<div class="note"><b>笔记边注</b> \(M,F,e\) 三个字母下用红线标出，对应下方“集合、函数、集合 \(M\) 中的一个元素（特定）”；第 5) 条的三个条件 \(A\subseteq M\)、\(e\in A\)、“\(A\) 在 \(F\) 下封闭”下画波浪线。第 3) 条后有一个小记号。p.49 右侧再次写出 \(\langle \underline{M},F,e\rangle\)，\(M\) 下画线。</div>
+
+<p>满足这 5 条的结构是一条“射线”：从 \(e\) 出发，依次得到 \(F(e)\)、\(F^2(e)\)、……（p.48 底部与 p.49 顶部重复画了此图，“射线”两字圈起并画星号）。</p>
+<figure class="fig"><svg viewBox="0 0 560 120" role="img" aria-label="Peano系统像一条射线：e到F(e)到F平方(e)">
+<defs><marker id="ar41a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="currentColor"/></marker></defs>
+<g stroke="currentColor" fill="none" stroke-width="2">
+<circle cx="40" cy="50" r="5"/><circle cx="180" cy="50" r="5"/><circle cx="320" cy="50" r="5"/>
+<line x1="47" y1="50" x2="172" y2="50" marker-end="url(#ar41a)"/>
+<line x1="187" y1="50" x2="312" y2="50" marker-end="url(#ar41a)"/>
+<line x1="327" y1="50" x2="400" y2="50" marker-end="url(#ar41a)"/>
+<line x1="405" y1="50" x2="460" y2="50" stroke-dasharray="4 6"/>
+<ellipse cx="505" cy="50" rx="45" ry="28"/>
+</g>
+<g fill="currentColor" font-size="14">
+<text x="30" y="35">e</text><text x="165" y="35">F(e)</text><text x="305" y="35">F²(e)</text>
+<text x="20" y="85">e∈M</text><text x="155" y="85">F(e)∈M</text><text x="295" y="85">F²(e)∈M</text>
+<text x="485" y="55">射线</text>
+</g></svg>
+<figcaption>图（p.48–49）：点 \(e\to F(e)\to F^2(e)\to\cdots\)，下方分别标 \(e\in M\)、\(F(e)\in M\)、\(F^2(e)\in M\)，右端圈出“射线”并画星号。</figcaption></figure>
+
+<h4>不是 Peano 系统的结构（p.49 红色画叉的图）</h4>
+<p>p.49 用红笔画了 5 个结构，每个都打了大叉，表示它们不满足 Peano 系统的公理：</p>
+<ol>
+<li>两端都无限的链：\(\cdots\to\circ\to\circ\to\cdots\)（没有起点 \(e\)，即找不到不在 \(\mathrm{ran}F\) 中的起始元）。</li>
+<li>一个点从圈外射入圈内，圈内两个点之间有箭头，并有一个点被两个箭头同时指向（两个不同元素有同一个像，违反单射）。</li>
+<li>与 2 类似：圈外一点指入圈内，圈内三个点，其中一个点被两条箭头指向（违反单射）。</li>
+<li>若干个点首尾相接构成环（环上每个点都在 \(\mathrm{ran}F\) 中，没有起点；若 \(e\) 在环上则 \(e\in\mathrm{ran}F\)，违反 3)）。</li>
+<li>两条互不相连的射线 \(\circ\to\circ\to\circ\cdots\)，各用椭圆圈起（只含 \(e\) 的那条已在 \(F\) 下封闭，却不等于 \(M\)，违反极小性公理 5)）。</li>
+</ol>
+<div class="supp"><b>补充讲解</b> 上面每个图后括号中“违反哪条”是我根据图形补充的解释，原笔记只画叉未写原因。</div>
+
+<h3>③ 后继 <span class="pg">p.49</span></h3>
+<div class="def"><b>定义（后继）</b> 设 \(A\) 为一个集合，\(A\) 的后继为
+\[A^{+}=A\cup\{A\}\]
+（\(A\in A^{+}\)，\(A\subseteq A^{+}\)）。</div>
+<div class="note"><b>笔记边注</b> \(A^{+}\) 下画波浪线；括号内两个 \(A\) 下标小三角记号。</div>
+<div class="example"><b>例</b> \(A=\{1,2\}\)，\(A^{+}=\{1,2,\{1,2\}\}\)。
+<p>从 \(\emptyset\) 开始不断取后继：</p>
+\[\begin{aligned}
+&\emptyset\\
+&\emptyset^{+}=\{\emptyset\}\\
+&\emptyset^{++}=\{\emptyset,\{\emptyset\}\}\\
+&\emptyset^{+++}=\{\emptyset,\{\emptyset\},\{\emptyset,\{\emptyset\}\}\}\\
+&\qquad\vdots
+\end{aligned}\]</div>
+
+<h3>④ 归纳集 <span class="pg">p.50</span></h3>
+<div class="def"><b>定义（归纳集）</b> \(A\) 为归纳集 \(\Leftrightarrow\)
+\[\begin{cases}①\ \emptyset\in A\\ ②\ \forall x\,(x\in A\to x^{+}\in A)\end{cases}\]</div>
+<div class="note"><b>笔记边注</b> 条件 ① \(\emptyset\in A\) 用红笔圈出。</div>
+
+<div class="example"><b>例</b>
+\[A=\{\emptyset,\emptyset^{+},\emptyset^{++},\emptyset^{+++},\cdots\}\]
+\[B=\{\emptyset,\emptyset^{+},\emptyset^{++},\cdots,a,a^{+},a^{++},\cdots\}\]
+\(A\) 与 \(B\) 都是归纳集。</div>
+<div class="note"><b>笔记边注</b> 两行用红框框在一起；\(A\) 中 \(\emptyset,\emptyset^{+},\emptyset^{++},\emptyset^{+++}\cdots\) 被红圈圈出并在上方画红星；\(B\) 中 \(\emptyset,\emptyset^{+},\emptyset^{++}\cdots\) 部分也被红圈圈出、画红星并在下方画波浪线，表示 \(B\) 中也包含 \(A\) 的全部元素，\(B\) 额外多出 \(a,a^{+},a^{++},\cdots\)。</div>
+
+<h4>用 \(A\) 中的元素定义自然数</h4>
+<div class="tbl"><table><thead><tr><th>\(A\) 中元素</th><th>对应自然数</th></tr></thead><tbody>
+<tr><td>\(\emptyset=\emptyset\)</td><td>\(0=\emptyset\)</td></tr>
+<tr><td>\(\emptyset^{+}=\{\emptyset\}\)</td><td>\(1=\emptyset^{+}=\{0\}\)</td></tr>
+<tr><td>\(\emptyset^{++}=\{\emptyset,\{\emptyset\}\}\)</td><td>\(2=\emptyset^{++}=\{0,1\}\)</td></tr>
+<tr><td>\(\emptyset^{+++}=\{\emptyset,\{\emptyset\},\{\emptyset,\{\emptyset\}\}\}\)</td><td>\(3=\emptyset^{+++}=\{0,1,2\}\)</td></tr>
+<tr><td>\(\vdots\)</td><td>\(\vdots\)</td></tr>
+<tr><td></td><td>\(n=(n-1)^{+}=\{0,1,2,\cdots,n-1\}\)</td></tr>
+<tr><td></td><td>\(\vdots\)</td></tr>
+</tbody></table></div>
+<div class="note"><b>笔记边注</b> 左列每个集合的元素分别画下划线：如 \(\emptyset^{++}\) 中的 \(\emptyset\) 与 \(\{\emptyset\}\)，\(\emptyset^{+++}\) 中的 \(\emptyset\)、\(\{\emptyset\}\)、\(\{\emptyset,\{\emptyset\}\}\)，以显示它们恰好就是前面的 \(0,1,2\)；右列 \(\{0,1,2\}\) 下画波浪线。</div>
+<div class="supp"><b>补充讲解</b> 每个自然数 \(n\) 恰好是比它小的所有自然数构成的集合，因此 \(n\) 作为集合恰有 \(n\) 个元素。</div>
+<div class="warn"><b>易错提醒</b> 归纳集只要求“含 \(\emptyset\) 且对后继封闭”，并不要求“只含 \(\emptyset\) 的后继”，所以 \(B\) 这种带有多余元素的集合也是归纳集。自然数集是其中最小的那个（见 4.2）。</div>

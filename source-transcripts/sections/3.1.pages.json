@@ -1,0 +1,17 @@
+[
+ {
+  "page": 42,
+  "status": "transcribed",
+  "note": "第三章 函数；函数/映射=单值二元关系；单值定义；空函数；偏函数及全体偏函数；例 A={a,b},B={1,2} 列 f0~f8"
+ },
+ {
+  "page": 43,
+  "status": "transcribed",
+  "note": "A⇸B={f0..f8}；全函数、B^A；真偏函数；单射/满射/双射；例 f(<a,b>)=a 满射及 |B| 讨论"
+ },
+ {
+  "page": 44,
+  "status": "transcribed",
+  "note": "象与原象定义；例 f(x)=x² 求 [1,3] 的象、[0,1] 的原象及草图"
+ }
+]

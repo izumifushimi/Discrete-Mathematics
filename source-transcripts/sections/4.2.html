@@ -1,0 +1,108 @@
+<div class="note"><b>笔记边注</b> 小节标题“4.2 自然数的定理”，日期“2025年6月21日 21:45”。</div>
+
+<h3>① 自然数运算（作为集合） <span class="pg">p.51</span></h3>
+<p>\(2=\{0,1\}\)，\(3=\{0,1,2\}\)。</p>
+\[\begin{aligned}
+2\cap 3&=\{0,1\}=2=\min(2,3)\\
+2\cup 3&=\{0,1,2\}=3=\max(2,3)\\
+3-2&=\{0,1,2\}-\{0,1\}=\{2\}\\
+2-3&=\{0,1\}-\{0,1,2\}=\emptyset=0
+\end{aligned}\]
+\[\begin{aligned}
+\bigcup n&=\bigcup\{0,1,\cdots,n-1\}=\max(0,1,\cdots,n-1)=n-1\\
+\bigcap n&=\bigcap\{0,1,\cdots,n-1\}=\min(0,1,\cdots,n-1)=0
+\end{aligned}\]
+\[\begin{cases}0\in 1\in 2\in 3\cdots\\ 0\subseteq 1\subseteq 2\subseteq 3\cdots\end{cases}\]
+<div class="note"><b>笔记边注</b> \(2\)、\(3\) 下标小三角；\(\{0,1\}\)、\(\{0,1,2\}\) 的元素下用红色短线标出；\(\{2\}\) 下画波浪线。</div>
+<div class="warn"><b>易错提醒</b> \(3-2=\{2\}\)，不是自然数 \(1=\{0\}\)：集合差不等于算术减法。</div>
+<div class="supp"><b>补充讲解</b> \(\bigcup n=n-1\) 与 \(\bigcap n=0\) 要求 \(n\ge1\)。\(n=0\) 时 \(\bigcup 0=\bigcup\emptyset=\emptyset=0\)，而 \(\bigcap\emptyset\) 无定义。</div>
+
+<h3>② 自然数集的定义 <span class="pg">p.51</span></h3>
+<div class="def"><b>定义（自然数集）</b> 令
+\[D=\{v\mid v\text{ 是归纳集}\}\]
+\[\mathbb{N}=\bigcap D\quad(\text{自然数集的定义})\]
+\(\Downarrow\)
+<br>\(\mathbb{N}\) 为归纳集，\(\mathbb{N}\) 为最小的归纳集。</div>
+<div class="note"><b>笔记边注</b> 编号②旁画红色记号；\(D\) 的定义下画横线并标星；右侧写“\(\mathbb{N}\subseteq V\)”；\(\mathbb{N}=\bigcap D\) 下画波浪线；末行“\(\mathbb{N}\) 为归纳集，\(\mathbb{N}\) 为最小的归纳集”下画红双线，“\(\mathbb{N}\) 为最小的归纳集”被圈出并画红波浪线和星号。</div>
+<div class="supp"><b>补充讲解</b> 右侧“\(\mathbb{N}\subseteq V\)”的含义是：对每个归纳集 \(v\in D\)，都有 \(\mathbb{N}\subseteq v\)，这正是“最小”的意思。</div>
+
+<h3>③ 后继函数 <span class="pg">p.51–52</span></h3>
+<div class="def"><b>定义（后继函数）</b> \(\sigma:\mathbb{N}\to\mathbb{N}\)，\(\forall n\in\mathbb{N}\)，\(\sigma(n)=n^{+}\)。</div>
+\[\begin{aligned}
+\sigma(0)&=0^{+}=1\\
+\sigma(1)&=1^{+}=2\\
+\sigma(2)&=2^{+}=3\\
+&\ \ \vdots
+\end{aligned}\]
+
+<h3>④ \(\langle\mathbb{N},\sigma,0\rangle\) 为 Peano 系统 <span class="pg">p.52</span></h3>
+<div class="thm"><b>定理</b> \(\langle\mathbb{N},\sigma,0\rangle\) 为 Peano 系统。
+<ol>
+<li>\(0\in\mathbb{N}\)（\(\emptyset\in\mathbb{N}\)）；</li>
+<li>\(\mathbb{N}\) 在 \(\sigma\) 运算下封闭（后继定义：\(A\in\mathbb{N}\to A^{+}\in\mathbb{N}\)）；</li>
+<li>\(0\notin\mathrm{ran}\,\sigma\)（\(n^{+}=\emptyset\) 不存在！）；</li>
+<li>\(\sigma\) 为单射（标星，证明见 ⑦）；</li>
+<li>极小性公理。</li>
+</ol></div>
+<div class="note"><b>笔记边注</b> 标题整行用黄色高亮并用红框圈出；\(0\)、\(\mathbb{N}\)、\(\emptyset\) 下标三角记号；“\(n^{+}=\emptyset\)”下画波浪线；(4)(5) 两行下画红线，(4) 左侧画星号。</div>
+<div class="supp"><b>补充讲解</b> (3) 成立是因为 \(n\in n^{+}\)，所以 \(n^{+}\ne\emptyset\)。(5) 成立是因为满足 \(A\subseteq\mathbb{N}\)、\(0\in A\)、\(A\) 在 \(\sigma\) 下封闭的 \(A\) 是归纳集，而 \(\mathbb{N}\) 是最小归纳集，所以 \(\mathbb{N}\subseteq A\)，即 \(A=\mathbb{N}\)。</div>
+
+<h3>⑤ 数学归纳法 <span class="pg">p.52–53</span></h3>
+<p>目标：证明 \(\forall n\in\mathbb{N}\)，\(P(n)\) 为真。</p>
+<div class="unclear"><b>待核对（p.52，位置：“目标”一行右侧括号）</b> 可辨认部分：“(\(\mathbb{N}\) ……集……性质)”，开头为 \(\mathbb{N}\)，末尾“性质”，下方有下划线；无法辨认：中间两三个字（疑似“符合”或“某集合”）。</div>
+<ol>
+<li>构造：\(S=\{n\mid n\in\mathbb{N}\land P(n)\}\)；</li>
+<li>证明：\(S\) 为归纳集，即
+<br>i) \(\emptyset\in S\)；
+<br>ii) \(\forall n\,(n\in S\to n^{+}\in S)\)。</li>
+</ol>
+<p>\(\therefore S=\mathbb{N}\)。</p>
+<div class="note"><b>笔记边注</b> \(S\) 的构造式下画红线；“\(S\) 为归纳集”下画横线。</div>
+<div class="supp"><b>补充讲解</b> 由 \(S\subseteq\mathbb{N}\) 且 \(S\) 为归纳集、\(\mathbb{N}\) 为最小归纳集得 \(\mathbb{N}\subseteq S\)，故 \(S=\mathbb{N}\)，即 \(P(n)\) 对一切自然数成立。</div>
+
+<h3>⑥ 定理 1：自然数的元素都是它的子集 <span class="pg">p.53–54</span></h3>
+<div class="thm"><b>定理 1</b> 任何自然数的元素均为它的子集。</div>
+<p>层次示意：\(\mathbb{N}\xrightarrow{\ \subseteq\ } n\xrightarrow{\ \subseteq\ } x\)，下方分别标“自然数集”“自然数”“自然数的元素”。</p>
+<div class="note"><b>笔记边注</b> 定理文字下画红线，“自然数”下画波浪线；示意图中两条箭头上方都写 \(\subseteq\)。</div>
+<div class="supp"><b>补充讲解</b> 关系实际是 \(n\in\mathbb{N}\)、\(x\in n\)；定理 1 要证的是 \(x\subseteq n\)。（4.3 还会证明 \(n\subseteq\mathbb{N}\)。）</div>
+
+<div class="proof"><b>证明</b> 令
+\[S=\{n\mid n\in\mathbb{N}\land(\forall x\,(x\in n\to x\subseteq n))\}\]
+<p>i) \(\emptyset\in S\)：需验证 \(\emptyset\in\mathbb{N}\land(\forall x\,(x\in\emptyset\to x\subseteq\emptyset))\)。
+<br>\(\emptyset\in\mathbb{N}\) ✓（取 \(n=\emptyset\)）；\(x\in\emptyset\) 为假，所以蕴含式 \(x\in\emptyset\to x\subseteq\emptyset\) 为真 ✓。</p>
+<p>ii) \(n\in S\to n^{+}\in S\)，即证 \(\forall x,\ x\in n^{+}\Rightarrow x\subseteq n^{+}\)。
+<br>假设 \(n\in S\)。已知 \(x\in n^{+}\)，证明 \(x\subseteq n^{+}\)：
+\[\begin{aligned}
+&\forall x,\ x\in n\cup\{n\}\\
+&\forall x,\ x\in n\lor x\in\{n\}\\
+&\forall x,\ x\in n\lor x=n\\
+&\forall x,\ x\subseteq n\lor x=n\\
+\hline
+&\forall x,\ x\subseteq n\cup\{n\}\\
+&\forall x,\ x\subseteq n^{+}
+\end{aligned}\]
+\(\therefore S=\mathbb{N}\)。</p></div>
+<div class="note"><b>笔记边注</b> \(S\) 定义中“\(\forall x(x\in n\to x\subseteq n)\)”黄色高亮，\(\forall x\)、\(x\in n\)、\(x\subseteq n\) 下画红线；\(S=\{n|\) 中 \(n\) 用红色箭头连到 i) 的 \(\emptyset\in S\)；\(\emptyset\in\mathbb{N}\) 下画红波浪线，下面打“✓ \(n=\emptyset\) ✓”，\(x\in\emptyset\) 下写“假”，整式后打红色大 ✓。i) 与 ii) 之间用黑色弯箭头相连。ii) 中“\(n\in S\)”“\(n^{+}\in S\)”分别红圈圈出，“即 \(\forall x,x\in n^{+}\Rightarrow x\subseteq n^{+}\)”红圈圈出并画星；左侧写“假设 \(n\in S\)”并圈出。推导中 \(x\in n\) 黄色高亮，并用红色箭头指回“假设 \(n\in S\)”，说明由 \(x\in n\) 推出 \(x\subseteq n\) 用的是归纳假设；\(x\subseteq n\) 与 \(x=n\) 分别红圈；最终式 \(\forall x,x\subseteq n^{+}\) 下画红线。</div>
+<div class="supp"><b>补充讲解</b> 倒数第二步：若 \(x\subseteq n\)，则 \(x\subseteq n\subseteq n\cup\{n\}\)；若 \(x=n\)，则 \(x=n\subseteq n\cup\{n\}\)。两种情况都得 \(x\subseteq n^{+}\)。</div>
+
+<h3>⑦ \(\sigma\) 是单射 <span class="pg">p.54</span></h3>
+<p>要证（在 \(\mathbb{N}\) 中，\(m,n\in\mathbb{N}\)）：\(\sigma(m)=\sigma(n)\Rightarrow m=n\)，或写成 \(m^{+}=n^{+}\Rightarrow m=n\)。</p>
+<div class="proof"><b>证明</b>
+\[\begin{aligned}
+m^{+}=n^{+}&\Rightarrow n\in n^{+}=m^{+}=m\cup\{m\}\\
+&\Rightarrow n\in m\cup\{m\}\\
+&\Rightarrow n\in m\lor n=m\\
+&\overset{\text{定理 1}}{\Longrightarrow} n\subseteq m\lor n=m
+\end{aligned}\]
+同理 \(m\subseteq n\lor n=m\)。
+\[\begin{cases}①\ n\subseteq m\lor n=m\\ ②\ m\subseteq n\lor n=m\end{cases}\Rightarrow n=m\]</div>
+<div class="note"><b>笔记边注</b> \(\sigma(m)=\sigma(n)\) 下画线；\(n\in m\) 中 \(n\)、\(m\) 下标红三角；① ② 之间画红色双向箭头；两式各部分下方用红线和“1”标注（即两式各自为真）。</div>
+<div class="supp"><b>补充讲解</b> 最后一步：若 \(n\ne m\)，由 ① ② 得 \(n\subseteq m\) 且 \(m\subseteq n\)，于是 \(n=m\)，矛盾，所以 \(n=m\)。“定理 1”用在 \(n\in m\Rightarrow n\subseteq m\)（\(n\) 是自然数 \(m\) 的元素）。</div>
+
+<h3>⑧ 其他定理 <span class="pg">p.54–55</span></h3>
+<div class="thm"><b>定理</b> \(\forall m,n\in\mathbb{N}\)，\(m^{+}\in n^{+}\Leftrightarrow m\in n\)。</div>
+<div class="thm"><b>定理</b> 任何自然数都不是自己的元素。（证明时构造 \(S=\{n\mid n\in\mathbb{N}\land n\notin n\}\)。）</div>
+<div class="thm"><b>定理</b> \(\emptyset\) 属于除 \(0\) 外的任何自然数。</div>
+<div class="thm"><b>定理（三歧性）</b> \(\forall m,n\in\mathbb{N}\)，\(m\in n\)、\(m=n\)、\(n\in m\) 恰有一式成立。</div>
+<div class="note"><b>笔记边注</b> “任何自然数都不是自己的元素”下画横线。三歧性定理在 p.54 末尾写到“\(m\in n,\ m=n,\ n\in m\)”，“恰有一式成立”写在 p.55 顶部右侧；p.55 其余部分为空白，顶端仅有一小段笔画残迹。</div>
+<div class="warn"><b>易错提醒</b> 三歧性用的是 \(\in\) 而不是 \(\subseteq\)；对自然数而言，\(m\in n\) 就是 \(m\lt n\)（见 4.3 ⑨）。</div>

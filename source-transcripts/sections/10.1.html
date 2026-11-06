@@ -1,0 +1,108 @@
+<div class="note"><b>笔记边注</b> 页首标题“第10章 平面图”，日期 2025年9月22日；小节标题“10.1 平面图的基本概念”。</div>
+
+<h3>① 平面图（Plane graph） <span class="pg">p.148</span></h3>
+<div class="def"><b>定义（平面图）</b> <u>在平面上</u>边与边不在<u>非顶点处</u>相交的图。</div>
+<p>原页用四幅图对比：</p>
+<figure class="fig"><svg viewBox="0 0 760 200" role="img" aria-label="K4两种画法与K3,3两种画法">
+<g stroke="currentColor" fill="none" stroke-width="2">
+<!-- K4 交叉画法 -->
+<rect x="30" y="50" width="100" height="80"/>
+<line x1="30" y1="50" x2="130" y2="130"/><line x1="130" y1="50" x2="30" y2="130"/>
+<circle cx="80" cy="90" r="9"/>
+<!-- K4 平面画法 -->
+<rect x="210" y="50" width="100" height="80"/>
+<line x1="210" y1="130" x2="310" y2="50"/>
+<path d="M210 50 C 210 0, 360 0, 340 90 C 330 130, 320 130, 310 130"/>
+<!-- K3,3 交叉画法 -->
+<line x1="400" y1="60" x2="400" y2="130"/><line x1="400" y1="60" x2="450" y2="130"/><line x1="400" y1="60" x2="500" y2="130"/>
+<line x1="450" y1="60" x2="400" y2="130"/><line x1="450" y1="60" x2="450" y2="130"/><line x1="450" y1="60" x2="500" y2="130"/>
+<line x1="500" y1="60" x2="400" y2="130"/><line x1="500" y1="60" x2="450" y2="130"/><line x1="500" y1="60" x2="500" y2="130"/>
+<!-- K3,3 另一画法（六边形+交叉） -->
+<polygon points="650,40 710,70 710,130 650,160 590,130 590,70"/>
+<line x1="590" y1="70" x2="710" y2="130"/><line x1="710" y1="70" x2="590" y2="130"/>
+<path d="M650 40 C 760 20, 760 170, 650 160"/>
+</g>
+<g fill="currentColor">
+<circle cx="30" cy="50" r="3"/><circle cx="130" cy="50" r="3"/><circle cx="30" cy="130" r="3"/><circle cx="130" cy="130" r="3"/>
+<circle cx="210" cy="50" r="3"/><circle cx="310" cy="50" r="3"/><circle cx="210" cy="130" r="3"/><circle cx="310" cy="130" r="3"/>
+<circle cx="400" cy="60" r="3"/><circle cx="450" cy="60" r="3"/><circle cx="500" cy="60" r="3"/><circle cx="400" cy="130" r="3"/><circle cx="450" cy="130" r="3"/><circle cx="500" cy="130" r="3"/>
+<circle cx="650" cy="40" r="3"/><circle cx="710" cy="70" r="3"/><circle cx="710" cy="130" r="3"/><circle cx="650" cy="160" r="3"/><circle cx="590" cy="130" r="3"/><circle cx="590" cy="70" r="3"/>
+<text x="70" y="35" font-size="14">K4</text><text x="60" y="180" font-size="14">✗ 非平面图</text>
+<text x="235" y="180" font-size="14">✓ 平面图</text>
+<text x="430" y="45" font-size="14">K3,3</text><text x="415" y="180" font-size="14">✗ 非平面图</text>
+<text x="615" y="190" font-size="14">✗ 非平面图</text>
+</g></svg>
+<figcaption>图（p.148）：左1 为 K4 画成矩形加两条对角线，两对角线在非顶点处相交（红圈标出交点），打红“✗”，标“非平面图”；箭头“⇒”到左2：把一条对角线绕到外侧画出，无交叉，打“✓”，标“平面图”。右侧两幅是 K3,3：一幅为上下各3点的交叉画法，打红“✗”标“非平面图”；另一幅把6个顶点排成六边形、一条边绕到外侧，内部仍有交叉，打红“✗”标“非平面图”。</figcaption></figure>
+<p>由此区分：</p>
+<ul>
+<li>可平面图（如 \(K_4\)）：存在一种画法使它成为平面图；</li>
+<li>不可平面图（如 \(K_{3,3}\)）：无论怎么画都有交叉。</li>
+</ul>
+<div class="def"><b>平面嵌入</b> 把可平面图画成平面图的画法。例：\(K_4\) 的矩形加交叉对角线画法 ⇒ 一条对角线绕到外侧的无交叉画法（红线强调后者即为平面嵌入）。</div>
+<div class="supp"><b>补充讲解</b> 原页 K4 交叉画法下写“非平面图”，指的是“这幅画不是平面图”，并不是说 \(K_4\) 不可平面；\(K_4\) 是可平面图。而 \(K_{3,3}\) 的两幅图都是“✗”，因为它本身就是不可平面图。</div>
+
+<h3>② 球面嵌入与曲面嵌入 <span class="pg">p.148</span></h3>
+<p>以 \(K_{3,3}\) 为例比较三种嵌入：</p>
+<ul>
+<li>平面嵌入：画在六边形里，红色 // 标记各边，仍剩一个交叉点（红圈，下方红“△”提示），结论“✗”；</li>
+<li>球面嵌入：画在球面上（实线为前面、虚线为背面的赤道），红线绕球面走，仍有交叉（红“✗”标出），结论“✗”；</li>
+<li>曲面嵌入：画在环面（圆环/轮胎形）上，边可以绕过中间的洞（彩色曲线），没有交叉，结论“✓”。</li>
+</ul>
+<figure class="fig"><svg viewBox="0 0 220 120" role="img" aria-label="K3,3 示意">
+<g stroke="currentColor" fill="none" stroke-width="2">
+<line x1="40" y1="20" x2="40" y2="100"/><line x1="40" y1="20" x2="110" y2="100"/><line x1="40" y1="20" x2="180" y2="100"/>
+<line x1="110" y1="20" x2="40" y2="100"/><line x1="110" y1="20" x2="110" y2="100"/><line x1="110" y1="20" x2="180" y2="100"/>
+<line x1="180" y1="20" x2="40" y2="100"/><line x1="180" y1="20" x2="110" y2="100"/><line x1="180" y1="20" x2="180" y2="100"/>
+</g><g fill="currentColor"><circle cx="40" cy="20" r="3"/><circle cx="110" cy="20" r="3"/><circle cx="180" cy="20" r="3"/><circle cx="40" cy="100" r="3"/><circle cx="110" cy="100" r="3"/><circle cx="180" cy="100" r="3"/></g></svg>
+<figcaption>图（p.148）：\(K_{3,3}\)，上3点各与下3点相连，共9条边。原页右侧又分别画出它在平面（✗）、球面（✗）、环面（✓，即“曲面嵌入”）上的嵌入；环面图为立体手绘，此处用文字描述。</figcaption></figure>
+
+<h3>③ 定理1 <span class="pg">p.149</span></h3>
+<div class="thm"><b>定理1</b> 可平面嵌入 \(\Leftrightarrow\) 可球面嵌入。</div>
+
+<h3>④ 面（平面图） <span class="pg">p.149</span></h3>
+<ol>
+<li><b>区域</b>：不含顶点与边的极大连通曲面 \(R\)。</li>
+<li><b>外部区域</b>：面积无限的区域 \(R\)（包围 \(R\)）？（原页此处带问号）</li>
+<li><b>区域边界</b>：与 \(R\) 关联的边和顶点构成的子图。</li>
+<li><b>面</b>：区域 \(R\) 及其边界。</li>
+<li><b>面的次数</b>：\(\deg(R)\) = 边界长度。</li>
+<li>\(\displaystyle\sum_{i=1}^{r}\deg(R_i)=2m\)（边个数 \(\times 2\)）。</li>
+</ol>
+<figure class="fig"><svg viewBox="0 0 240 170" role="img" aria-label="面的编号示例">
+<g stroke="currentColor" fill="none" stroke-width="2">
+<polygon points="40,40 120,40 150,110 40,110"/>
+<line x1="40" y1="40" x2="150" y2="110"/>
+<path d="M120 40 C 210 20, 230 140, 150 150 C 90 160, 40 140, 40 110"/>
+</g><g fill="currentColor">
+<circle cx="40" cy="40" r="3"/><circle cx="120" cy="40" r="3"/><circle cx="150" cy="110" r="3"/><circle cx="40" cy="110" r="3"/>
+<text x="60" y="90" font-size="14">①</text><text x="110" y="65" font-size="14">②</text><text x="170" y="115" font-size="14">③</text><text x="200" y="25" font-size="14">④</text>
+</g></svg>
+<figcaption>图（p.149 右侧）：4个顶点的四边形加一条对角线，另有一条边从右上顶点绕到外侧回到左下附近，围出面③；对角线两侧为面①、②；最外侧无限区域为面④（红箭头指向④）。</figcaption></figure>
+<div class="supp"><b>补充讲解</b> 每条边要么是两个不同面的公共边界，各计一次；要么（如桥）两侧是同一个面，在该面次数里计两次。所以总次数恰为 \(2m\)。</div>
+
+<h3>⑤ 极大平面图 <span class="pg">p.149–150</span></h3>
+<div class="def"><b>定义（极大平面图）</b> 1) 是平面图的情况下，在任意两个相邻顶点之间加边变非平面图。</div>
+<div class="fix"><b>校订说明（p.149）</b> 原式：“在任意两个相邻顶点之间加边变非平面图”；正确式：“在任意两个<b>不相邻</b>顶点之间加边就变成非平面图”（简单图前提下）；原因：相邻顶点间再加边得到平行边，与定义无关，定义要求的是不相邻顶点。</div>
+<div class="thm"><b>定理2</b> \(n\) 阶（\(n\ge 3\)）<u>简单连通</u>平面图是<u>极大平面图</u> \(\Leftrightarrow\ \forall R,\ \deg(R)=3\)。</div>
+<div class="example"><b>例</b> \(K_5-\{e\}\)。
+<p><b>解</b> 原页三步：</p>
+<ol>
+<li>先画 \(K_5-\{e\}\)：五角星形状（5个顶点，五边形去掉一条边，加内部星形对角线），红圈标出左侧一个顶点，红框框住整图；</li>
+<li>⇒ 改画成三角形外框，内部有一条交叉，用红色“//”标出需要移动的边；</li>
+<li>⇒ 把该边绕到外侧，得到无交叉的平面图，所有面（含外部面）都标红色③，即每个面次数都是3。</li>
+</ol>
+<p><b>结论</b> \(K_5-\{e\}\) 的每个面次数为 3，是极大平面图。</p></div>
+<figure class="fig"><svg viewBox="0 0 220 180" role="img" aria-label="K5去掉一边的平面嵌入">
+<g stroke="currentColor" fill="none" stroke-width="2">
+<polygon points="110,20 30,160 190,160"/>
+<line x1="110" y1="20" x2="110" y2="115"/><line x1="30" y1="160" x2="110" y2="115"/><line x1="190" y1="160" x2="110" y2="115"/>
+<line x1="110" y1="115" x2="110" y2="160"/><line x1="30" y1="160" x2="110" y2="160"/>
+</g><g fill="currentColor">
+<circle cx="110" cy="20" r="3"/><circle cx="30" cy="160" r="3"/><circle cx="190" cy="160" r="3"/><circle cx="110" cy="115" r="3"/><circle cx="110" cy="160" r="3"/>
+<text x="85" y="95" font-size="14">③</text><text x="120" y="95" font-size="14">③</text><text x="65" y="155" font-size="14">③</text><text x="135" y="155" font-size="14">③</text><text x="180" y="40" font-size="14">③</text>
+</g></svg>
+<figcaption>图：\(K_5-\{e\}\) 的一种平面嵌入（重绘为等价形式）：外三角形 3 个顶点 + 内部 1 点 + 底边中点 1 点，共 5 点 9 条边，6 个面次数均为 3（外部面也是 3）。原页手绘形状为三角形外框加一条绕外侧的边。</figcaption></figure>
+
+<h3>极小非平面图 <span class="pg">p.150</span></h3>
+<div class="def"><b>定义（极小非平面图）</b>（例：\(K_{3,3}\)）非平面图 \(\xrightarrow{\text{删除任意一边}}\) 平面图。</div>
+<div class="supp"><b>补充讲解</b> \(K_5\) 也是极小非平面图：删去任意一条边得到 \(K_5-\{e\}\)，即上例的极大平面图。</div>

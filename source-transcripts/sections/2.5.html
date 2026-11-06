@@ -1,0 +1,72 @@
+<div class="note"><b>笔记边注</b> 小节标题“2.5 等价关系与划分”，日期 2025年6月16日 11:13。</div>
+
+<h3>① 等价关系的定义 <span class="pg">p.33</span></h3>
+<div class="def"><b>定义（等价关系）</b> 设 \(A\ne\emptyset\)，\(R\subseteq A\times A\)，若 \(R\) 是自反、对称、传递的，则称 \(R\) 为等价关系。</div>
+
+<h3>② 等价类 <span class="pg">p.33</span></h3>
+<div class="def"><b>定义（等价类）</b> 设 \(R\) 为 \(A\) 上的等价关系，\(A\ne\emptyset\)，
+\[[x]_R=\{y\mid y\in A\land xRy\}\]</div>
+
+<div class="example"><b>例 1</b> \(A=\{1,2,3,4,5,6,7,8\}\)，
+\[R_3=\{\langle x,y\rangle\mid x,y\in A\land x\equiv y\pmod 3\}\]
+（“\(x\equiv y\pmod 3\)”下画波浪线并加小三角标记）
+<div class="note"><b>笔记边注</b> 右侧按除以 3 的余数分组并圈出：“1 4 7 ÷3 余 ①”，“2 5 ÷3 余 ②”，“8 6 ÷3 余 ⓪”（第三组首个数字写得像 8）。</div>
+<p><b>解</b> 关系图如下。</p>
+<figure class="fig"><svg viewBox="0 0 440 200" role="img" aria-label="模3同余关系的关系图">
+<defs><marker id="ar25" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+<g stroke="currentColor" fill="none" stroke-width="1.5">
+<circle cx="90" cy="50" r="4"/><circle cx="40" cy="150" r="4"/><circle cx="140" cy="150" r="4"/>
+<line x1="86" y1="56" x2="44" y2="143" marker-end="url(#ar25)"/><line x1="47" y1="147" x2="91" y2="58" marker-end="url(#ar25)"/>
+<line x1="94" y1="56" x2="136" y2="143" marker-end="url(#ar25)"/><line x1="133" y1="147" x2="89" y2="58" marker-end="url(#ar25)"/>
+<line x1="46" y1="147" x2="133" y2="147" marker-end="url(#ar25)"/><line x1="134" y1="154" x2="47" y2="154" marker-end="url(#ar25)"/>
+<circle cx="90" cy="36" r="10"/><circle cx="28" cy="162" r="10"/><circle cx="152" cy="162" r="10"/>
+<circle cx="250" cy="60" r="4"/><circle cx="250" cy="140" r="4"/>
+<line x1="246" y1="66" x2="246" y2="133" marker-end="url(#ar25)"/><line x1="254" y1="134" x2="254" y2="67" marker-end="url(#ar25)"/>
+<circle cx="262" cy="48" r="10"/><circle cx="262" cy="152" r="10"/>
+<circle cx="370" cy="60" r="4"/><circle cx="370" cy="140" r="4"/>
+<line x1="366" y1="66" x2="366" y2="133" marker-end="url(#ar25)"/><line x1="374" y1="134" x2="374" y2="67" marker-end="url(#ar25)"/>
+<circle cx="382" cy="48" r="10"/><circle cx="382" cy="152" r="10"/>
+</g>
+<g fill="currentColor" font-size="14"><text x="70" y="40">1</text><text x="10" y="150">4</text><text x="155" y="140">7</text><text x="230" y="60">2</text><text x="230" y="150">5</text><text x="350" y="60">3</text><text x="350" y="150">6</text></g>
+</svg><figcaption>图：三个连通部分。第一部分顶点 1、4、7，两两之间有双向边，每个顶点有环；第二部分顶点 2、5，双向边加各自的环；第三部分顶点 3、6，双向边加各自的环。（笔记图中没有画顶点 8）</figcaption></figure>
+<p><b>结论</b> \([1]=[4]=[7]=\{1,4,7\}\)，\([2]=[5]=\{2,5\}\)，\([3]=[6]=\{3,6\}\)。</p>
+</div>
+<div class="fix"><b>校订说明（p.33）</b> 原式：\(A=\{1,2,\dots,8\}\)，但等价类写作 \([2]=[5]=\{2,5\}\)，关系图也没有画 8，右侧分组写作“8 6 ÷3 余 0”；正确式：\(8\equiv 2\pmod 3\)，应为 \([2]=[5]=[8]=\{2,5,8\}\)，余 0 一组应为 \(\{3,6\}\)；8 应与 2、5 互相连双向边并带环。原因：\(8=2\times3+2\)，余数为 2，不是 0；遗漏 8 后各等价类之并不等于 \(A\)。（若原意是 \(A=\{1,\dots,7\}\)，则原结论成立。）</div>
+
+<h3>③ 等价类的性质 <span class="pg">p.33–34</span></h3>
+<div class="thm"><b>性质</b> 设 \(R\) 为 \(A\ne\emptyset\) 上的等价关系，则
+\[\begin{cases} [x]_R\ne\emptyset\\ xRy\Rightarrow [x]_R=[y]_R\\ \neg\, xRy\Rightarrow [x]_R\cap[y]_R=\emptyset\\ \bigcup\{[x]_R\mid x\in A\}=A\end{cases}\]</div>
+<div class="note"><b>笔记边注</b> 第 34 页页首再次写了一遍 \(\bigcup\{[x]_R\mid x\in A\}=A\)，与第 33 页末行相同。</div>
+
+<h3>④ 商集 <span class="pg">p.34</span></h3>
+<div class="def"><b>定义（商集）</b> 设 \(R\) 为 \(A\ne\emptyset\) 上的等价关系，
+\[A/R=\{[x]_R\mid x\in A\}\]</div>
+<div class="example"><b>例 1（续）</b>
+\[A/R=\{\{1,4,7\},\{2,5\},\{3,6\}\}=\{[1],[2],[3]\}\]</div>
+<div class="fix"><b>校订说明（p.34）</b> 原式：\(A/R=\{\{1,4,7\},\{2,5\},\{3,6\}\}\)；正确式：\(A/R=\{\{1,4,7\},\{2,5,8\},\{3,6\}\}=\{[1],[2],[3]\}\)；原因：沿用第 33 页遗漏元素 8 的问题，\(A=\{1,\dots,8\}\) 时 \([2]\) 应含 8。</div>
+
+<h3>⑤ 划分 <span class="pg">p.34</span></h3>
+<div class="def"><b>定义（划分）</b> \(A\ne\emptyset\) 的一个划分是满足下列条件的 \(\mathscr{A}\subseteq P(A)\)：
+<ul>
+<li>不能有空集：① \(\emptyset\notin\mathscr{A}\)</li>
+<li>不能有交集：② \(\forall x,y\,(x,y\in\mathscr{A}\land x\ne y\Rightarrow x\cap y=\emptyset)\)</li>
+<li>覆盖全部元素：③ \(\bigcup\mathscr{A}=A\)</li>
+</ul></div>
+<div class="thm"><b>定理</b> \(R\) 为 \(A\) 的等价关系 \(\Rightarrow\) \(A/R\) 为 \(A\) 的划分。</div>
+<div class="supp"><b>补充讲解</b> 反过来，\(A\) 的每个划分也唯一确定一个等价关系（同块元素相关），所以等价关系与划分一一对应。\(\mathscr{A}\) 中的元素称为划分块。</div>
+
+<h3>⑥ 划分的加细 <span class="pg">p.34</span></h3>
+<div class="example"><b>例 2</b> \(A=\{1,2,3,4\}\)。
+<figure class="fig"><svg viewBox="0 0 440 170" role="img" aria-label="划分的加细示意">
+<g stroke="currentColor" fill="none" stroke-width="1.6">
+<ellipse cx="100" cy="80" rx="80" ry="60"/><line x1="100" y1="22" x2="100" y2="138"/>
+<ellipse cx="330" cy="80" rx="80" ry="60"/><line x1="330" y1="22" x2="330" y2="138"/><line x1="252" y1="80" x2="408" y2="80"/>
+<line x1="200" y1="80" x2="235" y2="80"/><path d="M228,74 L236,80 L228,86"/>
+</g>
+<g fill="currentColor" font-size="14"><text x="15" y="20">𝒜</text><text x="65" y="65">1</text><text x="125" y="65">2</text><text x="65" y="110">3</text><text x="125" y="110">4</text>
+<text x="295" y="60">1</text><text x="355" y="60">2</text><text x="295" y="115">3</text><text x="355" y="115">4</text>
+<text x="40" y="162">{{1,3},{2,4}}</text><text x="265" y="162">{{1},{3},{2},{4}}</text></g>
+</svg><figcaption>图：左圆标 𝒜，被一条竖线分成两块：左块 1、3，右块 2、4，即 \(\{\{1,3\},\{2,4\}\}\)（\(\{1,3\}\) 下画线）；箭头“⇒”指向右圆，右圆被十字线分成四块 1、2、3、4，即 \(\{\{1\},\{3\},\{2\},\{4\}\}\)。</figcaption></figure>
+<p><b>结论</b> \(\{\{1\},\{3\},\{2\},\{4\}\}\) 是 \(\{\{1,3\},\{2,4\}\}\) 的加细：右边每一块都包含在左边的某一块中。</p>
+</div>
+<div class="supp"><b>补充讲解</b> 加细的定义：设 \(\mathscr{A},\mathscr{B}\) 都是 \(A\) 的划分，若 \(\mathscr{B}\) 的每个划分块都含于 \(\mathscr{A}\) 的某个划分块中，则称 \(\mathscr{B}\) 是 \(\mathscr{A}\) 的加细。笔记第二个集合写作“\(\{\{1\},\{3\},\{2\}\{4\}\}\)”，最后两块之间少一个逗号。</div>

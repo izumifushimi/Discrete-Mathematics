@@ -1,0 +1,66 @@
+<h3>循环群的定义 <span class="pg">p.219</span></h3>
+<div class="def"><b>（①）循环群</b> \(G\) 为群，若存在 \(a\in G\)，使 \(G=\langle a\rangle\)，则 \(G\) 为循环群，\(a\) 为生成元。
+\[\begin{cases}n\text{ 阶循环群} & G=\langle a\rangle=\{e,a^1,a^2,\dots,a^{n-1}\},\ |G|=n\\ \text{无限循环群} & G=\{e,a^{\pm1},a^{\pm2},\dots\}\end{cases}\]</div>
+<div class="note"><b>笔记边注</b> 本节要解决两个问题：\(\begin{cases}\text{生成元？}\\ \text{循环群的子群？}\end{cases}\)（"循环群的子群"下画红线。）</div>
+
+<div class="example"><b>例 (1)</b> \(\langle\mathbb{Z}_3,\oplus_3\rangle\)，\(\mathbb{Z}_3=\{0,1,2\}\)，是 3 阶循环群（圈出），箭头指向"生成元 1，2"。
+<b>解</b>
+\[\begin{aligned}\langle 0\rangle&=\{0\}\ \times\\ \langle 1\rangle&=\{1^0,1^1,1^2\}=\{0,1,2\}=\mathbb{Z}_3\ \checkmark\\ \langle 2\rangle&=\{2^0,2^1,2^2\}=\{0,2,1\}=\mathbb{Z}_3\ \checkmark\end{aligned}\]
+<b>结论</b> 生成元为 1，2。</div>
+<div class="example"><b>例 (2)</b> \(\langle\mathbb{Z},+\rangle\) 为无限循环群，\(\mathbb{Z}=\{\dots,-2,-1,0,1,2,\dots\}\)，箭头指向"生成元 1，−1"。
+<b>解</b>
+\[\begin{aligned}\langle 1\rangle&=\{0,1^{\pm1},1^{\pm2},\dots\}\\ \langle -1\rangle&=\{0,(-1)^{\pm1},(-1)^{\pm2},\dots\}\end{aligned}\]
+两者都等于 \(\{0,\pm1,\pm2,\dots\}\)（原页圈出各个幂）。<b>结论</b> 生成元为 \(1,-1\)。</div>
+<div class="warn"><b>易错提醒</b> 加群中 \(1^k\) 表示 \(k\) 个 1 相加，等于 \(k\)；\(1^0=0\)，\((-1)^{-2}=2\)。</div>
+
+<h3>生成元定理 <span class="pg">p.219–220</span></h3>
+<div class="thm"><b>定理（②）</b> 设 \(G=\langle a\rangle\) 为循环群。
+<ol>
+<li>若 \(G\) 为无限循环群，则 \(G\) 只有两个生成元，即 \(a\) 和 \(a^{-1}\)；</li>
+<li>若 \(G\) 为 \(n\) 阶循环群，则 \(G\) 含有 \(\phi(n)\) 个生成元（红圈圈出）：对于任何（小于 \(n\) 且与 \(n\) 互素）的自然数 \(r\)，\(a^r\) 为 \(G\) 的生成元。</li>
+</ol></div>
+<div class="dup"><b>重复页说明</b> p.219 底部的 (2) 被页面裁切，p.220 顶部重写了这一行（顶上还残留 (1) 的半行），按一条转写。</div>
+<div class="def"><b>附：欧拉函数</b> \(\phi(n)\) 为欧拉函数，表示 \(0,1,2,\dots,n-1\) 中与 \(n\) 互素的数的个数。</div>
+<div class="note"><b>笔记边注</b> 下方写了"\(\gcd(a,b)=1\)"，被划掉并画了波浪线；右侧写 \(|G|=6\)，引出下面的例子。</div>
+<div class="example"><b>例</b> \(|G|=6\)，求 \(\phi(6)\) 与生成元。
+<b>解</b> \(\phi(6)\Rightarrow 0,1,2,3,4,5\) 逐个与 6 比较：
+<div class="tbl"><table><thead><tr><th>r</th><th>与 6</th><th>互素？</th></tr></thead><tbody>
+<tr><td>0</td><td>6</td><td>×</td></tr>
+<tr><td>1</td><td>6</td><td>✓ → \(a^1\)</td></tr>
+<tr><td>2</td><td>6</td><td>×</td></tr>
+<tr><td>3</td><td>6</td><td>×</td></tr>
+<tr><td>4</td><td>6</td><td>×</td></tr>
+<tr><td>5</td><td>6</td><td>✓ → \(a^5\)</td></tr></tbody></table></div>
+（1、5 两行用黄色高亮、红圈圈出。）<b>结论</b> \(\phi(6)=2\)，生成元为 \(a^1\)、\(a^5\)（框出，标"生成元"）。
+<p>检验 \(\langle a^1\rangle,\langle a^2\rangle,\langle a^5\rangle\)：</p>
+\[\langle a\rangle=\{a^0,a^1,a^2,\dots\}\ \checkmark\]
+右侧画出 \(\langle a\rangle=\{a^0,a^1,a^2,a^3,a^4,a^5\}\)，用一串弧形箭头依次连接，并写 \(a^6=a^5\cdot a=a^0\)，表示走完一圈回到 \(a^0\)。
+\[\langle a^2\rangle=a^0,a^2,a^4,a^6,a^8,a^{10}\ \to\ a^0,a^2,a^4\]
+（\(a^6,a^8,a^{10}\) 圈出，分别化为 \(a^0,a^2,a^4\)；左侧标"2/6"，即 2 与 6 不互素，\(a^2\) 不是生成元。）
+\[\langle a^5\rangle=a^0,a^5,a^{10},a^{15},a^{20},a^{25}\ \to\ a^0,a^5,a^4,a^3,a^2,a^1\ \checkmark\]
+（左侧标"5/6"，\(a^5\) 生成全部 6 个元素。）</div>
+<div class="supp"><b>补充讲解</b> 在 6 阶群里 \(a^6=e\)，所以指数按模 6 计算：\(10\equiv4\)，\(15\equiv3\)，\(20\equiv2\)，\(25\equiv1\pmod 6\)。原页 "2/6""5/6" 是把 \(r\) 和 \(n\) 写在一起作比较的记号，不是分数也不是整除。</div>
+<div class="unclear"><b>待核对（p.221，位置：顶部第一行，被页面裁切）</b> 可辨认部分：左端像"5/6"的残字和一条长横线，末尾有勾，推测与 p.220 底部"5/6 … ✓"那一行相同；无法辨认：横线上方的具体内容。</div>
+
+<h3>循环群的子群 <span class="pg">p.221</span></h3>
+<div class="thm"><b>定理（③）</b>
+<ol>
+<li>设 \(G=\langle a\rangle\) 是循环群，则 \(G\) 的子群也为循环群；</li>
+<li>设 \(G=\langle a\rangle\) 是无限循环群，则 \(G\) 的子群 \(\to\) \(\{e\}\) 非无限循环群，其余全为无限循环群；</li>
+<li>设 \(G=\langle a\rangle\) 是 \(n\) 阶循环群，则对 \(n\) 的每个正因子 \(d\)，\(G\) 恰好含有一个 \(d\) 阶子群，且这个 \(d\) 阶子群为 \(\langle a^{n/d}\rangle\)。</li>
+</ol></div>
+<div class="example"><b>例</b> \(|G|=12\)（12 阶）。
+<b>解</b> 12 的正因子 \(\to\) 1，2，3，4，6，12，共 6 个因子：
+\[\begin{array}{lcl}d_1=1&\Rightarrow\ 1\text{ 阶子群}&\Rightarrow\ a^{12/1}=\langle a^{12}\rangle\\ d_2=2&\Rightarrow\ 2\text{ 阶子群}&\Rightarrow\ a^{12/2}:\ \langle a^{6}\rangle\\ d_3=3&\Rightarrow\ 3\text{ 阶}\cdots&\Rightarrow\ a^{12/3}:\ \langle a^{4}\rangle\\ d_4=4&\Rightarrow\ 4\text{ 阶}\cdots&\Rightarrow\ a^{12/4}:\ \langle a^{3}\rangle\\ d_5=6&\Rightarrow\ 6\text{ 阶}\cdots&\Rightarrow\ a^{12/6}:\ \langle a^{2}\rangle\\ d_6=12&\Rightarrow\ 12\text{ 阶}\cdots&\Rightarrow\ a^{12/12}:\ \langle a\rangle\end{array}\]
+（右列的六个子群用方框框出。）</div>
+<div class="supp"><b>补充讲解</b> \(\langle a^{12}\rangle=\langle e\rangle=\{e\}\) 是 1 阶子群，\(\langle a\rangle=G\) 是 12 阶子群。</div>
+<div class="example"><b>例</b> \(G=\langle a\rangle=\{e,a,a^2,\dots,a^{11}\}\)，\(d=3\)（圈出）：
+\[\langle a^{n/d}\rangle=\langle a^{12/3}\rangle=\langle a^4\rangle=\{e,a^4,a^8\}\]</div>
+
+<h3>例：整数加群的生成元与子群 <span class="pg">p.221–222</span></h3>
+<div class="example"><b>例</b> 设 \(G=\langle\mathbb{Z},+\rangle\) 整数加群。
+<p>① 生成元 \(1,-1\)。</p>
+<p>② \[\begin{aligned}\mathbb{Z}&=\{\dots,-2,-1,0,1,2,\dots\}\\&=\{\dots,1^{-2},1^{-1},1^0,1^1,1^2,\dots\}\end{aligned}\]
+（\(1^0\) 用方框框出，两侧弧形箭头分别向负幂、正幂方向展开。）</p>
+<p>子群：\(\mathbb{Z},2\mathbb{Z},3\mathbb{Z},\dots\)；\(\{0\}\)，\(n\mathbb{Z}\)（\(n\ge1\)，整数）为 \(G\) 的子群（\(\{0\}\) 与 \(n\mathbb{Z}\) 红圈圈出）。</p></div>
+<div class="supp"><b>补充讲解</b> 这与定理 ③(2) 一致：\(\{0\}\) 是唯一不是无限循环群的子群；\(n\mathbb{Z}=\langle n\rangle\)（\(n\ge1\)）都是无限循环群。</div>

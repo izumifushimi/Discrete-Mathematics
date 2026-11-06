@@ -1,0 +1,27 @@
+[
+ {
+  "page": 194,
+  "status": "transcribed",
+  "note": "代数系统定义、例、代数常数书写次序边注、同类型 V1/V2、同种 ⟨Z,+,×⟩ 与 ⟨Zn,⊕n,⊗n⟩"
+ },
+ {
+  "page": 195,
+  "status": "transcribed",
+  "note": "⊕n/⊗n 定义、交换结合分配、子代数三条件、真子代数、反例 ⟨Z−{0},×⟩、最小/最大子代数"
+ },
+ {
+  "page": 196,
+  "status": "transcribed",
+  "note": "S 为最大子代数；例 nZ 为 ⟨Z,+,0⟩ 子代数的完整证明，n=0/1"
+ },
+ {
+  "page": 197,
+  "status": "transcribed",
+  "note": "积代数定义、例 ⟨Z,+⟩×⟨Z,×⟩、单位元 (0,1)、积代数性质开头"
+ },
+ {
+  "page": 198,
+  "status": "transcribed",
+  "note": "积代数性质(1)(2)(3)：交换结合幂等、单位元/零元、逆元"
+ }
+]

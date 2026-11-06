@@ -1,0 +1,17 @@
+[
+ {
+  "page": 233,
+  "status": "transcribed",
+  "note": "环的定义；例Z,Q,R,C；加法/乘法单位元、负元/逆元、记号约定；性质(1)(2)"
+ },
+ {
+  "page": 234,
+  "status": "transcribed",
+  "note": "性质(3)(4)；证明a0=0a=0、(-a)b=a(-b)=-(ab)；(a-b)^2展开"
+ },
+ {
+  "page": 235,
+  "status": "transcribed",
+  "note": "交换环、含幺环、无零因子环、整环；域的定义；例Z为整环，Q、R、C为域"
+ }
+]

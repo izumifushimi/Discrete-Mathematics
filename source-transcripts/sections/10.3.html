@@ -1,0 +1,180 @@
+<div class="note"><b>笔记边注</b> 小节标题“10.3 对偶图和外平面图”，日期 2025年9月22日 18:06。</div>
+
+<h3>① 对偶图 <span class="pg">p.155</span></h3>
+<div class="def"><b>定义（对偶图）</b> 设 \(G=\langle V,E\rangle\) 为<u>平面图</u>，\(G\) 的面的集合为 \(R\)。
+<u>对偶图</u> \(G^*=\langle V^*,E^*\rangle\)，\(G^*\) 的面的集合为 \(R^*\)，满足
+\[ \begin{cases} V^* \text{ 与 } R \text{ ——对应}\\ E^* \text{ 与 } E \text{ ——对应} \end{cases} \]</div>
+<div class="supp"><b>补充讲解</b> 构造方法：在 \(G\) 的每个面 \(R_i\) 内放一个顶点 \(v_i^*\)；\(G\) 的每条边 \(e\) 若是面 \(R_i\) 与 \(R_j\) 的公共边界，就画一条只穿过 \(e\) 一次的边 \(e^*=(v_i^*,v_j^*)\)；若 \(e\) 只在一个面 \(R_i\) 的边界上（即 \(e\) 是桥），就在 \(v_i^*\) 处画一个环。原页红线中每条红边与黑边交叉处都画了“\(\parallel\)”记号，表示一条对偶边恰好穿过一条原边。</div>
+
+<div class="example"><b>例</b> \(R=\{R_1,R_2,R_3,R_4\}\Leftrightarrow V^*=\{v_1^*,v_2^*,v_3^*,v_4^*\}\)。求下图 \(G\) 的对偶图。
+<figure class="fig"><svg viewBox="0 0 300 200" role="img" aria-label="平面图G：左上顶点带环，方框，内部悬挂边，右侧三角形">
+<g stroke="currentColor" fill="none" stroke-width="2">
+<circle cx="45" cy="25" r="18"/>
+<line x1="60" y1="40" x2="170" y2="40"/>
+<line x1="60" y1="40" x2="60" y2="150"/>
+<line x1="60" y1="150" x2="170" y2="150"/>
+<line x1="170" y1="40" x2="170" y2="150"/>
+<line x1="170" y1="40" x2="110" y2="90"/>
+<line x1="170" y1="40" x2="230" y2="90"/>
+<line x1="230" y1="90" x2="170" y2="150"/>
+</g>
+<g fill="currentColor">
+<circle cx="60" cy="40" r="4"/><circle cx="170" cy="40" r="4"/><circle cx="110" cy="90" r="4"/>
+<circle cx="230" cy="90" r="4"/><circle cx="60" cy="150" r="4"/><circle cx="170" cy="150" r="4"/>
+</g>
+<g font-size="14" fill="currentColor">
+<text x="36" y="30">R1</text><text x="80" y="120">R2</text><text x="180" y="100">R3</text><text x="180" y="25">R4</text><text x="105" y="185">G</text>
+</g>
+</svg><figcaption>图 \(G\)：6 个顶点、8 条边。左上顶点 \(a\) 上有一个环（环内为面 \(R_1\)）；方框 \(a\)—\(b\)—\(f\)—\(e\)—\(a\)（\(b\) 右上，\(f\) 右下，\(e\) 左下）；从 \(b\) 伸向方框内部的悬挂边 \(b\)—\(c\)（方框内为面 \(R_2\)）；右侧三角形 \(b\)—\(d\)—\(f\)（内部为面 \(R_3\)）；外部无限面为 \(R_4\)。</figcaption></figure>
+<p><b>解</b> 原页中部右侧用红笔在 \(G\) 上画出对偶图：在 \(R_1,R_2,R_3,R_4\) 内各放一个红色顶点，每条红边穿过一条黑边（交叉处标“\(\parallel\)”）。整理后得到下方的 \(G^*\)（原页“⇓”箭头指向）：</p>
+<figure class="fig"><svg viewBox="0 0 300 200" role="img" aria-label="对偶图G*">
+<g stroke="currentColor" fill="none" stroke-width="2">
+<line x1="40" y1="25" x2="230" y2="25"/>
+<circle cx="38" cy="160" r="20"/>
+<path d="M55 165 Q120 70 230 25"/>
+<line x1="55" y1="165" x2="230" y2="25"/>
+<path d="M55 165 Q165 120 230 25"/>
+<line x1="55" y1="165" x2="225" y2="165"/>
+<path d="M225 165 Q215 90 230 25"/>
+<path d="M225 165 Q245 90 230 25"/>
+</g>
+<g fill="currentColor">
+<circle cx="40" cy="25" r="4"/><circle cx="230" cy="25" r="4"/><circle cx="55" cy="165" r="4"/><circle cx="225" cy="165" r="4"/>
+</g>
+<g font-size="14" fill="currentColor">
+<text x="20" y="20">v1*</text><text x="240" y="25">v4*</text><text x="60" y="190">v2*</text><text x="235" y="180">v3*</text><text x="130" y="195">G*</text>
+</g>
+</svg><figcaption>图 \(G^*\)：顶点 \(v_1^*,v_2^*,v_3^*,v_4^*\)。边：\(v_1^*v_4^*\)（对偶于 \(a\) 上的环）；\(v_2^*\) 上一个环（对偶于桥 \(bc\)）；\(v_2^*v_4^*\) 三条平行边（对偶于 \(ab,ae,ef\)）；\(v_2^*v_3^*\) 一条（对偶于 \(bf\)）；\(v_3^*v_4^*\) 两条平行边（对偶于 \(bd,df\)）。共 8 条边，与 \(G\) 的边一一对应。</figcaption></figure>
+<p><b>结论</b> \(G^*\) 有 4 个顶点（对应 \(G\) 的 4 个面）、8 条边（对应 \(G\) 的 8 条边）。</p></div>
+<div class="supp"><b>补充讲解</b> 检验：\(G\) 中 \(n=6,m=8,r=4\)，\(6-8+4=2\)；\(G^*\) 中 \(n^*=4=r\)，\(m^*=8=m\)，由欧拉公式 \(r^*=2-4+8=6=n\)。连通平面图与其对偶图满足 \(n^*=r,\ m^*=m,\ r^*=n\)。</div>
+
+<h3>② 对偶图的性质 <span class="pg">p.155–156</span></h3>
+<div class="thm"><b>性质</b>
+<p>1) 对偶图是<u>连通平面图</u>。</p>
+<p>2) <u>环</u>与<u>桥</u>互相对偶。</p>
+<p>3) <u>平行边</u>对偶于 <u>2 个面之间多条边界</u>。</p></div>
+
+<div class="example"><b>例（环与桥）</b>
+<figure class="fig"><svg viewBox="0 0 520 110" role="img" aria-label="环的对偶是桥，桥的对偶是环">
+<g stroke="currentColor" fill="none" stroke-width="2">
+<circle cx="40" cy="40" r="22"/>
+<circle cx="140" cy="40" r="22"/><line x1="140" y1="40" x2="190" y2="25" stroke-dasharray="4 2"/>
+<line x1="240" y1="40" x2="300" y2="40"/>
+<line x1="350" y1="40" x2="400" y2="40"/><path d="M400 40 m-30 0 a30 30 0 1 0 60 0 a30 30 0 1 0 -60 0" stroke-dasharray="4 2"/>
+<circle cx="480" cy="40" r="22"/>
+</g>
+<g fill="currentColor">
+<circle cx="40" cy="62" r="4"/><circle cx="140" cy="62" r="4"/><circle cx="140" cy="40" r="3"/><circle cx="190" cy="25" r="3"/>
+<circle cx="240" cy="40" r="4"/><circle cx="300" cy="40" r="4"/><circle cx="350" cy="40" r="4"/><circle cx="400" cy="40" r="4"/><circle cx="480" cy="62" r="4"/>
+</g>
+<g font-size="14" fill="currentColor">
+<text x="35" y="95">G</text><text x="80" y="45">⇒</text><text x="205" y="45">⇒</text><text x="260" y="95">G*</text><text x="315" y="45">⇒</text><text x="440" y="45">⇒</text><text x="470" y="100">G**</text>
+</g>
+</svg><figcaption>图：\(G\) 为一个顶点上的一个环 ⇒ 在环内、环外各放一个对偶顶点并连一条穿过环的边（原页红笔，此处虚线）⇒ \(G^*\) 是一条边（桥）⇒ 再取对偶：桥只在一个面的边界上，对偶为红色环（此处虚线）⇒ \(G^{**}\) 又是一个环。</figcaption></figure></div>
+
+<div class="example"><b>例（平行边）</b>
+<div class="tbl"><table><thead><tr><th>\(G\)</th><th>\(G^*\)</th></tr></thead><tbody>
+<tr><td>2 个顶点之间 2 条平行边（标“2”）</td><td>2 个顶点、2 条边围成的圈，分出“内”“外”两个面</td></tr>
+<tr><td>2 个顶点之间 3 条平行边（标“3”）</td><td>三角形（3 个顶点的圈），面为“内”“外”</td></tr>
+<tr><td>2 个顶点之间 4 条平行边</td><td>四边形（4 个顶点的圈），面为“内”“外”</td></tr>
+</tbody></table></div>
+<p>原页左列为 \(G\)（下方波浪线），右列为 \(G^*\)，“内”“外”用红笔标出。</p></div>
+<div class="supp"><b>补充讲解</b> 两点间 \(k\) 条平行边把平面分成 \(k\) 个面，相邻两面之间恰隔一条边，所以对偶图是 \(k\) 个顶点的圈 \(C_k\)；反过来，\(C_k\) 只有内、外两个面，且它们之间有 \(k\) 条公共边界，所以 \(C_k\) 的对偶是两点间 \(k\) 条平行边。笔记右列画的正是 \(G\) 与 \(G^*\) 互为对偶的这种关系。</div>
+
+<h3>③ 对偶图的定理 <span class="pg">p.156–157</span></h3>
+<div class="thm"><b>定理 1)</b> \(G_1\cong G_2\)（同构）\(\not\Rightarrow\) \(G_1^*\cong G_2^*\)，不一定同构。</div>
+
+<div class="example"><b>eg1</b>
+<figure class="fig"><svg viewBox="0 0 420 230" role="img" aria-label="正方形加悬挂边的两种嵌入及其对偶">
+<g stroke="currentColor" fill="none" stroke-width="2">
+<rect x="20" y="20" width="80" height="70"/><line x1="100" y1="20" x2="65" y2="55"/>
+<path d="M230 55 Q300 30 360 55"/><path d="M230 55 Q300 45 360 55"/><path d="M230 55 Q300 65 360 55"/><path d="M230 55 Q300 80 360 55"/><circle cx="212" cy="55" r="18"/>
+<rect x="20" y="130" width="80" height="70"/><line x1="100" y1="130" x2="150" y2="130"/>
+<path d="M230 165 Q300 140 360 165"/><path d="M230 165 Q300 155 360 165"/><path d="M230 165 Q300 175 360 165"/><path d="M230 165 Q300 190 360 165"/><circle cx="212" cy="165" r="18"/>
+</g>
+<g fill="currentColor">
+<circle cx="20" cy="20" r="4"/><circle cx="100" cy="20" r="4"/><circle cx="20" cy="90" r="4"/><circle cx="100" cy="90" r="4"/><circle cx="65" cy="55" r="4"/>
+<circle cx="230" cy="55" r="4"/><circle cx="360" cy="55" r="4"/>
+<circle cx="20" cy="130" r="4"/><circle cx="100" cy="130" r="4"/><circle cx="20" cy="200" r="4"/><circle cx="100" cy="200" r="4"/><circle cx="150" cy="130" r="4"/>
+<circle cx="230" cy="165" r="4"/><circle cx="360" cy="165" r="4"/>
+</g>
+<g font-size="14" fill="currentColor"><text x="50" y="112">G1</text><text x="375" y="60">G1*</text><text x="50" y="222">G2</text><text x="375" y="170">G2*</text></g>
+</svg><figcaption>图：\(G_1\) 为正方形，右上顶点向正方形内部伸出一条悬挂边（原页红笔在 \(G_1\) 上画出对偶顶点与对偶边）；\(G_1^*\)：带环的顶点（正方形内部的面）与另一顶点（外部面）之间 4 条平行边。\(G_2\) 为同一正方形，悬挂边伸向外部；\(G_2^*\)：同样是一个带环顶点与另一顶点之间 4 条平行边（此时带环的是外部面对应的顶点）。</figcaption></figure></div>
+<div class="supp"><b>补充讲解</b> 按 eg1 的图计算，\(G_1^*\) 与 \(G_2^*\) 都是“一个带环顶点 + 4 条平行边连到另一个顶点”，二者其实同构。eg1 说明的是嵌入不同、对偶却可能相同；真正说明“不一定同构”的反例是下面的 eg2。</div>
+
+<div class="example"><b>eg2</b>
+<figure class="fig"><svg viewBox="0 0 440 230" role="img" aria-label="正方形加三角形加悬挂边的两种嵌入">
+<g stroke="currentColor" fill="none" stroke-width="2">
+<rect x="20" y="20" width="80" height="70"/><line x1="100" y1="20" x2="55" y2="55"/><line x1="100" y1="20" x2="140" y2="55"/><line x1="140" y1="55" x2="100" y2="90"/>
+<rect x="20" y="135" width="80" height="70"/><line x1="100" y1="135" x2="140" y2="105"/><line x1="100" y1="135" x2="140" y2="170"/><line x1="140" y1="170" x2="100" y2="205"/>
+</g>
+<g fill="currentColor">
+<circle cx="20" cy="20" r="4"/><circle cx="100" cy="20" r="4"/><circle cx="20" cy="90" r="4"/><circle cx="100" cy="90" r="4"/><circle cx="55" cy="55" r="4"/><circle cx="140" cy="55" r="4"/>
+<circle cx="20" cy="135" r="4"/><circle cx="100" cy="135" r="4"/><circle cx="20" cy="205" r="4"/><circle cx="100" cy="205" r="4"/><circle cx="140" cy="105" r="4"/><circle cx="140" cy="170" r="4"/>
+</g>
+<g font-size="14" fill="currentColor"><text x="50" y="112">G1</text><text x="50" y="225">G2</text>
+<text x="200" y="40">G1*：S 带环；S–O 3 条，S–T 1 条，T–O 2 条</text>
+<text x="200" y="160">G2*：O 带环；O–S 3 条，S–T 1 条，T–O 2 条</text></g>
+</svg><figcaption>图：\(G_1\) 为正方形（左上、右上、右下、左下四顶点），右上顶点向正方形内部伸出一条悬挂边，右侧再接一个三角形（右上—右侧顶点—右下，与正方形共用右边）。\(G_2\) 为同一个图，但悬挂边从右上顶点伸向外部。记正方形内部面为 \(S\)，三角形面为 \(T\)，外部面为 \(O\)。原页 \(G_1^*\)：左下顶点带环（红圈标出），与顶部顶点之间多条平行边，顶部与右下顶点之间两条平行边，左下与右下之间一条边；\(G_2^*\)：顶部顶点带环，与左下、右下顶点之间各有多条平行边，左下与右下之间一条边。\(G_1^*\) 与 \(G_2^*\) 之间画红色双向箭头比较。</figcaption></figure>
+<p><b>结论</b> \(G_1\cong G_2\)，但 \(G_1^*\not\cong G_2^*\)。</p></div>
+<div class="supp"><b>补充讲解</b> 验证：\(G_1^*\) 中带环顶点 \(S\) 的度数为 \(2+3+1=6\)；\(G_2^*\) 中带环顶点 \(O\) 的度数为 \(2+3+2=7\)。带环顶点的度数不同，所以两个对偶图不同构。</div>
+
+<div class="thm"><b>定理 2)</b> \(G\) 连通 \(\Leftrightarrow\) \(G\cong (G^*)^*\)。旁注：“\(G^*\) 不改变”。</div>
+<div class="unclear"><b>待核对（p.157，位置：中部定理2) 右侧旁注）</b> 可辨认部分：“\(G^*\) 不…变”，按“不改变”读；无法辨认：中间一字的确切写法。</div>
+<div class="supp"><b>补充讲解</b> 对偶图总是连通的，所以 \((G^*)^*\) 一定连通；若 \(G\) 不连通，\(G^{**}\) 不可能与 \(G\) 同构。</div>
+
+<div class="def"><b>定理 3) 自对偶图</b> \(G\cong G^*\)。
+<p>i) 一个带环的顶点再连一条悬挂边（图形“环—边—点”）。</p>
+<p>ii) \(n\ge 4\) 时，\(W_n\)（轮图）。</p></div>
+<figure class="fig"><svg viewBox="0 0 460 150" role="img" aria-label="自对偶图：环加悬挂边，轮图W4 W5 W6">
+<g stroke="currentColor" fill="none" stroke-width="2">
+<circle cx="30" cy="70" r="18"/><line x1="48" y1="70" x2="100" y2="70"/>
+<polygon points="150,30 210,30 180,100"/><line x1="180" y1="55" x2="150" y2="30"/><line x1="180" y1="55" x2="210" y2="30"/><line x1="180" y1="55" x2="180" y2="100"/>
+<polygon points="290,20 330,60 290,100 250,60"/><line x1="290" y1="60" x2="290" y2="20"/><line x1="290" y1="60" x2="330" y2="60"/><line x1="290" y1="60" x2="290" y2="100"/><line x1="290" y1="60" x2="250" y2="60"/>
+<polygon points="400,20 440,50 425,100 375,100 360,50"/><line x1="400" y1="60" x2="400" y2="20"/><line x1="400" y1="60" x2="440" y2="50"/><line x1="400" y1="60" x2="425" y2="100"/><line x1="400" y1="60" x2="375" y2="100"/><line x1="400" y1="60" x2="360" y2="50"/>
+</g>
+<g fill="currentColor">
+<circle cx="48" cy="70" r="4"/><circle cx="100" cy="70" r="4"/>
+<circle cx="150" cy="30" r="4"/><circle cx="210" cy="30" r="4"/><circle cx="180" cy="100" r="4"/><circle cx="180" cy="55" r="4"/>
+<circle cx="290" cy="20" r="4"/><circle cx="330" cy="60" r="4"/><circle cx="290" cy="100" r="4"/><circle cx="250" cy="60" r="4"/><circle cx="290" cy="60" r="4"/>
+<circle cx="400" cy="20" r="4"/><circle cx="440" cy="50" r="4"/><circle cx="425" cy="100" r="4"/><circle cx="375" cy="100" r="4"/><circle cx="360" cy="50" r="4"/><circle cx="400" cy="60" r="4"/>
+</g>
+<g font-size="14" fill="currentColor"><text x="50" y="130">i)</text><text x="170" y="135">W4</text><text x="280" y="135">W5</text><text x="390" y="135">W6</text></g>
+</svg><figcaption>图：i) 一个顶点带环并连一条边到另一顶点；ii) 轮图 \(W_4\)（三角形 + 中心，即 \(K_4\)）、\(W_5\)（四边形 + 中心）、\(W_6\)（五边形 + 中心），中心与圈上每个顶点相连。这里 \(W_n\) 表示共 \(n\) 个顶点的轮图。</figcaption></figure>
+<div class="supp"><b>补充讲解</b> 轮图 \(W_n\) 的面：\(n-1\) 个三角形面加一个外部面（以圈为边界）。对偶图中外部面对应的顶点与 \(n-1\) 个三角形面对应的顶点都相邻，三角形面依次相邻成圈，正好又是 \(W_n\)。</div>
+
+<h3>④ 外（可）平面图 <span class="pg">p.157–158</span></h3>
+<div class="def"><b>定义（外平面图）</b> 平面图的所有顶点都在一个面的边界上。</div>
+
+<div class="example"><b>例</b> 判断下列平面图是否满足“所有顶点在同一个面的边界上”。
+<figure class="fig"><svg viewBox="0 0 480 170" role="img" aria-label="三个外平面图判断示例">
+<g stroke="currentColor" fill="none" stroke-width="2">
+<polygon points="50,25 110,25 140,60 110,100 50,100 30,60"/><line x1="50" y1="25" x2="50" y2="100"/><line x1="50" y1="25" x2="140" y2="60"/><line x1="50" y1="100" x2="140" y2="60"/>
+<polygon points="240,15 290,55 270,110 210,110 190,55" /><line x1="240" y1="60" x2="210" y2="110"/><line x1="240" y1="60" x2="270" y2="110"/>
+<polygon points="400,15 450,55 430,110 370,110 350,55"/><line x1="400" y1="60" x2="400" y2="15"/><line x1="400" y1="60" x2="370" y2="110"/><line x1="400" y1="60" x2="430" y2="110"/>
+</g>
+<g fill="currentColor">
+<circle cx="50" cy="25" r="4"/><circle cx="110" cy="25" r="4"/><circle cx="140" cy="60" r="4"/><circle cx="110" cy="100" r="4"/><circle cx="50" cy="100" r="4"/><circle cx="30" cy="60" r="4"/>
+<circle cx="240" cy="15" r="4"/><circle cx="290" cy="55" r="4"/><circle cx="270" cy="110" r="4"/><circle cx="210" cy="110" r="4"/><circle cx="190" cy="55" r="4"/><circle cx="240" cy="60" r="4"/>
+<circle cx="400" cy="15" r="4"/><circle cx="450" cy="55" r="4"/><circle cx="430" cy="110" r="4"/><circle cx="370" cy="110" r="4"/><circle cx="350" cy="55" r="4"/><circle cx="400" cy="60" r="4"/>
+</g>
+<g font-size="14" fill="currentColor"><text x="5" y="80">R0</text><text x="75" y="150">✓</text><text x="230" y="45">R0</text><text x="235" y="150">✓</text><text x="395" y="150">✗</text></g>
+</svg><figcaption>图1（✓）：6 个顶点的圈（左上、右上、右、右下、左下、左），加弦 左上—左下、左上—右、左下—右；外部面 \(R_0\) 的边界含全部 6 个顶点。图2（✓，原页红框框出）：五边形（顶、右、右下、左下、左）内部有一个顶点，只与左下、右下相连；红色斜线阴影标出面 \(R_0\)（由 顶—左—左下—内点—右下—右—顶 围成），它的边界含全部 6 个顶点，所以是外平面图——这个面不一定是外部面。图3（✗）：同样的五边形，内部顶点与顶、左下、右下三点相连；没有一个面的边界含全部顶点。</figcaption></figure></div>
+<div class="supp"><b>补充讲解</b> 图3 中取顶点 顶、内点、左下、右下：内点与三者直接相连，左下—右下有边，顶—左下经“左”、顶—右下经“右”相连，构成一个与 \(K_4\) 同胚的子图，由下面的定理可知它不是外平面图，与“✗”一致。</div>
+
+<div class="thm"><b>定理</b> \(G\) 为外平面图 \(\Leftrightarrow\) \(G\) 不含与 \(K_4\) 或 \(K_{2,3}\) 同胚的子图。</div>
+<figure class="fig"><svg viewBox="0 0 420 140" role="img" aria-label="K4与K2,3的画法">
+<g stroke="currentColor" fill="none" stroke-width="2">
+<polygon points="50,15 90,100 10,100"/><line x1="50" y1="60" x2="50" y2="15"/><line x1="50" y1="60" x2="90" y2="100"/><line x1="50" y1="60" x2="10" y2="100"/>
+<line x1="160" y1="15" x2="130" y2="100"/><line x1="160" y1="15" x2="175" y2="100"/><line x1="160" y1="15" x2="220" y2="100"/><line x1="200" y1="15" x2="130" y2="100"/><line x1="200" y1="15" x2="175" y2="100"/><line x1="200" y1="15" x2="220" y2="100"/>
+<polyline points="330,15 270,60 330,105 390,60 330,15"/><line x1="330" y1="15" x2="330" y2="60"/><line x1="330" y1="60" x2="330" y2="105"/>
+</g>
+<g fill="currentColor">
+<circle cx="50" cy="15" r="4"/><circle cx="90" cy="100" r="4"/><circle cx="10" cy="100" r="4"/><circle cx="50" cy="60" r="4"/>
+<circle cx="160" cy="15" r="4"/><circle cx="200" cy="15" r="4"/><circle cx="130" cy="100" r="4"/><circle cx="175" cy="100" r="4"/><circle cx="220" cy="100" r="4"/>
+<circle cx="330" cy="15" r="4"/><circle cx="270" cy="60" r="4"/><circle cx="330" cy="60" r="4"/><circle cx="390" cy="60" r="4"/><circle cx="330" cy="105" r="4"/>
+</g>
+<g font-size="14" fill="currentColor"><text x="40" y="128">K4</text><text x="160" y="128">K2,3</text><text x="285" y="128">（K2,3 的平面画法）</text></g>
+</svg><figcaption>图：\(K_4\) 画成三角形加中心点；\(K_{2,3}\) 画成上 2 下 3 两两相连；括号中为 \(K_{2,3}\) 的另一种画法：上、下两个顶点各与左、中、右三个顶点相连（菱形加中竖线）。</figcaption></figure>
+
+<div class="def"><b>极大外平面图</b> 外平面图 \(\xrightarrow{\ \text{任意不相邻顶点加边}\ }\) 非外平面图。即：外平面图中在任意两个不相邻顶点之间加一条边后，都成为非外平面图。</div>

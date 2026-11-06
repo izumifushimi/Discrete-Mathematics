@@ -1,1 +1,40 @@
-<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>离散之间 · 离散数学学习站</title><link rel="stylesheet" href="style.css"><body><aside><a class="brand" href="#home">∴ 离散之间<small>DISCRETE MATHEMATICS</small></a><label for="search">课程目录</label><input id="search" placeholder="搜索章节或知识点…"><nav id="nav"></nav><footer>基于你的 272 页手写笔记<br>理解 · 练习 · 再理解</footer></aside><main><header><span>我的数学书桌 / <b id="crumb">学习概览</b></span><button id="wrong">错题回顾 <span id="wc">0</span></button></header><div id="app"></div></main><script src="data.js"></script><script src="sections.js"></script><script src="transcripts.js"></script><script src="app.js"></script></body></html>
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>离散之间 · 离散数学笔记学习站</title>
+<link rel="stylesheet" href="style.css">
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']], processEscapes: true },
+  svg: { fontCache: 'global' },
+  options: { enableMenu: false },
+  startup: { typeset: false, pageReady() { return MathJax.startup.defaultPageReady().then(() => { window.__mjReady = true; document.dispatchEvent(new Event('mathjax-ready')); }); } }
+};
+</script>
+<script defer src="vendor/tex-svg.js"></script>
+</head>
+<body>
+<a class="skip" href="#app">跳到正文</a>
+<aside id="side">
+  <a class="brand" href="#home">∴ 离散之间<small>DISCRETE MATHEMATICS</small></a>
+  <label for="side-search">全文搜索</label>
+  <input id="side-search" type="search" placeholder="输入关键词，回车搜索…" autocomplete="off">
+  <nav id="nav" aria-label="章节目录"></nav>
+  <footer>基于 272 页手写笔记逐页转写<br>教材：耿素云、屈婉玲等《离散数学》第七版</footer>
+</aside>
+<main>
+  <header>
+    <button id="menu" aria-label="打开或关闭目录" aria-controls="side">☰ 目录</button>
+    <span class="crumb">离散之间 / <b id="crumb">学习概览</b></span>
+    <button id="wrong">错题回顾 <span id="wc">0</span></button>
+  </header>
+  <div id="app" tabindex="-1"></div>
+</main>
+<script src="data.js"></script>
+<script src="sections.js"></script>
+<script src="content.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

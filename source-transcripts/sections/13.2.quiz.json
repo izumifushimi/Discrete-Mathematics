@@ -1,0 +1,90 @@
+[
+ {
+  "type": "choice",
+  "q": "下列代数系统中，与 \\(\\langle \\mathbb{R},+,\\times,-,0,1\\rangle\\)（\\(-\\) 为一元求相反数）同类型的是",
+  "options": [
+   "\\(\\langle P(B),\\cup,\\cap,\\sim,\\emptyset,B\\rangle\\)",
+   "\\(\\langle \\mathbb{Z},+,\\times\\rangle\\)",
+   "\\(\\langle P(B),\\cup,\\cap,\\emptyset,B\\rangle\\)",
+   "\\(\\langle \\mathbb{Z},\\times,0,1\\rangle\\)"
+  ],
+  "answer": 0,
+  "why": "同类型要求构成成分相同：两个二元运算、一个一元运算、两个代数常数。只有 \\(\\langle P(B),\\cup,\\cap,\\sim,\\emptyset,B\\rangle\\) 满足。"
+ },
+ {
+  "type": "fill",
+  "q": "在 \\(\\langle \\mathbb{Z}_6,\\otimes_6\\rangle\\) 中，\\(4\\otimes_6 5=\\) ____",
+  "answer": [
+   "2"
+  ],
+  "why": "\\(4\\times5=20\\)，\\(20\\bmod 6=2\\)。"
+ },
+ {
+  "type": "choice",
+  "q": "下列集合中，能构成 \\(\\langle \\mathbb{Z},\\times,0\\rangle\\) 的子代数的是",
+  "options": [
+   "\\(\\mathbb{Z}\\setminus\\{0\\}\\)",
+   "\\(\\{0,1\\}\\)",
+   "\\(\\{0,2\\}\\)",
+   "\\(\\mathbb{Z}^+\\)"
+  ],
+  "answer": 1,
+  "why": "子代数须对 \\(\\times\\) 封闭且含指定常数 0。\\(\\mathbb{Z}\\setminus\\{0\\}\\) 与 \\(\\mathbb{Z}^+\\) 不含 0；\\(\\{0,2\\}\\) 中 \\(2\\times2=4\\) 不封闭；\\(\\{0,1\\}\\) 满足。"
+ },
+ {
+  "type": "choice",
+  "q": "在 \\(V=\\langle \\mathbb{Z},+,0\\rangle\\) 中，子代数 \\(n\\mathbb{Z}\\) 取 \\(n=0\\) 时得到",
+  "options": [
+   "最大子代数 \\(\\mathbb{Z}\\)",
+   "最小子代数 \\(\\{0\\}\\)",
+   "空集，不是子代数",
+   "真子代数 \\(2\\mathbb{Z}\\)"
+  ],
+  "answer": 1,
+  "why": "\\(0\\mathbb{Z}=\\{0\\}\\)，含常数 0 且对 + 封闭，是最小子代数；\\(n=1\\) 时得最大子代数 \\(\\mathbb{Z}\\)。"
+ },
+ {
+  "type": "choice",
+  "q": "代数系统 \\(\\langle \\mathbb{Z},+,1\\rangle\\)（指定常数为 1）的最小子代数是",
+  "options": [
+   "\\(\\{1\\}\\)",
+   "\\(\\{0,1\\}\\)",
+   "\\(\\mathbb{Z}^+=\\{1,2,3,\\dots\\}\\)",
+   "\\(\\mathbb{Z}\\)"
+  ],
+  "answer": 2,
+  "why": "最小子代数须含常数 1 且对 + 封闭，即 1 在 + 下生成的集合 \\(\\{1,2,3,\\dots\\}\\)。仅取 \\(\\{1\\}\\) 不封闭（1+1=2）。"
+ },
+ {
+  "type": "fill",
+  "q": "积代数 \\(\\langle \\mathbb{Z},+\\rangle\\times\\langle \\mathbb{Z},\\times\\rangle\\) 的单位元是 ____（写成有序对）",
+  "answer": [
+   "(0,1)",
+   "<0,1>",
+   "⟨0,1⟩"
+  ],
+  "why": "单位元为分量单位元组成的有序对：+ 的单位元 0，× 的单位元 1。"
+ },
+ {
+  "type": "fill",
+  "q": "在积代数 \\(\\langle \\mathbb{Z},+\\rangle\\times\\langle \\mathbb{Z},\\times\\rangle\\) 中，\\((3,-1)\\) 的逆元是 ____（写成有序对）",
+  "answer": [
+   "(-3,-1)",
+   "<-3,-1>",
+   "⟨-3,-1⟩"
+  ],
+  "why": "分量分别求逆：3 在 + 下逆元为 \\(-3\\)，\\(-1\\) 在 × 下逆元为 \\(-1\\)。验证 \\((3,-1)\\cdot(-3,-1)=(0,1)\\)。"
+ },
+ {
+  "type": "choice",
+  "q": "在积代数 \\(\\langle \\mathbb{Z},+\\rangle\\times\\langle \\mathbb{Z},\\times\\rangle\\) 中，元素 \\((3,2)\\)",
+  "options": [
+   "逆元为 \\((-3,\\tfrac12)\\)",
+   "逆元为 \\((-3,2)\\)",
+   "没有逆元",
+   "是零元"
+  ],
+  "answer": 2,
+  "why": "2 在 \\(\\langle\\mathbb{Z},\\times\\rangle\\) 中无逆元（\\(\\tfrac12\\notin\\mathbb{Z}\\)），故 \\((3,2)\\) 不可逆。"
+ }
+]

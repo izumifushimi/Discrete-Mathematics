@@ -1,0 +1,10 @@
+[
+  {"type":"choice","q":"证明 \\(\\mathbb{N}\\not\\approx\\mathbb{R}\\) 时，笔记先把问题化为证明下列哪一个？","options":["\\(\\mathbb{N}\\not\\approx\\mathbb{Q}\\)","\\(\\mathbb{N}\\not\\approx[0,1]\\)","\\(\\mathbb{Z}\\not\\approx\\mathbb{R}\\)","\\(\\mathbb{N}\\not\\approx\\mathbb{N}\\times\\mathbb{N}\\)"],"answer":1,"why":"R≈[0,1]，若 N≈R 则 N≈[0,1]，再对 [0,1] 用对角线法。"},
+  {"type":"choice","q":"对角线法构造 \\(x'=0.b_1b_2b_3\\cdots\\) 的关键条件是：","options":["\\(b_n=a_n^{(n)}\\)","\\(b_n\\ne a_1^{(n)}\\)","\\(b_n\\ne a_n^{(n)}\\)","\\(b_n\\ne a_n^{(1)}\\)"],"answer":2,"why":"让 x' 与第 n 个数 x_n 在第 n 位不同，从而 x' 不等于任何 x_n。"},
+  {"type":"choice","q":"证明 \\(A\\not\\approx P(A)\\) 时构造的集合 \\(B\\) 是：","options":["\\(\\{x\\in A\\mid x\\in f(x)\\}\\)","\\(\\{x\\in A\\mid x\\notin f(x)\\}\\)","\\(\\{f(x)\\mid x\\in A\\}\\)","\\(A-f(A)\\)"],"answer":1,"why":"B={x∈A | x∉f(x)}，若 f(x0)=B 则 x0∈B ⟺ x0∉B，矛盾。"},
+  {"type":"fill","q":"设 \\(A=\\{1,2,3\\}\\)，\\(f:A\\to P(A)\\)，\\(f(1)=\\{2\\},f(2)=\\{1,2,3\\},f(3)=\\emptyset\\)。则 \\(B=\\{x\\in A\\mid x\\notin f(x)\\}=\\) ____","answer":["{1,3}","\\{1,3\\}","{3,1}"],"why":"1∉{2}，2∈{1,2,3}，3∉∅，故 B={1,3}，它不等于任何 f(x)。"},
+  {"type":"choice","q":"关于康托定理 \\(A\\not\\approx P(A)\\) 的证明，下列说法正确的是：","options":["只对有穷集成立","只对无穷集成立","证明中只用到 f 是满射，因此 A 到 P(A) 不存在满射","需要假设 A 非空"],"answer":2,"why":"对任意 f，B 都不在值域中，故没有满射；对空集也成立（P(∅)={∅}）。"},
+  {"type":"fill","q":"按集合论定义，自然数 \\(n^{+}=\\) ____（用 n 表示）","answer":["n∪{n}","n\\cup\\{n\\}","{0,1,...,n}","{0,1,2,...,n}"],"why":"n={0,…,n-1}，n⁺=n∪{n}={0,1,…,n}。"},
+  {"type":"choice","q":"证明“不存在与自己的真子集等势的自然数”时，集合 \\(S\\) 的含义是：","options":["使得 n→n 的每个满射都是单射的 n","使得 n→n 的每个单射都是满射的 n","使得存在 n→n 双射的 n","与 N 等势的 n"],"answer":1,"why":"S={n∈N | ∀f(f∈(n→n)∧f单射→f满射)}，证明 S=N。"},
+  {"type":"choice","q":"归纳步中 n 在 f 下不封闭时，存在 \\(m\\in n\\) 使 \\(f(m)=n\\)。构造的 \\(h\\) 满足：","options":["\\(h(m)=n,\\ h(n)=f(n)\\)","\\(h(m)=f(n),\\ h(n)=n\\)","\\(h(m)=m,\\ h(n)=n\\)","\\(h(m)=0,\\ h(n)=n\\)"],"answer":1,"why":"交换 m、n 两处的函数值：h(m)=f(n)，h(n)=n，其余同 f，这样 n 在 h 下封闭。"}
+]

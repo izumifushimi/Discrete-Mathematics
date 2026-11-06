@@ -1,0 +1,7 @@
+[
+ {"page":56,"status":"transcribed","note":"4.3：传递集定义、4个例子、传递集等价条件定理、自然数与N为传递集（证明开头）"},
+ {"page":57,"status":"transcribed","note":"每个自然数为传递集证明、略证N为传递集、N上二元运算、递归定理与示意图开头"},
+ {"page":58,"status":"transcribed","note":"递归定理示意图与算式、递归定义、加m函数A_m、例A_2(3)=5、A_m(n)=m+n、加法定义开头"},
+ {"page":59,"status":"partial","note":"加法定义、例3+2、定理m+0=m与m+n+=(m+n)+、加法性质、交换律证明。fix：消去律笔误、⇕应为⇓；待核对：红圈公式旁红字、证明首字与右侧小字"},
+ {"page":60,"status":"transcribed","note":"乘法M_m定义、例M_2(3)=6、乘法性质、自然数的序"}
+]

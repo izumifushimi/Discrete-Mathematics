@@ -1,0 +1,6 @@
+[
+  {"page":87,"status":"transcribed","note":"握手定理（无向图；有向图式原页未写完）、简单图与 Δ(G) 范围、k-正则图与 K4 示意、度数列定义与例图开头"},
+  {"page":88,"status":"transcribed","note":"度数列例 (5,1,2,3,3)、可图化定义与充要条件、可简单图化定义、Havel 定理；页底被截断一行与第89页首行相同"},
+  {"page":89,"status":"transcribed","note":"Havel 定理两例 (4,4,3,3,2,2)、(5,5,4,4,2,2) 全过程、Erdős–Gallai 充要条件；1 处 fix（人名 Gallai）"},
+  {"page":90,"status":"transcribed","note":"Erdős–Gallai 两例：(5,5,3,3,2,2,2) 逐 r 检验表，(6,6,5,4,3,3,1) 在 r=2 失败；判定流程图"}
+]

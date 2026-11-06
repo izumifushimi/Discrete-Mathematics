@@ -1,0 +1,166 @@
+<p>第 6 章 图（笔记日期 2025年8月8日）</p>
+
+<h3>① 无序积 <span class="pg">p.82</span></h3>
+<div class="def"><b>定义（无序积）</b> \[A\&B=\{\{a,b\}\mid a\in A\land b\in B\}\]
+\((a,b)=(b,a)\)：无序；\(\langle a,b\rangle\neq\langle b,a\rangle\)：有序。</div>
+
+<h3>② 无向图 <span class="pg">p.82</span></h3>
+<div class="def"><b>定义（无向图）</b> \(G=\langle V,E\rangle\)，\(V\) 为顶点集，\(E\) 为边集，边取自无序积（笔记红字标注“无序积”）。</div>
+<div class="example"><b>例 1</b> \(G=\langle V,E\rangle\)，
+\[V=\{a,b,c,d,e\},\quad E=\{(a,a),(a,b),(a,b),(b,c),(c,d),(b,d)\}\]
+笔记中 \((a,a)\) 用红线标出（环），两个 \((a,b)\) 用波浪线标出（平行边）。
+<figure class="fig"><svg viewBox="0 0 300 200" role="img" aria-label="无向图例：a有环，a与b间两条平行边，b-c，c-d，b-d，e孤立">
+<g stroke="currentColor" fill="none" stroke-width="2">
+<circle cx="60" cy="25" r="15"/>
+<path d="M60 40 Q45 95 60 150"/><path d="M60 40 Q75 95 60 150"/>
+<line x1="60" y1="150" x2="200" y2="150"/><line x1="60" y1="150" x2="200" y2="40"/><line x1="200" y1="40" x2="200" y2="150"/>
+</g>
+<g fill="currentColor"><circle cx="60" cy="40" r="4"/><circle cx="60" cy="150" r="4"/><circle cx="200" cy="40" r="4"/><circle cx="200" cy="150" r="4"/><circle cx="265" cy="95" r="4"/></g>
+<g fill="currentColor" font-size="14"><text x="35" y="45">a</text><text x="35" y="160">b</text><text x="210" y="40">d</text><text x="210" y="165">c</text><text x="275" y="100">e</text></g>
+</svg><figcaption>图：顶点 a,b,c,d,e；a 上有一个环 (a,a)；a 与 b 之间两条平行边；边 (b,c)、(c,d)、(b,d)；e 为孤立点。</figcaption></figure></div>
+
+<h3>③ 有向图 <span class="pg">p.82</span></h3>
+<div class="def"><b>定义（有向图）</b> \(D=\langle V,E\rangle\)，边取自有序积（笔记红字标注“有序积”）：
+\[\begin{cases}V\neq\emptyset, & \text{顶点集 } V(D)\\ E\subseteq V\times V, & \text{边集 } E(D)\end{cases}\]</div>
+<div class="example"><b>例 2</b> \(D=\langle V,E\rangle\)，\(V=\{a,b,c,d,e\}\)，
+\[E=\{\langle a,a\rangle,\langle a,b\rangle,\langle a,b\rangle,\langle b,a\rangle,\langle b,c\rangle,\langle c,d\rangle,\langle d,b\rangle\}\]
+笔记中 \(\langle a,b\rangle,\langle a,b\rangle,\langle b,a\rangle\) 用红色波浪线标出，图中 a、b 间三条弧用红圈圈出。
+<figure class="fig"><svg viewBox="0 0 300 210" role="img" aria-label="有向图例">
+<defs><marker id="ar61a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="currentColor"/></marker></defs>
+<g stroke="currentColor" fill="none" stroke-width="2">
+<path d="M56 38 C35 0 85 0 64 38" marker-end="url(#ar61a)"/>
+<path d="M58 42 Q40 95 58 146" marker-end="url(#ar61a)"/>
+<path d="M60 42 L60 146" marker-end="url(#ar61a)"/>
+<path d="M62 150 Q80 95 62 44" marker-end="url(#ar61a)"/>
+<line x1="60" y1="150" x2="196" y2="150" marker-end="url(#ar61a)"/>
+<line x1="200" y1="150" x2="200" y2="44" marker-end="url(#ar61a)"/>
+<line x1="200" y1="40" x2="64" y2="147" marker-end="url(#ar61a)"/>
+</g>
+<g fill="currentColor"><circle cx="60" cy="40" r="4"/><circle cx="60" cy="150" r="4"/><circle cx="200" cy="40" r="4"/><circle cx="200" cy="150" r="4"/><circle cx="265" cy="95" r="4"/></g>
+<g fill="currentColor" font-size="14"><text x="30" y="45">a</text><text x="35" y="170">b</text><text x="210" y="40">d</text><text x="210" y="170">c</text><text x="275" y="100">e</text></g>
+</svg><figcaption>图：a 上环 ⟨a,a⟩；a→b 两条弧；b→a 一条弧；b→c；c→d；d→b；e 为孤立点。</figcaption></figure></div>
+<div class="supp"><b>补充讲解</b> 例中边集写成含重复元素的“集合”，是为了表示平行边；严格说应理解为多重集（或给每条边单独编号）。另外，定义要求 \(V\neq\emptyset\)，而下文的“空图”\(V=E=\emptyset\) 是作为退化情形单独约定的。</div>
+
+<h3>④ n 阶图、有限图、零图、平凡图、空图 <span class="pg">p.83</span></h3>
+<div class="def"><b>定义</b>
+<ol>
+<li>n 阶图（n 个顶点）：\(|V(G)|=n\)。</li>
+<li>有限图：\(|V(G)|\lt\infty\)。</li>
+<li>零图：\(E=\emptyset\)（无边）。</li>
+<li>平凡图：1 阶零图 \(N_1\)。</li>
+<li>空图：\(V=E=\emptyset\)。</li>
+</ol></div>
+<figure class="fig"><svg viewBox="0 0 360 90" role="img" aria-label="3阶图、零图、平凡图示意">
+<g stroke="currentColor" fill="none" stroke-width="2"><line x1="20" y1="20" x2="60" y2="20"/><line x1="60" y1="20" x2="60" y2="60"/></g>
+<g fill="currentColor"><circle cx="20" cy="20" r="4"/><circle cx="60" cy="20" r="4"/><circle cx="60" cy="60" r="4"/>
+<circle cx="170" cy="40" r="4"/><circle cx="200" cy="20" r="4"/><circle cx="225" cy="45" r="4"/><circle cx="310" cy="40" r="4"/></g>
+<g fill="currentColor" font-size="14"><text x="20" y="85">3阶</text><text x="170" y="85">零图（3个孤立点）</text><text x="295" y="85">平凡图</text></g>
+</svg><figcaption>图：左为 3 阶图（3 个顶点、2 条边连成折线）；中为 3 个孤立点组成的零图；右为单个顶点的平凡图 \(N_1\)。笔记中 3 阶图右侧另有一个标“6阶”的小图，后接“……”。</figcaption></figure>
+<div class="unclear"><b>待核对（p.83，位置：右上角“6阶”小图）</b> 可辨认部分：上方若干顶点连成“&lt;”形的折线，下方一条两端带顶点的短边，标注“6阶”；无法辨认：上半部分顶点的确切个数与连边方式。</div>
+
+<h3>⑤ 标定图、非标定图、底图 <span class="pg">p.83</span></h3>
+<div class="def"><b>定义</b>
+<ol>
+<li>标定图：顶点或边带标记的图。</li>
+<li>非标定图：顶点和边都不带标记的图。</li>
+<li>底图：有向图 \(\xrightarrow{\text{去掉方向}}\) 无向图。</li>
+</ol></div>
+<figure class="fig"><svg viewBox="0 0 300 110" role="img" aria-label="标定图与非标定图">
+<g stroke="currentColor" fill="none" stroke-width="2">
+<line x1="40" y1="25" x2="110" y2="25"/><line x1="40" y1="25" x2="40" y2="85"/><line x1="110" y1="25" x2="110" y2="85"/>
+<line x1="190" y1="25" x2="260" y2="25"/><line x1="190" y1="25" x2="190" y2="85"/><line x1="260" y1="25" x2="260" y2="85"/></g>
+<g fill="currentColor"><circle cx="40" cy="25" r="4"/><circle cx="110" cy="25" r="4"/><circle cx="40" cy="85" r="4"/><circle cx="110" cy="85" r="4"/>
+<circle cx="190" cy="25" r="4"/><circle cx="260" cy="25" r="4"/><circle cx="190" cy="85" r="4"/><circle cx="260" cy="85" r="4"/></g>
+<g fill="currentColor" font-size="14"><text x="22" y="20">b</text><text x="118" y="20">c</text><text x="22" y="95">a</text><text x="118" y="95">d</text><text x="40" y="108">标定图</text><text x="190" y="108">非标定图</text></g>
+</svg><figcaption>图：左为标定图，顶点 a,b,c,d，边 (a,b)、(b,c)、(c,d)；右为同形状但不带标记的非标定图。</figcaption></figure>
+
+<h3>⑥ 相邻、邻接、关联 <span class="pg">p.83–84</span></h3>
+<div class="def"><b>定义</b>
+<ol>
+<li>相邻：A、B 两点相邻（有边 A—B 相连）；a、b 两边相邻（两边有公共端点，如 ∘—a—∘—b—∘）。</li>
+<li>邻接：对边 u—v，称 u 邻接于 v（v 邻接于 u）。</li>
+<li>关联：对边 x=(A,B)，称 A（B）与 x 关联。</li>
+</ol></div>
+<figure class="fig"><svg viewBox="0 0 300 100" role="img" aria-label="关联次数">
+<g stroke="currentColor" fill="none" stroke-width="2"><line x1="30" y1="40" x2="130" y2="40"/><circle cx="230" cy="30" r="15"/></g>
+<g fill="currentColor"><circle cx="30" cy="40" r="4"/><circle cx="130" cy="40" r="4"/><circle cx="230" cy="45" r="4"/></g>
+<g fill="currentColor" font-size="14"><text x="25" y="28">A</text><text x="125" y="28">B</text><text x="75" y="58">x</text><text x="25" y="75">1</text><text x="125" y="75">1</text>
+<text x="250" y="20">x</text><text x="210" y="55">A</text><text x="226" y="80">2</text></g>
+</svg><figcaption>图：左边 x 连接 A、B，A 与 x、B 与 x 的关联次数均为 1；右（笔记红圈）为 A 上的环 x，A 与 x 的关联次数为 2。</figcaption></figure>
+
+<h3>⑦ 环、孤立点、平行边 <span class="pg">p.84</span></h3>
+<div class="def"><b>定义</b>
+<ol>
+<li>环：两端点相同的边（自环）。</li>
+<li>孤立点：不与任何边关联的顶点。</li>
+<li>平行边：端点相同的多条边；有向时还要求方向相同。</li>
+</ol></div>
+<figure class="fig"><svg viewBox="0 0 330 100" role="img" aria-label="平行边判断">
+<defs><marker id="ar61b" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="currentColor"/></marker></defs>
+<g stroke="currentColor" fill="none" stroke-width="2">
+<path d="M20 40 Q60 15 100 40"/><path d="M20 40 Q60 65 100 40"/>
+<path d="M130 40 Q170 15 210 40" marker-mid="url(#ar61b)"/><path d="M170 27.5 L172 27.5" marker-end="url(#ar61b)"/>
+<path d="M130 40 Q170 65 210 40"/><path d="M170 52.5 L172 52.5" marker-end="url(#ar61b)"/>
+<path d="M240 40 Q280 15 320 40"/><path d="M280 27.5 L282 27.5" marker-end="url(#ar61b)"/>
+<path d="M240 40 Q280 65 320 40"/><path d="M280 52.5 L278 52.5" marker-end="url(#ar61b)"/>
+</g>
+<g fill="currentColor"><circle cx="20" cy="40" r="4"/><circle cx="100" cy="40" r="4"/><circle cx="130" cy="40" r="4"/><circle cx="210" cy="40" r="4"/><circle cx="240" cy="40" r="4"/><circle cx="320" cy="40" r="4"/></g>
+<g fill="currentColor" font-size="14"><text x="55" y="90">✓</text><text x="165" y="90">✓</text><text x="275" y="90">✗</text></g>
+</svg><figcaption>图：两条无向边连接同一对顶点 ✓ 是平行边；两条同向有向边 ✓ 是平行边；两条反向有向边 ✗ 不是平行边。</figcaption></figure>
+
+<h3>⑧ 邻域、闭邻域、关联集 <span class="pg">p.84–85</span></h3>
+<div class="def"><b>定义</b>
+<ol>
+<li>邻域：\(N_G(v)=\{u\in V(G)\mid (u,v)\in E(G)\land u\neq v\}\)（笔记在 \((u,v)\) 下划线、\(u\neq v\) 下加波浪线）。</li>
+<li>闭邻域：\(\overline{N}_G(v)=N_G(v)\cup\{v\}\)。</li>
+<li>关联集：\(I_G(v)=\{e\mid e \text{ 与 } v \text{ 关联}\}\)。</li>
+</ol></div>
+<div class="fix"><b>校订说明（p.84、p.85）</b> 原式：闭邻域写作 \(N_G(v)=N_G(v)\cup\{v\}\)、\(N_G(c)=\{a,b,c,d,e\}\)，有向图写作 \(N_D(v)=N_D(v)\cup\{v\}\)、\(N_D(c)=\{a,b,c,d,e\}\)；正确式：\(\overline{N}_G(v)=N_G(v)\cup\{v\}\)、\(\overline{N}_G(c)=\{a,b,c,d,e\}\)，\(\overline{N}_D(v)=N_D(v)\cup\{v\}\)、\(\overline{N}_D(c)=\{a,b,c,d,e\}\)；原因：闭邻域须用上划线与邻域区分，否则等式两边记号相同，且与 \(N_G(c)=\{a,b,d,e\}\) 矛盾。</div>
+<div class="example"><b>例 3</b> 如图，求 \(N_G(c)\)、\(\overline{N}_G(c)\)、\(I_G(c)\)。
+<figure class="fig"><svg viewBox="0 0 280 200" role="img" aria-label="邻域例图">
+<g stroke="currentColor" fill="none" stroke-width="2">
+<line x1="130" y1="100" x2="60" y2="40"/><line x1="130" y1="100" x2="170" y2="35"/><line x1="130" y1="100" x2="60" y2="160"/><line x1="130" y1="100" x2="170" y2="170"/><line x1="170" y1="35" x2="250" y2="80"/></g>
+<g fill="currentColor"><circle cx="130" cy="100" r="4"/><circle cx="60" cy="40" r="4"/><circle cx="170" cy="35" r="4"/><circle cx="60" cy="160" r="4"/><circle cx="170" cy="170" r="4"/><circle cx="250" cy="80" r="4"/></g>
+<g fill="currentColor" font-size="14"><text x="110" y="105">c</text><text x="45" y="35">a</text><text x="165" y="22">b</text><text x="40" y="165">d</text><text x="165" y="190">e</text><text x="258" y="90">f</text>
+<text x="100" y="65">1</text><text x="155" y="65">2</text><text x="90" y="140">3</text><text x="155" y="135">4</text><text x="210" y="50">5</text></g>
+</svg><figcaption>图：边 1=(a,c)，2=(b,c)，3=(d,c)，4=(e,c)，5=(b,f)。</figcaption></figure>
+<b>解</b> \(N_G(c)=\{a,b,d,e\}\)；\(\overline{N}_G(c)=\{a,b,c,d,e\}\)；\(I_G(c)=\{1,2,3,4\}\)（f 只与 b 相邻，边 5 不与 c 关联）。</div>
+
+<h3>⑨ 后继、前驱（点集） <span class="pg">p.85</span></h3>
+<div class="def"><b>定义（有向图 D）</b>
+\[\begin{aligned}\Gamma_D^+(v)&=\{u\in V(D)\mid \langle v,u\rangle\in E(D)\land u\neq v\}\quad(\text{后继})\\
+\Gamma_D^-(v)&=\{u\in V(D)\mid \langle u,v\rangle\in E(D)\land u\neq v\}\quad(\text{前驱})\end{aligned}\]
+邻域：\(N_D(v)=\Gamma_D^+(v)\cup\Gamma_D^-(v)\)；闭邻域：\(\overline{N}_D(v)=N_D(v)\cup\{v\}\)。</div>
+<div class="example"><b>例 4</b>
+<figure class="fig"><svg viewBox="0 0 280 170" role="img" aria-label="后继前驱例图">
+<defs><marker id="ar61c" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="currentColor"/></marker></defs>
+<g stroke="currentColor" fill="none" stroke-width="2">
+<line x1="40" y1="30" x2="106" y2="76" marker-end="url(#ar61c)"/><line x1="40" y1="140" x2="106" y2="86" marker-end="url(#ar61c)"/>
+<line x1="110" y1="80" x2="166" y2="44" marker-end="url(#ar61c)"/><line x1="110" y1="80" x2="166" y2="126" marker-end="url(#ar61c)"/>
+<line x1="170" y1="40" x2="246" y2="76" marker-end="url(#ar61c)"/></g>
+<g fill="currentColor"><circle cx="40" cy="30" r="4"/><circle cx="40" cy="140" r="4"/><circle cx="110" cy="80" r="4"/><circle cx="170" cy="40" r="4"/><circle cx="170" cy="130" r="4"/><circle cx="250" cy="80" r="4"/></g>
+<g fill="currentColor" font-size="14"><text x="28" y="22">a</text><text x="22" y="150">d</text><text x="95" y="100">c</text><text x="165" y="28">b</text><text x="165" y="152">e</text><text x="258" y="90">f</text></g>
+</svg><figcaption>图：弧 a→c，d→c，c→b，c→e，b→f（笔记中 c→b、c→e 用红色，b、e 红圈）。</figcaption></figure>
+<b>解</b> \(\Gamma_D^+(c)=\{b,e\}\)，\(\Gamma_D^-(c)=\{a,d\}\)，\(N_D(c)=\{a,b,d,e\}\)，\(\overline{N}_D(c)=\{a,b,c,d,e\}\)。</div>
+
+<h3>⑩ 顶点的度 <span class="pg">p.85–86</span></h3>
+<div class="def"><b>定义（度）</b> \(d_G(v)\) = 与 \(v\) 关联的边的次数之和（环计 2 次）。</div>
+<div class="example"><b>例 5</b>
+<figure class="fig"><svg viewBox="0 0 240 150" role="img" aria-label="度数例图">
+<g stroke="currentColor" fill="none" stroke-width="2">
+<line x1="50" y1="30" x2="50" y2="110"/><line x1="50" y1="110" x2="180" y2="110"/>
+<path d="M50 30 Q150 40 180 110"/><path d="M50 30 Q90 100 180 110"/>
+<circle cx="50" cy="126" r="16"/></g>
+<g fill="currentColor"><circle cx="50" cy="30" r="4"/><circle cx="50" cy="110" r="4"/><circle cx="180" cy="110" r="4"/><circle cx="190" cy="30" r="4"/></g>
+<g fill="currentColor" font-size="14"><text x="30" y="30">a</text><text x="200" y="35">b</text><text x="25" y="110">c</text><text x="190" y="118">d</text></g>
+</svg><figcaption>图：边 (a,c)；a 与 d 之间两条平行边；边 (c,d)；c 上一个环；b 为孤立点（笔记用红色短线标出 c 关联的边）。</figcaption></figure>
+<b>解</b> \(d_G(a)=3,\ d_G(b)=0,\ d_G(c)=4,\ d_G(d)=3\)。</div>
+<div class="def"><b>定义（有向图的度）</b>
+出度：\(d_D^+(v)\)，出边之和；入度：\(d_D^-(v)\)，入边之和。
+\[d_D(v)=d_D^+(v)+d_D^-(v)\]</div>
+
+<h3>⑪ 最小度、最大度 <span class="pg">p.86</span></h3>
+<div class="def"><b>定义</b>
+\[\delta(G)=\min\{d_G(v)\mid v\in V(G)\},\qquad \Delta(G)=\max\{d_G(v)\mid v\in V(G)\}\]
+有向图（笔记圈注）：最大入度 \(\Delta^-\)、最大出度 \(\Delta^+\)；最小入度 \(\delta^-\)、最小出度 \(\delta^+\)。</div>
+<div class="warn"><b>易错提醒</b> 环对度数贡献 2；反向的两条弧不是平行边；邻域、后继、前驱都要求 \(u\neq v\)，环不会把 \(v\) 自己放入邻域。</div>

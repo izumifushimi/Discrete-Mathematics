@@ -1,0 +1,118 @@
+<h3>从 \(\mathbb{Z}\) 到 \(\mathbb{Z}_n\) <span class="pg">p.215</span></h3>
+<div class="note"><b>笔记边注（①）</b> \(\mathbb{Z}\)（整数集，圈出）\(\to\) \(\mathbb{Z}_n=\{0,1,2,\dots,n-1\}\)（\(\mathbb{Z}_n\) 圈出，下画波浪线）；\(\mathbb{Z}\) 另引箭头到 "\(\div n\)"（圈出），余数落在区间 \(0\sim n-1\)（方框表示），箭头标出 \(n\) 落回 \(0\)。右上角：\(\mathbb{Z}_2=\{0,1\}\)，\(\mathbb{Z}_3=\{0,1,2\}\)。</div>
+<div class="supp"><b>补充讲解</b> 整数除以 \(n\) 的余数只能是 \(0,1,\dots,n-1\)，这就是 \(\mathbb{Z}_n\) 的元素；\(n\) 除以 \(n\) 余 0，所以"\(n\)"回到 0。</div>
+
+<h3>正规化子 <span class="pg">p.215</span></h3>
+<div class="def"><b>（②-1）元素的正规化子</b> 设 \(G\) 为群，\(a\in G\)：
+\[N(a)=\{x\mid x\in G,\ xa=ax\}\]
+（\(xa=ax\) 下画波浪线）。</div>
+<figure class="fig"><svg viewBox="0 0 420 220" role="img" aria-label="G 中与 a 可交换的元素组成 N(a)">
+<defs><marker id="ar146a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" stroke="currentColor" fill="none"/></marker></defs>
+<ellipse cx="120" cy="120" rx="110" ry="90" stroke="currentColor" fill="none"/>
+<text x="30" y="50" font-size="14" fill="currentColor">G</text>
+<circle cx="135" cy="130" r="55" stroke="currentColor" fill="none"/>
+<text x="100" y="120" font-size="14" fill="currentColor">x1</text>
+<text x="125" y="150" font-size="14" fill="currentColor">x2</text>
+<text x="130" y="172" font-size="14" fill="currentColor">x3 …</text>
+<circle cx="150" cy="110" r="3" stroke="currentColor" fill="none"/>
+<path d="M152,106 Q170,60 200,45" stroke="currentColor" fill="none" marker-end="url(#ar146a)"/>
+<text x="205" y="45" font-size="14" fill="currentColor">a</text>
+<path d="M175,115 Q240,95 300,105" stroke="currentColor" fill="none" marker-end="url(#ar146a)"/>
+<text x="200" y="95" font-size="14" fill="currentColor">xa=ax</text>
+<ellipse cx="350" cy="115" rx="55" ry="45" stroke="currentColor" fill="none"/>
+<text x="330" y="120" font-size="14" fill="currentColor">N(a)</text>
+</svg><figcaption>图：大圈为 \(G\)，其中一个红色阴影小圈内有 \(a\) 与 \(x_1,x_2,x_3,\dots\)；标"\(xa=ax\)"的箭头把这些与 \(a\) 可交换的元素收集成右侧的集合 \(N(a)\)。</figcaption></figure>
+<div class="fix"><b>校订说明（p.215）</b> 原式：在"正规化子"标题下定义元素的 \(N(a)=\{x\in G\mid xa=ax\}\)；正确式：通常称其为元素 \(a\) 的中心化子，常记作 \(C(a)\)，有些书也写 \(N(a)\)；原因：对单个元素 \(a\)，\(xax^{-1}=a\) 与 \(xa=ax\) 等价，所以这个集合就是 \(\{a\}\) 的正规化子，也正是 \(a\) 的中心化子。定义本身没有错，只是名称要知道两种叫法。</div>
+
+<div class="def"><b>（②-2）\(H\) 的正规化子</b> 设 \(G\) 为群，\(H\le G\)：
+\[N(H)=\{x\mid x\in G,\ xHx^{-1}=H\}\]
+其中 \(xHx^{-1}\) 叫 \(H\) 的共轭子群（\(H\le G\)），
+\[xHx^{-1}=\{xhx^{-1}\mid h\in H\}.\]</div>
+<div class="note"><b>笔记边注</b> \(xHx^{-1}=H\) 用红色双线标出，红箭头标注"共轭子群（\(H\le G\)）"，下面红字写出 \(xHx^{-1}\) 的定义。</div>
+
+<h3>子群的交与并 <span class="pg">p.215–216</span></h3>
+<div class="thm"><b>（③）子群的交并</b> 设 \(G\) 为群，\(H,K\le G\)，则
+<ol>
+<li>\(H\cap K\le G\)；</li>
+<li>\(H\cup K\le G\ \Leftrightarrow\ H\subseteq K\lor K\subseteq H\)。</li>
+</ol></div>
+<div class="note"><b>笔记边注</b> 右侧画一个大圈套小圈，标注 \(K\subseteq H\)。</div>
+<div class="supp"><b>补充讲解</b> 两个子群的并一般不是子群：在 \(\langle\mathbb{Z},+\rangle\) 中 \(2\in 2\mathbb{Z}\)、\(3\in 3\mathbb{Z}\)，但 \(2+3=5\notin 2\mathbb{Z}\cup 3\mathbb{Z}\)。</div>
+
+<h3>\(AB\) 构成子群的条件 <span class="pg">p.216</span></h3>
+<div class="thm"><b>（④）</b> 设 \(A,B\le G\)，定义 \(AB=\{ab\mid a\in A,\ b\in B\}\)，则
+<ol>
+<li>\(AB\le G\ \Leftrightarrow\ AB=BA\)；</li>
+<li>\(AB\le G\ \Leftrightarrow\ AB=\langle A\cup B\rangle\)。</li>
+</ol>（原页整体用方框框出。）</div>
+
+<h3>Klein 四元群 <span class="pg">p.216–217</span></h3>
+<div class="def"><b>（⑤）Klein 四元群</b> \(\{e,a,b,c\}\)：
+<ol>
+<li>\(e\) 为单位元；</li>
+<li>\(ee=e\)，\(aa=a^2=e\)，\(b^2=e\)，\(c^2=e\)；\(e^{-1}=e\)，\(a^{-1}=a\)，\(b^{-1}=b\)，\(c^{-1}=c\)；</li>
+<li>\(a\cdot b=c\)，\(bc=a\)，\(ca=b\)；\(b\cdot a=c\)，\(cb=a\)，\(ac=b\)。</li>
+</ol></div>
+<div class="tbl"><table><thead><tr><th></th><th>e</th><th>a</th><th>b</th><th>c</th></tr></thead><tbody>
+<tr><th>e</th><td>e</td><td>a</td><td>b</td><td>c</td></tr>
+<tr><th>a</th><td>a</td><td>e</td><td>c</td><td>b</td></tr>
+<tr><th>b</th><td>b</td><td>c</td><td>e</td><td>a</td></tr>
+<tr><th>c</th><td>c</td><td>b</td><td>a</td><td>e</td></tr></tbody></table></div>
+<div class="note"><b>笔记边注（矩形模型）</b> 矩形：
+<br>\(e\)：不做任何操作；
+<br>\(a\)：绕水平中轴线翻转 180°；
+<br>\(b\)：绕垂直中轴线翻转 180°；
+<br>\(c\)：绕中心点转 180°。</div>
+<div class="example"><b>例 \(ab=c\)</b>（p.216 底部到 p.217 顶部）
+<figure class="fig"><svg viewBox="0 0 520 170" role="img" aria-label="矩形先做a再做b等于c">
+<defs><marker id="ar146b" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" stroke="currentColor" fill="none"/></marker></defs>
+<rect x="30" y="30" width="100" height="50" stroke="currentColor" fill="none"/>
+<line x1="15" y1="55" x2="145" y2="55" stroke="currentColor" stroke-dasharray="5,4"/>
+<text x="22" y="22" font-size="14" fill="currentColor">1</text><text x="128" y="22" font-size="14" fill="currentColor">2</text>
+<text x="18" y="98" font-size="14" fill="currentColor">3</text><text x="134" y="98" font-size="14" fill="currentColor">4</text>
+<text x="155" y="55" font-size="14" fill="currentColor">a ⇒</text>
+<rect x="200" y="30" width="100" height="50" stroke="currentColor" fill="none"/>
+<line x1="250" y1="15" x2="250" y2="95" stroke="currentColor"/>
+<text x="192" y="22" font-size="14" fill="currentColor">3</text><text x="298" y="22" font-size="14" fill="currentColor">4</text>
+<text x="188" y="98" font-size="14" fill="currentColor">1</text><text x="302" y="98" font-size="14" fill="currentColor">2</text>
+<text x="320" y="55" font-size="14" fill="currentColor">b ⇒</text>
+<rect x="370" y="30" width="100" height="50" stroke="currentColor" fill="none"/>
+<text x="362" y="22" font-size="14" fill="currentColor">4</text><text x="468" y="22" font-size="14" fill="currentColor">3</text>
+<text x="358" y="98" font-size="14" fill="currentColor">2</text><text x="472" y="98" font-size="14" fill="currentColor">1</text>
+<path d="M80,110 Q250,170 410,115" stroke="currentColor" fill="none" marker-end="url(#ar146b)"/>
+<text x="245" y="160" font-size="14" fill="currentColor">c</text>
+</svg><figcaption>图：初始矩形顶点上排 1、2，下排 3、4（虚线为水平中轴）；经 \(a\) 后上排 3、4，下排 1、2（画出垂直中轴）；再经 \(b\) 后上排 4、3，下排 2、1。红色弧形箭头标 \(c\)，直接从初始状态指到最终状态，说明 \(ab=c\)。</figcaption></figure></div>
+
+<div class="example"><b>例</b> \(G=\{e,a,b,c\}\)，
+\[A=\langle a\rangle=\{e,a\},\qquad B=\langle b\rangle=\{e,b\}.\]
+<b>解</b>
+\[G=AB\le G\ \Leftrightarrow\ AB=BA\]
+\[\begin{aligned}\langle a\rangle\langle b\rangle=\langle b\rangle\langle a\rangle&=\{e^2,eb,ae,ab\}\\&=\{a,b,c,e\}=G\end{aligned}\]
+\[\begin{aligned}AB\le G\ \Leftrightarrow\ AB&=\langle A\cup B\rangle\\&=\langle\{e,a,b\}\rangle\\&=\{e,a,b,c\}=G\end{aligned}\]
+（旁注 \(a\cdot b=c\)。）<b>结论</b> \(AB=G\)，是子群。</div>
+
+<h3>子群格 <span class="pg">p.217–218</span></h3>
+<div class="def"><b>（⑥）子群格</b> 设 \(G\) 为群，令 \(S=\{H\mid H\text{ 是 }G\text{ 的子群}\}\)，即 \(G\) 的所有子群的集合（原页画 \(H_1,H_2,H_3,\dots\) 圈成一组 \(\Rightarrow S\)，上方有连线示意它们之间的包含关系）。
+<p>在 \(S\) 上定义关系 \(R\)：\(\forall A,B\in S\)，\(ARB\ \Leftrightarrow\ A\) 为 \(B\) 的子群。</p>
+<p>偏序：自反 ✓，反对称 ✓，传递 ✓。</p>
+<p>哈斯图：\(\langle S,R\rangle\) 为偏序集，其哈斯图称为 \(G\) 的子群格。</p></div>
+<div class="note"><b>笔记边注（p.217 右下）</b> 写有 \(A\ne B\)、\(A\le B\)；下一行写的内容被划掉（可见 \(B\le A\) 上画了叉）。意为：\(A\ne B\) 且 \(A\le B\) 时，不能再有 \(B\le A\)（反对称）。</div>
+<div class="example"><b>例：Klein 四元群的子群格</b>
+<figure class="fig"><svg viewBox="0 0 360 260" role="img" aria-label="Klein四元群子群格">
+<line x1="180" y1="40" x2="70" y2="130" stroke="currentColor"/>
+<line x1="180" y1="40" x2="180" y2="130" stroke="currentColor"/>
+<line x1="180" y1="40" x2="290" y2="130" stroke="currentColor"/>
+<line x1="70" y1="130" x2="180" y2="220" stroke="currentColor"/>
+<line x1="180" y1="130" x2="180" y2="220" stroke="currentColor"/>
+<line x1="290" y1="130" x2="180" y2="220" stroke="currentColor"/>
+<circle cx="180" cy="40" r="4" stroke="currentColor" fill="currentColor"/>
+<circle cx="70" cy="130" r="4" stroke="currentColor" fill="currentColor"/>
+<circle cx="180" cy="130" r="4" stroke="currentColor" fill="currentColor"/>
+<circle cx="290" cy="130" r="4" stroke="currentColor" fill="currentColor"/>
+<circle cx="180" cy="220" r="4" stroke="currentColor" fill="currentColor"/>
+<text x="150" y="25" font-size="14" fill="currentColor">G={a,b,c,e}</text>
+<text x="5" y="125" font-size="14" fill="currentColor">⟨c⟩={e,c}</text>
+<text x="188" y="125" font-size="14" fill="currentColor">⟨b⟩={e,b}</text>
+<text x="275" y="155" font-size="14" fill="currentColor">⟨a⟩={e,a}</text>
+<text x="150" y="245" font-size="14" fill="currentColor">⟨e⟩={e}</text>
+</svg><figcaption>图：Klein 四元群子群格。顶点 \(G=\{a,b,c,e\}\)；中间三个顶点 \(\langle c\rangle=\{e,c\}\)、\(\langle b\rangle=\{e,b\}\)、\(\langle a\rangle=\{e,a\}\)，互不可比；底部 \(\langle e\rangle=\{e\}\)。边：\(G\)—\(\langle a\rangle\)、\(G\)—\(\langle b\rangle\)、\(G\)—\(\langle c\rangle\)，以及这三个顶点各自—\(\{e\}\)。</figcaption></figure></div>

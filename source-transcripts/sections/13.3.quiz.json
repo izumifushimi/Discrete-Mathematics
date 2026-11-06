@@ -1,0 +1,78 @@
+[
+ {
+  "type": "fill",
+  "q": "设 \\(f:\\langle\\mathbb{Z}_3,\\oplus_3\\rangle\\to\\langle\\{0,2,4\\},\\oplus_6\\rangle\\)，\\(f=\\{(0,0),(1,2),(2,4)\\}\\)。则 \\(f(2)\\oplus_6 f(2)=\\) ____",
+  "answer": [
+   "2"
+  ],
+  "why": "\\(4+4=8\\)，\\(8\\bmod6=2\\)；与 \\(f(2\\oplus_3 2)=f(1)=2\\) 一致，体现 \\(f(x\\circ y)=f(x)*f(y)\\)。"
+ },
+ {
+  "type": "choice",
+  "q": "同态映射 \\(f\\) 若为双射，则称 \\(f\\) 为",
+  "options": [
+   "单同态",
+   "满同态",
+   "同构",
+   "自同态"
+  ],
+  "answer": 2,
+  "why": "单射—单同态，满射—满同态，双射—同构，记 \\(V_1\\cong V_2\\)。"
+ },
+ {
+  "type": "choice",
+  "q": "下列性质中，在同态像中不一定保留的是",
+  "options": [
+   "交换律",
+   "结合律",
+   "幂等律",
+   "消去律"
+  ],
+  "answer": 3,
+  "why": "笔记列出保留交换、结合、幂等、分配、吸收及单位元、零元、逆元，消去律被划掉，不一定保留。"
+ },
+ {
+  "type": "choice",
+  "q": "\\(f:\\langle\\mathbb{Z},+\\rangle\\to\\langle\\mathbb{Z},+\\rangle\\)，\\(f(x)=2x\\)，则 \\(f\\) 是",
+  "options": [
+   "自同构",
+   "单自同态但不是满自同态",
+   "满自同态但不是单自同态",
+   "不是同态"
+  ],
+  "answer": 1,
+  "why": "\\(f(x+y)=2x+2y=f(x)+f(y)\\)，是自同态；单射但像为 \\(2\\mathbb{Z}\\ne\\mathbb{Z}\\)，非满射。"
+ },
+ {
+  "type": "choice",
+  "q": "\\(f:\\langle\\mathbb{Z},+\\rangle\\to\\langle\\mathbb{Z},+\\rangle\\)，\\(f(x)=x+1\\)，下列说法正确的是",
+  "options": [
+   "是自同构",
+   "是满自同态",
+   "不是同态，因为 \\(f(x+y)\\ne f(x)+f(y)\\)",
+   "是单自同态"
+  ],
+  "answer": 2,
+  "why": "\\(f(x+y)=x+y+1\\)，而 \\(f(x)+f(y)=x+y+2\\)，不相等，故不是同态（尽管是双射）。"
+ },
+ {
+  "type": "fill",
+  "q": "\\(f:\\langle\\mathbb{R},+\\rangle\\to\\langle\\mathbb{R}^+,\\times\\rangle\\)，\\(f(x)=e^x\\) 是同态，它把 + 的单位元 0 映为 ____",
+  "answer": [
+   "1"
+  ],
+  "why": "\\(f(0)=e^0=1\\)，正是 × 的单位元，符合“单位元映为像系统单位元”。"
+ },
+ {
+  "type": "choice",
+  "q": "\\(f:\\langle\\mathbb{Z},+\\rangle\\to\\langle\\mathbb{Z}_2,\\oplus_2\\rangle\\)，\\(f(x)=x\\bmod 2\\)，则 \\(f\\) 是",
+  "options": [
+   "同构",
+   "满同态但不是单同态",
+   "单同态但不是满同态",
+   "不是同态"
+  ],
+  "answer": 1,
+  "why": "\\((x+y)\\bmod2=(x\\bmod2)\\oplus_2(y\\bmod2)\\)，是同态；像为 \\(\\{0,1\\}\\) 满射；但 \\(f(0)=f(2)\\)，非单射。"
+ }
+]

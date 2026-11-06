@@ -1,0 +1,6 @@
+[
+  {"page":65,"status":"transcribed","note":"康托定理陈述；N≉R 反证对角线法：f(n)=x_{n+1}、小数展开表、构造 x'"},
+  {"page":66,"status":"transcribed","note":"x'∉{x_i} 结论；A≉P(A) 图示与证明（B={x|x∉f(x)}，paradox）；定理②开头：集合 S 定义与思路"},
+  {"page":67,"status":"transcribed","note":"单射不满射示意图；归纳基础 0∈S；归纳步 n∈S⇒n⁺∈S，封闭/不封闭两种情况图示"},
+  {"page":68,"status":"transcribed","note":"交换函数 h(x) 的分段定义；∴ S=N；页面其余空白"}
+]

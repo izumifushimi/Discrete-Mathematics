@@ -1,0 +1,37 @@
+<p>笔记日期：2025年5月11日 22:53。章标题：第二章 二元关系。</p>
+<h3>有序对 <span class="pg">p.22</span></h3>
+<div class="def"><b>① 定义（有序对）</b> 记作 \(\langle a,b\rangle\) 或 \((a,b)\)，
+\[\langle a,b\rangle=\{\{a\},\{a,b\}\}\]
+性质：\(a\ne b\Rightarrow\langle a,b\rangle\ne\langle b,a\rangle\)。</div>
+<div class="note"><b>笔记边注</b> \(\langle a,b\rangle\) 下画波浪线，\(\{\{a\},\{a,b\}\}\) 下画横线，其中 \(\{a\}\) 的 \(a\) 下也有短横；\(\langle a,b\rangle\) 与 \(\langle b,a\rangle\) 下分别画横线，强调两者顺序不同。</div>
+<div class="supp"><b>补充讲解</b> 由定义可证：\(\langle a,b\rangle=\langle c,d\rangle\Leftrightarrow a=c\land b=d\)。集合 \(\{a,b\}=\{b,a\}\) 无序，而 \(\{\{a\},\{a,b\}\}\) 用单元素集 \(\{a\}\) 标出了“第一个”元素。</div>
+
+<h3>有序三元组 / n元组 <span class="pg">p.22</span></h3>
+<div class="def"><b>② 有序三元组 / n元组</b>
+\[\begin{aligned}
+\langle a,b,c\rangle&=\langle\langle a,b\rangle,c\rangle\\
+&=\langle\{\{a\},\{a,b\}\},c\rangle\\
+&=\{\{\{\{a\},\{a,b\}\}\},\{\{\{a\},\{a,b\}\},c\}\}
+\end{aligned}\]</div>
+<div class="note"><b>笔记边注</b> \(\langle\langle a,b\rangle,c\rangle\) 中的 \(\langle a,b\rangle\)、第二行的 \(\{\{a\},\{a,b\}\}\)、最后一行整个集合下都画了横线，表示逐层把内层有序对展开成集合。一般地 \(n\) 元组 \(\langle x_1,\dots,x_n\rangle=\langle\langle x_1,\dots,x_{n-1}\rangle,x_n\rangle\)。</div>
+
+<h3>卡氏积（笛卡儿积） <span class="pg">p.22–23</span></h3>
+<div class="def"><b>② 卡氏积</b>（原笔记此处编号又写为 ②，按顺序应为 ③）
+\[A\times B=\{\langle x,y\rangle\mid x\in A\land y\in B\}\]</div>
+<div class="example"><b>例</b> \(A=\{a,b\}\)（\(m\) 个元素），\(B=\{1,2\}\)（\(n\) 个元素），求 \(A\times B\)。
+<b>解</b> \[A\times B=\{\langle a,1\rangle,\langle a,2\rangle,\langle b,1\rangle,\langle b,2\rangle\}\]
+<b>结论</b> 右侧边注：共 \(m\cdot n\) 个（此处 \(2\times2=4\) 个）。</div>
+<div class="thm"><b>性质</b>
+<br>(1) \(A\times B\ne B\times A\)，非交换；
+<br>(2) \((A\times B)\times C\ne A\times(B\times C)\)，非结合；
+<br>（大括号内两条）
+\[A\times(B\cup C)=(A\times B)\cup(A\times C)\]
+\[A\times B=\emptyset\Leftrightarrow A=\emptyset,\ B=\emptyset\ \ (\text{原写法，见校订})\]
+(3) 若 \(A\ne\emptyset\)，则 \(A\times B\subseteq A\times C\Leftrightarrow B\subseteq C\)；
+\[A\subseteq C\land B\subseteq D\Rightarrow A\times B\subseteq C\times D\]</div>
+<div class="fix"><b>校订说明（p.22，p.23 顶部重抄一次）</b> 原式：\(A\times B=\emptyset\Leftrightarrow A=\emptyset,\ B=\emptyset\)；正确式：\(A\times B=\emptyset\Leftrightarrow A=\emptyset\lor B=\emptyset\)；原因：只要有一个因子为空，卡氏积就为空，逗号容易被读成“且”。例如 \(A=\emptyset,B=\{1\}\) 时 \(A\times B=\emptyset\) 而 \(B\ne\emptyset\)。</div>
+<div class="unclear"><b>待核对（p.22 最后一行、p.23 第1行，\(=\emptyset\) 与 \(\Rightarrow\) 之间）</b> 可辨认部分：\(\emptyset\) 后紧跟一个类似“C”的弧形笔画，再接 \(\Rightarrow\)；无法辨认：该弧形是否为“\(\Leftarrow\)”的左半（即整体为 \(\Leftrightarrow\)），此处按 \(\Leftrightarrow\) 理解。</div>
+<div class="note"><b>笔记边注</b> \(A\subseteq C\) 与 \(B\subseteq D\) 下各画波浪线。卡氏积定义中的 \(\land\) 下有短横。</div>
+<div class="warn"><b>易错提醒</b> (3) 中条件 \(A\ne\emptyset\) 不能省：若 \(A=\emptyset\)，则 \(A\times B=A\times C=\emptyset\) 对任意 \(B,C\) 都成立，推不出 \(B\subseteq C\)。另外 \((A\times B)\times C\) 的元素是 \(\langle\langle x,y\rangle,z\rangle\)，\(A\times(B\times C)\) 的元素是 \(\langle x,\langle y,z\rangle\rangle\)，一般不相等。</div>
+<div class="def"><b>n 个集合的卡氏积</b> \[A_1\times A_2\times A_3=\{\langle x_1,x_2,x_3\rangle\mid x_1\in A_1,\ x_2\in A_2,\ x_3\in A_3\}\]</div>
+<div class="supp"><b>补充讲解</b> 分配律对 \(\cap\)、\(-\) 以及右乘同样成立：\(A\times(B\cap C)=(A\times B)\cap(A\times C)\)，\((B\cup C)\times A=(B\times A)\cup(C\times A)\)。若 \(|A|=m,|B|=n\)，则 \(|A\times B|=mn\)。</div>

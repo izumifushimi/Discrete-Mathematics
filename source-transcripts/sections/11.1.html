@@ -1,0 +1,113 @@
+<div class="note"><b>笔记边注</b> 页首标题“第11章 图的着色”，日期 2025年9月26日 16:45；小节标题“11.1 点着色”。</div>
+
+<h3>① 着色 <span class="pg">p.159</span></h3>
+<div class="def"><b>定义（点着色）</b> 给<u>无环图</u>的每个顶点<u>指定一种颜色</u>，使<u>相邻顶点有不同颜色</u>（★ 条件）。
+<p>颜色集 \(C=\{1,2,\cdots,k\}\)（\(k\) 种）；</p>
+<p>\(f: V\)（顶点集）\(\to C\)（颜色集）；</p>
+\[ \forall u\,\forall v\,\big(u,v\in V \land u\text{ 与 }v\text{ 相邻} \to f(u)\ne f(v)\big) \]</div>
+<div class="note"><b>笔记边注</b> 颜色集、映射 \(f\) 与量词式三行在原页用方框框在一起。</div>
+
+<div class="example"><b>例</b> \(k\)-着色：\(|C|=k\)。下面是一个 2-着色。
+<figure class="fig"><svg viewBox="0 0 200 200" role="img" aria-label="3乘3网格图的2-着色">
+<g stroke="currentColor" fill="none" stroke-width="2">
+<line x1="40" y1="40" x2="160" y2="40"/><line x1="40" y1="100" x2="160" y2="100"/><line x1="40" y1="160" x2="160" y2="160"/>
+<line x1="40" y1="40" x2="40" y2="160"/><line x1="100" y1="40" x2="100" y2="160"/><line x1="160" y1="40" x2="160" y2="160"/>
+</g>
+<g stroke="currentColor" stroke-width="1.5">
+<rect x="32" y="32" width="16" height="16" fill="#f5d90a"/><circle cx="100" cy="40" r="8" fill="#e0242b"/><rect x="152" y="32" width="16" height="16" fill="#f5d90a"/>
+<circle cx="40" cy="100" r="8" fill="#e0242b"/><rect x="92" y="92" width="16" height="16" fill="#f5d90a"/><circle cx="160" cy="100" r="8" fill="#e0242b"/>
+<rect x="32" y="152" width="16" height="16" fill="#f5d90a"/><circle cx="100" cy="160" r="8" fill="#e0242b"/><rect x="152" y="152" width="16" height="16" fill="#f5d90a"/>
+</g>
+<g font-size="14" fill="currentColor"><text x="20" y="192">方块=黄色，圆点=红色</text></g>
+</svg><figcaption>图：3×3 网格图（9 个顶点，横竖相邻的顶点相连，共 12 条边）。四角与中心 5 个顶点涂黄色，四条边中点 4 个顶点涂红色，相邻顶点颜色都不同，是一个 2-着色。</figcaption></figure></div>
+
+<h3>② 色数 <span class="pg">p.159</span></h3>
+<div class="def"><b>定义</b> \(k\)-色数：可 \(k\)-着色，但不可 \((k-1)\)-着色。<br><u>色数</u>：着色所需最少颜色数。</div>
+<div class="def"><b>三种色数</b>
+<ul><li><u>点色数</u> \(\chi(G)\)</li><li>边色数 \(\chi'(G)\)</li><li>面色数 \(\chi^*(G)\)</li></ul></div>
+
+<div class="example"><b>例</b> 求下图的三种色数。
+<figure class="fig"><svg viewBox="0 0 200 200" role="img" aria-label="2乘2方格图">
+<g stroke="currentColor" fill="none" stroke-width="2">
+<line x1="40" y1="40" x2="160" y2="40"/><line x1="40" y1="100" x2="160" y2="100"/><line x1="40" y1="160" x2="160" y2="160"/>
+<line x1="40" y1="40" x2="40" y2="160"/><line x1="100" y1="40" x2="100" y2="160"/><line x1="160" y1="40" x2="160" y2="160"/>
+</g>
+<g stroke="#e0242b" stroke-width="3">
+<line x1="40" y1="40" x2="100" y2="40"/><line x1="40" y1="100" x2="100" y2="100"/><line x1="100" y1="100" x2="100" y2="160"/>
+</g>
+<g fill="currentColor"><circle cx="40" cy="40" r="4"/><circle cx="100" cy="40" r="4"/><circle cx="160" cy="40" r="4"/><circle cx="40" cy="100" r="4"/><circle cx="100" cy="100" r="4"/><circle cx="160" cy="100" r="4"/><circle cx="40" cy="160" r="4"/><circle cx="100" cy="160" r="4"/><circle cx="160" cy="160" r="4"/></g>
+</svg><figcaption>图：2×2 方格图（3×3 个顶点、12 条边、4 个内部方格面 + 1 个外部面）。原页在左上方格的上边、中间横线左半段、中心向下的竖边等处用红笔描了几条边（示意边着色中的一种颜色），中心顶点处的红色笔迹较乱。</figcaption></figure>
+<b>结论</b> \(\chi(G)=2\)，\(\chi'(G)=4\)，\(\chi^*(G)=3\)。</div>
+<div class="supp"><b>补充讲解</b> 网格图是二部图，所以 \(\chi=2\)；中心顶点度为 4，关联的 4 条边两两相邻，故 \(\chi'\ge 4\)，二部图又有 \(\chi'=\Delta\)，得 4；4 个方格面按棋盘交替用 2 色，外部面与 4 个方格面都相邻，再用第 3 色，故 \(\chi^*=3\)。</div>
+
+<h3>③ 点色数的性质 <span class="pg">p.160</span></h3>
+<div class="thm"><b>性质</b>
+<p>1) \(\chi(G)=1 \Leftrightarrow G\) 为零图（无边）。</p>
+<figure class="fig"><svg viewBox="0 0 160 110" role="img" aria-label="零图G">
+<g fill="currentColor"><circle cx="20" cy="30" r="4"/><circle cx="70" cy="20" r="4"/><circle cx="130" cy="30" r="4"/><circle cx="80" cy="65" r="4"/></g>
+<text x="72" y="100" font-size="14" fill="currentColor">G</text></svg>
+<figcaption>图：4 个孤立顶点、没有边的零图 \(G\)。</figcaption></figure>
+<p>2) \(\chi(K_n)=n\)。</p>
+<p>3) \(\chi(G)=2 \Leftrightarrow G\) 为非零图<u>二部图</u>。</p>
+<figure class="fig"><svg viewBox="0 0 260 150" role="img" aria-label="二部图两部分分别着色1和2">
+<g stroke="currentColor" fill="none" stroke-width="2">
+<ellipse cx="140" cy="30" rx="100" ry="20"/><ellipse cx="140" cy="120" rx="100" ry="20"/>
+<line x1="90" y1="30" x2="90" y2="120"/><line x1="90" y1="30" x2="150" y2="120"/><line x1="130" y1="30" x2="110" y2="120"/><line x1="130" y1="30" x2="190" y2="120"/><line x1="170" y1="30" x2="150" y2="120"/><line x1="190" y1="30" x2="190" y2="120"/>
+</g>
+<g fill="currentColor"><circle cx="90" cy="30" r="4"/><circle cx="130" cy="30" r="4"/><circle cx="170" cy="30" r="4"/><circle cx="190" cy="30" r="4"/><circle cx="90" cy="120" r="4"/><circle cx="110" cy="120" r="4"/><circle cx="150" cy="120" r="4"/><circle cx="190" cy="120" r="4"/></g>
+<g font-size="14" fill="#e0242b"><text x="10" y="35">①</text><text x="10" y="125">②</text></g>
+</svg><figcaption>图：二部图，上方椭圆内的顶点集（红笔标 ①）全涂颜色 1，下方椭圆内的顶点集（红笔标 ②）全涂颜色 2，边只在上下两部分之间。</figcaption></figure>
+<p>4) \(G\) 可 2-着色 \(\Leftrightarrow G\) 为二部图 \(\Leftrightarrow G\) 无奇圈。</p>
+<p>5) \[ \chi(C_n)=\begin{cases}2, & n\text{ 偶数}\\ 3, & n\text{ 奇数}\end{cases}\qquad \chi(W_n)=\begin{cases}4, & n\text{ 偶数}\\ 3, & n\text{ 奇数}\end{cases} \]</p></div>
+<div class="note"><b>笔记边注</b> 性质 4) 右侧画了一串交替的符号 “\(+\,-\,+\,-\,+\,-\,+\;0\)”，上下有弯箭头连接首尾，表示沿圈交替涂两种颜色，奇圈绕回起点时首尾同色、冲突。</div>
+<div class="note"><b>笔记边注</b> 性质 5) 中，\(\chi(C_n)\) 的“\(n\) 偶数”与 \(\chi(W_n)\) 的“\(n\) 奇数”之间、“\(n\) 奇数”与“\(n\) 偶数”之间都有弯箭头互相连接。右侧画了 \(C_4\)（方形）、\(C_5\)（五边形）、\(C_6\)（六边形）……，下方画 \(W_5\)（方形加中心，中心连四个角）、\(W_6\)（五边形加中心）……，\(C_4\) 与 \(W_5\) 之间有上下双向箭头，\(C_5\) 与 \(W_6\) 间也有竖线相连：\(W_n\) 由 \(C_{n-1}\) 加一个中心顶点得到。</div>
+<div class="supp"><b>补充讲解</b> 这里 \(W_n\) 是 \(n\) 阶轮图，外圈是 \(C_{n-1}\)。\(n\) 偶数时外圈为奇圈需 3 色，中心再需 1 色，共 4 色；\(n\) 奇数时外圈为偶圈 2 色，加中心共 3 色。这就是箭头把 \(C_n\) 的偶/奇与 \(W_n\) 的奇/偶交叉相连的原因。</div>
+
+<h3>④ \(\chi(G)\) 的上界 <span class="pg">p.160</span></h3>
+<div class="thm"><b>定理</b> \[ \chi(G)\le \Delta(G)+1 \] 其中 \(\Delta(G)\) 为最大度（原页在 \(\Delta\) 上方用方框注“最大度”）。</div>
+
+<h3>⑤ Brooks 定理 <span class="pg">p.160–161</span></h3>
+<div class="thm"><b>定理（Brooks）</b> \(n\) 阶（\(n\ge 3\)）<u>连通非完全图</u> \(G\) <u>非奇圈</u>，则 \[ \chi(G)\le \Delta(G). \]</div>
+<div class="note"><b>笔记边注</b> 从“非奇圈”引出箭头注：“图 \(G\) 本身不能是奇圈”（不是说 \(G\) 不含奇圈）。</div>
+
+<div class="example"><b>例</b> Petersen 图 \(G\)，\(\chi(G)=?\)
+<figure class="fig"><svg viewBox="0 0 200 200" role="img" aria-label="Petersen图的3-着色">
+<g stroke="currentColor" fill="none" stroke-width="2">
+<polygon points="100,20 176,75 147,165 53,165 24,75"/>
+<line x1="100" y1="20" x2="100" y2="55"/><line x1="176" y1="75" x2="138" y2="87"/><line x1="147" y1="165" x2="124" y2="132"/><line x1="53" y1="165" x2="76" y2="132"/><line x1="24" y1="75" x2="62" y2="87"/>
+<line x1="100" y1="55" x2="124" y2="132"/><line x1="124" y1="132" x2="62" y2="87"/><line x1="62" y1="87" x2="138" y2="87"/><line x1="138" y1="87" x2="76" y2="132"/><line x1="76" y1="132" x2="100" y2="55"/>
+</g>
+<g stroke="currentColor" stroke-width="1.5">
+<circle cx="100" cy="20" r="7" fill="#e0242b"/><circle cx="62" cy="87" r="7" fill="#e0242b"/><circle cx="76" cy="132" r="7" fill="#e0242b"/><circle cx="147" cy="165" r="7" fill="#e0242b"/>
+<rect x="169" y="68" width="14" height="14" fill="#f5d90a"/><rect x="117" y="125" width="14" height="14" fill="#f5d90a"/><rect x="46" y="158" width="14" height="14" fill="#f5d90a"/>
+<circle cx="100" cy="55" r="7" fill="#2b6fd6"/><circle cx="24" cy="75" r="7" fill="#2b6fd6"/><circle cx="138" cy="87" r="7" fill="#2b6fd6"/>
+</g></svg>
+<figcaption>图：Petersen 图（外五边形、内五角星、5 条辐边）的 3-着色。记外圈顶点自顶部顺时针为 \(o_0,\dots,o_4\)，对应内圈顶点 \(i_0,\dots,i_4\)。红色 ×：\(o_0, o_2, i_3, i_4\)；黄色：\(o_1, o_3, i_2\)；冷色圆圈（原页分别为青色 \(i_0\)、紫色 \(o_4\)、蓝色 \(i_1\)）：\(i_0, o_4, i_1\)。</figcaption></figure>
+<b>解</b>
+<p>① \(n\ge 3\) ✓　② 连通 ✓　③ 非完全图 ✓　④ <u>非奇圈</u> ✓</p>
+\[ \Rightarrow \chi(G)\le \Delta(G)=3 \]
+<p>图 \(G\) 存在（含有）奇圈 \(\Rightarrow \chi(G)\ge 3\)。</p>
+<b>结论</b> \(\therefore \chi(G)=3\)。</div>
+<div class="fix"><b>校订说明（p.161）</b> 原式：“Peterson 图”；正确式：“Petersen 图”；原因：人名拼写为 Petersen。</div>
+<div class="supp"><b>补充讲解</b> 原页青、紫、蓝三个圆圈两两不相邻，合起来正好是第三个色类，所以图中实际只用了 3 种颜色，与 \(\chi(G)=3\) 一致。注意“非奇圈”指 \(G\) 本身不是奇圈，Petersen 图含 5 圈（奇圈）不影响 Brooks 定理的使用，反而给出下界 3。</div>
+
+<h3>⑥ 着色与划分、等价关系 <span class="pg">p.161–162</span></h3>
+<div class="thm"><b>性质</b> 对图 \(G\) 进行 \(\chi(G)\)-着色，设
+\[ V_i=\{v \mid v\in V(G)\land v\text{ 着第 }i\text{ 色}\},\quad i=1,2,\cdots,\chi(G) \]
+得到 \(V_1, V_2, \cdots, V_{\chi(G)}\)，则
+\[ \Pi=\{V_1,V_2,\cdots,V_{\chi(G)}\} \text{ 为 } V(G) \text{ 的划分}. \]</div>
+<div class="note"><b>笔记边注</b> \(\chi(G)\) 用红框圈出；\(V_1,V_2,\cdots,V_{\chi(G)}\) 用红笔写；右侧注“\(x\) 与 \(y\) 同色”。</div>
+<div class="thm"><b>性质 ★</b> 对图 \(G\) 进行 \(\chi(G)\)-着色，设
+\[ R=\{(u,v)\mid u,v\in V(G)\land u,v\text{ 同色}\} \]
+则 \(R\) 是 \(V(G)\) 上的等价关系（同色关系）。</div>
+<div class="supp"><b>补充讲解</b> 同色关系自反、对称、传递，所以是等价关系；它的等价类就是色类 \(V_i\)，商集就是上面的划分 \(\Pi\)。每个 \(V_i\) 都是独立集。</div>
+
+<h3>⑦ 色多项式 <span class="pg">p.162</span></h3>
+<div class="def"><b>定义</b> 不同的着色：至少有一个顶点的着色不同。
+\[ f(G,k)=\text{图 } G \text{ 的不同的 } k\text{-着色的总数} \]
+（\(G\)：图；\(k\)：颜色个数）。</div>
+<div class="thm"><b>递推公式</b> \[ f(G,k)=f(G-e,k)-f(G\backslash e,k) \]</div>
+<div class="supp"><b>补充讲解</b> \(G-e\) 是删去边 \(e=(u,v)\)，\(G\backslash e\) 是收缩边 \(e\)（把 \(u,v\) 合并成一个顶点）。\(G-e\) 的 \(k\)-着色分两类：\(u,v\) 异色的恰是 \(G\) 的着色；\(u,v\) 同色的对应 \(G\backslash e\) 的着色，相减即得递推式。例如 \(f(C_4,k)=f(P_4,k)-f(C_3,k)=k(k-1)^3-k(k-1)(k-2)=k(k-1)(k^2-3k+3)\)。</div>
+<div class="thm"><b>色多项式的性质</b>
+<p>1) 完全图：\(f(K_n,k)=k(k-1)(k-2)\cdots(k-n+1)\)</p>
+<p>2) 零图（无边）：\(f(N_n,k)=k^n\)</p></div>

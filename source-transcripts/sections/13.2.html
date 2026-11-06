@@ -1,0 +1,75 @@
+<h3>代数系统的定义 <span class="pg">p.194</span></h3>
+<div class="def"><b>定义（代数系统）</b> ① 非空集合 \(S\)，\(S\) 上 \(k\) 个一元或二元运算 \(f_1,f_2,\cdots,f_k\)，组成<b>代数系统</b>（简称代数），记作
+\[\langle S,f_1,f_2,\cdots,f_k\rangle\]
+（笔记中 \(S\) 下标 △，运算部分 \(f_1,f_2,\cdots,f_k\) 下画波浪线强调。）</div>
+<div class="example"><b>例</b> \(\langle \mathbb{N},+\rangle\)；\(\langle \mathbb{Z},+,\times\rangle\)，\(\langle \mathbb{Z},+\rangle\)；\(\langle \mathbb{R},+,\times\rangle\)。</div>
+<div class="note"><b>笔记边注（tip）</b> 最后 N 位加上“常用代数”（圈出），即单位元、零元、……等代数常数。<br>
+例：\(\langle \mathbb{Z},\times,0,1\rangle\)（\(0,1\) 下画波浪线，为代数常数）；Peano 系统 \(\langle M,F,e\rangle\)。</div>
+<div class="note"><b>笔记边注（右侧方框）</b> 书写次序：集合 \(\downarrow\) 运算符 \(\downarrow\) 常用代数常数。</div>
+
+<h3>同类型与同种的代数系统 <span class="pg">p.194–195</span></h3>
+<div class="def"><b>定义 1）同类型</b> 两个代数系统具有相同的构成成分，称为<b>同类型代数系统</b>。
+\[V_1=\langle \mathbb{R},+,\times,-,0,1\rangle,\qquad V_2=\langle P(B),\cup,\cap,\sim,\emptyset,B\rangle\]
+（笔记用红框把对应成分逐一框出：\(+,\times\) 对 \(\cup,\cap\)；\(-\)（上方注“一元”，即取相反数）对 \(\sim\)（绝对补）；\(0,1\) 对 \(\emptyset,B\)。）<br>
+二者都是：两个二元运算，一个一元运算，两个代数常数。</div>
+<div class="def"><b>定义 2）同种</b> <b>同种</b>的代数系统：构成成分和公理都相同。<br>
+例：\(\langle \mathbb{Z},+,\times\rangle\) 与 \(\langle \mathbb{Z}_n,\oplus_n,\otimes_n\rangle\)，其中
+\[\begin{aligned}
+&\mathbb{Z}_n=\{0,1,\cdots,n-1\}\\
+&x\oplus_n y=(x+y)\bmod n\\
+&x\otimes_n y=(x\cdot y)\bmod n
+\end{aligned}\]
+满足相同的公理：</div>
+<div class="tbl"><table><thead><tr><th>\(\langle \mathbb{Z},+,\times\rangle\)</th><th>公理</th><th>\(\langle \mathbb{Z}_n,\oplus_n,\otimes_n\rangle\)</th></tr></thead>
+<tbody>
+<tr><td>\(+,\times\)</td><td>交换律</td><td>\(\oplus_n,\otimes_n\)</td></tr>
+<tr><td>\(+,\times\)</td><td>结合律</td><td>\(\oplus_n,\otimes_n\)</td></tr>
+<tr><td>\(\times\) 对 \(+\)</td><td>分配律</td><td>\(\otimes_n\) 对 \(\oplus_n\)</td></tr>
+</tbody></table></div>
+
+<h3>子代数 <span class="pg">p.195</span></h3>
+<div class="def"><b>定义 ③ 子代数（子代数系统）</b> 1）设 \(V=\langle S,f_1,f_2,\cdots,f_k\rangle\) 为代数系统，若
+<br>① \(B\subseteq S\)；
+<br>② \(B\) 对 \(f_1,f_2,\cdots,f_k\) 封闭；
+<br>③ \(B\) 与 \(S\) 有相同的代数常数；
+<br>则 \(\langle B,f_1,f_2,\cdots,f_k\rangle\) 为 \(V\) 的<b>子代数系统</b>。</div>
+<div class="note"><b>笔记边注（红色箭头，指向条件①）</b> 若 \(B\subset S\)（真包含），则称为<b>真子代数</b>。</div>
+<div class="example"><b>例（右侧，箭头指向条件③）</b> \(\langle \mathbb{Z},\times,0\rangle\)；红笔打叉：\(\langle \mathbb{Z}-\{0\},\times,0\rangle\) 不是它的子代数（\(0\) 也被划掉）——\(\mathbb{Z}-\{0\}\) 中没有代数常数 \(0\)，违反条件③。</div>
+<div class="def"><b>2）平凡子代数</b> 设 \(V=\langle S,f_1,f_2,\cdots,f_k\rangle\) 为代数系统。
+<br>min：\(B\) 为最小子代数（红框）：① 令 \(V\) 中所有代数常数构成的集合为 \(B\)；② 且 \(B\) 对 \(V\) 的所有运算封闭。
+<br>max：\(B=S\)，\(S\) 本身为 \(V\) 的最大的子代数。
+<br>最小子代数与最大子代数称为 \(V\) 的平凡子代数。</div>
+<div class="supp"><b>补充讲解</b> 子代数要求 \(B\) 非空。最小子代数的条件②是前提：若全体代数常数的集合不封闭，应取它在所有运算下生成的最小封闭集合。</div>
+
+<h3>例：\(n\mathbb{Z}\) 是 \(\langle \mathbb{Z},+,0\rangle\) 的子代数 <span class="pg">p.196</span></h3>
+<div class="example"><b>例</b> 设 \(V=\langle \mathbb{Z},+,0\rangle\)（红注：\(0\) 为单位元），令 \(n\mathbb{Z}=\{nz\mid z\in\mathbb{Z}\}\)。
+\[\begin{aligned}
+\mathbb{Z}&=\{\cdots,-2,-1,0,1,2,\cdots\}\\
+n\mathbb{Z}&=\{\cdots,-2n,-n,0,n,2n,\cdots\}
+\end{aligned}\]
+（红箭头：\(0\to 0,\ 1\to n,\ 2\to 2n\)。）证明 \(n\mathbb{Z}\) 为 \(V\) 的子代数。
+<br><b>解</b>
+<br>① \(n\mathbb{Z}\subseteq\mathbb{Z}\) ✓
+<br>② 取 \(nz_1,nz_2\in n\mathbb{Z}\)，\(nz_1+nz_2=n(z_1+z_2)\)；由 \(z_1+z_2\in\mathbb{Z}\Rightarrow n(z_1+z_2)\in n\mathbb{Z}\) ✓（封闭）
+<br>③ \(0\) 在 \(n\mathbb{Z}\) 是不是单位元（对于 \(+\)）：取 \(x\in\mathbb{Z}\Rightarrow nx\in n\mathbb{Z}\)，\(0+nx=nx\) ✓
+<br>④ \(n=0\Rightarrow\{0\}\)，min（最小子代数）；\(n=1\Rightarrow\mathbb{Z}\)，max（最大子代数）。
+<br><b>结论</b> \(n\mathbb{Z}\) 是 \(V\) 的子代数。</div>
+<div class="supp"><b>补充讲解</b> 条件③严格说是验证代数常数 \(0\in n\mathbb{Z}\)（\(0=n\cdot 0\)）；笔记验证了 \(0\) 在 \(n\mathbb{Z}\) 中仍起单位元作用，同时也说明了 \(0\) 在其中。</div>
+
+<h3>积代数 <span class="pg">p.197</span></h3>
+<div class="def"><b>定义 ④ 积代数</b> 设 \(V_1=\langle A,\circ\rangle\)，\(V_2=\langle B,*\rangle\) 为同类型的代数系统，\(\circ\) 与 \(*\) 为二元运算，在集合 \(A\times B\) 上定义二元运算 \(\cdot\) 如下：\(\forall\langle a_1,b_1\rangle,\langle a_2,b_2\rangle\in A\times B\)，有
+\[\langle a_1,b_1\rangle\cdot\langle a_2,b_2\rangle=\langle a_1\circ a_2,\ b_1*b_2\rangle\]
+则 \(V=\langle A\times B,\cdot\rangle\) 为 \(V_1\) 与 \(V_2\) 的<b>积代数</b>。</div>
+<div class="example"><b>例</b> \(V_1=\langle\mathbb{Z},+\rangle\)，\(V_2=\langle\mathbb{Z},\times\rangle\)，\(V_1\times V_2=\langle\mathbb{Z}\times\mathbb{Z},\circ\rangle\)。
+<br>\(\forall\langle x_1,y_1\rangle,\langle x_2,y_2\rangle\in\mathbb{Z}\times\mathbb{Z}\)：
+\[\langle x_1,y_1\rangle\circ\langle x_2,y_2\rangle=\langle x_1+x_2,\ y_1\cdot y_2\rangle\]
+<b>解</b>（红框）交换 ✓，结合 ✓；求单位元：\(\langle x,y\rangle\circ\langle\ \ ,\ \ \rangle=\langle x,y\rangle\)（笔记先留空），
+\[\langle x,y\rangle\circ\langle 0,1\rangle=\langle x+0,\ y\cdot 1\rangle=\langle x,y\rangle\]
+<b>结论</b> 单位元为 \(\langle 0,1\rangle\)。</div>
+
+<h3>积代数的性质 <span class="pg">p.197–198</span></h3>
+<div class="thm"><b>性质 ⑤</b> 设 \(V_1=\langle A,\circ\rangle\)，\(V_2=\langle B,*\rangle\) 为同类型的代数系统，\(V_1\times V_2=\langle A\times B,\cdot\rangle\) 为 \(V_1\) 与 \(V_2\) 的积代数。
+<br>（1）如果 \(\circ\) 与 \(*\) 可交换 / 可结合 / 幂等 \(\Rightarrow\) \(\cdot\)（运算）也可交换 / 可结合 / 幂等。
+<br>（2）如果 \(e_1,e_2\) / \(\theta_1,\theta_2\) 为 \(\circ\) 与 \(*\) 的单位元 / 零元，则 \(\langle e_1,e_2\rangle\) / \(\langle\theta_1,\theta_2\rangle\) 为 \(\cdot\) 运算的单位元 / 零元。
+<br>（3）若 \(x\) 关于 \(\circ\) 的逆元为 \(x^{-1}\)，\(y\) 关于 \(*\) 的逆元为 \(y^{-1}\)，则 \(\langle x,y\rangle\) 关于 \(\cdot\) 的逆元为 \(\langle x^{-1},y^{-1}\rangle\)。（笔记写作箭头：\(x\xrightarrow{\circ}x^{-1}\)，\(y\xrightarrow{*}y^{-1}\Rightarrow\langle x,y\rangle\xrightarrow{\cdot}\langle x^{-1},y^{-1}\rangle\)。）</div>
+<div class="note"><b>页面说明</b> 第198页下半页空白。</div>

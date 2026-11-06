@@ -1,0 +1,10 @@
+[
+ {"type":"choice","q":"Schröder–Bernstein 定理：若 \\(A\\preccurlyeq\\cdot B\\) 且 \\(B\\preccurlyeq\\cdot A\\)，则","options":["\\(A\\approx B\\)","\\(A=B\\)","\\(A\\subseteq B\\)","\\(A\\prec\\cdot B\\)"],"answer":0,"why":"两个方向都有单射，就存在双射，即两集合等势；不要求集合相等或包含。"},
+ {"type":"choice","q":"证明中 \\(C_0\\) 的定义是","options":["\\(A-\\operatorname{ran}g\\)","\\(B-\\operatorname{ran}f\\)","\\(\\operatorname{ran}g\\)","\\(f(A)\\)"],"answer":0,"why":"\\(C_0=A-\\operatorname{ran}g\\)，即 A 中没有 g 原像的部分，链从这里出发。"},
+ {"type":"choice","q":"递推 \\(D_n\\) 与 \\(C_{n+1}\\) 的定义是","options":["\\(D_n=f(C_n),\\ C_{n+1}=g(D_n)\\)","\\(D_n=g(C_n),\\ C_{n+1}=f(D_n)\\)","\\(D_n=f^{-1}(C_n),\\ C_{n+1}=g^{-1}(D_n)\\)","\\(D_n=f(C_n),\\ C_{n+1}=f(D_n)\\)"],"answer":0,"why":"f:A→B 把 \\(C_n\\) 送到 B 得 \\(D_n\\)，g:B→A 再送回 A 得 \\(C_{n+1}\\)。"},
+ {"type":"fill","q":"取 \\(A=\\mathbb{N}\\)，\\(B=\\mathbb{N}-\\{0\\}\\)，\\(f(n)=n+1\\)，\\(g\\) 为包含映射 \\(g(n)=n\\)。则 \\(C_0=\\) ____","answer":["{0}","\\{0\\}"],"why":"\\(\\operatorname{ran}g=\\mathbb{N}-\\{0\\}\\)，所以 \\(C_0=\\mathbb{N}-\\operatorname{ran}g=\\{0\\}\\)。"},
+ {"type":"choice","q":"接上题，\\(E=A-C\\) 等于","options":["\\(\\emptyset\\)","\\(\\{0\\}\\)","\\(\\mathbb{N}-\\{0\\}\\)","\\(\\mathbb{N}\\)"],"answer":0,"why":"\\(C_0=\\{0\\},D_0=\\{1\\},C_1=\\{1\\},\\dots\\)，所以 \\(C=\\mathbb{N}\\)，\\(E=\\emptyset\\)。可见 E 可以为空，此时 h=f 就是双射。"},
+ {"type":"choice","q":"证明中 \\(F=B-D\\) 等于","options":["\\(g^{-1}(E)\\)","\\(f(E)\\)","\\(f(C_0)\\)","\\(g(E)\\)"],"answer":0,"why":"\\(F=g^{-1}(g(B))-g^{-1}(C-C_0)=g^{-1}(\\operatorname{ran}g-(C-C_0))=g^{-1}(E)\\)。"},
+ {"type":"choice","q":"推出 \\(D=g^{-1}(C-C_0)\\) 以及 \\(g^{-1}\\) 对差集分配，关键用到","options":["g 是单射","f 是满射","C 可数","\\(C_0\\) 有限"],"answer":0,"why":"\\(C-C_0=g(D)\\)，g 单射才有 \\(g^{-1}(g(D))=D\\)，差集分配同理。"},
+ {"type":"fill","q":"取 \\(A=B=\\mathbb{N}\\)，\\(f(n)=g(n)=2n\\)，按证明构造 h。则 \\(h(2)=\\) ____","answer":["1"],"why":"\\(C_0\\) 为奇数，\\(C_1\\) 为模 8 余 4 的数，\\(C_2=16\\cdot\\)(奇数)…，C 是 2 的幂次为偶数的数。2 的 2-幂次为 1，所以 2∈E，\\(h(2)=g^{-1}(2)=1\\)。"}
+]

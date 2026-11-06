@@ -1,0 +1,74 @@
+[
+ {
+  "type": "fill",
+  "q": "在格 \\(\\langle S_{24},D\\rangle\\) 中，\\(8\\lor12=\\) ____",
+  "answer": [
+   "24"
+  ],
+  "why": "lcm(8,12)=24。"
+ },
+ {
+  "type": "fill",
+  "q": "在格 \\(\\langle S_{24},D\\rangle\\) 中，\\(8\\land12=\\) ____",
+  "answer": [
+   "4"
+  ],
+  "why": "gcd(8,12)=4。"
+ },
+ {
+  "type": "fill",
+  "q": "在格 \\(\\langle S_{24},D\\rangle\\) 中，\\((4\\lor6)\\land 8=\\) ____",
+  "answer": [
+   "4"
+  ],
+  "why": "4∨6=lcm=12，12∧8=gcd=4。"
+ },
+ {
+  "type": "choice",
+  "q": "在子群格 \\(\\langle L(G),\\subseteq\\rangle\\) 中，\\(H_1\\lor H_2\\) 是：",
+  "options": [
+   "\\(\\langle H_1\\cup H_2\\rangle\\)",
+   "\\(H_1\\cup H_2\\)",
+   "\\(H_1\\cap H_2\\)",
+   "\\(H_1H_2\\)"
+  ],
+  "answer": 0,
+  "why": "两个子群的并集一般不是子群，最小上界是它生成的子群。"
+ },
+ {
+  "type": "choice",
+  "q": "命题 \\(a\\lor(b\\land c)\\preccurlyeq a\\lor b\\) 的对偶命题是：",
+  "options": [
+   "\\(a\\land(b\\lor c)\\succcurlyeq a\\land b\\)",
+   "\\(a\\land(b\\lor c)\\preccurlyeq a\\land b\\)",
+   "\\(a\\lor(b\\land c)\\succcurlyeq a\\lor b\\)",
+   "\\(a\\land(b\\lor c)= a\\land b\\)"
+  ],
+  "answer": 0,
+  "why": "∨↔∧，≼↔≽，元素不变。"
+ },
+ {
+  "type": "choice",
+  "q": "关于对偶原理，正确的是：",
+  "options": [
+   "若 f 对一切格为真，则 \\(f^*\\) 对一切格为真",
+   "若 f 在某个格中为真，则 \\(f^*\\) 在该格中也为真",
+   "对偶时 = 要换成 ≠",
+   "对偶时元素也要换成补元"
+  ],
+  "answer": 0,
+  "why": "对偶原理只针对对一切格都成立的命题；= 保持不变，元素不变。"
+ },
+ {
+  "type": "choice",
+  "q": "偏序集成为格的条件是：",
+  "options": [
+   "任意两个元素都有最小上界和最大下界",
+   "存在最大元和最小元",
+   "任意两元可比较",
+   "任意两个元素有上界"
+  ],
+  "answer": 0,
+  "why": "格的定义：∀x,y 都有 lub 与 glb（唯一，记作 x∨y、x∧y）。"
+ }
+]

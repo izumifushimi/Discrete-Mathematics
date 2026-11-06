@@ -1,0 +1,27 @@
+[
+ {
+  "page": 115,
+  "status": "partial",
+  "note": "Whitney定理证明：n≤3情形、λ≤δ、κ≤λ开头；K3顶点旁数字待核对"
+ },
+ {
+  "page": 116,
+  "status": "transcribed",
+  "note": "κ≤λ构造V''与示意图、三种情形定理与δ分类、情形(1)"
+ },
+ {
+  "page": 117,
+  "status": "transcribed",
+  "note": "情形(2)构造 K_κ+(K_r∪K_s) 加v、度数验证（两处 fix）"
+ },
+ {
+  "page": 118,
+  "status": "transcribed",
+  "note": "κ≥2δ-n+2 证明、情形(3)构造开头与示意图（漏号 fix）"
+ },
+ {
+  "page": 119,
+  "status": "transcribed",
+  "note": "情形(3)加边、度数与κ、λ验证；页下半空白"
+ }
+]

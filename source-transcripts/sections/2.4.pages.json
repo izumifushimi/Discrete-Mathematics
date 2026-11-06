@@ -1,0 +1,12 @@
+[
+ {
+  "page": 31,
+  "status": "transcribed",
+  "note": "关系的n次幂定义 R^0=I_A、R^{n+1}=R^n∘R、幂运算律；例 R={<a,b>,<b,a>,<a,c>} 求 R^0~R^3 及周期规律；闭包 r(R)、s(R)、t(R) 记号"
+ },
+ {
+  "page": 32,
+  "status": "transcribed",
+  "note": "G(R)、G(r(R))、G(s(R))、G(t(R)) 四个关系图（SVG重绘）；闭包单调性、闭包与并运算（t 只有⊇，大/小边注）；闭包公式 r(R)=R∪I_A、s(R)=R∪R^{-1}、t(R)=R∪R²∪…"
+ }
+]

@@ -1,0 +1,164 @@
+<div class="note"><b>笔记边注</b> 页首章标题“第8章 树”，日期 2025年9月7日 11:00；小节标题“8.1 无向树的定义与性质”。</div>
+
+<h3>① 从图到树：连通 + 无回路 <span class="pg">p.127</span></h3>
+<p>原页先画三个图，下方注“连通①”“无回路图②”，再用箭头把每个图改画成“树”的样子（自上而下悬挂），并用红圈圈出度为 1 的顶点（树叶）。</p>
+<figure class="fig"><svg viewBox="0 0 520 260" role="img" aria-label="三个连通无回路图及其改画成树的形状">
+<g stroke="currentColor" fill="none" stroke-width="2">
+<line x1="30" y1="20" x2="30" y2="70"/><line x1="30" y1="20" x2="80" y2="70"/>
+<line x1="130" y1="20" x2="130" y2="70"/><line x1="130" y1="20" x2="180" y2="70"/><line x1="180" y1="20" x2="180" y2="70"/>
+<line x1="230" y1="70" x2="280" y2="70"/><line x1="280" y1="70" x2="280" y2="30"/><line x1="280" y1="30" x2="330" y2="30"/><line x1="290" y1="80" x2="370" y2="80"/><line x1="370" y1="80" x2="370" y2="40"/>
+<line x1="40" y1="150" x2="40" y2="200"/><line x1="40" y1="200" x2="40" y2="240"/>
+<line x1="90" y1="160" x2="70" y2="200"/><line x1="90" y1="160" x2="110" y2="200"/>
+<line x1="170" y1="150" x2="170" y2="240"/>
+<line x1="230" y1="150" x2="210" y2="190"/><line x1="230" y1="150" x2="250" y2="190"/><line x1="210" y1="190" x2="210" y2="230"/>
+<line x1="330" y1="140" x2="300" y2="170"/><line x1="330" y1="140" x2="340" y2="170"/><line x1="340" y1="170" x2="340" y2="210"/><line x1="330" y1="140" x2="370" y2="180"/><line x1="370" y1="180" x2="370" y2="240"/>
+</g>
+<g fill="currentColor" font-size="14">
+<text x="20" y="110">连通①  无回路图②（三个图都满足）</text>
+<text x="52" y="200">⇒</text><text x="140" y="200">⇒</text>
+<text x="300" y="255">红圈：树叶（度为 1）</text>
+</g></svg>
+<figcaption>图（p.127 ①）：上排三个图：(1) 3 个顶点，左竖边 + 一条斜边，形如“N”的一半；(2) 4 个顶点的路径，形如“N”；(3) 一条折线形的路径（约 7 个顶点，“─┘‾‾ ─┘”形）。三者均连通且无回路。下排为改画：(1) 竖直的 3 顶点路径，两端红圈，⇒ 改画为“Λ”形（顶点在上，两片叶红圈）；(2) 竖直路径（顶端打×），⇒ 改画为上端分叉的树，叶子红圈；(3) 改画为根下分三支的树，叶子红圈。右侧另画一棵真实的“树”的速写（树干与枝叶）作类比。</figcaption></figure>
+
+<h3>② 无向树的有关概念 <span class="pg">p.127</span></h3>
+<div class="def"><b>定义</b>
+<ol>
+<li><b>树</b>：连通无回路图（常用 \(T\) 表示）。</li>
+<li><b>树叶</b>：树中度为 1 的顶点，\(d(v)=1\)。</li>
+<li><b>分支点</b>：树中度为 2 或 2 以上的顶点，\(d(v)\ge 2\)。</li>
+<li>\(K_1\)（单个顶点 ∘）：<b>平凡树</b>。</li>
+<li><b>森林</b>：无回路图（由多个树组成）。</li>
+</ol></div>
+<div class="note"><b>笔记边注</b> “连通无回路图”下红色下划线；\(d(v)\ge2\) 下双下划线；“森林”二字加下划线。右侧画图 \(G\)：两个分别圈起来的树（一个“Λ”形 3 顶点树，一个上端一点、下分两支并带一片叶的树），后接“…”，表示森林由若干棵树组成。</div>
+<figure class="fig"><svg viewBox="0 0 260 130" role="img" aria-label="森林G由两棵树组成">
+<g stroke="currentColor" fill="none" stroke-width="2">
+<ellipse cx="60" cy="60" rx="45" ry="50"/><ellipse cx="160" cy="60" rx="45" ry="55"/>
+<line x1="60" y1="30" x2="40" y2="80"/><line x1="60" y1="30" x2="80" y2="80"/>
+<line x1="160" y1="20" x2="160" y2="55"/><line x1="160" y1="55" x2="140" y2="95"/><line x1="160" y1="55" x2="180" y2="95"/>
+</g>
+<g fill="currentColor"><circle cx="60" cy="30" r="4"/><circle cx="40" cy="80" r="4"/><circle cx="80" cy="80" r="4"/>
+<circle cx="160" cy="20" r="4"/><circle cx="160" cy="55" r="4"/><circle cx="140" cy="95" r="4"/><circle cx="180" cy="95" r="4"/>
+<text x="215" y="65" font-size="14">…</text><text x="150" y="128" font-size="14">G</text></g></svg>
+<figcaption>图（p.127 右侧）：森林 \(G\)。第一棵树 3 个顶点 2 条边（Λ 形）；第二棵树 4 个顶点 3 条边（上顶点—中间点，中间点再分两支）；“…”表示还可以有更多树。</figcaption></figure>
+
+<h3>③ 树的等价定义 <span class="pg">p.127–128</span></h3>
+<div class="thm"><b>定理</b> 设 \(G=\langle V,E\rangle\) 是 \(n\) 阶 \(m\) 边无向图，则
+\[
+\begin{aligned}
+&G \text{ 是树}\\
+\Leftrightarrow\ &G \text{ 中任何 2 顶点之间有唯一路径}\\
+\Leftrightarrow\ &m=n-1 \land G \text{ 无圈}\\
+\Leftrightarrow\ &m=n-1 \land G \text{ 连通}\\
+\Leftrightarrow\ &G \text{ 连通} \land \text{所有边是桥}\\
+\Leftrightarrow\ &G \text{ 无圈} \land \text{增加任何新边得唯一圈}
+\end{aligned}
+\]</div>
+<div class="note"><b>笔记边注</b> “唯一”下红色粗下划线；“\(G\) 无圈”“\(G\) 连通”后打红色 √；第三、四条中的“\(m=n-1\)”的等号上下标 △；“所有边是桥”“增加任何新边得唯一圈”下有下划线（后者为红色）。右侧边注：两个圈起来的词“连通”（标☆）与“无回路”（标☆，红色下划线），下面写“点 边”，再写 \(n=m+1\)（用红圈圈起，旁标☆，并有红色×），即树的顶点数 = 边数 + 1。</div>
+<figure class="fig"><svg viewBox="0 0 480 220" role="img" aria-label="森林加边与树加边成唯一圈的示意">
+<defs><marker id="ar81a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+<g stroke="currentColor" fill="none" stroke-width="2">
+<line x1="20" y1="70" x2="70" y2="60"/><line x1="70" y1="60" x2="120" y2="35"/><line x1="70" y1="60" x2="120" y2="90"/>
+<line x1="210" y1="45" x2="250" y2="65"/>
+<line x1="120" y1="90" x2="210" y2="45" stroke-dasharray="6 4"/>
+<rect x="5" y="15" width="265" height="95" rx="10"/>
+<line x1="380" y1="20" x2="350" y2="70"/><line x1="380" y1="20" x2="410" y2="70"/><line x1="350" y1="70" x2="350" y2="130"/><line x1="410" y1="70" x2="410" y2="140"/><line x1="410" y1="140" x2="405" y2="200"/>
+<line x1="405" y1="135" x2="355" y2="78" stroke-dasharray="6 4" marker-end="url(#ar81a)"/>
+</g>
+<g fill="currentColor"><circle cx="20" cy="70" r="4"/><circle cx="70" cy="60" r="4"/><circle cx="120" cy="35" r="4"/><circle cx="120" cy="90" r="4"/><circle cx="210" cy="45" r="4"/><circle cx="250" cy="65" r="4"/>
+<circle cx="380" cy="20" r="4"/><circle cx="350" cy="70" r="4"/><circle cx="410" cy="70" r="4"/><circle cx="350" cy="130" r="4"/><circle cx="410" cy="140" r="4"/><circle cx="405" cy="200" r="4"/>
+<text x="60" y="140" font-size="14">红字（形似“消圈边”）↗</text><text x="300" y="215" font-size="14">虚线：新增的红边</text></g></svg>
+<figcaption>图（p.127 底—p.128 右上）：左为红框内的图：一棵 4 顶点的树（左端点—中间点，中间点再连上、下两点）与一棵 2 顶点的树，红线（虚线表示）把前者下方顶点与后者左端点连起来，连接后得到一棵树，红框下写有红字及箭头。右为一棵 6 顶点的树：根连左右两个孩子，左孩子下挂一片叶，右孩子下挂一条长 2 的路径；红箭头从右侧下方顶点连向左孩子，表示在树中增加任何一条新边都会产生唯一的圈。</figcaption></figure>
+<div class="unclear"><b>待核对（p.128，位置：右上角红框下方红字）</b> 可辨认部分：两行红色小字，第二行末尾为“边”并带一个向上的红箭头，第一行形似“消圈”；无法辨认：第一行确切是“消圈”“增圈”还是其他字。</div>
+
+<h3>④ 非平凡树至少有 2 片树叶 <span class="pg">p.128</span></h3>
+<div class="thm"><b>定理</b> 非平凡树至少有 2 个树叶。</div>
+<div class="note"><b>笔记边注</b> “非平凡树”下有下划线。右侧图示：最小的非平凡树“∘—∘”（2 片叶）与“Λ”形树（2 片叶）。下面两行演示逐次删去树叶：第一行，根下挂 4 片叶的星（下划线）⇒ 根下 3 片叶 ⇒ 根下 2 片叶（Λ）⇒ 一条边（两端各一片叶）；第二行，根下挂 3 条长 2 的分支（下标“3”，3 片叶）⇒ 2 条分支（下标“2”）⇒ 一条路径，两端顶点画圈（下标“2”）。无论怎样删，最后总剩下至少 2 片树叶。</div>
+<div class="supp"><b>补充讲解</b> 证明思路：设非平凡树 \(T\) 有 \(n\ge2\) 个顶点、\(k\) 片叶，则 \(m=n-1\)，由握手定理 \(\sum d(v)=2(n-1)\)。分支点度数 \(\ge2\)，故 \(2(n-1)\ge k\cdot1+2(n-k)\)，化简得 \(k\ge2\)。</div>
+
+<h3>⑤ 无向树的计数 \(t_n\) <span class="pg">p.128–129</span></h3>
+<div class="def"><b>定义</b> \(t_n\)：\(n\) 阶（\(n\ge1\)）非同构无向树的个数。</div>
+<div class="tbl"><table><thead><tr><th>\(n\)</th><th>\(t_n\)</th><th>\(n\)</th><th>\(t_n\)</th></tr></thead><tbody>
+<tr><td>1</td><td>1</td><td>9</td><td>47</td></tr>
+<tr><td>2</td><td>1</td><td>10</td><td>106</td></tr>
+<tr><td>3</td><td>1</td><td>11</td><td>235</td></tr>
+<tr><td>4</td><td>2</td><td>12</td><td>551</td></tr>
+<tr><td>5</td><td>3</td><td>13</td><td>1301</td></tr>
+<tr><td>6</td><td>6</td><td>14</td><td>3159</td></tr>
+<tr><td>7</td><td>11</td><td>15</td><td>7741</td></tr>
+<tr><td>8</td><td>23</td><td>16</td><td>19320</td></tr>
+</tbody></table></div>
+<div class="note"><b>笔记边注</b> \(n\)、\(t_n\)、“\(n\) 阶”与“非同构无向树的个数”下有下划线；表末“16”“19320”加下划线（p.129 顶部重抄了 \(n=7,8,15,16\) 两行）。表右侧另写：\(n=32\)，\(t_n=109912\)（下划线）。\(n=14\) 一栏手写末位形似“7”，按标准值为 3159。</div>
+<div class="fix"><b>校订说明（p.128）</b> 原式：\(n=32\) 时 \(t_n=109912\)；正确式：\(t_{32}=109\,972\,410\,221\)（约 \(1.1\times10^{11}\)）；原因：\(t_n\) 增长极快（\(t_{16}\) 已是 19320），\(t_{32}\) 不可能只有六位数，原页应是只抄了前几位且中间抄错（“1099…”而非“10991…2”）。数值按非同构无向树计数公式计算核对。</div>
+
+<h3>⑥ 小阶数的全部非同构无向树 <span class="pg">p.129</span></h3>
+<figure class="fig"><svg viewBox="0 0 560 230" role="img" aria-label="1到5阶的全部非同构无向树">
+<g stroke="currentColor" fill="none" stroke-width="2">
+<line x1="100" y1="50" x2="130" y2="50"/>
+<line x1="100" y1="80" x2="160" y2="80"/>
+<line x1="100" y1="120" x2="190" y2="120"/>
+<line x1="300" y1="120" x2="360" y2="120"/><line x1="330" y1="120" x2="330" y2="95"/>
+<line x1="100" y1="180" x2="220" y2="180"/>
+<line x1="270" y1="180" x2="390" y2="180"/><line x1="300" y1="180" x2="300" y2="155"/>
+<line x1="440" y1="180" x2="520" y2="180"/><line x1="480" y1="140" x2="480" y2="220"/>
+</g>
+<g fill="currentColor">
+<circle cx="100" cy="20" r="4"/>
+<circle cx="100" cy="50" r="4"/><circle cx="130" cy="50" r="4"/>
+<circle cx="100" cy="80" r="4"/><circle cx="130" cy="80" r="4"/><circle cx="160" cy="80" r="4"/>
+<circle cx="100" cy="120" r="4"/><circle cx="130" cy="120" r="4"/><circle cx="160" cy="120" r="4"/><circle cx="190" cy="120" r="4"/>
+<circle cx="300" cy="120" r="4"/><circle cx="330" cy="120" r="4"/><circle cx="360" cy="120" r="4"/><circle cx="330" cy="95" r="4"/>
+<circle cx="100" cy="180" r="4"/><circle cx="130" cy="180" r="4"/><circle cx="160" cy="180" r="4"/><circle cx="190" cy="180" r="4"/><circle cx="220" cy="180" r="4"/>
+<circle cx="270" cy="180" r="4"/><circle cx="300" cy="180" r="4"/><circle cx="330" cy="180" r="4"/><circle cx="360" cy="180" r="4"/><circle cx="390" cy="180" r="4"/><circle cx="300" cy="155" r="4"/>
+<circle cx="440" cy="180" r="4"/><circle cx="480" cy="180" r="4"/><circle cx="520" cy="180" r="4"/><circle cx="480" cy="140" r="4"/><circle cx="480" cy="220" r="4"/>
+<g font-size="14"><text x="20" y="25">n=1</text><text x="20" y="55">n=2</text><text x="20" y="85">n=3</text><text x="20" y="125">n=4</text><text x="20" y="185">n=5</text></g>
+</g></svg>
+<figcaption>图（p.129 ⑥ 上半）：\(n=1\)：单点；\(n=2\)：一条边；\(n=3\)：3 顶点路径；\(n=4\)：路径 \(P_4\)，以及中心点连 3 点的星 \(K_{1,3}\)（共 2 棵，\(t_4=2\)）；\(n=5\)：路径 \(P_5\)，第 2 个顶点上多挂一片叶的树（主干 4 个顶点），中心连 4 点的十字形星 \(K_{1,4}\)（共 3 棵，\(t_5=3\)）。</figcaption></figure>
+<div class="example"><b>例</b> \(n=6\) 的全部非同构无向树（原页用度数列区分）。
+<figure class="fig"><svg viewBox="0 0 560 440" role="img" aria-label="6阶的6棵非同构无向树及度数列">
+<g stroke="currentColor" fill="none" stroke-width="2">
+<line x1="40" y1="30" x2="240" y2="30"/>
+<line x1="40" y1="100" x2="200" y2="100"/><line x1="80" y1="100" x2="80" y2="70"/>
+<line x1="40" y1="170" x2="200" y2="170"/><line x1="120" y1="170" x2="120" y2="140"/>
+<line x1="40" y1="240" x2="200" y2="240"/><line x1="80" y1="240" x2="80" y2="210"/><line x1="160" y1="240" x2="160" y2="210"/>
+<line x1="40" y1="320" x2="160" y2="320"/><line x1="80" y1="290" x2="80" y2="350"/>
+<line x1="60" y1="400" x2="140" y2="400"/><line x1="100" y1="400" x2="100" y2="435"/><line x1="100" y1="400" x2="75" y2="370"/><line x1="100" y1="400" x2="125" y2="370"/>
+</g>
+<g fill="currentColor">
+<circle cx="40" cy="30" r="4"/><circle cx="80" cy="30" r="4"/><circle cx="120" cy="30" r="4"/><circle cx="160" cy="30" r="4"/><circle cx="200" cy="30" r="4"/><circle cx="240" cy="30" r="4"/>
+<circle cx="40" cy="100" r="4"/><circle cx="80" cy="100" r="4"/><circle cx="120" cy="100" r="4"/><circle cx="160" cy="100" r="4"/><circle cx="200" cy="100" r="4"/><circle cx="80" cy="70" r="4"/>
+<circle cx="40" cy="170" r="4"/><circle cx="80" cy="170" r="4"/><circle cx="120" cy="170" r="4"/><circle cx="160" cy="170" r="4"/><circle cx="200" cy="170" r="4"/><circle cx="120" cy="140" r="4"/>
+<circle cx="40" cy="240" r="4"/><circle cx="80" cy="240" r="4"/><circle cx="160" cy="240" r="4"/><circle cx="200" cy="240" r="4"/><circle cx="80" cy="210" r="4"/><circle cx="160" cy="210" r="4"/>
+<circle cx="40" cy="320" r="4"/><circle cx="80" cy="320" r="4"/><circle cx="120" cy="320" r="4"/><circle cx="160" cy="320" r="4"/><circle cx="80" cy="290" r="4"/><circle cx="80" cy="350" r="4"/>
+<circle cx="60" cy="400" r="4"/><circle cx="100" cy="400" r="4"/><circle cx="140" cy="400" r="4"/><circle cx="100" cy="435" r="4"/><circle cx="75" cy="370" r="4"/><circle cx="125" cy="370" r="4"/>
+<g font-size="14">
+<text x="330" y="35">1 1 2 2 2 2</text>
+<text x="330" y="130">[1 1 1 2 2 3]（两棵，加框）</text>
+<text x="330" y="245">1 1 1 1 3 3</text>
+<text x="330" y="325">1 1 1 1 2 4</text>
+<text x="330" y="405">1 1 1 1 1 5</text>
+<text x="85" y="117">3</text><text x="85" y="337">4</text><text x="120" y="312">2</text>
+</g></g></svg>
+<figcaption>图（p.129 \(n=6\)）：(1) 路径 \(P_6\)，度数列 112222；(2) 主干 5 个顶点、第 2 个顶点上挂一片叶（原页在该点标 3、各叶标 1）；(3) 主干 5 个顶点、中间顶点上挂一片叶；(2)(3) 两个箭头都指向加框的度数列 111223；(4) 主干 4 个顶点、第 2 与第 3 个顶点各挂一片叶，度数列 111133；(5) 度 4 的顶点（标 4）连 3 片叶和一个度 2 的顶点（标 2），后者再连一片叶，度数列 111124；(6) 星 \(K_{1,5}\)，度数列 111115。</figcaption></figure>
+<b>结论</b> 共 6 棵，与 \(t_6=6\) 一致。每个度数列之和都是 \(2(n-1)=10\)。其中 (2)(3) 度数列同为 111223 却不同构（度 3 的顶点所连分支长度不同），说明度数列相同不能推出同构。</div>
+<div class="note"><b>笔记边注</b> 度数列下的小箭头：112222 中“2222”下有弧形箭头；111223 中“2”与“3”之间有小箭头；111133 末位“3”、111124 末位“4”下各有小勾形箭头，表示从左到右按度数递增排列、末位为最大度数。</div>
+
+<h3>⑦ 星 <span class="pg">p.129–130</span></h3>
+<div class="def"><b>定义</b> 星 \(S_n=K_{1,n-1}\)（一个中心点与其余 \(n-1\) 个顶点各连一条边的 \(n\) 阶树）。</div>
+<div class="note"><b>笔记边注</b> \(S_n\) 下双下划线。旁边画 Y 形（\(K_{1,3}\)）与 X 形（\(K_{1,4}\)）两个星。</div>
+<figure class="fig"><svg viewBox="0 0 520 150" role="img" aria-label="星S1到S5">
+<g stroke="currentColor" fill="none" stroke-width="2">
+<line x1="130" y1="30" x2="130" y2="80"/>
+<line x1="220" y1="30" x2="200" y2="80"/><line x1="220" y1="30" x2="240" y2="80"/>
+<line x1="320" y1="30" x2="290" y2="80"/><line x1="320" y1="30" x2="320" y2="80"/><line x1="320" y1="30" x2="350" y2="80"/>
+<line x1="440" y1="30" x2="400" y2="80"/><line x1="440" y1="30" x2="425" y2="80"/><line x1="440" y1="30" x2="455" y2="80"/><line x1="440" y1="30" x2="480" y2="80"/>
+</g>
+<g fill="currentColor">
+<circle cx="40" cy="40" r="4"/>
+<circle cx="130" cy="30" r="4"/><circle cx="130" cy="80" r="4"/>
+<circle cx="220" cy="30" r="4"/><circle cx="200" cy="80" r="4"/><circle cx="240" cy="80" r="4"/>
+<circle cx="320" cy="30" r="4"/><circle cx="290" cy="80" r="4"/><circle cx="320" cy="80" r="4"/><circle cx="350" cy="80" r="4"/>
+<circle cx="440" cy="30" r="4"/><circle cx="400" cy="80" r="4"/><circle cx="425" cy="80" r="4"/><circle cx="455" cy="80" r="4"/><circle cx="480" cy="80" r="4"/>
+<g font-size="14"><text x="30" y="115">S1</text><text x="120" y="115">S2</text><text x="210" y="115">S3</text><text x="310" y="115">S4</text><text x="430" y="115">S5</text>
+<text x="20" y="140">K1,0</text><text x="110" y="140">K1,1</text><text x="200" y="140">K1,2</text><text x="300" y="140">K1,3</text><text x="420" y="140">K1,4</text></g></g></svg>
+<figcaption>图（p.129 底—p.130，红框内）：\(S_1=K_{1,0}\)（单点）、\(S_2=K_{1,1}\)（一条边，原页下划线）、\(S_3=K_{1,2}\)（Λ 形）、\(S_4=K_{1,3}\)（中心连 3 点）、\(S_5=K_{1,4}\)（中心连 4 点）。</figcaption></figure>
+<div class="warn"><b>易错提醒</b> \(S_n\) 的下标是顶点数 \(n\)，对应 \(K_{1,n-1}\)，不是 \(K_{1,n}\)。“\(m=n-1\)”单独不足以说明是树，必须再加“连通”或“无圈”之一。</div>

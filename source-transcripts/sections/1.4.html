@@ -1,0 +1,58 @@
+<p>笔记日期：2025年5月11日 19:44。</p>
+<h3>集合恒等式 <span class="pg">p.18</span></h3>
+<p>设 \(E\) 为全集，\(A,B,C\) 为 \(E\) 的任意子集。（\(\sim A\) 表示 \(A\) 的绝对补 \(E-A\)。）</p>
+<div class="thm"><b>① 幂等律</b> \(A\cup A=A,\quad A\cap A=A\)</div>
+<div class="thm"><b>② 交换律</b> \(A\cup B=B\cup A,\quad A\cap B=B\cap A\)</div>
+<div class="fix"><b>校订说明（p.18）</b> 原式：\(A\cup B=B\cap A\)；正确式：\(A\cup B=B\cup A\)；原因：交换律只交换两个运算对象的位置，运算符不变。例如 \(A=\{1\},B=\{2\}\) 时 \(A\cup B=\{1,2\}\)，而 \(B\cap A=\emptyset\)。</div>
+<div class="thm"><b>③ 结合律</b> \[(A\cup B)\cup C=A\cup(B\cup C)\] \[(A\cap B)\cap C=A\cap(B\cap C)\]</div>
+<div class="thm"><b>④ 分配律</b> \[A\cup(B\cap C)=(A\cup B)\cap(A\cup C)\] \[A\cap(B\cup C)=(A\cap B)\cup(A\cap C)\]</div>
+<div class="note"><b>笔记边注</b> 第一式中 \(A\) 后面的 \(\cup\) 下画了下划线，提示“外面的运算 \(\cup\) 分配进括号”。</div>
+<div class="thm"><b>⑤ 德摩根律</b> \[\sim(A\cup B)=(\sim A)\cap(\sim B)\] \[\sim(A\cap B)=(\sim A)\cup(\sim B)\]</div>
+<div class="thm"><b>⑥ 吸收律</b> \[A\cup(A\cap B)=A\] \[A\cap(A\cup B)=A\]</div>
+<div class="note"><b>笔记边注</b> 第一式中开头的 \(A\) 下画双横线，\(A\cap B\) 下画波浪线：强调外面的 \(A\) 把含 \(A\) 的那一项“吸收”掉。</div>
+<p>⑦ 原页只写了编号 ⑦，后面是一串省略号（“……”），表示还有其他恒等式未一一列出。</p>
+<div class="supp"><b>补充讲解</b> 常见的其余恒等式还有：零律 \(A\cup E=E,\ A\cap\emptyset=\emptyset\)；同一律 \(A\cup\emptyset=A,\ A\cap E=A\)；排中律 \(A\cup\sim A=E\)；矛盾律 \(A\cap\sim A=\emptyset\)；双重否定 \(\sim\sim A=A\)；补交转换 \(A-B=A\cap\sim B\)。它们与命题逻辑的等值式一一对应（\(\cup\leftrightarrow\lor,\ \cap\leftrightarrow\land,\ \sim\leftrightarrow\neg,\ E\leftrightarrow 1,\ \emptyset\leftrightarrow 0\)）。</div>
+
+<h3>集族的分配律 / 德摩根律 <span class="pg">p.18–19</span></h3>
+<p>设集族为 \(\{A_\alpha\}_{\alpha\in S}\)，\(B\) 为一集合。</p>
+<div class="thm"><b>① 分配律（并对广义交）</b> \[B\cup\Big(\bigcap\{A_\alpha\}_{\alpha\in S}\Big)=\bigcap_{\alpha\in S}(B\cup A_\alpha)\]</div>
+<div class="note"><b>笔记边注</b> 左边的 \(\bigcap\) 下标注“广交”（广义交）；\(\{A_\alpha\}_{\alpha\in S}\) 下画线；右边 \((B\cup A_\alpha)\) 下画波浪线并标 △，右边的 \(\bigcap_{\alpha\in S}\) 下也有一行小字注释（见下方待核对）。p.19 顶部重复抄写了这一式及注释。</div>
+<div class="unclear"><b>待核对（p.18，位置：页面底部右侧，\(\bigcap_{\alpha\in S}\) 下方的小字）</b> 可辨认部分：字上方有波浪线，形似“交集”或某个“…集”字样；无法辨认：具体是哪两个字不能确定（左侧对应的注释为“广交”）。</div>
+<div class="example"><b>例</b> \(B=\{2,3\}\)，\(\mathscr{A}=\{\underbrace{\{1,2\}}_{A_1},\underbrace{\{1,3\}}_{A_2},\underbrace{\{1,2,3\}}_{A_3}\}\)，验证 ①。
+<b>解</b> 左边：\(\bigcap\mathscr{A}=\{1\}\)，所以 \(B\cup(\bigcap\mathscr{A})=\{1,2,3\}\)（左）。
+<br>右边：\(B\cup A_1=\{1,2,3\}\)，\(B\cup A_2=\{1,2,3\}\)，\(B\cup A_3=\{1,2,3\}\)（原笔记在三项下分别写了 1,2,3），
+\[(B\cup A_1)\cap(B\cup A_2)\cap(B\cup A_3)=\{1,2,3\}\ (\text{右})\]
+<b>结论</b> 左 \(=\{1,2,3\}=\) 右，原页在两行之间画了双向箭头 \(\Updownarrow\) 表示相等。</div>
+<div class="thm"><b>② 分配律（交对广义并）</b> \[B\cap\Big(\bigcup\{A_\alpha\}_{\alpha\in S}\Big)=\bigcup_{\alpha\in S}(B\cap A_\alpha)\]</div>
+<div class="thm"><b>③ 德摩根律（集族形式）</b> \[\sim\Big(\bigcup\{A_\alpha\}_{\alpha\in S}\Big)=\bigcap_{\alpha\in S}(\sim A_\alpha)\] \[\sim\Big(\bigcap\{A_\alpha\}_{\alpha\in S}\Big)=\bigcup_{\alpha\in S}(\sim A_\alpha)\]</div>
+<div class="note"><b>笔记边注</b> 第一式左边的 \(\bigcup\) 下标 △，提示“补号进去后并变交”。</div>
+
+<h3>证明恒等式：集合 ⇒ 命题 <span class="pg">p.19–20</span></h3>
+<p>思路：把“\(x\) 属于某集合”翻译成命题，用命题逻辑的等值式演算，再翻译回集合。</p>
+<div class="note"><b>笔记边注（p.19 右侧）</b> 画有 \(\cap\) 与 \(\land\) 之间的双向箭头 \(\cap\Updownarrow\land\)，旁边是两圆相交、交集涂黑的 Venn 图，图下有一个对勾形符号。</div>
+<figure class="fig"><svg viewBox="0 0 220 120" role="img" aria-label="两圆A与B相交，交集部分涂黑"><defs><clipPath id="b14vennA"><circle cx="85" cy="60" r="40"/></clipPath></defs><circle cx="135" cy="60" r="40" fill="currentColor" fill-opacity="0.45" clip-path="url(#b14vennA)"/><circle cx="85" cy="60" r="40" stroke="currentColor" fill="none" stroke-width="1.5"/><circle cx="135" cy="60" r="40" stroke="currentColor" fill="none" stroke-width="1.5"/><text x="62" y="40" font-size="14" fill="currentColor">A</text><text x="150" y="40" font-size="14" fill="currentColor">B</text></svg><figcaption>图：p.19 右侧边注中的 Venn 图，两圆 A、B 相交，重叠部分涂黑，表示 \(A\cap B\)。</figcaption></figure>
+<div class="unclear"><b>待核对（p.19，位置：右侧边注 Venn 图下方）</b> 可辨认部分：一个“√”形笔画；无法辨认：它是表示“正确”的对勾，还是表示 \(\cup\leftrightarrow\lor\) 中的析取符号 \(\lor\)，从字形无法确定。</div>
+<div class="example"><b>① 零律</b> 证明 \(A\cap\emptyset=\emptyset\)。
+<b>证明</b> 对任意的 \(x\)，
+\[\begin{aligned}
+&x\in(A\cap\emptyset)\\
+\Leftrightarrow\ &(x\in A)\land(x\in\emptyset)\\
+\Leftrightarrow\ &(x\in A)\land 0\\
+\Leftrightarrow\ &0\\
+\Leftrightarrow\ &x\in\emptyset
+\end{aligned}\]
+<b>结论</b> \(\Rightarrow A\cap\emptyset=\emptyset\)。</div>
+<div class="note"><b>笔记边注</b> \(x\in(A\cap\emptyset)\) 下画横线；\(\cap\) 下有 △，提示由 \(\cap\) 转为 \(\land\)；\((x\in\emptyset)\) 下画波浪线，并在下一行改写为 \(0\)（\(x\in\emptyset\) 永假），\(0\) 下也画了横线。结论“\(A\cap\emptyset=\emptyset\)”写在右侧，用箭头引出。</div>
+
+<h4>② 集族包含 ⇒ 广义并包含 <span class="pg">p.20</span></h4>
+<div class="thm"><b>命题</b> \(\mathscr{A}\subseteq\mathscr{B}\Rightarrow\bigcup\mathscr{A}\subseteq\bigcup\mathscr{B}\) ☆</div>
+<div class="proof"><b>证明</b> 对于任意的 \(x\in\bigcup\mathscr{A}\)，
+\[\begin{aligned}
+&x\in\textstyle\bigcup\mathscr{A}\\
+\Leftrightarrow\ &\exists A\,(x\in A\land A\in\mathscr{A})\\
+\Rightarrow\ &\exists A\,(x\in A\land A\in\mathscr{B})\\
+\Leftrightarrow\ &x\in\textstyle\bigcup\mathscr{B}
+\end{aligned}\]
+\(\Rightarrow\bigcup\mathscr{A}\subseteq\bigcup\mathscr{B}\)。</div>
+<div class="note"><b>笔记边注</b> 条件 \(\mathscr{A}\subseteq\mathscr{B}\) 下画波浪线并标两个 △，\(\Rightarrow\) 与 \(\bigcup\mathscr{A}\subseteq\bigcup\mathscr{B}\) 下也画波浪线；上方有一条从 \(\bigcup\mathscr{A}\) 指向 \(\bigcup\mathscr{B}\) 的弧形箭头。第二步的“\(\Rightarrow\)”被圈出：这一步是单向推出（用到条件），不是等值。从 \(A\in\mathscr{A}\) 中的 \(\mathscr{A}\) 画小箭头向下指到 \(\mathscr{B}\)，表示用 \(\mathscr{A}\subseteq\mathscr{B}\) 把 \(A\in\mathscr{A}\) 换成 \(A\in\mathscr{B}\)。左侧有一条从条件 \(\mathscr{A}\subseteq\mathscr{B}\) 一直弯到最后结论的长箭头。\(x\in\bigcup\mathscr{B}\) 下画横线。右侧标五角星，表示重点。</div>
+<div class="warn"><b>易错提醒</b> 被圈出的那一步只能写 \(\Rightarrow\)。逆命题不成立：\(\bigcup\mathscr{A}\subseteq\bigcup\mathscr{B}\) 推不出 \(\mathscr{A}\subseteq\mathscr{B}\)，例如 \(\mathscr{A}=\{\{1\}\}\)，\(\mathscr{B}=\{\{1,2\}\}\)。</div>

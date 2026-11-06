@@ -1,0 +1,11 @@
+[
+ {"type":"fill","q":"把自然数看作集合，\\(3-2=\\)____（写成集合）。","answer":["{2}","｛2｝"],"why":"\\(\\{0,1,2\\}-\\{0,1\\}=\\{2\\}\\)，不是自然数 1。"},
+ {"type":"fill","q":"\\(2\\cap 5=\\)____（写成自然数）。","answer":["2","二"],"why":"自然数的交集等于较小者：\\(\\min(2,5)=2\\)。"},
+ {"type":"fill","q":"\\(\\bigcup 5=\\)____。","answer":["4","四"],"why":"\\(\\bigcup\\{0,1,2,3,4\\}=\\max=4=n-1\\)。"},
+ {"type":"choice","q":"自然数集的定义 \\(\\mathbb{N}=\\bigcap D\\) 中，\\(D\\) 是：","options":["所有自然数构成的集合","所有归纳集构成的集合","所有传递集构成的集合","所有后继构成的集合"],"answer":1,"why":"\\(D=\\{v\\mid v\\text{ 是归纳集}\\}\\)，\\(\\mathbb{N}\\) 是所有归纳集的交，即最小归纳集。"},
+ {"type":"choice","q":"\\(\\langle\\mathbb{N},\\sigma,0\\rangle\\) 满足 \\(0\\notin\\mathrm{ran}\\,\\sigma\\)，其根本原因是：","options":["\\(0\\) 不是自然数","对任意 \\(n\\)，\\(n\\in n^{+}\\)，故 \\(n^{+}\\ne\\emptyset\\)","\\(\\sigma\\) 是单射","\\(\\mathbb{N}\\) 是最小归纳集"],"answer":1,"why":"\\(n^{+}=n\\cup\\{n\\}\\) 至少含 \\(n\\)，不可能为空集 \\(0\\)。"},
+ {"type":"choice","q":"证明 \\(\\sigma\\) 为单射时，由 \\(n\\in m\\) 得到 \\(n\\subseteq m\\) 用的是：","options":["极小性公理","定理1：自然数的元素都是它的子集","三歧性","\\(0\\notin\\mathrm{ran}\\sigma\\)"],"answer":1,"why":"\\(n\\) 是自然数 \\(m\\) 的元素，由定理 1 得 \\(n\\subseteq m\\)。"},
+ {"type":"choice","q":"用数学归纳法证明 \\(\\forall n\\in\\mathbb{N},P(n)\\) 时，构造 \\(S=\\{n\\mid n\\in\\mathbb{N}\\land P(n)\\}\\) 并证明 \\(S\\) 为归纳集后，能推出 \\(S=\\mathbb{N}\\) 的依据是：","options":["\\(S\\subseteq\\mathbb{N}\\) 且 \\(\\mathbb{N}\\) 是最小归纳集","\\(S\\) 有限","\\(\\sigma\\) 为单射","\\(0\\in\\mathbb{N}\\)"],"answer":0,"why":"\\(\\mathbb{N}\\subseteq S\\)（最小性）且 \\(S\\subseteq\\mathbb{N}\\)，所以相等。"},
+ {"type":"choice","q":"关于自然数 \\(m,n\\)，三歧性指的是：","options":["\\(m\\subseteq n,m=n,n\\subseteq m\\) 恰有一式成立","\\(m\\in n,m=n,n\\in m\\) 恰有一式成立","\\(m\\in n\\) 与 \\(m\\subseteq n\\) 等价","\\(m\\in m\\) 总成立"],"answer":1,"why":"三歧性用的是 \\(\\in\\)；而 \\(m\\subseteq n\\) 与 \\(m=n\\) 可以同时成立，不是“恰有一式”。另外任何自然数都不是自己的元素。"},
+ {"type":"fill","q":"\\(\\emptyset\\) 属于除 ____ 外的任何自然数。","answer":["0","零","∅"],"why":"\\(0=\\emptyset\\) 没有元素；其余 \\(n\\ge1\\) 都含 \\(0=\\emptyset\\)。"}
+]

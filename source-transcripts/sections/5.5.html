@@ -1,0 +1,131 @@
+<h3>① 良序 <span class="pg">p.78</span></h3>
+<div class="def"><b>定义（良序）</b> 记作 \(\langle A,\lt\rangle\)：任何非空子集都有最小元（的偏序）。</div>
+<div class="note"><b>笔记边注</b> 自然数为良序，整数不是。</div>
+<p>良序集的元素可以从小到大依次取出：</p>
+\[\begin{aligned}
+t_0&=\min(A)\\
+t_1&=\min(A-\{t_0\})\\
+t_2&=\min(A-\{t_0,t_1\})\\
+&\ \ \vdots
+\end{aligned}\]
+\[t_0\lt t_1\lt t_2\lt\cdots\]
+<div class="supp"><b>补充讲解</b> 整数集 \(\mathbb{Z}\) 在通常的 \(\lt\) 下不是良序，因为非空子集 \(\mathbb{Z}\) 本身（或负整数集）没有最小元。</div>
+
+<h3>② 序数 <span class="pg">p.78–79</span></h3>
+<p>序数与对应的良序集：</p>
+<div class="tbl"><table><thead><tr><th>序数</th><th>良序集</th></tr></thead><tbody>
+<tr><td>\(0\)</td><td>\(\emptyset\)</td></tr>
+<tr><td>\(1\)</td><td>\(\{0\}\)</td></tr>
+<tr><td>\(2\)</td><td>\(\{0,1\}\)</td></tr>
+<tr><td>\(3\)</td><td>\(\{0,1,2\}\)</td></tr>
+<tr><td>\(\vdots\)</td><td>\(\vdots\)</td></tr>
+<tr><td>\(\omega\)</td><td>全体自然数</td></tr>
+</tbody></table></div>
+<p>序数序列继续往后（笔记中竖排写出）：</p>
+\[\begin{aligned}
+&0,1,2,3,\ldots,\\
+&\omega,\ \omega+1,\ \omega+2,\ \omega+3,\ \ldots,\\
+&2\omega,\ 2\omega+1,\ 2\omega+2,\ \ldots,\\
+&3\cdot\omega,\ \ldots,\ 4\cdot\omega,\ \ldots,\\
+&\omega\cdot\omega=\omega^2,\ \omega^2+1,\ \omega^2+2,\ \ldots,\ \omega^2+\omega,\ \ldots,\\
+&\omega^3,\ \ldots,\ \omega^\omega,\ \ldots,\ \omega^{\omega^\omega},\ \ldots,\ \omega^{\omega^{\omega^{\cdots}}},\ \ldots
+\end{aligned}\]
+<p>\(\omega^\omega\) 下加了下划线，旁边写有“\((\omega-1)\)次”。</p>
+<div class="unclear"><b>待核对（p.79，位置：\(\omega^\omega\) 右侧旁注）</b> 可辨认部分：括号中似为“\(\omega-1\)”，后接“次”；无法辨认：括号内是否确为 \(\omega-1\)，以及该旁注所指的含义。</div>
+<p>\(\omega^2\) 的示意图（p.79 右中部）：第 1 层是 \(\omega\) 个位置 \(0,1,2,\ldots\)；每个位置向下箭头指向一个椭圆，椭圆内又是 \(0,1,2,\ldots\)（第 1 层右侧标“1”）；每个椭圆中的每个元素再向下箭头指向一个 \(0\)（第 2 层右侧标“2”）。</p>
+<figure class="fig"><svg viewBox="0 0 460 200" role="img" aria-label="omega 平方的层次示意图">
+<text x="20" y="30" font-size="14" fill="currentColor">ω</text>
+<text x="180" y="30" font-size="14" fill="currentColor">0, 1, 2, ……</text>
+<text x="430" y="70" font-size="14" fill="currentColor">1</text>
+<text x="430" y="170" font-size="14" fill="currentColor">2</text>
+<line x1="190" y1="38" x2="80" y2="80" stroke="currentColor"/>
+<line x1="215" y1="38" x2="215" y2="80" stroke="currentColor"/>
+<line x1="240" y1="38" x2="350" y2="80" stroke="currentColor"/>
+<ellipse cx="80" cy="100" rx="60" ry="16" stroke="currentColor" fill="none"/>
+<ellipse cx="215" cy="100" rx="60" ry="16" stroke="currentColor" fill="none"/>
+<ellipse cx="350" cy="100" rx="60" ry="16" stroke="currentColor" fill="none"/>
+<text x="45" y="105" font-size="14" fill="currentColor">0,1,2…</text>
+<text x="180" y="105" font-size="14" fill="currentColor">0,1,2…</text>
+<text x="315" y="105" font-size="14" fill="currentColor">0,1,2…</text>
+<line x1="55" y1="118" x2="45" y2="155" stroke="currentColor"/>
+<line x1="75" y1="118" x2="75" y2="155" stroke="currentColor"/>
+<line x1="95" y1="118" x2="105" y2="155" stroke="currentColor"/>
+<line x1="195" y1="118" x2="195" y2="155" stroke="currentColor"/>
+<text x="38" y="172" font-size="14" fill="currentColor">0</text>
+<text x="70" y="172" font-size="14" fill="currentColor">0</text>
+<text x="100" y="172" font-size="14" fill="currentColor">0</text>
+<text x="190" y="172" font-size="14" fill="currentColor">0 ……</text>
+</svg><figcaption>图：\(\omega^2=\omega\cdot\omega\) 的示意。第 1 层 \(0,1,2,\ldots\) 每个元素展开成一个 \(0,1,2,\ldots\)（三个椭圆），每个椭圆元素再向下指向 \(0\)；右侧层号标“1”“2”。</figcaption></figure>
+
+<h4>序数的分类（圈注“三类”）<span class="pg">p.79</span></h4>
+<ul>
+<li>\(0\)</li>
+<li>\(1,2,\ldots,\omega+1,\omega+2,\ldots\)：有头有尾</li>
+<li>\(\omega,2\omega,3\omega,\omega^2,\omega^\omega\)：有头无尾</li>
+</ul>
+<div class="unclear"><b>待核对（p.79，位置：左下圈注及右侧两行文字）</b> 可辨认部分：圈中字形似“三类”，右侧两行似“有头有尾”“有头无尾”；无法辨认：圈注首字与第一行第三字是否准确。</div>
+<div class="supp"><b>补充讲解</b> 三类即：\(0\)；后继序数（有直接前驱，如 \(\omega+1\) 的前驱是 \(\omega\)）；极限序数（非 \(0\) 且无直接前驱，如 \(\omega,2\omega,\omega^2,\omega^\omega\)）。</div>
+
+<h3>③ 基数 / 序数 <span class="pg">p.79–80</span></h3>
+<p>基数：\(0,1,2,\ldots\ \big|\ \aleph_0\ \big|\ 2^{\aleph_0},\ 2^{2^{\aleph_0}}\)（红竖线分隔）。</p>
+<p>p.80 把两行对照：</p>
+\[\begin{aligned}
+\text{基数：}&\ 0,\ 1,\ 2,\ \ldots\qquad\qquad \aleph_0 \qquad\qquad 2^{\aleph_0}\quad 2^{2^{\aleph_0}}\\
+&\ \,|\ \ \ |\ \ \ |\qquad\qquad\quad\ \ |\qquad\qquad\quad\ \ |\\
+\text{序数：}&\ 0,\ 1,\ 2,\ \ldots,\ \omega,\ \omega+1,\ \ldots,\ 2\omega,\ \ldots,\ \omega^2,\ \ldots,\ \omega^\omega,\ \ldots,\ \omega^{\omega^\omega}
+\end{aligned}\]
+<p>序数行中 \(0,1,2\) 与 \(\omega\)、\(\omega^\omega\) 被红圈圈出；红色箭头从 \(\omega\) 指回左侧有限序数一段，从上方竖线向下指到 \(\omega^\omega\)；基数 \(\aleph_0\) 对应 \(\omega\) 之后的一段，\(2^{\aleph_0}\) 对应 \(\omega^\omega\) 之后的一段。</p>
+<div class="def"><b>定义（初始序数）</b> 不与前面的序数等势的序数：\(0,1,2,\ldots,\ \omega,\ \omega^\omega,\ \omega^{\omega^\omega},\ \ldots\)</div>
+<div class="fix"><b>校订说明（p.80）</b> 原式：初始序数为 \(0,1,2,\ldots,\omega,\omega^\omega,\omega^{\omega^\omega},\ldots\)，并把 \(2^{\aleph_0}\) 对到 \(\omega^\omega\) 附近；正确式：初始序数为 \(0,1,2,\ldots,\omega(=\omega_0),\omega_1,\omega_2,\ldots\)；原因：\(\omega+1,2\omega,\omega^2,\omega^\omega,\omega^{\omega^\omega}\) 都是可数序数，与 \(\omega\) 等势，基数都是 \(\aleph_0\)，不是初始序数。第一个不可数序数 \(\omega_1\) 大于所有可数序数，其基数是 \(\aleph_1\)。定义本身（不与前面任何序数等势）是对的。</div>
+
+<h3>④ CH 连续统假设 <span class="pg">p.80</span></h3>
+\[\neg\exists k\,(\aleph_0\lt k\lt 2^{\aleph_0})\]
+<p>右侧示意：上方椭圆写“\(\aleph_1\)　\(\mathbb{R},P(\mathbb{N})\)”，下方椭圆写“\(\aleph_0\)（下划线）　\(\mathbb{N},\mathbb{Q},\mathbb{Z},\ldots\)”；中间圈出 \(A\)，箭头从上指向 \(A\)、从 \(A\) 指向下，旁边写“✓ ✗”。</p>
+<div class="note"><b>笔记边注</b> 问题即：是否存在集合 \(A\)，其基数严格介于 \(\aleph_0\)（\(\mathbb{N},\mathbb{Q},\mathbb{Z}\)）与 \(\mathbb{R},P(\mathbb{N})\) 之间——CH 断言不存在。</div>
+<div class="supp"><b>补充讲解</b> \(|\mathbb{R}|=|P(\mathbb{N})|=2^{\aleph_0}\) 是定理；把它写成 \(\aleph_1\) 恰好就是 CH 的内容（\(2^{\aleph_0}=\aleph_1\)）。CH 在 ZFC 中既不能证明也不能否定。</div>
+
+<h3>⑤ 公理系统 ZF，ZFC，ZFC+CH <span class="pg">p.80–81</span></h3>
+<h4>1) ZF 系统</h4>
+<div class="def"><b>ZF 公理</b>
+<ol>
+<li>外延公理：\(A=B\Leftrightarrow\forall x\,(x\in A\leftrightarrow x\in B)\)</li>
+<li>无序对公理：\(a,b\) 是集合 \(\Rightarrow\{a,b\}\) 是集合</li>
+<li>子集公理：\(A\) 为集合 \(\Rightarrow\{x\in A\mid P(x)\}\) 为集合</li>
+<li>并集公理：\(\mathcal{A}\) 为集族 \(\Rightarrow\bigcup\mathcal{A}\) 是集合</li>
+<li>幂集公理：\(A\) 为集合 \(\Rightarrow P(A)\) 是集合</li>
+<li>空集公理：\(\emptyset\) 为集合</li>
+<li>正则公理：\(A\) 为非空集合 \(\Rightarrow A\) 有一个基础元素（不属于 \(A\) 中其他元素的元素）</li>
+<li>（原编号⑧）替换公理：\(f\) 为 \(A\) 上函数 \(\Rightarrow\{f(a)\mid a\in A\}\) 为集合（p.81）</li>
+<li>（原编号⑨）无穷公理：\(\mathbb{N}\) 为集合（p.81）</li>
+</ol></div>
+<div class="supp"><b>补充讲解</b> 基础元素 \(x\in A\) 的精确含义是 \(x\cap A=\emptyset\)，即 \(A\) 的任何元素都不属于 \(x\)。笔记括号里的说法应理解为这个意思。</div>
+
+<div class="example"><b>例（正则公理推出 \(A\notin A\)）</b> 假设 \(A\in A\)，集合 \(A\)（p.80 底–p.81）。
+<b>解</b>
+<ol>
+<li>构造 \(S=\{A\}\)。</li>
+<li>\(S\) 有一个基础元素 \(x\)：存在 \(x\in S\)，\(x\cap S=\emptyset\)。（此行序号②被红笔圈出并打叉）</li>
+<li>\(A\in S\)，\(A\in A\)（红圈），\(A=x\)，\(A\cap S=\emptyset\)。<br>
+由 \(A\in S\) 与 \(A\in A\) \(\Rightarrow A\in A\cap S\)，与 \(A\cap S=\emptyset\) 矛盾（红箭头标“矛盾”）。</li>
+</ol>
+<b>结论</b> 不存在 \(A\in A\) 的集合。</div>
+<div class="note"><b>笔记边注</b> p.81 第②步的序号被红笔打叉，但该步内容是证明所需（\(S\) 只有一个元素，故 \(x=A\)），转写照常保留。</div>
+
+<h3>⑥ ZFC 系统 <span class="pg">p.81</span></h3>
+<p>\(\mathrm{ZF}+\mathrm{C}\)，C 为选择公理（“C”下标三角，旁注“选择”）。</p>
+<figure class="fig"><svg viewBox="0 0 460 180" role="img" aria-label="选择公理示意">
+<ellipse cx="110" cy="90" rx="100" ry="80" stroke="currentColor" fill="none"/>
+<ellipse cx="110" cy="45" rx="30" ry="20" stroke="currentColor" fill="none"/>
+<text x="98" y="50" font-size="14" fill="currentColor">1 2</text>
+<ellipse cx="60" cy="115" rx="28" ry="20" stroke="currentColor" fill="none"/>
+<text x="48" y="120" font-size="14" fill="currentColor">a b</text>
+<ellipse cx="160" cy="115" rx="32" ry="20" stroke="currentColor" fill="none"/>
+<text x="142" y="120" font-size="14" fill="currentColor">甲,乙</text>
+<text x="225" y="95" font-size="14" fill="currentColor">⟹</text>
+<ellipse cx="320" cy="90" rx="60" ry="55" stroke="currentColor" fill="none"/>
+<text x="315" y="70" font-size="14" fill="currentColor">2</text>
+<text x="300" y="110" font-size="14" fill="currentColor">b , 乙</text>
+<text x="390" y="95" font-size="14" fill="currentColor">为集合</text>
+</svg><figcaption>图：集族 \(\{\{1,2\},\{a,b\},\{甲,乙\}\}\) 从每个成员中各取一个元素，得到 \(\{2,b,乙\}\)，它为集合。</figcaption></figure>
+<h3>⑦ ZFC+CH 系统 <span class="pg">p.81</span></h3>
+<p>在 ZFC 基础上再加连续统假设 CH。</p>

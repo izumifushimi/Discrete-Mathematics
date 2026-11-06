@@ -1,0 +1,100 @@
+<p>原页标题“1.2 谓词逻辑”，记录时间 2025年2月9日 0:31。</p>
+
+<h3>个体、谓词与量词 <span class="pg">p.5</span></h3>
+<div class="def"><b>① 个体</b> 原页例：\(f(x,y)=ax^2+bx+c+y\)（\(f(x,y)\) 被圈出，右侧箭头再写 \(\to f(x,y)\)）。
+<ul><li>\(a,b,c\)：个体常元（常元）；</li><li>\(x,y\)：个体变元（变元）。</li></ul></div>
+<div class="def"><b>② 谓词</b> 原页写 \(f(x),\ g(x)\)，下一行写 \(F(x),\ G(x)\)，旁注“关系”：谓词刻画个体的性质或个体之间的关系，用大写字母 \(F,G\) 表示。</div>
+<div class="def"><b>③ 量词</b>
+<ul><li>\(\forall\)：全称量词；</li><li>\(\exists\)：存在量词。</li></ul></div>
+<div class="supp"><b>补充讲解</b> 小写 \(f,g\) 通常是函数符号（取值为个体），大写 \(F,G\) 是谓词（取值为真/假）。原页先写小写再写大写，即在区分二者。</div>
+
+<h3>命题符号化与公式类型 <span class="pg">p.5</span></h3>
+<div class="example"><b>命题符号化</b> 公式 A（原页圈出）：\[\forall x\,(F(x)\to G(x))\] 读作：对全部 \(x\)，\(F(x)\to G(x)\)。</div>
+<div class="def"><b>公式类型</b> 原页右侧大括号列出：永真式、永假式。</div>
+<div class="def"><b>等值</b> 对公式 \(A,B\)：若 \(A\leftrightarrow B\) 永真，则称 A 与 B 等值，记作 \(A\Leftrightarrow B\)。</div>
+<div class="note"><b>笔记边注</b> 页右侧单独写有 \(\forall x\,A(x)\)，作为下面“基本等值式”的一般写法。</div>
+<div class="unclear"><b>待核对（p.5，位置：“命题符号化”标题右侧圈注）</b> 可辨认部分：“x”及一个汉字形近“开”；无法辨认：完整含义（疑为“x 开头”或“x 开关”）。</div>
+
+<h3>基本等值式 <span class="pg">p.5–p.6</span></h3>
+<h4>① 有限个体域上量词的消去</h4>
+<p>设个体域 \(D=\{a_1,a_2,\dots,a_n\}\)，\(x\in D\)：</p>
+\[\begin{aligned}
+\forall x\,A(x)&\Leftrightarrow A(a_1)\land A(a_2)\land\cdots\land A(a_n)\\
+\exists x\,A(x)&\Leftrightarrow A(a_1)\lor A(a_2)\lor\cdots\lor A(a_n)
+\end{aligned}\]
+<div class="note"><b>笔记边注</b> 第一式后打 ✓；第二式各项 \(A(a_1),A(a_2),A(a_n)\) 下分别标 0，末尾写“=✓”并另打 ×：意思是存在式只有在每一项都为 0 时才为假，只要有一项为 1 就为真。</div>
+<div class="unclear"><b>待核对（p.5，位置：“D={a₁,…,aₙ}”右上小字）</b> 可辨认部分：“x∈D”；无法辨认：其前一个汉字（形近“域”）。</div>
+
+<h4>② 量词否定等值式（原页加框）</h4>
+\[\begin{aligned}
+\neg\forall x\,A(x)&\Leftrightarrow\exists x\,\neg A(x)\\
+\neg\exists x\,A(x)&\Leftrightarrow\forall x\,\neg A(x)
+\end{aligned}\]
+
+<h4>③ 量词辖域的收缩与扩张</h4>
+<p>前提（原页右侧）：\(A(x)\) 带 \(x\)，\(B\) 不带 \(x\)。</p>
+\[(\forall/\exists)\,x\,[A(x)\ (\lor/\land)\ B]\Leftrightarrow[(\forall/\exists)\,x\,A(x)]\ (\lor/\land)\ B\]
+<p>即四个式子：</p>
+\[\begin{aligned}
+\forall x(A(x)\lor B)&\Leftrightarrow\forall x A(x)\lor B, &\forall x(A(x)\land B)&\Leftrightarrow\forall x A(x)\land B,\\
+\exists x(A(x)\lor B)&\Leftrightarrow\exists x A(x)\lor B, &\exists x(A(x)\land B)&\Leftrightarrow\exists x A(x)\land B.
+\end{aligned}\]
+<div class="note"><b>笔记边注</b> p.5 底部与 p.6 顶部大圈“\(\lor/\land\)”，旁边小圈“\(\forall/\exists\)”，并写 \(A(x)\to B\)（加下划线），箭头指向下面的蕴含式情形：\(\lor/\land\) 时量词不变，\(\to\) 时（\(A(x)\) 在前件）量词要互换。</div>
+
+<p>含蕴含的情形（p.6）：</p>
+\[\begin{aligned}
+(\forall/\exists)\,x\,(A(x)\to B)&\Leftrightarrow[(\exists/\forall)\,x\,A(x)]\to B\\
+(\forall/\exists)\,x\,(B\to A(x))&\Leftrightarrow B\to[(\forall/\exists)\,x\,A(x)]
+\end{aligned}\]
+<div class="fix"><b>校订说明（p.6）</b> 原式：\(\forall/\exists\,x(A(x)\to B)\Leftrightarrow[\exists/A\;x\,A(x)]\to B\)（右端第二个量词写成形似字母 A）；正确式：\(\forall/\exists\,x(A(x)\to B)\Leftrightarrow[\exists/\forall\;x\,A(x)]\to B\)；原因：前件中的量词需互换，\(\forall\) 对应 \(\exists\)、\(\exists\) 对应 \(\forall\)，“A”是 \(\forall\) 漏写横笔/倒写所致。</div>
+<div class="warn"><b>易错提醒</b> \(A(x)\) 在前件时量词互换（\(\forall\leftrightarrow\exists\)）；\(A(x)\) 在后件时量词不变。</div>
+
+<div class="proof"><b>证明</b>（原页证明 \(\forall x(A(x)\to B)\Leftrightarrow\exists x A(x)\to B\)，从右往左推）
+\[\begin{aligned}
+&(\exists x\,A(x))\to B\\
+\Leftrightarrow\ &\neg(\exists x\,A(x))\lor B &&\text{蕴含等值式}\\
+\Leftrightarrow\ &(\forall x\,\neg A(x))\lor B &&\text{量词否定}\\
+\Leftrightarrow\ &\forall x\,(\neg A(x)\lor B) &&\text{辖域扩张（\(\lor\) 情形）}\\
+\Leftrightarrow\ &\forall x\,(A(x)\to B) &&\text{蕴含等值式}
+\end{aligned}\]</div>
+<div class="note"><b>笔记边注</b> 证明右侧写“\(\lor/\land\)”，以及一行倒写（旋转180°）的式子，倒过来读为 \(\neg q\lor p\Leftrightarrow q\to p\)，即证明中所用的蕴含等值式。</div>
+
+<h4>④ 量词分配等值式</h4>
+\[\begin{aligned}
+\forall x\,(A(x)\land B(x))&\Leftrightarrow\forall x\,A(x)\land\forall x\,B(x)\\
+\exists x\,(A(x)\lor B(x))&\Leftrightarrow\exists x\,A(x)\lor\exists x\,B(x)
+\end{aligned}\]
+<div class="note"><b>笔记边注</b> 第一式中 \(\forall\) 下画双线，两个 \(\land\) 下各标三角形 △，\(B\) 上方注“\(B(x)\)”（此处 B 含 x，区别于③），式末打 ✓。</div>
+<div class="example"><b>例（原页“采花”示意）</b> 原页左侧写“采花”，画圈“黑”与圈“玫瑰”，中间注“或”；下方写“特定黑/玫瑰”。右侧画两圆相交、交集部分加阴影的 Venn 图。
+<figure class="fig"><svg viewBox="0 0 260 150" role="img" aria-label="两圆相交，交集阴影">
+<defs><pattern id="h12" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="6" stroke="currentColor"/></pattern></defs>
+<clipPath id="c12"><circle cx="100" cy="75" r="55"/></clipPath>
+<circle cx="160" cy="75" r="55" fill="url(#h12)" clip-path="url(#c12)"/>
+<circle cx="100" cy="75" r="55" fill="none" stroke="currentColor"/>
+<circle cx="160" cy="75" r="55" fill="none" stroke="currentColor"/>
+<text x="60" y="80" font-size="14" fill="currentColor">黑</text><text x="180" y="80" font-size="14" fill="currentColor">玫瑰</text>
+</svg><figcaption>图：两圆分别为“黑”的对象与“玫瑰”，相交部分（阴影）为“既黑又是玫瑰”。</figcaption></figure></div>
+<div class="supp"><b>补充讲解</b> 这个例子说明为什么 \(\exists\) 对 \(\land\) 不能分配：“存在黑的东西且存在玫瑰”不能推出“存在黑玫瑰”（要落在阴影里）。同理 \(\forall\) 对 \(\lor\) 不能分配。</div>
+<div class="unclear"><b>待核对（p.6，位置：“采花”示意左下）</b> 可辨认部分：“特定”“黑”“玫瑰”与圈“或”；无法辨认：“特定”后一字（形近“采”或“的”）。</div>
+
+<h3>前束范式与换名规则 <span class="pg">p.6–p.7</span></h3>
+<div class="def"><b>前束范式</b> 所有量词都在公式最前面，辖域延伸到公式末尾，形如
+\[\forall x_1\exists x_2\forall x_3\exists x_4\forall x_5\,B(x_1,x_2,\dots,x_5)\]
+其中 \(B\) 不含量词（原页把量词串与母式 \(B\) 分别圈出，标“前束范式”，打 ✓）。</div>
+<div class="def"><b>换名规则</b> 把某量词的指导变元及其辖域内该变元的所有约束出现改成公式中未出现的变元，公式等值。</div>
+
+<div class="example"><b>例 1</b> 求 \([\forall x\,F(x)]\lor[\neg\exists x\,G(x,y)]\) 的前束范式。
+<b>解</b>
+\[\begin{aligned}
+&[\forall x\,F(x)]\lor[\neg\exists x\,G(x,y)]\\
+\Leftrightarrow\ &[\forall x\,F(x)]\lor[\forall x\,\neg G(x,y)] &&\text{量词否定（原页 }\neg\text{ 下标 △）}\\
+\Leftrightarrow\ &\forall x\,F(x)\lor[\forall z\,\neg G(z,y)] &&\text{换名：第二个 }x\text{ 改为 }z\\
+\Leftrightarrow\ &\forall x\,[F(x)\lor\forall z\,\neg G(z,y)] &&\text{辖域扩张}\\
+\Leftrightarrow\ &\forall x\forall z\,[F(x)\lor\neg G(z,y)] &&\text{辖域扩张}\\
+\Leftrightarrow\ &\forall x\forall z\,[G(z,y)\to F(x)] &&\text{蕴含等值式}
+\end{aligned}\]
+令 \(H(x,y,z)\Leftrightarrow G(z,y)\to F(x)\)，得
+<b>结论</b> \(\forall x\forall z\,H(x,y,z)\)（原页圈出），\(y\) 为自由变元。</div>
+<div class="note"><b>笔记边注</b> 第二行两个 \(x\) 下画波浪线并标 ×，表示两个量词用了同名变元 \(x\)，不能直接合并提出；右侧画两个圈都写“张三”，示意“同名不同人”，需要换名区分。末行箭头从 \(\forall z\) 弧线连回，表示量词已全部提到前面。</div>
+
+<div class="dup"><b>重复页说明</b> 第8–11页与第1–4页内容重复，分区标签为1.2，实际属于1.1命题逻辑，正文见1.1，未重复转写。逐像素比对：第8↔1、9↔2、10↔3、11↔4 页图尺寸相同（1191×1685），差异像素全部位于底部分区标签行（y≈1654–1662，即“分区 1.x 的第 N 页”文字），正文笔迹无任何差异，没有多出的批注。</div>

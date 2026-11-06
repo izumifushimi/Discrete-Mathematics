@@ -1,0 +1,59 @@
+<div class="note"><b>笔记边注</b> 小节标题“3.2 函数（下）”，日期 2025年6月19日 22:03。</div>
+
+<h3>① 特殊函数 <span class="pg">p.45</span></h3>
+<div class="def"><b>常数函数</b> \(f:A\to B\)，\(\exists b\in B\)，\(\forall x\in A\)，\(f(x)=b\)。</div>
+<div class="def"><b>恒等函数</b> \(I_A:A\to A\)，\(I_A(x)=x\)。</div>
+<div class="def"><b>特征函数</b> \(\chi_A:E\to\{0,1\}\)，\(\chi_A(x)=1\Leftrightarrow x\in A\)。</div>
+<div class="note"><b>笔记边注</b> 特征函数一行中 \(E\)、\(\{0,1\}\)、\(\chi_A(x)=1\) 用红笔下画线，“\(x\in A\)”下画红色波浪线；恒等函数中两个 \(x\) 下有三角标记。</div>
+<div class="example"><b>例</b> \(E=\{1,2,3\}\)，\(A=\{1,3\}\)。
+<b>解</b> \(\chi_A(1)=1\)，\(\chi_A(2)=0\)，\(\chi_A(3)=1\)。</div>
+
+<h3>② 单调函数 <span class="pg">p.45</span></h3>
+<div class="def"><b>定义</b> \(f:A\to B\)，\(\langle A,\preccurlyeq_A\rangle\)、\(\langle B,\preccurlyeq_B\rangle\) 为偏序集。☆
+\[\begin{aligned}
+\forall x,y\in A,\ x\preccurlyeq_A y &\Rightarrow f(x)\preccurlyeq_B f(y)\quad\text{单调增}\\
+x\preccurlyeq_A y &\Rightarrow f(y)\preccurlyeq_B f(x)\quad\text{单调减}
+\end{aligned}\]
+严格单调：把 \(\preccurlyeq\) 换成 \(\prec\)（严格小于，拟序关系）。</div>
+
+<h3>③ 自然映射 <span class="pg">p.45–46</span></h3>
+<div class="def"><b>定义</b> 设 \(R\) 为 \(A\) 上等价关系，
+\[f:A\to A/R,\quad f(x)=[x]_R\]</div>
+<div class="example"><b>例</b> \(A=\{1,2,3,4\}\)，等价关系 \(R\) 的关系图如下。
+<figure class="fig"><svg viewBox="0 0 240 150" role="img" aria-label="等价关系关系图">
+<defs><marker id="ar32" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10z" fill="currentColor"/></marker></defs>
+<g stroke="currentColor" fill="none" stroke-width="1.5">
+<circle cx="50" cy="50" r="4"/><circle cx="150" cy="50" r="4"/><circle cx="50" cy="120" r="4"/><circle cx="150" cy="120" r="4"/>
+<path d="M56 45 Q100 30 144 45" marker-end="url(#ar32)"/><path d="M144 56 Q100 70 56 56" marker-end="url(#ar32)"/>
+<path d="M46 46 C30 20 70 20 54 46" marker-end="url(#ar32)"/><path d="M146 46 C130 20 170 20 154 46" marker-end="url(#ar32)"/>
+<path d="M46 116 C30 90 70 90 54 116" marker-end="url(#ar32)"/><path d="M146 116 C130 90 170 90 154 116" marker-end="url(#ar32)"/>
+</g>
+<g fill="currentColor" font-size="14"><text x="30" y="70">1</text><text x="160" y="70">2</text><text x="45" y="143">3</text><text x="145" y="143">4</text></g>
+</svg><figcaption>图：顶点 1、2、3、4，各有自环；1→2、2→1 两条有向边。</figcaption></figure>
+\[[1]=[2]=\{1,2\},\quad [3]=\{3\},\quad [4]=\{4\}\]
+<b>结论</b> \(f(1)=f(2)=[1]=[2]=\{1,2\}\)，\(f(3)=[3]=\{3\}\)，\(f(4)=[4]=\{4\}\)。</div>
+
+<h3>④ 定理：函数的复合 <span class="pg">p.46</span></h3>
+<div class="thm"><b>定理</b> \(g:A\to B\)，\(f:B\to C\)，则
+\[f\circ g:A\to C,\quad (f\circ g)(x)=f(g(x))\]☆</div>
+<div class="supp"><b>补充讲解</b> 笔记这里采用 \((f\circ g)(x)=f(g(x))\)，即先作用 \(g\) 再作用 \(f\)。有的书把关系合成 \(R\circ S\) 写成“先 \(R\) 后 \(S\)”，用于函数时顺序相反，读题时先看清约定。本节下面的左逆、右逆都按笔记的约定理解。</div>
+
+<h3>⑤ 反函数 <span class="pg">p.46</span></h3>
+<div class="thm"><b>定理</b> 设 \(f:A\to B\)，且 \(f\) 为双射，则 \(f^{-1}:B\to A\)，且 \(f^{-1}\) 也是双射（\(f^{-1}\) 为反函数）。</div>
+<div class="fix"><b>校订说明（p.46）</b> 原式：“则 \(f:B\to A\)”；正确式：“则 \(f^{-1}:B\to A\)”；原因：从 \(B\) 到 \(A\) 的是逆关系 \(f^{-1}\)，同一行后半句也写作 \(f^{-1}\)，前面漏写上标。</div>
+
+<h3>⑥ 单边逆 <span class="pg">p.46–47</span></h3>
+<div class="def"><b>定义</b> 设 \(f:A\to B\)，\(g:B\to A\)。
+<ul>
+<li>左逆：\(g\) 为 \(f\) 的左逆 \(\Leftrightarrow g\circ f=I_A\)；</li>
+<li>右逆：\(g\) 为 \(f\) 的右逆 \(\Leftrightarrow f\circ g=I_B\)。</li>
+</ul></div>
+<div class="fix"><b>校订说明（p.46）</b> 原式：右逆 \(f\circ g=I_A\)；正确式：\(f\circ g=I_B\)；原因：按 \((f\circ g)(x)=f(g(x))\)，\(f\circ g\) 是 \(B\to B\) 的函数，只能等于 \(I_B\)。</div>
+<div class="thm"><b>定理</b>（p.47）
+\[\begin{aligned}
+&f\ \text{存在左逆}\Leftrightarrow f\ \text{为单射}\\
+&f\ \text{存在右逆}\Leftrightarrow f\ \text{为满射}\\
+&f\ \text{存在左、右逆}\Leftrightarrow f\ \text{为双射}\Leftrightarrow f\ \text{的左、右逆相等}
+\end{aligned}\]</div>
+<div class="note"><b>笔记边注</b> 第三行“\(\Leftrightarrow f\) 为双射 \(\Leftrightarrow f\) 的左右逆相等”下画线强调。</div>
+<div class="supp"><b>补充讲解</b> 第一条要求 \(A\ne\emptyset\)（\(A=\emptyset\) 而 \(B\ne\emptyset\) 时，空函数是单射，但不存在 \(g:B\to A\)）。若 \(f\) 是双射，左逆 \(g\) 与右逆 \(h\) 满足 \(g=g\circ(f\circ h)=(g\circ f)\circ h=h\)，二者都等于 \(f^{-1}\)。</div>

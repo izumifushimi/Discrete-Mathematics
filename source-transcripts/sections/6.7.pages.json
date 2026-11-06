@@ -1,0 +1,32 @@
+[
+ {
+  "page": 109,
+  "status": "transcribed",
+  "note": "点连通度定义与规定、G1~G4 例、边连通度定义"
+ },
+ {
+  "page": 110,
+  "status": "transcribed",
+  "note": "引理1、k-(边)连通图、彼得森图例、Whitney定理、x-y割开头"
+ },
+ {
+  "page": 111,
+  "status": "transcribed",
+  "note": "x-y割定义与图、独立路径正反例、Menger定理、2-连通充要条件"
+ },
+ {
+  "page": 112,
+  "status": "transcribed",
+  "note": "2-连通续、边不交路径、2-边连通与k-(边)连通充要条件、割点充要条件开头"
+ },
+ {
+  "page": 113,
+  "status": "partial",
+  "note": "割点充要条件结尾（fix）、桥充要条件、块定义与例图、块充要条件、κλδ三种情形定理；块示意图边连线待核对"
+ },
+ {
+  "page": 114,
+  "status": "transcribed",
+  "note": "定理(2)(3)两式（(3)式 fix）；页下半空白"
+ }
+]

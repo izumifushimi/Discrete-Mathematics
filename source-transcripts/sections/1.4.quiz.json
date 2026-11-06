@@ -1,0 +1,91 @@
+[
+ {
+  "type": "choice",
+  "q": "下列哪一个式子是集合运算的交换律的正确写法？",
+  "options": [
+   "\\(A\\cup B=B\\cap A\\)",
+   "\\(A\\cup B=B\\cup A\\)",
+   "\\(A\\cap B=B\\cup A\\)",
+   "\\(A\\cup(B\\cup C)=(A\\cup B)\\cup C\\)"
+  ],
+  "answer": 1,
+  "why": "交换律只交换运算对象，运算符不变。D 是结合律。笔记 p.18 第②条第一式误写为 \\(B\\cap A\\)。"
+ },
+ {
+  "type": "choice",
+  "q": "\\(A\\cup(A\\cap B)=\\) ？",
+  "options": [
+   "\\(A\\cap B\\)",
+   "\\(A\\cup B\\)",
+   "\\(A\\)",
+   "\\(B\\)"
+  ],
+  "answer": 2,
+  "why": "吸收律：A∩B ⊆ A，并上 A 后仍为 A。"
+ },
+ {
+  "type": "choice",
+  "q": "\\(\\sim\\Big(\\bigcap_{\\alpha\\in S}A_\\alpha\\Big)\\) 等于",
+  "options": [
+   "\\(\\bigcap_{\\alpha\\in S}(\\sim A_\\alpha)\\)",
+   "\\(\\bigcup_{\\alpha\\in S}(\\sim A_\\alpha)\\)",
+   "\\(\\sim\\bigcup_{\\alpha\\in S}A_\\alpha\\)",
+   "\\(\\bigcup_{\\alpha\\in S}A_\\alpha\\)"
+  ],
+  "answer": 1,
+  "why": "集族形式的德摩根律：补进括号后，广义交变广义并。"
+ },
+ {
+  "type": "fill",
+  "q": "设 \\(B=\\{2,3\\}\\)，\\(\\mathscr{A}=\\{\\{1,2\\},\\{1,3\\},\\{1,2,3\\}\\}\\)，则 \\(\\bigcap\\mathscr{A}=\\) ____（用集合表示）",
+  "answer": [
+   "{1}"
+  ],
+  "why": "三个集合的公共元素只有 1。"
+ },
+ {
+  "type": "fill",
+  "q": "同上题，\\(B\\cap(\\bigcup\\mathscr{A})=\\) ____",
+  "answer": [
+   "{2,3}",
+   "{3,2}"
+  ],
+  "why": "\\(\\bigcup\\mathscr{A}=\\{1,2,3\\}\\)，与 \\(B=\\{2,3\\}\\) 的交为 \\(\\{2,3\\}\\)；也可按分配律算 \\(\\bigcup(B\\cap A_i)=\\{2\\}\\cup\\{3\\}\\cup\\{2,3\\}\\)。"
+ },
+ {
+  "type": "choice",
+  "q": "用“集合⇒命题”证明 \\(A\\cap\\emptyset=\\emptyset\\) 时，\\(x\\in\\emptyset\\) 被替换为",
+  "options": [
+   "1（永真）",
+   "0（永假）",
+   "\\(x\\in A\\)",
+   "\\(\\neg(x\\in A)\\)"
+  ],
+  "answer": 1,
+  "why": "空集没有元素，\\(x\\in\\emptyset\\) 恒假，记为 0，于是 \\((x\\in A)\\land0\\Leftrightarrow0\\)。"
+ },
+ {
+  "type": "choice",
+  "q": "关于“\\(\\mathscr{A}\\subseteq\\mathscr{B}\\Rightarrow\\bigcup\\mathscr{A}\\subseteq\\bigcup\\mathscr{B}\\)”，下列说法正确的是",
+  "options": [
+   "其逆命题也成立",
+   "证明中每一步都可写成 ⇔",
+   "由 \\(\\exists A(x\\in A\\land A\\in\\mathscr{A})\\) 推出 \\(\\exists A(x\\in A\\land A\\in\\mathscr{B})\\) 这一步只能写 ⇒",
+   "该命题需要 𝒜 非空才成立"
+  ],
+  "answer": 2,
+  "why": "这一步用到条件 \\(\\mathscr{A}\\subseteq\\mathscr{B}\\)，只是单向推出。逆命题有反例 \\(\\mathscr{A}=\\{\\{1\\}\\},\\mathscr{B}=\\{\\{1,2\\}\\}\\)；𝒜 为空时 \\(\\bigcup\\mathscr{A}=\\emptyset\\)，结论平凡成立。"
+ },
+ {
+  "type": "choice",
+  "q": "分配律 \\(A\\cup(B\\cap C)=\\) ？",
+  "options": [
+   "\\((A\\cup B)\\cap(A\\cup C)\\)",
+   "\\((A\\cap B)\\cup(A\\cap C)\\)",
+   "\\((A\\cup B)\\cup C\\)",
+   "\\(A\\cap(B\\cup C)\\)"
+  ],
+  "answer": 0,
+  "why": "外面的 ∪ 分配进去，内部的 ∩ 变为连接两项的运算。"
+ }
+]

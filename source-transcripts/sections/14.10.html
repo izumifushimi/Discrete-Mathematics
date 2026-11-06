@@ -1,0 +1,52 @@
+<h3>① 引例：2×2 方格着色 <span class="pg">p.230</span></h3>
+<div class="example"><b>例</b> 一个 2×2 的方格，每格着色（黑 or 白，2 种）。不考虑旋转时共 \(2^4=16\) 种。
+<b>考虑旋转</b>：把 4 格编号，依次顺时针旋转 90°：
+<figure class="fig"><svg viewBox="0 0 440 110" role="img" aria-label="方格编号在0、90、180、270度旋转下的位置">
+<g fill="none" stroke="currentColor">
+<rect x="10" y="10" width="60" height="60"/><line x1="40" y1="10" x2="40" y2="70"/><line x1="10" y1="40" x2="70" y2="40"/>
+<rect x="125" y="10" width="60" height="60"/><line x1="155" y1="10" x2="155" y2="70"/><line x1="125" y1="40" x2="185" y2="40"/>
+<rect x="240" y="10" width="60" height="60"/><line x1="270" y1="10" x2="270" y2="70"/><line x1="240" y1="40" x2="300" y2="40"/>
+<rect x="355" y="10" width="60" height="60"/><line x1="385" y1="10" x2="385" y2="70"/><line x1="355" y1="40" x2="415" y2="40"/></g>
+<g font-size="14" fill="currentColor">
+<text x="20" y="30">1</text><text x="50" y="30">2</text><text x="20" y="62">4</text><text x="50" y="62">3</text>
+<text x="135" y="30">4</text><text x="165" y="30">1</text><text x="135" y="62">3</text><text x="165" y="62">2</text>
+<text x="250" y="30">3</text><text x="280" y="30">4</text><text x="250" y="62">2</text><text x="280" y="62">1</text>
+<text x="365" y="30">2</text><text x="395" y="30">3</text><text x="365" y="62">1</text><text x="395" y="62">4</text>
+<text x="30" y="95">0°</text><text x="145" y="95">90°</text><text x="255" y="95">180°</text><text x="370" y="95">270°</text>
+<text x="88" y="45">⇒</text><text x="203" y="45">⇒</text><text x="318" y="45">⇒</text></g></svg>
+<figcaption>图：0° 时格子为 1 2 / 4 3（上行/下行）；90° 为 4 1 / 3 2；180° 为 3 4 / 2 1；270° 为 2 3 / 1 4。原页用红线把 0° 分别连到 90°、180°、270°。</figcaption></figure>
+原页圈出的示意：左上格涂黑的方格顺时针旋转 90° 后变成右上格涂黑，两者在旋转意义下是同一种着色（下方双向弧形箭头）。</div>
+<div class="example"><b>建模</b> 4 个方格：\(N=\{1,2,3,4\}\)；4 个旋转：\(G=\{\sigma_1,\sigma_2,\sigma_3,\sigma_4\}\)。
+\[\sigma_1=\begin{pmatrix}1&2&3&4\\1&2&3&4\end{pmatrix}(0^\circ),\quad
+\sigma_2=\begin{pmatrix}1&2&3&4\\4&1&2&3\end{pmatrix}(90^\circ),\quad
+\sigma_3=\begin{pmatrix}1&2&3&4\\3&4&1&2\end{pmatrix}(180^\circ),\quad
+\sigma_4=\begin{pmatrix}1&2&3&4\\2&3&4&1\end{pmatrix}(270^\circ)\]
+写成轮换（p.231 顶部）：\(\sigma_1=(1)\)，\(\sigma_2=(1\,4\,3\,2)\)，\(\sigma_3=(1\,3)(2\,4)\)，\(\sigma_4=(1\,2\,3\,4)\)。</div>
+
+<h3>② 着色计数定理 <span class="pg">p.231</span></h3>
+<div class="thm"><b>定理</b> 设 \(N=\{1,2,3,\cdots,n\}\) 是被着色物体的集合，\(G=\{\sigma_1,\sigma_2,\cdots,\sigma_g\}\) 是 \(N\) 上的置换群。用 \(m\) 种颜色对 \(N\) 中的元素着色，则在 \(G\) 的作用下不同的着色方案数为
+\[M=\frac{1}{|G|}\sum_{k=1}^{g}m^{c(\sigma_k)}\]
+其中 \(c(\sigma_k)\) 为置换 \(\sigma_k\) 中轮换个数（包括 1 阶轮换）。</div>
+<div class="supp"><b>补充讲解</b> 这是 Pólya 定理的简化形式（只数方案总数）。\(m^{c(\sigma)}\) 是被 \(\sigma\) 保持不变的着色数：同一个轮换内的格子必须同色，每个轮换独立选 \(m\) 种颜色。对所有置换取平均即得不等价方案数（Burnside 引理）。</div>
+<div class="note"><b>笔记边注（p.231 右侧公式旁）</b> 写有 \(2^0+2^{12}+2^{12}+2^{12}\)，与周围例题无直接联系。</div>
+<div class="unclear"><b>待核对（p.231，位置：右中部定理公式右侧）</b> 可辨认部分："\(2^0+2^{12}+2^{12}+2^{12}\)"；无法辨认：该式对应哪道题、指数含义（原页无文字说明）。</div>
+
+<h3>③ 引例求解 <span class="pg">p.231–232</span></h3>
+<div class="example"><b>解</b> 对 \(\sigma_1,\sigma_2,\sigma_3,\sigma_4\) 数轮换个数：
+\[\sigma_1=(1)=(1)(2)(3)(4),\quad \sigma_2=(1\,4\,3\,2),\quad \sigma_3=(1\,3)(2\,4),\quad \sigma_4=(1\,2\,3\,4)\]
+\[c(\sigma_1)=4,\quad c(\sigma_2)=1,\quad c(\sigma_3)=2,\quad c(\sigma_4)=1\]
+\(|G|=4,\ m=2\)：
+\[M=\frac14\left(2^4+2^1+2^2+2^1\right)=\frac14\times 24=6\ \text{种}\]
+<b>结论</b> 共 6 种不同的着色方案。</div>
+<figure class="fig"><svg viewBox="0 0 330 160" role="img" aria-label="六种着色方案">
+<defs><pattern id="h1410" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="6" stroke="currentColor" stroke-width="3"/></pattern></defs>
+<g stroke="currentColor">
+<rect x="10" y="10" width="30" height="30" fill="url(#h1410)"/><rect x="40" y="10" width="30" height="30" fill="url(#h1410)"/><rect x="10" y="40" width="30" height="30" fill="url(#h1410)"/><rect x="40" y="40" width="30" height="30" fill="url(#h1410)"/>
+<rect x="120" y="10" width="30" height="30" fill="url(#h1410)"/><rect x="150" y="10" width="30" height="30" fill="none"/><rect x="120" y="40" width="30" height="30" fill="none"/><rect x="150" y="40" width="30" height="30" fill="none"/>
+<rect x="230" y="10" width="30" height="30" fill="url(#h1410)"/><rect x="260" y="10" width="30" height="30" fill="none"/><rect x="230" y="40" width="30" height="30" fill="none"/><rect x="260" y="40" width="30" height="30" fill="url(#h1410)"/>
+<rect x="10" y="90" width="30" height="30" fill="none"/><rect x="40" y="90" width="30" height="30" fill="none"/><rect x="10" y="120" width="30" height="30" fill="none"/><rect x="40" y="120" width="30" height="30" fill="none"/>
+<rect x="120" y="90" width="30" height="30" fill="url(#h1410)"/><rect x="150" y="90" width="30" height="30" fill="url(#h1410)"/><rect x="120" y="120" width="30" height="30" fill="none"/><rect x="150" y="120" width="30" height="30" fill="none"/>
+<rect x="230" y="90" width="30" height="30" fill="url(#h1410)"/><rect x="260" y="90" width="30" height="30" fill="none"/><rect x="230" y="120" width="30" height="30" fill="url(#h1410)"/><rect x="260" y="120" width="30" height="30" fill="url(#h1410)"/>
+<line x1="185" y1="95" x2="225" y2="65" stroke-dasharray="3 2"/></g></svg>
+<figcaption>图：6 种方案（阴影为黑）。第一行：4 格全黑；仅左上 1 格黑；左上与右下（对角）2 格黑。第二行：全白；上方两格（相邻）2 格黑；左上、左下、右下 3 格黑。原页用红色双向箭头连接"相邻 2 格黑"与"对角 2 格黑"，表示两者不等价。</figcaption></figure>
+<div class="note"><b>笔记边注（p.232 右侧）</b> 按黑格个数分类计数：4 个黑——1 种；3 个——1 种；2 个——2 种（红圈）；1 个——1 种；0 个——1 种；合计 \(1+1+2+1+1=6\)，与公式结果一致。</div>

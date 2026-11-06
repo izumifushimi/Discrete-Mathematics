@@ -1,0 +1,69 @@
+<div class="note"><b>笔记边注</b> 小节标题“17.3 同余”，日期 2025年12月22日。</div>
+
+<h3>同余的定义 <span class="pg">p.266</span></h3>
+<div class="def"><b>定义（同余）</b> ① 设 \(m\) 是整数，\(a\) 和 \(b\) 为整数。若 \(m\mid a-b\)，则称
+<ul>
+<li>\(a\) 模 \(m\) 同余于 \(b\)，或</li>
+<li>\(a\) 与 \(b\) 模 \(m\) 同余，</li>
+</ul>
+记作 \(a\equiv b\pmod m\)。若不同余，记作 \(a\not\equiv b\pmod m\)。</div>
+<div class="note"><b>笔记边注</b> 条件 \(m\mid a-b\) 用红线标出，下方有两个小三角记号强调。</div>
+<div class="supp"><b>补充讲解</b> 实际使用时一般取正整数 \(m\)（模数），例如本节的 \(\bmod 6\)、\(\bmod 10\)。</div>
+
+<h3>同余的等价刻画 <span class="pg">p.266</span></h3>
+<div class="thm"><b>性质</b> ②
+\[ \begin{aligned}
+a\equiv b\pmod m &\iff m\mid a-b\\
+&\iff a \text{ 与 } b \text{ 除以 } m \text{ 的余数相同}\\
+&\iff a = b + km,\ \text{其中 } k \text{ 为整数.}
+\end{aligned} \]</div>
+<div class="note"><b>笔记边注</b> 红色弧形箭头连接 \(m\mid a-b\) 与 \(a=b+km\)，旁写红字“\(a-b=km\)”（\(km\) 画圈）：\(m\mid a-b\) 就是 \(a-b\) 等于 \(m\) 的整数倍。</div>
+<div class="example"><b>例 1</b> \(20\equiv 2\pmod 6\)，\(15\equiv -3\pmod 6\)。<br>
+验算：\(20-2=18=3\times6\)；\(15-(-3)=18=3\times6\)。</div>
+
+<h3>同余关系是等价关系 <span class="pg">p.266</span></h3>
+<div class="thm"><b>同余关系性质</b> ③ 模 \(m\) 同余关系满足
+<ol>
+<li>自反性；</li>
+<li>对称性；</li>
+<li>传递性。</li>
+</ol>
+所以它是等价关系，其等价类称为模 \(m\) 等价类。</div>
+<div class="supp"><b>补充讲解</b> 自反：\(m\mid a-a=0\)。对称：\(m\mid a-b\Rightarrow m\mid b-a\)。传递：\(m\mid a-b\)、\(m\mid b-c\Rightarrow m\mid (a-b)+(b-c)=a-c\)。</div>
+
+<h3>同余的运算性质 <span class="pg">p.266–267</span></h3>
+<div class="thm"><b>性质 1 ☆</b> 若 \(a\equiv b\pmod m\)，\(c\equiv d\pmod m\)，则
+\[ \begin{aligned}
+a\pm c &\equiv b\pm d \pmod m,\\
+ac &\equiv bd \pmod m,\\
+a^k &\equiv b^k \pmod m,\quad k \text{ 为非负整数.}
+\end{aligned} \]</div>
+<div class="note"><b>笔记边注</b> \(a^k\equiv b^k\pmod m\) 用红线标出，后面例题直接使用这一条。</div>
+
+<div class="thm"><b>性质 2</b> 设 \(d\ge 1\)，\(d\mid m\)，则
+\[ a\equiv b\pmod m \Rightarrow a\equiv b\pmod d . \]</div>
+<div class="note"><b>笔记边注</b> \(d\)、\(m\) 上方分别写小字 \(2\)、\(4\)（\(m\) 画红圈），举例 \(d=2\mid m=4\)：模 \(4\) 同余必模 \(2\) 同余。</div>
+
+<div class="thm"><b>性质 3</b> 设 \(d\ge 1\)，则
+\[ a\equiv b\pmod m \iff da\equiv db\pmod{dm} . \]</div>
+
+<div class="thm"><b>性质 4</b> 设 \(c\) 与 \(m\) 互素，则
+\[ a\equiv b\pmod m \iff ca\equiv cb\pmod m . \]</div>
+<div class="warn"><b>易错提醒</b> 性质 4 的“互素”不能去掉：\(2\times3\equiv2\times6\pmod 6\)（\(6\equiv12\)），但 \(3\not\equiv6\pmod 6\)。不互素时不能直接约去 \(c\)。</div>
+
+<h3>求幂的个位数 <span class="pg">p.267–268</span></h3>
+<div class="example"><b>例 2</b> \(3^{455}\) 的个位数是多少？
+<b>解</b> 先列出 \(3\) 的幂的个位数：
+<div class="tbl"><table><thead><tr><th>\(3^1\)</th><th>\(3^2\)</th><th>\(3^3\)</th><th>\(3^4\)</th></tr></thead><tbody>
+<tr><td>3</td><td>9</td><td>7</td><td>1</td></tr>
+</tbody></table></div>
+设 \(3^{455}\) 的个位数为 \(x\)，则有 \(3^{455}\equiv x\pmod{10}\)。
+由 \(3^4 = 81 \equiv 1\pmod{10}\)。首先
+\[ 3^{455} = 3^{4\times113+3} = 3^{4\times113}\times3^3 \]
+（验算：\(4\times113=452\)，\(452+3=455\)）。由 \(3^4\equiv1\pmod{10}\) 及性质 1：
+\[ (3^4)^{113}\equiv 1^{113}=1\pmod{10},\quad\text{即}\quad 3^{4\times113}\equiv1\pmod{10}; \]
+又 \(3^3=27\equiv7\pmod{10}\)，再由性质 1（乘法）：
+\[ 3^{455} = 3^{4\times113}\times3^3 \equiv 1\times7 = 7\pmod{10} . \]
+<b>结论</b> \(3^{455}\) 的个位数为 \(7\)。</div>
+<div class="note"><b>笔记边注</b> 表中 \(3^3\) 上方有红色向下箭头、个位数 \(7\) 被红圈出，表示指数除以 4 余 3 时对应 \(7\)；\(3^4\equiv1\pmod{10}\) 红框圈出并标三角，用弧形箭头引到下面的推导；红笔大字 \(3^{455}\) 用箭头指向 \(3^{4\times113}\times3^3\)；第268页顶部是该式的延续，结果 \(7\) 再次红圈标出。</div>
+<div class="unclear"><b>待核对（p.267，位置：中部 \(3^4\equiv1\pmod{10}\) 红框右侧）</b> 可辨认部分：一个红色小字，形似“特”；无法辨认：该字的确切含义（可能是“特点/特殊”之类的提示）。</div>
