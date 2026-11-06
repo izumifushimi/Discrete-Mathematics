@@ -110,7 +110,7 @@ th,td{padding:6px 12px;border:1px solid #cfd8cd;white-space:nowrap}
 th{background:#eef2ea}
 td.l{text-align:left;white-space:normal}
 .fig{margin:18px 0;text-align:center}
-.fig svg{width:100%;max-width:min(100%,460px);max-height:420px;height:auto;color:var(--ink)}
+.fig>svg{width:100%;max-width:min(100%,460px);max-height:420px;height:auto;color:var(--ink)}
 .fig figcaption{font-size:13px;color:#5b6b60;text-align:left;margin-top:6px}
 pre{overflow-x:auto;background:#f2f4ef;padding:12px;border-radius:6px}
 
