@@ -53,10 +53,10 @@ for s in meta:
         n = rec.get('page')
         if rec.get('status') not in STATUSES:
             problems.append(f'{k}: page {n} bad status {rec.get("status")}')
-        if not (s['start'] <= n <= s['end']):
+        if s['start'] is not None and not (s['start'] <= n <= s['end']):
             problems.append(f'{k}: page {n} outside range {s["start"]}-{s["end"]}')
         covered[n] = dict(rec, section=k)
-    for n in range(s['start'], s['end'] + 1):
+    for n in (range(s['start'], s['end'] + 1) if s['start'] is not None else []):
         if n not in {r.get('page') for r in pages}:
             problems.append(f'{k}: no record for page {n}')
     content[k] = {'html': html, 'quiz': quiz, 'pages': pages}

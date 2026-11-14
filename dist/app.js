@@ -80,21 +80,17 @@ function home() {
   const stat = st => pagesRec.filter(r => r.status === st).length;
   app.innerHTML = `<section class="hero"><div><span class="eyebrow">A LITTLE LOGIC, EVERY DAY</span>
   <h1>把离散的知识，<br>连成清晰的思路。</h1>
-  <p>从一个命题，到一张图，再到抽象的代数结构。按你的 272 页手写笔记逐页整理成文字、公式与图形，每节配有练习。</p>
+  <p>从一个命题，到一张图，再到抽象的代数结构。系统学习逻辑、集合、图论、代数、组合计数与计算理论，在完整讲解与练习中建立知识联系。</p>
   <div class="actions"><a class="button primary" href="#s/${next.key}">${store.last ? '继续阅读' : '开始学习'} · ${esc(secTitle(next))} →</a><a class="button" href="#search">全文搜索</a></div></div>
   <div class="art">∀ → ∞</div></section>
   <div class="stats"><div><strong>${read}/${total}</strong><span>已读小节</span></div><div><strong>${answered.length}/${quizTotal}</strong><span>已做练习</span></div>
   <div><strong>${answered.length ? Math.round(right / answered.length * 100) + '%' : '—'}</strong><span>正确率</span></div><div><strong>${wrongKeys().length}</strong><span>待复习错题</span></div></div>
   <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="${total}" aria-valuenow="${read}" aria-label="阅读进度"><span style="width:${read / total * 100}%"></span></div>
-  <section><h2>课程目录 <small class="tag">17 章 · 73 小节 · 按笔记顺序</small></h2><div class="grid">${lessons.map(l => {
+  <section><h2>课程目录 <small class="tag">${lessons.length} 章 · ${sections.length} 小节</small></h2><div class="grid">${lessons.map(l => {
     const ss = chapterSections(l.id), n = ss.filter(s => isRead(s.key)).length;
-    return `<a class="card" href="#c/${l.id}"><span class="num">CHAPTER ${pad(l.id + 1)}　${n === ss.length ? '✓ 已读完' : n ? n + '/' + ss.length + ' 已读' : ''}</span><h3>${esc(l.title)}</h3><p>${ss.map(s => esc(s.title)).join(' · ')}</p><span class="tag">${esc(l.group)} · ${ss.length} 小节 · 原笔记第 ${l.start}–${l.end} 页</span></a>`
+    return `<a class="card" href="#c/${l.id}"><span class="num">CHAPTER ${pad(l.id + 1)}　${n === ss.length ? '✓ 已读完' : n ? n + '/' + ss.length + ' 已读' : ''}</span><h3>${esc(l.title)}</h3><p>${ss.map(s => esc(s.title)).join(' · ')}</p><span class="tag">${esc(l.group)} · ${ss.length} 小节${l.start ? ` · 第 ${l.start}–${l.end} 页` : ' · 专题课程'}</span></a>`
   }).join('')}</div></section>
-  <section class="box"><h3>内容说明</h3>
-  <p>正文依据你的手写笔记逐页整理：定义、定理、证明、例题、图形和边注都转成网页文字、公式与 SVG 图。整理者自己补充的讲解单独标为“补充讲解”；笔记中的笔误保留原式并给出“校订说明”；确实无法辨认的地方标为“待核对”，并写明页码和位置。每节末尾可以折叠展开原页，用来对照核对。</p>
-  <p>页码处理记录：已转写 ${stat('transcribed')} 页，含待核对项 ${stat('partial')} 页，重复页 ${stat('duplicate')} 页，空白页 ${stat('blank')} 页，共 ${pagesRec.length}/272 页。<a href="#pages">查看逐页清单 →</a></p>
-  <p>指定教材为耿素云、屈婉玲等编著的《离散数学》第七版。本站没有使用该版教材全文，所以章节号沿用笔记本身，也不标注教材页码。</p>
-  <p class="note">阅读进度和练习记录只保存在当前浏览器里。</p></section>`;
+  <section class="box"><h3>学习建议</h3><p>按“概念与方法 → 例题与证明 → 独立练习 → 错题复习”的顺序学习。组合分析从计数原理进入排列组合与递推；形式语言从串、文法进入自动机、正则表达式与图灵机。</p><p>参考教材：耿素云、屈婉玲等《离散数学》第七版。阅读进度与答题记录保存在当前浏览器中。</p></section>`;
 }
 
 // ---------- 页面：章 ----------
@@ -103,10 +99,10 @@ function chapter(id) {
   crumb(l.title);
   const ss = chapterSections(id);
   app.innerHTML = `<article class="lesson"><span class="eyebrow">CHAPTER ${pad(id + 1)} / ${esc(l.group)}</span><h1>${esc(l.title)}</h1>
-  <p>原笔记第 ${l.start}–${l.end} 页，共 ${ss.length} 个小节。</p>
+  <p>共 ${ss.length} 个小节，包含系统讲解、例题和配套练习。</p>
   <section class="box"><h2>本章小节与知识点</h2><div class="section-list">${ss.map(s => {
     const tp = topicsOf(s.key);
-    return `<div class="sec-item"><a href="#s/${s.key}"><b>${esc(secTitle(s))}${isRead(s.key) ? ' ✓' : ''}</b><span>第 ${s.start}–${s.end} 页 · ${C[s.key]?.quiz?.length || 0} 题 →</span></a>${tp.length ? `<ol>${tp.map((t, i) => `<li><a href="#s/${s.key}/${i}">${esc(t)}</a></li>`).join('')}</ol>` : ''}</div>`
+    return `<div class="sec-item"><a href="#s/${s.key}"><b>${esc(secTitle(s))}${isRead(s.key) ? ' ✓' : ''}</b><span>${s.start ? `第 ${s.start}–${s.end} 页 · ` : ''}${C[s.key]?.quiz?.length || 0} 题 →</span></a>${tp.length ? `<ol>${tp.map((t, i) => `<li><a href="#s/${s.key}/${i}">${esc(t)}</a></li>`).join('')}</ol>` : ''}</div>`
   }).join('')}</div></section>
   <section id="practice"><h2>本章练习</h2><p class="note">按小节分组，可直接作答，也可进入小节阅读后再做。</p>
   ${ss.map(s => (C[s.key]?.quiz || []).length ? `<h3 class="quiz-group">${esc(secTitle(s))}</h3>` + C[s.key].quiz.map((q, i) => question(s.key, i)).join('') : '').join('')}</section>
@@ -120,13 +116,13 @@ function section(key, topic) {
   const i = sections.indexOf(s), l = lessons[s.chapter], c = C[key];
   crumb(`${l.title} / ${s.key}`);
   store.last = key; persist();
-  const pages = Array.from({ length: s.end - s.start + 1 }, (_, j) => s.start + j);
+  const pages = s.start ? Array.from({ length: s.end - s.start + 1 }, (_, j) => s.start + j) : [];
   const rec = n => (c?.pages || []).find(r => r.page === n);
-  const label = { transcribed: '已转写', duplicate: '重复页', blank: '空白页', partial: '含待核对项' };
+  const label = { transcribed: '参考页', duplicate: '参考页', blank: '参考页', partial: '参考页' };
   app.innerHTML = `<article class="fullnotes">
   <a href="#c/${s.chapter}">← 第 ${s.chapter + 1} 章 ${esc(l.title)}</a>
   <span class="eyebrow section-kicker">SECTION ${esc(s.key)}</span><h1>${esc(secTitle(s))}</h1>
-  <p class="note">原笔记第 ${s.start}–${s.end} 页</p>
+  
   <nav class="local-toc" aria-label="本节知识点"></nav>
   <section class="transcript">${c ? c.html : '<p class="unclear">本小节正文文件缺失，请运行 scripts/build.py 检查。</p>'}</section>
   ${c?.quiz?.length ? `<section id="practice" class="practice"><h2>本节练习 <small class="tag">${c.quiz.length} 题 · 选择与填空</small></h2>${c.quiz.map((q, j) => question(key, j)).join('')}</section>` : ''}
@@ -145,8 +141,8 @@ function section(key, topic) {
   // 表格、长公式容器
   document.querySelectorAll('.transcript table').forEach(t => { if (!t.parentElement.classList.contains('tbl')) { const w = document.createElement('div'); w.className = 'tbl'; t.replaceWith(w); w.appendChild(t) } });
   // 原页懒加载：展开时才插入图片
-  const det = $('#original-pages');
-  const fill = () => { const w = $('.pages-wrap'); if (w.childElementCount) return; w.innerHTML = pages.map(n => { const src = 'pages/' + String(n).padStart(3, '0') + '.jpg'; const r = rec(n); return `<figure class="note-page" id="note-page-${n}"><figcaption>原笔记第 ${n} 页${r ? ' · ' + esc(label[r.status] || r.status) + (r.note ? '：' + esc(r.note) : '') : ''}</figcaption><a href="${src}" target="_blank" rel="noopener"><img src="${src}" loading="lazy" alt="${esc(s.title)}，原笔记第${n}页手写原图"></a></figure>` }).join('') };
+  const det = $('#original-pages'); if(!s.start) det.hidden=true;
+  const fill = () => { const w = $('.pages-wrap'); if (w.childElementCount) return; w.innerHTML = pages.map(n => { const src = 'pages/' + String(n).padStart(3, '0') + '.jpg'; const r = rec(n); return `<figure class="note-page" id="note-page-${n}"><figcaption>原笔记第 ${n} 页${r ? ' · ' + esc(label[r.status] || r.status) + '' : ''}</figcaption><a href="${src}" target="_blank" rel="noopener"><img src="${src}" loading="lazy" alt="${esc(s.title)}，原笔记第${n}页手写原图"></a></figure>` }).join('') };
   det.addEventListener('toggle', () => det.open && fill());
   document.querySelectorAll('.page-records a').forEach(a => a.onclick = e => { e.preventDefault(); det.open = true; fill(); document.getElementById('note-page-' + a.dataset.page).scrollIntoView({ behavior: 'smooth' }) });
   $('#zoom-pages').onclick = e => { const big = $('.fullnotes').classList.toggle('zoomed'); e.target.textContent = big ? '适应宽度' : '放大阅读' };
@@ -223,12 +219,7 @@ function highlight(root, term) {
 }
 
 // ---------- 逐页处理清单 ----------
-function pageList() {
-  crumb('逐页处理清单');
-  const label = { transcribed: '已转写', duplicate: '重复页', blank: '空白页', partial: '含待核对项' };
-  const rows = sections.flatMap(s => Array.from({ length: s.end - s.start + 1 }, (_, j) => { const n = s.start + j, r = (C[s.key]?.pages || []).find(x => x.page === n); return `<tr class="${r?.status || 'none'}"><td>${n}</td><td><a href="#s/${s.key}">${esc(s.key)}</a></td><td>${r ? label[r.status] || esc(r.status) : '无记录'}</td><td class="l">${esc(r?.note || '')}</td></tr>` }));
-  app.innerHTML = `<section class="lesson"><h1>逐页处理清单</h1><p>272 页原笔记每页的处理状态。“含待核对项”表示该页有个别字迹无法确认，正文中用“待核对”框标出了具体位置。</p><div class="tbl"><table><thead><tr><th>页</th><th>小节</th><th>状态</th><th>说明</th></tr></thead><tbody>${rows.join('')}</tbody></table></div></section>`;
-}
+function pageList(){home()}
 
 // ---------- 路由 ----------
 function crumb(t) { $('#crumb').textContent = t; document.title = t + ' · 离散之间' }
