@@ -1,9 +1,9 @@
 
-<h3>① 无序积 <span class="pg">p.82</span></h3>
+<h3>① 无序积 </h3>
 <div class="def"><b>定义（无序积）</b> \[A\&amp;B=\{\{a,b\}\mid a\in A\land b\in B\}\]
 \((a,b)=(b,a)\)：无序；\(\langle a,b\rangle\neq\langle b,a\rangle\)：有序。</div>
-<h3>② 无向图 <span class="pg">p.82</span></h3>
-<div class="def"><b>定义（无向图）</b> \(G=\langle V,E\rangle\)，\(V\) 为顶点集，\(E\) 为边集，边取自无序积（笔记红字标注“无序积”）。</div>
+<h3>② 无向图 </h3>
+<div class="def"><b>定义（无向图）</b> \(G=\langle V,E\rangle\)，\(V\) 为顶点集，\(E\) 为边集，边取自无序积。</div>
 <div class="example"><b>例 1</b> \(G=\langle V,E\rangle\)，
 \[V=\{a,b,c,d,e\},\quad E=\{(a,a),(a,b),(a,b),(b,c),(c,d),(b,d)\}\]
 
@@ -16,12 +16,12 @@
 <g fill="currentColor"><circle cx="60" cy="40" r="4"></circle><circle cx="60" cy="150" r="4"></circle><circle cx="200" cy="40" r="4"></circle><circle cx="200" cy="150" r="4"></circle><circle cx="265" cy="95" r="4"></circle></g>
 <g fill="currentColor" font-size="14"><text x="35" y="45">a</text><text x="35" y="160">b</text><text x="210" y="40">d</text><text x="210" y="165">c</text><text x="275" y="100">e</text></g>
 </svg><figcaption>图：顶点 a,b,c,d,e；a 上有一个环 (a,a)；a 与 b 之间两条平行边；边 (b,c)、(c,d)、(b,d)；e 为孤立点。</figcaption></figure></div>
-<h3>③ 有向图 <span class="pg">p.82</span></h3>
-<div class="def"><b>定义（有向图）</b> \(D=\langle V,E\rangle\)，边取自有序积（笔记红字标注“有序积”）：
+<h3>③ 有向图 </h3>
+<div class="def"><b>定义（有向图）</b> \(D=\langle V,E\rangle\)，边取自有序积：
 \[\begin{cases}V\neq\emptyset, &amp; \text{顶点集 } V(D)\\ E\subseteq V\times V, &amp; \text{边集 } E(D)\end{cases}\]</div>
 <div class="example"><b>例 2</b> \(D=\langle V,E\rangle\)，\(V=\{a,b,c,d,e\}\)，
 \[E=\{\langle a,a\rangle,\langle a,b\rangle,\langle a,b\rangle,\langle b,a\rangle,\langle b,c\rangle,\langle c,d\rangle,\langle d,b\rangle\}\]
-笔记中 \(\langle a,b\rangle,\langle a,b\rangle,\langle b,a\rangle\) 用红色波浪线标出，图中 a、b 间三条弧用红圈圈出。
+本节 \(\langle a,b\rangle,\langle a,b\rangle,\langle b,a\rangle\) ，图中 a、b 间三条弧用。
 <figure class="fig"><svg aria-label="有向图例" role="img" viewBox="0 0 300 210">
 <defs><marker id="ar61a" markerHeight="7" markerWidth="7" orient="auto" refX="9" refY="5" viewBox="0 0 10 10"><path d="M0 0L10 5L0 10z" fill="currentColor"></path></marker></defs>
 <g fill="none" stroke="currentColor" stroke-width="2">
@@ -37,7 +37,7 @@
 <g fill="currentColor" font-size="14"><text x="30" y="45">a</text><text x="35" y="170">b</text><text x="210" y="40">d</text><text x="210" y="170">c</text><text x="275" y="100">e</text></g>
 </svg><figcaption>图：a 上环 ⟨a,a⟩；a→b 两条弧；b→a 一条弧；b→c；c→d；d→b；e 为孤立点。</figcaption></figure></div>
 <div class="supp"><b>补充讲解</b> 例中边集写成含重复元素的“集合”，是为了表示平行边；严格说应理解为多重集（或给每条边单独编号）。另外，定义要求 \(V\neq\emptyset\)，而下文的“空图”\(V=E=\emptyset\) 是作为退化情形单独约定的。</div>
-<h3>④ n 阶图、有限图、零图、平凡图、空图 <span class="pg">p.83</span></h3>
+<h3>④ n 阶图、有限图、零图、平凡图、空图 </h3>
 <div class="def"><b>定义</b>
 <ol>
 <li>n 阶图（n 个顶点）：\(|V(G)|=n\)。</li>
@@ -51,8 +51,8 @@
 <g fill="currentColor"><circle cx="20" cy="20" r="4"></circle><circle cx="60" cy="20" r="4"></circle><circle cx="60" cy="60" r="4"></circle>
 <circle cx="170" cy="40" r="4"></circle><circle cx="200" cy="20" r="4"></circle><circle cx="225" cy="45" r="4"></circle><circle cx="310" cy="40" r="4"></circle></g>
 <g fill="currentColor" font-size="14"><text x="20" y="85">3阶</text><text x="170" y="85">零图（3个孤立点）</text><text x="295" y="85">平凡图</text></g>
-</svg><figcaption>图：左为 3 阶图（3 个顶点、2 条边连成折线）；中为 3 个孤立点组成的零图；右为单个顶点的平凡图 \(N_1\)。笔记中 3 阶图右侧另有一个标“6阶”的小图，后接“……”。</figcaption></figure>
-<h3>⑤ 标定图、非标定图、底图 <span class="pg">p.83</span></h3>
+</svg><figcaption>3阶路径有3个顶点、2条边；3个孤立点组成3阶零图；只有一个顶点的图是平凡图N₁。</figcaption></figure>
+<h3>⑤ 标定图、非标定图、底图 </h3>
 <div class="def"><b>定义</b>
 <ol>
 <li>标定图：顶点或边带标记的图。</li>
@@ -67,7 +67,7 @@
 <circle cx="190" cy="25" r="4"></circle><circle cx="260" cy="25" r="4"></circle><circle cx="190" cy="85" r="4"></circle><circle cx="260" cy="85" r="4"></circle></g>
 <g fill="currentColor" font-size="14"><text x="22" y="20">b</text><text x="118" y="20">c</text><text x="22" y="95">a</text><text x="118" y="95">d</text><text x="40" y="108">标定图</text><text x="190" y="108">非标定图</text></g>
 </svg><figcaption>图：左为标定图，顶点 a,b,c,d，边 (a,b)、(b,c)、(c,d)；右为同形状但不带标记的非标定图。</figcaption></figure>
-<h3>⑥ 相邻、邻接、关联 <span class="pg">p.83–84</span></h3>
+<h3>⑥ 相邻、邻接、关联 </h3>
 <div class="def"><b>定义</b>
 <ol>
 <li>相邻：A、B 两点相邻（有边 A—B 相连）；a、b 两边相邻（两边有公共端点，如 ∘—a—∘—b—∘）。</li>
@@ -80,7 +80,7 @@
 <g fill="currentColor" font-size="14"><text x="25" y="28">A</text><text x="125" y="28">B</text><text x="75" y="58">x</text><text x="25" y="75">1</text><text x="125" y="75">1</text>
 <text x="250" y="20">x</text><text x="210" y="55">A</text><text x="226" y="80">2</text></g>
 </svg><figcaption>图：左边 x 连接 A、B，A 与 x、B 与 x 的关联次数均为 1；右为 A 上的环 x，A 与 x 的关联次数为 2。</figcaption></figure>
-<h3>⑦ 环、孤立点、平行边 <span class="pg">p.84</span></h3>
+<h3>⑦ 环、孤立点、平行边 </h3>
 <div class="def"><b>定义</b>
 <ol>
 <li>环：两端点相同的边（自环）。</li>
@@ -99,7 +99,7 @@
 <g fill="currentColor"><circle cx="20" cy="40" r="4"></circle><circle cx="100" cy="40" r="4"></circle><circle cx="130" cy="40" r="4"></circle><circle cx="210" cy="40" r="4"></circle><circle cx="240" cy="40" r="4"></circle><circle cx="320" cy="40" r="4"></circle></g>
 <g fill="currentColor" font-size="14"><text x="55" y="90">✓</text><text x="165" y="90">✓</text><text x="275" y="90">✗</text></g>
 </svg><figcaption>图：两条无向边连接同一对顶点 ✓ 是平行边；两条同向有向边 ✓ 是平行边；两条反向有向边 ✗ 不是平行边。</figcaption></figure>
-<h3>⑧ 邻域、闭邻域、关联集 <span class="pg">p.84–85</span></h3>
+<h3>⑧ 邻域、闭邻域、关联集 </h3>
 <div class="def"><b>定义</b>
 <ol>
 <li>邻域：\(N_G(v)=\{u\in V(G)\mid (u,v)\in E(G)\land u\neq v\}\)。</li>
@@ -115,7 +115,7 @@
 <text x="100" y="65">1</text><text x="155" y="65">2</text><text x="90" y="140">3</text><text x="155" y="135">4</text><text x="210" y="50">5</text></g>
 </svg><figcaption>图：边 1=(a,c)，2=(b,c)，3=(d,c)，4=(e,c)，5=(b,f)。</figcaption></figure>
 <b>解</b> \(N_G(c)=\{a,b,d,e\}\)；\(\overline{N}_G(c)=\{a,b,c,d,e\}\)；\(I_G(c)=\{1,2,3,4\}\)（f 只与 b 相邻，边 5 不与 c 关联）。</div>
-<h3>⑨ 后继、前驱（点集） <span class="pg">p.85</span></h3>
+<h3>⑨ 后继、前驱（点集） </h3>
 <div class="def"><b>定义（有向图 D）</b>
 \[\begin{aligned}\Gamma_D^+(v)&amp;=\{u\in V(D)\mid \langle v,u\rangle\in E(D)\land u\neq v\}\quad(\text{后继})\\
 \Gamma_D^-(v)&amp;=\{u\in V(D)\mid \langle u,v\rangle\in E(D)\land u\neq v\}\quad(\text{前驱})\end{aligned}\]
@@ -131,7 +131,7 @@
 <g fill="currentColor" font-size="14"><text x="28" y="22">a</text><text x="22" y="150">d</text><text x="95" y="100">c</text><text x="165" y="28">b</text><text x="165" y="152">e</text><text x="258" y="90">f</text></g>
 </svg><figcaption>图：弧 a→c，d→c，c→b，c→e，b→f。</figcaption></figure>
 <b>解</b> \(\Gamma_D^+(c)=\{b,e\}\)，\(\Gamma_D^-(c)=\{a,d\}\)，\(N_D(c)=\{a,b,d,e\}\)，\(\overline{N}_D(c)=\{a,b,c,d,e\}\)。</div>
-<h3>⑩ 顶点的度 <span class="pg">p.85–86</span></h3>
+<h3>⑩ 顶点的度 </h3>
 <div class="def"><b>定义（度）</b> \(d_G(v)\) = 与 \(v\) 关联的边的次数之和（环计 2 次）。</div>
 <div class="example"><b>例 5</b>
 <figure class="fig"><svg aria-label="度数例图" role="img" viewBox="0 0 240 150">
@@ -141,13 +141,13 @@
 <circle cx="50" cy="126" r="16"></circle></g>
 <g fill="currentColor"><circle cx="50" cy="30" r="4"></circle><circle cx="50" cy="110" r="4"></circle><circle cx="180" cy="110" r="4"></circle><circle cx="190" cy="30" r="4"></circle></g>
 <g fill="currentColor" font-size="14"><text x="30" y="30">a</text><text x="200" y="35">b</text><text x="25" y="110">c</text><text x="190" y="118">d</text></g>
-</svg><figcaption>图：边 (a,c)；a 与 d 之间两条平行边；边 (c,d)；c 上一个环；b 为孤立点（笔记用红色短线标出 c 关联的边）。</figcaption></figure>
+</svg><figcaption>图：边 (a,c)；a 与 d 之间两条平行边；边 (c,d)；c 上一个环；b 为孤立点。</figcaption></figure>
 <b>解</b> \(d_G(a)=3,\ d_G(b)=0,\ d_G(c)=4,\ d_G(d)=3\)。</div>
 <div class="def"><b>定义（有向图的度）</b>
 出度：\(d_D^+(v)\)，出边之和；入度：\(d_D^-(v)\)，入边之和。
 \[d_D(v)=d_D^+(v)+d_D^-(v)\]</div>
-<h3>⑪ 最小度、最大度 <span class="pg">p.86</span></h3>
+<h3>⑪ 最小度、最大度 </h3>
 <div class="def"><b>定义</b>
 \[\delta(G)=\min\{d_G(v)\mid v\in V(G)\},\qquad \Delta(G)=\max\{d_G(v)\mid v\in V(G)\}\]
-有向图（笔记圈注）：最大入度 \(\Delta^-\)、最大出度 \(\Delta^+\)；最小入度 \(\delta^-\)、最小出度 \(\delta^+\)。</div>
+有向图：最大入度 \(\Delta^-\)、最大出度 \(\Delta^+\)；最小入度 \(\delta^-\)、最小出度 \(\delta^+\)。</div>
 <div class="warn"><b>易错提醒</b> 环对度数贡献 2；反向的两条弧不是平行边；邻域、后继、前驱都要求 \(u\neq v\)，环不会把 \(v\) 自己放入邻域。</div>

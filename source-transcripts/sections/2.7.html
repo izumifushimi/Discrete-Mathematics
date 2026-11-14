@@ -1,9 +1,9 @@
 
-<h3>① 三歧性（拟序关系） <span class="pg">p.37</span></h3>
+<h3>① 三歧性（拟序关系） </h3>
 <div class="def"><b>定义（三歧性）</b> 设 \(A\ne\emptyset\)，\(\prec\) 为 \(A\) 的拟序关系，\(x,y\in A\)。若
 \[x\prec y,\qquad y\prec x,\qquad x=y\]
 有且仅有一式成立，则称拟序关系 \(\prec\) 有三歧性，此时 \(\prec\) 为拟线序关系。</div>
-<h3>② 最大元、最小元 <span class="pg">p.37</span></h3>
+<h3>② 最大元、最小元 </h3>
 <div class="def"><b>定义</b> 设 \(\langle A,\preccurlyeq\rangle\) 为偏序集，\(B\subseteq A\)，\(y\in B\)。
 \[\begin{aligned} y\ \text{为}\ B\ \text{中最大元} &amp;:\ \forall x\,(x\in B\to x\preccurlyeq y)\\ y\ \text{为}\ B\ \text{中最小元} &amp;:\ \forall x\,(x\in B\to y\preccurlyeq x)\end{aligned}\]</div>
 <div class="example"><b>例</b> \(A=\{1,2,3,5,\dots\}\)，偏序为整除，取四个子集 \(B\)（第一个标为 \(B_1\)），分别求最大元、最小元。
@@ -28,11 +28,11 @@
 <tr><td>最大元</td><td>无</td><td>15</td><td>15</td><td>无</td></tr>
 <tr><td>最小元</td><td>1</td><td>无</td><td>1</td><td>无</td></tr>
 </tbody></table></div>
-<p>。(d) 中顶层 15、25 与底层 3、5 各有一条横线划过，表示两层都没有唯一的最大、最小元素。A 由箭头指向 \(B_1\)。</p>
+<p>。(d) 中顶层 15、25 与底层 3、5 各有一条划过，表示两层都没有唯一的最大、最小元素。A 由箭头指向 \(B_1\)。</p>
 </div>
-<h3>③ 上界、下界 <span class="pg">p.37–38</span></h3>
+<h3>③ 上界、下界 </h3>
 <div class="def"><b>定义</b> 设 \(B\subseteq A\)，\(y\in A\)。
-\[\begin{aligned} y\ \text{为}\ B\ \text{的上界} &amp;:\ \forall x\,(x\in B\to x\preccurlyeq y)\\ y\ \text{为}\ B\ \text{的下界} &amp;:\ \forall x\,(x\in B\to y\preccurlyeq x)\end{aligned}\]<p>上下界只要求 \(y\in A\)（不必属于 \(B\)），这与最大元、最小元要求 \(y\in B\) 不同。p.38 页首再次抄写“\(y\) 为 \(B\) 的下界：\(\forall x(x\in B\to y\preccurlyeq x)\)”。</p></div>
+\[\begin{aligned} y\ \text{为}\ B\ \text{的上界} &amp;:\ \forall x\,(x\in B\to x\preccurlyeq y)\\ y\ \text{为}\ B\ \text{的下界} &amp;:\ \forall x\,(x\in B\to y\preccurlyeq x)\end{aligned}\]<p>上下界只要求 \(y\in A\)（不必属于 \(B\)），这与最大元、最小元要求 \(y\in B\) 不同。</p></div>
 <div class="example"><b>例</b> \(A=\{1,2,3,4,5,6,9,10,15,12\}\)（右下角另补写 24），偏序为整除。
 <figure class="fig"><svg aria-label="上下界示例哈斯图" role="img" viewBox="0 0 560 190">
 <g fill="none" stroke="currentColor" stroke-width="1.6">
@@ -50,15 +50,15 @@
 <text x="76" y="168">1</text><text x="22" y="105">2</text><text x="108" y="105">3</text><text x="78" y="45">6</text><text x="10" y="20">B₁={1,2,3}</text>
 <text x="236" y="168">1</text><text x="182" y="105">3</text><text x="268" y="105">5</text><text x="222" y="38">15</text>
 <text x="446" y="168">1</text><text x="392" y="105">2</text><text x="478" y="105">3</text><text x="394" y="28">6</text><text x="440" y="28">12</text><text x="494" y="28">24</text>
-</g></svg><figcaption>图：左 \(B_1=\{1,2,3\}\)，实线 1–2、1–3，虚线 2–6、3–6；中 \(B=\{1,3,5\}\)，实线 3–15、5–15，虚线 1–3、1–5（笔记中虚线连到 15 和 1）；右 1–2、1–3 实线，2、3 分别用虚线连到 6、12、24。</figcaption></figure>
+</g></svg><figcaption>图：左 \(B_1=\{1,2,3\}\)，实线 1–2、1–3，虚线 2–6、3–6；中 \(B=\{1,3,5\}\)，实线 3–15、5–15，虚线 1–3、1–5；右 1–2、1–3 实线，2、3 分别用虚线连到 6、12、24。</figcaption></figure>
 <div class="tbl"><table><thead><tr><th></th><th>\(B_1=\{1,2,3\}\)</th><th>第二个子集（3、5）</th></tr></thead><tbody>
 <tr><td>上界</td><td>6</td><td>15</td></tr>
 <tr><td>下界</td><td>1</td><td>1</td></tr>
 </tbody></table></div>
-<p>右图：\(B=\{1,2,3\}\) 的上界集合为 \(\{6,12,24\}\)（圈出），其中最小的上界称为最小上界，即上确界；对应地，最大下界称为下确界。</p>
-<p> 右图旁写“最小上界 / 上确界”，用双向箭头连到“最大下界 / 下确界”；圈出的 \(\{6,12,24\}\) 画一个类似“\(\perp\)”的符号。中图只画了 3、5、15、1 四个点，没有单独写出该子集，按图读作 \(\{3,5\}\)（或 \(\{1,3,5,15\}\)），上界 15、下界 1 两种读法都成立。</p>
+<p>右图：\(B=\{1,2,3\}\) 的上界集合为 \(\{6,12,24\}\)，其中最小的上界称为最小上界，即上确界；对应地，最大下界称为下确界。</p>
+<p>最小上界称为上确界，最大下界称为下确界。例如在相应整除偏序中，\(\{3,5\}\) 的上确界是15，下确界是1。</p>
 </div>
-<h3>④ 极小元、极大元 <span class="pg">p.38</span></h3>
+<h3>④ 极小元、极大元 </h3>
 <div class="def"><b>定义</b> 设 \(B\subseteq A\)，\(y\in B\)。
 \[\begin{aligned} y\ \text{为}\ B\ \text{的极大元} &amp;:\ \forall x\,(x\in B\land y\preccurlyeq x\to x=y)\\ y\ \text{为}\ B\ \text{的极小元} &amp;:\ \forall x\,(x\in B\land x\preccurlyeq y\to x=y)\end{aligned}\]</div>
 <div class="example"><b>例</b> 沿用 2.6 的偏序集 \(\langle\{1,2,3,4,5,6,9,10,15\},\mid\rangle\)。
@@ -73,9 +73,9 @@
 </g>
 <g fill="currentColor" font-size="14"><text x="176" y="192">1</text><text x="70" y="115">2</text><text x="190" y="115">3</text><text x="280" y="115">5</text><text x="34" y="28">4</text><text x="104" y="28">6</text><text x="175" y="28">9</text><text x="240" y="28">15</text><text x="312" y="28">10</text></g>
 </svg><figcaption>图：边 1–2、1–3、1–5、2–4、2–6、2–10、3–6、3–9、3–15、5–15、5–10。</figcaption></figure>
-<b>解</b> 极大元：4，6，9，15，10。以 \(y=4\) 为例：在定义式 \(\forall x(x\in B\land y\preccurlyeq x\to x=y)\) 中，满足 \(4\preccurlyeq x\) 的只有 \(x=4\)，所以 \(x=y\) 为真，蕴含式为真，4 是极大元。<p> 圈出“\(y=4\)”和“\(y\preccurlyeq x\)”，箭头指向“\(x=y\)”，两处各写“真”；再写“\(y\gt x\)”，意思是其余元素都在 4 的，不会出现 \(4\preccurlyeq x\) 而 \(x\ne4\)。把极大元中的 15 写作“15”、“10”写在最后，与图一致。</p></div>
+<b>解</b> 极大元：4，6，9，15，10。以 \(y=4\) 为例：在定义式 \(\forall x(x\in B\land y\preccurlyeq x\to x=y)\) 中，满足 \(4\preccurlyeq x\) 的只有 \(x=4\)，所以 \(x=y\) 为真，蕴含式为真，4 是极大元。<p>验证4是否为极大元，需要检查 \(4\preccurlyeq x\) 是否必然推出x=4。极大元可以不唯一，也不必与集合中所有元素都可比较。</p></div>
 <div class="supp"><b>补充讲解</b> 同一个图里，极小元只有 1（它也是最小元）；极大元有 5 个，因此没有最大元。最大元一定是极大元，反过来不一定。</div>
-<h3>⑤ 链、反链 <span class="pg">p.38–39</span></h3>
+<h3>⑤ 链、反链 </h3>
 <div class="def"><b>定义</b> 设 \(\langle A,\preccurlyeq\rangle\) 为偏序集，\(B\subseteq A\)。
 \[\begin{aligned} B\ \text{为}\ A\ \text{中链} &amp;:\ \forall x\forall y\,(x\in B\land y\in B\to x\ \text{与}\ y\ \text{可比})\\ B\ \text{为}\ A\ \text{中反链} &amp;:\ \forall x\forall y\,(x\in B\land y\in B\land x\ne y\to x\ \text{与}\ y\ \text{不可比})\end{aligned}\]
 \(|B|\) 为链（反链）的长度。</div>
@@ -90,19 +90,17 @@
 <circle cx="230" cy="150" r="4"></circle><circle cx="230" cy="110" r="4"></circle><circle cx="230" cy="70" r="4"></circle>
 </g>
 <g fill="currentColor" font-size="14"><text x="34" y="250">a</text><text x="156" y="250">b</text><text x="110" y="195">c</text><text x="110" y="155">d</text><text x="110" y="115">e</text><text x="110" y="75">f</text><text x="34" y="25">g</text><text x="156" y="25">h</text><text x="240" y="155">i</text><text x="240" y="115">j</text><text x="240" y="75">k</text></g>
-</svg><figcaption>图：边 a–c、b–c、c–d、d–e、e–f、f–g、f–h；另一分支 i–j–k。笔记用红线描出最长链 a–c–d–e–f–g，红色“6”。</figcaption></figure>
+</svg><figcaption>哈斯图的覆盖边为a–c、b–c、c–d、d–e、e–f、f–g、f–h，另有分支i–j–k。最长链a–c–d–e–f–g含6个元素。</figcaption></figure>
 <ul>
 <li>链：\(\{a,c\}\)，\(\{a,c,d\}\)，\(\{a,c,d,e,f,g\}\)；</li>
 <li>反链：\(\{g,k\}\)，\(\{g,h,k\}\)；</li>
 <li>\(\{a\}\) 既是链也是反链。</li>
 </ul>
 <b>结论</b> 最长链 \(\{a,c,d,e,f,g\}\) 的长度为 6。</div>
-<h3>定理与推论（链长度与反链划分） <span class="pg">p.39–40</span></h3>
+<h3>定理与推论（链长度与反链划分） </h3>
 <div class="thm"><b>定理</b> 设 \(\langle A,\preccurlyeq\rangle\) 为偏序集，\(A\) 的最长链长度为 \(n\)，则
-<ol><li>\(A\) 中存在极大元；</li><li>\(A\) 存在 \(n\) 个划分块的划分，使每个划分块都为反链。</li></ol><p> 定理末尾画星号“☆”。</p></div>
-<div class="example"><b>例</b> 对上例的 \(A\)（框内重画同一哈斯图，红线横穿 g、h、k 一层，并描出最长链），最长链长度 \(n=6\)，可划分为 6 个反链：
-\[\{g,h,k\},\ \{f,j\},\ \{e,i\},\ \{d\},\ \{c\},\ \{a,b\}\]
-每块旁画对勾，旁边的“6”用箭头指向这 6 块。</div>
+<ol><li>\(A\) 中存在极大元；</li><li>\(A\) 存在 \(n\) 个划分块的划分，使每个划分块都为反链。</li></ol><p> 定理末尾“☆”。</p></div>
+<div class="example"><b>例</b>最长链含6个元素，可将偏序集划分为6个反链：\[\{g,h,k\},\ \{f,j\},\ \{e,i\},\ \{d\},\ \{c\},\ \{a,b\}.\]</div>
 <div class="thm"><b>推论</b> 若 \(|A|=m\times n+1\)，则 \(A\) 存在 \(m+1\) 反链（长度），或存在 \(n+1\) 链（长度）。</div>
 <div class="example"><b>例</b>\(|A|=11=10+1=2\times5+1=1\times10+1\)。
 <div class="tbl"><table><thead><tr><th>分解</th><th>反链长度 \(m+1\)</th><th>链长度 \(n+1\)</th></tr></thead><tbody>
@@ -110,4 +108,4 @@
 <tr><td>\(1\times10+1\)</td><td>2 √</td><td>11 ×</td></tr>
 </tbody></table></div>
 <b>结论</b> 两种分解下推论都成立：第一种两者都存在（\(\{g,h,k\}\) 与最长链），第二种存在长度 2 的反链，长度 11 的链不存在，但“或”只需一边成立。</div>
-<div class="supp"><b>补充讲解</b> 推论里 \(m,n\) 地位对称，常见写法是“存在长度 \(m+1\) 的链或长度 \(n+1\) 的反链”，与笔记的写法只是交换了 \(m,n\)，内容等价。</div>
+<div class="supp"><b>补充讲解</b>链与反链的结论中，参数m、n可以互换：若集合元素数大于mn，则存在长度至少m+1的链或长度至少n+1的反链。</div>

@@ -1,5 +1,5 @@
 
-<h3>① 哈密顿通路、哈密顿回路与哈密顿图 <span class="pg">p.123</span></h3>
+<h3>① 哈密顿通路、哈密顿回路与哈密顿图 </h3>
 <div class="def"><b>定义</b>
 <ul>
 <li><b>哈密顿通路</b>：经过图中所有顶点的初级通路。</li>
@@ -13,16 +13,16 @@
 <circle cx="60" cy="20" r="4"></circle><circle cx="160" cy="20" r="4"></circle><circle cx="150" cy="90" r="4"></circle><circle cx="50" cy="90" r="4"></circle>
 </g>
 <g fill="currentColor" font-size="14"><text x="10" y="85">起</text><text x="10" y="108">终</text></g>
-</svg><figcaption>图（p.123 右上）：4 个顶点的回路（四边形），左下顶点同时是“起”与“终”。</figcaption></figure>
+</svg><figcaption>图：4 个顶点的回路（四边形），左下顶点同时是“起”与“终”。</figcaption></figure>
 <div class="warn"><b>易错提醒</b> 欧拉看“边”（每条边恰好一次，简单通路），哈密顿看“点”（每个顶点恰好一次，初级通路）。</div>
-<h3>② 无向哈密顿图的必要条件 <span class="pg">p.123</span></h3>
+<h3>② 无向哈密顿图的必要条件 </h3>
 <div class="thm"><b>定理（必要条件）</b> 设 \(G=\langle V,E\rangle\) 是无向哈密顿图，则对 \(V\) 的任意非空真子集 \(V_1\)，有
 \[ p(G-V_1)\le |V_1|, \]
-其中 \(p(G-V_1)\) 为 \(G-V_1\) 的连通分支数，\(|V_1|\) 为 \(V_1\) 的顶点数。<p> “必要条件”中“要条件”加框；\(p(G-V_1)\) 下注“连通分支数”，\(|V_1|\) 下注“顶点数”，“\(\le\)”下画两道红线。</p></div>
-<h3>③ 无向半哈密顿图的必要条件 <span class="pg">p.123</span></h3>
+其中 \(p(G-V_1)\) 为 \(G-V_1\) 的连通分支数，\(|V_1|\) 为 \(V_1\) 的顶点数。<p>必要条件中的 \(p(G-V_1)\) 是删除顶点集V₁后所得图的连通分支数，\(|V_1|\) 是删除的顶点数。</p></div>
+<h3>③ 无向半哈密顿图的必要条件 </h3>
 <div class="thm"><b>定理（必要条件）</b> 设 \(G=\langle V,E\rangle\) 是无向半哈密顿图，则对 \(V\) 的任意非空真子集 \(V_1\)，有
 \[ p(G-V_1)\le |V_1|+1. \]<p> 这段文字在是浅色复写的②的内容，再用在“哈密顿图”前插入“半”字、在 \(|V_1|\) 后补写“\(+1\)”。</p></div>
-<div class="example"><b>例</b>（p.123 红线框内）判断下图 \(G\) 是否为哈密顿图。
+<div class="example"><b>例</b>判断下图 \(G\) 是否为哈密顿图。
 <figure class="fig"><svg aria-label="用必要条件判定非哈密顿图的例子" role="img" viewBox="0 0 420 220">
 <g fill="none" stroke="currentColor" stroke-width="2">
 <path d="M30,110 Q110,30 200,30"></path><path d="M30,110 Q110,190 200,190"></path>
@@ -44,11 +44,11 @@
 <text x="6" y="105">x</text><text x="380" y="105">y</text><text x="205" y="22">a</text><text x="140" y="65">b</text><text x="248" y="65">c</text>
 <text x="100" y="132">d</text><text x="205" y="132">e</text><text x="292" y="132">f</text><text x="140" y="168">g</text><text x="248" y="168">h</text><text x="205" y="214">i</text>
 </g></svg>
-<figcaption>图（p.123）：图 \(G\)，11 个顶点。中部是旋转 45° 的 3×3 菱形格点：\(a\)（顶）、\(b,c\)、\(d,e,f\)（中排）、\(g,h\)、\(i\)（底）；左右各有一点 \(x,y\)。边：\(ab,ac,bd,be,ce,cf,dg,eg,eh,fh,gi,hi\)，以及 \(xa,xi,xd,ya,yi,yf\)。红圈圈出的 5 个顶点 \(a,d,e,f,i\) 组成 \(V_1\)。（菱形内部连线按原图形识读。）</figcaption></figure>
+<figcaption>图：图 \(G\)，11 个顶点。中部是旋转 45° 的 3×3 菱形格点：\(a\)（顶）、\(b,c\)、\(d,e,f\)（中排）、\(g,h\)、\(i\)（底）；左右各有一点 \(x,y\)。边：\(ab,ac,bd,be,ce,cf,dg,eg,eh,fh,gi,hi\)，以及 \(xa,xi,xd,ya,yi,yf\)。的 5 个顶点 \(a,d,e,f,i\) 组成 \(V_1\)。（菱形内部连线按图形识读。）</figcaption></figure>
 <b>解</b> 取 \(V_1=\{a,d,e,f,i\}\)，旁边画“\(V_1\)”圈与“\(G-V_1\)”圈示意。删去 \(V_1\) 后，\(G-V_1\) 剩下 \(b,c,g,h,x,y\) 共 6 个孤立顶点，所以
 \[ p(G-V_1)=6 \gt 5=|V_1|. \]
 <b>结论</b> 不满足哈密顿图的必要条件，\(G\) 不是哈密顿图。</div>
-<div class="example"><b>例</b>（p.124 红线框内）彼得森图。
+<div class="example"><b>例</b>彼得森图。
 <figure class="fig"><svg aria-label="彼得森图" role="img" viewBox="0 0 240 230">
 <g fill="none" stroke="currentColor" stroke-width="2">
 <polygon points="120,15 220,88 182,205 58,205 20,88"></polygon>
@@ -59,15 +59,13 @@
 <circle cx="120" cy="15" r="4"></circle><circle cx="220" cy="88" r="4"></circle><circle cx="182" cy="205" r="4"></circle><circle cx="58" cy="205" r="4"></circle><circle cx="20" cy="88" r="4"></circle>
 <circle cx="120" cy="65" r="4"></circle><circle cx="172" cy="103" r="4"></circle><circle cx="152" cy="165" r="4"></circle><circle cx="88" cy="165" r="4"></circle><circle cx="68" cy="103" r="4"></circle>
 </g></svg>
-<figcaption>图（p.124）：彼得森图，10 个顶点、15 条边：外圈五边形 \(u_1u_2u_3u_4u_5\)，内圈五角星 \(v_1v_3v_5v_2v_4\)（\(v_i\) 与 \(v_{i+2}\) 相连），辐边 \(u_iv_i\)（\(i=1,\dots,5\)）。用红笔在图上描出一条经过全部 10 个顶点的通路。</figcaption></figure>
-从左图出发，箭头上写“\(p(G-V_1)\le|V_1|\)”指向右边一幅红色图：把红色描出的那条通路单独拉开画出，是一条经过全部 10 个顶点的初级通路（画成两个相连的“V”形）。
-<b>结论</b> 彼得森图满足 \(p(G-V_1)\le|V_1|\)，并有哈密顿通路，标“√ 半哈密顿图”。</div>
+<figcaption>彼得森图有10个顶点、15条边。外圈为u₁u₂u₃u₄u₅，内圈的边为vᵢvᵢ₊₂，辐边为uᵢvᵢ（下标按模5）。它有经过全部10个顶点的哈密顿通路，但没有哈密顿回路。</figcaption></figure>彼得森图具有哈密顿通路，但不满足哈密顿图的全部要求。存在经过所有顶点的路径，并不意味着能够闭合成为哈密顿回路。<b>结论</b>彼得森图具有哈密顿通路，因此是半哈密顿图；它没有哈密顿回路。</div>
 <div class="supp"><b>补充讲解</b> 彼得森图满足哈密顿图的必要条件，但它不是哈密顿图（只有哈密顿通路，没有哈密顿回路）。这说明②只是必要条件，满足它不能推出是哈密顿图；它的用法是“不满足则一定不是”。</div>
-<h3>⑤ 无向半哈密顿图的充分条件 <span class="pg">p.124</span></h3>
+<h3>⑤ 无向半哈密顿图的充分条件 </h3>
 <div class="thm"><b>定理（充分条件）</b> 设 \(G\) 是 \(n\) 阶无向简单图（\(n\ge 2\)），若对 \(G\) 中任意不相邻的顶点 \(u,v\) 有
 \[ d(u)+d(v)\ge n-1, \]
 则 \(G\) 为半哈密顿图。</div>
-<h3>⑥ 无向哈密顿图的充分条件 <span class="pg">p.124</span></h3>
+<h3>⑥ 无向哈密顿图的充分条件 </h3>
 <div class="thm"><b>定理（充分条件）</b>
 <ol>
 <li>设 \(G\) 是 \(n\) 阶无向简单图（\(n\ge 3\)），若对 \(G\) 中任意不相邻的顶点 \(u,v\) 有
@@ -77,9 +75,9 @@
 \[ d(u)\ge \frac{n}{2}, \]
 则 \(G\) 是哈密顿图。</li>
 </ol><p> 1) 的文字是浅色复写的⑤，用把“\(n\ge2\)”改为“\(n\ge3\)”、把 \(n-1\) 改为 \(n\)、去掉“半”；“\(\ge n\)”下标 △。</p></div>
-<h3>⑦ 有向半哈密顿图的充分条件 <span class="pg">p.125</span></h3>
+<h3>⑦ 有向半哈密顿图的充分条件 </h3>
 <div class="thm"><b>定理</b> 设 \(D\) 是 \(n\) 阶竞赛图，则 \(D\) 是半哈密顿图。</div>
-<h3>⑧ 边不重的哈密顿回路 <span class="pg">p.125</span></h3>
+<h3>⑧ 边不重的哈密顿回路 </h3>
 <div class="def"><b>定义</b> 两条哈密顿回路 \(C_1,C_2\) 边不重，指 \(E(C_1)\cap E(C_2)=\emptyset\)。</div>
 <div class="example"><b>例</b> \(G=K_5\) 中两条边不重的哈密顿回路。
 <figure class="fig"><svg aria-label="K5 分解为五角星回路和五边形回路" role="img" viewBox="0 0 480 160">
@@ -95,9 +93,9 @@
 <circle cx="410" cy="15" r="4"></circle><circle cx="465" cy="55" r="4"></circle><circle cx="444" cy="120" r="4"></circle><circle cx="376" cy="120" r="4"></circle><circle cx="355" cy="55" r="4"></circle>
 <text font-size="14" x="40" y="150">G(K5)</text><text font-size="14" x="232" y="150">C1</text><text font-size="14" x="402" y="150">C2</text>
 </g></svg>
-<figcaption>图（p.125）：\(G=K_5\)（5 个顶点两两相连，10 条边）；\(C_1\)：五角星形哈密顿回路（5 条对角线）；\(C_2\)：五边形哈密顿回路（5 条外边）。\(E(C_1)\cap E(C_2)=\emptyset\)，且 \(C_1\cup C_2=K_5\)。</figcaption></figure>
+<figcaption>图：\(G=K_5\)（5 个顶点两两相连，10 条边）；\(C_1\)：形哈密顿回路（5 条对角线）；\(C_2\)：五边形哈密顿回路（5 条外边）。\(E(C_1)\cap E(C_2)=\emptyset\)，且 \(C_1\cup C_2=K_5\)。</figcaption></figure>
 </div>
-<h3>⑨ 完全图中边不重的哈密顿回路个数 <span class="pg">p.125–126</span></h3>
+<h3>⑨ 完全图中边不重的哈密顿回路个数 </h3>
 <div class="thm"><b>定理</b> 完全图 \(K_{2k+1}\ (k\ge1)\) 中同时有 \(k\) 条边不重的哈密顿回路，且这 \(k\) 条边不重的哈密顿回路含有 \(K_{2k+1}\) 的全部边（☆）。</div>
 <div class="example"><b>例</b> 边数核对：
 \[
@@ -106,7 +104,7 @@ K_5,\ k=2:&amp;\quad 2\times5=10=1+2+3+4=(1+4)\times\tfrac{4}{2}\\
 K_7,\ k=3:&amp;\quad 3\times7=21=1+2+3+4+5+6=(1+6)\times\tfrac{6}{2}
 \end{aligned}
 \]
-即 \(k\) 条回路每条 \(2k+1\) 条边，共 \(k(2k+1)\) 条，恰好等于 \(K_{2k+1}\) 的边数 \(\frac{(2k+1)\cdot 2k}{2}\)。<p> \(K_5\) 一行中“\(2\times5\)”与“\(1+2+3+4\)”分别圈出并用双向箭头相连，小字 10；\((1+4)\) 上标 5、\(\frac{4}{2}\) 上标 2；\(K_7\) 行 \((1+6)\) 上标 7、\(\frac{6}{2}\) 上标 3。</p></div>
+即 \(k\) 条回路每条 \(2k+1\) 条边，共 \(k(2k+1)\) 条，恰好等于 \(K_{2k+1}\) 的边数 \(\frac{(2k+1)\cdot 2k}{2}\)。<p>完全图K₅的边数为 \(5\cdot4/2=10\)，K₇的边数为 \(7\cdot6/2=21\)。</p></div>
 <div class="thm"><b>定理</b> 完全图 \(K_{2k}\ (k\ge2)\) 中同时有 \(k-1\) 条边不重的哈密顿回路，剩下的是 \(k\) 条彼此不相邻的边。</div>
 <div class="example"><b>例</b> 边数核对：
 <div class="tbl"><table><thead><tr><th>图</th><th>\(k\)</th><th>回路条数</th><th>回路用边</th><th>总边数</th><th>剩余边</th></tr></thead><tbody>
@@ -129,7 +127,7 @@ K_7,\ k=3:&amp;\quad 3\times7=21=1+2+3+4+5+6=(1+6)\times\tfrac{6}{2}
 <text font-size="14" x="5" y="16">a</text><text font-size="14" x="105" y="16">b</text><text font-size="14" x="5" y="118">c</text><text font-size="14" x="105" y="118">d</text>
 <text font-size="14" x="50" y="132">K4</text><text font-size="14" x="212" y="132">C1</text>
 </g></svg>
-<figcaption>图（p.125–126）：\(K_4\) 画成正方形加两条对角线，顶点 \(a\)（左上）\(b\)（右上）\(c\)（左下）\(d\)（右下）。\(C_1\)：\(a-c-b-d-a\)（两条竖边 \(ac,bd\) 加两条对角线 \(ad,bc\)，形如蝴蝶结）。剩下的上边 \(ab\) 与下边 \(cd\) 在用红笔描出（加粗），是 \(k=2\) 条彼此不相邻的边。</figcaption></figure>
+<figcaption>在K₄中，\(C_1=a-c-b-d-a\) 是一个哈密顿回路。未选入该回路的边ab与cd构成两条互不相邻的边。</figcaption></figure>
 </div>
 <div class="example"><b>例 2）</b> \(K_6\)
 <figure class="fig"><svg aria-label="K6 分解为两条哈密顿回路和三条不相邻边" role="img" viewBox="0 0 520 300">
@@ -145,6 +143,6 @@ K_7,\ k=3:&amp;\quad 3\times7=21=1+2+3+4+5+6=(1+6)\times\tfrac{6}{2}
 <g font-size="14"><text x="30" y="12">1</text><text x="100" y="12">2</text><text x="136" y="74">3</text><text x="104" y="138">4</text><text x="30" y="138">5</text><text x="0" y="90">6</text>
 <text x="60" y="165">C1</text><text x="240" y="165">C2</text><text x="400" y="165">剩余 3 条边（红）</text></g>
 </g></svg>
-<figcaption>图（p.126）：\(G=K_6\)，顶点按六边形位置记为 1（左上）、2（右上）、3（右）、4（右下）、5（左下）、6（左）。\(C_1\)：\(1-2-4-5-6-3-1\)，边 \(12,24,45,56,63,31\)。\(C_2\)：\(1-5-3-2-6-4-1\)，边 \(15,53,32,26,64,41\)。\(E(C_1)\cap E(C_2)=\emptyset\)。最后一幅 \(K_6\) 中用红笔标出剩下的 3 条边 \(16,25,34\)，彼此不相邻（无公共顶点）。</figcaption></figure>
+<figcaption>在K₆中，\(C_1=1-2-4-5-6-3-1\)，\(C_2=1-5-3-2-6-4-1\) 是两个边不交的哈密顿回路。未被它们覆盖的边为16、25、34，这3条边互不相邻。</figcaption></figure>
 <b>结论</b> \(K_6\)（\(k=3\)）有 \(k-1=2\) 条边不重的哈密顿回路 \(C_1,C_2\)，剩下 \(k=3\) 条彼此不相邻的边。</div>
 <div class="summary"><b>总结</b> 必要条件（\(p(G-V_1)\le|V_1|\)，半哈密顿为 \(\le|V_1|+1\)）用来否定；充分条件（\(d(u)+d(v)\ge n-1\) 得半哈密顿，\(\ge n\) 得哈密顿；\(d(u)\ge n/2\)；竞赛图必有哈密顿通路）用来肯定。\(K_{2k+1}\) 可分解为 \(k\) 条边不重的哈密顿回路；\(K_{2k}\) 有 \(k-1\) 条，并剩 \(k\) 条不相邻边。</div>

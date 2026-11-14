@@ -1,5 +1,5 @@
 
-<h3>集合恒等式 <span class="pg">p.18</span></h3>
+<h3>集合恒等式 </h3>
 <p>设 \(E\) 为全集，\(A,B,C\) 为 \(E\) 的任意子集。（\(\sim A\) 表示 \(A\) 的绝对补 \(E-A\)。）</p>
 <div class="thm"><b>① 幂等律</b> \(A\cup A=A,\quad A\cap A=A\)</div>
 <div class="thm"><b>② 交换律</b> \(A\cup B=B\cup A,\quad A\cap B=B\cap A\)</div>
@@ -7,21 +7,20 @@
 <div class="thm"><b>④ 分配律</b> \[A\cup(B\cap C)=(A\cup B)\cap(A\cup C)\] \[A\cap(B\cup C)=(A\cap B)\cup(A\cap C)\]<p>外面的运算 \(\cup\) 分配进括号”。</p></div>
 <div class="thm"><b>⑤ 德摩根律</b> \[\sim(A\cup B)=(\sim A)\cap(\sim B)\] \[\sim(A\cap B)=(\sim A)\cup(\sim B)\]</div>
 <div class="thm"><b>⑥ 吸收律</b> \[A\cup(A\cap B)=A\] \[A\cap(A\cup B)=A\]<p>外面的 \(A\) 把含 \(A\) 的那一项“吸收”掉。</p></div>
-
 <div class="supp"><b>补充讲解</b> 常见的其余恒等式还有：零律 \(A\cup E=E,\ A\cap\emptyset=\emptyset\)；同一律 \(A\cup\emptyset=A,\ A\cap E=A\)；排中律 \(A\cup\sim A=E\)；矛盾律 \(A\cap\sim A=\emptyset\)；双重否定 \(\sim\sim A=A\)；补交转换 \(A-B=A\cap\sim B\)。它们与命题逻辑的等值式一一对应（\(\cup\leftrightarrow\lor,\ \cap\leftrightarrow\land,\ \sim\leftrightarrow\neg,\ E\leftrightarrow 1,\ \emptyset\leftrightarrow 0\)）。</div>
-<h3>集族的分配律 / 德摩根律 <span class="pg">p.18–19</span></h3>
+<h3>集族的分配律 / 德摩根律 </h3>
 <p>设集族为 \(\{A_\alpha\}_{\alpha\in S}\)，\(B\) 为一集合。</p>
-<div class="thm"><b>① 分配律（并对广义交）</b> \[B\cup\Big(\bigcap\{A_\alpha\}_{\alpha\in S}\Big)=\bigcap_{\alpha\in S}(B\cup A_\alpha)\]<p> 左边的 \(\bigcap\) 下标注“广交”（广义交）；p.19 顶部重复抄写了这一式及注释。</p></div>
+<div class="thm"><b>① 分配律（并对广义交）</b> \[B\cup\Big(\bigcap\{A_\alpha\}_{\alpha\in S}\Big)=\bigcap_{\alpha\in S}(B\cup A_\alpha)\]<p>广义交要求元素属于集族中的每一个集合。</p></div>
 <div class="example"><b>例</b> \(B=\{2,3\}\)，\(\mathscr{A}=\{\underbrace{\{1,2\}}_{A_1},\underbrace{\{1,3\}}_{A_2},\underbrace{\{1,2,3\}}_{A_3}\}\)，验证 ①。
 <b>解</b> 左边：\(\bigcap\mathscr{A}=\{1\}\)，所以 \(B\cup(\bigcap\mathscr{A})=\{1,2,3\}\)（左）。
 <br/>右边：\(B\cup A_1=\{1,2,3\}\)，\(B\cup A_2=\{1,2,3\}\)，\(B\cup A_3=\{1,2,3\}\)，
 \[(B\cup A_1)\cap(B\cup A_2)\cap(B\cup A_3)=\{1,2,3\}\ (\text{右})\]
-<b>结论</b> 左 \(=\{1,2,3\}=\) 右，在两行之间画了双向箭头 \(\Updownarrow\) 表示相等。</div>
+<b>结论</b>两侧计算结果都为 \(\{1,2,3\}\)，因此相等。</div>
 <div class="thm"><b>② 分配律（交对广义并）</b> \[B\cap\Big(\bigcup\{A_\alpha\}_{\alpha\in S}\Big)=\bigcup_{\alpha\in S}(B\cap A_\alpha)\]</div>
 <div class="thm"><b>③ 德摩根律（集族形式）</b> \[\sim\Big(\bigcup\{A_\alpha\}_{\alpha\in S}\Big)=\bigcap_{\alpha\in S}(\sim A_\alpha)\] \[\sim\Big(\bigcap\{A_\alpha\}_{\alpha\in S}\Big)=\bigcup_{\alpha\in S}(\sim A_\alpha)\]<p>补号进去后并变交”。</p></div>
-<h3>证明恒等式：集合 ⇒ 命题 <span class="pg">p.19–20</span></h3>
+<h3>证明恒等式：集合 ⇒ 命题 </h3>
 <p>思路：把“\(x\) 属于某集合”翻译成命题，用命题逻辑的等值式演算，再翻译回集合。</p>
-<figure class="fig"><svg aria-label="两圆A与B相交，交集部分涂黑" role="img" viewBox="0 0 220 120"><defs><clippath id="b14vennA"><circle cx="85" cy="60" r="40"></circle></clippath></defs><circle clip-path="url(#b14vennA)" cx="135" cy="60" fill="currentColor" fill-opacity="0.45" r="40"></circle><circle cx="85" cy="60" fill="none" r="40" stroke="currentColor" stroke-width="1.5"></circle><circle cx="135" cy="60" fill="none" r="40" stroke="currentColor" stroke-width="1.5"></circle><text fill="currentColor" font-size="14" x="62" y="40">A</text><text fill="currentColor" font-size="14" x="150" y="40">B</text></svg><figcaption>图：p.19 右侧边注中的 Venn 图，两圆 A、B 相交，重叠部分涂黑，表示 \(A\cap B\)。</figcaption></figure>
+<figure class="fig"><svg aria-label="两圆A与B相交，交集部分涂黑" role="img" viewBox="0 0 220 120"><defs><clippath id="b14vennA"><circle cx="85" cy="60" r="40"></circle></clippath></defs><circle clip-path="url(#b14vennA)" cx="135" cy="60" fill="currentColor" fill-opacity="0.45" r="40"></circle><circle cx="85" cy="60" fill="none" r="40" stroke="currentColor" stroke-width="1.5"></circle><circle cx="135" cy="60" fill="none" r="40" stroke="currentColor" stroke-width="1.5"></circle><text fill="currentColor" font-size="14" x="62" y="40">A</text><text fill="currentColor" font-size="14" x="150" y="40">B</text></svg><figcaption>两圆的重叠部分表示 \(A\cap B\)。</figcaption></figure>
 <div class="example"><b>① 零律</b> 证明 \(A\cap\emptyset=\emptyset\)。
 <b>证明</b> 对任意的 \(x\)，
 \[\begin{aligned}
@@ -32,7 +31,7 @@
 \Leftrightarrow\ &amp;x\in\emptyset
 \end{aligned}\]
 <b>结论</b> \(\Rightarrow A\cap\emptyset=\emptyset\)。<p>由 \(\cap\) 转为 \(\land\)；结论“\(A\cap\emptyset=\emptyset\)”写在，用箭头引出。</p></div>
-<h4>② 集族包含 ⇒ 广义并包含 <span class="pg">p.20</span></h4>
+<h4>② 集族包含 ⇒ 广义并包含 </h4>
 <div class="thm"><b>命题</b> \(\mathscr{A}\subseteq\mathscr{B}\Rightarrow\bigcup\mathscr{A}\subseteq\bigcup\mathscr{B}\) ☆</div>
 <div class="proof"><b>证明</b> 对于任意的 \(x\in\bigcup\mathscr{A}\)，
 \[\begin{aligned}
@@ -41,5 +40,5 @@
 \Rightarrow\ &amp;\exists A\,(x\in A\land A\in\mathscr{B})\\
 \Leftrightarrow\ &amp;x\in\textstyle\bigcup\mathscr{B}
 \end{aligned}\]
-\(\Rightarrow\bigcup\mathscr{A}\subseteq\bigcup\mathscr{B}\)。<p>用 \(\mathscr{A}\subseteq\mathscr{B}\) 把 \(A\in\mathscr{A}\) 换成 \(A\in\mathscr{B}\)。有一条从条件 \(\mathscr{A}\subseteq\mathscr{B}\) 一直弯到最后结论的长箭头。\(x\in\bigcup\mathscr{B}\) 下画横线。标五角星，表示重点。</p></div>
+\(\Rightarrow\bigcup\mathscr{A}\subseteq\bigcup\mathscr{B}\)。<p>由 \(\mathscr A\subseteq\mathscr B\)，可将 \(A\in\mathscr A\) 推出 \(A\in\mathscr B\)，继而得到广义并的包含关系。</p></div>
 <div class="warn"><b>易错提醒</b>逆命题不成立：\(\bigcup\mathscr{A}\subseteq\bigcup\mathscr{B}\) 推不出 \(\mathscr{A}\subseteq\mathscr{B}\)，例如 \(\mathscr{A}=\{\{1\}\}\)，\(\mathscr{B}=\{\{1,2\}\}\)。</div>

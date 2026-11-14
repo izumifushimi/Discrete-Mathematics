@@ -1,6 +1,6 @@
-<h3>引入：大合数分解与密码 <span class="pg">p.239</span></h3>
-<p> 页首示意图：\(\underset{\text{合数}}{a}=\underset{\text{素数}}{b}\times\underset{\text{素数}}{c}\)（右边 \(b\times c\) 加了方框）。\(a\) 箭头标"账号"，\(b\times c\) 箭头标"密码"。方框右箭头指向一个被打叉的小人，旁边大椭圆中写"100位 \(a=\_\_\times\_\_\)"，意思是 \(a\) 有 100 位时，别人无法把它分解成两个素数之积。左下另画一个空椭圆，标"□0位"。</p>
-<h3>① 费马小定理 <span class="pg">p.239–241</span></h3>
+<h3>引入：大合数分解与密码 </h3>
+<p>整数分解把合数 \(a\) 写成素数之积 \(a=bc\)。相乘容易，但从乘积恢复大素因子可能很困难，这是部分公钥密码体制所利用的计算问题。难度取决于数的规模和结构，不能仅凭“100位”断言绝对无法分解。</p>
+<h3>① 费马小定理 </h3>
 <div class="thm"><b>定理 1（费马小定理）</b> 若 \(p\) 为素数，则对所有的 \(n\not\equiv 0\pmod p\)，有
 \[n^{p-1}\equiv 1\pmod p .\]
 条件 \(n\not\equiv0\pmod p\) 即 \(p\nmid n\)：\(n\) 不能为 \(p\) 的倍数。</div>
@@ -27,7 +27,7 @@ G=\{\sigma_1,\sigma_2,\dots,\sigma_p\}\quad(\sigma_k\text{ 为旋转 }k\theta)\\
 \[M=\frac1p\sum_{k=1}^{p} n^{c(\sigma_k)},\]
 <p>其中 \(c(\sigma_k)\) 为 \(\sigma_k\) 分解成不相交轮换的个数。</p>
 <p><b>以 \(p=5\) 为例</b>（\(5\theta\) 为恒等旋转）：</p>
-<div class="tbl"><table><thead><tr><th>旋转</th><th>轮换表示（笔记原写）</th><th>\(c(\sigma_k)\)</th></tr></thead><tbody>
+<div class="tbl"><table><thead><tr><th>旋转</th><th>轮换表示</th><th>\(c(\sigma_k)\)</th></tr></thead><tbody>
 <tr><td>\(5\theta\)（恒等）</td><td>\((1)(2)(3)(4)(5)\)</td><td>\(c(\sigma_5)=5\)</td></tr>
 <tr><td>\(\theta\)</td><td>\((15432)\)</td><td>\(c(\sigma_1)=1\)</td></tr>
 <tr><td>\(2\theta\)</td><td>\((13524)\)</td><td>\(c(\sigma_2)=1\)</td></tr>
@@ -47,7 +47,7 @@ G=\{\sigma_1,\sigma_2,\dots,\sigma_p\}\quad(\sigma_k\text{ 为旋转 }k\theta)\\
 <text x="495" y="38">2</text><text x="528" y="62">3</text><text x="518" y="105">4</text><text x="472" y="105">5</text><text x="466" y="62">1</text>
 </g>
 </svg>
-<figcaption>图（p.240）：五个圆依次为旋转 \(5\theta\)（恒等）、\(\theta\)、\(2\theta\)、\(3\theta\)、\(4\theta\) 后的珠子位置。按"顶、右、右下、左下、左"五个位置读：恒等 1,2,3,4,5；\(\theta\)：5,1,2,3,4；\(2\theta\)：4,5,1,2,3；\(3\theta\)：3,4,5,1,2；\(4\theta\)：2,3,4,5,1。在 \(\theta\) 的圆中，红笔标出相邻两珠之间的夹角 \(\theta\)。</figcaption></figure>
+<figcaption>五颗珠子旋转 \(5\theta,\theta,2\theta,3\theta,4\theta\) 后，从顶部起顺时针读出的编号分别为12345、51234、45123、34512、23451，其中 \(\theta=72^\circ\)。</figcaption></figure>
 <p><b>一般 \(p\) 为素数时</b>：旋转 \(\theta,2\theta,\dots,(p-1)\theta\) 都只构成一个长度为 \(p\) 的轮换，即
 \[c(\sigma_1)=c(\sigma_2)=\dots=c(\sigma_{p-1})=1,\qquad c(\sigma_p)=p\ \ (p\theta\text{ 为恒等}).\]</p>
 \[
@@ -70,7 +70,7 @@ M&amp;=\frac1p\sum_{k=1}^{p}n^{c(\sigma_k)}=\frac1p\big(\underbrace{n^1+n^1+\dot
 \]
 </div>
 <div class="supp"><b>补充讲解</b> 关键在于 \(p\) 是素数：\(1\le k\le p-1\) 时 \(\gcd(k,p)=1\)，旋转 \(k\theta\) 的轮换长度为 \(p/\gcd(k,p)=p\)，所以只有一个轮换。若 \(p\) 是合数，会出现 \(c(\sigma_k)\gt1\) 的旋转，推导不再成立。</div>
-<h3>② 素数模下 \(x^2\equiv1\) 只有平凡根 <span class="pg">p.241–242</span></h3>
+<h3>② 素数模下 \(x^2\equiv1\) 只有平凡根 </h3>
 <div class="thm"><b>定理 2</b> 如果 \(n\) 为素数，则在域 \(\mathbb{Z}_n\) 中方程 \(x^2\equiv1\pmod n\)（\(x\in\{0,1,\dots,n-1\}\)，即 \(0\le x\le n-1\)）的根只有两个：
 \[x=1,\qquad x=n-1 .\]</div>
 <div class="example"><b>例</b>
@@ -92,10 +92,10 @@ x^2\equiv1\pmod n
 \]
 <p>因为 \(0\le x\le n-1\)，所以 \(-1\le x-1\le n-2\)，其中 \(n\) 的倍数只有 \(0\)；\(1\le x+1\le n\)，其中 \(n\) 的倍数只有 \(n\)（\(n\mid n\) ✓），于是 \(x+1=n\)，即 \(x=n-1\)。</p>
 </div>
-<h3>③ 定理 3：\(n-1=2^q\cdot m\) <span class="pg">p.242</span></h3>
+<h3>③ 定理 3：\(n-1=2^q\cdot m\) </h3>
 <div class="thm"><b>定理 3</b> 设 \(n\) 为奇素数，根据除法，存在正整数 \(q\) 和 \(m\)，其中 \(q\ge1\)（原文），\(m\) 为奇数，使得
 \[n-1=2^q\cdot m .\]</div>
-<h3>④ 构造平方序列 <span class="pg">p.242–243</span></h3>
+<h3>④ 构造平方序列 </h3>
 <p>给定正整数 \(a\)（\(2\le a\lt n\)），构造递推公式
 \[a^{2^k\cdot m}\pmod n,\qquad k=0,1,2,\dots,q,\]
 即序列</p>
@@ -107,7 +107,7 @@ x^2\equiv1\pmod n
 <p>由定理 2，\(a^{2^{q-1}\cdot m}\) 为 \(1\) 或 \(n-1\)。所以 \(n\) 为素数时，序列形如</p>
 \[a^m\pmod n,\ a^{2m}\pmod n,\ \dots,\ 1\ \text{或}\ n-1,\ 1 .\]
 
-<h3>⑤ Miller–Rabin 算法 <span class="pg">p.243–244</span></h3>
+<h3>⑤ Miller–Rabin 算法 </h3>
 <p> \(561\)：最小的绝对假素数（Carmichael 数），\(561=3\times11\times17\)。它对所有与它互素的 \(a\) 都满足 \(a^{560}\equiv1\pmod{561}\)，仅用费马小定理检测不出它是合数。</p>
 <div class="example"><b>例</b> \(a=7,\ n=561\)，用 Miller–Rabin 算法检测。
 <p><b>解</b></p>
@@ -132,11 +132,11 @@ x^2\equiv1\pmod n
 \end{aligned}
 \]
 <p>（再用中国剩余定理核对：\(7^{35}\bmod3=1\)，\(7^{35}\bmod11=10\)，\(7^{35}\bmod17=3\)；而 \(241\bmod3=1,\ 241\bmod11=10,\ 241\bmod17=3\)，一致。）</p>
-<p>③ 判断：最后一项 \(7^{560}\equiv1\)，费马检验通过；但它前一项为 \(67\)。笔记在 67 上画红圈并打红色斜线，下注"应为 1 或 560"（\(n-1=560\)）。</p>
+<p>最后一项 \(7^{560}\equiv1\pmod{561}\)，通过费马检验；但平方链中的前一项为67，既非1也非560，却满足 \(67^2\equiv1\pmod{561}\)。因此发现了非平凡的1的平方根，561是合数。</p>
 <p><b>结论</b>：\(67^2\equiv1\pmod{561}\) 而 \(67\neq1,\ 67\neq560\)，与定理 2 矛盾，所以 \(561\) 为合数。</p>
 </div>
 <div class="supp"><b>补充讲解</b> 找到非平凡平方根 \(x=67\) 后可直接得到因子：\(561\mid(67-1)(67+1)=66\times68\)，而 \(\gcd(66,561)=33=3\times11\)，\(\gcd(68,561)=17\)，正好分解出 \(561=3\times11\times17\)。</div>
-<h4>判定规则（p.244 下半页的四种序列形态）</h4>
+<h4>判定规则</h4>
 <p>序列 \(a^m,a^{2m},\dots,a^{2^q m}\pmod n\) 的四种情形：</p>
 <div class="tbl"><table><thead><tr><th>序列形态</th><th>判定</th></tr></thead><tbody>
 <tr><td>\(\_\ \_\ \_\ \_\ \cdots\ \neq1\)（最后一项不为 1）</td><td>✗ 合数（违反定理 1）</td></tr>
@@ -144,7 +144,7 @@ x^2\equiv1\pmod n
 <tr><td>\(\cdots\ \boxed{\neq n-1}\ (\neq1),\ 1,\ 1\)（第一个 1 前面既不是 1 也不是 \(n-1\)）</td><td>✗ 合数（违反定理 2）</td></tr>
 <tr><td>\(1,\ 1,\ 1,\ 1,\ \cdots,\ 1,\ 1,\ 1\)（全为 1）</td><td>✓ 素数</td></tr>
 </tbody></table></div>
-<p>从末项向前找第一个不是 1 的项；第三行把"\(\neq1\)、\(\neq n-1\)"框起并红圈，判"合"。本例 \(561\) 的序列 \(241,298,166,67,1\) 属于第三种情形。</p>
+<p>从末项向前找第一个不是 1 的项；第三行把"\(\neq1\)、\(\neq n-1\)"框起并，判"合"。本例 \(561\) 的序列 \(241,298,166,67,1\) 属于第三种情形。</p>
 <div class="warn"><b>易错提醒</b>
 <ul>
 <li>"✓ 素"只表示通过了以 \(a\) 为底的这一轮检测，\(n\) 是"可能素数"，不是证明为素数；换多个底 \(a\) 重复检测可把出错概率降得很低。"✗ 合"则是确定的结论。</li>

@@ -1,5 +1,5 @@
 
-<h3>一次同余方程及有解条件 <span class="pg">p.269</span></h3>
+<h3>一次同余方程及有解条件 </h3>
 <div class="def"><b>定义</b> ① 设 \(m\gt0\)，方程 \(ax\equiv c\pmod m\) 称为一次同余方程。</div>
 <div class="example"><b>例 1</b> \(10x\equiv1\pmod 5\) 无解。</div>
 <div class="supp"><b>补充讲解</b> \(10x\) 总是 5 的倍数，\(10x\equiv0\pmod5\)，不可能同余于 1；也可由下面的定理看出：\(\gcd(10,5)=5\nmid1\)。</div>
@@ -15,8 +15,8 @@
 8\times5 &amp;= 40 \equiv 4 \pmod 6\quad ✓\quad x=5
 \end{aligned} \]
 余数按 \(0,2,4\) 循环。所有解为 \(\dots,-4,-1,2,5,8,\dots\)（即 \(x\equiv2\pmod3\)）。
-<b>结论</b> \(x\) 的最小正整数解为 \(2\)。<p>循环； \(x=2\)、\(x=5\) 标在打 ✓ 的两行；解序列用红色波浪线标出，\(2\) 画圈。</p></div>
-<h3>模逆 <span class="pg">p.269–270</span></h3>
+<b>结论</b> \(x\) 的最小正整数解为 \(2\)。<p>模6下的解为 \(x\equiv2,5\pmod6\)。</p></div>
+<h3>模逆 </h3>
 <div class="def"><b>定义（模逆）</b> ③ 如果 \(ab\equiv1\pmod m\)，则 \(b\) 为 \(a\) 的模 \(m\) 逆，记为 \(a^{-1}\pmod m\) 或 \(a^{-1}\)。\(a^{-1}\pmod m\) 为方程 \(ax\equiv1\pmod m\) 的解。</div>
 <div class="thm"><b>定理</b>
 <ol>
@@ -24,7 +24,7 @@
 <li>\(a\) 与 \(m\) 互素 \(\iff a^{-1}\) 唯一。</li>
 </ol></div>
 <div class="supp"><b>补充讲解</b> 这里“唯一”指在模 \(m\) 意义下唯一，即在 \(0,1,\dots,m-1\) 中恰有一个；若 \(b\) 是逆，则 \(b+km\) 也都满足 \(ab\equiv1\)。</div>
-<div class="example"><b>例 3</b> 求 \(5\) 的模 \(7\) 逆，即 \(5^{-1}\pmod7\)：求 \(b\) 使 \(5b\equiv1\pmod7\)。 <span class="pg">p.270–271</span>
+<div class="example"><b>例 3</b> 求 \(5\) 的模 \(7\) 逆，即 \(5^{-1}\pmod7\)：求 \(b\) 使 \(5b\equiv1\pmod7\)。
 <p><b>解法 ①（逐一试）</b> 解 \(5x\equiv1\pmod7\)，取 \(x=0,1,2,3,4,5,6\) 逐一检验，\(x=3\) 时 \(5\times3=15\equiv1\pmod7\)。所以 \(5^{-1}\pmod7\) 为 \(3\)。</p>
 <p><b>解法 ②（辗转相除）</b> 由 \(5b\equiv1\pmod7\)，\(5b\div7=\square\cdots1\)，即
 \[ 5b = 7a + 1 , \]
@@ -40,20 +40,20 @@
 &amp;= 5\times3 + 7\times(-2)
 \end{aligned} \]
 \(\therefore\ 5\times3+7\times(-2)=1\)，对应 \(b=3\)，\(a=-2\)。</p>
-<b>结论</b> \(b=3\)，即 \(5^{-1}\equiv3\pmod7\)。验算：\(5\times3=15=2\times7+1\)。<p>各步余数及回代方向；余数 \(1\) 画圈后用长箭头引到回代第一行；结果中 \(3\) 标 \(b\)，\(-2\) 标 \(a\)；\(b=3\) 红圈双重标出。</p></div>
-<h3>欧拉定理与费马小定理 <span class="pg">p.271–272</span></h3>
+<b>结论</b> \(b=3\)，即 \(5^{-1}\equiv3\pmod7\)。验算：\(5\times3=15=2\times7+1\)。<p>各步余数及回代方向；余数 \(1\) 画圈后用长箭头引到回代第一行；结果中 \(3\) 标 \(b\)，\(-2\) 标 \(a\)；\(b=3\) 双重标出。</p></div>
+<h3>欧拉定理与费马小定理 </h3>
 <div class="def"><b>定义（欧拉函数）</b> ① 对任意正整数 \(n\)，把 \(\{0,1,\dots,n-1\}\) 中与 \(n\) 互素的数的个数记作 \(\varphi(n)\)。</div>
 <div class="example"><b>例 4</b>
 \[ \varphi(1)=\varphi(2)=1,\quad \varphi(3)=\varphi(4)=2,\quad \varphi(5)=4,\quad \varphi(6)=2 . \]
 <ul>
-<li>\(n=5\)：\(\{0,1,2,3,4\}\) 中 \(0\) 划掉，\(1,2,3,4\) 都打 ✓，\(\varphi(5)=4\)。</li>
+<li>在 \(\{0,1,2,3,4\}\) 中，与5互素的元素为1、2、3、4，因此 \(\varphi(5)=4\)。</li>
 <li>\(n=6\)：\(0,1,2,3,4,5\) 依次标 ✗ ✓ ✗ ✗ ✗ ✓，只有 \(1, 5\) 与 \(6\) 互素，\(\varphi(6)=2\)。</li>
 </ul></div>
 <div class="thm"><b>结论</b>
 <ul>
 <li>当 \(n\) 为素数，\(\varphi(n)=n-1\)；</li>
 <li>当 \(n\) 为合数，\(\varphi(n)\lt n-1\)。</li>
-</ul><p> \(\varphi(2)\)、\(\varphi(3)\) 用红圈标出，\(\varphi(5)=4\) 用黑圈标出，对照素数情形 \(\varphi(n)=n-1\)。</p></div>
+</ul><p> \(\varphi(2)\)、\(\varphi(3)\) 用标出，\(\varphi(5)=4\) 用标出，对照素数情形 \(\varphi(n)=n-1\)。</p></div>
 <div class="thm"><b>欧拉定理</b> 设 \(a\) 与 \(n\) 互素，则
 \[ a^{\varphi(n)}\equiv1\pmod n . \]</div>
 <div class="thm"><b>费马小定理</b> 设 \(p\) 为素数，\(a\) 与 \(p\) 互素，则

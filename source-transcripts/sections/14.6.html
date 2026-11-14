@@ -1,7 +1,7 @@
-<h3>从 \(\mathbb{Z}\) 到 \(\mathbb{Z}_n\) <span class="pg">p.215</span></h3>
+<h3>从 \(\mathbb{Z}\) 到 \(\mathbb{Z}_n\) </h3>
 <p>），箭头标出 \(n\) 落回 \(0\)。右上角：\(\mathbb{Z}_2=\{0,1\}\)，\(\mathbb{Z}_3=\{0,1,2\}\)。</p>
 <div class="supp"><b>补充讲解</b> 整数除以 \(n\) 的余数只能是 \(0,1,\dots,n-1\)，这就是 \(\mathbb{Z}_n\) 的元素；\(n\) 除以 \(n\) 余 0，所以"\(n\)"回到 0。</div>
-<h3>正规化子 <span class="pg">p.215</span></h3>
+<h3>正规化子 </h3>
 <div class="def"><b>（②-1）元素的正规化子</b> 设 \(G\) 为群，\(a\in G\)：
 \[N(a)=\{x\mid x\in G,\ xa=ax\}\]
 。</div>
@@ -24,21 +24,21 @@
 <div class="def"><b>（②-2）\(H\) 的正规化子</b> 设 \(G\) 为群，\(H\le G\)：
 \[N(H)=\{x\mid x\in G,\ xHx^{-1}=H\}\]
 其中 \(xHx^{-1}\) 叫 \(H\) 的共轭子群（\(H\le G\)），
-\[xHx^{-1}=\{xhx^{-1}\mid h\in H\}.\]<p> \(xHx^{-1}=H\) 用红色双线标出，红箭头标注"共轭子群（\(H\le G\)）"，下面写出 \(xHx^{-1}\) 的定义。</p></div>
-<h3>子群的交与并 <span class="pg">p.215–216</span></h3>
+\[xHx^{-1}=\{xhx^{-1}\mid h\in H\}.\]<p> \(xHx^{-1}=H\) ，红箭头标注"共轭子群（\(H\le G\)）"，下面写出 \(xHx^{-1}\) 的定义。</p></div>
+<h3>子群的交与并 </h3>
 <div class="thm"><b>（③）子群的交并</b> 设 \(G\) 为群，\(H,K\le G\)，则
 <ol>
 <li>\(H\cap K\le G\)；</li>
 <li>\(H\cup K\le G\ \Leftrightarrow\ H\subseteq K\lor K\subseteq H\)。</li>
 </ol><p> 画一个大圈套小圈，标注 \(K\subseteq H\)。</p></div>
 <div class="supp"><b>补充讲解</b> 两个子群的并一般不是子群：在 \(\langle\mathbb{Z},+\rangle\) 中 \(2\in 2\mathbb{Z}\)、\(3\in 3\mathbb{Z}\)，但 \(2+3=5\notin 2\mathbb{Z}\cup 3\mathbb{Z}\)。</div>
-<h3>\(AB\) 构成子群的条件 <span class="pg">p.216</span></h3>
+<h3>\(AB\) 构成子群的条件 </h3>
 <div class="thm"><b>（④）</b> 设 \(A,B\le G\)，定义 \(AB=\{ab\mid a\in A,\ b\in B\}\)，则
 <ol>
 <li>\(AB\le G\ \Leftrightarrow\ AB=BA\)；</li>
 <li>\(AB\le G\ \Leftrightarrow\ AB=\langle A\cup B\rangle\)。</li>
 </ol></div>
-<h3>Klein 四元群 <span class="pg">p.216–217</span></h3>
+<h3>Klein 四元群 </h3>
 <div class="def"><b>（⑤）Klein 四元群</b> \(\{e,a,b,c\}\)：
 <ol>
 <li>\(e\) 为单位元；</li>
@@ -55,7 +55,7 @@
 <br/>\(a\)：绕水平中轴线翻转 180°；
 <br/>\(b\)：绕垂直中轴线翻转 180°；
 <br/>\(c\)：绕中心点转 180°。</p>
-<div class="example"><b>例 \(ab=c\)</b>（p.216 底部到 p.217 顶部）
+<div class="example"><b>例 \(ab=c\)</b>
 <figure class="fig"><svg aria-label="矩形先做a再做b等于c" role="img" viewBox="0 0 520 170">
 <defs><marker id="ar146b" markerHeight="8" markerWidth="8" orient="auto" refX="7" refY="4"><path d="M0,0 L8,4 L0,8" fill="none" stroke="currentColor"></path></marker></defs>
 <rect fill="none" height="50" stroke="currentColor" width="100" x="30" y="30"></rect>
@@ -81,7 +81,7 @@
 \[\begin{aligned}\langle a\rangle\langle b\rangle=\langle b\rangle\langle a\rangle&amp;=\{e^2,eb,ae,ab\}\\&amp;=\{a,b,c,e\}=G\end{aligned}\]
 \[\begin{aligned}AB\le G\ \Leftrightarrow\ AB&amp;=\langle A\cup B\rangle\\&amp;=\langle\{e,a,b\}\rangle\\&amp;=\{e,a,b,c\}=G\end{aligned}\]
 （ \(a\cdot b=c\)。）<b>结论</b> \(AB=G\)，是子群。</div>
-<h3>子群格 <span class="pg">p.217–218</span></h3>
+<h3>子群格 </h3>
 <div class="def"><b>（⑥）子群格</b> 设 \(G\) 为群，令 \(S=\{H\mid H\text{ 是 }G\text{ 的子群}\}\)，即 \(G\) 的所有子群的集合。
 <p>在 \(S\) 上定义关系 \(R\)：\(\forall A,B\in S\)，\(ARB\ \Leftrightarrow\ A\) 为 \(B\) 的子群。</p>
 <p>偏序：自反 ✓，反对称 ✓，传递 ✓。</p>

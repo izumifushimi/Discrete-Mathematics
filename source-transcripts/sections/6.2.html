@@ -1,13 +1,13 @@
 
-<h3>① 图论基本定理（握手定理） <span class="pg">p.87</span></h3>
+<h3>① 图论基本定理（握手定理） </h3>
 <div class="thm"><b>定理（无向图）</b> 设 \(G=\langle V,E\rangle\) 为无向图，\(V=\{v_1,v_2,\dots,v_n\}\)，\(|E|=m\)，则
 \[ \sum_{i=1}^{n} d(v_i)=2m \]
 </div>
 <div class="thm"><b>定理（有向图）</b> 设 \(D=\langle V,E\rangle\) 为有向图，\(V=\{v_1,v_2,\dots,v_n\}\)，\(|E|=m\)，则
 \[ \sum_{i=1}^{n} \cdots \]
-<p> 有向图一行只写了求和号 \(\sum_{i=1}^{n}\)，后面没有写完，下面空了一段。</p></div>
+<p>有向图各顶点的入度之和与出度之和都等于边数：\[\sum_{v\in V}d^-(v)=\sum_{v\in V}d^+(v)=|E|.\]</p></div>
 <div class="supp"><b>补充讲解</b> 有向图握手定理的通行写法：\(\sum_{i=1}^n d(v_i)=2m\)，且 \(\sum_{i=1}^n d^+(v_i)=\sum_{i=1}^n d^-(v_i)=m\)。每条弧给起点贡献 1 个出度、给终点贡献 1 个入度。推论：任何图中奇度顶点个数为偶数。</div>
-<h3>② 简单图与 k-正则图 <span class="pg">p.87</span></h3>
+<h3>② 简单图与 k-正则图 </h3>
 <div class="def"><b>定义（简单图）</b> 既无环，也无平行边的图称为简单图。
 \[ \Rightarrow\quad 0\le \Delta(G)\le n-1 \]
 </div>
@@ -27,7 +27,7 @@
 <line x1="20" x2="100" y1="20" y2="100"></line><line x1="100" x2="20" y1="20" y2="100"></line>
 <circle cx="20" cy="20" r="4"></circle><circle cx="100" cy="20" r="4"></circle><circle cx="20" cy="100" r="4"></circle><circle cx="100" cy="100" r="4"></circle>
 </g></svg><figcaption>图：3-正则图（即 \(K_4\)）：4 个顶点，任意两点之间都有边，共 6 条边，每点度数为 3。</figcaption></figure>
-<h3>③ 度数列 <span class="pg">p.87–88</span></h3>
+<h3>③ 度数列 </h3>
 <div class="def"><b>定义（度数列）</b> 设 \(G=\langle V,E\rangle\)，\(V=\{v_1,v_2,\dots,v_n\}\)，\(G\) 的度数列为
 \[ d=(d(v_1),d(v_2),\dots,d(v_n)) \]</div>
 <div class="example"><b>例</b> 求下图的度数列。
@@ -46,14 +46,14 @@
 \[ \begin{aligned} d&amp;=(d_1,d_2,d_3,d_4,d_5)\\ &amp;=(5,1,2,3,3) \end{aligned} \]
 </div>
 <div class="supp"><b>补充讲解</b> 核对：\(d(v_1)=2(\text{环})+1+2=5\)，\(d(v_2)=1\)，\(d(v_3)=2\)，\(d(v_4)=1+2=3\)，\(d(v_5)=2+1=3\)。度数和 \(14=2\times 7\)，符合握手定理。</div>
-<h3>④ 可图化 <span class="pg">p.88</span></h3>
+<h3>④ 可图化 </h3>
 <div class="def"><b>定义（可图化）</b> 设非负整数列 \(d=(d_1,d_2,\dots,d_n)\)，若存在图 \(G\)，使 \(G\) 的度数列是 \(d\)，则称 \(d\) 为可图化的。
 \[ \text{度数列}\longrightarrow\text{图 }G \]</div>
 <div class="thm"><b>定理</b>
 \[ d\ \text{可图化}\iff \sum_{i=1}^n d_i=d_1+d_2+\cdots+d_n\equiv 0\pmod 2 \]
 </div>
 <div class="supp"><b>补充讲解</b> 这里的“图”允许环和平行边。必要性由握手定理得到；充分性：把奇数项两两配对连边，剩下的度数用环补足即可。</div>
-<h3>⑤ 可简单图化与 Havel 定理 <span class="pg">p.88–89</span></h3>
+<h3>⑤ 可简单图化与 Havel 定理 </h3>
 <div class="def"><b>定义（可简单图化）</b> 1）设非负整数列 \(d=(d_1,d_2,\dots,d_n)\)，若存在<u>简单图</u> \(G\) 以 \(d\) 为度数列，则称 \(d\) 可简单图化。
 \[ \text{度数列}\Rightarrow\text{简单图 }G \]
 </div>
@@ -63,40 +63,22 @@
 \[ d\ \text{可简单图化}\iff d'=(d_2-1,\ d_3-1,\ \dots,\ d_{d_1+1}-1,\ d_{d_1+2},\ \dots,\ d_n)\ \text{可简单图化} \]
 </div>
 <div class="supp"><b>补充讲解</b> 该定理通行名称为 Havel–Hakimi 定理。用法：每轮去掉最大项 \(d_1\)，把其后 \(d_1\) 项各减 1，得到的新序列重新降序排列后继续。出现负数则不可简单图化；最后全为 0 则可简单图化。</div>
-<p> 最底部被分页截断的一行，与顶部“eg(1) d=(4,4,3,3,2,2) 可简单图化?”为同一行，内容按转写。</p>
-<div class="example"><b>例 (1)</b> \(d=(4,4,3,3,2,2)\) 可简单图化？ <span class="pg">p.89</span><br/>
-<b>解</b> 圈出首项 4 并划掉，在其后 4 项下加红三角：
-\[ \begin{aligned}
-d&amp;=(\underline{4},4,3,3,2,2)\quad(\text{首项 4 被划去})\\
-d'&amp;=(3,2,2,1,2)\to d'=(3,2,2,2,1)\\
-d''&amp;=(1,1,1,1)\\
-d'''&amp;=(0,1,1)=(1,1,0)\\
-d''''&amp;=(0,0)
-\end{aligned} \]
-每一步圈出当前首项（3、1、1），并在要减 1 的项下加三角记号。从 \(d''=(1,1,1,1)\) 引一条红色箭头，指向一个由两条互不相交的边组成的图（4 个顶点、2 条边，每点度数 1），表示 \((1,1,1,1)\) 可由该简单图实现。
-<figure class="fig"><svg aria-label="两条不相交的边" role="img" viewBox="0 0 120 80">
+<div class="example"><b>例 (1)</b> \(d=(4,4,3,3,2,2)\) 可简单图化？ <br/>
+<b>解</b>\[\begin{aligned}d&amp;=(4,4,3,3,2,2)\\d^\prime&amp;=(3,2,2,2,1)\\d^{\prime\prime}&amp;=(1,1,1,1)\\d^{\prime\prime\prime}&amp;=(1,1,0)\\d^{(4)}&amp;=(0,0)\end{aligned}\]每次删除首项，并从其后相应数量的项中各减1，再重新按非增顺序排列。最终得到全零序列，故可简单图化。<figure class="fig"><svg aria-label="两条不相交的边" role="img" viewBox="0 0 120 80">
 <g fill="none" stroke="currentColor"><circle cx="40" cy="15" r="4"></circle><circle cx="40" cy="65" r="4"></circle><line x1="40" x2="40" y1="19" y2="61"></line>
 <circle cx="80" cy="15" r="4"></circle><circle cx="80" cy="65" r="4"></circle><line x1="80" x2="80" y1="19" y2="61"></line></g>
 </svg><figcaption>图：4 个顶点，2 条不相交的边，度数列 \((1,1,1,1)\)。</figcaption></figure>
 <b>结论</b> 最后得到 \((0,0)\)，故 \(d=(4,4,3,3,2,2)\) 可简单图化。</div>
-<div class="example"><b>例 (2)</b> \(d=(5,5,4,4,2,2)\) 可简单图化？ <span class="pg">p.89</span><br/>
-<b>解</b>
-\[ \begin{aligned}
-d&amp;=(\underline{5},5,4,4,2,2)\quad(\text{首项 5 被划去})\\
-d'&amp;=(4,3,3,1,1)\\
-d''&amp;=(2,2,0,0)\\
-d'''&amp;=(1,-1,0)
-\end{aligned} \]
-依次圈出首项 5、4、2，并在其后要减 1 的项下加红三角；最后一行 \(d'''=(1,-1,0)\) 用红圈圈出。
-<b>结论</b> 出现负数 \(-1\)，故 \(d=(5,5,4,4,2,2)\) 不可简单图化。</div>
-<h3>⑥ 可简单图化充要条件（Erdős–Gallai） <span class="pg">p.89</span></h3>
+<div class="example"><b>例 (2)</b> \(d=(5,5,4,4,2,2)\) 可简单图化？ <br/>
+<b>解</b>\[\begin{aligned}d&amp;=(5,5,4,4,2,2)\\d^\prime&amp;=(4,3,3,1,1)\\d^{\prime\prime}&amp;=(2,2,0,0)\\d^{\prime\prime\prime}&amp;=(1,-1,0)\end{aligned}\]出现负数，因此不可简单图化。<b>结论</b> 出现负数 \(-1\)，故 \(d=(5,5,4,4,2,2)\) 不可简单图化。</div>
+<h3>⑥ 可简单图化充要条件（Erdős–Gallai） </h3>
 <div class="thm"><b>定理 2（P. Erdős，T. Gallai）</b> 设非负整数列 \(d=(d_1,d_2,\dots,d_n)\) 满足
 \[ n-1\ge d_1\ge d_2\ge\cdots\ge d_n\ge 0 \]
 则
 \[ d\ \text{可简单图化}\iff\begin{cases} d_1+d_2+\cdots+d_n\equiv 0\pmod 2\\[2pt] \text{并且对 } r=1,2,\dots,n \text{ 有}\\[2pt] d_1+d_2+\cdots+d_r\le r(r-1)+\min\{r,d_{r+1}\}+\min\{r,d_{r+2}\}+\cdots+\min\{r,d_n\} \end{cases} \]
 </div>
 <div class="supp"><b>补充讲解</b> 不等式的含义：前 \(r\) 个顶点之间最多 \(r(r-1)/2\) 条边，贡献度数至多 \(r(r-1)\)；其余每个顶点 \(v_k\) 最多与前 \(r\) 个顶点连 \(\min\{r,d_k\}\) 条边。</div>
-<div class="example"><b>例 (1)</b> \(d=(5,5,3,3,2,2,2)\) <span class="pg">p.90</span><br/>
+<div class="example"><b>例 (1)</b> \(d=(5,5,3,3,2,2,2)\) <br/>
 <b>解</b> \(n=7\)，逐个 \(r\) 检验：
 <div class="tbl"><table><thead><tr><th>\(r\)</th><th>左边 \(d_1+\cdots+d_r\)</th><th></th><th>右边</th></tr></thead><tbody>
 <tr><td>1</td><td>\(d_1=5\)</td><td>\(\le\)</td><td>\(1\times 0+1+1+1+1+1+1=6\)</td></tr>
@@ -109,13 +91,13 @@ d'''&amp;=(1,-1,0)
 </tbody></table></div>
 <b>结论</b> 度数和 \(22\) 为偶数，且 \(r=1,\dots,7\) 全部满足不等式，故 \(d\) 可简单图化。</div>
 <div class="supp"><b>补充讲解</b> 省略号部分：\(r=5\) 时 \(20+\min\{5,2\}+\min\{5,2\}=24\)；\(r=6\) 时 \(30+\min\{6,2\}=32\)；\(r=7\) 时后面没有项，为 \(42+0\)。</div>
-<div class="example"><b>例 (2)</b> \(d=(6,6,5,4,3,3,1)\) <span class="pg">p.90</span><br/>
+<div class="example"><b>例 (2)</b> \(d=(6,6,5,4,3,3,1)\) <br/>
 <b>解</b>
 \[ r=2:\quad d_1+d_2=12\ \gt\ 2\times 1+2+2+2+2+1=11 \]
 
 <b>结论</b> \(r=2\) 时不等式不成立，故 \(d\) 不可简单图化。</div>
 <div class="supp"><b>补充讲解</b> 右边各项为 \(\min\{2,5\},\min\{2,4\},\min\{2,3\},\min\{2,3\},\min\{2,1\}=2,2,2,2,1\)，合计 \(2+9=11\)，计算正确。直观上：两个度为 6 的顶点在 7 阶简单图中都与其余所有点相邻，于是每个点度数至少为 2，与 \(d_7=1\) 矛盾。</div>
-<h3>判定流程 <span class="pg">p.90</span></h3>
+<h3>判定流程 </h3>
 <div class="summary"><b>总结</b> 流程图：
 \[ \begin{aligned}
 &amp;G\\

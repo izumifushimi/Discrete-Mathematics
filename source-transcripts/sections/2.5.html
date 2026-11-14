@@ -1,13 +1,13 @@
 
-<h3>① 等价关系的定义 <span class="pg">p.33</span></h3>
+<h3>① 等价关系的定义 </h3>
 <div class="def"><b>定义（等价关系）</b> 设 \(A\ne\emptyset\)，\(R\subseteq A\times A\)，若 \(R\) 是自反、对称、传递的，则称 \(R\) 为等价关系。</div>
-<h3>② 等价类 <span class="pg">p.33</span></h3>
+<h3>② 等价类 </h3>
 <div class="def"><b>定义（等价类）</b> 设 \(R\) 为 \(A\) 上的等价关系，\(A\ne\emptyset\)，
 \[[x]_R=\{y\mid y\in A\land xRy\}\]</div>
 <div class="example"><b>例 1</b> \(A=\{1,2,3,4,5,6,7,8\}\)，
 \[R_3=\{\langle x,y\rangle\mid x,y\in A\land x\equiv y\pmod 3\}\]
 
-<p> 按除以 3 的余数分组并圈出：“1 4 7 ÷3 余 ①”，“2 5 ÷3 余 ②”，“8 6 ÷3 余 ⓪”（第三组首个数字写得像 8）。</p>
+<p>按模3余数分类，三个等价类分别为 \(\{1,4,7\}\)、\(\{2,5,8\}\)、\(\{3,6\}\)。</p>
 <p><b>解</b> 关系图如下。</p>
 <figure class="fig"><svg aria-label="模3同余关系的关系图" role="img" viewBox="0 0 440 200">
 <defs><marker id="ar25" markerHeight="7" markerWidth="7" orient="auto" refX="9" refY="5" viewBox="0 0 10 10"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"></path></marker></defs>
@@ -25,18 +25,18 @@
 <circle cx="382" cy="48" r="10"></circle><circle cx="382" cy="152" r="10"></circle>
 </g>
 <g fill="currentColor" font-size="14"><text x="70" y="40">1</text><text x="10" y="150">4</text><text x="155" y="140">7</text><text x="230" y="60">2</text><text x="230" y="150">5</text><text x="350" y="60">3</text><text x="350" y="150">6</text></g>
-</svg><figcaption>图：三个连通部分。第一部分顶点 1、4、7，两两之间有双向边，每个顶点有环；第二部分顶点 2、5，双向边加各自的环；第三部分顶点 3、6，双向边加各自的环。（笔记图中没有画顶点 8）</figcaption></figure>
+</svg><figcaption>关系图分成三个连通分支，顶点集分别为 \(\{1,4,7\}\)、\(\{2,5,8\}\)、\(\{3,6\}\)。各分支内任意两顶点之间有双向边，每个顶点都有环。</figcaption></figure>
 <p><b>结论</b> \([1]=[4]=[7]=\{1,4,7\}\)，\([2]=[5]=\{2,5\}\)，\([3]=[6]=\{3,6\}\)。</p>
 </div>
-<h3>③ 等价类的性质 <span class="pg">p.33–34</span></h3>
+<h3>③ 等价类的性质 </h3>
 <div class="thm"><b>性质</b> 设 \(R\) 为 \(A\ne\emptyset\) 上的等价关系，则
-\[\begin{cases} [x]_R\ne\emptyset\\ xRy\Rightarrow [x]_R=[y]_R\\ \neg\, xRy\Rightarrow [x]_R\cap[y]_R=\emptyset\\ \bigcup\{[x]_R\mid x\in A\}=A\end{cases}\]<p> 页首再次写了一遍 \(\bigcup\{[x]_R\mid x\in A\}=A\)，与末行相同。</p></div>
-<h3>④ 商集 <span class="pg">p.34</span></h3>
+\[\begin{cases} [x]_R\ne\emptyset\\ xRy\Rightarrow [x]_R=[y]_R\\ \neg\, xRy\Rightarrow [x]_R\cap[y]_R=\emptyset\\ \bigcup\{[x]_R\mid x\in A\}=A\end{cases}\]</div>
+<h3>④ 商集 </h3>
 <div class="def"><b>定义（商集）</b> 设 \(R\) 为 \(A\ne\emptyset\) 上的等价关系，
 \[A/R=\{[x]_R\mid x\in A\}\]</div>
 <div class="example"><b>例 1（续）</b>
 \[A/R=\{\{1,4,7\},\{2,5,8\},\{3,6\}\}=\{[1],[2],[3]\}=\{[1],[2],[3]\}\]</div>
-<h3>⑤ 划分 <span class="pg">p.34</span></h3>
+<h3>⑤ 划分 </h3>
 <div class="def"><b>定义（划分）</b> \(A\ne\emptyset\) 的一个划分是满足下列条件的 \(\mathscr{A}\subseteq P(A)\)：
 <ul>
 <li>不能有空集：① \(\emptyset\notin\mathscr{A}\)</li>
@@ -45,7 +45,7 @@
 </ul></div>
 <div class="thm"><b>定理</b> \(R\) 为 \(A\) 的等价关系 \(\Rightarrow\) \(A/R\) 为 \(A\) 的划分。</div>
 <div class="supp"><b>补充讲解</b> 反过来，\(A\) 的每个划分也唯一确定一个等价关系（同块元素相关），所以等价关系与划分一一对应。\(\mathscr{A}\) 中的元素称为划分块。</div>
-<h3>⑥ 划分的加细 <span class="pg">p.34</span></h3>
+<h3>⑥ 划分的加细 </h3>
 <div class="example"><b>例 2</b> \(A=\{1,2,3,4\}\)。
 <figure class="fig"><svg aria-label="划分的加细示意" role="img" viewBox="0 0 440 170">
 <g fill="none" stroke="currentColor" stroke-width="1.6">
@@ -59,4 +59,4 @@
 </svg><figcaption>图：左圆标 𝒜，被一条竖线分成两块：左块 1、3，右块 2、4，即 \(\{\{1,3\},\{2,4\}\}\)；箭头“⇒”指向右圆，右圆被十字线分成四块 1、2、3、4，即 \(\{\{1\},\{3\},\{2\},\{4\}\}\)。</figcaption></figure>
 <p><b>结论</b> \(\{\{1\},\{3\},\{2\},\{4\}\}\) 是 \(\{\{1,3\},\{2,4\}\}\) 的加细：右边每一块都包含在左边的某一块中。</p>
 </div>
-<div class="supp"><b>补充讲解</b> 加细的定义：设 \(\mathscr{A},\mathscr{B}\) 都是 \(A\) 的划分，若 \(\mathscr{B}\) 的每个划分块都含于 \(\mathscr{A}\) 的某个划分块中，则称 \(\mathscr{B}\) 是 \(\mathscr{A}\) 的加细。笔记第二个集合写作“\(\{\{1\},\{3\},\{2\}\{4\}\}\)”，最后两块之间少一个逗号。</div>
+<div class="supp"><b>补充讲解</b>加细：设 \(\mathscr A,\mathscr B\) 都是A的划分，若 \(\mathscr B\) 的每个划分块都包含于 \(\mathscr A\) 的某个划分块，则称 \(\mathscr B\) 是 \(\mathscr A\) 的加细。</div>

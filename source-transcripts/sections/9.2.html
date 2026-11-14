@@ -1,5 +1,5 @@
 
-<h3>① 有向图的邻接矩阵 <span class="pg">p.142</span></h3>
+<h3>① 有向图的邻接矩阵 </h3>
 <div class="def"><b>定义</b> 设 \(D=\langle V,E\rangle\) 是有向图，\(V=\{v_1,v_2,\dots,v_n\}\)。<br/>
 邻接矩阵（adjacent matrix）：\(A(D)=[a_{ij}]_{n\times n}\)，
 \[a_{ij}=\text{从 } v_i \text{ 到 } v_j \text{ 的边数}\]</div>
@@ -17,15 +17,14 @@
 <g fill="currentColor"><text font-size="14" x="20" y="30">v1</text><text font-size="14" x="40" y="205">v2</text><text font-size="14" x="240" y="205">v3</text><text font-size="14" x="270" y="40">v4</text></g>
 </svg><figcaption>图 D：顶点 \(v_1\)（左上）、\(v_2\)（左下）、\(v_3\)（右下）、\(v_4\)（右上）。有向边：\(v_1\to v_2\) 两条（平行边），\(v_1\to v_3\)，\(v_2\to v_3\)，\(v_3\to v_4\)，\(v_4\to v_3\)，\(v_4\) 上有一个环。</figcaption></figure>
 <b>解</b>
-\[A(D)=\begin{array}{c} \\ v_1\\ v_2\\ v_3\\ v_4\end{array}\!\!\begin{array}{c}\begin{matrix}v_1&amp;v_2&amp;v_3&amp;v_4\end{matrix}\\ \begin{bmatrix}0&amp;2&amp;1&amp;0\\ 0&amp;0&amp;1&amp;0\\ 0&amp;0&amp;0&amp;1\\ 0&amp;0&amp;1&amp;1\end{bmatrix}\end{array}\]
- \(a_{12}=2\) 下画红线（平行边计 2），\(v_4\) 的环使 \(a_{44}=1\)。</div>
-<h3>② \(A(D)\) 的性质 <span class="pg">p.142</span></h3>
+\[A(D)=\begin{array}{c} \\ v_1\\ v_2\\ v_3\\ v_4\end{array}\!\!\begin{array}{c}\begin{matrix}v_1&amp;v_2&amp;v_3&amp;v_4\end{matrix}\\ \begin{bmatrix}0&amp;2&amp;1&amp;0\\ 0&amp;0&amp;1&amp;0\\ 0&amp;0&amp;0&amp;1\\ 0&amp;0&amp;1&amp;1\end{bmatrix}\end{array}\] 两条平行边使 \(a_{12}=2\)，顶点v₄的环使 \(a_{44}=1\)。</div>
+<h3>② \(A(D)\) 的性质 </h3>
 <div class="thm"><b>性质</b><br/>
 1）（☆）行和为出度：\(\sum_{j=1}^{n} a_{ij}=d^+(v_i)\)。<br/>
 2）（☆）列和为入度：\(\sum_{i=1}^{n} a_{ij}=d^-(v_j)\)。<br/>
 3）握手定理：\(\sum_{i=1}^{n}\sum_{j=1}^{n} a_{ij}=\sum_{i=1}^{n} d^-(v_i)=\sum_{i=1}^{n} d^+(v_i)\)（入度和 = 出度和）。<br/>
 4）环的个数：\(\sum_{i=1}^{n} a_{ii}\)（主对角线之和）。</div>
-<h3>③ 邻接矩阵与通路数 <span class="pg">p.142–144</span></h3>
+<h3>③ 邻接矩阵与通路数 </h3>
 <div class="def"><b>定义</b> 设 \(A(D)=A=[a_{ij}]_{n\times n}\)，矩阵的幂 \(A^r=A^{r-1}\cdot A\ (r\ge 2)\)。<br/>
 1）（★）\(A^r=[a_{ij}^{(r)}]_{n\times n}\)；<br/>
 2）（★）\(B_r=A+A^2+A^3+\cdots+A^r=[b_{ij}^{(r)}]_{n\times n}\)。</div>
@@ -41,20 +40,19 @@ A^4=\begin{bmatrix}0&amp;0&amp;3&amp;4\\ 0&amp;0&amp;1&amp;2\\ 0&amp;0&amp;2&amp
 \[B_2=\begin{bmatrix}0&amp;2&amp;3&amp;1\\ 0&amp;0&amp;1&amp;1\\ 0&amp;0&amp;1&amp;2\\ 0&amp;0&amp;2&amp;3\end{bmatrix},\quad
 B_3=\begin{bmatrix}0&amp;2&amp;4&amp;4\\ 0&amp;0&amp;2&amp;2\\ 0&amp;0&amp;2&amp;4\\ 0&amp;0&amp;4&amp;6\end{bmatrix},\quad
 B_4=\begin{bmatrix}0&amp;2&amp;7&amp;8\\ 0&amp;0&amp;3&amp;4\\ 0&amp;0&amp;4&amp;7\\ 0&amp;0&amp;7&amp;11\end{bmatrix}\]
-在每个矩阵左下角用红线框出全零区域（\(v_2,v_3,v_4\) 行的前列：无边进入 \(v_1\)，从 \(v_3,v_4\) 无法到 \(v_2\)）。<br/>
+v₁没有入边，因此各次矩阵幂的第一列都为0。<br/>
 <b>结论</b> \(v_3\) 到 \(v_4\) 长度为 3 的通路数：\(a_{34}^{(3)}=2\)（\(v_3v_4v_4v_4\)、\(v_3v_4v_3v_4\)）；长度 \(\le3\) 的通路数 \(b_{34}^{(3)}=4\)。</div>
-<h3>④ 可达矩阵 <span class="pg">p.144</span></h3>
+<h3>④ 可达矩阵 </h3>
 <div class="def"><b>定义</b> 设 \(D=\langle V,E\rangle\) 是有向图，\(V=\{v_1,v_2,\dots,v_n\}\)。可达矩阵：\(P(D)=[p_{ij}]_{n\times n}\)，
 \[p_{ij}=\begin{cases}1, &amp; \text{从 } v_i \text{ 到 } v_j \text{ 可达}\\ 0, &amp; \text{从 } v_i \text{ 到 } v_j \text{ 不可达}\end{cases}\]</div>
 <div class="example"><b>例 3</b> 对例 1 的 \(D\)：
-\[P(D)=\begin{array}{c} \\ v_1\\ v_2\\ v_3\\ v_4\end{array}\!\!\begin{array}{c}\begin{matrix}v_1&amp;v_2&amp;v_3&amp;v_4\end{matrix}\\ \begin{bmatrix}1&amp;1&amp;1&amp;1\\ 0&amp;1&amp;1&amp;1\\ 0&amp;0&amp;1&amp;1\\ 0&amp;0&amp;1&amp;1\end{bmatrix}\end{array}\]
-红框框出左下角的零块。</div>
+\[P(D)=\begin{array}{c} \\ v_1\\ v_2\\ v_3\\ v_4\end{array}\!\!\begin{array}{c}\begin{matrix}v_1&amp;v_2&amp;v_3&amp;v_4\end{matrix}\\ \begin{bmatrix}1&amp;1&amp;1&amp;1\\ 0&amp;1&amp;1&amp;1\\ 0&amp;0&amp;1&amp;1\\ 0&amp;0&amp;1&amp;1\end{bmatrix}\end{array}\]</div>
 <div class="thm"><b>性质</b><br/>
 1）\(p_{ii}\) 为 1（自己可达自己）。<br/>
 2）强连通图：所有元素为 1。<br/>
 3）\(P(D)=\begin{bmatrix}P(D_1)&amp;&amp;&amp;\\ &amp;P(D_2)&amp;&amp;\\ &amp;&amp;P(D_3)&amp;\\ &amp;&amp;&amp;\ddots\\ &amp;&amp;&amp;&amp;P(D_k)\end{bmatrix}\)（分块对角阵）。</div>
 <div class="supp"><b>补充讲解</b> 性质 3 中的 \(D_1,\dots,D_k\) 应理解为 \(D\) 的弱连通分支（基图的连通分支）：不同分支之间互不可达，所以非对角块为 0。同一分支内部仍可能有 0（如本例 \(p_{21}=0\)）。可由 \(B_{n-1}\) 计算：\(i\ne j\) 时 \(p_{ij}=1 \Leftrightarrow b_{ij}^{(n-1)}\gt 0\)，对角元规定为 1。</div>
-<h3>⑤ 无向图的相邻矩阵 <span class="pg">p.145</span></h3>
+<h3>⑤ 无向图的相邻矩阵 </h3>
 <div class="def"><b>定义</b> 设 \(G=\langle V,E\rangle\) 是无向简单图，\(V=\{v_1,v_2,\dots,v_n\}\)。相邻矩阵：\(A(G)=[a_{ij}]_{n\times n}\)，
 \[a_{ij}=\begin{cases}1, &amp; v_i \text{ 与 } v_j \text{ 相邻}\ (i\ne j)\\ 0, &amp; v_i \text{ 与 } v_j \text{ 不相邻}\end{cases}\qquad (a_{ii}=0)^{*}\]</div>
 <div class="example"><b>例 4</b> 求下图 \(G\) 的相邻矩阵。
@@ -71,7 +69,7 @@ B_4=\begin{bmatrix}0&amp;2&amp;7&amp;8\\ 0&amp;0&amp;3&amp;4\\ 0&amp;0&amp;4&amp
 1）\(A(G)\) 对称：\(a_{ij}=a_{ji}\)。<br/>
 2）行（列）和为顶点度：\(\sum_{i=1}^{n} a_{ij}=d(v_j)\)。<br/>
 3）\(\sum_{i=1}^{n}\sum_{j=1}^{n} a_{ij}=\sum_{i=1}^{n} d(v_i)=2m\)（\(m\) 为边数）。</div>
-<h3>⑥ 相邻矩阵的幂与通路数 <span class="pg">p.145–146</span></h3>
+<h3>⑥ 相邻矩阵的幂与通路数 </h3>
 <div class="def"><b>定义</b> 设 \(A^r=A^{r-1}\cdot A\ (r\ge2)\)，\(A^r=[a_{ij}^{(r)}]_{n\times n}\)，\(B_r=A+A^2+\cdots+A^r=[b_{ij}^{(r)}]_{n\times n}\)。</div>
 <div class="thm"><b>定理</b> \(a_{ij}^{(r)}\) = 从 \(v_i\) 到 \(v_j\) 长度为 \(r\) 的通路总数。<br/>
 （tip）\(\sum_{i=1}^{n} a_{ii}^{(r)}\) = 长度为 \(r\) 的回路总数。</div>
@@ -83,10 +81,9 @@ B_4=\begin{bmatrix}0&amp;2&amp;7&amp;8\\ 0&amp;0&amp;3&amp;4\\ 0&amp;0&amp;4&amp
 \[A^2=\begin{bmatrix}2&amp;1&amp;1&amp;1\\ 1&amp;3&amp;0&amp;1\\ 1&amp;0&amp;1&amp;1\\ 1&amp;1&amp;1&amp;2\end{bmatrix},\quad
 A^3=\begin{bmatrix}2&amp;4&amp;1&amp;3\\ 4&amp;2&amp;3&amp;4\\ 1&amp;3&amp;0&amp;1\\ 2&amp;4&amp;1&amp;2\end{bmatrix},\quad
 A^4=\begin{bmatrix}7&amp;6&amp;4&amp;6\\ 6&amp;11&amp;2&amp;6\\ 4&amp;2&amp;3&amp;4\\ 6&amp;6&amp;4&amp;7\end{bmatrix}\]
-把三个矩阵第 1 行第 3 列（1、1、4）红圈圈出：\(a_{13}^{(1)}=0\)，\(a_{13}^{(2)}=1\ne0\)，故 \(d(v_1,v_3)=2\)。\(A^3\) 中 \(a_{23}^{(3)}=3\) 下有红色短线，\(a_{34}^{(3)}=1\) 下有下划线；\(A^4\) 中 \(a_{33}^{(4)}=3\) 上有红色短线。<br/>
-<b>结论</b> \(v_3\) 到 \(v_4\) 长度为 3 的通路数：1（\(a_{34}^{(3)}=1\)，即 \(v_3v_2v_1v_4\)）。<br/>
-红笔批注：\(v_1\) 到 \(v_1\) 长度为 2：2（\(a_{11}^{(2)}=2=d(v_1)\)）。旁边红色草图画出从 \(v_1\) 出发再回到 \(v_1\) 的两条长 2 回路 \(v_1v_2v_1\)、\(v_1v_4v_1\)。</div>
-<h3>⑦ 连通矩阵 <span class="pg">p.146–147</span></h3>
+把三个矩阵第 1 行第 3 列（1、1、4）：\(a_{13}^{(1)}=0\)，\(a_{13}^{(2)}=1\ne0\)，故 \(d(v_1,v_3)=2\)。\(A^3\) 中 \(a_{23}^{(3)}=3\) 下有，\(a_{34}^{(3)}=1\) 下有；\(A^4\) 中 \(a_{33}^{(4)}=3\) 上有。<br/>
+<b>结论</b> \(v_3\) 到 \(v_4\) 长度为 3 的通路数：1（\(a_{34}^{(3)}=1\)，即 \(v_3v_2v_1v_4\)）。<br/>从v₁出发又回到v₁的长度2通路有两条：v₁v₂v₁和v₁v₄v₁。因此 \(a_{11}^{(2)}=2=d(v_1)\)。</div>
+<h3>⑦ 连通矩阵 </h3>
 <div class="def"><b>定义</b> 设 \(G=\langle V,E\rangle\) 是无向简单图，\(V=\{v_1,v_2,\dots,v_n\}\)。连通矩阵：\(P(G)=[p_{ij}]_{n\times n}\)，
 \[p_{ij}=\begin{cases}0, &amp; v_i \text{ 与 } v_j \text{ 不连通}\\ 1, &amp; v_i \text{ 与 } v_j \text{ 连通}\end{cases}\]</div>
 <div class="thm"><b>性质</b><br/>
@@ -94,7 +91,7 @@ A^4=\begin{bmatrix}7&amp;6&amp;4&amp;6\\ 6&amp;11&amp;2&amp;6\\ 4&amp;2&amp;3&am
 2）连通图：所有元素都是 1。<br/>
 3）伪对角阵：\(P(G)=\begin{bmatrix}P(G_1)&amp;&amp;&amp;\\ &amp;P(G_2)&amp;&amp;\\ &amp;&amp;\ddots&amp;\\ &amp;&amp;&amp;P(G_k)\end{bmatrix}\)。</div>
 <div class="supp"><b>补充讲解</b> 无向图中每个连通分支对应的 \(P(G_i)\) 是全 1 方阵，所以连通矩阵（按分支排列顶点后）就是若干全 1 块组成的分块对角阵。</div>
-<div class="summary"><b>总结</b>（p.147 红框）<br/>
+<div class="summary"><b>总结</b><br/>
 关联矩阵：\(M(D)\)；\(M(G)\longrightarrow M_f(G)\) 基本关联矩阵。<br/>
 邻接 \(A(D)\) —— 可达 \(P(D)\)；<br/>
 相邻 \(A(G)\longrightarrow\) 连通 \(P(G)\)。</div>

@@ -1,18 +1,18 @@
 
-<h3>公因子与最大公约数 <span class="pg">p.262</span></h3>
+<h3>公因子与最大公约数 </h3>
 <div class="def"><b>定义 1（公因子、最大公约数）</b> ① 设 \(a, b\in\mathbb{Z}\)，若 \(d\mid a\) 且 \(d\mid b\)，则 \(d\) 为 \(a\) 和 \(b\) 的公因子。当 \(a\) 与 \(b\) 不全为 \(0\) 时，公因子个数有限，则最大的称为最大公因子，记为 \(\gcd(a,b)\)，也叫最大公约数。</div>
 <div class="example"><b>例 1</b> \(\gcd(18, 24) = 6\)。</div>
 <div class="def"><b>定义 2（公倍数、最小公倍数）</b> ② 设 \(a, b\in\mathbb{Z}\)，若 \(a\mid m\) 且 \(b\mid m\)，则 \(m\) 为 \(a\) 与 \(b\) 的公倍数。最小的（正）公倍数为最小公倍数，记为 \(\operatorname{lcm}(a,b)\)。</div>
 <div class="example"><b>例 2</b> \(\operatorname{lcm}(18, 24) = 72\)。</div>
 <div class="thm"><b>性质</b> 对任意 \(a\in\mathbb{N}^+\)：
 \[ \gcd(0, a) = a,\qquad \gcd(1, a) = 1,\qquad \operatorname{lcm}(1, a) = a . \]</div>
-<h3>定理 1 <span class="pg">p.262</span></h3>
+<h3>定理 1 </h3>
 <div class="thm"><b>定理 1</b> ③
 <ol>
 <li>若 \(a\mid m\)，\(b\mid m\)，则 \(\operatorname{lcm}(a,b)\mid m\)。</li>
 <li>若 \(d\mid a\)，\(d\mid b\)，则 \(d\mid \gcd(a,b)\)。</li>
 </ol><p> 两条用花括号括起，“对偶命题”：任一公倍数都是最小公倍数的倍数；任一公因子都是最大公约数的因子。</p></div>
-<h3>用素因子分解求 gcd 与 lcm <span class="pg">p.262–263</span></h3>
+<h3>用素因子分解求 gcd 与 lcm </h3>
 <div class="example"><b>例 3</b> 求 \(168, 300\) 的 \(\gcd(168,300)\) 和 \(\operatorname{lcm}(168,300)\)。
 <b>解</b>
 \[ 168 = 2^3\times3\times7,\qquad 300 = 2^2\times3\times5^2 . \]
@@ -20,7 +20,7 @@ gcd 取公共素因子的较小幂，lcm 取所有素因子的较大幂：
 \[ \gcd(168,300) = 2^2\times3 = 12, \]
 \[ \operatorname{lcm}(168,300) = 2^3\times3\times5^2\times7 = 4200 . \]
 <b>结论</b> \(\gcd=12\)，\(\operatorname{lcm}=4200\)（验算：\(12\times4200=50400=168\times300\)）。</div>
-<h3>辗转相除法（欧几里得算法） <span class="pg">p.263</span></h3>
+<h3>辗转相除法（欧几里得算法） </h3>
 <div class="thm"><b>定理 2 ☆（辗转相除法 / 欧几里得算法）</b> 设 \(a = qb + r\)，其中 \(a, b, q, r\) 为整数，则
 \[ \gcd(a,b) = \gcd(b,r), \]
 即
@@ -29,7 +29,7 @@ gcd 取公共素因子的较小幂，lcm 取所有素因子的较大幂：
 \[ a = q_1 b + r_2,\qquad 0\le r_2\lt|b| , \]
 \[ \gcd(a,b) = \gcd(q_1b + r_2,\ b) = \gcd(r_2,\ b) , \]
 然后对 \((b, r_2)\) 重复同样的过程，直到余数为 \(0\)。</p>
-<div class="example"><b>例 4</b> 用辗转相除法求 \(\gcd(168, 300)\)。 <span class="pg">p.263–264</span>
+<div class="example"><b>例 4</b> 用辗转相除法求 \(\gcd(168, 300)\)。
 <b>解</b>
 \[ \begin{aligned}
 &amp;300\div168:&amp; 300 &amp;= 1\times168 + 132 &amp;&amp;\Rightarrow \gcd(168,300)=\gcd(168,132)\\
@@ -38,8 +38,8 @@ gcd 取公共素因子的较小幂，lcm 取所有素因子的较大幂：
 &amp;36\div24:&amp; 36 &amp;= 1\times24 + 12 &amp;&amp;\Rightarrow \gcd(36,24)=\gcd(12,24)\\
 &amp;24\div12:&amp; 24 &amp;= 2\times12 + 0 &amp;&amp;\Rightarrow \gcd(12,24)=\gcd(12,0)=12
 \end{aligned} \]
-<b>结论</b> \(\gcd(168,300)=12\)，与例 3 一致。<p>余数进入下一轮。\(\gcd(12,24)\) 用红框框出并引红箭头到 \(12\)；\(\gcd(12,0)\) 红圈双划线，同样引箭头到 \(12\)；“\(12=\gcd(168,300)\)”。即算到 \(\gcd(12,24)\) 时已可看出结果，也可再算一步到余数 \(0\)。</p></div>
-<h3>用整数 x, y 表示 gcd（回代） <span class="pg">p.264–265</span></h3>
+<b>结论</b> \(\gcd(168,300)=12\)，与例 3 一致。<p>余数进入下一轮，直到出现余数0。例如 \(\gcd(12,24)=\gcd(12,0)=12\)，因此 \(\gcd(168,300)=12\)。</p></div>
+<h3>用整数 x, y 表示 gcd（回代） </h3>
 <div class="example"><b>例 5</b> 用整数 \(x, y\) 表示 \(12 = 168x + 300y\)。
 <b>解</b> 从例 4 倒数第二个等式出发逐步回代：
 \[ \begin{aligned}
@@ -52,8 +52,8 @@ gcd 取公共素因子的较小幂，lcm 取所有素因子的较大幂：
 &amp;= 9\times168 + (-5)\times300 .
 \end{aligned} \]
 <b>结论</b> \(x=9,\ y=-5\)。验算：\(9\times168=1512\)，\(1512-1500=12\)。</div>
-<h3>互素 <span class="pg">p.265</span></h3>
+<h3>互素 </h3>
 <div class="def"><b>定义 3（互素）</b> ④ 若 \(\gcd(a,b)=1\)，则称 \(a\) 与 \(b\) 互素。若 \(a_1, a_2, \dots, a_n\) 中任意两个互素，则称它们两两互素。</div>
 <div class="example"><b>例 6</b> \(4, 9, 11, 35\) 两两互素（验算：\(4=2^2,\ 9=3^2,\ 11,\ 35=5\times7\)，没有公共素因子）。</div>
-<div class="thm"><b>定理</b> 整数 \(a, b\) 互素（\(\gcd(a,b)=1\)）\(\iff\) 存在整数 \(x, y\)，使 \(xa + yb = 1\)。<p>不互素即有大于 \(1\) 的公因子。右红圈写“\(p_1p_2p_3\cdots p_n+1\)”，联系 17.1 定理 1 的证明：\(p_1p_2\cdots p_n+1\) 与每个 \(p_i\) 互素。</p></div>
+<div class="thm"><b>定理</b> 整数 \(a, b\) 互素（\(\gcd(a,b)=1\)）\(\iff\) 存在整数 \(x, y\)，使 \(xa + yb = 1\)。<p>不互素即有大于 \(1\) 的公因子。右写“\(p_1p_2p_3\cdots p_n+1\)”，联系 17.1 定理 1 的证明：\(p_1p_2\cdots p_n+1\) 与每个 \(p_i\) 互素。</p></div>
 <div class="supp"><b>补充讲解</b> “⇒”：由例 5 的回代方法，总能把 \(\gcd(a,b)=1\) 写成 \(xa+yb\)。“⇐”：若 \(d\mid a\)、\(d\mid b\)，由 17.1 整除性质 (1) 得 \(d\mid xa+yb=1\)，所以 \(\gcd(a,b)=1\)。</div>

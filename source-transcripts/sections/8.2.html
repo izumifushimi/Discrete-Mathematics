@@ -1,7 +1,7 @@
 
-<h3>① 生成树及相关概念 <span class="pg">p.131</span></h3>
-<p>思路：由原图 \(G\) 得到生成树 \(T\)（原图 \(G\longrightarrow\) 生成树 \(T\)）。</p>
-<div class="def"><b>定义 1）生成树</b> \(T\subseteq G\ \land\ V(T)=V(G)\ \land\ T\) 是树。<p> \(T\subseteq G\) 注“边变少”。大括号注：“删边，不删点”（\(G\) 不一定是树）。</p></div>
+<h3>① 生成树及相关概念 </h3>
+<p>思路：由图 \(G\) 得到生成树 \(T\)（图 \(G\longrightarrow\) 生成树 \(T\)）。</p>
+<div class="def"><b>定义 1）生成树</b> \(T\subseteq G\ \land\ V(T)=V(G)\ \land\ T\) 是树。<p>生成树T是G的子图，包含G的全部顶点，并通过删除适当边得到；整个过程保持连通，最终消除全部圈。</p></div>
 <div class="def"><b>定义 2）树枝</b> \(e\in E(T)\)（生成树 \(T\) 的边）。</div>
 <div class="def"><b>定义 3）弦</b> \(e\in E(G)-E(T)\)（被去掉的边）。</div>
 <div class="def"><b>定义 4）余树</b> \(\overline{T}=G[E(G)-E(T)]\)。</div>
@@ -18,16 +18,16 @@
 <circle cx="450" cy="30" r="4"></circle><circle cx="450" cy="80" r="4"></circle><circle cx="500" cy="80" r="4"></circle><circle cx="500" cy="130" r="4"></circle>
 </g>
 <g fill="currentColor"><text font-size="14" x="40" y="170">G（m 边）</text><text font-size="14" x="235" y="170">T（n−1 边）</text><text font-size="14" x="420" y="170">余树 T̄（m−n+1 边）</text></g>
-</svg><figcaption>图：原图 \(G\) 为 3×3 共 9 个顶点的格状图，共 10 条边；虚线为被删去的两条竖边，即弦。删去后得到梳状生成树 \(T\)（8 条边 \(=n-1\)）；余树 \(\overline{T}\) 只含这两条竖边，边数 \(10-9+1=2\)。</figcaption></figure>
+</svg><figcaption>图：图 \(G\) 为 3×3 共 9 个顶点的格状图，共 10 条边；虚线为被删去的两条竖边，即弦。删去后得到梳状生成树 \(T\)（8 条边 \(=n-1\)）；余树 \(\overline{T}\) 只含这两条竖边，边数 \(10-9+1=2\)。</figcaption></figure>
 <p>无向图 \(G\) 连通 \(\Leftrightarrow\) \(G\) 有生成树。</p>
 <p> \(G:\ m\ge n-1\)；\(T:\ m=n-1\)。</p>
-<h3>② 生成树的定理 <span class="pg">p.131–132</span></h3>
-<div class="thm"><b>定理 1</b> \(G\) 是 \(n\) 阶 \(m\) 边无向连通图 \(\Rightarrow m\ge n-1\)。（下方框出 \(m=n-1\)：等号对应树的情形。）</div>
+<h3>② 生成树的定理 </h3>
+<div class="thm"><b>定理 1</b> \(G\) 是 \(n\) 阶 \(m\) 边无向连通图 \(\Rightarrow m\ge n-1\)。（下方 \(m=n-1\)：等号对应树的情形。）</div>
 <div class="thm"><b>定理 2</b> \(T\) 是 \(n\) 阶 \(m\) 边无向连通图 \(G\) 的生成树 \(\Rightarrow |E(\overline{T})|=m-n+1\)。</div>
 <div class="thm"><b>定理 3</b> \(T\) 是无向连通图 \(G\) 的生成树，\(C\) 是 \(G\) 中的圈 \(\Rightarrow E(\overline{T})\cap E(C)\ne\emptyset\)。<br/>即：圈 \(C\) 与余树 \(\overline{T}\) 必有重合边。</div>
 <div class="thm"><b>定理 4</b> 设 \(T\) 是连通图 \(G\) 的生成树，\(S\) 是 \(G\) 中的割集，则 \(E(T)\cap S\ne\emptyset\)。<br/>即：生成树 \(T\) 与割集 \(S\) 有重合边。</div>
 <div class="thm"><b>定理 5</b> 设 \(G\) 是连通图，\(T\) 是 \(G\) 的生成树，\(e\) 是 \(T\) 的弦，则 \(T\cup e\) 中存在由弦 \(e\) 和其他树枝组成的圈，并且不同的弦对应不同的圈。</div>
-<h3>③ 基本回路 <span class="pg">p.132–133</span></h3>
+<h3>③ 基本回路 </h3>
 <div class="def"><b>定义（基本回路）</b> 设 \(G\) 是 \(n\) 阶 \(m\) 边无向连通图，\(T\) 是 \(G\) 的生成树，\(\overline{T}\) 为余树，\(E(\overline{T})=\{e_1',e_2',\dots,e_{m-n+1}'\}\)。<br/>
 基本回路：\(T\cup e_r'\) 中的唯一回路 \(C_r\)。<br/>
 基本回路系统：\(\{C_1,C_2,\dots,C_{m-n+1}\}\)。<br/>
@@ -45,14 +45,14 @@
 <text font-size="14" x="270" y="24">e1</text><text font-size="14" x="262" y="80">e2</text><text font-size="14" x="338" y="75">e3</text>
 <text font-size="14" x="408" y="75">e1′</text><text font-size="14" x="470" y="128">e2′</text>
 <text font-size="14" x="72" y="155">G</text><text font-size="14" x="275" y="155">T</text><text font-size="14" x="465" y="155">T̄</text></g>
-</svg><figcaption>图：\(G\) 为 4 个顶点的矩形加一条对角线（左下—右上），共 5 条边。生成树 \(T\) 由上边 \(e_1\)、对角线 \(e_2\)、右边 \(e_3\) 组成（树枝标号见 p.133）；左边 \(e_1'\) 与下边 \(e_2'\) 是弦（p.132 中在 \(G\) 上用红色短划标出），组成余树 \(\overline{T}\)。</figcaption></figure>
+</svg><figcaption>图：\(G\) 为 4 个顶点的矩形加一条对角线（左下—右上），共 5 条边。生成树 \(T\) 由上边 \(e_1\)、对角线 \(e_2\)、右边 \(e_3\) 组成；左边 \(e_1'\) 与下边 \(e_2'\) 是弦，组成余树 \(\overline{T}\)。</figcaption></figure>
 <div class="example"><b>例 1</b> 求上图 \(G\) 关于 \(T\) 的基本回路与圈秩。<br/>
 <b>解</b><br/>
 \(C_1\leftrightarrow e_1'\)：\(T\cup e_1'\) 中的唯一回路为左上三角形（左边 \(e_1'\)、上边 \(e_1\)、对角线 \(e_2\)），记为 \(C_1\)。<br/>
 \(C_2\leftrightarrow e_2'\)：\(T\cup e_2'\) 中的唯一回路为右下三角形（对角线 \(e_2\)、下边 \(e_2'\)、右边 \(e_3\)），记为 \(C_2\)。<br/>
 <br/>
-<b>结论</b> 圈秩 \(\xi(G)=5-4+1=2\)。<p> 第一行“\(C_1\leftrightarrow e_1'\)”中的 \(C_1\) 手写形似“G”，按下一行“\(C_2\leftrightarrow e_2'\)”及图下标 \(C_1\) 读作 \(C_1\)。</p></div>
-<h3>④ 定理 a（树枝与割集） <span class="pg">p.133</span></h3>
+<b>结论</b> 圈秩 \(\xi(G)=5-4+1=2\)。</div>
+<h3>④ 定理 a（树枝与割集） </h3>
 <div class="thm"><b>定理 a</b> 设 \(G\) 为连通图，\(T\) 是 \(G\) 的生成树，\(e\) 是 \(T\) 的树枝，则 \(G\) 中存在由树枝 \(e\) 和其他弦组成的割集，并且不同的树枝对应不同的割集。</div>
 <div class="example"><b>例 2</b> 仍用上图 \(G\)（树枝 \(e_1,e_2,e_3\)；弦 \(e_1',e_2'\)），对每条树枝找割集。<br/>
 <b>解</b><br/>
@@ -74,7 +74,7 @@
 </g>
 <g fill="currentColor"><text font-size="14" x="60" y="145">① e1</text><text font-size="14" x="240" y="20">② e2</text><text font-size="14" x="420" y="20">③ e3</text></g>
 </svg><figcaption>图：虚线为切线。① 分出左上顶点，切 \(e_1,e_1'\)；② 分出左下顶点，切 \(e_1',e_2,e_2'\)；③ 分出右下顶点，切 \(e_3,e_2'\)。</figcaption></figure>
-<h3>⑤ 基本割集 <span class="pg">p.133–134</span></h3>
+<h3>⑤ 基本割集 </h3>
 <div class="def"><b>定义（基本割集）</b> 设 \(G\) 是 \(n\) 阶 \(m\) 边无向连通图，\(T\) 是 \(G\) 的生成树，\(E(T)=\{e_1,e_2,\dots,e_{n-1}\}\)。<br/>
 基本割集：树枝 \(e_r\) 对应的唯一割集 \(S_r\)。<br/>
 基本割集系统：\(\{S_1,S_2,\dots,S_{n-1}\}\)。<br/>
@@ -92,14 +92,14 @@
 <text font-size="14" x="96" y="118">d</text><text font-size="14" x="236" y="118">g</text><text font-size="14" x="45" y="128">c</text><text font-size="14" x="165" y="158">f</text><text font-size="14" x="292" y="128">i</text>
 <text font-size="14" x="165" y="190">G</text>
 <text font-size="14" x="375" y="58">b</text><text font-size="14" x="495" y="33">e</text><text font-size="14" x="495" y="84">a</text><text font-size="14" x="375" y="128">c</text><text font-size="14" x="586" y="120">i</text><text font-size="14" x="495" y="190">T</text></g>
-</svg><figcaption>图：\(G\) 有 6 个顶点：左 L、左上 A、右上 B、右 R、左下 C、右下 D。边：\(b=LA\)，\(e=AB\)，\(a=LR\)，\(h=BR\)，\(d=AC\)，\(g=BD\)，\(c=LC\)，\(f=CD\)，\(i=DR\)，共 9 条。中 \(d,f,g,h\) 用红色标出，左下 \(c\) 用红圈圈出。生成树 \(T\) 由 \(b,e,a,c,i\) 组成（右图中 \(T\) 的 R 画在 \(a\) 右端，\(i\) 从 R 向下连 D）。</figcaption></figure>
+</svg><figcaption>图：\(G\) 有 6 个顶点：左 L、左上 A、右上 B、右 R、左下 C、右下 D。边：\(b=LA\)，\(e=AB\)，\(a=LR\)，\(h=BR\)，\(d=AC\)，\(g=BD\)，\(c=LC\)，\(f=CD\)，\(i=DR\)，共 9 条。中 \(d,f,g,h\) 用红色标出，左下 \(c\) 用。生成树 \(T\) 由 \(b,e,a,c,i\) 组成（右图中 \(T\) 的 R 画在 \(a\) 右端，\(i\) 从 R 向下连 D）。</figcaption></figure>
 <b>解</b> 树枝 \(=\{a,b,c,e,i\}\)，弦 \(=\{d,f,g,h\}\)。<br/>
 基本回路：\(C_d=dcb\)，\(C_f=fcai\)，\(C_g=gebai\)，\(C_h=heba\)。<br/>
 基本回路系统 \(\{C_d,C_f,C_g,C_h\}\)，\(\xi(G)=4\)。<br/>
-基本割集：\(S_a=\{a,h,g,f\}\)，\(S_b=\{b,d,g,h\}\)，\(S_c=\{c,d,f\}\)，\(S_e=\{e,g,h\}\)（），\(S_i=\{i,g,f\}\)。<br/>
+基本割集：\(S_a=\{a,h,g,f\}\)，\(S_b=\{b,d,g,h\}\)，\(S_c=\{c,d,f\}\)，\(S_e=\{e,g,h\}\)，\(S_i=\{i,g,f\}\)。<br/>
 基本割集系统 \(=\{S_a,S_b,S_c,S_e,S_i\}\)，\(\eta(G)=5\)。</div>
 <div class="supp"><b>补充讲解</b> 验证：\(m=9,\ n=6\)，\(\xi(G)=9-6+1=4\) 与 4 条弦一致；\(\eta(G)=6-1=5\) 与 5 条树枝一致。每个基本回路恰含一条弦，每个基本割集恰含一条树枝。</div>
-<h3>⑥ 生成树的计数 \(\tau(G)\) <span class="pg">p.134–136</span></h3>
+<h3>⑥ 生成树的计数 \(\tau(G)\) </h3>
 <div class="def"><b>定义</b> \(\tau(G)\)：图 \(G\) 的生成树的个数。</div>
 <div class="example"><b>例 4</b> \(G\) 为 4 圈：\(v_1v_2\)（上）、\(v_1v_3\)（左）、\(v_3v_4\)（下）、\(v_2v_4\)（右），求 \(\tau(G)\)。
 <figure class="fig"><svg aria-label="4圈G及其4棵生成树" role="img" viewBox="0 0 620 130">
@@ -128,7 +128,7 @@
 &amp;=2+\tau[K_2]+\tau[\text{单点（另一平行边收缩后成环）}]\\
 &amp;=2+1+1=4
 \end{aligned}\]
-<b>结论</b> \(\tau(G)=4\)。<p> 倒数第二行最后一项写作“\(\tau\circ]\)”，左方括号漏写，含义为单个顶点的 \(\tau=1\)。</p></div>
+<b>结论</b> \(\tau(G)=4\)。<p>单个顶点图的生成树数为1。</p></div>
 <div class="example"><b>例 6</b> \(G\) 为矩形加对角线（左下—右上），即 \(K_4\) 去掉一条边，求 \(\tau(G)\)。<br/>
 <b>解</b> 取左边 \(e\)：
 \[\begin{aligned}
@@ -138,5 +138,5 @@
 \end{aligned}\]
 过程说明：\(G-e\) 中左上顶点只剩上边与图相连，该边收缩后得三角形（左下、右上、右下），\(\tau=3\)；\(G\backslash e\) 把左上、左下两点并为一点，上边与对角线成为一对平行边，对其中一条用定理 b：删除得三角形（\(\tau=3\)），收缩得两顶点间两条平行边。<br/>
 <b>结论</b> \(\tau(G)=8\)。</div>
-<div class="thm"><b>定理 c（Cayley 公式）</b> \(n\ge 2\Rightarrow \tau(K_n)=n^{\,n-2}\)。<p>。p.136 其余部分空白。</p></div>
+<div class="thm"><b>定理 c（Cayley 公式）</b> \(n\ge 2\Rightarrow \tau(K_n)=n^{\,n-2}\)。<p>。 其余部分空白。</p></div>
 <div class="warn"><b>易错提醒</b> 定理 b 只对非环边使用；收缩一条平行边后，与它平行的边会变成环，环不影响生成树个数。删除边后若图不连通，该项 \(\tau=0\)。</div>

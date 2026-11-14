@@ -1,22 +1,22 @@
 
-<h3>有序对 <span class="pg">p.22</span></h3>
+<h3>有序对 </h3>
 <div class="def"><b>① 定义（有序对）</b> 记作 \(\langle a,b\rangle\) 或 \((a,b)\)，
 \[\langle a,b\rangle=\{\{a\},\{a,b\}\}\]
 性质：\(a\ne b\Rightarrow\langle a,b\rangle\ne\langle b,a\rangle\)。</div>
 <div class="supp"><b>补充讲解</b> 由定义可证：\(\langle a,b\rangle=\langle c,d\rangle\Leftrightarrow a=c\land b=d\)。集合 \(\{a,b\}=\{b,a\}\) 无序，而 \(\{\{a\},\{a,b\}\}\) 用单元素集 \(\{a\}\) 标出了“第一个”元素。</div>
-<h3>有序三元组 / n元组 <span class="pg">p.22</span></h3>
+<h3>有序三元组 / n元组 </h3>
 <div class="def"><b>② 有序三元组 / n元组</b>
 \[\begin{aligned}
 \langle a,b,c\rangle&amp;=\langle\langle a,b\rangle,c\rangle\\
 &amp;=\langle\{\{a\},\{a,b\}\},c\rangle\\
 &amp;=\{\{\{\{a\},\{a,b\}\}\},\{\{\{a\},\{a,b\}\},c\}\}
 \end{aligned}\]<p>逐层把内层有序对展开成集合。一般地 \(n\) 元组 \(\langle x_1,\dots,x_n\rangle=\langle\langle x_1,\dots,x_{n-1}\rangle,x_n\rangle\)。</p></div>
-<h3>卡氏积（笛卡儿积） <span class="pg">p.22–23</span></h3>
+<h3>卡氏积（笛卡儿积） </h3>
 <div class="def"><b>② 卡氏积</b>
 \[A\times B=\{\langle x,y\rangle\mid x\in A\land y\in B\}\]</div>
 <div class="example"><b>例</b> \(A=\{a,b\}\)（\(m\) 个元素），\(B=\{1,2\}\)（\(n\) 个元素），求 \(A\times B\)。
 <b>解</b> \[A\times B=\{\langle a,1\rangle,\langle a,2\rangle,\langle b,1\rangle,\langle b,2\rangle\}\]
-<b>结论</b> 右侧边注：共 \(m\cdot n\) 个（此处 \(2\times2=4\) 个）。</div>
+<b>结论</b>卡氏积共有mn个元素；若m=n=2，则有4个。</div>
 <div class="thm"><b>性质</b>
 <br/>(1) \(A\times B\ne B\times A\)，非交换；
 <br/>(2) \((A\times B)\times C\ne A\times(B\times C)\)，非结合；

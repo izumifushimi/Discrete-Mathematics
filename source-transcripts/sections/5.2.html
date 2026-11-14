@@ -1,23 +1,23 @@
 
-<h3>① 康托定理 <span class="pg">p.65</span></h3>
-<div class="thm"><b>定理（康托定理）</b> \[\begin{cases}\mathbb{N}\not\approx\mathbb{R}\\ A\not\approx P(A)\end{cases}\]<p> \(\mathbb{R}\) 与 \(P(A)\) 被红圈圈出，两行下各画横线。</p></div>
-<h4>1) \(\mathbb{N}\not\approx\mathbb{R}\)（对角线法） <span class="pg">p.65–66</span></h4>
+<h3>① 康托定理 </h3>
+<div class="thm"><b>定理（康托定理）</b> \[\begin{cases}\mathbb{N}\not\approx\mathbb{R}\\ A\not\approx P(A)\end{cases}\]</div>
+<h4>1) \(\mathbb{N}\not\approx\mathbb{R}\)（对角线法） </h4>
 <div class="proof"><b>证明</b> 反证：假设存在 \(\mathbb{N}\approx\mathbb{R}\)，又 \(\mathbb{R}\approx[0,1]\)，则 \(\mathbb{N}\approx[0,1]\)。
 <p>于是存在 \(f:\mathbb{N}\to[0,1]\) 为双射。记
 \[\forall n\in\mathbb{N},\quad f(n)=x_{n+1},\]
 即
 \[\begin{cases}f(0)=x_1\\ f(1)=x_2\\ f(2)=x_3\\ f(3)=x_4\\ \ \ \vdots\end{cases}\]
-（右侧这一列每行下都画了红线。）</p>
+</p>
 <p>值域：\(\operatorname{ran}f=[0,1]=\{x_1,x_2,x_3,\cdots\}\)。</p>
 <p>把每个 \(x_i\) 写成小数：\(x_i=0.a_1^{(i)}a_2^{(i)}a_3^{(i)}\cdots\)，即
 \[\begin{cases}x_1=0.a_1^{(1)}a_2^{(1)}a_3^{(1)}\cdots\\ x_2=0.a_1^{(2)}a_2^{(2)}a_3^{(2)}\cdots\\ x_3=0.a_1^{(3)}a_2^{(3)}a_3^{(3)}\cdots\\ \ \ \vdots\end{cases}\]
-（\(a_1^{(1)}\)、\(a_1^{(2)}\) 下有小三角记号；第一列旁画红色竖虚线。）</p>
+</p>
 <p>构造 \(x'=0.b_1b_2b_3\cdots\)，满足：</p>
 <p>(1) \(0\le b_j\le 9\)，\(j\) 为 \(1,2,3,\cdots\)；</p>
 <p>(2) \(b_n\ne a_n^{(n)}\)。</p>
-<p>则 \(x'\in[0,1]\)，但 \(x'\notin\{x_1,x_2,x_3,\cdots\}\)（\(x'\) 与每个 \(x_n\) 在第 \(n\) 位不同），没有自然数与之对应，与 \(f\) 为双射（满射）矛盾。故 \(\mathbb{N}\not\approx\mathbb{R}\)。</p><p> p.66 页首 \(x'\) 被红圈圈出，“\(\notin\{x_1,x_2,x_3,\cdots\}\)”后写“没有自然数与之对应”。</p></div>
+<p>则 \(x'\in[0,1]\)，但 \(x'\notin\{x_1,x_2,x_3,\cdots\}\)（\(x'\) 与每个 \(x_n\) 在第 \(n\) 位不同），没有自然数与之对应，与 \(f\) 为双射（满射）矛盾。故 \(\mathbb{N}\not\approx\mathbb{R}\)。</p><p>构造的实数 \(x^\prime\notin\{x_1,x_2,x_3,\ldots\}\)，因此该枚举未覆盖全部实数。</p></div>
 <div class="supp"><b>补充讲解</b> 严格写法还要避开 \(0.0999\cdots=0.1000\cdots\) 这类一个数有两种小数表示的情况：通常约定每个 \(x_i\) 取不以无穷个 9 结尾的表示，并把 \(b_n\) 限定在 \(\{1,\dots,8\}\) 中取（如 \(a_n^{(n)}\ne 1\) 时取 \(b_n=1\)，否则取 \(b_n=2\)），这样 \(x'\) 的表示唯一，确实与每个 \(x_n\) 不相等。</div>
-<h4>(2) \(A\not\approx P(A)\)，对任意集合 \(A\) <span class="pg">p.66</span></h4>
+<h4>(2) \(A\not\approx P(A)\)，对任意集合 \(A\) </h4>
 <figure class="fig"><svg aria-label="集合A到幂集P(A)的对应示意" role="img" viewBox="0 0 460 220">
 <defs><marker id="a52" markerHeight="6" markerWidth="6" orient="auto" refX="9" refY="5" viewBox="0 0 10 10"><path d="M0,0L10,5L0,10z" fill="currentColor"></path></marker></defs>
 <g fill="none" stroke="currentColor" stroke-width="2">
@@ -34,7 +34,7 @@
 <text x="265" y="110">{a,b}</text><text x="320" y="110">{a,c}</text><text x="375" y="110">{b,c}</text>
 <text x="310" y="155">{a,b,c}…</text><text x="400" y="168">B</text>
 <text x="190" y="38">✓</text><text x="190" y="138">✗</text><text x="190" y="190">✓</text></g>
-</svg><figcaption>图（p.66）：左圆为 \(A\)，含元素 a, b, c, …，红笔标出 \(x_0\)；右椭圆为 \(P(A)\)，含 \(\emptyset,\{a\},\{b\},\{c\},\{a,b\},\{a,c\},\{b,c\},\{a,b,c\},\dots\)，以及红圈标出的 \(B\)。红色连线：a → \(\{a\}\)，线上打“✓”；c → \(\{a,b\}\)，线上打“✗”；b → \(\{a,b,c\}\)，线上打“✓”；另有一条从 \(x_0\) 绕到 \(B\) 的红线（图中用虚线表示）。✓/✗ 表示该元素是否属于自己的像（a∈{a}，c∉{a,b}，b∈{a,b,c}）。\(\{a\}\)、\(\{b\}\) 被红圈圈出。</figcaption></figure>
+</svg><figcaption>映射f把A中的元素映到P(A)中的子集。设 \(B=\{x\in A:x\notin f(x)\}\)。如果存在x₀满足f(x₀)=B，则 \(x_0\in B\iff x_0\notin B\)，产生矛盾。这正是对角线构造的关键。</figcaption></figure>
 <div class="proof"><b>证明</b> 假设存在双射 \(f:A\to P(A)\)。
 <p>i) 令 \(B=\{x\in A\mid x\notin f(x)\}\in P(A)\)。</p>
 <p>ii) 由于 \(f\) 为双射，存在 \(x_0\)，使得 \(f(x_0)=B\)。</p>
@@ -42,12 +42,12 @@
 \[x_0\in B\ \overset{\text{i)}}{\Longleftrightarrow}\ x_0\notin f(x_0)\ \overset{f(x_0)=B}{\Longleftrightarrow}\ x_0\notin B,\]
 产生矛盾。故不存在这样的双射，\(A\not\approx P(A)\)。</p></div>
 <div class="supp"><b>补充讲解</b> 证明实际上只用到“\(f\) 是满射”：对任意 \(f:A\to P(A)\)，集合 \(B\) 都不在 \(f\) 的值域里，所以 \(A\) 到 \(P(A)\) 不存在满射，更不存在双射。</div>
-<h3>② 不存在与自己的真子集等势的自然数 <span class="pg">p.66–68</span></h3>
+<h3>② 不存在与自己的真子集等势的自然数 </h3>
 <div class="thm"><b>定理</b> 不存在与自己的真子集等势的自然数。</div>
 <div class="proof"><b>证明</b> 令
 \[S=\{n\mid n\in\mathbb{N}\land\forall f\,(f\in(n\to n)\land f\text{ 单射}\to f\text{ 满射})\}\]
 只需证 \(S=\mathbb{N}\)，用归纳法。
-<p>思路图示（p.66–67）：自己 \(n\) \(\to\) 自己 \(n\)；右侧写“\(f\) 为单射 → 满射 ✓；→ 不满射 ✓”。若单射 \(f:n\to n\) 不满射，则左边整个 \(n\)（全部阴影）被 \(f\) 映到右边 \(n\) 的一部分（部分阴影），箭头注“\(n\) 的真子集”，即 \(n\) 与自己的真子集等势。</p>
+<p>有限集n上的单射f:n→n必为满射。否则f会给出n与自身某个真子集之间的双射，与有限集的性质矛盾。</p>
 <figure class="fig"><svg aria-label="单射不满射时像为真子集" role="img" viewBox="0 0 320 150">
 <defs><marker id="a52b" markerHeight="6" markerWidth="6" orient="auto" refX="9" refY="5" viewBox="0 0 10 10"><path d="M0,0L10,5L0,10z" fill="currentColor"></path></marker></defs>
 <g fill="none" stroke="currentColor" stroke-width="2">
@@ -58,10 +58,10 @@
 <g stroke-width="1"><line x1="35" x2="70" y1="60" y2="25"></line><line x1="30" x2="85" y1="90" y2="35"></line><line x1="35" x2="92" y1="115" y2="60"></line><line x1="50" x2="94" y1="130" y2="90"></line><line x1="155" x2="185" y1="100" y2="70"></line><line x1="160" x2="205" y1="125" y2="78"></line><line x1="185" x2="212" y1="135" y2="105"></line></g>
 </g>
 <g fill="currentColor" font-size="14"><text x="55" y="15">n</text><text x="175" y="15">n</text><text x="112" y="72">f</text><text x="230" y="130">n 的真子集</text></g>
-</svg><figcaption>图（p.67 页首）：左椭圆 \(n\) 全部画斜线阴影，经 \(f\) 映到右椭圆 \(n\)，右椭圆只有下半部分有阴影（即 \(f\) 的像），箭头注“\(n\) 的真子集”。</figcaption></figure>
+</svg><figcaption>若单射f:n→n不满射，其像f[n]就是n的真子集，而f:n→f[n]为双射，这正是证明中需要排除的情形。</figcaption></figure>
 <p>(1) \(0\in S\)：\(f\in(0\to 0)\)，\(f\) 为空函数 \(\Rightarrow\) \(f\) 满射。</p>
 <p>(2) \(n\in S\Rightarrow n^{+}\in S\)。</p>
-<p> 方框（标五角星）：\(n^{+}=\{0,1,2,\cdots,n\}\)，\(n=\{0,1,2,\cdots,n-1\}\)。</p>
+<p>\[n^+=\{0,1,2,\ldots,n\},\qquad n=\{0,1,2,\ldots,n-1\}.\]</p>
 <p>证明：\(f:n^{+}\to n^{+}\) 单射 \(\Rightarrow\) \(f\) 满射。</p>
 <p>因为 \(f\) 是任取的，分两种情况（红色弧形箭头标出这两种情况）：
 \[\begin{cases}\text{i) } n\text{ 在 }f\text{ 下封闭}\\ \text{ii) } n\text{ 在 }f\text{ 下不封闭}\end{cases}\]</p>
@@ -78,7 +78,7 @@
 <text x="45" y="35">0</text><text x="95" y="35">1</text><text x="140" y="35">— — —</text><text x="255" y="35">n−1</text><text x="315" y="35">n</text>
 <text x="45" y="165">0</text><text x="95" y="165">1</text><text x="140" y="165">— — —</text><text x="255" y="165">n−1</text><text x="315" y="165">n</text>
 <text x="0" y="100">f</text><text x="150" y="185">n</text><text x="340" y="95">必有 f(n)=n</text></g>
-</svg><figcaption>图（p.67）：上下两行点 \(0,1,\dots,n-1\mid n\)，左侧 \(0\sim n-1\) 用花括号标为 \(n\)，竖虚线把 \(n\) 隔开。红框内 \(n\) 的元素经 \(f\) 互相映射（红色斜线），仍落在 \(n\) 内；元素 \(n\) 竖直向下映到 \(n\)。右侧写“必有 \(f(n)=n\)”。</figcaption></figure>
+</svg><figcaption>在归纳证明中，将n⁺分成 \(n=\{0,\ldots,n-1\}\) 与单个元素n。若n在f下封闭，且f为单射，则归纳假设给出 \(f[n]=n\)，从而必须 \(f(n)=n\)。</figcaption></figure>
 <p>此时 \(f\) 限制在 \(n\) 上是 \(n\to n\) 的单射，由 \(n\in S\) 它是满射，像为整个 \(n\)；又 \(f\) 单射，\(f(n)\) 不能再取 \(n\) 中的值，故必有 \(f(n)=n\)，\(f\) 满射。</p>
 <p>情况 2)：</p>
 <figure class="fig"><svg aria-label="n在f下不封闭的情形" role="img" viewBox="0 0 400 180">
@@ -94,7 +94,7 @@
 <g fill="currentColor" font-size="14">
 <text x="40" y="45">0　1　…</text><text x="193" y="35">m</text><text x="295" y="30">n</text><text x="230" y="95">f</text>
 <text x="40" y="160">0　1　…</text><text x="295" y="160">n</text><text x="320" y="95">必有 f(m)=n, m∈n</text></g>
-</svg><figcaption>图（p.67）：上行 \(0,1,\dots,m,\dots\mid n\)，\(m\) 被红圈圈出；黑色交叉箭头 \(m\to n\)（\(f(m)=n\)）与 \(n\to\) 左侧 \(n\) 中某元素（\(f(n)\in n\)）；红色箭头（图中点线）表示交换后的新函数：\(m\) 映到 \(f(n)\)，\(n\) 映到 \(n\)。右侧写“必有 \(f(m)=n,\ m\in n\)”。</figcaption></figure>
+</svg><figcaption>图：上行 \(0,1,\dots,m,\dots\mid n\)，\(m\) ；黑色交叉箭头 \(m\to n\)（\(f(m)=n\)）与 \(n\to\) 左侧 \(n\) 中某元素（\(f(n)\in n\)）；红色箭头（图中点线）表示交换后的新函数：\(m\) 映到 \(f(n)\)，\(n\) 映到 \(n\)。右侧写“必有 \(f(m)=n,\ m\in n\)”。</figcaption></figure>
 <p>此时必有 \(f(m)=n\)，\(m\in n\)。构造
 \[h(x)=\begin{cases}f(n), &amp; x=m\\ n, &amp; x=n\\ f(x), &amp; x\ne m\land x\ne n\end{cases}\]
 \(\therefore\ S=\mathbb{N}\)。</p></div>

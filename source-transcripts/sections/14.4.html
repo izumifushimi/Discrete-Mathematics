@@ -1,4 +1,4 @@
-<h3>方程的解与群的判定 <span class="pg">p.209</span></h3>
+<h3>方程的解与群的判定 </h3>
 <div class="thm"><b>定理 1（①）</b> 在群 \(G\) 中，方程 \(ax=b\)、\(ya=b\) 有解，且有唯一解。<p> "定理1"三字小字写在 ① ；</p></div>
 <div class="thm"><b>定理 2（②）</b> 设 \(G\) 为半群，如果对任意 \(a,b\in G\)，方程 \(ax=b\) 和 \(ya=b\) 在 \(G\) 中有解 \(\Longrightarrow\) \(G\) 为群。</div>
 <div class="thm"><b>定理 3（③，消去律）</b> \(G\) 为群，\(a,b,c\in G\)，则
@@ -7,28 +7,25 @@
 <div class="thm"><b>定理 4（④）</b> 设 \(G\) 为<u>有限</u>半群，且不含零元，若 \(G\) 中成立消去律 \(\Longrightarrow\) \(G\) 为群。</div>
 <div class="supp"><b>补充讲解</b> "有限"是必要条件：例如 \(\langle\mathbb{Z}^+,+\rangle\) 是满足消去律的无限半群，但不是群。"不含零元"的说法是因为零元 \(\theta\) 满足 \(\theta a=\theta b\)，会使消去律失败（只有一个元素时除外）。</div>
 <div class="thm"><b>定理 5（⑤）</b> 设 \(G\) 为群，则
-\[aG=G\ (a\in G),\qquad Ga=G\ (a\in G).\]<p> 两个等式用红色方框框出并打红勾，有红色箭头指向"设 \(G\) 为群"。页写"反？"，画一个叉，并加问号，意思是在问：反过来是否成立（答案是否定的）。</p></div>
+\[aG=G\ (a\in G),\qquad Ga=G\ (a\in G).\]<p>群的每个运算表中，各行、各列都恰好包含每个群元素一次；反过来，仅满足这一排列性质并不足以构成群，还必须验证结合律和单位元等条件。</p></div>
 <div class="proof"><b>说明（有限情形）</b> 设 \(G=\{a_1,a_2,\dots,a_n\}\)，取其中的 \(a_i\)：
 \[\begin{aligned}a_iG&amp;=\{a_ia_j\mid j=1,2,\dots,n\}\\&amp;=\{a_ia_1,a_ia_2,\dots,a_ia_n\}=G\end{aligned}\]
 用一条弧形箭头从 \(a_iG\) 指向第二行的展开式。</div>
 <div class="supp"><b>补充讲解</b> 由消去律，\(a_ia_j\)（\(j=1,\dots,n\)）两两不同，共 \(n\) 个，都在 \(G\) 中，所以恰好是 \(G\) 的全部元素。这表明群的运算表每一行（每一列）都是全体元素的一个排列。</div>
-<h3>例：模 3 加法群 <span class="pg">p.209–210</span></h3>
+<h3>例：模 3 加法群 </h3>
 <div class="example"><b>例</b> 群 \(\langle \mathbb{Z}_3,\oplus_3\rangle\)，\(e=0\)；\(\mathbb{Z}_3=\{0,1,2\}\)。取 \(1=a\in\mathbb{Z}_3\)。
 <div class="tbl"><table><thead><tr><th>\(\oplus_3\)</th><th>0</th><th>1</th><th>2</th></tr></thead><tbody>
 <tr><th>0</th><td>0</td><td>1</td><td>2</td></tr>
 <tr><th>1</th><td>1</td><td>2</td><td>0</td></tr>
 <tr><th>2</th><td>2</td><td>0</td><td>1</td></tr></tbody></table></div>
-<b>解</b>
-\[\begin{aligned}1\cdot\mathbb{Z}_3&amp;=\{1\oplus_3 0,\ 1\oplus_3 1,\ 1\oplus_3 2\}\\&amp;=\{1,2,0\}=\mathbb{Z}_3\ \checkmark\end{aligned}\]
-用红圈圈出 0、1、2，并用红色箭头把它们连到结果 \(1,2,0\)。
-<p>随后把"\(a\cdot\mathbb{Z}_3\)"作为一步变换（双箭头 \(\Downarrow\)），得到第二张表（行列标号仍为 0、1、2，表内用方框框出）：</p>
+<b>解</b>\[1\cdot\mathbb Z_3=\{1\oplus_3 0,1\oplus_3 1,1\oplus_3 2\}=\{1,2,0\}=\mathbb Z_3.\]<p>随后把"\(a\cdot\mathbb{Z}_3\)"作为一步变换（双箭头 \(\Downarrow\)），得到第二张表（行列标号仍为 0、1、2，表内用方框）：</p>
 <div class="tbl"><table><thead><tr><th></th><th>0</th><th>1</th><th>2</th></tr></thead><tbody>
 <tr><th>0</th><td>1</td><td>2</td><td>0</td></tr>
 <tr><th>1</th><td>2</td><td>0</td><td>1</td></tr>
 <tr><th>2</th><td>0</td><td>1</td><td>2</td></tr></tbody></table></div>
-<b>结论</b> 第一张表旁红圈写"群"、"\(e=0\)"；第二张表旁红圈写"群？"并被划掉，旁边写 \(e\) 也被划掉，下方有一个大问号，并有红色箭头在两张表的"群"标记之间往返。</div>
-<div class="supp"><b>补充讲解</b> 第二张表的每一项是 \(x\oplus_3 y\oplus_3 1\)，它只是第一张表的每一行左移一格。这张表在 \(\{0,1,2\}\) 上定义的运算 \(x*y=x+y+1\pmod 3\) 其实也构成群，但单位元是 2（\(2*y=y\)），不再是 0，\(0\) 和 \(1\) 互为逆元。所以划掉的"\(e\)"指的是 0 不再是单位元，并不说明它不是群。另外，"每行每列都是排列"本身并不能推出群，还必须验证结合律，这也是 ⑤ 旁"反？✗"的含义。</div>
-<h3>定理 6：元素的阶 <span class="pg">p.210</span></h3>
+<b>结论</b>比较两张运算表时，需分别检查单位元与结合律，不能只根据行列是否为排列判断是否构成群。</div>
+<div class="supp"><b>补充讲解</b>第二张表定义运算 \(x*y=x+y+1\pmod3\)。它也构成群，单位元为2，0与1互为逆元。每行每列为排列本身不能推出群，还必须验证结合律。</div>
+<h3>定理 6：元素的阶 </h3>
 <div class="thm"><b>定理 6（⑥）</b> 设 \(G\) 为群，\(a\in G\)，且 \(|a|=r\)。<p> \(G\) 中元素的个数；\(|a|=r\)？（问这两者的区别）。</p></div>
 <div class="def"><b>定义</b> \(|G|=n\) 为 \(G\) 的阶；<br/>\(|a|=r\) 为 \(a\) 的阶（使 \(a^r=e\) 成立的最小正整数为 \(r\)），\(a\) 为 \(r\) 阶元；若不存在 \(r\)，则 \(a\) 为无限阶元。</div>
 <div class="example"><b>求阶的过程</b> 依次检验：
@@ -40,14 +37,14 @@
 <li>\(|a|=|a^{-1}|\)</li>
 <li>若 \(|G|=n\)，则 \(r\le n\) ✓</li>
 </ol></div>
-<h3>证明 \(|a|=|a^{-1}|\) <span class="pg">p.211</span></h3>
+<h3>证明 \(|a|=|a^{-1}|\) </h3>
 <div class="proof"><b>证明</b>
 <p>已知 \(|a|=r\ \Rightarrow\ a^r=e\)（"最小"，箭头指向 \(r\)）。</p>
 \[(a^{-1})^r=(a^r)^{-1}=e^{-1}=e\ \Longrightarrow\ (a^{-1})^r=e\]
 
-<p>设 \(|a^{-1}|=t\)（最小，方框框出），则 \(t\mid r\)（由圈出的 \((a^{-1})^r=e\) 引箭头得到，用性质 1）。</p>
+<p>设 \(|a^{-1}|=t\)。由 \((a^{-1})^r=e\) 及阶的整除性质，得到 \(t\mid r\)。</p>
 <p>即 \(a^{-1}\) 的阶 \(t\) 为 \(a\) 的阶 \(r\) 的因子（\(t\mid r\)）。</p>
-<p>同理得 \(r\mid t\)（圈出）。</p>
+<p>同理 \(r\mid t\)，所以r=t。</p>
 \[r\mid t\ \text{和}\ t\mid r\ \Longrightarrow\ t=r\]
 <p>两者的幂次可以交换。</p></div>
 <div class="supp"><b>补充讲解</b> \((a^{-1})^r=(a^r)^{-1}\) 成立是因为 \(a^r\cdot(a^{-1})^r=e\)。最后一步用到 \(r,t\) 都是正整数，正整数互相整除时必相等。</div>

@@ -1,18 +1,18 @@
 
-<h3>① 特殊函数 <span class="pg">p.45</span></h3>
+<h3>① 特殊函数 </h3>
 <div class="def"><b>常数函数</b> \(f:A\to B\)，\(\exists b\in B\)，\(\forall x\in A\)，\(f(x)=b\)。</div>
 <div class="def"><b>恒等函数</b> \(I_A:A\to A\)，\(I_A(x)=x\)。</div>
-<div class="def"><b>特征函数</b> \(\chi_A:E\to\{0,1\}\)，\(\chi_A(x)=1\Leftrightarrow x\in A\)。<p>恒等函数中两个 \(x\) 下有三角标记。</p></div>
+<div class="def"><b>特征函数</b> \(\chi_A:E\to\{0,1\}\)，\(\chi_A(x)=1\Leftrightarrow x\in A\)。<p>恒等函数中两个 \(x\) 下有。</p></div>
 <div class="example"><b>例</b> \(E=\{1,2,3\}\)，\(A=\{1,3\}\)。
 <b>解</b> \(\chi_A(1)=1\)，\(\chi_A(2)=0\)，\(\chi_A(3)=1\)。</div>
-<h3>② 单调函数 <span class="pg">p.45</span></h3>
+<h3>② 单调函数 </h3>
 <div class="def"><b>定义</b> \(f:A\to B\)，\(\langle A,\preccurlyeq_A\rangle\)、\(\langle B,\preccurlyeq_B\rangle\) 为偏序集。☆
 \[\begin{aligned}
 \forall x,y\in A,\ x\preccurlyeq_A y &amp;\Rightarrow f(x)\preccurlyeq_B f(y)\quad\text{单调增}\\
 x\preccurlyeq_A y &amp;\Rightarrow f(y)\preccurlyeq_B f(x)\quad\text{单调减}
 \end{aligned}\]
 严格单调：把 \(\preccurlyeq\) 换成 \(\prec\)（严格小于，拟序关系）。</div>
-<h3>③ 自然映射 <span class="pg">p.45–46</span></h3>
+<h3>③ 自然映射 </h3>
 <div class="def"><b>定义</b> 设 \(R\) 为 \(A\) 上等价关系，
 \[f:A\to A/R,\quad f(x)=[x]_R\]</div>
 <div class="example"><b>例</b> \(A=\{1,2,3,4\}\)，等价关系 \(R\) 的关系图如下。
@@ -28,19 +28,19 @@ x\preccurlyeq_A y &amp;\Rightarrow f(y)\preccurlyeq_B f(x)\quad\text{单调减}
 </svg><figcaption>图：顶点 1、2、3、4，各有自环；1→2、2→1 两条有向边。</figcaption></figure>
 \[[1]=[2]=\{1,2\},\quad [3]=\{3\},\quad [4]=\{4\}\]
 <b>结论</b> \(f(1)=f(2)=[1]=[2]=\{1,2\}\)，\(f(3)=[3]=\{3\}\)，\(f(4)=[4]=\{4\}\)。</div>
-<h3>④ 定理：函数的复合 <span class="pg">p.46</span></h3>
+<h3>④ 定理：函数的复合 </h3>
 <div class="thm"><b>定理</b> \(g:A\to B\)，\(f:B\to C\)，则
 \[f\circ g:A\to C,\quad (f\circ g)(x)=f(g(x))\]☆</div>
-<div class="supp"><b>补充讲解</b> 笔记这里采用 \((f\circ g)(x)=f(g(x))\)，即先作用 \(g\) 再作用 \(f\)。有的书把关系合成 \(R\circ S\) 写成“先 \(R\) 后 \(S\)”，用于函数时顺序相反，读题时先看清约定。本节下面的左逆、右逆都按笔记的约定理解。</div>
-<h3>⑤ 反函数 <span class="pg">p.46</span></h3>
+<div class="supp"><b>补充讲解</b>函数合成采用 \((f\circ g)(x)=f(g(x))\)，先作用g再作用f。关系合成有不同顺序约定，计算时应先核对定义；本节左逆、右逆均使用上述函数合成约定。</div>
+<h3>⑤ 反函数 </h3>
 <div class="thm"><b>定理</b> 设 \(f:A\to B\)，且 \(f\) 为双射，则 \(f^{-1}:B\to A\)，且 \(f^{-1}\) 也是双射（\(f^{-1}\) 为反函数）。</div>
-<h3>⑥ 单边逆 <span class="pg">p.46–47</span></h3>
+<h3>⑥ 单边逆 </h3>
 <div class="def"><b>定义</b> 设 \(f:A\to B\)，\(g:B\to A\)。
 <ul>
 <li>左逆：\(g\) 为 \(f\) 的左逆 \(\Leftrightarrow g\circ f=I_A\)；</li>
 <li>右逆：\(g\) 为 \(f\) 的右逆 \(\Leftrightarrow f\circ g=I_B\)。</li>
 </ul></div>
-<div class="thm"><b>定理</b>（p.47）
+<div class="thm"><b>定理</b>
 \[\begin{aligned}
 &amp;f\ \text{存在左逆}\Leftrightarrow f\ \text{为单射}\\
 &amp;f\ \text{存在右逆}\Leftrightarrow f\ \text{为满射}\\

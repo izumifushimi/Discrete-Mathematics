@@ -1,4 +1,4 @@
-<h3>（平面）地图 <span class="pg">p.163</span></h3>
+<h3>（平面）地图 </h3>
 <div class="def"><b>定义（地图）</b> <u>连通</u>、<u>无桥</u>的平面图（的平面嵌入及其所有的面）称为（平面）地图。
 <ul>
 <li><b>国家</b>：（平面）地图的面。</li>
@@ -23,18 +23,18 @@
 <text font-size="14" x="40" y="130">×</text><text font-size="14" x="235" y="130">×</text><text font-size="14" x="415" y="135">✓</text>
 <text font-size="12" x="232" y="100">桥</text>
 </g></svg>
-<figcaption>图（p.163）：① 四个顶点组成的近似矩形，上下两条横边清楚，左右两条竖线在下端似有断口（画成"!"形），其下偏右标 ×；② 三角形；③ 两个三角形由一条边相连的"蝴蝶形"图，中间那条边是桥，标 ×；④ 一个"房子"形连通无桥平面图（顶上三角形 + 正方形 + 右侧三角形，各个面内都打 ✓，外面也打 ✓），标 ✓，即它是地图。</figcaption></figure>
+<figcaption>图：① 四个顶点组成的近似矩形，上下两条横边清楚，左右两条竖线在下端似有断口（画成"!"形），其下偏右标 ×；② 三角形；③ 两个三角形由一条边相连的"蝴蝶形"图，中间那条边是桥，标 ×；④ 一个"房子"形连通无桥平面图（顶上三角形 + 正方形 + 右侧三角形，各个面内都打 ✓，外面也打 ✓），标 ✓，即它是地图。</figcaption></figure>
 <div class="supp"><b>补充讲解</b> 三角形本身连通且无桥，按定义是地图（2 个国家：内部面与外部面），4-圈同理。若第一个图竖线不相连，则它不连通，不是地图，× 应指它。有桥的图不能作地图，因为桥两侧是同一个面，"自己与自己相邻"，无法面着色。</div>
-<h3>面着色与对偶图点着色 <span class="pg">p.163</span></h3>
+<h3>面着色与对偶图点着色 </h3>
 <div class="thm"><b>定理</b>
 <ol>
 <li>地图 \(G\) 可 \(k\)-面着色 \(\Leftrightarrow\) 对偶图 \(G^*\) 可 \(k\)-（点）着色。</li>
 <li>连通无环平面图 \(G\) 可 \(k\)-点着色 \(\Leftrightarrow\) 对偶图 \(G^*\) 可 \(k\)-面着色。</li>
 </ol></div>
-<h3>六色定理与五色定理 ★ <span class="pg">p.163</span></h3>
+<h3>六色定理与五色定理 ★ </h3>
 <div class="thm"><b>六色定理</b> 任何平面图都可 6-着色。 ✓</div>
 <div class="thm"><b>五色定理</b> 任何平面图都可 5-着色。 ✓<p> 两定理均画线并打 ✓，证明见 11.3。</p></div>
-<h3>边着色 <span class="pg">p.163–164</span></h3>
+<h3>边着色 </h3>
 <figure class="fig"><svg aria-label="圆圈内的星形图，中心点连出7条边" role="img" viewBox="0 0 200 170">
 <g fill="none" stroke="currentColor" stroke-width="2">
 <circle cx="100" cy="85" r="80"></circle>
@@ -45,7 +45,7 @@
 <g fill="currentColor"><circle cx="100" cy="95" r="4"></circle>
 <circle cx="60" cy="30" r="3"></circle><circle cx="100" cy="25" r="3"></circle><circle cx="140" cy="30" r="3"></circle><circle cx="165" cy="80" r="3"></circle><circle cx="150" cy="140" r="3"></circle><circle cx="105" cy="155" r="3"></circle><circle cx="55" cy="140" r="3"></circle><circle cx="30" cy="95" r="3"></circle>
 <text font-size="14" x="150" y="20">k-边着色</text></g></svg>
-<figcaption>图（p.163 底部，p.164 顶部重画）：圆圈中一个星形图，中心顶点连出多条边到各叶子顶点，"k-边着色"。表示中心点关联的各边两两相邻，必须各着不同颜色，故边色数至少为最大度 \(\Delta(G)\)。</figcaption></figure>
+<figcaption>图：圆圈中一个星形图，中心顶点连出多条边到各叶子顶点，"k-边着色"。表示中心点关联的各边两两相邻，必须各着不同颜色，故边色数至少为最大度 \(\Delta(G)\)。</figcaption></figure>
 <div class="def"><b>定义（边着色）</b> 对图的每条边着一种颜色，使相邻的边颜色不同，称为边着色；用 \(k\) 种颜色的边着色称为 \(k\)-边着色，最少颜色数称为边色数 \(\chi'(G)\)。</div>
 <div class="supp"><b>补充讲解</b> 上面的定义文字为整理者补出，直接给出下列结论。</div>
 <div class="thm"><b>定理（Vizing）</b> \(G\) 是简单图 \(\Rightarrow\) \(\Delta(G)\le\chi'(G)\le\Delta(G)+1\)。</div>
@@ -53,12 +53,12 @@
 <div class="thm"><b>完全图的边色数</b>
 \[\chi'(K_n)=\begin{cases} n, &amp; n\ \text{为奇数}\\ n-1, &amp; n\ \text{为偶数}\end{cases}\]</div>
 <div class="supp"><b>补充讲解</b> 上式对 \(n\ge 2\) 成立（\(K_1\) 无边，\(\chi'=0\)）。例：\(\chi'(K_3)=3\)，\(\chi'(K_4)=3\)，\(\chi'(K_5)=5\)。</div>
-<h3>同色边与等价关系 <span class="pg">p.164</span></h3>
+<h3>同色边与等价关系 </h3>
 <div class="thm"><b>同色边</b> 对无环图 \(G=\langle V,E\rangle\) 进行 \(k\)-边着色，\(k\ge\chi'(G)\)。令
 \[R=\{(e_i,e_j)\mid e_i\ \text{与}\ e_j\ \text{着同色}\}\]
 则 \(R\) 是 \(E\) 上的等价关系，商集 \(E/R=\{E_1,E_2,\cdots,E_k\}\) 是 \(E\) 的划分，划分块中元素着同色。</div>
 <div class="supp"><b>补充讲解</b> 每个划分块 \(E_i\) 中的边两两不相邻（同色边不能相邻），即每个 \(E_i\) 是一个匹配。若某种颜色未用到，实际块数少于 \(k\)。</div>
-<h3>例：排课问题 <span class="pg">p.164–166</span></h3>
+<h3>例：排课问题 </h3>
 <div class="example"><b>例</b> 某一天内有 \(n\) 个教师给 \(m\) 个班上课，每个教师在同一时间只能给一个班上课。
 <ol>
 <li>这一天内至少排多少节课？</li>
@@ -97,9 +97,9 @@
 <text font-size="14" x="42" y="195">c1</text><text font-size="14" x="122" y="195">c2</text><text font-size="14" x="202" y="195">c3</text><text font-size="14" x="282" y="195">c4</text><text font-size="14" x="362" y="195">c5</text>
 <text font-size="14" x="10" y="45">T</text><text font-size="14" x="10" y="175">C</text><text font-size="14" x="400" y="110">边着色</text>
 </g></svg>
-<figcaption>图（p.165）：二部图 \(G=\langle T,C;E\rangle\)，上排 \(T=\{t_1,t_2,t_3,t_4\}\)，下排 \(C=\{c_1,\dots,c_5\}\)，共 12 条边，用 4 种颜色边着色：红色 \(\{t_1c_1,\ t_2c_2,\ t_3c_4\}\)；绿色 \(\{t_1c_1,\ t_3c_3,\ t_4c_4\}\)；黑色 \(\{t_1c_2,\ t_2c_3,\ t_4c_5\}\)；紫色 \(\{t_1c_3,\ t_3c_2,\ t_4c_5\}\)（\(t_1c_1\) 与 \(t_4c_5\) 各为两条平行边）。</figcaption></figure>
+<figcaption>图：二部图 \(G=\langle T,C;E\rangle\)，上排 \(T=\{t_1,t_2,t_3,t_4\}\)，下排 \(C=\{c_1,\dots,c_5\}\)，共 12 条边，用 4 种颜色边着色：红色 \(\{t_1c_1,\ t_2c_2,\ t_3c_4\}\)；绿色 \(\{t_1c_1,\ t_3c_3,\ t_4c_4\}\)；黑色 \(\{t_1c_2,\ t_2c_3,\ t_4c_5\}\)；紫色 \(\{t_1c_3,\ t_3c_2,\ t_4c_5\}\)（\(t_1c_1\) 与 \(t_4c_5\) 各为两条平行边）。</figcaption></figure>
 <p>(1) \(G\) 是二部图 \(\Rightarrow\chi'(G)=\Delta(G)\)，所以这一天内至少排 \(\Delta(G)\) 节课。</p>
-<p>(2) 最少教室数 \(=\min\max\{k_1,k_2,\cdots,k_{\Delta(G)}\}\)，其中 \(k_i\) 为颜色 \(i\) 的边数（边注："\(\Delta(G)\) 种颜色"），min 取遍所有 \(\Delta(G)\)-边着色。</p>
+<p>(2) 最少教室数 \(=\min\max\{k_1,k_2,\cdots,k_{\Delta(G)}\}\)，其中 \(k_i\) 为颜色 \(i\) 的边数，min 取遍所有 \(\Delta(G)\)-边着色。</p>
 <p>(3) \(\Delta(G)=4=\chi'(G)\)，即 4 节课；\(\min\max\{k_1,k_2,k_3,k_4\}=3\) 个教室。课表如下（行为节次，列为教师，表中为上课班级，"—"表示该节不上课）：</p>
 <div class="tbl"><table><thead><tr><th>节次</th><th>\(t_1\)</th><th>\(t_2\)</th><th>\(t_3\)</th><th>\(t_4\)</th></tr></thead>
 <tbody>
@@ -109,5 +109,5 @@
 <tr><td>4</td><td>\(c_3\)</td><td>—</td><td>\(c_2\)</td><td>\(c_5\)</td></tr>
 </tbody></table></div>
 <p><b>结论</b> 至少 4 节课；不增加节数时至少需要 3 个教室（每节恰有 3 个班同时上课）。</p>
-<p> p.166 表格有向下箭头（按节次逐行看），表格有向右箭头（按教师逐列看）。</p></div>
+<p>  表格有向下箭头（按节次逐行看），表格有向右箭头（按教师逐列看）。</p></div>
 <div class="supp"><b>补充讲解</b> 第 \(i\) 节课同时上课的班数就是颜色 \(i\) 的边数 \(k_i\)，需要的教室数是 \(\max k_i\)。总边数 12、4 种颜色，故 \(\max k_i\ge\lceil 12/4\rceil=3\)，上面的着色达到 3，所以最优。可逐行验证：每一行中各班互不相同（班级不冲突），每列中一个教师每节只上一个班。</div>

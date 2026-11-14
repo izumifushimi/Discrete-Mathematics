@@ -1,12 +1,12 @@
 <p> 本节为“第14章 群”的第一节。</p>
-<h3>广群、半群、独异点 <span class="pg">p.201</span></h3>
+<h3>广群、半群、独异点 </h3>
 <div class="def"><b>定义 ①</b>
 <br/>1）\(V=\langle S,\circ\rangle\)，\(\circ\) 满足封闭性 —— <b>广群</b>；
 <br/>\(\Downarrow\)
 <br/>2）\(V=\langle S,\circ\rangle\)，\(\circ\) 满足封闭性、可结合 \((x\circ y)\circ z=x\circ(y\circ z)\) —— <b>半群</b>；
 <br/>\(\Downarrow\)
 <br/>3）\(V=\langle S,\circ,e\rangle\)，\(\circ\) 满足封闭性、可结合，且含单位元 \(e\) —— <b>独异点</b>。</div>
-<h3>幂的定义 <span class="pg">p.201</span></h3>
+<h3>幂的定义 </h3>
 <div class="def"><b>定义 ② 幂</b>
 <div class="tbl"><table><thead><tr><th>半群</th><th>独异点</th></tr></thead>
 <tbody>
@@ -18,7 +18,7 @@
 </tbody></table></div></div>
 <div class="thm"><b>性质</b> \[a^n\circ a^m=a^{n+m},\qquad (a^n)^m=a^{nm}\]</div>
 <div class="supp"><b>补充讲解</b> 半群中 \(n,m\in\mathbb{Z}^+\)；独异点中 \(n,m\in\mathbb{N}\)。半群里没有单位元，所以没有 \(a^0\)，也没有负整数次幂。</div>
-<h3>例题 <span class="pg">p.201–202</span></h3>
+<h3>例题 </h3>
 <div class="example"><b>例 ③</b> \(V=\langle S,\circ\rangle\) 为半群，任取 \(a,b\in S\)，（条件）如果 \(a\ne b\)，则 \(ab\ne ba\)。证明：
 <br/>（1）\(V\) 中成立幂等律；
 <br/>（2）\(\forall a,b\in S\)，\(aba=a\)；
@@ -29,14 +29,14 @@
 <br/><b>结论</b>\(\therefore\ a\circ a=a\)。
 <br/>（2）（3）只列出题目，未写证明。</div>
 <div class="supp"><b>补充讲解</b>（2）由结合律，\(a(aba)=a^2ba=aba\)，\((aba)a=ab a^2=aba\)，即 \(a\) 与 \(aba\) 可交换，由条件必有 \(aba=a\)。（3）\((abc)(ac)=ab(ca c)=abc\)（用(2) \(cac=c\)），\((ac)(abc)=(aca)bc=abc\)（用(2) \(aca=a\)），故 \(abc\) 与 \(ac\) 可交换，从而 \(abc=ac\)。</div>
-<h3>子半群与子独异点 <span class="pg">p.202</span></h3>
+<h3>子半群与子独异点 </h3>
 <div class="def"><b>定义 ④</b> 对非空子集 \(B\)（\(B\subseteq S\)），\(B\) 对于 \(V\) 中的运算（含0元运算）封闭：
-<br/>半群（圈出）：\(V=\langle S,\circ\rangle\)，\(B\subseteq S\ \Rightarrow\ V_1=\langle B,\circ\rangle\) 为子半群；
+<br/>半群：\(V=\langle S,\circ\rangle\)，\(B\subseteq S\ \Rightarrow\ V_1=\langle B,\circ\rangle\) 为子半群；
 <br/>独异点：\(V=\langle S,\circ,e\rangle\)，\(B\subseteq S\ \Rightarrow\ V_2=\langle B,\circ,e\rangle\) 为子独异点。</div>
 <div class="supp"><b>补充讲解</b> “含0元运算封闭”指代数常数（单位元 \(e\)）也要在 \(B\) 中，所以子独异点必须含原来的 \(e\)。</div>
 <div class="thm"><b>定理 1</b> 若干子半群／子独异点的非空交集／交集，仍为子半群／子独异点。</div>
 <div class="supp"><b>补充讲解</b> 子半群的交可能为空，所以要求“非空交集”；子独异点都含 \(e\)，交集必非空。</div>
-<h3>由子集 B 生成的子半群 <span class="pg">p.202–203</span></h3>
+<h3>由子集 B 生成的子半群 </h3>
 <div class="def"><b>定义 ⑤</b> 半群 \(V=\langle S,*\rangle\)，\(B\subseteq S\)（取一个 \(S\) 的子集 \(B\)），由 \(B\) 构造子半群 \(\langle B\rangle\)。</div>
 <p>构造 \(\langle B\rangle\) 有两种方法：</p>
 <div class="def"><b>左支（定义）</b> 找到所有的集合 \(A\)，满足：\(A\) 为 \(S\) 的子半群，且 \(B\subseteq A\)。这样的集合 \(A_1,A_2,\dots,A_n,\dots\)，则

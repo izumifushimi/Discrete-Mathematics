@@ -8,18 +8,18 @@
 <path d="M105 100 Q190 140 290 100" marker-end="url(#a51)"></path>
 </g>
 <g fill="currentColor" font-size="14"><text x="80" y="50">a</text><text x="55" y="100">b</text><text x="95" y="100">c</text><text x="275" y="50">1</text><text x="265" y="98">2</text><text x="295" y="98">3</text></g>
-</svg><figcaption>图（p.61 页首）：左椭圆含元素 a, b, c，右椭圆含元素 1, 2, 3；a 连到 1，b、c 两个元素各用一条曲线连到 2、3（两条线交叉），表示两个集合的元素一一对应（双射）。两椭圆下方各有一个小三角记号。</figcaption></figure>
-<h3>① 等势的定义 <span class="pg">p.61</span></h3>
+</svg><figcaption>图：左椭圆含元素 a, b, c，右椭圆含元素 1, 2, 3；a 连到 1，b、c 两个元素各用一条曲线连到 2、3（两条线交叉），表示两个集合的元素一一对应（双射）。两椭圆下方各有一个小。</figcaption></figure>
+<h3>① 等势的定义 </h3>
 <div class="def"><b>定义（等势）</b> 集合 \(A\) 与 \(B\) 等势 \(\Leftrightarrow \exists f:A\to B\)，\(f\) 为双射，记为 \(A\approx B\)。</div>
 <p>记号：\(\mathbb{N}\)，\(\mathbb{N}_{偶}\)，\(\mathbb{N}_{奇}\)，其中
 \[\mathbb{N}_{偶/奇}=\{n\mid n\in\mathbb{N}\land n\text{ 为偶/奇数}\}.\]</p>
 <div class="example"><b>例</b> \(\mathbb{N}\approx\mathbb{N}_{偶}\approx\mathbb{N}_{奇}\)。
 <b>解</b> 取 \(f:\mathbb{N}\to\mathbb{N}_{偶}\)，\(f(n)=2n\)；（对 \(\mathbb{N}_{奇}\) 取 \(f(n)=2n+1\)）。\(f\) 为双射。
 <b>结论</b> \(\mathbb{N}\approx\mathbb{N}_{偶}\approx\mathbb{N}_{奇}\)。<p>\(f(n)=2n+1\) 斜写在 \(f(n)=2n\) 的右，作为奇数集合的对应函数。</p></div>
-<h3>② 常见的等势集合 <span class="pg">p.61–63</span></h3>
+<h3>② 常见的等势集合 </h3>
 \[\begin{cases}\mathbb{Z}\approx\mathbb{N}\\ \mathbb{N}\times\mathbb{N}\approx\mathbb{N}\\ \mathbb{N}\approx\mathbb{Q}\\ (0,1)\approx\mathbb{R}\\ [0,1]\approx(0,1)\end{cases}\]
 
-<h4>1) \(\mathbb{Z}\approx\mathbb{N}\) <span class="pg">p.61–62</span></h4>
+<h4>1) \(\mathbb{Z}\approx\mathbb{N}\) </h4>
 <div class="example"><b>构造</b>
 \[f(n)=\begin{cases}0, &amp; n=0\\ 2n, &amp; n\gt 0\\ 2|n|-1, &amp; n\lt 0\end{cases}\]
 对应表：
@@ -27,7 +27,7 @@
 <tbody><tr><th>\(\mathbb{Z}\to\mathbb{N}\)</th><td>…</td><td>\(f(-2)\)</td><td>\(f(-1)\)</td><td>\(f(0)\)</td><td>\(f(1)\)</td><td>\(f(2)\)</td><td>…</td></tr>
 <tr><th>\(\mathbb{N}\)</th><td>…</td><td>\(3\)</td><td>\(1\)</td><td>\(0\)</td><td>\(2\)</td><td>\(4\)</td><td>…</td></tr></tbody></table></div>
 <b>结论</b> 正整数对应正偶数，负整数对应奇数，0 对应 0，\(f\) 为双射，\(\mathbb{Z}\approx\mathbb{N}\)。</div>
-<h4>(2) \(\mathbb{N}\times\mathbb{N}\approx\mathbb{N}\) <span class="pg">p.62</span></h4>
+<h4>(2) \(\mathbb{N}\times\mathbb{N}\approx\mathbb{N}\) </h4>
 <div class="example"><b>构造</b> \[f(\langle i,j\rangle)=2^{i}(2j+1)-1\]
 函数值表（列为 \(i\)，行为 \(j\)）：
 <div class="tbl"><table><thead><tr><th></th><th>\(\langle 0,j\rangle\)</th><th>\(\langle 1,j\rangle\)</th><th>\(\langle 2,j\rangle\)</th><th>…</th></tr></thead>
@@ -37,7 +37,7 @@
 <tr><th>\(\langle i,3\rangle\)</th><td>6</td><td>13</td><td>27</td><td></td></tr>
 <tr><th>⋮</th><td></td><td>⋮</td><td>⋱</td><td></td></tr></tbody></table></div></div>
 <div class="supp"><b>补充讲解</b> 每个正整数 \(m=f+1\) 都唯一地写成 \(2^{i}\cdot(\text{奇数 }2j+1)\)，所以 \(\langle i,j\rangle\mapsto 2^i(2j+1)-1\) 是 \(\mathbb{N}\times\mathbb{N}\) 到 \(\mathbb{N}\) 的双射。表中第 \(i=0\) 列为 \(2j\)，\(i=1\) 列为 \(4j+1\)，\(i=2\) 列为 \(8j+3\)。</div>
-<h4>(3) \(\mathbb{N}\approx\mathbb{Q}\) <span class="pg">p.62</span></h4>
+<h4>(3) \(\mathbb{N}\approx\mathbb{Q}\) </h4>
 <div class="example"><b>构造</b> \(f(n)=\) 编号 \([n]\) 的既约分数。把所有分数按“分子为整数、分母为正整数”排成表，从 \(0/1\) 开始绕圈编号，遇到不是既约分数的跳过：
 <figure class="fig"><svg aria-label="有理数表的编号路线" role="img" viewBox="0 0 520 210">
 <defs><marker id="a51b" markerHeight="6" markerWidth="6" orient="auto" refX="9" refY="5" viewBox="0 0 10 10"><path d="M0,0L10,5L0,10z" fill="currentColor"></path></marker></defs>
@@ -51,11 +51,11 @@
 <line marker-end="url(#a51b)" x1="325" x2="285" y1="105" y2="105"></line>
 <line marker-end="url(#a51b)" x1="235" x2="200" y1="105" y2="105"></line>
 <line marker-end="url(#a51b)" x1="165" x2="165" y1="95" y2="50"></line>
-</g></svg><figcaption>图（p.62）：第一行 …, −2/1, −1/1, 0/1, 1/1, 2/1, …；第二行 …, −2/2, −1/2, 0/2, 1/2, 2/2, …；第三行 …, −2/3, −1/3, 0/3, 1/3, 2/3, …，每列下方还有省略号。箭头路线 0/1 → 1/1 → 1/2 → 0/2 → −1/2 → −1/1。红色编号：0/1 为 ⓪，1/1 为 ①，1/2 为 ②，−1/2 为 ③，−1/1 为 ④，−2/1 为 ⑤，−2/3 为 ⑥，−1/3 为 ⑦，1/3 为 ⑧。0/2 下有红色三角、−2/2 被红圈圈出，表示它们不是既约分数（0/2=0/1，−2/2=−1/1），跳过不编号。</figcaption></figure>
-<b>结论</b> 每个有理数恰好以一个既约分数出现一次，\(f\) 为双射，\(\mathbb{N}\approx\mathbb{Q}\)。<p> \(\mathbb{Q}\) 被红圈圈出，\(\mathbb{N}\) 有红色三角重点记号。</p></div>
-<h4>(4) \((0,1)\approx\mathbb{R}\) <span class="pg">p.63</span></h4>
+</g></svg><figcaption>图：第一行 …, −2/1, −1/1, 0/1, 1/1, 2/1, …；第二行 …, −2/2, −1/2, 0/2, 1/2, 2/2, …；第三行 …, −2/3, −1/3, 0/3, 1/3, 2/3, …，每列下方还有省略号。箭头路线 0/1 → 1/1 → 1/2 → 0/2 → −1/2 → −1/1。红色编号：0/1 为 ⓪，1/1 为 ①，1/2 为 ②，−1/2 为 ③，−1/1 为 ④，−2/1 为 ⑤，−2/3 为 ⑥，−1/3 为 ⑦，1/3 为 ⑧。0/2 下有红色三角、−2/2 ，表示它们不是既约分数（0/2=0/1，−2/2=−1/1），跳过不编号。</figcaption></figure>
+<b>结论</b> 每个有理数恰好以一个既约分数出现一次，\(f\) 为双射，\(\mathbb{N}\approx\mathbb{Q}\)。</div>
+<h4>(4) \((0,1)\approx\mathbb{R}\) </h4>
 <div class="example"><b>构造</b> \[f(x)=\tan\left[\left(x-\tfrac12\right)\pi\right]\]
-（\(x-\tfrac12\) 下方画波浪线强调平移。）
+
 <figure class="fig"><svg aria-label="正切函数及其平移后的图像" role="img" viewBox="0 0 440 200">
 <g fill="none" stroke="currentColor" stroke-width="1.5">
 <line x1="10" x2="200" y1="100" y2="100"></line><line x1="105" x2="105" y1="190" y2="10"></line>
@@ -66,12 +66,12 @@
 <path d="M265 190 C300 120 330 80 365 10"></path>
 </g>
 <g fill="currentColor" font-size="14"><text x="245" y="118">0</text><text x="375" y="118">1</text><text x="310" y="118">½</text></g>
-</svg><figcaption>图（p.63）：左图为 \(y=\tan x\) 的一支，过原点，两侧有竖直渐近线；右图为平移后的 \(y=\tan[(x-\frac12)\pi]\)，定义在 \((0,1)\) 上，渐近线为 \(x=0\) 与 \(x=1\)，在 \(x=\frac12\) 处过横轴，值域为全体实数。</figcaption></figure>
+</svg><figcaption>图：左图为 \(y=\tan x\) 的一支，过原点，两侧有竖直渐近线；右图为平移后的 \(y=\tan[(x-\frac12)\pi]\)，定义在 \((0,1)\) 上，渐近线为 \(x=0\) 与 \(x=1\)，在 \(x=\frac12\) 处过横轴，值域为全体实数。</figcaption></figure>
 <b>结论</b> \(f\) 是 \((0,1)\) 到 \(\mathbb{R}\) 的严格单调满射，即双射，\((0,1)\approx\mathbb{R}\)。</div>
-<h4>(5) \([0,1]\approx(0,1)\) <span class="pg">p.63</span></h4>
+<h4>(5) \([0,1]\approx(0,1)\) </h4>
 <div class="example"><b>构造</b>
 \[f(x)=\begin{cases}1/2, &amp; x=0 \quad ①\\ 1/(n+2), &amp; x=1/n,\ n\in\mathbb{N}-\{0\}\quad ②\\ x, &amp; \text{else}\end{cases}\]
-红圈内列出：\(f(0)=\frac12,\ f(1)=\frac13,\ f(\frac12)=\frac14,\ f(\frac13)=\frac15,\ \cdots\)
+内列出：\(f(0)=\frac12,\ f(1)=\frac13,\ f(\frac12)=\frac14,\ f(\frac13)=\frac15,\ \cdots\)
 <figure class="fig"><svg aria-label="闭区间到开区间的映射示意" role="img" viewBox="0 0 460 210">
 <defs><marker id="a51c" markerHeight="6" markerWidth="6" orient="auto" refX="9" refY="5" viewBox="0 0 10 10"><path d="M0,0L10,5L0,10z" fill="currentColor"></path></marker></defs>
 <g fill="none" stroke="currentColor" stroke-width="1.5">
@@ -86,26 +86,26 @@
 <g fill="currentColor"><circle cx="60" cy="40" r="4"></circle><circle cx="400" cy="40" r="4"></circle></g>
 <g fill="currentColor" font-size="14"><text x="20" y="45">x</text><text x="55" y="30">0</text><text x="168" y="30">1/3</text><text x="220" y="30">1/2</text><text x="396" y="30">1</text><text x="410" y="45">[0,1]</text>
 <text x="10" y="175">f(x)</text><text x="55" y="195">0</text><text x="135" y="195">1/4</text><text x="168" y="195">1/3</text><text x="220" y="195">1/2</text><text x="396" y="195">1</text><text x="410" y="175">(0,1)</text><text x="80" y="110">…</text></g>
-</svg><figcaption>图（p.63）：上轴为 \(x\in[0,1]\)（端点 0、1 为实心点），标 0, 1/3, 1/2, 1；下轴为 \(f(x)\in(0,1)\)（端点 0、1 为空心圈），标 1/4, 1/3, 1/2。箭头：0 → 1/2（红），1 → 1/3，1/2 → 1/4（红），1/3 → 1/5，…，越靠近 0 的点 1/n 依次向左挤到 1/(n+2)，左侧以“……”表示无穷多条。其余点 \(x\) 映到自身。</figcaption></figure>
+</svg><figcaption>图：上轴为 \(x\in[0,1]\)（端点 0、1 为实心点），标 0, 1/3, 1/2, 1；下轴为 \(f(x)\in(0,1)\)（端点 0、1 为空心圈），标 1/4, 1/3, 1/2。箭头：0 → 1/2（红），1 → 1/3，1/2 → 1/4（红），1/3 → 1/5，…，越靠近 0 的点 1/n 依次向左挤到 1/(n+2)，左侧以“……”表示无穷多条。其余点 \(x\) 映到自身。</figcaption></figure>
 <b>结论</b> 把序列 \(0,1,\frac12,\frac13,\dots\) 整体后移两位到 \(\frac12,\frac13,\frac14,\dots\)，其余点不动，\(f\) 为双射，\([0,1]\approx(0,1)\)。</div>
-<h3>③ 等势的性质（对任意集合） <span class="pg">p.63</span></h3>
+<h3>③ 等势的性质（对任意集合） </h3>
 <div class="thm"><b>性质</b> 对任意集合 \(A,B,C\)：
 \[\begin{cases}A\approx A\\ A\approx B\Rightarrow B\approx A\\ A\approx B\land B\approx C\Rightarrow A\approx C\end{cases}\]</div>
 <div class="supp"><b>补充讲解</b> 即等势具有自反性、对称性、传递性（恒等函数、反函数、复合函数仍是双射）。</div>
-<h3>④ 等势结论汇总 <span class="pg">p.63–64</span></h3>
+<h3>④ 等势结论汇总 </h3>
 \[\begin{cases}\mathbb{N}\approx\mathbb{Z}\approx\mathbb{Q}\approx\mathbb{N}\times\mathbb{N}\\ (0,1)\approx[0,1]\approx\mathbb{R}\end{cases}\]
-<p> p.63 页底已开始写④，被截断，在 p.64 页首重写完整。</p>
-<h3>⑤ 康托定理 <span class="pg">p.64</span></h3>
-<div class="thm"><b>定理（康托定理）</b> \[\begin{cases}\mathbb{N}\not\approx\mathbb{R}\\ A\not\approx P(A)\end{cases}\]<p> \(\mathbb{N}\not\approx\mathbb{R}\) 下画红线，画五角星（重点）。证明见 5.2。</p></div>
-<h3>⑥ 幂集与函数集 <span class="pg">p.64</span></h3>
+
+<h3>⑤ 康托定理 </h3>
+<div class="thm"><b>定理（康托定理）</b> \[\begin{cases}\mathbb{N}\not\approx\mathbb{R}\\ A\not\approx P(A)\end{cases}\]<p>\(\mathbb N\not\approx\mathbb R\)，证明见康托对角线论证。</p></div>
+<h3>⑥ 幂集与函数集 </h3>
 <div class="thm"><b>定理</b> \[P(A)\approx 2^{A}=A\to\{0,1\}=\{f\mid f:A\to 2\}\]<p> 箭头指向 \(2^A\)：“全体函数所组成的集合”。</p></div>
 <div class="supp"><b>补充讲解</b> 这里 \(2=\{0,1\}\)。子集 \(S\subseteq A\) 对应它的特征函数 \(\chi_S\)（\(x\in S\) 取 1，否则取 0），这是 \(P(A)\) 到 \(A\to\{0,1\}\) 的双射。</div>
-<h3>⑦ 有穷集 / 无穷集 <span class="pg">p.64</span></h3>
-<div class="def"><b>有穷集</b>（边注举例：1, 2, 3）有穷集 \(\Leftrightarrow\) 与某个自然数等势的集合 \(\Leftrightarrow\) 不能与（自身的真子集）建立双射。</div>
-<div class="def"><b>无穷集</b>（边注举例：\(\mathbb{N},\mathbb{Q},\mathbb{R},\mathbb{Z}\)）无穷集 \(\Leftrightarrow\) 不能与某个自然数等势的集合 \(\Leftrightarrow\) 能与（自身的真子集）建立双射。<p> 有穷集第二条“不能与自身的真子集建立双射”下画红线，后标五角星。</p></div>
+<h3>⑦ 有穷集 / 无穷集 </h3>
+<div class="def"><b>有穷集</b>有穷集 \(\Leftrightarrow\) 与某个自然数等势的集合 \(\Leftrightarrow\) 不能与（自身的真子集）建立双射。</div>
+<div class="def"><b>无穷集</b>无穷集 \(\Leftrightarrow\) 不能与某个自然数等势的集合 \(\Leftrightarrow\) 能与（自身的真子集）建立双射。</div>
 <div class="warn"><b>易错提醒</b> 无穷集定义中的“不能与某个自然数等势”应理解为：不存在自然数 \(n\) 使 \(A\approx n\)，即对所有 \(n\in\mathbb{N}\) 都有 \(A\not\approx n\)。不要读成“存在某个 \(n\) 与 \(A\) 不等势”（这对任何集合都成立）。</div>
 <div class="supp"><b>补充讲解</b> 这里的自然数按集合论定义：\(n=\{0,1,\dots,n-1\}\)，所以“与自然数 \(n\) 等势”就是“恰有 \(n\) 个元素”。例如 \(\mathbb{N}\approx\mathbb{N}_{偶}\)，而 \(\mathbb{N}_{偶}\) 是 \(\mathbb{N}\) 的真子集，所以 \(\mathbb{N}\) 是无穷集。</div>
-<h3>⑧ 有穷集的基本结论 <span class="pg">p.64</span></h3>
+<h3>⑧ 有穷集的基本结论 </h3>
 <div class="thm"><b>定理</b>
 <ul><li>\(\mathbb{N}\) 是无穷集；</li>
 <li>任何有穷集都与唯一的自然数等势；</li>

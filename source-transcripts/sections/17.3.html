@@ -1,5 +1,5 @@
 
-<h3>同余的定义 <span class="pg">p.266</span></h3>
+<h3>同余的定义 </h3>
 <div class="def"><b>定义（同余）</b> ① 设 \(m\) 是整数，\(a\) 和 \(b\) 为整数。若 \(m\mid a-b\)，则称
 <ul>
 <li>\(a\) 模 \(m\) 同余于 \(b\)，或</li>
@@ -7,16 +7,16 @@
 </ul>
 记作 \(a\equiv b\pmod m\)。若不同余，记作 \(a\not\equiv b\pmod m\)。</div>
 <div class="supp"><b>补充讲解</b> 实际使用时一般取正整数 \(m\)（模数），例如本节的 \(\bmod 6\)、\(\bmod 10\)。</div>
-<h3>同余的等价刻画 <span class="pg">p.266</span></h3>
+<h3>同余的等价刻画 </h3>
 <div class="thm"><b>性质</b> ②
 \[ \begin{aligned}
 a\equiv b\pmod m &amp;\iff m\mid a-b\\
 &amp;\iff a \text{ 与 } b \text{ 除以 } m \text{ 的余数相同}\\
 &amp;\iff a = b + km,\ \text{其中 } k \text{ 为整数.}
-\end{aligned} \]<p> 红色弧形箭头连接 \(m\mid a-b\) 与 \(a=b+km\)，旁写“\(a-b=km\)”：\(m\mid a-b\) 就是 \(a-b\) 等于 \(m\) 的整数倍。</p></div>
+\end{aligned} \]<p>\(m\mid a-b\) 等价于存在整数k使 \(a-b=km\)，也等价于 \(a=b+km\)。</p></div>
 <div class="example"><b>例 1</b> \(20\equiv 2\pmod 6\)，\(15\equiv -3\pmod 6\)。<br/>
 验算：\(20-2=18=3\times6\)；\(15-(-3)=18=3\times6\)。</div>
-<h3>同余关系是等价关系 <span class="pg">p.266</span></h3>
+<h3>同余关系是等价关系 </h3>
 <div class="thm"><b>同余关系性质</b> ③ 模 \(m\) 同余关系满足
 <ol>
 <li>自反性；</li>
@@ -25,7 +25,7 @@ a\equiv b\pmod m &amp;\iff m\mid a-b\\
 </ol>
 所以它是等价关系，其等价类称为模 \(m\) 等价类。</div>
 <div class="supp"><b>补充讲解</b> 自反：\(m\mid a-a=0\)。对称：\(m\mid a-b\Rightarrow m\mid b-a\)。传递：\(m\mid a-b\)、\(m\mid b-c\Rightarrow m\mid (a-b)+(b-c)=a-c\)。</div>
-<h3>同余的运算性质 <span class="pg">p.266–267</span></h3>
+<h3>同余的运算性质 </h3>
 <div class="thm"><b>性质 1 ☆</b> 若 \(a\equiv b\pmod m\)，\(c\equiv d\pmod m\)，则
 \[ \begin{aligned}
 a\pm c &amp;\equiv b\pm d \pmod m,\\
@@ -39,7 +39,7 @@ a^k &amp;\equiv b^k \pmod m,\quad k \text{ 为非负整数.}
 <div class="thm"><b>性质 4</b> 设 \(c\) 与 \(m\) 互素，则
 \[ a\equiv b\pmod m \iff ca\equiv cb\pmod m . \]</div>
 <div class="warn"><b>易错提醒</b> 性质 4 的“互素”不能去掉：\(2\times3\equiv2\times6\pmod 6\)（\(6\equiv12\)），但 \(3\not\equiv6\pmod 6\)。不互素时不能直接约去 \(c\)。</div>
-<h3>求幂的个位数 <span class="pg">p.267–268</span></h3>
+<h3>求幂的个位数 </h3>
 <div class="example"><b>例 2</b> \(3^{455}\) 的个位数是多少？
 <b>解</b> 先列出 \(3\) 的幂的个位数：
 <div class="tbl"><table><thead><tr><th>\(3^1\)</th><th>\(3^2\)</th><th>\(3^3\)</th><th>\(3^4\)</th></tr></thead><tbody>
@@ -52,4 +52,4 @@ a^k &amp;\equiv b^k \pmod m,\quad k \text{ 为非负整数.}
 \[ (3^4)^{113}\equiv 1^{113}=1\pmod{10},\quad\text{即}\quad 3^{4\times113}\equiv1\pmod{10}; \]
 又 \(3^3=27\equiv7\pmod{10}\)，再由性质 1（乘法）：
 \[ 3^{455} = 3^{4\times113}\times3^3 \equiv 1\times7 = 7\pmod{10} . \]
-<b>结论</b> \(3^{455}\) 的个位数为 \(7\)。<p>指数除以 4 余 3 时对应 \(7\)；\(3^4\equiv1\pmod{10}\) 红框圈出并标三角，用弧形箭头引到下面的推导；大字 \(3^{455}\) 用箭头指向 \(3^{4\times113}\times3^3\)；顶部是该式的延续，结果 \(7\) 再次红圈标出。</p></div>
+<b>结论</b> \(3^{455}\) 的个位数为 \(7\)。<p>因为 \(3^4\equiv1\pmod{10}\)，且 \(455=4\cdot113+3\)，所以 \(3^{455}\equiv(3^4)^{113}3^3\equiv7\pmod{10}\)。</p></div>

@@ -12,7 +12,7 @@ root = Path(__file__).resolve().parent.parent
 src = root / 'source-transcripts' / 'sections'
 meta = json.loads((root / 'dist/sections.js').read_text()[15:-1])
 partial = '--partial' in sys.argv
-PLACEHOLDERS = ['正在逐页校订', '待补充', '暂未完成', 'TODO', 'lorem', '占位']
+PLACEHOLDERS = ['笔记', '转写', '手写', '待核对', '校订说明', '圈出', '波浪线', '下划线', '笔迹', '正在逐页校订', '待补充', '暂未完成', 'TODO', 'lorem', '占位']
 STATUSES = {'transcribed', 'duplicate', 'blank', 'partial'}
 
 problems, content, covered = [], {}, {}
@@ -59,7 +59,7 @@ for s in meta:
     for n in (range(s['start'], s['end'] + 1) if s['start'] is not None else []):
         if n not in {r.get('page') for r in pages}:
             problems.append(f'{k}: no record for page {n}')
-    content[k] = {'html': html, 'quiz': quiz, 'pages': pages}
+    content[k] = {'html': html, 'quiz': quiz, 'pages': []}
 
 missing_pages = [n for n in range(1, 273) if n not in covered]
 (root / 'dist/content.js').write_text('const CONTENT=' + json.dumps(content, ensure_ascii=False) + ';')

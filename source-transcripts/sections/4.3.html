@@ -1,7 +1,7 @@
 
-<h3>① 传递集 <span class="pg">p.56</span></h3>
+<h3>① 传递集 </h3>
 <div class="def"><b>定义（传递集）</b> \(A\) 为传递集 \(\Leftrightarrow\) \(A\) 的元素的元素，还为 \(A\) 的元素
-\[\Leftrightarrow\ \forall x\forall y\,(x\in y\land y\in A\to x\in A)\]<p> “\(A\) 为传递集”下画红线；式中两个 \(x\) 与最后的 \(A\) 下画短线。</p></div>
+\[\Leftrightarrow\ \forall x\forall y\,(x\in y\land y\in A\to x\in A)\]</div>
 <div class="example"><b>例</b> 判断下列集合是否为传递集：
 \[\begin{aligned}
 A&amp;=\{\emptyset,\{\emptyset\},\{\{\emptyset\}\}\} &amp;&amp;✓\\
@@ -16,9 +16,9 @@ A\text{ 为传递集}&amp;\Leftrightarrow \bigcup A\subseteq A\\
 &amp;\Leftrightarrow \forall x\,(x\in A\to x\subseteq A)\\
 &amp;\Leftrightarrow A\subseteq P(A)\\
 &amp;\Leftrightarrow P(A)\text{ 为传递集}
-\end{aligned}\]<p> \(\bigcup(A^{+})=A\) 后画圈星并下画红线；\(\bigcup A\subseteq A\) 下画红线并画圈星；\(\forall x(x\in A\to x\subseteq A)\) 下画红线；\(A\subseteq P(A)\)、\(P(A)\) 下画横线。</p></div>
+\end{aligned}\]</div>
 <div class="supp"><b>补充讲解</b> \(\bigcup(A^{+})=\bigcup(A\cup\{A\})=\bigcup A\cup A\)，所以当 \(\bigcup A\subseteq A\) 时它等于 \(A\)。</div>
-<h3>② 自然数与自然数集都是传递集 <span class="pg">p.56–57</span></h3>
+<h3>② 自然数与自然数集都是传递集 </h3>
 <div class="thm"><b>定理</b>
 <br/>1) 每个自然数都为传递集；
 <br/>2) 自然数集 \(\mathbb{N}\) 为传递集。</div>
@@ -36,13 +36,13 @@ A\text{ 为传递集}&amp;\Leftrightarrow \bigcup A\subseteq A\\
 \(\therefore S=\mathbb{N}\)。</p></div>
 <div class="proof"><b>略证 2)</b> 令 \(S=\{n\mid n\in\mathbb{N}\land n\subseteq\mathbb{N}\}\)。
 <p>(1) \(0\in S\)；</p>
-<p>(2) \(\forall n\in\mathbb{N}\)，\(n\in S\Rightarrow n^{+}\in S\) ……</p><p> 1)、2) 用大括号并列，2) 下画红线；1) 中“\(n\) 为传递集”下画红线；\(\bigcup(n^{+})\subseteq n^{+}\) 中两处 \(n^{+}\) 下标红三角；略证中 \(n\in\mathbb{N}\)、\(n\subseteq\mathbb{N}\) 下画红线。</p></div>
+<p>(2) \(\forall n\in\mathbb{N}\)，\(n\in S\Rightarrow n^{+}\in S\) ……</p></div>
 <div class="supp"><b>补充讲解</b> 略证(2)可补完：若 \(n\subseteq\mathbb{N}\)，又 \(n\in\mathbb{N}\)，则 \(n^{+}=n\cup\{n\}\subseteq\mathbb{N}\)。于是每个 \(n\in\mathbb{N}\) 都有 \(n\subseteq\mathbb{N}\)，这就是 \(\mathbb{N}\) 为传递集。1) 中 \(0\in S\) 是因为 \(\emptyset\) 没有元素，传递条件空真。</div>
-<h3>③ 自然数集上的二元运算 <span class="pg">p.57</span></h3>
+<h3>③ 自然数集上的二元运算 </h3>
 \[\begin{cases}+:\mathbb{N}\times\mathbb{N}\to\mathbb{N}\\ +(\langle 2,3\rangle)=5,\quad 2+3=5\end{cases}\qquad
 \begin{cases}\cdot:\mathbb{N}\times\mathbb{N}\to\mathbb{N}\\ \cdot(\langle 2,3\rangle)=6,\quad 2\cdot 3=6\end{cases}\]
 
-<h3>④ \(\mathbb{N}\) 上的递归定理 <span class="pg">p.57–58</span></h3>
+<h3>④ \(\mathbb{N}\) 上的递归定理 </h3>
 <div class="thm"><b>定理（递归定理）</b> 设 \(A\) 为集合，\(a\in A\)，\(F:A\to A\)，则存在唯一函数 \(h:\mathbb{N}\to A\)，使得 \(h(0)=a\)，且 \(\forall n\in\mathbb{N}\)，\(h(n^{+})=F(h(n))\)。</div>
 <figure class="fig"><svg aria-label="递归定理示意：h把0,1,2,3映到a,F(a),F²(a),F³(a)" role="img" viewBox="0 0 300 230">
 <defs><marker id="ar43a" markerHeight="7" markerWidth="7" orient="auto" refX="9" refY="5" viewBox="0 0 10 10"><path d="M0 0L10 5L0 10z" fill="currentColor"></path></marker></defs>
@@ -60,7 +60,7 @@ A\text{ 为传递集}&amp;\Leftrightarrow \bigcup A\subseteq A\\
 <line marker-end="url(#ar43a)" x1="70" x2="158" y1="150" y2="150"></line><line marker-end="url(#ar43a)" x1="70" x2="158" y1="200" y2="200"></line>
 <line marker-end="url(#ar43a)" x1="165" x2="165" y1="55" y2="93"></line><line marker-end="url(#ar43a)" x1="165" x2="165" y1="105" y2="143"></line><line marker-end="url(#ar43a)" x1="165" x2="165" y1="155" y2="193"></line>
 </g></svg>
-<figcaption>图（p.57–58）：左列 \(\mathbb{N}\) 的元素 \(0,1,2,3,\cdots\)，右列 \(A\) 的元素 \(a,F(a),F^2(a),F^3(a),\cdots\)；横向箭头标 \(h\)，右列竖向红色箭头标 \(F\)。原图右列只在前两点写了 \(a\)、\(F(a)\)，\(F^2(a)\)、\(F^3(a)\) 标签取自右侧算式。</figcaption></figure>
+<figcaption>函数h把自然数 \(0,1,2,3,\ldots\) 依次映到 \(a,F(a),F^2(a),F^3(a),\ldots\)，满足 \(h(0)=a\)、\(h(n^+)=F(h(n))\)。</figcaption></figure>
 \[\begin{aligned}
 &amp;h(0)=a\\
 &amp;F(a)=F(h(0))=h(1)=h(0^{+})=F(h(0))\\
@@ -68,10 +68,10 @@ A\text{ 为传递集}&amp;\Leftrightarrow \bigcup A\subseteq A\\
 &amp;F^3(a)=F(F^2(a))=h(3)=h(2^{+})=F(h(2))\\
 &amp;\qquad\vdots
 \end{aligned}\]
-<p>每行末尾的 \(h(k^{+})=F(h(k))\) 下画红线。p.58 顶部重复了 p.57 底部“1 行”的图和算式。</p>
+
 <div class="def"><b>递归定义</b>（\(h:\mathbb{N}\to A\) 存在唯一）\(a\in A\)，\(F:A\to A\)，
 \[\begin{cases}h(0)=a\\ h(n+1)=F(h(n)),\quad\forall n\in\mathbb{N}\end{cases}\]<p> \(n^{+}\)。</p></div>
-<h3>⑤ 一元函数“加 \(m\)” <span class="pg">p.58</span></h3>
+<h3>⑤ 一元函数“加 \(m\)” </h3>
 <div class="def"><b>定义</b> \(m\) 固定，\(A_m:\mathbb{N}\to\mathbb{N}\)，
 \[\begin{cases}A_m(0)=m\\ A_m(n^{+})=(A_m(n))^{+}\end{cases}\]</div>
 <div class="supp"><b>补充讲解</b> 这是递归定理取 \(A=\mathbb{N}\)、\(a=m\)、\(F=\sigma\) 的情形。</div>
@@ -85,7 +85,7 @@ A_2(3)&amp;=A_2(2^{+})=[A_2(2)]^{+}=[A_2(1^{+})]^{+}=[A_2(1)]^{++}\\
 <p>\(A_m(n)=m+n\)：</p>
 \[\begin{cases}A_m(0)=m\\ A_m(n^{+})=A_m(n)^{+}=(m+n)^{+}=(m+n)+1=m+(n+1)=m+n^{+}\end{cases}\]
 
-<h3>⑥ 加法 <span class="pg">p.58–59</span></h3>
+<h3>⑥ 加法 </h3>
 <div class="def"><b>定义（加法）</b> \(+:\mathbb{N}\times\mathbb{N}\to\mathbb{N}\)，\(m+n=A_m(n)\)。</div>
 <div class="example"><b>例</b> \(3+2=A_3(2)=5\)。</div>
 <div class="thm"><b>定理</b> \(\forall m,n\in\mathbb{N}\)，
@@ -93,8 +93,7 @@ A_2(3)&amp;=A_2(2^{+})=[A_2(2)]^{+}=[A_2(1^{+})]^{+}=[A_2(1)]^{++}\\
 \(\Updownarrow\)
 \[(n+m)^{+}=n^{+}+m\]</div>
 <p>右侧验证：\(m+0=A_m(0)=m\) ✓；\(m+n^{+}=A_m(n^{+})=[A_m(n)]^{+}=(m+n)^{+}\)。</p>
-<p> \(m+n=A_m(n)\) 下画红线并标三角；\((n+m)^{+}=n^{+}+m\) 黄色高亮并用红圈圈出，红色小字标注。</p>
-<h3>⑦ 加法的性质 <span class="pg">p.59</span></h3>
+<h3>⑦ 加法的性质 </h3>
 <div class="thm"><b>性质</b>
 \[\begin{cases}0+n=n+0=n\\ n+m=m+n\ \ ☆\\ (m+n)+k=m+(n+k)\\ m+k=n+k\Rightarrow m=n\end{cases}\]</div>
 <div class="thm"><b>交换律</b> \(\forall m,n\in\mathbb{N}\)，\(n+m=m+n\)。</div>
@@ -105,9 +104,9 @@ A_2(3)&amp;=A_2(2^{+})=[A_2(2)]^{+}=[A_2(1^{+})]^{+}=[A_2(1)]^{++}\\
 m+n^{+}&amp;=A_m(n^{+})=[A_m(n)]^{+}=(m+n)^{+}\\
 &amp;=(n+m)^{+}=n^{+}+m
 \end{aligned}\]
-\(\therefore S=\mathbb{N}\)。</p><p> 交换律在性质列表中标 ☆，并用黑色长箭头引到证明。(1) 中 \(m=0+m\) 下画红线；(2) 中 \(n\in S\)、\(n^{+}\in S\) 下标三角；写“\(m+n^{+}=n^{+}+m\) ✓”和“\(m+n=n+m\) 已知 ✓”；</p></div>
-<div class="supp"><b>补充讲解</b> (1) 用到 \(0+m=m\)，这需要另外对 \(m\) 归纳证明（性质第一条）；(2) 中 \((n+m)^{+}=n^{+}+m\) 用的就是 ⑥ 中圈出的那个公式。</div>
-<h3>⑧ 乘法 <span class="pg">p.60</span></h3>
+\(\therefore S=\mathbb{N}\)。</p></div>
+<div class="supp"><b>补充讲解</b>基础步骤使用 \(0+m=m\)，它可另对m归纳证明；归纳步骤使用引理 \((n+m)^+=n^++m\)。</div>
+<h3>⑧ 乘法 </h3>
 <div class="def"><b>定义（“乘 \(m\)”）</b> \(m\) 固定，\(M_m:\mathbb{N}\to\mathbb{N}\)，
 \[\begin{cases}M_m(0)=0\\ M_m(n^{+})=M_m(n)+m\end{cases}\]
 \(\cdot:\mathbb{N}\times\mathbb{N}\to\mathbb{N}\)，\(m\cdot n=M_m(n)\)。</div>
@@ -120,7 +119,7 @@ M_2(3)&amp;=M_2(2^{+})=M_2(2)+2=M_2(1^{+})+2\\
 <div class="thm"><b>性质</b>
 \[\begin{cases}1\cdot n=n\cdot 1=n\\ n\cdot m=m\cdot n\\ (m\cdot n)\cdot k=m\cdot(n\cdot k)\\ m\cdot k=n\cdot k\Rightarrow m=n\ (k\ne 0)\\ m\cdot(n+k)=(m\cdot n)+(m\cdot k)\end{cases}\]</div>
 <div class="warn"><b>易错提醒</b> 乘法消去律必须加条件 \(k\ne 0\)：\(2\cdot 0=3\cdot 0\) 但 \(2\ne 3\)。</div>
-<h3>⑨ 自然数的序 <span class="pg">p.60</span></h3>
+<h3>⑨ 自然数的序 </h3>
 <p>（用集合定义）</p>
 \[\begin{aligned}
 m\lt n&amp;\Leftrightarrow m\in n\\

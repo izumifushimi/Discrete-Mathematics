@@ -1,16 +1,16 @@
 
-<h3>个体、谓词与量词 <span class="pg">p.5</span></h3>
+<h3>个体、谓词与量词 </h3>
 <div class="def"><b>① 个体</b> 例：\(f(x,y)=ax^2+bx+c+y\)。
 <ul><li>\(a,b,c\)：个体常元（常元）；</li><li>\(x,y\)：个体变元（变元）。</li></ul></div>
 <div class="def"><b>② 谓词</b> 写 \(f(x),\ g(x)\)，下一行写 \(F(x),\ G(x)\)，“关系”：谓词刻画个体的性质或个体之间的关系，用大写字母 \(F,G\) 表示。</div>
 <div class="def"><b>③ 量词</b>
 <ul><li>\(\forall\)：全称量词；</li><li>\(\exists\)：存在量词。</li></ul></div>
 <div class="supp"><b>补充讲解</b> 小写 \(f,g\) 通常是函数符号（取值为个体），大写 \(F,G\) 是谓词（取值为真/假）。先写小写再写大写，即在区分二者。</div>
-<h3>命题符号化与公式类型 <span class="pg">p.5</span></h3>
+<h3>命题符号化与公式类型 </h3>
 <div class="example"><b>命题符号化</b> 公式 A：\[\forall x\,(F(x)\to G(x))\] 读作：对全部 \(x\)，\(F(x)\to G(x)\)。</div>
 <div class="def"><b>公式类型</b> 右侧大括号列出：永真式、永假式。</div>
-<div class="def"><b>等值</b> 对公式 \(A,B\)：若 \(A\leftrightarrow B\) 永真，则称 A 与 B 等值，记作 \(A\Leftrightarrow B\)。<p> 页单独写有 \(\forall x\,A(x)\)，作为下面“基本等值式”的一般写法。</p></div>
-<h3>基本等值式 <span class="pg">p.5–p.6</span></h3>
+<div class="def"><b>等值</b> 对公式 \(A,B\)：若 \(A\leftrightarrow B\) 永真，则称 A 与 B 等值，记作 \(A\Leftrightarrow B\)。<p>以下以 \(\forall x\,A(x)\) 为例讨论量词的基本等值式。</p></div>
+<h3>基本等值式 </h3>
 <h4>① 有限个体域上量词的消去</h4>
 <p>设个体域 \(D=\{a_1,a_2,\dots,a_n\}\)，\(x\in D\)：</p>
 \[\begin{aligned}
@@ -32,8 +32,8 @@
 \forall x(A(x)\lor B)&amp;\Leftrightarrow\forall x A(x)\lor B, &amp;\forall x(A(x)\land B)&amp;\Leftrightarrow\forall x A(x)\land B,\\
 \exists x(A(x)\lor B)&amp;\Leftrightarrow\exists x A(x)\lor B, &amp;\exists x(A(x)\land B)&amp;\Leftrightarrow\exists x A(x)\land B.
 \end{aligned}\]
-<p> p.5 底部与 p.6 顶部大圈“\(\lor/\land\)”，旁边小圈“\(\forall/\exists\)”，并写 \(A(x)\to B\)，箭头指向下面的蕴含式情形：\(\lor/\land\) 时量词不变，\(\to\) 时（\(A(x)\) 在前件）量词要互换。</p>
-<p>含蕴含的情形（p.6）：</p>
+<p>  底部与  顶部大圈“\(\lor/\land\)”，旁边小圈“\(\forall/\exists\)”，并写 \(A(x)\to B\)，箭头指向下面的蕴含式情形：\(\lor/\land\) 时量词不变，\(\to\) 时（\(A(x)\) 在前件）量词要互换。</p>
+<p>含蕴含的情形：</p>
 \[\begin{aligned}
 (\forall/\exists)\,x\,(A(x)\to B)&amp;\Leftrightarrow[(\exists/\forall)\,x\,A(x)]\to B\\
 (\forall/\exists)\,x\,(B\to A(x))&amp;\Leftrightarrow B\to[(\forall/\exists)\,x\,A(x)]
@@ -54,9 +54,8 @@
 \exists x\,(A(x)\lor B(x))&amp;\Leftrightarrow\exists x\,A(x)\lor\exists x\,B(x)
 \end{aligned}\]
 
-<div class="example"><b>例</b> 左侧写“采花”，画圈“黑”与圈“玫瑰”，中间注“或”；下方写“特定黑/玫瑰”。右侧画两圆相交、交集部分加阴影的 Venn 图。
-<figure class="fig"><svg aria-label="两圆相交，交集阴影" role="img" viewBox="0 0 260 150">
-<defs><pattern height="6" id="h12" patterntransform="rotate(45)" patternUnits="userSpaceOnUse" width="6"><line stroke="currentColor" x1="0" x2="0" y1="0" y2="6"></line></pattern></defs>
+<div class="example"><b>例</b>谓词的合取要求同一个对象同时满足两个性质；析取只要求至少满足一个性质。可借助集合的交与并理解二者。<figure class="fig"><svg aria-label="两圆相交，交集阴影" role="img" viewBox="0 0 260 150">
+<defs><pattern height="6" id="h12" patterntransform="rotate(45)" patternunits="userSpaceOnUse" width="6"><line stroke="currentColor" x1="0" x2="0" y1="0" y2="6"></line></pattern></defs>
 <clippath id="c12"><circle cx="100" cy="75" r="55"></circle></clippath>
 <circle clip-path="url(#c12)" cx="160" cy="75" fill="url(#h12)" r="55"></circle>
 <circle cx="100" cy="75" fill="none" r="55" stroke="currentColor"></circle>
@@ -64,7 +63,7 @@
 <text fill="currentColor" font-size="14" x="60" y="80">黑</text><text fill="currentColor" font-size="14" x="180" y="80">玫瑰</text>
 </svg><figcaption>图：两圆分别为“黑”的对象与“玫瑰”，相交部分（阴影）为“既黑又是玫瑰”。</figcaption></figure></div>
 <div class="supp"><b>补充讲解</b> 这个例子说明为什么 \(\exists\) 对 \(\land\) 不能分配：“存在黑的东西且存在玫瑰”不能推出“存在黑玫瑰”（要落在阴影里）。同理 \(\forall\) 对 \(\lor\) 不能分配。</div>
-<h3>前束范式与换名规则 <span class="pg">p.6–p.7</span></h3>
+<h3>前束范式与换名规则 </h3>
 <div class="def"><b>前束范式</b> 所有量词都在公式最前面，辖域延伸到公式末尾，形如
 \[\forall x_1\exists x_2\forall x_3\exists x_4\forall x_5\,B(x_1,x_2,\dots,x_5)\]
 其中 \(B\) 不含量词。</div>

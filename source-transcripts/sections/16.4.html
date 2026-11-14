@@ -1,5 +1,5 @@
-<p>  p.253 小节标题写作"16.4 布尔格和布尔代数"。</p>
-<h3>补元 <span class="pg">p.253</span></h3>
+
+<h3>补元 </h3>
 <div class="def"><b>定义 1（①补元）</b> 设 \(\langle L,\land,\lor,0,1\rangle\) 是有界格，\(a\in L\)。若存在 \(b\in L\) 使得
 \[a\land b=0\ \text{且}\ a\lor b=1\]
 成立，则 \(b\) 为 \(a\) 的补元。</div>
@@ -17,13 +17,13 @@
 <div class="supp"><b>补充讲解</b> 证明思路：设 \(b,c\) 都是 \(a\) 的补元，则
 \[b=b\land 1=b\land(a\lor c)=(b\land a)\lor(b\land c)=0\lor(b\land c)=b\land c,\]
 同理 \(c=c\land b\)，故 \(b=c\)。这里用到了分配律；在非分配格中补元可以不唯一，例如钻石格中 \(b\) 的补元有 \(c\) 和 \(d\)。</div>
-<h3>有补格 <span class="pg">p.253</span></h3>
+<h3>有补格 </h3>
 <div class="def"><b>定义 2（②有补格）</b> 设 \(\langle L,\land,\lor,0,1\rangle\) 是有界格。若 \(\forall a\in L\)，在 \(L\) 中都有 \(a\) 的补元存在，则称 \(L\) 为有补格。</div>
-<h3>格的分类与布尔代数 <span class="pg">p.253–254</span></h3>
+<h3>格的分类与布尔代数 </h3>
 <div class="summary"><b>总结（③）</b> 格 \(\to\) 有界格 \(\to\) 有补格；格 \(\to\) 分配格；有补格与分配格合起来 \(\to\) 有补分配格 \(\to\) 布尔格 / 布尔代数。</div>
 <div class="def"><b>定义 3</b> 布尔代数记为 \(\langle B,\land,\lor,{}',0,1\rangle\)，其中 \({}'\) 运算为补运算，\(a'\) 为 \(a\) 的补元。</div>
 <div class="example"><b>例 1</b> \(A\) 为集合，\(P(A)\) 为其幂集，则 \(A\) 的幂集格 \(\langle P(A),\cap,\cup,\sim,\emptyset,A\rangle\) 是布尔代数。其他例子：数理逻辑的命题代数；数字电路的逻辑代数。</div>
-<h3>布尔代数的公理化定义 <span class="pg">p.254</span></h3>
+<h3>布尔代数的公理化定义 </h3>
 <div class="def"><b>定义 4（④）</b> 设 \(\langle B,*,\circ\rangle\) 为代数系统，\(*,\circ\) 为二元运算。若 \(*,\circ\) 满足：
 <ol>
 <li>交换律：\(\forall a,b\in B\)，\(a*b=b*a\)，\(a\circ b=b\circ a\)；</li>
@@ -32,12 +32,12 @@
 <li>同一律：即存在 \(0,1\in B\)，使得 \(\forall a\in B\) 有 \(a*1=a\)，\(a\circ 0=a\)；</li>
 <li>补元律：即 \(\forall a\in B\)，存在 \(a'\in B\) 使得 \(a*a'=0\)，\(a\circ a'=1\)；</li>
 </ol>
-则 \(\langle B,*,\circ\rangle\) 为一个布尔代数。<p> 画一个全集 \(S\)，内含集合 \(A\)。同一律对应 \(A\cap S=A\)，\(A\cup\emptyset=A\)；向下箭头，补元律对应 \(A\cap\sim A=\emptyset\)，\(A\cup\sim A=S\)（空白处圈出 \(\sim A\)）。</p></div>
-<h3>原子 <span class="pg">p.254–255</span></h3>
+则 \(\langle B,*,\circ\rangle\) 为一个布尔代数。<p>在幂集布尔代数中，同一律为 \(A\cap S=A\)、\(A\cup\emptyset=A\)，补元律为 \(A\cap\sim A=\emptyset\)、\(A\cup\sim A=S\)。</p></div>
+<h3>原子 </h3>
 <div class="def"><b>定义 5（⑤）</b> 设 \(L\) 为格，\(0\in L\)（全下界），\(a\in L\)。若 \(\forall b\in L\) 有
 \[0\prec b\preccurlyeq a\iff b=a,\]
-则 \(a\) 为 \(L\) 中的原子。<p> p.254 最底一行被页面裁掉，只露出上半部分，内容与 p.255 首行"∴ \(a\) 为 \(L\) 中的原子"相同。原子就是覆盖 \(0\) 的元素。</p></div>
-<div class="example"><b>例 2</b> 找出下列格的原子（p.255）。
+则 \(a\) 为 \(L\) 中的原子。<p>  最底一行被页面裁掉，只露出上半部分，内容与  首行"∴ \(a\) 为 \(L\) 中的原子"相同。原子就是覆盖 \(0\) 的元素。</p></div>
+<div class="example"><b>例 2</b> 找出下列格的原子。
 <figure class="fig"><svg aria-label="三个格的哈斯图及原子" role="img" viewBox="0 0 560 240">
 <g fill="none" stroke="currentColor" stroke-width="1.5">
 <line x1="60" x2="60" y1="30" y2="200"></line>
@@ -52,12 +52,12 @@
 <circle cx="450" cy="30" r="4"></circle><circle cx="390" cy="110" r="4"></circle><circle cx="510" cy="80" r="4"></circle><circle cx="510" cy="160" r="4"></circle><circle cx="450" cy="210" r="4"></circle>
 <text font-size="14" x="446" y="20">1</text><text font-size="14" x="372" y="114">a</text><text font-size="14" x="518" y="84">c</text><text font-size="14" x="518" y="164">b</text><text font-size="14" x="446" y="230">0</text>
 </g></svg>
-<figcaption>图：左为链 \(0\prec a\prec b\prec 1\)；中为 \(0\prec a,b,c\prec e\prec 1\)（\(a,b,c\) 两两不可比）；右为五角格，边 \(0\text{–}a\)、\(a\text{–}1\)、\(0\text{–}b\)、\(b\text{–}c\)、\(c\text{–}1\)。红笔在各图 \(0\) 处画横线，并圈出原子：左图 \(a\)；中图 \(a,b,c\)（一条红横线穿过三者）；右图 \(a,b\)（一条红曲线穿过两者）。</figcaption></figure>
+<figcaption>三幅格的原子分别为：链 \(0\prec a\prec b\prec1\) 中只有a；\(0\prec a,b,c\prec e\prec1\) 中有a、b、c；五角格中有a、b。原子必须直接覆盖最小元0。</figcaption></figure>
 <b>结论</b> 左图原子为 \(a\)；中图原子为 \(a,b,c\)；右图原子为 \(a,b\)。</div>
-<h3>有限布尔代数的表示定理 <span class="pg">p.255</span></h3>
+<h3>有限布尔代数的表示定理 </h3>
 <div class="thm"><b>定理（⑥有限布尔代数的表示定理）</b> 设 \(B\) 是有限布尔代数，\(A\) 为 \(B\) 的全体原子构成的集合，则 \(B\) 同构于 \(A\) 的幂集代数 \(P(A)\)。<p> 画 \(B\) —同构— \(P(A)\)。</p></div>
 <div class="thm"><b>推论</b>
 <ol><li>任何有限布尔代数的基数为 \(2^n\)，\(n\in\mathbb{N}\)；</li>
 <li>任何等势的有限布尔代数都是同构的。</li></ol>
 图示：\(|B_1|=2^{n_1}\)，\(|B_2|=2^{n_2}\)，等势即 \(n_1=n_2\)。</div>
-<div class="supp"><b>补充讲解</b> 由推论 1，不存在 3 元、5 元、6 元的布尔代数。4 元布尔代数唯一（同构意义下），就是 p.253 的菱形格。</div>
+<div class="supp"><b>补充讲解</b> 由推论 1，不存在 3 元、5 元、6 元的布尔代数。4 元布尔代数唯一（同构意义下），就是  的菱形格。</div>

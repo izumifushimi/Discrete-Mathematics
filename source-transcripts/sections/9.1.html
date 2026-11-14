@@ -1,8 +1,8 @@
 
-<h3>① 有向图的关联矩阵 <span class="pg">p.137</span></h3>
+<h3>① 有向图的关联矩阵 </h3>
 <div class="def"><b>定义</b> 设 \(D=\langle V,E\rangle\) 是无环有向图，\(V=\{v_1,v_2,\dots,v_n\}\) 为顶点集，\(E=\{e_1,e_2,\dots,e_m\}\) 为边集。<br/>
 关联矩阵：\(M(D)=[m_{ij}]_{n\times m}\)，
-\[m_{ij}=\begin{cases}+1, &amp; v_i \text{ 是 } e_j \text{ 的起点}\\ 0, &amp; v_i \text{ 与 } e_j \text{ 不关联}\\ -1, &amp; v_i \text{ 是 } e_j \text{ 的终点}\end{cases}\]<p>无环”。三幅小图：\(v_1\to v_2\)（对应 \(+1\)）；\(v_1\)、\(v_2\) 之间无边（对应 \(0\)）；\(v_1\leftarrow v_2\)（对应 \(-1\)）。下标 \(n\times m\) 下打了三角记号。</p></div>
+\[m_{ij}=\begin{cases}+1, &amp; v_i \text{ 是 } e_j \text{ 的起点}\\ 0, &amp; v_i \text{ 与 } e_j \text{ 不关联}\\ -1, &amp; v_i \text{ 是 } e_j \text{ 的终点}\end{cases}\]<p>有向无环图的关联矩阵中，边由顶点流出记+1，流入记−1，不关联记0。矩阵有n行、m列。</p></div>
 <div class="example"><b>例 1</b> 求下图有向图 \(D\) 的关联矩阵。
 <figure class="fig"><svg aria-label="4顶点6条有向边的有向图D" role="img" viewBox="0 0 300 200">
 <defs><marker id="ar91a" markerHeight="7" markerWidth="7" orient="auto" refX="9" refY="5" viewBox="0 0 10 10"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"></path></marker></defs>
@@ -15,17 +15,16 @@
 </g>
 <g fill="currentColor"><text font-size="14" x="40" y="25">v1</text><text font-size="14" x="40" y="185">v2</text><text font-size="14" x="240" y="185">v3</text><text font-size="14" x="240" y="25">v4</text>
 <text font-size="14" x="10" y="105">e1</text><text font-size="14" x="70" y="105">e2</text><text font-size="14" x="150" y="85">e3</text><text font-size="14" x="140" y="180">e4</text><text font-size="14" x="215" y="105">e5</text><text font-size="14" x="275" y="105">e6</text></g>
-</svg><figcaption>图：顶点 \(v_1\)（左上）、\(v_2\)（左下）、\(v_3\)（右下）、\(v_4\)（右上）。有向边：\(e_1=\langle v_2,v_1\rangle\)，\(e_2=\langle v_2,v_1\rangle\)（平行边），\(e_3=\langle v_1,v_3\rangle\)，\(e_4=\langle v_2,v_3\rangle\)，\(e_5=\langle v_3,v_4\rangle\)，\(e_6=\langle v_4,v_3\rangle\)。 \(v_1\) 被红圈圈出，\(e_1,e_2\) 下有红线。</figcaption></figure>
+</svg><figcaption>图的有向边为 \(e_1=\langle v_2,v_1\rangle\)、\(e_2=\langle v_2,v_1\rangle\)、\(e_3=\langle v_1,v_3\rangle\)、\(e_4=\langle v_2,v_3\rangle\)、\(e_5=\langle v_3,v_4\rangle\)、\(e_6=\langle v_4,v_3\rangle\)。e₁与e₂为平行边。</figcaption></figure>
 <b>解</b>
-\[M(D)=\begin{array}{c} \\ v_1\\ v_2\\ v_3\\ v_4\end{array}\!\!\begin{array}{c}\begin{matrix}e_1&amp;e_2&amp;e_3&amp;e_4&amp;e_5&amp;e_6\end{matrix}\\ \begin{bmatrix}-1&amp;-1&amp;1&amp;0&amp;0&amp;0\\ 1&amp;1&amp;0&amp;1&amp;0&amp;0\\ 0&amp;0&amp;-1&amp;-1&amp;1&amp;-1\\ 0&amp;0&amp;0&amp;0&amp;-1&amp;1\end{bmatrix}\end{array}\]
-用红框框出 \(e_1\)、\(e_2\) 两列（两列完全相同，对应平行边）。</div>
-<h3>② 有向图关联矩阵的性质 <span class="pg">p.137</span></h3>
+\[M(D)=\begin{array}{c} \\ v_1\\ v_2\\ v_3\\ v_4\end{array}\!\!\begin{array}{c}\begin{matrix}e_1&amp;e_2&amp;e_3&amp;e_4&amp;e_5&amp;e_6\end{matrix}\\ \begin{bmatrix}-1&amp;-1&amp;1&amp;0&amp;0&amp;0\\ 1&amp;1&amp;0&amp;1&amp;0&amp;0\\ 0&amp;0&amp;-1&amp;-1&amp;1&amp;-1\\ 0&amp;0&amp;0&amp;0&amp;-1&amp;1\end{bmatrix}\end{array}\] 两列e₁、e₂完全相同，对应一对同向平行边。</div>
+<h3>② 有向图关联矩阵的性质 </h3>
 <div class="thm"><b>性质</b><br/>
 1）列和为 0：\(\sum_{i=1}^{n} m_{ij}=0\)（有向边一出一入）。<br/>
 2）每行绝对值和：\(d(v)=d(v_i)=\sum_{j=1}^{m}|m_{ij}|\)。每行中：\(1\) 的个数为 \(d^+(v)\)（出度），\(-1\) 的个数为 \(d^-(v)\)（入度）。<br/>
 3）\(\sum_{i=1}^{n}\sum_{j=1}^{m} m_{ij}=0\)（握手定理）。<br/>
 4）平行边：相同两列。</div>
-<h3>③ 无向图的关联矩阵 <span class="pg">p.138</span></h3>
+<h3>③ 无向图的关联矩阵 </h3>
 <div class="def"><b>定义</b> 设 \(G=\langle V,E\rangle\) 是无环无向图，\(V=\{v_1,v_2,\dots,v_n\}\)，\(E=\{e_1,e_2,\dots,e_m\}\)，
 \[m_{ij}=\begin{cases}1, &amp; v_i \text{ 与 } e_j \text{ 关联}\\ 0, &amp; v_i \text{ 与 } e_j \text{ 不关联}\end{cases}\]
 </div>
@@ -38,10 +37,10 @@
 </g>
 <g fill="currentColor"><text font-size="14" x="40" y="25">v1</text><text font-size="14" x="40" y="185">v2</text><text font-size="14" x="240" y="185">v3</text><text font-size="14" x="240" y="25">v4</text>
 <text font-size="14" x="10" y="105">e1</text><text font-size="14" x="70" y="105">e2</text><text font-size="14" x="140" y="30">e3</text><text font-size="14" x="160" y="95">e4</text><text font-size="14" x="140" y="180">e5</text><text font-size="14" x="262" y="105">e6</text></g>
-</svg><figcaption>图：\(e_1=e_2=(v_1,v_2)\)（平行边），\(e_3=(v_1,v_4)\)，\(e_4=(v_1,v_3)\)，\(e_5=(v_2,v_3)\)，\(e_6=(v_4,v_3)\)。 \(v_1\) 被红圈圈出，并用红色短划切过 \(v_1\) 关联的各条边（示意性质 3）。</figcaption></figure>
+</svg><figcaption>图：\(e_1=e_2=(v_1,v_2)\)（平行边），\(e_3=(v_1,v_4)\)，\(e_4=(v_1,v_3)\)，\(e_5=(v_2,v_3)\)，\(e_6=(v_4,v_3)\)。 \(v_1\) ，并切过 \(v_1\) 关联的各条边（示意性质 3）。</figcaption></figure>
 <b>解</b>
 \[M(G)=\begin{array}{c} \\ v_1\\ v_2\\ v_3\\ v_4\end{array}\!\!\begin{array}{c}\begin{matrix}e_1&amp;e_2&amp;e_3&amp;e_4&amp;e_5&amp;e_6\end{matrix}\\ \begin{bmatrix}1&amp;1&amp;1&amp;1&amp;0&amp;0\\ 1&amp;1&amp;0&amp;0&amp;1&amp;1\\ 0&amp;0&amp;0&amp;1&amp;1&amp;1\\ 0&amp;0&amp;1&amp;0&amp;0&amp;1\end{bmatrix}\end{array}\]</div>
-<h3>④ 无向图关联矩阵的性质 <span class="pg">p.138</span></h3>
+<h3>④ 无向图关联矩阵的性质 </h3>
 <div class="thm"><b>性质</b><br/>
 1）列和为 2：\(\sum_{i=1}^{n} m_{ij}=2\)，\(\sum_{i=1}^{n}\sum_{j=1}^{m} m_{ij}=2m\)。<br/>
 2）行和：\(d(v_i)=\sum_{j=1}^{m} m_{ij}\)。<br/>
@@ -49,30 +48,28 @@
 4）平行列：相同两列（平行边）。<br/>
 5）伪对角阵：对角块是连通分支。</div>
 <div class="supp"><b>补充讲解</b> 性质 3 中，与 \(v_i\) 关联的全部边构成一个断集（删去后 \(v_i\) 与其余顶点分离）；它是极小割集当且仅当删去 \(v_i\) 后其余顶点仍连通。性质 5 指按连通分支排列顶点和边后，\(M(G)\) 呈分块对角形，每块是一个连通分支的关联矩阵。</div>
-<h3>⑤ 无向图关联矩阵的秩 <span class="pg">p.138–139</span></h3>
+<h3>⑤ 无向图关联矩阵的秩 </h3>
 <div class="thm"><b>定理 1</b> \(G\) 连通 \(\Rightarrow r(M(G))=n-1\)。</div>
 <div class="example"><b>例 3</b> 路 \(v_1-v_2-v_3-v_4\)，边 \(e_1=(v_1,v_2)\)，\(e_2=(v_2,v_3)\)，\(e_3=(v_3,v_4)\)。
 \[M(G)=\begin{array}{c} \\ v_1\\ v_2\\ v_3\\ v_4\end{array}\!\!\begin{array}{c}\begin{matrix}e_1&amp;e_2&amp;e_3\end{matrix}\\ \begin{bmatrix}1&amp;0&amp;0\\ 1&amp;1&amp;0\\ 0&amp;1&amp;1\\ 0&amp;0&amp;1\end{bmatrix}\end{array}
 \ \Rightarrow\ M_f(G)=\begin{bmatrix}1&amp;0&amp;0\\ 0&amp;1&amp;1\\ 0&amp;0&amp;1\end{bmatrix}\]
-在 \(v_2\) 行画红线（删去该行），得到 \(M_f(G)\)；其秩为 \(3=n-1\)。矩阵只写出 1，空位为 0。</div>
-<h3>⑥ 无向图的基本关联矩阵 <span class="pg">p.139</span></h3>
+删除第v₂行得到约化关联矩阵 \(M_f(G)\)，其秩为 \(3=n-1\)。</div>
+<h3>⑥ 无向图的基本关联矩阵 </h3>
 <div class="def"><b>定义</b><br/>
 关联矩阵 \(M(G)\)；参考点：任选一个顶点。<br/>
 基本关联矩阵 \(M_f(G)\)：从 \(M(G)\) 删除参考点对应的行。</div>
 <div class="thm"><b>定理 2</b> \(G\) 连通 \(\Rightarrow r(M_f(G))=n-1\)。</div>
 <div class="thm"><b>定理 3</b> \(G\) 有 \(p\) 个连通分支 \(\Rightarrow r(M_f(G))=n-p\)。</div>
 <div class="thm"><b>定理 4</b> \(G\) 连通 \(\Leftrightarrow r(M(G))=r(M_f(G))=n-1\)。</div>
-<h3>⑦ \(M_f(G)\) 与生成树 <span class="pg">p.139–141</span></h3>
+<h3>⑦ \(M_f(G)\) 与生成树 </h3>
 <div class="thm"><b>定理</b> \(G\) 连通，\(M_f'\) 是 \(M_f(G)\)（\(n-1\) 行）中任意 \(n-1\) 列组成的方阵；\(M_f'\) 中各列对应的边 \(\{e_{i_1},e_{i_2},\dots,e_{i_{n-1}}\}\) 为边集 \(E_f\)；\(T\) 是 \(E_f\) 的导出子图 \(G[\{e_{i_1},e_{i_2},\dots,e_{i_{n-1}}\}]\)。则
 \[T \text{ 是 } G \text{ 的生成树} \Leftrightarrow M_f' \text{ 的行列式 } |M_f'|\ne 0\]</div>
-<div class="example"><b>例 4</b> 用例 2 的图 \(G\)（\(e_1,e_2\) 为 \(v_1v_2\) 间平行边，\(e_3=v_1v_4\)，\(e_4=v_1v_3\)，\(e_5=v_2v_3\)，\(e_6=v_4v_3\)）求所有生成树。右侧画出一棵生成树：\(v_1\) 连 \(v_4\)、\(v_2\)、\(v_3\)（即 \(\{e_1,e_3,e_4\}\)，图中 \(e_1,e_3,e_4\) 下有红线）。<br/>
+<div class="example"><b>例 4</b>在例2的图G中，e₁、e₂为v₁v₂间的平行边，e₃=v₁v₄，e₄=v₁v₃，e₅=v₂v₃，e₆=v₄v₃。例如 \(\{e_1,e_3,e_4\}\) 连通全部4个顶点且无圈，构成一棵生成树。<br/>
 <b>解</b><br/>
 1）忽略环，求 \(M(G)\)。<br/>
 2）任选一点，求 \(M_f(G)\)：选 \(v_1\)，删去 \(v_1\) 行（按改正后的矩阵）：
 \[M_f(G)=\begin{array}{c} \\ v_2\\ v_3\\ v_4\end{array}\!\!\begin{array}{c}\begin{matrix}e_1&amp;e_2&amp;e_3&amp;e_4&amp;e_5&amp;e_6\end{matrix}\\ \begin{bmatrix}1&amp;1&amp;0&amp;0&amp;1&amp;0\\ 0&amp;0&amp;0&amp;1&amp;1&amp;1\\ 0&amp;0&amp;1&amp;0&amp;0&amp;1\end{bmatrix}\end{array}\]
-<br/>
-3）任意 \(n-1\) 列：选 3 列，\(C_6^3=20\) 种。逐一求 \(|M_f'|\)，为 0 的用红线划掉并标“0”：
-<div class="tbl"><table><thead><tr><th>列组合</th><th>\(|M_f'|\)</th><th>列组合</th><th>\(|M_f'|\)</th></tr></thead><tbody>
+<br/>选取n−1列。本例为从6列选3列，共 \(\binom63=20\) 种；逐一计算对应子矩阵的行列式。<div class="tbl"><table><thead><tr><th>列组合</th><th>\(|M_f'|\)</th><th>列组合</th><th>\(|M_f'|\)</th></tr></thead><tbody>
 <tr><td>1 2 3</td><td>0</td><td>2 3 4</td><td>≠0</td></tr>
 <tr><td>1 2 4</td><td>0</td><td>2 3 5</td><td>≠0</td></tr>
 <tr><td>1 2 5</td><td>0</td><td>2 3 6</td><td>≠0</td></tr>
@@ -86,7 +83,7 @@
 </tbody></table></div>
 <br/>
 <b>结论</b> 共 7 组为 0，其余 \(20-7=13\) 组对应生成树。</div>
-<div class="supp"><b>补充讲解</b> 被划掉的组：含 \(e_1,e_2\) 的 4 组是两列相同（平行边成圈）；145、245 是三角形 \(v_1v_2v_3\)，346 是三角形 \(v_1v_3v_4\)，三角形缺少某个顶点，所对应的行为全零。例：134 时 \(M_f'=\begin{bmatrix}1&amp;0&amp;0\\0&amp;0&amp;1\\0&amp;1&amp;0\end{bmatrix}\)，行列式为 \(-1\ne0\)。对 0/1 无向关联矩阵，严格做法是在模 2 意义下判断行列式非零（奇圈的实行列式可能为 \(\pm2\)），本例结果不受影响。</div>
+<div class="supp"><b>补充讲解</b>含 \(e_1,e_2\) 的4组因平行边对应相同列，行列式为0；145、245含三角形 \(v_1v_2v_3\)，346含三角形 \(v_1v_3v_4\)，且缺少另一顶点，出现全零行。例如134对应 \(M_f^\prime=\begin{bmatrix}1&amp;0&amp;0\\0&amp;0&amp;1\\0&amp;1&amp;0\end{bmatrix}\)，行列式为−1。对0/1无向关联矩阵，判断生成树应在模2意义下计算；一般奇圈的实行列式可能为±2。</div>
 <div class="example"><b>例 5</b> 用定理 b（\(\tau(G)=\tau(G-e)+\tau(G\backslash e)\)）验证上例。<br/>
 <b>解</b> 取平行边中的一条：
 \[\begin{aligned}

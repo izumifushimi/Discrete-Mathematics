@@ -1,4 +1,4 @@
-<h3>例题：证明 \(\mathbb{Z}_p\) 为域 <span class="pg">p.236–238</span></h3>
+<h3>例题：证明 \(\mathbb{Z}_p\) 为域 </h3>
 <div class="example"><b>例</b> 设 \(p\) 为素数，证明 \(\mathbb{Z}_p\) 为域（\(\mathbb{Z}_p=\{0,1,\dots,p-1\}\)）。
 
 <p><b>证明思路</b>：按"域 = 至少两个元素的整环，且非零元都有乘法逆元"分三步验证。</p>
@@ -33,7 +33,7 @@ i\otimes_p j=0\ \Rightarrow\ p\mid ij\ \Rightarrow\ p\mid i\ \text{或}\ p\mid j
 \[\boxed{\,i\otimes_p\mathbb{Z}_p=\mathbb{Z}_p\,}\ \bigstar\]
 <p>又 \(|\mathbb{Z}_p|\ge 2\)，\(\mathbb{Z}_p=\{0,1,\dots\}\)，故 \(1\in\mathbb{Z}_p=i\otimes_p\mathbb{Z}_p\)。因此对于任意 \(i\ (i\neq 0),\ i\in\mathbb{Z}_p\)，存在元素 "?" 使</p>
 \[i\otimes_p\ ?\ =1,\qquad ?=i^{-1}.\]
-<p><b>结论</b>：所以 \(\mathbb{Z}_p\) 为域。（p.237 页底写出"∴ \(\mathbb{Z}_p\) 为域"，p.238 页首重写了这一句，p.238 其余空白。）</p>
+<p><b>结论</b>因此 \(\mathbb Z_p\) 为域。</p>
 </div>
 <figure class="fig"><svg aria-label="i 乘以 Zp 中每个元素的映射示意" role="img" viewBox="0 0 360 200">
 <defs><marker id="a152" markerHeight="8" markerWidth="8" orient="auto" refX="7" refY="4"><path d="M0,0 L8,4 L0,8 z" fill="currentColor"></path></marker></defs>
@@ -52,7 +52,7 @@ i\otimes_p j=0\ \Rightarrow\ p\mid ij\ \Rightarrow\ p\mid i\ \text{或}\ p\mid j
 <text font-size="14" x="250" y="110">…</text>
 <text font-size="14" x="40" y="180">若 i⊗p j = i⊗p k (j≠k) ⇒(消去律) j=k，矛盾 ✗</text>
 </svg>
-<figcaption>图（p.237 右侧两幅示意图合并）：固定 \(i\neq0\)，用 \(i\otimes_p\) 把上一排 \(\mathbb{Z}_p\) 的每个元素映到下一排 \(\mathbb{Z}_p\)。上图：若两个不同的 \(j,k\) 映到同一元素，由消去律推出 \(j=k\)，红叉表示矛盾，所以映射是一一的、像集就是整个 \(\mathbb{Z}_p\)。下图：下排 \(\mathbb{Z}_p\) 中红圈标出元素 \(1\)，它一定有一个原像，这个原像就是 \(i^{-1}\)。</figcaption></figure>
+<figcaption>图：固定 \(i\neq0\)，用 \(i\otimes_p\) 把上一排 \(\mathbb{Z}_p\) 的每个元素映到下一排 \(\mathbb{Z}_p\)。上图：若两个不同的 \(j,k\) 映到同一元素，由消去律推出 \(j=k\)，红叉表示矛盾，所以映射是一一的、像集就是整个 \(\mathbb{Z}_p\)。下图：下排 \(\mathbb{Z}_p\) 中标出元素 \(1\)，它一定有一个原像，这个原像就是 \(i^{-1}\)。</figcaption></figure>
 <p> \(1\) 一定在像集中。</p>
 <div class="supp"><b>补充讲解</b> 第 (3) 步的关键是"有限 + 消去律 ⇒ 每个非零元可逆"。若集合无限，这一推理不成立（例如整环 \(\mathbb{Z}\) 满足消去律，但 \(2\) 在 \(\mathbb{Z}\) 中没有乘法逆元）。另外，\(p\) 为合数时 \(\mathbb{Z}_p\) 有零因子（如 \(\mathbb{Z}_6\) 中 \(2\otimes_6 3=0\)），连整环都不是。</div>
 <div class="warn"><b>易错提醒</b> 证明 \(i\otimes_p\mathbb{Z}_p=\mathbb{Z}_p\) 时只证 \(\subseteq\) 不够，必须用消去律说明 \(p\) 个乘积两两不同，元素个数相同才能得到相等。消去律要求 \(a\neq0\)。</div>

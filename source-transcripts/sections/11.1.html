@@ -1,5 +1,5 @@
 
-<h3>① 着色 <span class="pg">p.159</span></h3>
+<h3>① 着色 </h3>
 <div class="def"><b>定义（点着色）</b> 给<u>无环图</u>的每个顶点<u>指定一种颜色</u>，使<u>相邻顶点有不同颜色</u>（★ 条件）。
 <p>颜色集 \(C=\{1,2,\cdots,k\}\)（\(k\) 种）；</p>
 <p>\(f: V\)（顶点集）\(\to C\)（颜色集）；</p>
@@ -17,7 +17,7 @@
 </g>
 <g fill="currentColor" font-size="14"><text x="20" y="192">方块=黄色，圆点=红色</text></g>
 </svg><figcaption>图：3×3 网格图（9 个顶点，横竖相邻的顶点相连，共 12 条边）。四角与中心 5 个顶点涂黄色，四条边中点 4 个顶点涂红色，相邻顶点颜色都不同，是一个 2-着色。</figcaption></figure></div>
-<h3>② 色数 <span class="pg">p.159</span></h3>
+<h3>② 色数 </h3>
 <div class="def"><b>定义</b> \(k\)-色数：可 \(k\)-着色，但不可 \((k-1)\)-着色。<br/><u>色数</u>：着色所需最少颜色数。</div>
 <div class="def"><b>三种色数</b>
 <ul><li><u>点色数</u> \(\chi(G)\)</li><li>边色数 \(\chi'(G)\)</li><li>面色数 \(\chi^*(G)\)</li></ul></div>
@@ -31,10 +31,10 @@
 <line x1="40" x2="100" y1="40" y2="40"></line><line x1="40" x2="100" y1="100" y2="100"></line><line x1="100" x2="100" y1="100" y2="160"></line>
 </g>
 <g fill="currentColor"><circle cx="40" cy="40" r="4"></circle><circle cx="100" cy="40" r="4"></circle><circle cx="160" cy="40" r="4"></circle><circle cx="40" cy="100" r="4"></circle><circle cx="100" cy="100" r="4"></circle><circle cx="160" cy="100" r="4"></circle><circle cx="40" cy="160" r="4"></circle><circle cx="100" cy="160" r="4"></circle><circle cx="160" cy="160" r="4"></circle></g>
-</svg><figcaption>图：2×2 方格图（3×3 个顶点、12 条边、4 个内部方格面 + 1 个外部面）。在左上方格的上边、中间横线左半段、中心向下的竖边等处用红笔描了几条边（示意边着色中的一种颜色），中心顶点处的红色笔迹较乱。</figcaption></figure>
+</svg><figcaption>图：2×2 方格图（3×3 个顶点、12 条边、4 个内部方格面 + 1 个外部面）。</figcaption></figure>
 <b>结论</b> \(\chi(G)=2\)，\(\chi'(G)=4\)，\(\chi^*(G)=3\)。</div>
 <div class="supp"><b>补充讲解</b> 网格图是二部图，所以 \(\chi=2\)；中心顶点度为 4，关联的 4 条边两两相邻，故 \(\chi'\ge 4\)，二部图又有 \(\chi'=\Delta\)，得 4；4 个方格面按棋盘交替用 2 色，外部面与 4 个方格面都相邻，再用第 3 色，故 \(\chi^*=3\)。</div>
-<h3>③ 点色数的性质 <span class="pg">p.160</span></h3>
+<h3>③ 点色数的性质 </h3>
 <div class="thm"><b>性质</b>
 <p>1) \(\chi(G)=1 \Leftrightarrow G\) 为零图（无边）。</p>
 <figure class="fig"><svg aria-label="零图G" role="img" viewBox="0 0 160 110">
@@ -52,11 +52,11 @@
 <g fill="#e0242b" font-size="14"><text x="10" y="35">①</text><text x="10" y="125">②</text></g>
 </svg><figcaption>图：二部图，上方椭圆内的顶点集全涂颜色 1，下方椭圆内的顶点集全涂颜色 2，边只在上下两部分之间。</figcaption></figure>
 <p>4) \(G\) 可 2-着色 \(\Leftrightarrow G\) 为二部图 \(\Leftrightarrow G\) 无奇圈。</p>
-<p>5) \[ \chi(C_n)=\begin{cases}2, &amp; n\text{ 偶数}\\ 3, &amp; n\text{ 奇数}\end{cases}\qquad \chi(W_n)=\begin{cases}4, &amp; n\text{ 偶数}\\ 3, &amp; n\text{ 奇数}\end{cases} \]</p><p>沿圈交替涂两种颜色，奇圈绕回起点时首尾同色、冲突。</p><p> 性质 5) 中，\(\chi(C_n)\) 的“\(n\) 偶数”与 \(\chi(W_n)\) 的“\(n\) 奇数”之间、“\(n\) 奇数”与“\(n\) 偶数”之间都有弯箭头互相连接。画了 \(C_4\)（方形）、\(C_5\)（五边形）、\(C_6\)（六边形）……，画 \(W_5\)（方形加中心，中心连四个角）、\(W_6\)（五边形加中心）……，\(C_4\) 与 \(W_5\) 之间有上下双向箭头，\(C_5\) 与 \(W_6\) 间也有竖线相连：\(W_n\) 由 \(C_{n-1}\) 加一个中心顶点得到。</p></div>
+<p>5) \[ \chi(C_n)=\begin{cases}2, &amp; n\text{ 偶数}\\ 3, &amp; n\text{ 奇数}\end{cases}\qquad \chi(W_n)=\begin{cases}4, &amp; n\text{ 偶数}\\ 3, &amp; n\text{ 奇数}\end{cases} \]</p><p>沿圈交替涂两种颜色，奇圈绕回起点时首尾同色、冲突。</p><p>\(W_n\) 由 \(C_{n-1}\) 添加一个与全部圈顶点相邻的中心顶点得到。因此轮图的外圈有n−1个顶点，判断奇偶性时应使用n−1。</p></div>
 <div class="supp"><b>补充讲解</b> 这里 \(W_n\) 是 \(n\) 阶轮图，外圈是 \(C_{n-1}\)。\(n\) 偶数时外圈为奇圈需 3 色，中心再需 1 色，共 4 色；\(n\) 奇数时外圈为偶圈 2 色，加中心共 3 色。这就是箭头把 \(C_n\) 的偶/奇与 \(W_n\) 的奇/偶交叉相连的原因。</div>
-<h3>④ \(\chi(G)\) 的上界 <span class="pg">p.160</span></h3>
+<h3>④ \(\chi(G)\) 的上界 </h3>
 <div class="thm"><b>定理</b> \[ \chi(G)\le \Delta(G)+1 \] 其中 \(\Delta(G)\) 为最大度。</div>
-<h3>⑤ Brooks 定理 <span class="pg">p.160–161</span></h3>
+<h3>⑤ Brooks 定理 </h3>
 <div class="thm"><b>定理（Brooks）</b> \(n\) 阶（\(n\ge 3\)）<u>连通非完全图</u> \(G\) <u>非奇圈</u>，则 \[ \chi(G)\le \Delta(G). \]<p> 从“非奇圈”引出箭头注：“图 \(G\) 本身不能是奇圈”（不是说 \(G\) 不含奇圈）。</p></div>
 <div class="example"><b>例</b> Petersen 图 \(G\)，\(\chi(G)=?\)
 <figure class="fig"><svg aria-label="Petersen图的3-着色" role="img" viewBox="0 0 200 200">
@@ -70,23 +70,23 @@
 <rect fill="#f5d90a" height="14" width="14" x="169" y="68"></rect><rect fill="#f5d90a" height="14" width="14" x="117" y="125"></rect><rect fill="#f5d90a" height="14" width="14" x="46" y="158"></rect>
 <circle cx="100" cy="55" fill="#2b6fd6" r="7"></circle><circle cx="24" cy="75" fill="#2b6fd6" r="7"></circle><circle cx="138" cy="87" fill="#2b6fd6" r="7"></circle>
 </g></svg>
-<figcaption>图：Petersen 图（外五边形、内五角星、5 条辐边）的 3-着色。记外圈顶点自顶部顺时针为 \(o_0,\dots,o_4\)，对应内圈顶点 \(i_0,\dots,i_4\)。红色 ×：\(o_0, o_2, i_3, i_4\)；黄色：\(o_1, o_3, i_2\)；冷色圆圈：\(i_0, o_4, i_1\)。</figcaption></figure>
+<figcaption>图：Petersen 图（外五边形、内、5 条辐边）的 3-着色。记外圈顶点自顶部顺时针为 \(o_0,\dots,o_4\)，对应内圈顶点 \(i_0,\dots,i_4\)。红色 ×：\(o_0, o_2, i_3, i_4\)；黄色：\(o_1, o_3, i_2\)；冷色圆圈：\(i_0, o_4, i_1\)。</figcaption></figure>
 <b>解</b>
 <p>① \(n\ge 3\) ✓　② 连通 ✓　③ 非完全图 ✓　④ <u>非奇圈</u> ✓</p>
 \[ \Rightarrow \chi(G)\le \Delta(G)=3 \]
 <p>图 \(G\) 存在（含有）奇圈 \(\Rightarrow \chi(G)\ge 3\)。</p>
 <b>结论</b> \(\therefore \chi(G)=3\)。</div>
 <div class="supp"><b>补充讲解</b> 青、紫、蓝三个圆圈两两不相邻，合起来正好是第三个色类，所以图中实际只用了 3 种颜色，与 \(\chi(G)=3\) 一致。注意“非奇圈”指 \(G\) 本身不是奇圈，Petersen 图含 5 圈（奇圈）不影响 Brooks 定理的使用，反而给出下界 3。</div>
-<h3>⑥ 着色与划分、等价关系 <span class="pg">p.161–162</span></h3>
+<h3>⑥ 着色与划分、等价关系 </h3>
 <div class="thm"><b>性质</b> 对图 \(G\) 进行 \(\chi(G)\)-着色，设
 \[ V_i=\{v \mid v\in V(G)\land v\text{ 着第 }i\text{ 色}\},\quad i=1,2,\cdots,\chi(G) \]
 得到 \(V_1, V_2, \cdots, V_{\chi(G)}\)，则
-\[ \Pi=\{V_1,V_2,\cdots,V_{\chi(G)}\} \text{ 为 } V(G) \text{ 的划分}. \]<p> \(\chi(G)\) 用红框圈出；\(V_1,V_2,\cdots,V_{\chi(G)}\) 用写；注“\(x\) 与 \(y\) 同色”。</p></div>
+\[ \Pi=\{V_1,V_2,\cdots,V_{\chi(G)}\} \text{ 为 } V(G) \text{ 的划分}. \]<p>最少可用 \(\chi(G)\) 个色类划分顶点。同一色类中的任意两个顶点不相邻。</p></div>
 <div class="thm"><b>性质 ★</b> 对图 \(G\) 进行 \(\chi(G)\)-着色，设
 \[ R=\{(u,v)\mid u,v\in V(G)\land u,v\text{ 同色}\} \]
 则 \(R\) 是 \(V(G)\) 上的等价关系（同色关系）。</div>
 <div class="supp"><b>补充讲解</b> 同色关系自反、对称、传递，所以是等价关系；它的等价类就是色类 \(V_i\)，商集就是上面的划分 \(\Pi\)。每个 \(V_i\) 都是独立集。</div>
-<h3>⑦ 色多项式 <span class="pg">p.162</span></h3>
+<h3>⑦ 色多项式 </h3>
 <div class="def"><b>定义</b> 不同的着色：至少有一个顶点的着色不同。
 \[ f(G,k)=\text{图 } G \text{ 的不同的 } k\text{-着色的总数} \]
 （\(G\)：图；\(k\)：颜色个数）。</div>

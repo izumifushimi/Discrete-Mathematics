@@ -1,5 +1,5 @@
 // 离散之间 · 学习站前端
-// 数据：lessons（data.js，章信息）、sections（sections.js，小节与页码）、CONTENT（content.js，正文/练习/页码记录）
+// 数据：章节、小节正文与练习。
 'use strict';
 const C = typeof CONTENT === 'undefined' ? {} : CONTENT;
 const $ = s => document.querySelector(s);
@@ -76,8 +76,6 @@ function home() {
   const answered = Object.keys(store.answers).filter(quizItem), right = answered.filter(k => store.answers[k].correct).length;
   const quizTotal = sections.reduce((a, s) => a + (C[s.key]?.quiz?.length || 0), 0);
   const next = (store.last && sections.find(s => s.key === store.last)) || sections.find(s => !isRead(s.key)) || sections[0];
-  const pagesRec = sections.flatMap(s => C[s.key]?.pages || []);
-  const stat = st => pagesRec.filter(r => r.status === st).length;
   app.innerHTML = `<section class="hero"><div><span class="eyebrow">A LITTLE LOGIC, EVERY DAY</span>
   <h1>把离散的知识，<br>连成清晰的思路。</h1>
   <p>从一个命题，到一张图，再到抽象的代数结构。系统学习逻辑、集合、图论、代数、组合计数与计算理论，在完整讲解与练习中建立知识联系。</p>
@@ -88,7 +86,7 @@ function home() {
   <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="${total}" aria-valuenow="${read}" aria-label="阅读进度"><span style="width:${read / total * 100}%"></span></div>
   <section><h2>课程目录 <small class="tag">${lessons.length} 章 · ${sections.length} 小节</small></h2><div class="grid">${lessons.map(l => {
     const ss = chapterSections(l.id), n = ss.filter(s => isRead(s.key)).length;
-    return `<a class="card" href="#c/${l.id}"><span class="num">CHAPTER ${pad(l.id + 1)}　${n === ss.length ? '✓ 已读完' : n ? n + '/' + ss.length + ' 已读' : ''}</span><h3>${esc(l.title)}</h3><p>${ss.map(s => esc(s.title)).join(' · ')}</p><span class="tag">${esc(l.group)} · ${ss.length} 小节${l.start ? ` · 第 ${l.start}–${l.end} 页` : ' · 专题课程'}</span></a>`
+    return `<a class="card" href="#c/${l.id}"><span class="num">CHAPTER ${pad(l.id + 1)}　${n === ss.length ? '✓ 已读完' : n ? n + '/' + ss.length + ' 已读' : ''}</span><h3>${esc(l.title)}</h3><p>${ss.map(s => esc(s.title)).join(' · ')}</p><span class="tag">${esc(l.group)} · ${ss.length} 小节</span></a>`
   }).join('')}</div></section>
   <section class="box"><h3>学习建议</h3><p>按“概念与方法 → 例题与证明 → 独立练习 → 错题复习”的顺序学习。组合分析从计数原理进入排列组合与递推；形式语言从串、文法进入自动机、正则表达式与图灵机。</p><p>参考教材：耿素云、屈婉玲等《离散数学》第七版。阅读进度与答题记录保存在当前浏览器中。</p></section>`;
 }
@@ -102,7 +100,7 @@ function chapter(id) {
   <p>共 ${ss.length} 个小节，包含系统讲解、例题和配套练习。</p>
   <section class="box"><h2>本章小节与知识点</h2><div class="section-list">${ss.map(s => {
     const tp = topicsOf(s.key);
-    return `<div class="sec-item"><a href="#s/${s.key}"><b>${esc(secTitle(s))}${isRead(s.key) ? ' ✓' : ''}</b><span>${s.start ? `第 ${s.start}–${s.end} 页 · ` : ''}${C[s.key]?.quiz?.length || 0} 题 →</span></a>${tp.length ? `<ol>${tp.map((t, i) => `<li><a href="#s/${s.key}/${i}">${esc(t)}</a></li>`).join('')}</ol>` : ''}</div>`
+    return `<div class="sec-item"><a href="#s/${s.key}"><b>${esc(secTitle(s))}${isRead(s.key) ? ' ✓' : ''}</b><span>${C[s.key]?.quiz?.length || 0} 题 →</span></a>${tp.length ? `<ol>${tp.map((t, i) => `<li><a href="#s/${s.key}/${i}">${esc(t)}</a></li>`).join('')}</ol>` : ''}</div>`
   }).join('')}</div></section>
   <section id="practice"><h2>本章练习</h2><p class="note">按小节分组，可直接作答，也可进入小节阅读后再做。</p>
   ${ss.map(s => (C[s.key]?.quiz || []).length ? `<h3 class="quiz-group">${esc(secTitle(s))}</h3>` + C[s.key].quiz.map((q, i) => question(s.key, i)).join('') : '').join('')}</section>
@@ -116,21 +114,13 @@ function section(key, topic) {
   const i = sections.indexOf(s), l = lessons[s.chapter], c = C[key];
   crumb(`${l.title} / ${s.key}`);
   store.last = key; persist();
-  const pages = s.start ? Array.from({ length: s.end - s.start + 1 }, (_, j) => s.start + j) : [];
-  const rec = n => (c?.pages || []).find(r => r.page === n);
-  const label = { transcribed: '参考页', duplicate: '参考页', blank: '参考页', partial: '参考页' };
   app.innerHTML = `<article class="fullnotes">
   <a href="#c/${s.chapter}">← 第 ${s.chapter + 1} 章 ${esc(l.title)}</a>
   <span class="eyebrow section-kicker">SECTION ${esc(s.key)}</span><h1>${esc(secTitle(s))}</h1>
   
   <nav class="local-toc" aria-label="本节知识点"></nav>
-  <section class="transcript">${c ? c.html : '<p class="unclear">本小节正文文件缺失，请运行 scripts/build.py 检查。</p>'}</section>
+  <section class="transcript">${c ? c.html : '<p class="unclear">课程暂时无法载入，请刷新页面。</p>'}</section>
   ${c?.quiz?.length ? `<section id="practice" class="practice"><h2>本节练习 <small class="tag">${c.quiz.length} 题 · 选择与填空</small></h2>${c.quiz.map((q, j) => question(key, j)).join('')}</section>` : ''}
-  <details id="original-pages" class="box"><summary>原页对照 · 第 ${s.start}–${s.end} 页</summary>
-  <p class="note">原页图片仅用于核对正文。点击图片可打开高清原图。</p>
-  <div class="page-records">${pages.map(n => { const r = rec(n); return `<a href="#note-page-${n}" data-page="${n}" class="rec ${r?.status || 'none'}">p.${n} ${r ? label[r.status] || r.status : '无记录'}</a>` }).join('')}</div>
-  <button id="zoom-pages" type="button">放大阅读</button>
-  <div class="pages-wrap"></div></details>
   <div class="actions sec-nav">${i ? `<a class="button" href="#s/${sections[i - 1].key}">← ${esc(secTitle(sections[i - 1]))}</a>` : ''}
   <button id="read-done" type="button" class="${isRead(key) ? '' : 'primary'}">${isRead(key) ? '本节已读 ✓' : '标记本节已读'}</button>
   ${i < sections.length - 1 ? `<a class="button primary" href="#s/${sections[i + 1].key}">${esc(secTitle(sections[i + 1]))} →</a>` : ''}</div></article>`;
@@ -140,15 +130,11 @@ function section(key, topic) {
   if (hs.length) toc.innerHTML = '<strong>本节知识点</strong>' + hs.map((h, j) => { h.id = 'topic-' + j; return `<a href="#s/${key}/${j}">${esc(h.textContent)}</a>` }).join('') + (c?.quiz?.length ? '<a class="toc-quiz" href="#s/' + key + '/quiz">练习</a>' : '');
   // 表格、长公式容器
   document.querySelectorAll('.transcript table').forEach(t => { if (!t.parentElement.classList.contains('tbl')) { const w = document.createElement('div'); w.className = 'tbl'; t.replaceWith(w); w.appendChild(t) } });
-  // 原页懒加载：展开时才插入图片
-  const det = $('#original-pages'); if(!s.start) det.hidden=true;
-  const fill = () => { const w = $('.pages-wrap'); if (w.childElementCount) return; w.innerHTML = pages.map(n => { const src = 'pages/' + String(n).padStart(3, '0') + '.jpg'; const r = rec(n); return `<figure class="note-page" id="note-page-${n}"><figcaption>原笔记第 ${n} 页${r ? ' · ' + esc(label[r.status] || r.status) + '' : ''}</figcaption><a href="${src}" target="_blank" rel="noopener"><img src="${src}" loading="lazy" alt="${esc(s.title)}，原笔记第${n}页手写原图"></a></figure>` }).join('') };
-  det.addEventListener('toggle', () => det.open && fill());
-  document.querySelectorAll('.page-records a').forEach(a => a.onclick = e => { e.preventDefault(); det.open = true; fill(); document.getElementById('note-page-' + a.dataset.page).scrollIntoView({ behavior: 'smooth' }) });
-  $('#zoom-pages').onclick = e => { const big = $('.fullnotes').classList.toggle('zoomed'); e.target.textContent = big ? '适应宽度' : '放大阅读' };
   $('#read-done').onclick = e => { if (!isRead(key)) store.read.push(key); else store.read = store.read.filter(k => k !== key); persist(); nav(); e.target.textContent = isRead(key) ? '本节已读 ✓' : '标记本节已读'; e.target.classList.toggle('primary', !isRead(key)) };
 
+  const renderedArticle = $('.fullnotes');
   typeset().then(() => {
+    if (!renderedArticle?.isConnected) return;
     if (topic === 'quiz') $('#practice')?.scrollIntoView();
     else if (topic != null) document.getElementById('topic-' + topic)?.scrollIntoView();
     if (searchTerm) highlight($('.transcript'), searchTerm);
@@ -218,8 +204,7 @@ function highlight(root, term) {
   nodes.slice(0, 100).forEach(n => { const p = n.nodeValue.toLowerCase().indexOf(t), m = document.createElement('mark'); const r = n.splitText(p); r.splitText(term.length); m.textContent = r.nodeValue; r.replaceWith(m) });
 }
 
-// ---------- 逐页处理清单 ----------
-function pageList(){home()}
+
 
 // ---------- 路由 ----------
 function crumb(t) { $('#crumb').textContent = t; document.title = t + ' · 离散之间' }
@@ -238,7 +223,7 @@ function route() {
   nav();
   let m;
   if ((m = h.match(/^#s\/([^/]+)(?:\/(\w+))?$/))) section(m[1], m[2] == null ? null : m[2] === 'quiz' ? 'quiz' : Number(m[2]));
-  else { searchTerm = h === '#search' ? searchTerm : ''; if ((m = h.match(/^#c\/(\d+)$/))) chapter(Number(m[1])); else if (h === '#search') search(); else if (h === '#wrong') wrong(); else if (h === '#pages') pageList(); else home() }
+  else { searchTerm = h === '#search' ? searchTerm : ''; if ((m = h.match(/^#c\/(\d+)$/))) chapter(Number(m[1])); else if (h === '#search') search(); else if (h === '#wrong') wrong(); else home() }
   if (!(m && m[2] != null)) window.scrollTo(0, 0);
 }
 $('#wrong').onclick = () => location.hash = 'wrong';

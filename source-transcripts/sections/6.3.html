@@ -1,26 +1,26 @@
 
-<h3>① 图同构 <span class="pg">p.91</span></h3>
+<h3>① 图同构 </h3>
 <div class="def"><b>定义（无向图同构）</b> (1) 无向图 \(G_1=\langle V_1,E_1\rangle\)，\(G_2=\langle V_2,E_2\rangle\)。若存在双射 \(f:V_1\to V_2\)，满足 \(\forall u,v\in V_1\)，
 \[ (u,v)\in E_1\longleftrightarrow (f(u),f(v))\in E_2 \]
 则 \(G_1\) 与 \(G_2\) 同构，记作 \(G_1\cong G_2\)。</div>
 <div class="def"><b>定义（有向图同构）</b> (2) 有向图 \(D_1=\langle V_1,E_1\rangle\)，\(D_2=\langle V_2,E_2\rangle\)。若存在一个双射 \(f:V_1\to V_2\)，满足 \(\forall u,v\in V_1\)，
 \[ \langle u,v\rangle\in E_1\longleftrightarrow \langle f(u),f(v)\rangle\in E_2 \]
 \(\therefore\ D_1\cong D_2\)。</div>
-<div class="example"><b>例（同构的两种画法）</b> <span class="pg">p.91–92</span>
+<div class="example"><b>例（同构的两种画法）</b>
 <figure class="fig"><svg aria-label="G1 三角形套三角形，经立体三棱柱，变为 G2" role="img" viewBox="0 0 560 220">
 <g fill="none" stroke="currentColor">
- G1 
+ G1
 <line x1="80" x2="20" y1="20" y2="190"></line><line x1="80" x2="140" y1="20" y2="190"></line><line x1="20" x2="140" y1="190" y2="190"></line>
 <line x1="80" x2="60" y1="80" y2="140"></line><line x1="80" x2="100" y1="80" y2="140"></line><line x1="60" x2="100" y1="140" y2="140"></line>
 <line x1="80" x2="80" y1="20" y2="80"></line><line x1="20" x2="60" y1="190" y2="140"></line><line x1="140" x2="100" y1="190" y2="140"></line>
 <circle cx="80" cy="20" r="4"></circle><circle cx="20" cy="190" r="4"></circle><circle cx="140" cy="190" r="4"></circle>
 <circle cx="80" cy="80" r="4"></circle><circle cx="60" cy="140" r="4"></circle><circle cx="100" cy="140" r="4"></circle>
- prism 
+ prism
 <line x1="250" x2="220" y1="60" y2="80"></line><line x1="250" x2="290" y1="60" y2="80"></line><line x1="220" x2="290" y1="80" y2="80"></line>
 <line x1="220" x2="220" y1="80" y2="190"></line><line x1="290" x2="290" y1="80" y2="190"></line><line stroke-dasharray="4 4" x1="250" x2="250" y1="60" y2="170"></line>
 <line x1="220" x2="290" y1="190" y2="190"></line><line stroke-dasharray="4 4" x1="220" x2="250" y1="190" y2="170"></line><line stroke-dasharray="4 4" x1="290" x2="250" y1="190" y2="170"></line>
 <line marker-end="url(#a63)" x1="160" x2="200" y1="120" y2="140"></line><line marker-end="url(#a63)" x1="310" x2="370" y1="140" y2="100"></line>
- G2 
+ G2
 <line x1="410" x2="500" y1="40" y2="40"></line><line x1="390" x2="520" y1="110" y2="110"></line><line x1="410" x2="500" y1="180" y2="180"></line>
 <line x1="410" x2="410" y1="40" y2="180"></line><line x1="410" x2="390" y1="40" y2="110"></line><line x1="390" x2="410" y1="110" y2="180"></line>
 <line x1="500" x2="500" y1="40" y2="180"></line><line x1="500" x2="520" y1="40" y2="110"></line><line x1="520" x2="500" y1="110" y2="180"></line>
@@ -31,7 +31,7 @@
 </svg><figcaption>图：\(G_1\) 为外三角形套内三角形，外三角形三个顶点各连向内三角形对应顶点，共 6 点 9 边。中间画成立体三棱柱。\(G_2\) 为 6 点：左列上、中、下三点构成三角形（红色阴影），右列上、中、下三点构成三角形（红色阴影），再加上 上—上、中—中、下—下 三条横边，共 9 边。箭头 \(G_1\to\) 三棱柱 \(\to G_2\)，表示二者都是三棱柱图，同构。</figcaption></figure>
 </div>
 <div class="supp"><b>补充讲解</b> 同构只看顶点间的邻接关系，与画法无关。判断不同构时常用必要条件：阶数、边数、度数列、圈的长度等不变量；有一个不同即不同构，但这些都相同也不能断定同构。</div>
-<h3>② 图族 <span class="pg">p.92–93</span></h3>
+<h3>② 图族 </h3>
 <h4>(1) 完全图 / 完全有向图</h4>
 <figure class="fig"><svg aria-label="完全图 K1 到 K5" role="img" viewBox="0 0 520 110">
 <g fill="none" stroke="currentColor">
@@ -59,7 +59,6 @@
 <path d="M164 88 Q200 78 236 88" marker-end="url(#b63)"></path><path d="M236 93 Q200 103 164 93" marker-end="url(#b63)"></path>
 </g><text fill="currentColor" font-size="14" x="262" y="60">……</text></svg>
 <figcaption>图：完全有向图：1 阶为一个点；2 阶为两点间一对方向相反的弧；3 阶为三点，每对顶点之间两条方向相反的弧（共 6 条），……</figcaption></figure>
-<p> 从标题“完全图”引箭头指向 \(K_1\sim K_5\) 一行，从“完全有向图”引箭头指向有向图一行。</p>
 <div class="supp"><b>补充讲解</b> \(K_n\) 有 \(\frac{n(n-1)}{2}\) 条边，是 \((n-1)\)-正则图；\(n\) 阶完全有向图有 \(n(n-1)\) 条弧。</div>
 <h4>(2) 竞赛图</h4>
 <figure class="fig"><svg aria-label="1 到 4 阶竞赛图" role="img" viewBox="0 0 330 100">
@@ -91,7 +90,7 @@
 <g fill="currentColor" font-size="14"><text x="120" y="20">Ⅰ</text><text x="285" y="30">Ⅱ</text><text x="230" y="170">Ⅲ</text></g>
 </svg><figcaption>图：3 部图，三个部分 Ⅰ、Ⅱ、Ⅲ 各 2 个顶点（Ⅰ：\(a_1,a_2\)；Ⅱ：\(b_1,b_2\)；Ⅲ：\(c_1,c_2\)）。按图可读出的边：\(a_1b_1\)，\(a_2b_2\)，\(a_1c_1\)，\(a_1c_2\)，\(a_2c_1\)，\(a_2c_2\)，\(b_1c_2\)。所有边都跨部分。</figcaption></figure>
 <h4>(4) 2 部图（偶图）</h4>
-<div class="def"><b>定义（2 部图）</b> 2 部图记作 \(G=\langle V_1,V_2;E\rangle\)。 <span class="pg">p.93</span></div>
+<div class="def"><b>定义（2 部图）</b> 2 部图记作 \(G=\langle V_1,V_2;E\rangle\)。 </div>
 <figure class="fig"><svg aria-label="2 部图示意" role="img" viewBox="0 0 320 120">
 <g fill="none" stroke="currentColor">
 <ellipse cx="170" cy="25" rx="120" ry="18"></ellipse><ellipse cx="160" cy="95" rx="150" ry="20"></ellipse>
@@ -99,7 +98,7 @@
 <circle cx="40" cy="95" r="4"></circle><circle cx="95" cy="95" r="4"></circle><circle cx="160" cy="95" r="4"></circle><circle cx="220" cy="95" r="4"></circle><circle cx="280" cy="95" r="4"></circle>
 <line x1="100" x2="40" y1="25" y2="95"></line><line x1="100" x2="95" y1="25" y2="95"></line><line x1="150" x2="40" y1="25" y2="95"></line><line x1="150" x2="160" y1="25" y2="95"></line>
 <line x1="200" x2="160" y1="25" y2="95"></line><line x1="200" x2="220" y1="25" y2="95"></line><line x1="250" x2="95" y1="25" y2="95"></line><line x1="250" x2="280" y1="25" y2="95"></line>
-</g></svg><figcaption>图：2 部图，上部 \(V_1\) 4 个顶点、下部 \(V_2\) 5 个顶点（两部分各用红椭圆圈出），所有边都连接上、下两部分，部分内部无边。</figcaption></figure>
+</g></svg><figcaption>图：2 部图，上部 \(V_1\) 4 个顶点、下部 \(V_2\) 5 个顶点，所有边都连接上、下两部分，部分内部无边。</figcaption></figure>
 <h4>(5) 完全 r 部图</h4>
 <div class="def"><b>定义（完全 r 部图）</b> r 部图中，不同部分的任意两个顶点之间都有边。记作 \(K_{n_1,n_2,\dots,n_r}\)。</div>
 <figure class="fig"><svg aria-label="K2,2、K2,3、K1,1,2" role="img" viewBox="0 0 420 120">
@@ -113,9 +112,9 @@
 <line x1="320" x2="320" y1="20" y2="90"></line><line x1="320" x2="390" y1="20" y2="40"></line><line x1="320" x2="390" y1="20" y2="75"></line><line x1="320" x2="390" y1="90" y2="40"></line><line x1="320" x2="390" y1="90" y2="75"></line>
 </g>
 <g fill="currentColor" font-size="14"><text x="35" y="115">K2,2</text><text x="180" y="115">K2,3</text><text x="330" y="115">K1,1,2</text></g>
-</svg><figcaption>图：\(K_{2,2}\)：上 2 点、下 2 点，跨部分 4 条边；\(K_{2,3}\)：上 2 点、下 3 点，6 条边；\(K_{1,1,2}\)：三部分 \(\{a\},\{b\},\{c,d\}\)，边 \(ab,ac,ad,bc,bd\) 共 5 条。各部分在中用红圈圈出； \(K_{2,2}\) 的两个下标 2 各画了圈。</figcaption></figure>
+</svg><figcaption>\(K_{2,2}\) 有4条边，\(K_{2,3}\) 有6条边。\(K_{1,1,2}\) 的三部分为 \(\{a\},\{b\},\{c,d\}\)，边为ab、ac、ad、bc、bd，共5条。</figcaption></figure>
 <div class="supp"><b>补充讲解</b> \(K_{n,m}\) 有 \(nm\) 条边；\(K_{n_1,\dots,n_r}\) 的边数为 \(\sum_{i\lt j}n_in_j\)。</div>
-<h3>③ 子图、生成子图、导出子图 <span class="pg">p.93–94</span></h3>
+<h3>③ 子图、生成子图、导出子图 </h3>
 <div class="def"><b>定义（子图）</b> \(G=\langle V,E\rangle\)，\(G'=\langle V',E'\rangle\)，
 \[ G'\subseteq G\iff V'\subseteq V\land E'\subseteq E \]
 </div>
@@ -125,31 +124,31 @@
 <div class="def"><b>定义（导出子图）</b> \(G=\langle V,E\rangle\)，导出方式分“点”和“边”两种。
 <p>点导出：若 \(V_1\subset V\)，\(E_1=E\cap(V_1\&amp;V_1)\)，则 \(G[V_1]=\langle V_1,E_1\rangle\)，称为由 \(V_1\) 导出的子图。</p>
 <p>边导出：若 \(\emptyset\ne E_1\subset E\)，\(V_1=\{v\mid v\ \text{与}\ E_1\ \text{中的边关联}\}\)，则 \(G[E_1]=\langle V_1,E_1\rangle\)。</p></div>
-<div class="example"><b>例</b> <span class="pg">p.94</span>
+<div class="example"><b>例</b>
 <figure class="fig"><svg aria-label="G、V1、G[V1]、E1、G[E1]" role="img" viewBox="0 0 470 220">
 <g fill="none" stroke="currentColor">
- G 
+ G
 <circle cx="20" cy="30" r="4"></circle><circle cx="110" cy="30" r="4"></circle><circle cx="20" cy="140" r="4"></circle><circle cx="110" cy="140" r="4"></circle>
 <circle cx="45" cy="60" r="4"></circle><circle cx="80" cy="60" r="4"></circle><circle cx="45" cy="95" r="4"></circle><circle cx="80" cy="95" r="4"></circle>
 <line x1="20" x2="110" y1="30" y2="30"></line><line x1="110" x2="110" y1="30" y2="140"></line><line x1="20" x2="110" y1="140" y2="140"></line>
 <line stroke-width="2.5" x1="20" x2="20" y1="30" y2="140"></line><line stroke-width="2.5" x1="20" x2="45" y1="30" y2="60"></line><line stroke-width="2.5" x1="45" x2="80" y1="60" y2="60"></line>
 <line x1="45" x2="45" y1="60" y2="95"></line><line x1="45" x2="80" y1="95" y2="95"></line>
- V1 
+ V1
 <circle cx="170" cy="30" r="4"></circle><circle cx="230" cy="30" r="4"></circle><circle cx="185" cy="75" r="4"></circle><circle cx="225" cy="75" r="4"></circle>
- G[V1] 
+ G[V1]
 <circle cx="330" cy="30" r="4"></circle><circle cx="400" cy="30" r="4"></circle><circle cx="355" cy="75" r="4"></circle><circle cx="390" cy="75" r="4"></circle>
 <line x1="330" x2="400" y1="30" y2="30"></line><line x1="330" x2="355" y1="30" y2="75"></line><line x1="355" x2="390" y1="75" y2="75"></line>
- E1 
+ E1
 <line x1="170" x2="170" y1="130" y2="210"></line><line x1="170" x2="190" y1="130" y2="155"></line><line x1="195" x2="235" y1="155" y2="155"></line>
- G[E1] 
+ G[E1]
 <circle cx="330" cy="130" r="4"></circle><circle cx="330" cy="210" r="4"></circle><circle cx="360" cy="155" r="4"></circle><circle cx="400" cy="155" r="4"></circle>
 <line x1="330" x2="330" y1="130" y2="210"></line><line x1="330" x2="360" y1="130" y2="155"></line><line x1="360" x2="400" y1="155" y2="155"></line>
 </g>
 <g fill="currentColor" font-size="14"><text x="55" y="18">G</text><text x="190" y="18">V1</text><text x="335" y="18">G[V1]</text><text x="190" y="120">E1</text><text x="335" y="120">G[E1]</text></g>
-</svg><figcaption>图：\(G\) 为 8 个顶点：外框四角 \(A\)（左上）、\(B\)（右上）、\(C\)（左下）、\(D\)（右下），内框 \(P\)（左上）、\(Q\)（右上）、\(R\)（左下）、\(S\)（右下）。边：\(AB,BD,CD,AC,AP,PQ,PR,RS\)。用红叉标出 \(A,P,Q,C\) 四点，用红线描出边 \(AC,AP,PQ\)（图中加粗）。\(V_1=\{A,C,P,Q\}\) 画成 4 个孤立点；\(G[V_1]\) 保留 \(V_1\) 间原有的全部边 \(AC,AP,PQ\)。\(E_1=\{AC,AP,PQ\}\) 画成 3 条边（无端点）；\(G[E_1]\) 为这 3 条边及其端点 \(A,C,P,Q\)。本例两种导出结果相同。</figcaption></figure>
+</svg><figcaption>图：\(G\) 为 8 个顶点：外框四角 \(A\)（左上）、\(B\)（右上）、\(C\)（左下）、\(D\)（右下），内框 \(P\)（左上）、\(Q\)（右上）、\(R\)（左下）、\(S\)（右下）。边：\(AB,BD,CD,AC,AP,PQ,PR,RS\)。\(V_1=\{A,C,P,Q\}\) 画成 4 个孤立点；\(G[V_1]\) 保留 \(V_1\) 间原有的全部边 \(AC,AP,PQ\)。\(E_1=\{AC,AP,PQ\}\) 画成 3 条边（无端点）；\(G[E_1]\) 为这 3 条边及其端点 \(A,C,P,Q\)。本例两种导出结果相同。</figcaption></figure>
 </div>
-<div class="supp"><b>补充讲解</b> 点导出子图“点定边”：选定顶点后，原图中两端都在 \(V_1\) 里的边必须全部保留。边导出子图“边定点”：选定边后，顶点只取这些边的端点。两者一般不同，例如若 \(V_1\) 中两点在原图另有一条边而未选入 \(E_1\)，\(G[V_1]\) 会多出这条边。</div>
-<h3>④ 补图 <span class="pg">p.94–95</span></h3>
+<div class="supp"><b>补充讲解</b> 点导出子图“点定边”：选定顶点后，图中两端都在 \(V_1\) 里的边必须全部保留。边导出子图“边定点”：选定边后，顶点只取这些边的端点。两者一般不同，例如若 \(V_1\) 中两点在图另有一条边而未选入 \(E_1\)，\(G[V_1]\) 会多出这条边。</div>
+<h3>④ 补图 </h3>
 <div class="def"><b>定义（补图）</b> \(G=\langle V,E\rangle\)，\(\overline{G}=\langle V,E(K_n)-E\rangle\)。</div>
 <div class="example"><b>例</b>
 <figure class="fig"><svg aria-label="K4、G、G 的补图" role="img" viewBox="0 0 400 120">
@@ -164,7 +163,7 @@
 <g fill="currentColor" font-size="14"><text x="25" y="110">Kn(K4)</text><text x="190" y="110">G</text><text x="330" y="110">Ḡ</text></g>
 </svg><figcaption>图：顶点记左上 \(a\)、右上 \(b\)、左下 \(c\)、右下 \(d\)。\(K_4\) 有 6 条边，在其上、左、右三条边上画红色短横，表示属于 \(G\) 的边。\(G\)：\(ab,ac,bd\)（“⊓”形）。\(\overline G\)：\(ad,bc,cd\)（两条对角线加底边）。</figcaption></figure>
 </div>
-<div class="def"><b>定义（自补图）</b> \(G\cong\overline{G}\)。 <span class="pg">p.95</span></div>
+<div class="def"><b>定义（自补图）</b> \(G\cong\overline{G}\)。 </div>
 <div class="example"><b>例</b>
 <figure class="fig"><svg aria-label="K4、Z 形 G、N 形补图" role="img" viewBox="0 0 400 120">
 <g fill="none" stroke="currentColor">
@@ -179,7 +178,7 @@
 </svg><figcaption>图：顶点同上记 \(a,b,c,d\)。\(G\)（“Z”形）：\(ab,bc,cd\)；\(\overline G\)（“N”形）：\(ac,ad,bd\)。二者都是 4 顶点路径，\(G\cong\overline G\)，故 \(G\) 是自补图。</figcaption></figure>
 </div>
 <div class="supp"><b>补充讲解</b> 映射 \(a\mapsto b,\ b\mapsto d,\ c\mapsto a,\ d\mapsto c\) 把 \(G\) 的边 \(ab,bc,cd\) 映为 \(bd,da,ac\)，正是 \(\overline G\) 的边。自补图的边数为 \(\frac{n(n-1)}{4}\)，所以 \(n\equiv 0\) 或 \(1\pmod 4\)。</div>
-<h3>⑤ 图的运算 <span class="pg">p.95–96</span></h3>
+<h3>⑤ 图的运算 </h3>
 <h4>1) 删除（delete）</h4>
 <div class="def"><b>定义（删除）</b>
 \[ \begin{aligned}
@@ -199,7 +198,7 @@ G-V'&amp;=\langle V-V',E-I_G(V')\rangle &amp;&amp;\text{同理}
 <line x1="180" x2="180" y1="15" y2="85"></line><line x1="180" x2="246" y1="85" y2="85"></line>
 </g>
 <defs><marker id="d63" markerHeight="6" markerWidth="6" orient="auto" refX="9" refY="5" viewBox="0 0 10 10"><path d="M0 0L10 5L0 10z" fill="currentColor"></path></marker></defs>
-</svg><figcaption>图：原图 4 点：左上 \(a\)、右上 \(b\)、左下 \(c\)、右下 \(d\)，边 \(ac,ab,bc,cd\)。用红叉删去 \(b\)，并在与 \(b\) 关联的边 \(ab,bc\) 上画红色短划（图中虚线）。\(\Rightarrow\) 结果 3 点 \(a,c,d\)，边 \(ac,cd\)。</figcaption></figure>
+</svg><figcaption>图：图 4 点：左上 \(a\)、右上 \(b\)、左下 \(c\)、右下 \(d\)，边 \(ac,ab,bc,cd\)。用红叉删去 \(b\)，并在与 \(b\) 关联的边 \(ab,bc\) 上（图中虚线）。\(\Rightarrow\) 结果 3 点 \(a,c,d\)，边 \(ac,cd\)。</figcaption></figure>
 </div>
 <h4>2) 收缩、加新边</h4>
 <div class="def"><b>定义（收缩）</b> \(G\backslash e\)：\(e=(u,v)\)，把 \(u,v\) 合并为一个顶点，删去 \(e\)，原来与 \(u\) 或 \(v\) 关联的边改为与新顶点关联。</div>
@@ -214,14 +213,14 @@ G-V'&amp;=\langle V-V',E-I_G(V')\rangle &amp;&amp;\text{同理}
 </g>
 <g fill="currentColor" font-size="14"><text x="74" y="35">u</text><text x="138" y="35">v</text><text x="105" y="62">e</text><text x="98" y="172">u,v</text></g>
 </svg><figcaption>图：收缩前 \(u,v\) 由边 \(e\) 相连，\(u\) 另与两个顶点相邻，\(v\) 另与两个顶点相邻；\(\Downarrow\) 收缩后 \(u,v\) 合成一个顶点，该点与原来的 4 个邻点相邻，\(e\) 消失。</figcaption></figure>
-<div class="def"><b>定义（加新边）</b> <span class="pg">p.96</span>
+<div class="def"><b>定义（加新边）</b>
 \[ G\cup(u,v)=\langle V,E\cup\{(u,v)\}\rangle \]
 也可以记为 \(G+(u,v)\)。（右侧小图：顶点 \(u\) 到 \(v\) 画一条弧线，表示新加的边。）</div>
-<h3>⑥ 不交 <span class="pg">p.96</span></h3>
+<h3>⑥ 不交 </h3>
 <div class="def"><b>定义（不交、边不交）</b> \(G_1=\langle V_1,E_1\rangle\)，\(G_2=\langle V_2,E_2\rangle\)。
 \[ \begin{aligned} G_1\text{ 与 }G_2\text{ 不交}&amp;\iff V_1\cap V_2=\emptyset\\ G_1\text{ 与 }G_2\text{ 边不交}&amp;\iff E_1\cap E_2=\emptyset \end{aligned} \]</div>
 <div class="warn"><b>易错提醒</b> 不交一定边不交；边不交不一定不交（可以共用顶点）。</div>
-<h3>⑦ 并图、交图、差图、环和 <span class="pg">p.96</span></h3>
+<h3>⑦ 并图、交图、差图、环和 </h3>
 <div class="def"><b>定义</b> \(G_1=\langle V_1,E_1\rangle\)，\(G_2=\langle V_2,E_2\rangle\)，都无孤立点。
 \[ \begin{aligned}
 \text{并：}G_1\cup G_2&amp;=\langle V(E_1\cup E_2),\ E_1\cup E_2\rangle\\
@@ -231,7 +230,7 @@ G-V'&amp;=\langle V-V',E-I_G(V')\rangle &amp;&amp;\text{同理}
 \end{aligned} \]
 </div>
 <figure class="fig"><svg aria-label="A⊕B 维恩图" role="img" viewBox="0 0 220 130">
-<defs><pattern height="6" id="h63" patterntransform="rotate(45)" patternUnits="userSpaceOnUse" width="6"><line stroke="currentColor" x1="0" x2="0" y1="0" y2="6"></line></pattern>
+<defs><pattern height="6" id="h63" patterntransform="rotate(45)" patternunits="userSpaceOnUse" width="6"><line stroke="currentColor" x1="0" x2="0" y1="0" y2="6"></line></pattern>
 <clippath id="ca63"><circle cx="80" cy="70" r="50"></circle></clippath><clippath id="cb63"><circle cx="140" cy="70" r="50"></circle></clippath></defs>
 <path d="M30 70a50 50 0 1 0 100 0a50 50 0 1 0 -100 0z M90 70a50 50 0 1 0 100 0a50 50 0 1 0 -100 0z" fill="url(#h63)" fill-rule="evenodd"></path>
 <g clip-path="url(#ca63)"><circle cx="140" cy="70" fill="Canvas" r="50"></circle></g>
@@ -239,7 +238,7 @@ G-V'&amp;=\langle V-V',E-I_G(V')\rangle &amp;&amp;\text{同理}
 <g fill="currentColor" font-size="14"><text x="25" y="25">A</text><text x="180" y="25">B</text></g>
 </svg><figcaption>图：\(A\oplus B\) 维恩图：两圆 \(A\)、\(B\) 相交，只在 \(A-B\) 与 \(B-A\) 两部分涂红色阴影，中间公共部分不涂。即 \(A\oplus B=(A-B)\cup(B-A)\)。</figcaption></figure>
 <div class="supp"><b>补充讲解</b> \(V(E')\) 表示边集 \(E'\) 中所有边的端点构成的集合，所以这样定义的运算结果没有孤立点，这正是“都无孤立点”的含义。</div>
-<h3>⑧ 联图 <span class="pg">p.97</span></h3>
+<h3>⑧ 联图 </h3>
 <div class="def"><b>定义（联图）</b> \(G_1,G_2\) 不交，\(G_1=\langle V_1,E_1\rangle\)，\(G_2=\langle V_2,E_2\rangle\)，
 \[ G_1+G_2=\langle V_1\cup V_2,\ E_1\cup E_2\cup(V_1\&amp;V_2)\rangle \]
 </div>
@@ -255,8 +254,8 @@ G-V'&amp;=\langle V-V',E-I_G(V')\rangle &amp;&amp;\text{同理}
 <line x1="245" x2="340" y1="90" y2="15"></line><line x1="245" x2="380" y1="90" y2="55"></line><line x1="245" x2="320" y1="90" y2="105"></line>
 </g>
 <g fill="currentColor" font-size="14"><text x="20" y="120">G1</text><text x="110" y="120">G2</text><text x="285" y="128">G1+G2</text></g>
-</svg><figcaption>图：\(G_1\)：2 个顶点 \(a,b\)，边 \(ab\)。\(G_2\)：3 个顶点 \(c,d,e\)，边 \(cd,de\)（折线形）。\(G_1+G_2\)：5 个顶点，边为 \(ab,cd,de\) 再加上 \(\{a,b\}\) 与 \(\{c,d,e\}\) 之间全部 6 条边，共 9 条。原图中 5 个顶点画成一圈，边相互交叉。</figcaption></figure>
+</svg><figcaption>图：\(G_1\)：2 个顶点 \(a,b\)，边 \(ab\)。\(G_2\)：3 个顶点 \(c,d,e\)，边 \(cd,de\)（折线形）。\(G_1+G_2\)：5 个顶点，边为 \(ab,cd,de\) 再加上 \(\{a,b\}\) 与 \(\{c,d,e\}\) 之间全部 6 条边，共 9 条。图中 5 个顶点画成一圈，边相互交叉。</figcaption></figure>
 </div>
 <div class="supp"><b>补充讲解</b> \(|E(G_1+G_2)|=|E_1|+|E_2|+|V_1|\,|V_2|\)。例如 \(K_m+K_n=K_{m+n}\)，\(\overline{K_m}+\overline{K_n}=K_{m,n}\)（\(\overline{K_m}\) 为 \(m\) 个孤立点）。</div>
-<h3>⑨ 积图 <span class="pg">p.97</span></h3>
+<h3>⑨ 积图 </h3>
 <div class="summary"><b>总结</b> 同构看邻接关系是否在双射下保持（有向图还要保持方向）；图族有完全图、完全有向图、竞赛图、r 部图、2 部图、完全 r 部图；子图、真子图、生成子图（\(V'=V\)）、点/边导出子图；补图与自补图；运算有删边、删点、收缩、加新边、并、交、差、环和、联图。</div>

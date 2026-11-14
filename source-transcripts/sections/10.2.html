@@ -1,5 +1,5 @@
 
-<h3>① 欧拉公式 <span class="pg">p.151</span></h3>
+<h3>① 欧拉公式 </h3>
 <div class="thm"><b>定理（欧拉公式）</b> 设 \(G\) 是<u>连通</u>平面图，则
 \[ n-m+r=2 \]
 （\(n\) 为 \(G\) 的顶点数，\(m\) 为 \(G\) 的边数，\(r\) 为 \(G\) 的面数）。</div>
@@ -26,14 +26,14 @@
 <text x="36" y="31">①</text><text x="85" y="105">②</text><text x="122" y="70">③</text><text x="185" y="90">④</text><text x="153" y="162">⑤</text><text x="255" y="30">⑥</text>
 </g>
 </svg>
-<figcaption>图：顶点 \(v_1\)（左上）、\(v_2\)（上中）、\(v_3\)（右）、\(v_4\)（左下）、\(v_5\)（中下）、\(v_6\)（\(v_5\) 下方）、\(v_7\)（\(v_3\) 下方悬挂点）。边：\(v_1\) 处一个环、\(v_1v_2, v_1v_4, v_1v_5, v_4v_5, v_2v_5, v_2v_3, v_3v_5\)、\(v_5v_6\) 两条平行边、\(v_3v_7\)，共 11 条（原图每条边上画红色短线计数）。面：① 环内部，② \(v_1v_4v_5\)，③ \(v_1v_2v_5\)，④ \(v_2v_3v_5\)，⑤ 两条平行边围成的面，⑥ 外部面。</figcaption></figure>
+<figcaption>图：顶点 \(v_1\)（左上）、\(v_2\)（上中）、\(v_3\)（右）、\(v_4\)（左下）、\(v_5\)（中下）、\(v_6\)（\(v_5\) 下方）、\(v_7\)（\(v_3\) 下方悬挂点）。边：\(v_1\) 处一个环、\(v_1v_2, v_1v_4, v_1v_5, v_4v_5, v_2v_5, v_2v_3, v_3v_5\)、\(v_5v_6\) 两条平行边、\(v_3v_7\)，共 11 条（图每条边上计数）。面：① 环内部，② \(v_1v_4v_5\)，③ \(v_1v_2v_5\)，④ \(v_2v_3v_5\)，⑤ 两条平行边围成的面，⑥ 外部面。</figcaption></figure>
 <b>解</b> \(n=7,\ m=11,\ r=6\ \Rightarrow\ 7-11+6=2\)。<b>结论</b> 满足欧拉公式。</div>
 <h4>1) 推广</h4>
 <div class="thm"><b>推论（欧拉公式推广）</b> 设 \(G\) 为平面图，则
 \[ n-m+r=1+p \]
-（\(p\) 为 \(G\) 的连通分支数）。<p> 从欧拉公式画一条大箭头指向推广式，\(n-m+r=1+p\) 下画红线。</p></div>
+（\(p\) 为 \(G\) 的连通分支数）。<p>欧拉公式推广为 \(n-m+r=1+p\)，其中p为连通分支数。</p></div>
 <div class="supp"><b>补充讲解</b> \(p=1\) 时即回到 \(n-m+r=2\)。多个连通分支只共享一个外部面，所以面数比“各分支分别用欧拉公式”求出的总和少 \(p-1\)。</div>
-<h3>② 定理1：边数上界 <span class="pg">p.151</span></h3>
+<h3>② 定理1：边数上界 </h3>
 <div class="thm"><b>定理1</b> 设 \(G\) 为连通平面图，\(G\) 的各面 \(R\) 的次数至少是 \(l\ (l\ge 3)\)，则
 \[ m\le \frac{(n-2)\cdot l}{l-2} \]
 其中 \(n, m, l\) 分别为顶点数、边数、面次数下界，\(l=\min\{\deg(R_1),\deg(R_2),\cdots,\deg(R_r)\}\)。<p> “\(l\ (\ge 3)\)”处箭头指向“简单图”（简单图才保证每个面次数至少为 3）；另一箭头指向 \(l=\min\{\deg(R_1),\cdots,\deg(R_r)\}\)。</p></div>
@@ -45,10 +45,10 @@
 \[ \Downarrow \]
 \[ m\le \frac{(n-2)\cdot l}{l-2} \]</div>
 <div class="supp"><b>补充讲解</b> 第二步展开：\(2m\ge 2l+lm-ln\Rightarrow (l-2)m\le l(n-2)\)，因 \(l\gt 2\)，两边除以 \(l-2\) 即得。</div>
-<h3>引理1：非连通情形 <span class="pg">p.151–152</span></h3>
+<h3>引理1：非连通情形 </h3>
 <div class="thm"><b>引理1</b> 设平面图 \(G\) 有 \(p\) 个<u>连通分支</u>，\(G\) 的各面的次数至少为 \(l\ (l\ge 3)\)，则
 \[ m\le \frac{(n-p-1)\cdot l}{l-2} \]</div>
-<h3>例：判断 \(K_5\)、\(K_{3,3}\) 不是平面图 <span class="pg">p.152</span></h3>
+<h3>例：判断 \(K_5\)、\(K_{3,3}\) 不是平面图 </h3>
 <div class="example"><b>例 ①</b> \(K_5\)。
 <figure class="fig"><svg aria-label="K5" role="img" viewBox="0 0 200 190">
 <g fill="none" stroke="currentColor" stroke-width="2">
@@ -57,7 +57,7 @@
 <ellipse cx="100" cy="95" rx="95" ry="90"></ellipse>
 </g>
 <g fill="currentColor"><circle cx="100" cy="20" r="4"></circle><circle cx="176" cy="75" r="4"></circle><circle cx="147" cy="165" r="4"></circle><circle cx="53" cy="165" r="4"></circle><circle cx="24" cy="75" r="4"></circle></g>
-</svg><figcaption>图：\(K_5\)，5 个顶点两两相邻（五边形加五角星），外面画一圈。</figcaption></figure>
+</svg><figcaption>图：\(K_5\)，5 个顶点两两相邻（五边形），外面画一圈。</figcaption></figure>
 <b>解</b> \(K_5\) 是简单图（\(l\ge 3\)）、完全图 \(\Rightarrow l=3\)。
 \[ 10=m\le \frac{(n-2)\cdot l}{l-2}=\frac{3\cdot 3}{1}=9 \]
 \(10\le 9\) 矛盾。<b>结论</b> \(\therefore K_5\) 不是平面图。</div>
@@ -73,7 +73,7 @@
 <b>解</b> \(K_{3,3}\) 为偶图（完全二部图），无奇圈 \(\Rightarrow l=4\)。
 \[ 9=m\le \frac{(n-2)\cdot l}{l-2}=\frac{(6-2)\cdot 4}{4-2}=\frac{4\cdot 4}{2}=8 \]
 \(9\le 8\) 矛盾。<b>结论</b> \(\therefore K_{3,3}\) 不是平面图。<p>二部图无三角形，面次数最小为 4。</p></div>
-<h3>③ 定理2：Jordan 定理 <span class="pg">p.152</span></h3>
+<h3>③ 定理2：Jordan 定理 </h3>
 <div class="thm"><b>定理2（Jordan 定理）</b> Jordan 曲线把平面分为 2 部分，连接内部与外部点的任意曲线与 Jordan 曲线必然相交。</div>
 <figure class="fig"><svg aria-label="Jordan曲线" role="img" viewBox="0 0 240 170">
 <g fill="none" stroke="currentColor" stroke-width="2">
@@ -83,16 +83,16 @@
 <g fill="currentColor"><circle cx="100" cy="105" r="4"></circle><circle cx="150" cy="20" r="4"></circle></g>
 <g fill="currentColor" font-size="14"><text x="106" y="112">内部点</text><text x="158" y="22">外部点</text><text x="114" y="46">×</text><text x="150" y="165">Jordan曲线</text></g>
 </svg><figcaption>图：圆为 Jordan 曲线；内部点与外部点用曲线相连，交点处标“×”。</figcaption></figure>
-<h3>④ 定理3：简单平面图 \(m\le 3n-6\) <span class="pg">p.152–153</span></h3>
+<h3>④ 定理3：简单平面图 \(m\le 3n-6\) </h3>
 <div class="thm"><b>定理3</b> 设 \(n\) 阶 \((n\ge 3)\) <u>简单</u>平面图 \(G\) 有 \(m\) 条边，则
 \[ m\le 3n-6 \]</div>
 <div class="thm"><b>推论</b> 设 \(n\) 阶 \((n\ge 3)\) 简单<u>极大</u>平面图 \(G\) 有 \(m\) 条边，则
 \[ m=3n-6 \]<p> 画 \(K_5-e\)（圈内五点图）：5 个点，9 条边，\(9=3\times 5-6\)。</p></div>
 <div class="supp"><b>补充讲解</b> 定理3 是定理1 取 \(l=3\) 的情形：\(m\le 3(n-2)/1=3n-6\)。极大平面图每个面都是三角形，等号成立。</div>
-<h3>⑤ 定理4：最小度 \(\le 5\) <span class="pg">p.153</span></h3>
-<div class="thm"><b>定理4</b> 设 \(G\) 是<u>简单</u>平面图，则 \(\delta(G)\le 5\)（最小度 \(\le 5\)）。<p> 定理编号旁画大五角星；“\(\Rightarrow\)（单向）”：只能由“简单平面图”推出 \(\delta\le 5\)，反过来不成立。</p></div>
+<h3>⑤ 定理4：最小度 \(\le 5\) </h3>
+<div class="thm"><b>定理4</b> 设 \(G\) 是<u>简单</u>平面图，则 \(\delta(G)\le 5\)（最小度 \(\le 5\)）。<p>简单平面图必有 \(\delta(G)\le5\)，但最小度不超过5并不能反推出图可平面。</p></div>
 <div class="supp"><b>补充讲解</b> 若 \(\delta\ge 6\)，则 \(2m\ge 6n\)，即 \(m\ge 3n\gt 3n-6\)，与定理3矛盾。反例说明单向：\(K_{3,3}\) 的 \(\delta=3\le 5\)，但不是平面图。</div>
-<h3>⑥ 同胚 <span class="pg">p.153</span></h3>
+<h3>⑥ 同胚 </h3>
 <div class="def"><b>定义</b>
 <p>1) 插入 2 度顶点：把 \((u,v)\) 变成 \((u,w),(w,v)\)。</p>
 <p>2) 删除 2 度顶点（\(\deg(w)=2\)）：把 \((u,w),(w,v)\) 变为 \((u,v)\)。</p>
@@ -122,7 +122,7 @@
 <g fill="currentColor" font-size="14"><text x="80" y="55">⇔</text><text x="190" y="55">⇔ …</text></g>
 </svg><figcaption>图：第 1 个为 4 圈 \(C_4\)；第 2 个在 \(C_4\) 上插入一个 2 度顶点得 5 圈；第 3 个再插入两个 2 度顶点；第 4 个为方框加内部连线的图。四个图之间用 \(\Leftrightarrow\) 连接，表示同胚。</figcaption></figure>
 </div>
-<h3>⑦ Kuratowski 定理 <span class="pg">p.153–154</span></h3>
+<h3>⑦ Kuratowski 定理 </h3>
 <div class="thm"><b>Kuratowski 定理</b>
 <p>1. 图 \(G\) 是平面图 \(\Leftrightarrow\) \(G\) 没有与 \(K_5\) 或 \(K_{3,3}\) <u>同胚</u>的子图。★</p>
 <p>2. 图 \(G\) 是平面图 \(\Leftrightarrow\) \(G\) 没有可以<u>收缩</u>到 \(K_5\) 或 \(K_{3,3}\) 的子图。★</p></div>
@@ -141,6 +141,6 @@
 <circle cx="380" cy="30" r="4"></circle><circle cx="330" cy="90" r="4"></circle><circle cx="450" cy="90" r="4"></circle><circle cx="380" cy="90" r="4"></circle><circle cx="400" cy="150" r="4"></circle><circle cx="420" cy="150" r="4"></circle>
 </g>
 <g fill="currentColor" font-size="14"><text x="40" y="190">彼得森图（非平面图）</text><text x="190" y="90">⇒ 子图（删边）⇒ 同胚</text><text x="340" y="190">同胚于 K3,3 的子图</text></g>
-</svg><figcaption>图：第 1 个为彼得森图（外五边形、内五角星、五条辐边），红圈标出若干顶点并在若干边上画红色短线；“子图 ⇒” 得到第 2 个图：删去若干边（在边上打红色 ×，下方横线标出），标注“非平面图”，并有箭头指回彼得森图；“⇒” 第 3 个图：顶部一个顶点红圈标出，红色箭头从顶部向下指示把 2 度顶点删除（标“同胚”）；“⇒” 最后得到 \(K_{3,3}\)（上 3 下 3，两两相连）。第 3 个图在此按“顶部顶点、中间顶点与左右两顶点相连”示意，确切顶点位置以原图为准。</figcaption></figure>
+</svg><figcaption>彼得森图中存在与 \(K_{3,3}\) 同胚的子图：选择相应子图并压缩其中的2度顶点，便得到K₃,₃。因此由库拉托夫斯基定理，彼得森图不可平面。</figcaption></figure>
 <p>另一条路线：彼得森图（非平面图）—大箭头—\(\Rightarrow\) \(K_5\)（把五条辐边收缩，得到 5 个顶点两两相邻的 \(K_5\)）。</p>
 <b>结论</b> 彼得森图含与 \(K_{3,3}\) 同胚的子图，也可收缩到 \(K_5\)，所以不是平面图。</div>
